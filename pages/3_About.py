@@ -1,26 +1,29 @@
 import streamlit as st
-
-st.set_page_config(page_title="About | ByteMind Ltd", page_icon="🧠", layout="wide")
-
 import utils
+from PIL import Image
+
+st.set_page_config(page_title="About | ByteMind Ltd", page_icon="assets/images/profile_dr_zhang.png", layout="wide")
 
 # Custom CSS
 utils.load_css()
 
-st.title("About Us")
+st.markdown("# About Us")
 
 # -----------------------------------------------------------------------------
 # FOUNDER PROFILE
 # -----------------------------------------------------------------------------
-col1, col2 = st.columns([1, 2])
+col1, col2 = st.columns([1, 2.5])
 
 with col1:
-    # Placeholder for a photo
-    st.image("https://placehold.co/400x400?text=Dr+Zhang", caption="Dr. Yuqian Zhang")
+    try:
+        image = Image.open("assets/images/profile_dr_zhang.png")
+        st.image(image, caption="Dr. Yuqian Zhang", use_container_width=True)
+    except FileNotFoundError:
+        st.error("Profile image not found.")
 
 with col2:
-    st.header("Dr. Yuqian Zhang")
-    st.subheader("Founder & Principal Consultant")
+    st.markdown("## Dr. Yuqian Zhang")
+    st.markdown("### Founder & Principal Consultant")
     st.write(
         """
         Dr. Zhang is a **Lecturer in Taxation** based in New Zealand, combining deep academic research with practical business strategy.
@@ -30,7 +33,7 @@ with col2:
         He specializes in helping businesses navigate complex tax environments, using rigorous data analysis to uncover opportunities that others miss.
         """
     )
-    st.markdown(
+    st.info(
         """
         *   **Expertise:** International Tax, SME Strategy, Economic Indices.
         *   **Philosophy:** "Tax is not just a cost; it's a variable you can manage."
@@ -42,7 +45,7 @@ st.divider()
 # -----------------------------------------------------------------------------
 # MISSION
 # -----------------------------------------------------------------------------
-st.header("Our Mission")
+st.markdown("## Our Mission")
 st.markdown(
     """
     To bridge the gap between **Academic Rigour** and **Business Reality**.

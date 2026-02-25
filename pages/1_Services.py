@@ -1,14 +1,14 @@
 import streamlit as st
-
-st.set_page_config(page_title="Services | ByteMind Ltd", page_icon="🧠", layout="wide")
-
 import utils
+
+st.set_page_config(page_title="Services | ByteMind Ltd", page_icon="assets/images/profile_dr_zhang.png", layout="wide")
 
 # Custom CSS
 utils.load_css()
 
-st.title("Our Services")
-st.write("We offer specialized tax advice for New Zealand businesses looking to grow.")
+st.markdown("# Our Services")
+st.markdown("We offer specialized tax advice for New Zealand businesses looking to grow.")
+st.write("")
 
 # -----------------------------------------------------------------------------
 # SERVICE 1
@@ -17,8 +17,8 @@ with st.container():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.subheader("1. The Global Growth Roadmap")
-        st.markdown("**Best for: Startups & Tech Exporters**")
+        st.markdown("### 1. The Global Growth Roadmap")
+        st.caption("Best for: Startups & Tech Exporters")
         st.write(
             """
             Expanding to the USA, UK, or Australia? We build you a custom tax plan so you don't get stuck with unexpected bills.
@@ -42,8 +42,8 @@ with st.container():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.subheader("2. Fractional Tax Director")
-        st.markdown("**Best for: Scaling Companies ($5M+ Revenue)**")
+        st.markdown("### 2. Fractional Tax Director")
+        st.caption("Best for: Scaling Companies ($5M+ Revenue)")
         st.write(
             """
             Too big for a general accountant, too small for a full-time Tax Manager? Hire us on a monthly retainer.
@@ -67,8 +67,8 @@ with st.container():
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.subheader("3. SME Tax Health Check")
-        st.markdown("**Best for: Established NZ Businesses**")
+        st.markdown("### 3. SME Tax Health Check")
+        st.caption("Best for: Established NZ Businesses")
         st.write(
             """
             A comprehensive review of your current tax setup to find savings and fix risks.

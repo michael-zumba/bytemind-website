@@ -23,6 +23,23 @@ st.markdown("### 1. Tech Export Friction Index (TEFI)")
 st.write("**What is it?** A measure of how difficult and costly it is for a NZ tech company to expand into these markets.")
 st.caption("Lower Score = Easier to do business. Higher Score = More tax/compliance friction.")
 
+# Methodology Section
+with st.expander("Methodology & Data Sources"):
+    st.markdown(
+        """
+        ### Methodology
+        The **Tech Export Friction Index (TEFI)** is a composite score (0-100) calculated using a weighted average of:
+        1.  **Corporate Tax Rate (60%):** The statutory top corporate tax rate (including state/local taxes).
+        2.  **Compliance Burden (40%):** Estimated hours per year to prepare and pay taxes.
+        
+        ### Data Sources (Verified 2026)
+        *   **Corporate Tax Rates:** Sourced from the *OECD Corporate Tax Statistics 2025* and *Tax Foundation*.
+        *   **Compliance Hours:** Sourced from *World Bank Doing Business* (Historical archives) and *PWC Paying Taxes* reports.
+        
+        *Note: This data is for informational purposes only. Always consult a tax professional.*
+        """
+    )
+
 # Load Real Data from CSV
 try:
     df = pd.read_csv("data/tefi_raw.csv")
@@ -54,6 +71,8 @@ try:
             "tefi_data_2026.csv",
             "text/csv"
         )
+    
+    st.caption(f"Last Data Update: {df['Last Updated'].iloc[0]}")
         
 except FileNotFoundError:
     st.error("Data file 'data/tefi_raw.csv' not found. Please contact administrator.")

@@ -8,13 +8,39 @@ st.set_page_config(page_title="Indices | ByteMind Ltd", page_icon="assets/images
 # Custom CSS
 utils.load_css()
 
-st.markdown("# ByteMind Indices")
-st.write(
-    """
-    We construct rigorous economic indices to help businesses understand market conditions.
-    This data drives our consulting advice.
-    """
-)
+st.title("ByteMind Economic Indices")
+st.markdown("Real-time economic indicators powered by open data.")
+
+# --- Methodology Expander ---
+with st.expander("📊 View Methodology & Data Sources"):
+    st.markdown("""
+    ### 1. Tax Efficiency Friction Index (TEFI)
+    **Objective:** Measures the friction businesses face due to corporate tax rates and compliance burden.
+    
+    **Formula:**
+    $$
+    \\text{TEFI Score} = \\text{Normalize} \\left( (\\text{Tax Rate} \\times 1.5) + \\frac{\\text{Compliance Hours}}{5} \\right)
+    $$
+    *Where 'Normalize' scales the raw friction score from 0 (Best) to 100 (Worst).*
+    
+    **Data Sources:**
+    *   **Corporate Tax Rates:** [OECD Corporate Tax Statistics (CTS)](https://stats.oecd.org/Index.aspx?DataSetCode=CTS_CIT) - Table II.1.
+    *   **Compliance Hours:** World Bank Doing Business (Historical) & PwC Paying Taxes Reports.
+    
+    ### 2. NZ SME Resilience Index
+    **Objective:** Tracks the economic health of Small-to-Medium Enterprises in New Zealand using real-time spending and growth data.
+    
+    **Components:**
+    *   **Retail Spending Trend (50% Weight):** Monthly change in Electronic Card Transactions (ECT) - Retail Industry (Seasonally Adjusted).
+        *   *Source:* [Stats NZ Electronic Card Transactions](https://www.stats.govt.nz/information-releases/)
+    *   **Enterprise Growth (30% Weight):** Year-on-Year growth in registered enterprises.
+        *   *Source:* Stats NZ Business Demography Statistics.
+    *   **Employment Growth (20% Weight):** Year-on-Year growth in SME employment.
+        *   *Source:* Stats NZ Business Demography Statistics.
+    """)
+
+# Tabs for different indices
+tab1, tab2 = st.tabs(["Tax Efficiency Friction Index (TEFI)", "NZ SME Resilience Index"])
 
 # -----------------------------------------------------------------------------
 # INDEX 1: TECH EXPORT FRICTION

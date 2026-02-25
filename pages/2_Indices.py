@@ -23,42 +23,40 @@ st.markdown("### 1. Tech Export Friction Index (TEFI)")
 st.write("**What is it?** A measure of how difficult and costly it is for a NZ tech company to expand into these markets.")
 st.caption("Lower Score = Easier to do business. Higher Score = More tax/compliance friction.")
 
-# Dummy Data for Visualization
-data = {
-    "Country": ["USA", "Australia", "United Kingdom", "Singapore", "Canada", "Germany", "Japan"],
-    "Corporate Tax Rate": [21, 30, 25, 17, 26.5, 30, 30.6],
-    "Compliance Hours": [175, 150, 110, 80, 130, 218, 190],
-    "TEFI Score (0-100)": [78, 65, 58, 35, 52, 82, 75]
-}
-df = pd.DataFrame(data)
-
-# Interactive Chart
-fig = px.bar(
-    df.sort_values("TEFI Score (0-100)"), 
-    x="Country", 
-    y="TEFI Score (0-100)", 
-    color="TEFI Score (0-100)",
-    color_continuous_scale=["#E2E8F0", "#3B82F6", "#1E40AF"], # Professional Blues
-    text="TEFI Score (0-100)",
-    title="TEFI 2026: Tax & Compliance Friction by Country"
-)
-fig.update_layout(
-    xaxis_title="", 
-    yaxis_title="Friction Score (Lower is Better)",
-    plot_bgcolor="white",
-    font=dict(family="Plus Jakarta Sans", size=12, color="#334155")
-)
-st.plotly_chart(fig, use_container_width=True)
-
-# Data Table
-with st.expander("View Underlying Data"):
-    st.dataframe(df, use_container_width=True)
-    st.download_button(
-        "Download CSV",
-        df.to_csv(index=False).encode('utf-8'),
-        "tefi_data_2026.csv",
-        "text/csv"
+# Load Real Data from CSV
+try:
+    df = pd.read_csv("data/tefi_raw.csv")
+    
+    # Interactive Chart
+    fig = px.bar(
+        df.sort_values("TEFI Score (0-100)"), 
+        x="Country", 
+        y="TEFI Score (0-100)", 
+        color="TEFI Score (0-100)",
+        color_continuous_scale=["#E2E8F0", "#3B82F6", "#1E40AF"], # Professional Blues
+        text="TEFI Score (0-100)",
+        title="TEFI 2026: Tax & Compliance Friction by Country"
     )
+    fig.update_layout(
+        xaxis_title="", 
+        yaxis_title="Friction Score (Lower is Better)",
+        plot_bgcolor="white",
+        font=dict(family="Plus Jakarta Sans", size=12, color="#334155")
+    )
+    st.plotly_chart(fig, use_container_width=True)
+
+    # Data Table
+    with st.expander("View Underlying Data"):
+        st.dataframe(df, use_container_width=True)
+        st.download_button(
+            "Download CSV",
+            df.to_csv(index=False).encode('utf-8'),
+            "tefi_data_2026.csv",
+            "text/csv"
+        )
+        
+except FileNotFoundError:
+    st.error("Data file 'data/tefi_raw.csv' not found. Please contact administrator.")
 
 st.divider()
 

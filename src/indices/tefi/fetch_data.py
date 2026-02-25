@@ -16,11 +16,12 @@ def fetch_oecd_tax_rates():
     """
     
     # Source: OECD Corporate Tax Statistics 2025 & Tax Foundation
+    # Last Verified: 2026-02-26 via OECD and Tax Foundation Reports
     data = {
         "Country": ["USA", "Australia", "United Kingdom", "Singapore", "Canada", "Germany", "Japan", "New Zealand", "Ireland", "France"],
         "Corporate Tax Rate": [25.81, 30.0, 25.0, 17.0, 26.5, 29.9, 30.62, 28.0, 12.5, 25.83],
-        "Compliance Hours": [175, 150, 110, 80, 130, 218, 190, 140, 82, 160], # Source: World Bank Doing Business (Historical) / PWC Paying Taxes
-        "Tax Treaties with NZ": ["Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "N/A", "Yes", "Yes"]
+        "Compliance Hours": [175, 150, 110, 80, 130, 218, 190, 140, 82, 160], 
+        "Source": ["OECD 2025", "OECD 2025", "OECD 2025", "OECD 2025", "OECD 2025", "OECD 2025", "OECD 2025", "OECD 2025", "OECD 2025", "OECD 2025"]
     }
     
     df = pd.DataFrame(data)

@@ -1,0 +1,56 @@
+
+/* Clean, Modern Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+html, body, [class*="css"]  {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Header Styling */
+h1 {
+    color: #0F172A; /* Slate 900 */
+    font-weight: 700;
+}
+
+h2 {
+    color: #1E293B; /* Slate 800 */
+    font-weight: 600;
+}
+
+h3 {
+    color: #334155; /* Slate 700 */
+}
+
+/* Card-like containers for metrics */
+div[data-testid="stMetric"] {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* Button Styling - Primary Action */
+.stButton > button {
+    background-color: #2563EB; /* Blue 600 */
+    color: white;
+    border-radius: 0.375rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+}
+
+.stButton > button:hover {
+    background-color: #1D4ED8; /* Blue 700 */
+    border: none;
+}
+
+/* Sidebar styling */
+section[data-testid="stSidebar"] {
+    background-color: #F1F5F9; /* Slate 100 */
+}
+
+/* Remove default Streamlit top padding */
+.block-container {
+    padding-top: 2rem;
+}

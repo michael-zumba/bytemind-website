@@ -80,7 +80,54 @@ except FileNotFoundError:
 st.divider()
 
 # -----------------------------------------------------------------------------
-# INDEX 2: COMING SOON
+# INDEX 2: NZ SME RESILIENCE
 # -----------------------------------------------------------------------------
 st.markdown("### 2. NZ SME Resilience Index")
-st.info("Coming Q3 2026. This index will track the financial health of 500 NZ small businesses against inflation and tax changes.")
+st.write("**What is it?** A real-time pulse of New Zealand's small business health, based on official Stats NZ data.")
+
+# Load Real Data
+try:
+    df_sme = pd.read_csv("data/nz_sme_resilience.csv")
+    
+    # Calculate Score dynamically or read from attrs if possible (CSV doesn't store attrs, so we recalc or read)
+    # Simple Recalc for display consistency
+    # Weights: Spending (50%), Enterprise Growth (30%), Employment (20%)
+    # Base 50
+    spending = df_sme.loc[df_sme['Metric'].str.contains("Spending"), "Value (%)"].values[0]
+    enterprise = df_sme.loc[df_sme['Metric'].str.contains("Enterprise"), "Value (%)"].values[0]
+    employment = df_sme.loc[df_sme['Metric'].str.contains("Employment"), "Value (%)"].values[0]
+    
+    score = 50 + (spending * 10) + (enterprise * 5) + (employment * 2)
+    score = round(score, 1)
+
+    # Display Score
+    col_score, col_desc = st.columns([1, 2])
+    
+    with col_score:
+        st.metric(label="Current Resilience Score (0-100)", value=score, delta=f"{spending}% Spending Trend")
+        
+    with col_desc:
+        if score > 55:
+            st.success("The SME sector is showing strong growth signals.")
+        elif score < 45:
+            st.error("The SME sector is under significant pressure (Contraction).")
+        else:
+            st.warning("The SME sector is holding steady but facing headwinds.")
+            
+        st.markdown(
+            """
+            **Key Drivers:**
+            *   **Retail Spending:** A proxy for consumer confidence.
+            *   **Enterprise Counts:** Are businesses opening or closing?
+            *   **Employment:** Is the labor market expanding?
+            """
+        )
+
+    # Data Table
+    st.markdown("#### Underlying Indicators (Stats NZ)")
+    st.dataframe(df_sme, use_container_width=True)
+    
+    st.caption(f"Data Sources: {', '.join(df_sme['Source'].unique())}")
+
+except FileNotFoundError:
+    st.info("SME Index Data is being compiled. Please check back shortly.")

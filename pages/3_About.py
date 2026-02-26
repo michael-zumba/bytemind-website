@@ -4,8 +4,9 @@ from PIL import Image
 
 st.set_page_config(page_title="About | ByteMind Ltd", page_icon="assets/images/profile_dr_zhang.png", layout="wide")
 
-# Custom CSS
+# Custom CSS & Sidebar
 utils.load_css()
+utils.sidebar_info()
 
 st.markdown("# About Us")
 

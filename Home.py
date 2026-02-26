@@ -14,8 +14,9 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# Load Custom CSS
+# Load Custom CSS & Sidebar
 utils.load_css()
+utils.sidebar_info()
 
 # -----------------------------------------------------------------------------
 # HERO SECTION
@@ -61,6 +62,7 @@ try:
         height=400, 
         margin=dict(l=20, r=20, t=50, b=20),
         plot_bgcolor="white",
+        paper_bgcolor="white",
         font=dict(family="Plus Jakarta Sans", size=12, color="#334155")
     )
     st.plotly_chart(fig, use_container_width=True)
@@ -81,6 +83,7 @@ posts_dir = "posts"
 if os.path.exists(posts_dir):
     files = sorted(os.listdir(posts_dir), reverse=True) # Newest first
     
+    # Grid Layout for Posts
     col1, col2 = st.columns(2)
     
     for i, filename in enumerate(files):
@@ -98,17 +101,29 @@ if os.path.exists(posts_dir):
                     for line in frontmatter.strip().split("\n"):
                         if ":" in line:
                             key, value = line.split(":", 1)
-                            metadata[key.strip()] = value.strip()
+                            metadata[key.strip()] = value.strip().strip('"')
+            else:
+                body = content
+                metadata["title"] = filename.replace(".md", "")
+                metadata["date"] = ""
             
-            # Display Post Card
-            target_col = col1 if i % 2 == 0 else col2
-            with target_col:
+            # Display in columns
+            with (col1 if i % 2 == 0 else col2):
                 with st.container():
                     st.markdown(f"### {metadata.get('title', 'Untitled')}")
-                    st.caption(f"{metadata.get('date', '')} • {metadata.get('author', 'Dr Zhang')}")
-                    st.write(metadata.get('summary', ''))
-                    with st.expander("Read More"):
-                        st.markdown(body)
+                    st.caption(f"📅 {metadata.get('date', '')}")
+                    st.markdown(body[:200] + "...") # Preview
+                    st.button(f"Read More", key=f"read_{i}", use_container_width=True)
 
-st.markdown("---")
-st.caption("© 2026 ByteMind Ltd. All Rights Reserved.")
+# -----------------------------------------------------------------------------
+# FOOTER
+# -----------------------------------------------------------------------------
+st.markdown(
+    """
+    <div class="footer">
+        <p>© 2026 ByteMind Ltd. All rights reserved.</p>
+        <p>Built with Streamlit & Python.</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)

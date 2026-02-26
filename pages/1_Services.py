@@ -3,8 +3,9 @@ import utils
 
 st.set_page_config(page_title="Services | ByteMind Ltd", page_icon="assets/images/profile_dr_zhang.png", layout="wide")
 
-# Custom CSS
+# Custom CSS & Sidebar
 utils.load_css()
+utils.sidebar_info()
 
 st.markdown("# Our Services")
 st.markdown("We offer specialized tax advice for New Zealand businesses looking to grow.")

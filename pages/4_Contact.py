@@ -3,8 +3,9 @@ import utils
 
 st.set_page_config(page_title="Contact | ByteMind Ltd", page_icon="assets/images/profile_dr_zhang.png", layout="wide")
 
-# Custom CSS
+# Custom CSS & Sidebar
 utils.load_css()
+utils.sidebar_info()
 
 st.markdown("# Get in Touch")
 st.write("Ready to optimize your tax strategy? Let's talk.")
@@ -16,9 +17,9 @@ col1, col2 = st.columns([1, 1])
 
 with col1:
     st.markdown("### Contact Details")
-    st.markdown("**Email:** contact@bytemind.co.nz")
+    st.markdown("**Email:** bytemind.nz@gmail.com")
     st.markdown("**Location:** New Zealand (Available Nationwide)")
-    st.markdown("**LinkedIn:** [Dr Yuqian Zhang](#)")
+    st.markdown("**LinkedIn:** [Dr Yuqian Michael Zhang](https://www.linkedin.com/in/yuqian-michael-zhang-744530142/)")
     
     st.success("We typically reply within 24 hours.")
 

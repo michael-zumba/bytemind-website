@@ -5,8 +5,9 @@ import utils
 
 st.set_page_config(page_title="Indices | ByteMind Ltd", page_icon="assets/images/profile_dr_zhang.png", layout="wide")
 
-# Custom CSS
+# Custom CSS & Sidebar
 utils.load_css()
+utils.sidebar_info()
 
 st.title("ByteMind Economic Indices")
 st.markdown("Real-time economic indicators powered by open data.")
@@ -42,118 +43,57 @@ with st.expander("📊 View Methodology & Data Sources"):
 # Tabs for different indices
 tab1, tab2 = st.tabs(["Tax Efficiency Friction Index (TEFI)", "NZ SME Resilience Index"])
 
-# -----------------------------------------------------------------------------
-# INDEX 1: TECH EXPORT FRICTION
-# -----------------------------------------------------------------------------
-st.markdown("### 1. Tech Export Friction Index (TEFI)")
-st.write("**What is it?** A measure of how difficult and costly it is for a NZ tech company to expand into these markets.")
-st.caption("Lower Score = Easier to do business. Higher Score = More tax/compliance friction.")
+with tab1:
+    # -----------------------------------------------------------------------------
+    # INDEX 1: TECH EXPORT FRICTION
+    # -----------------------------------------------------------------------------
+    st.markdown("### 1. Tech Export Friction Index (TEFI)")
+    st.write("**What is it?** A measure of how difficult and costly it is for a NZ tech company to expand into these markets.")
+    st.caption("Lower Score = Easier to do business. Higher Score = More tax/compliance friction.")
 
-# Methodology Section
-with st.expander("Methodology & Data Sources"):
-    st.markdown(
-        """
-        ### Methodology
-        The **Tech Export Friction Index (TEFI)** is a composite score (0-100) calculated using a weighted average of:
-        1.  **Corporate Tax Rate (60%):** The statutory top corporate tax rate (including state/local taxes).
-        2.  **Compliance Burden (40%):** Estimated hours per year to prepare and pay taxes.
+    # Load Real Data from CSV
+    try:
+        df = pd.read_csv("data/tefi_raw.csv")
         
-        ### Data Sources (Verified 2026)
-        *   **Corporate Tax Rates:** Sourced from the *OECD Corporate Tax Statistics 2025* and *Tax Foundation*.
-        *   **Compliance Hours:** Sourced from *World Bank Doing Business* (Historical archives) and *PWC Paying Taxes* reports.
-        
-        *Note: This data is for informational purposes only. Always consult a tax professional.*
-        """
-    )
-
-# Load Real Data from CSV
-try:
-    df = pd.read_csv("data/tefi_raw.csv")
-    
-    # Interactive Chart
-    fig = px.bar(
-        df.sort_values("TEFI Score (0-100)"), 
-        x="Country", 
-        y="TEFI Score (0-100)", 
-        color="TEFI Score (0-100)",
-        color_continuous_scale=["#E2E8F0", "#3B82F6", "#1E40AF"], # Professional Blues
-        text="TEFI Score (0-100)",
-        title="TEFI 2026: Tax & Compliance Friction by Country"
-    )
-    fig.update_layout(
-        xaxis_title="", 
-        yaxis_title="Friction Score (Lower is Better)",
-        plot_bgcolor="white",
-        font=dict(family="Plus Jakarta Sans", size=12, color="#334155")
-    )
-    st.plotly_chart(fig, use_container_width=True)
-
-    # Data Table
-    with st.expander("View Underlying Data"):
-        st.dataframe(df, use_container_width=True)
-        st.download_button(
-            "Download CSV",
-            df.to_csv(index=False).encode('utf-8'),
-            "tefi_data_2026.csv",
-            "text/csv"
+        # Interactive Chart
+        fig = px.bar(
+            df.sort_values("TEFI Score (0-100)"), 
+            x="Country", 
+            y="TEFI Score (0-100)", 
+            color="TEFI Score (0-100)",
+            color_continuous_scale=["#E2E8F0", "#3B82F6", "#1E40AF"], # Professional Blues
+            text="TEFI Score (0-100)",
+            title="TEFI 2026: Tax & Compliance Friction by Country"
         )
-    
-    st.caption(f"Last Data Update: {df['Last Updated'].iloc[0]}")
-        
-except FileNotFoundError:
-    st.error("Data file 'data/tefi_raw.csv' not found. Please contact administrator.")
-
-st.divider()
-
-# -----------------------------------------------------------------------------
-# INDEX 2: NZ SME RESILIENCE
-# -----------------------------------------------------------------------------
-st.markdown("### 2. NZ SME Resilience Index")
-st.write("**What is it?** A real-time pulse of New Zealand's small business health, based on official Stats NZ data.")
-
-# Load Real Data
-try:
-    df_sme = pd.read_csv("data/nz_sme_resilience.csv")
-    
-    # Calculate Score dynamically or read from attrs if possible (CSV doesn't store attrs, so we recalc or read)
-    # Simple Recalc for display consistency
-    # Weights: Spending (50%), Enterprise Growth (30%), Employment (20%)
-    # Base 50
-    spending = df_sme.loc[df_sme['Metric'].str.contains("Spending"), "Value (%)"].values[0]
-    enterprise = df_sme.loc[df_sme['Metric'].str.contains("Enterprise"), "Value (%)"].values[0]
-    employment = df_sme.loc[df_sme['Metric'].str.contains("Employment"), "Value (%)"].values[0]
-    
-    score = 50 + (spending * 10) + (enterprise * 5) + (employment * 2)
-    score = round(score, 1)
-
-    # Display Score
-    col_score, col_desc = st.columns([1, 2])
-    
-    with col_score:
-        st.metric(label="Current Resilience Score (0-100)", value=score, delta=f"{spending}% Spending Trend")
-        
-    with col_desc:
-        if score > 55:
-            st.success("The SME sector is showing strong growth signals.")
-        elif score < 45:
-            st.error("The SME sector is under significant pressure (Contraction).")
-        else:
-            st.warning("The SME sector is holding steady but facing headwinds.")
-            
-        st.markdown(
-            """
-            **Key Drivers:**
-            *   **Retail Spending:** A proxy for consumer confidence.
-            *   **Enterprise Counts:** Are businesses opening or closing?
-            *   **Employment:** Is the labor market expanding?
-            """
+        fig.update_layout(
+            xaxis_title="", 
+            yaxis_title="Friction Score (Lower is Better)",
+            plot_bgcolor="white",
+            paper_bgcolor="white",
+            font=dict(family="Plus Jakarta Sans", size=12, color="#334155")
         )
+        st.plotly_chart(fig, use_container_width=True)
 
-    # Data Table
-    st.markdown("#### Underlying Indicators (Stats NZ)")
-    st.dataframe(df_sme, use_container_width=True)
-    
-    st.caption(f"Data Sources: {', '.join(df_sme['Source'].unique())}")
+        # Data Table
+        with st.expander("View Underlying Data"):
+            st.dataframe(df, use_container_width=True)
+            st.download_button(
+                "Download CSV",
+                df.to_csv(index=False).encode('utf-8'),
+                "tefi_data_2026.csv",
+                "text/csv"
+            )
+    except FileNotFoundError:
+        st.error("TEFI Data not found.")
 
-except FileNotFoundError:
-    st.info("SME Index Data is being compiled. Please check back shortly.")
+with tab2:
+    st.markdown("### 2. NZ SME Resilience Index")
+    st.info("Fetching real-time data from Stats NZ...")
+    # Add SME content here if data is available
+    # For now, placeholder or check fetch_nz_data.py integration
+    st.write("This index tracks the health of NZ SMEs using real-time spending data.")
+    try:
+        df_sme = pd.read_csv("data/nz_sme_resilience.csv")
+        st.line_chart(df_sme.set_index("Date")["SME_Resilience_Score"])
+    except:
+        st.write("Data currently being compiled.")

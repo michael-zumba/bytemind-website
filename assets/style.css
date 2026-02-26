@@ -1,94 +1,176 @@
 
 /* Modern, Professional Font Stack */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
 
 :root {
-    --primary: #0F172A;     /* Slate 900 */
-    --secondary: #334155;   /* Slate 700 */
-    --accent: #2563EB;      /* Blue 600 */
+    --primary: #0F172A;     /* Slate 900 - Deep, authoritative black-blue */
+    --secondary: #334155;   /* Slate 700 - Readable text */
+    --accent: #2563EB;      /* Blue 600 - Primary Action */
     --accent-hover: #1D4ED8; /* Blue 700 */
-    --bg-light: #F8FAFC;    /* Slate 50 */
-    --border: #E2E8F0;      /* Slate 200 */
+    --accent-light: #EFF6FF; /* Blue 50 - Backgrounds */
+    --bg-body: #F8FAFC;     /* Slate 50 - Main background */
+    --surface: #FFFFFF;     /* White - Cards/Containers */
+    --border: #E2E8F0;      /* Slate 200 - Subtle borders */
+    --success: #10B981;     /* Emerald 500 */
+    --warning: #F59E0B;     /* Amber 500 */
 }
 
 html, body, [class*="css"]  {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--primary);
-    background-color: #FFFFFF;
+    background-color: var(--bg-body);
+    line-height: 1.6;
 }
 
 /* Typography */
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     color: var(--primary);
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em; /* Tighter tracking for headings */
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-h1 { margin-bottom: 1.5rem; }
-h2 { margin-top: 2rem; margin-bottom: 1rem; }
+h1 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+h2 { font-size: 1.8rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--accent-light); padding-bottom: 0.5rem; display: inline-block;}
+h3 { font-size: 1.4rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
 
-/* Buttons - High Contrast & Professional */
+p, li, span, div {
+    font-family: 'Inter', sans-serif; /* Inter is better for body text reading */
+    color: var(--secondary);
+    font-size: 1.05rem;
+}
+
+/* Buttons - Modern & Tactile */
 .stButton > button {
     background-color: var(--accent) !important;
     color: #FFFFFF !important;
-    border: none !important;
-    border-radius: 6px !important;
-    padding: 0.6rem 1.5rem !important;
+    border: 1px solid transparent !important;
+    border-radius: 8px !important;
+    padding: 0.6rem 1.8rem !important;
     font-weight: 600 !important;
-    font-size: 1rem !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .stButton > button:hover {
     background-color: var(--accent-hover) !important;
     transform: translateY(-1px);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
 }
 
 .stButton > button:active {
     transform: translateY(0px);
 }
 
-/* Cards / Containers */
-div[data-testid="stMetric"], div.stContainer {
-    background-color: #FFFFFF;
+/* Secondary Button (Outline) - using specific targeting if possible, otherwise generic */
+/* Streamlit doesn't easily support secondary buttons, so we rely on primary styling */
+
+/* Cards / Containers - The "SaaS" Look */
+div[data-testid="stMetric"], div.stContainer, div[data-testid="stExpander"] {
+    background-color: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 1.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.2s ease;
 }
 
-/* Hero Section Styling */
+div[data-testid="stMetric"]:hover, div.stContainer:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    border-color: var(--accent-light);
+}
+
+/* Hero Section Styling - Gradient & Depth */
 .hero-container {
-    padding: 4rem 0;
-    background: linear-gradient(to bottom right, #F8FAFC, #EFF6FF);
-    border-radius: 16px;
-    margin-bottom: 3rem;
+    padding: 5rem 2rem;
+    background: radial-gradient(circle at top right, #EFF6FF, #F8FAFC);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    margin-bottom: 4rem;
     text-align: center;
+    box-shadow: inset 0 0 20px rgba(37, 99, 235, 0.03);
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 800;
     line-height: 1.1;
-    color: #0F172A;
+    background: linear-gradient(to right, #0F172A, #2563EB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 1.5rem;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
-    color: #475569;
-    max-width: 600px;
-    margin: 0 auto 2rem auto;
+    font-size: 1.35rem;
+    color: #64748B;
+    max-width: 700px;
+    margin: 0 auto 2.5rem auto;
     line-height: 1.6;
+    font-weight: 400;
 }
 
-/* Sidebar */
+/* Sidebar Styling */
 section[data-testid="stSidebar"] {
-    background-color: #F8FAFC;
+    background-color: #FFFFFF;
     border-right: 1px solid var(--border);
+}
+
+section[data-testid="stSidebar"] .block-container {
+    padding-top: 2rem;
+}
+
+/* Profile Card in Sidebar */
+.profile-card {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--bg-body);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+.profile-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+    color: var(--primary);
+}
+
+.profile-role {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    background-color: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    width: 100%;
+}
+
+.social-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background-color: var(--accent-light);
 }
 
 /* Links */
@@ -96,7 +178,26 @@ a {
     color: var(--accent);
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.2s;
 }
 a:hover {
+    color: var(--accent-hover);
     text-decoration: underline;
+}
+
+/* Divider */
+hr {
+    margin: 3rem 0;
+    border: none;
+    border-top: 1px solid var(--border);
+}
+
+/* Footer */
+.footer {
+    margin-top: 5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: #94A3B8;
+    font-size: 0.85rem;
 }

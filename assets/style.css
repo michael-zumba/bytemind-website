@@ -7,22 +7,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-    /* Color Palette - "Deep Professional" */
-    --primary: #020617;      /* Slate 950 - Almost Black */
+    /* Color Palette - "Executive Finance" */
+    --primary: #0B1120;      /* Slate 950 - Deepest Navy/Black */
     --secondary: #334155;    /* Slate 700 - Body Text */
-    --accent: #2563EB;       /* Blue 600 - Primary Brand */
-    --accent-dark: #1D4ED8;  /* Blue 700 - Hover States */
-    --accent-subtle: #EFF6FF; /* Blue 50 - Backgrounds */
+    
+    /* Brand Color - Sophisticated Navy Blue (Not bright tech blue) */
+    --accent: #1E3A8A;       /* Blue 900 */
+    --accent-hover: #172554; /* Blue 950 */
+    --accent-subtle: #F1F5F9; /* Slate 100 - Backgrounds */
+    
     --bg-body: #FFFFFF;      /* Pure White */
-    --bg-surface: #F8FAFC;   /* Slate 50 - Secondary Backgrounds */
+    --bg-surface: #FAFAFA;   /* Neutral 50 */
     --border-light: #E2E8F0; /* Slate 200 */
-    --border-hover: #CBD5E1; /* Slate 300 */
     
     /* Shadows - "Soft & Diffused" */
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
 }
 
 /* Global Reset & Base Styles */
@@ -41,18 +42,18 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--primary);
     font-weight: 700;
-    letter-spacing: -0.03em; /* Tight, modern tracking */
+    letter-spacing: -0.02em; 
     line-height: 1.2;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin-top: 3rem;
     margin-bottom: 1.5rem;
@@ -77,7 +78,7 @@ p {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translate3d(0, 30px, 0);
+        transform: translate3d(0, 20px, 0);
     }
     to {
         opacity: 1;
@@ -85,114 +86,100 @@ p {
     }
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
 .animate-fade-in-up {
     animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
-.animate-delay-1 { animation-delay: 0.1s; }
-.animate-delay-2 { animation-delay: 0.2s; }
-.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-1 { animation-delay: 0.15s; }
 
 /* -------------------------------------------------------------------------- */
 /* COMPONENTS                                                                 */
 /* -------------------------------------------------------------------------- */
 
-/* Buttons - "Premium Tactile" */
+/* Buttons - "Executive Matte" */
+/* Removing gradients for a cleaner, flatter, more premium look */
 .stButton > button {
-    background: linear-gradient(180deg, var(--accent) 0%, var(--accent-dark) 100%);
+    background-color: var(--accent) !important;
     color: white !important;
     border: none !important;
-    border-radius: 8px !important;
+    border-radius: 6px !important; /* Slightly sharper corners */
     padding: 0.75rem 2rem !important;
     font-size: 1rem !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     letter-spacing: 0.01em !important;
-    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2), inset 0 1px 0 rgba(255,255,255,0.2) !important;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.2s ease !important;
 }
 
 .stButton > button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 12px rgba(37, 99, 235, 0.3), inset 0 1px 0 rgba(255,255,255,0.2) !important;
+    background-color: var(--accent-hover) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
 }
 
 .stButton > button:active {
     transform: translateY(0px);
-    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2) !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Cards / Containers - "Clean & Elevated" */
+/* Cards / Containers */
 div[data-testid="stMetric"], div.stContainer, div[data-testid="stExpander"] {
     background-color: white;
     border: 1px solid var(--border-light);
-    border-radius: 16px;
+    border-radius: 12px;
     padding: 2rem;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s ease;
 }
 
 div.stContainer:hover {
-    border-color: var(--accent-subtle);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-2px);
+    border-color: #CBD5E1;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
 }
 
-/* Hero Section - "Landing Page Quality" */
+/* Hero Section - Centered & Clean */
 .hero-wrapper {
     text-align: center;
     padding: 6rem 2rem;
-    background: radial-gradient(circle at 50% 0%, #EFF6FF 0%, #FFFFFF 70%);
-    border-radius: 24px;
+    background: radial-gradient(circle at 50% 10%, #F8FAFC 0%, #FFFFFF 80%); /* Subtle light source */
+    border-radius: 20px;
     margin-bottom: 4rem;
-    border: 1px solid rgba(226, 232, 240, 0.5);
-    animation: fadeIn 1s ease-out;
+    border: 1px solid var(--border-light);
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .hero-title-text {
-    font-size: 4.5rem; /* Massive, confident heading */
+    font-size: 4rem;
     font-weight: 800;
-    line-height: 1.05;
-    background: linear-gradient(135deg, #0F172A 30%, #2563EB 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    line-height: 1.1;
+    color: var(--primary); /* Solid color, no gradient for cleaner look */
     margin-bottom: 1.5rem;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
 }
 
 .hero-subtitle-text {
-    font-size: 1.4rem;
-    color: #64748B;
+    font-size: 1.25rem;
+    color: var(--secondary);
     max-width: 750px;
     margin: 0 auto 2.5rem auto;
     line-height: 1.6;
     font-weight: 400;
 }
 
-/* Sidebar - "Glassy & Clean" */
+/* Sidebar */
 section[data-testid="stSidebar"] {
-    background-color: #FAFAFA;
+    background-color: #FFFFFF;
     border-right: 1px solid var(--border-light);
 }
 
 .profile-card {
-    background: white;
-    border-radius: 16px;
+    background: #F8FAFC;
+    border-radius: 12px;
     padding: 1.5rem;
     text-align: center;
-    box-shadow: var(--shadow-sm);
     border: 1px solid var(--border-light);
     margin-bottom: 2rem;
-    transition: transform 0.3s ease;
-}
-
-.profile-card:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
 }
 
 .profile-name {
@@ -213,7 +200,7 @@ section[data-testid="stSidebar"] {
     margin-bottom: 0.5rem;
 }
 
-/* Social Links in Sidebar */
+/* Social Links */
 .social-link {
     display: flex;
     align-items: center;
@@ -223,7 +210,7 @@ section[data-testid="stSidebar"] {
     margin-top: 0.75rem;
     background-color: white;
     border: 1px solid var(--border-light);
-    border-radius: 8px;
+    border-radius: 6px;
     color: var(--secondary);
     text-decoration: none;
     font-size: 0.9rem;
@@ -232,10 +219,9 @@ section[data-testid="stSidebar"] {
 }
 
 .social-link:hover {
-    background-color: var(--accent);
-    color: white;
-    border-color: var(--accent);
-    text-decoration: none;
+    border-color: var(--primary);
+    color: var(--primary);
+    background-color: #F8FAFC;
 }
 
 /* Divider */
@@ -243,7 +229,7 @@ hr {
     margin: 4rem 0;
     border: none;
     height: 1px;
-    background: linear-gradient(to right, transparent, var(--border-light), transparent);
+    background: var(--border-light);
 }
 
 /* Footer */
@@ -252,21 +238,22 @@ hr {
     padding-top: 2rem;
     border-top: 1px solid var(--border-light);
     text-align: center;
-    color: #94A3B8;
+    color: #64748B;
     font-size: 0.85rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
-/* Custom "Tag" style */
+/* Badges / Tags */
 .badge {
     display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background-color: var(--accent-subtle);
-    color: var(--accent);
+    padding: 0.35rem 1rem;
+    background-color: #F1F5F9;
+    color: var(--primary);
     border-radius: 9999px;
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-light);
 }

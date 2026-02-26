@@ -27,7 +27,7 @@ with st.container():
     
     with col1:
         st.markdown("### 1. The Global Growth Roadmap")
-        st.markdown("**Best for:** <span style='color:#2563EB; font-weight:600'>Startups & Tech Exporters</span>", unsafe_allow_html=True)
+        st.markdown("**Best for:** <span style='color:#1E3A8A; font-weight:600'>Startups & Tech Exporters</span>", unsafe_allow_html=True)
         st.write(
             """
             Expanding to the USA, UK, or Australia? We build you a custom tax plan so you don't get stuck with unexpected bills.
@@ -52,7 +52,7 @@ with st.container():
     
     with col1:
         st.markdown("### 2. Fractional Tax Director")
-        st.markdown("**Best for:** <span style='color:#2563EB; font-weight:600'>Scaling Companies ($5M+ Revenue)</span>", unsafe_allow_html=True)
+        st.markdown("**Best for:** <span style='color:#1E3A8A; font-weight:600'>Scaling Companies ($5M+ Revenue)</span>", unsafe_allow_html=True)
         st.write(
             """
             Too big for a general accountant, too small for a full-time Tax Manager? Hire us on a monthly retainer.
@@ -77,7 +77,7 @@ with st.container():
     
     with col1:
         st.markdown("### 3. SME Tax Health Check")
-        st.markdown("**Best for:** <span style='color:#2563EB; font-weight:600'>Established NZ Businesses</span>", unsafe_allow_html=True)
+        st.markdown("**Best for:** <span style='color:#1E3A8A; font-weight:600'>Established NZ Businesses</span>", unsafe_allow_html=True)
         st.write(
             """
             A comprehensive review of your current tax setup to find savings and fix risks.
@@ -93,7 +93,7 @@ with st.container():
 st.markdown("---")
 st.markdown("<h3 style='text-align: center;'>Ready to scale?</h3>", unsafe_allow_html=True)
 
-col_c1, col_c2, col_c3 = st.columns([1, 1, 1])
+col_c1, col_c2, col_c3 = st.columns([1, 0.6, 1])
 with col_c2:
-    if st.button("Start the Conversation →", use_container_width=True):
+    if st.button("Start the Conversation", use_container_width=True):
         st.switch_page("pages/4_Contact.py")

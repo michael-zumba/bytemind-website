@@ -26,8 +26,8 @@ def sidebar_info():
                  logo = Image.open("assets/logo/bytemind-logo.png")
                  st.image(logo, use_container_width=True)
             elif os.path.exists("assets/images/profile_dr_zhang.png"):
-                image = Image.open("assets/images/profile_dr_zhang.png")
-                st.image(image, use_container_width=True)
+                 # Fallback to profile if logo missing
+                 pass
         except Exception:
             pass
 
@@ -58,4 +58,4 @@ def sidebar_info():
         
         st.write("")
         st.markdown("---")
-        st.caption("© 2026 ByteMind Ltd.\nNew Zealand Tax Consultancy.")
+        st.caption("© 2026 ByteMind Ltd.\nStrategic Tax Intelligence.")

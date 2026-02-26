@@ -37,9 +37,9 @@ with col1:
         st.markdown(
             """
             <div style="margin-top: 1.5rem; text-align: center;">
-                <span class="badge" style="background: #F1F5F9; color: #475569;">PhD in Taxation</span>
-                <span class="badge" style="background: #F1F5F9; color: #475569;">University Lecturer</span>
-                <span class="badge" style="background: #F1F5F9; color: #475569;">SME Strategist</span>
+                <span class="badge" style="background: white; border: 1px solid #E2E8F0; color: #475569;">PhD in Taxation</span>
+                <span class="badge" style="background: white; border: 1px solid #E2E8F0; color: #475569;">University Lecturer</span>
+                <span class="badge" style="background: white; border: 1px solid #E2E8F0; color: #475569;">CPA Australia</span>
             </div>
             """,
             unsafe_allow_html=True
@@ -53,9 +53,9 @@ with col2:
     
     st.write(
         """
-        Dr. Zhang is a **Lecturer in Taxation** based in New Zealand, standing at the intersection of **academic rigour** and **practical business strategy**.
+        Dr. Zhang is a **Senior Lecturer in Accounting** and **CPA** based in New Zealand, standing at the intersection of **academic rigour** and **practical business strategy**.
         
-        With a deep background in international tax law and economic policy, Dr. Zhang doesn't just "do tax returns"—he designs tax strategies that fuel growth. His research focuses on how tax policy impacts SME innovation and cross-border trade.
+        With over 7 years of experience in advanced accounting research, Dr. Zhang specializes in **digital transformation**, **ESG disclosure**, and **cross-cultural financial reporting**. He doesn't just "do tax returns"—he leverages data analytics and textual analysis to design strategies that fuel sustainable growth.
         """
     )
     
@@ -70,11 +70,11 @@ with col2:
     # Expertise Grid
     c1, c2 = st.columns(2)
     with c1:
-        st.markdown("#### 🏛 Academic Authority")
-        st.caption("Lecturer at Lincoln University. Published researcher in top-tier journals.")
+        st.markdown("#### Academic Authority")
+        st.caption("Senior Lecturer at Lincoln University. Published researcher in top-tier Q1 journals (ABDC-A).")
     with c2:
-        st.markdown("#### 🌏 Global Perspective")
-        st.caption("Specialist in cross-border expansion to US, UK, and Australian markets.")
+        st.markdown("#### Global Perspective")
+        st.caption("Specialist in cross-border expansion, international financial reporting, and digital asset valuation.")
 
 st.divider()
 
@@ -89,14 +89,12 @@ l_col1, l_col2 = st.columns(2)
 
 with l_col1:
     st.markdown("### Recent Analysis")
-    # Embedding LinkedIn Post via iframe if possible, or using a polished card linking out
-    # Since direct iframe embedding of LinkedIn is tricky due to their CSP, we use a visual card approach
     st.info("Follow Dr. Zhang on LinkedIn for daily updates on NZ tax policy.")
     
     st.markdown(
         """
         <div style="border: 1px solid #E2E8F0; border-radius: 12px; padding: 1.5rem; background: white;">
-            <h4>📺 Video Analysis: NZ Budget 2026</h4>
+            <h4>Video Analysis: NZ Budget 2026</h4>
             <p>Dr. Zhang breaks down the implications of the latest budget for small business owners.</p>
             <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/recent-activity/all/" target="_blank">
                 <button style="background-color: #0A66C2; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">
@@ -113,7 +111,7 @@ with l_col2:
     st.markdown(
         """
         <div style="border: 1px solid #E2E8F0; border-radius: 12px; padding: 1.5rem; background: white;">
-            <h4>📈 Trend Report: SME Resilience</h4>
+            <h4>Trend Report: SME Resilience</h4>
             <p>Discussion on how rising compliance costs are affecting the 'SME engine' of the economy.</p>
             <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/recent-activity/all/" target="_blank">
                 <button style="background-color: #0A66C2; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">

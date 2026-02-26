@@ -21,7 +21,7 @@ st.markdown(
 )
 
 # --- Methodology Expander ---
-with st.expander("📊 View Methodology & Data Sources"):
+with st.expander("View Methodology & Data Sources"):
     st.markdown("""
     ### 1. Tax Efficiency Friction Index (TEFI)
     **Objective:** Measures the friction businesses face due to corporate tax rates and compliance burden.
@@ -69,7 +69,7 @@ with tab1:
             x="Country", 
             y="TEFI Score (0-100)", 
             color="TEFI Score (0-100)",
-            color_continuous_scale=["#E2E8F0", "#60A5FA", "#2563EB", "#1E3A8A"],
+            color_continuous_scale=["#CBD5E1", "#94A3B8", "#64748B", "#1E3A8A"],
             text="TEFI Score (0-100)",
             title="TEFI 2026: Tax & Compliance Friction by Country"
         )
@@ -78,7 +78,7 @@ with tab1:
             yaxis_title="Friction Score (Lower is Better)",
             plot_bgcolor="white",
             paper_bgcolor="white",
-            font=dict(family="Inter", size=12, color="#64748B"),
+            font=dict(family="Inter", size=12, color="#475569"),
             xaxis=dict(showgrid=False),
             yaxis=dict(showgrid=True, gridcolor="#F1F5F9"),
             coloraxis_showscale=False

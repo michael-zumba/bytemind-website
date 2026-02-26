@@ -19,71 +19,77 @@ utils.load_css()
 utils.sidebar_info()
 
 # -----------------------------------------------------------------------------
-# HERO SECTION
+# HERO SECTION (Animated & Premium)
 # -----------------------------------------------------------------------------
-# Using a container for better control over the hero layout
 with st.container():
-    st.markdown('<div class="hero-container">', unsafe_allow_html=True)
-    st.markdown('<h1 class="hero-title">Smarter Tax Strategy<br>for Global Growth.</h1>', unsafe_allow_html=True)
     st.markdown(
         """
-        <p class="hero-subtitle">
-        Expanding your business overseas? Don't let tax compliance eat your profits.<br>
-        ByteMind combines <strong>academic rigour</strong> with <strong>practical consulting</strong> to help New Zealand SMEs and Tech Exporters grow safely.
-        </p>
+        <div class="hero-wrapper animate-fade-in-up">
+            <div class="badge">New Zealand • Global Strategy • Intelligence</div>
+            <h1 class="hero-title-text">Smarter Tax Strategy<br>for Global Growth.</h1>
+            <p class="hero-subtitle-text animate-delay-1">
+                ByteMind combines <strong>academic rigour</strong> with <strong>practical consulting</strong> to help New Zealand SMEs and Tech Exporters grow safely.
+                <br>Don't let tax compliance eat your profits.
+            </p>
+        </div>
         """,
         unsafe_allow_html=True
     )
     
-    col_cta1, col_cta2, col_cta3 = st.columns([1, 1, 1])
-    with col_cta2:
-        if st.button("Explore Our Services", use_container_width=True):
+    # Call to Action Buttons - Centered
+    col1, col2, col3 = st.columns([1, 0.8, 1])
+    with col2:
+        if st.button("Explore Our Services →", use_container_width=True):
             st.switch_page("pages/1_Services.py")
-            
-    st.markdown('</div>', unsafe_allow_html=True)
 
 # -----------------------------------------------------------------------------
-# PREVIEW CHART (The "Byte")
+# VALUE PROPOSITION / DATA PREVIEW
 # -----------------------------------------------------------------------------
-st.markdown("## The Data Advantage")
-st.write("We don't just give advice; we back it up with proprietary data.")
+st.write("")
+st.write("")
+st.markdown("<h2 style='text-align: center;'>The Data Advantage</h2>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; max-width: 600px; margin: 0 auto;'>We don't just give advice; we back it up with proprietary data. Track the friction of doing business across major markets.</p>", unsafe_allow_html=True)
+st.write("")
 
 try:
     df_tefi = pd.read_csv("data/tefi_raw.csv")
+    
+    # Premium Chart Styling
     fig = px.bar(
         df_tefi.sort_values("TEFI Score (0-100)"), 
         x="Country", 
         y="TEFI Score (0-100)", 
         color="TEFI Score (0-100)",
-        title="Tech Export Friction Index (TEFI) - 2026 Preview",
-        color_continuous_scale=["#E2E8F0", "#3B82F6", "#1E40AF"], # Professional Blues
+        # Custom Colors: Light Grey to Deep Blue
+        color_continuous_scale=["#E2E8F0", "#60A5FA", "#2563EB", "#1E3A8A"],
     )
+    
     fig.update_layout(
-        height=400, 
-        margin=dict(l=20, r=20, t=50, b=20),
+        height=450, 
+        margin=dict(l=20, r=20, t=20, b=20),
         plot_bgcolor="white",
         paper_bgcolor="white",
-        font=dict(family="Plus Jakarta Sans", size=12, color="#334155")
+        font=dict(family="Inter", size=12, color="#64748B"),
+        xaxis=dict(showgrid=False),
+        yaxis=dict(showgrid=True, gridcolor="#F1F5F9"),
+        coloraxis_showscale=False
     )
     st.plotly_chart(fig, use_container_width=True)
 except FileNotFoundError:
     st.error("TEFI Data not found. Please run data update.")
 
-st.write("")
-st.write("")
+st.markdown("---")
 
 # -----------------------------------------------------------------------------
-# LATEST INSIGHTS (CMS)
+# LATEST INSIGHTS (Grid Layout)
 # -----------------------------------------------------------------------------
 st.markdown("## Latest Insights")
 st.write("Analysis of tax policy changes that impact NZ exporters.")
 
-# Simple CMS: Read markdown files from 'posts/'
 posts_dir = "posts"
 if os.path.exists(posts_dir):
-    files = sorted(os.listdir(posts_dir), reverse=True) # Newest first
+    files = sorted(os.listdir(posts_dir), reverse=True) 
     
-    # Grid Layout for Posts
     col1, col2 = st.columns(2)
     
     for i, filename in enumerate(files):
@@ -91,7 +97,7 @@ if os.path.exists(posts_dir):
             with open(os.path.join(posts_dir, filename), "r") as f:
                 content = f.read()
                 
-            # Simple Frontmatter Parser
+            # Parse Frontmatter
             metadata = {}
             if content.startswith("---"):
                 parts = content.split("---", 2)
@@ -107,13 +113,13 @@ if os.path.exists(posts_dir):
                 metadata["title"] = filename.replace(".md", "")
                 metadata["date"] = ""
             
-            # Display in columns
+            # Display Card
             with (col1 if i % 2 == 0 else col2):
                 with st.container():
-                    st.markdown(f"### {metadata.get('title', 'Untitled')}")
-                    st.caption(f"📅 {metadata.get('date', '')}")
-                    st.markdown(body[:200] + "...") # Preview
-                    st.button(f"Read More", key=f"read_{i}", use_container_width=True)
+                    st.markdown(f"#### {metadata.get('title', 'Untitled')}")
+                    st.caption(f"PUBLISHED: {metadata.get('date', '').upper()}")
+                    st.markdown(body[:180] + "...") 
+                    st.button(f"Read Article", key=f"read_{i}")
 
 # -----------------------------------------------------------------------------
 # FOOTER
@@ -122,7 +128,7 @@ st.markdown(
     """
     <div class="footer">
         <p>© 2026 ByteMind Ltd. All rights reserved.</p>
-        <p>Built with Streamlit & Python.</p>
+        <p style="opacity: 0.6; font-size: 0.75rem;">Strategic Tax Intelligence for New Zealand</p>
     </div>
     """,
     unsafe_allow_html=True

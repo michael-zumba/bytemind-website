@@ -9,8 +9,16 @@ st.set_page_config(page_title="Indices | ByteMind Ltd", page_icon="assets/images
 utils.load_css()
 utils.sidebar_info()
 
-st.title("ByteMind Economic Indices")
-st.markdown("Real-time economic indicators powered by open data.")
+st.markdown(
+    """
+    <div class="animate-fade-in-up">
+        <div class="badge">Economic Intelligence</div>
+        <h1>ByteMind Indices</h1>
+        <p style="font-size: 1.2rem; color: #64748B;">Real-time economic indicators powered by open data.</p>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
 
 # --- Methodology Expander ---
 with st.expander("📊 View Methodology & Data Sources"):
@@ -61,7 +69,7 @@ with tab1:
             x="Country", 
             y="TEFI Score (0-100)", 
             color="TEFI Score (0-100)",
-            color_continuous_scale=["#E2E8F0", "#3B82F6", "#1E40AF"], # Professional Blues
+            color_continuous_scale=["#E2E8F0", "#60A5FA", "#2563EB", "#1E3A8A"],
             text="TEFI Score (0-100)",
             title="TEFI 2026: Tax & Compliance Friction by Country"
         )
@@ -70,7 +78,10 @@ with tab1:
             yaxis_title="Friction Score (Lower is Better)",
             plot_bgcolor="white",
             paper_bgcolor="white",
-            font=dict(family="Plus Jakarta Sans", size=12, color="#334155")
+            font=dict(family="Inter", size=12, color="#64748B"),
+            xaxis=dict(showgrid=False),
+            yaxis=dict(showgrid=True, gridcolor="#F1F5F9"),
+            coloraxis_showscale=False
         )
         st.plotly_chart(fig, use_container_width=True)
 
@@ -90,7 +101,6 @@ with tab2:
     st.markdown("### 2. NZ SME Resilience Index")
     st.info("Fetching real-time data from Stats NZ...")
     # Add SME content here if data is available
-    # For now, placeholder or check fetch_nz_data.py integration
     st.write("This index tracks the health of NZ SMEs using real-time spending data.")
     try:
         df_sme = pd.read_csv("data/nz_sme_resilience.csv")

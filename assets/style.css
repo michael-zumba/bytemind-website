@@ -1,203 +1,272 @@
 
-/* Modern, Professional Font Stack */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+/* -------------------------------------------------------------------------- */
+/* PREMIUM DESIGN SYSTEM - BYTEMIND LTD (2026)                                */
+/* -------------------------------------------------------------------------- */
+
+/* Font Import: Plus Jakarta Sans (Headings) & Inter (Body) */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-    --primary: #0F172A;     /* Slate 900 - Deep, authoritative black-blue */
-    --secondary: #334155;   /* Slate 700 - Readable text */
-    --accent: #2563EB;      /* Blue 600 - Primary Action */
-    --accent-hover: #1D4ED8; /* Blue 700 */
-    --accent-light: #EFF6FF; /* Blue 50 - Backgrounds */
-    --bg-body: #F8FAFC;     /* Slate 50 - Main background */
-    --surface: #FFFFFF;     /* White - Cards/Containers */
-    --border: #E2E8F0;      /* Slate 200 - Subtle borders */
-    --success: #10B981;     /* Emerald 500 */
-    --warning: #F59E0B;     /* Amber 500 */
+    /* Color Palette - "Deep Professional" */
+    --primary: #020617;      /* Slate 950 - Almost Black */
+    --secondary: #334155;    /* Slate 700 - Body Text */
+    --accent: #2563EB;       /* Blue 600 - Primary Brand */
+    --accent-dark: #1D4ED8;  /* Blue 700 - Hover States */
+    --accent-subtle: #EFF6FF; /* Blue 50 - Backgrounds */
+    --bg-body: #FFFFFF;      /* Pure White */
+    --bg-surface: #F8FAFC;   /* Slate 50 - Secondary Backgrounds */
+    --border-light: #E2E8F0; /* Slate 200 */
+    --border-hover: #CBD5E1; /* Slate 300 */
+    
+    /* Shadows - "Soft & Diffused" */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-premium: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
+/* Global Reset & Base Styles */
 html, body, [class*="css"]  {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    color: var(--primary);
+    font-family: 'Inter', sans-serif;
+    color: var(--secondary);
     background-color: var(--bg-body);
     line-height: 1.6;
+    font-weight: 400;
 }
 
-/* Typography */
+/* -------------------------------------------------------------------------- */
+/* TYPOGRAPHY                                                                 */
+/* -------------------------------------------------------------------------- */
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--primary);
     font-weight: 700;
-    letter-spacing: -0.025em; /* Tighter tracking for headings */
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.03em; /* Tight, modern tracking */
+    line-height: 1.2;
 }
 
-h1 { font-size: 2.5rem; margin-bottom: 1.5rem; }
-h2 { font-size: 1.8rem; margin-top: 2.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--accent-light); padding-bottom: 0.5rem; display: inline-block;}
-h3 { font-size: 1.4rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
 
-p, li, span, div {
-    font-family: 'Inter', sans-serif; /* Inter is better for body text reading */
-    color: var(--secondary);
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+p {
     font-size: 1.05rem;
+    color: var(--secondary);
+    margin-bottom: 1.5rem;
+    font-weight: 400;
 }
 
-/* Buttons - Modern & Tactile */
+/* -------------------------------------------------------------------------- */
+/* ANIMATIONS                                                                 */
+/* -------------------------------------------------------------------------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 30px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+
+/* -------------------------------------------------------------------------- */
+/* COMPONENTS                                                                 */
+/* -------------------------------------------------------------------------- */
+
+/* Buttons - "Premium Tactile" */
 .stButton > button {
-    background-color: var(--accent) !important;
-    color: #FFFFFF !important;
-    border: 1px solid transparent !important;
+    background: linear-gradient(180deg, var(--accent) 0%, var(--accent-dark) 100%);
+    color: white !important;
+    border: none !important;
     border-radius: 8px !important;
-    padding: 0.6rem 1.8rem !important;
+    padding: 0.75rem 2rem !important;
+    font-size: 1rem !important;
     font-weight: 600 !important;
-    font-family: 'Plus Jakarta Sans', sans-serif !important;
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.01em !important;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2), inset 0 1px 0 rgba(255,255,255,0.2) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .stButton > button:hover {
-    background-color: var(--accent-hover) !important;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px rgba(37, 99, 235, 0.3), inset 0 1px 0 rgba(255,255,255,0.2) !important;
 }
 
 .stButton > button:active {
     transform: translateY(0px);
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2) !important;
 }
 
-/* Secondary Button (Outline) - using specific targeting if possible, otherwise generic */
-/* Streamlit doesn't easily support secondary buttons, so we rely on primary styling */
-
-/* Cards / Containers - The "SaaS" Look */
+/* Cards / Containers - "Clean & Elevated" */
 div[data-testid="stMetric"], div.stContainer, div[data-testid="stExpander"] {
-    background-color: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
-    transition: box-shadow 0.2s ease;
+    background-color: white;
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
 }
 
-div[data-testid="stMetric"]:hover, div.stContainer:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
-    border-color: var(--accent-light);
+div.stContainer:hover {
+    border-color: var(--accent-subtle);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
 }
 
-/* Hero Section Styling - Gradient & Depth */
-.hero-container {
-    padding: 5rem 2rem;
-    background: radial-gradient(circle at top right, #EFF6FF, #F8FAFC);
-    border: 1px solid var(--border);
+/* Hero Section - "Landing Page Quality" */
+.hero-wrapper {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: radial-gradient(circle at 50% 0%, #EFF6FF 0%, #FFFFFF 70%);
     border-radius: 24px;
     margin-bottom: 4rem;
-    text-align: center;
-    box-shadow: inset 0 0 20px rgba(37, 99, 235, 0.03);
+    border: 1px solid rgba(226, 232, 240, 0.5);
+    animation: fadeIn 1s ease-out;
 }
 
-.hero-title {
-    font-size: 4rem;
+.hero-title-text {
+    font-size: 4.5rem; /* Massive, confident heading */
     font-weight: 800;
-    line-height: 1.1;
-    background: linear-gradient(to right, #0F172A, #2563EB);
+    line-height: 1.05;
+    background: linear-gradient(135deg, #0F172A 30%, #2563EB 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1.5rem;
     letter-spacing: -0.04em;
 }
 
-.hero-subtitle {
-    font-size: 1.35rem;
+.hero-subtitle-text {
+    font-size: 1.4rem;
     color: #64748B;
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto 2.5rem auto;
     line-height: 1.6;
     font-weight: 400;
 }
 
-/* Sidebar Styling */
+/* Sidebar - "Glassy & Clean" */
 section[data-testid="stSidebar"] {
-    background-color: #FFFFFF;
-    border-right: 1px solid var(--border);
+    background-color: #FAFAFA;
+    border-right: 1px solid var(--border-light);
 }
 
-section[data-testid="stSidebar"] .block-container {
-    padding-top: 2rem;
-}
-
-/* Profile Card in Sidebar */
 .profile-card {
-    text-align: center;
-    padding: 1.5rem;
-    background: var(--bg-body);
+    background: white;
     border-radius: 16px;
-    border: 1px solid var(--border);
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-light);
     margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 .profile-name {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 700;
-    font-size: 1.2rem;
-    margin-top: 1rem;
-    margin-bottom: 0.2rem;
+    font-size: 1.1rem;
     color: var(--primary);
+    margin-top: 0.75rem;
 }
 
 .profile-role {
     font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    color: var(--secondary);
+    font-size: 0.85rem;
+    color: #64748B;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-weight: 500;
+    margin-bottom: 0.5rem;
 }
 
+/* Social Links in Sidebar */
 .social-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 1rem;
-    margin-top: 1rem;
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.75rem;
     background-color: white;
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-light);
     border-radius: 8px;
-    color: var(--primary);
+    color: var(--secondary);
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.2s;
-    width: 100%;
+    transition: all 0.2s ease;
 }
 
 .social-link:hover {
+    background-color: var(--accent);
+    color: white;
     border-color: var(--accent);
-    color: var(--accent);
-    background-color: var(--accent-light);
-}
-
-/* Links */
-a {
-    color: var(--accent);
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
-}
-a:hover {
-    color: var(--accent-hover);
-    text-decoration: underline;
 }
 
 /* Divider */
 hr {
-    margin: 3rem 0;
+    margin: 4rem 0;
     border: none;
-    border-top: 1px solid var(--border);
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border-light), transparent);
 }
 
 /* Footer */
 .footer {
-    margin-top: 5rem;
+    margin-top: 6rem;
     padding-top: 2rem;
-    border-top: 1px solid var(--border);
+    border-top: 1px solid var(--border-light);
     text-align: center;
     color: #94A3B8;
     font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* Custom "Tag" style */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--accent-subtle);
+    color: var(--accent);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
 }

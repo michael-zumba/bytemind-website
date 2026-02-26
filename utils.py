@@ -22,7 +22,10 @@ def sidebar_info():
         # Profile Image
         try:
             # Check if file exists to avoid ugly errors
-            if os.path.exists("assets/images/profile_dr_zhang.png"):
+            if os.path.exists("assets/logo/bytemind-logo.png"):
+                 logo = Image.open("assets/logo/bytemind-logo.png")
+                 st.image(logo, use_container_width=True)
+            elif os.path.exists("assets/images/profile_dr_zhang.png"):
                 image = Image.open("assets/images/profile_dr_zhang.png")
                 st.image(image, use_container_width=True)
         except Exception:

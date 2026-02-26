@@ -1,6 +1,7 @@
 import streamlit as st
 import utils
 from PIL import Image
+import os
 
 st.set_page_config(page_title="About | ByteMind Ltd", page_icon="assets/images/profile_dr_zhang.png", layout="wide")
 
@@ -8,37 +9,120 @@ st.set_page_config(page_title="About | ByteMind Ltd", page_icon="assets/images/p
 utils.load_css()
 utils.sidebar_info()
 
-st.markdown("# About Us")
-
 # -----------------------------------------------------------------------------
 # FOUNDER PROFILE
 # -----------------------------------------------------------------------------
-col1, col2 = st.columns([1, 2.5])
+st.markdown(
+    """
+    <div class="animate-fade-in-up">
+        <div class="badge">Our Expertise</div>
+        <h1>Meet the Principal</h1>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+
+col1, col2 = st.columns([1.2, 2])
 
 with col1:
     try:
-        image = Image.open("assets/images/profile_dr_zhang.png")
-        st.image(image, caption="Dr. Yuqian Zhang", use_container_width=True)
-    except FileNotFoundError:
-        st.error("Profile image not found.")
+        # Check for profile image
+        if os.path.exists("assets/images/profile_dr_zhang.png"):
+            image = Image.open("assets/images/profile_dr_zhang.png")
+            st.image(image, caption="Dr. Yuqian Michael Zhang", use_container_width=True)
+        else:
+            st.warning("Profile image placeholder")
+            
+        # Authority Badges (Simulated)
+        st.markdown(
+            """
+            <div style="margin-top: 1.5rem; text-align: center;">
+                <span class="badge" style="background: #F1F5F9; color: #475569;">PhD in Taxation</span>
+                <span class="badge" style="background: #F1F5F9; color: #475569;">University Lecturer</span>
+                <span class="badge" style="background: #F1F5F9; color: #475569;">SME Strategist</span>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+    except Exception as e:
+        st.error(f"Error loading profile: {e}")
 
 with col2:
-    st.markdown("## Dr. Yuqian Zhang")
+    st.markdown("## Dr. Yuqian Michael Zhang")
     st.markdown("### Founder & Principal Consultant")
+    
     st.write(
         """
-        Dr. Zhang is a **Lecturer in Taxation** based in New Zealand, combining deep academic research with practical business strategy.
+        Dr. Zhang is a **Lecturer in Taxation** based in New Zealand, standing at the intersection of **academic rigour** and **practical business strategy**.
         
-        Unlike traditional accountants who focus on "what happened last year," Dr. Zhang focuses on **"what will happen next year."** 
-        
-        He specializes in helping businesses navigate complex tax environments, using rigorous data analysis to uncover opportunities that others miss.
+        With a deep background in international tax law and economic policy, Dr. Zhang doesn't just "do tax returns"—he designs tax strategies that fuel growth. His research focuses on how tax policy impacts SME innovation and cross-border trade.
         """
     )
-    st.info(
+    
+    st.markdown(
         """
-        *   **Expertise:** International Tax, SME Strategy, Economic Indices.
-        *   **Philosophy:** "Tax is not just a cost; it's a variable you can manage."
+        > *"Most accountants focus on what happened last year. I focus on **what will happen next year**, and how we can position your business to take advantage of it."*
         """
+    )
+    
+    st.write("")
+    
+    # Expertise Grid
+    c1, c2 = st.columns(2)
+    with c1:
+        st.markdown("#### 🏛 Academic Authority")
+        st.caption("Lecturer at Lincoln University. Published researcher in top-tier journals.")
+    with c2:
+        st.markdown("#### 🌏 Global Perspective")
+        st.caption("Specialist in cross-border expansion to US, UK, and Australian markets.")
+
+st.divider()
+
+# -----------------------------------------------------------------------------
+# THOUGHT LEADERSHIP (LinkedIn Embeds)
+# -----------------------------------------------------------------------------
+st.markdown("## Thought Leadership & Media")
+st.write("Dr. Zhang regularly shares insights on LinkedIn, discussing the latest tax changes and economic trends.")
+
+# Using Streamlit columns to create a grid of embedded content
+l_col1, l_col2 = st.columns(2)
+
+with l_col1:
+    st.markdown("### Recent Analysis")
+    # Embedding LinkedIn Post via iframe if possible, or using a polished card linking out
+    # Since direct iframe embedding of LinkedIn is tricky due to their CSP, we use a visual card approach
+    st.info("Follow Dr. Zhang on LinkedIn for daily updates on NZ tax policy.")
+    
+    st.markdown(
+        """
+        <div style="border: 1px solid #E2E8F0; border-radius: 12px; padding: 1.5rem; background: white;">
+            <h4>📺 Video Analysis: NZ Budget 2026</h4>
+            <p>Dr. Zhang breaks down the implications of the latest budget for small business owners.</p>
+            <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/recent-activity/all/" target="_blank">
+                <button style="background-color: #0A66C2; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">
+                    Watch on LinkedIn
+                </button>
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+with l_col2:
+    st.markdown("### Featured Content")
+    st.markdown(
+        """
+        <div style="border: 1px solid #E2E8F0; border-radius: 12px; padding: 1.5rem; background: white;">
+            <h4>📈 Trend Report: SME Resilience</h4>
+            <p>Discussion on how rising compliance costs are affecting the 'SME engine' of the economy.</p>
+            <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/recent-activity/all/" target="_blank">
+                <button style="background-color: #0A66C2; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">
+                    View Activity
+                </button>
+            </a>
+        </div>
+        """,
+        unsafe_allow_html=True
     )
 
 st.divider()
@@ -51,6 +135,6 @@ st.markdown(
     """
     To bridge the gap between **Academic Rigour** and **Business Reality**.
     
-    We believe that small and medium businesses deserve the same level of sophisticated tax planning and data intelligence as large multinationals.
+    We believe that small and medium businesses deserve the same level of sophisticated tax planning and data intelligence as large multinationals. By leveraging real-time data indices (like our TEFI and SME Resilience Index), we bring Big 4 quality insights to the engine room of the New Zealand economy.
     """
 )

@@ -31,13 +31,14 @@ with st.container():
                 ByteMind combines <strong>academic rigour</strong> with <strong>practical consulting</strong> to help New Zealand SMEs and Tech Exporters grow safely.
                 <br>Don't let tax compliance eat your profits.
             </p>
+            <div style="margin-top: 2rem;"></div>
         </div>
         """,
         unsafe_allow_html=True
     )
     
     # Call to Action Buttons - Centered
-    col1, col2, col3 = st.columns([1, 0.8, 1])
+    col1, col2, col3 = st.columns([1, 1, 1])
     with col2:
         if st.button("Explore Our Services →", use_container_width=True):
             st.switch_page("pages/1_Services.py")

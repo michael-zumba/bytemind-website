@@ -17,12 +17,14 @@ Since the "Custom Domain" feature is missing in your Streamlit Cloud settings, w
 
 ## Step 1: Get Your Streamlit URL
 1.  Go to your deployed app on [share.streamlit.io](https://share.streamlit.io).
-2.  Copy the URL from the browser bar.
-    *   It will look like: `https://bytemind-website-xyz.streamlit.app`
+2.  **CRITICAL:** Open the app and **Copy the URL** from the browser bar.
+    *   It will likely look like: `https://bytemind-website-xyz.streamlit.app` (with random letters at the end).
+    *   *Do NOT use the generic `bytemind-website.streamlit.app` unless you are sure that is your exact URL.*
 3.  **Edit the `index.html` file** in your repository:
     *   Open `index.html`.
     *   Find the line: `<iframe src="...">`.
-    *   Replace the URL inside the quotes with your actual Streamlit App URL.
+    *   **Replace** `https://bytemind-website.streamlit.app` with your **ACTUAL** copied URL.
+    *   Also update the fallback button link (`<a href="...">`) to the same URL.
     *   Save and commit the change.
 
 ---

@@ -12,7 +12,7 @@ st.markdown(
     <div class="animate-fade-in-up">
         <div class="badge">Expertise</div>
         <h1>Our Services</h1>
-        <p style="font-size: 1.2rem; color: #64748B;">Specialized tax advice for New Zealand businesses looking to grow.</p>
+        <p style="font-size: 1.2rem; color: #4B5563;">Specialized tax advice for New Zealand businesses looking to grow.</p>
     </div>
     """, 
     unsafe_allow_html=True
@@ -93,7 +93,7 @@ with st.container():
 st.markdown("---")
 st.markdown("<h3 style='text-align: center;'>Ready to scale?</h3>", unsafe_allow_html=True)
 
-col_c1, col_c2, col_c3 = st.columns([1, 0.6, 1])
+col_c1, col_c2, col_c3 = st.columns([1, 0.5, 1])
 with col_c2:
     if st.button("Start the Conversation", use_container_width=True):
         st.switch_page("pages/4_Contact.py")

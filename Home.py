@@ -39,7 +39,7 @@ with st.container():
     
     # Call to Action Buttons - Perfectly Centered
     # Using columns with precise ratios to center the button
-    c1, c2, c3 = st.columns([1, 0.6, 1])
+    c1, c2, c3 = st.columns([1, 0.5, 1])
     with c2:
         if st.button("Explore Our Services", use_container_width=True):
             st.switch_page("pages/1_Services.py")
@@ -53,7 +53,7 @@ st.write("")
 
 # Centered Section Header
 st.markdown("<h2 style='text-align: center; margin-bottom: 0.5rem;'>The Data Advantage</h2>", unsafe_allow_html=True)
-st.markdown("<p style='text-align: center; max-width: 600px; margin: 0 auto; margin-bottom: 3rem;'>We don't just give advice; we back it up with proprietary data. Track the friction of doing business across major markets.</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; max-width: 600px; margin: 0 auto; margin-bottom: 3rem; color: #4B5563;'>We don't just give advice; we back it up with proprietary data. Track the friction of doing business across major markets.</p>", unsafe_allow_html=True)
 
 try:
     df_tefi = pd.read_csv("data/tefi_raw.csv")
@@ -73,9 +73,9 @@ try:
         margin=dict(l=40, r=40, t=40, b=40),
         plot_bgcolor="white",
         paper_bgcolor="white",
-        font=dict(family="Inter", size=12, color="#475569"),
+        font=dict(family="Inter", size=12, color="#1F2937"),
         xaxis=dict(showgrid=False, title=None),
-        yaxis=dict(showgrid=True, gridcolor="#F1F5F9", title="Friction Score (Lower is Better)"),
+        yaxis=dict(showgrid=True, gridcolor="#F3F4F6", title="Friction Score (Lower is Better)"),
         coloraxis_showscale=False,
         hoverlabel=dict(bgcolor="white", font_size=12, font_family="Inter")
     )
@@ -93,18 +93,25 @@ st.markdown("## Latest Insights")
 st.write("Analysis of tax policy changes that impact NZ exporters.")
 
 posts_dir = "posts"
+if "selected_post" not in st.session_state:
+    st.session_state["selected_post"] = None
+
 if os.path.exists(posts_dir):
     files = sorted(os.listdir(posts_dir), reverse=True) 
     
-    col1, col2 = st.columns(2)
+    # Filter for .md files
+    md_files = [f for f in files if f.endswith(".md")]
     
-    for i, filename in enumerate(files):
-        if filename.endswith(".md"):
+    if not st.session_state["selected_post"]:
+        col1, col2 = st.columns(2)
+        
+        for i, filename in enumerate(md_files):
             with open(os.path.join(posts_dir, filename), "r") as f:
                 content = f.read()
                 
             # Parse Frontmatter
             metadata = {}
+            body = content
             if content.startswith("---"):
                 parts = content.split("---", 2)
                 if len(parts) >= 3:
@@ -115,21 +122,63 @@ if os.path.exists(posts_dir):
                             key, value = line.split(":", 1)
                             metadata[key.strip()] = value.strip().strip('"')
             else:
-                body = content
-                metadata["title"] = filename.replace(".md", "")
+                metadata["title"] = filename.replace(".md", "").replace("-", " ").title()
                 metadata["date"] = ""
             
             # Display Card
             with (col1 if i % 2 == 0 else col2):
                 with st.container():
                     st.markdown(f"#### {metadata.get('title', 'Untitled')}")
-                    st.caption(f"PUBLISHED: {metadata.get('date', '').upper()}")
-                    st.markdown(body[:180] + "...") 
-                    st.button(f"Read Article", key=f"read_{i}")
+                    if metadata.get('date'):
+                        st.caption(f"PUBLISHED: {metadata.get('date', '').upper()}")
+                    
+                    # Show summary or truncated body
+                    summary = metadata.get('summary', body[:150] + "...")
+                    st.markdown(summary)
+                    
+                    if st.button(f"Read Article", key=f"read_{i}"):
+                        st.session_state["selected_post"] = filename
+                        st.rerun()
 
-# -----------------------------------------------------------------------------
-# FOOTER
-# -----------------------------------------------------------------------------
+    else:
+        # Show Selected Article
+        filename = st.session_state["selected_post"]
+        if os.path.exists(os.path.join(posts_dir, filename)):
+            with open(os.path.join(posts_dir, filename), "r") as f:
+                content = f.read()
+            
+            # Parse Frontmatter
+            metadata = {}
+            body = content
+            if content.startswith("---"):
+                parts = content.split("---", 2)
+                if len(parts) >= 3:
+                    frontmatter = parts[1]
+                    body = parts[2]
+                    for line in frontmatter.strip().split("\n"):
+                        if ":" in line:
+                            key, value = line.split(":", 1)
+                            metadata[key.strip()] = value.strip().strip('"')
+            else:
+                metadata["title"] = filename.replace(".md", "").replace("-", " ").title()
+                metadata["date"] = ""
+
+            if st.button("← Back to Insights"):
+                st.session_state["selected_post"] = None
+                st.rerun()
+                
+            st.markdown(f"# {metadata.get('title', 'Untitled')}")
+            if metadata.get('date'):
+                st.caption(f"PUBLISHED: {metadata.get('date', '').upper()} | AUTHOR: {metadata.get('author', 'ByteMind')}")
+            
+            st.markdown("---")
+            st.markdown(body)
+            
+            st.markdown("---")
+            if st.button("Close Article", key="close_article_bottom"):
+                st.session_state["selected_post"] = None
+                st.rerun()
+
 st.markdown(
     """
     <div class="footer">

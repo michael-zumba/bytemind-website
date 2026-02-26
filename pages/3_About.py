@@ -37,9 +37,9 @@ with col1:
         st.markdown(
             """
             <div style="margin-top: 1.5rem; text-align: center;">
-                <span class="badge" style="background: white; border: 1px solid #E2E8F0; color: #475569;">PhD in Taxation</span>
-                <span class="badge" style="background: white; border: 1px solid #E2E8F0; color: #475569;">University Lecturer</span>
-                <span class="badge" style="background: white; border: 1px solid #E2E8F0; color: #475569;">CPA Australia</span>
+                <span class="badge badge-outline">PhD</span>
+                <span class="badge badge-outline">Senior Lecturer</span>
+                <span class="badge badge-outline">CPA Australia</span>
             </div>
             """,
             unsafe_allow_html=True
@@ -93,11 +93,11 @@ with l_col1:
     
     st.markdown(
         """
-        <div style="border: 1px solid #E2E8F0; border-radius: 12px; padding: 1.5rem; background: white;">
+        <div class="media-card">
             <h4>Video Analysis: NZ Budget 2026</h4>
             <p>Dr. Zhang breaks down the implications of the latest budget for small business owners.</p>
             <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/recent-activity/all/" target="_blank">
-                <button style="background-color: #0A66C2; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">
+                <button class="media-button">
                     Watch on LinkedIn
                 </button>
             </a>
@@ -110,11 +110,11 @@ with l_col2:
     st.markdown("### Featured Content")
     st.markdown(
         """
-        <div style="border: 1px solid #E2E8F0; border-radius: 12px; padding: 1.5rem; background: white;">
+        <div class="media-card">
             <h4>Trend Report: SME Resilience</h4>
             <p>Discussion on how rising compliance costs are affecting the 'SME engine' of the economy.</p>
             <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/recent-activity/all/" target="_blank">
-                <button style="background-color: #0A66C2; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">
+                <button class="media-button">
                     View Activity
                 </button>
             </a>

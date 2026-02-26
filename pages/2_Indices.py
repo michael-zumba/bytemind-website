@@ -14,7 +14,7 @@ st.markdown(
     <div class="animate-fade-in-up">
         <div class="badge">Economic Intelligence</div>
         <h1>ByteMind Indices</h1>
-        <p style="font-size: 1.2rem; color: #64748B;">Real-time economic indicators powered by open data.</p>
+        <p style="font-size: 1.2rem; color: #4B5563;">Real-time economic indicators powered by open data.</p>
     </div>
     """, 
     unsafe_allow_html=True
@@ -69,7 +69,7 @@ with tab1:
             x="Country", 
             y="TEFI Score (0-100)", 
             color="TEFI Score (0-100)",
-            color_continuous_scale=["#CBD5E1", "#94A3B8", "#64748B", "#1E3A8A"],
+            color_continuous_scale=["#E8EDF6", "#B7C6E5", "#6E8ECC", "#0B3D91"],
             text="TEFI Score (0-100)",
             title="TEFI 2026: Tax & Compliance Friction by Country"
         )
@@ -78,9 +78,9 @@ with tab1:
             yaxis_title="Friction Score (Lower is Better)",
             plot_bgcolor="white",
             paper_bgcolor="white",
-            font=dict(family="Inter", size=12, color="#475569"),
+            font=dict(family="Inter", size=12, color="#1F2937"),
             xaxis=dict(showgrid=False),
-            yaxis=dict(showgrid=True, gridcolor="#F1F5F9"),
+            yaxis=dict(showgrid=True, gridcolor="#E8EDF6"),
             coloraxis_showscale=False
         )
         st.plotly_chart(fig, use_container_width=True)
@@ -99,11 +99,37 @@ with tab1:
 
 with tab2:
     st.markdown("### 2. NZ SME Resilience Index")
-    st.info("Fetching real-time data from Stats NZ...")
-    # Add SME content here if data is available
-    st.write("This index tracks the health of NZ SMEs using real-time spending data.")
+    st.write("This index summarises SME resilience using retail spending, enterprise growth, and employment growth.")
+    try:
+        with open("data/nz_sme_score.txt", "r") as f:
+            score = f.read().strip()
+        if score:
+            st.metric("NZ SME Resilience Score", f"{score} / 100")
+    except FileNotFoundError:
+        pass
     try:
         df_sme = pd.read_csv("data/nz_sme_resilience.csv")
-        st.line_chart(df_sme.set_index("Date")["SME_Resilience_Score"])
-    except:
+        df_sme["Value (%)"] = pd.to_numeric(df_sme["Value (%)"], errors="coerce")
+        fig = px.bar(
+            df_sme,
+            x="Value (%)",
+            y="Metric",
+            orientation="h",
+            color="Value (%)",
+            color_continuous_scale=["#E8EDF6", "#B7C6E5", "#6E8ECC", "#0B3D91"],
+        )
+        fig.update_layout(
+            xaxis_title="Change (%)",
+            yaxis_title="",
+            plot_bgcolor="white",
+            paper_bgcolor="white",
+            font=dict(family="Inter", size=12, color="#1F2937"),
+            xaxis=dict(showgrid=True, gridcolor="#E8EDF6"),
+            coloraxis_showscale=False,
+            height=360,
+        )
+        st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
+        with st.expander("View underlying data"):
+            st.dataframe(df_sme, use_container_width=True)
+    except FileNotFoundError:
         st.write("Data currently being compiled.")

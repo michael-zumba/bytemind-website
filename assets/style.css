@@ -7,23 +7,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-    /* Color Palette - "Executive Finance" */
-    --primary: #0B1120;      /* Slate 950 - Deepest Navy/Black */
-    --secondary: #334155;    /* Slate 700 - Body Text */
-    
-    /* Brand Color - Sophisticated Navy Blue (Not bright tech blue) */
-    --accent: #1E3A8A;       /* Blue 900 */
-    --accent-hover: #172554; /* Blue 950 */
-    --accent-subtle: #F1F5F9; /* Slate 100 - Backgrounds */
-    
-    --bg-body: #FFFFFF;      /* Pure White */
-    --bg-surface: #FAFAFA;   /* Neutral 50 */
-    --border-light: #E2E8F0; /* Slate 200 */
-    
-    /* Shadows - "Soft & Diffused" */
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    --primary: #0B1324;
+    --secondary: #1F2937;
+    --muted: #475569;
+    --accent: #0B3D91;
+    --accent-hover: #082C66;
+    --accent-subtle: #E8F0FF;
+    --bg-body: #F7F9FC;
+    --bg-surface: #FFFFFF;
+    --border-light: #D9E2EF;
+    --focus-ring: rgba(11, 61, 145, 0.25);
+    --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.08);
+    --shadow-md: 0 8px 18px -10px rgba(15, 23, 42, 0.25);
+    --shadow-lg: 0 18px 28px -16px rgba(15, 23, 42, 0.35);
 }
 
 /* Global Reset & Base Styles */
@@ -33,6 +29,16 @@ html, body, [class*="css"]  {
     background-color: var(--bg-body);
     line-height: 1.6;
     font-weight: 400;
+}
+
+.stApp {
+    background-color: var(--bg-body);
+}
+
+.block-container {
+    max-width: 1200px;
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -72,6 +78,44 @@ p {
     font-weight: 400;
 }
 
+li {
+    color: var(--secondary);
+}
+
+strong {
+    color: var(--primary);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+.section-title {
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--primary);
+}
+
+.section-lead {
+    font-size: 1.15rem;
+    color: var(--muted);
+    margin-bottom: 2.5rem;
+}
+
+.text-center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+}
+
 /* -------------------------------------------------------------------------- */
 /* ANIMATIONS                                                                 */
 /* -------------------------------------------------------------------------- */
@@ -97,34 +141,67 @@ p {
 /* -------------------------------------------------------------------------- */
 
 /* Buttons - "Executive Matte" */
-/* Removing gradients for a cleaner, flatter, more premium look */
+/* High Contrast for Readability */
 .stButton > button {
     background-color: var(--accent) !important;
-    color: white !important;
+    color: #FFFFFF !important;
     border: none !important;
-    border-radius: 6px !important; /* Slightly sharper corners */
-    padding: 0.75rem 2rem !important;
+    border-radius: 4px !important;
+    padding: 0.6rem 1.5rem !important;
     font-size: 1rem !important;
-    font-weight: 500 !important;
-    letter-spacing: 0.01em !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
     transition: all 0.2s ease !important;
 }
 
 .stButton > button:hover {
     background-color: var(--accent-hover) !important;
     transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25) !important;
 }
 
 .stButton > button:active {
     transform: translateY(0px);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.media-button {
+    background-color: #0A66C2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.media-button:hover {
+    background-color: #004182;
+}
+
+/* Text Visibility Improvements */
+p, li, .stMarkdown {
+    color: #1F2937 !important; /* Darker Slate/Gray for better contrast against white */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #111827 !important; /* Almost Black */
+}
+
+.caption {
+    color: #4B5563 !important; /* Darker gray for captions */
+}
+
+.stButton > button:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 0 4px var(--focus-ring) !important;
 }
 
 /* Cards / Containers */
 div[data-testid="stMetric"], div.stContainer, div[data-testid="stExpander"] {
-    background-color: white;
+    background-color: var(--bg-surface);
     border: 1px solid var(--border-light);
     border-radius: 12px;
     padding: 2rem;
@@ -141,9 +218,9 @@ div.stContainer:hover {
 /* Hero Section - Centered & Clean */
 .hero-wrapper {
     text-align: center;
-    padding: 6rem 2rem;
-    background: radial-gradient(circle at 50% 10%, #F8FAFC 0%, #FFFFFF 80%); /* Subtle light source */
-    border-radius: 20px;
+    padding: 5.5rem 2rem;
+    background: radial-gradient(circle at 50% 0%, #EEF3FF 0%, #FFFFFF 65%);
+    border-radius: 22px;
     margin-bottom: 4rem;
     border: 1px solid var(--border-light);
     animation: fadeInUp 0.8s ease-out;
@@ -153,7 +230,7 @@ div.stContainer:hover {
     font-size: 4rem;
     font-weight: 800;
     line-height: 1.1;
-    color: var(--primary); /* Solid color, no gradient for cleaner look */
+    color: var(--primary);
     margin-bottom: 1.5rem;
     letter-spacing: -0.03em;
 }
@@ -169,12 +246,12 @@ div.stContainer:hover {
 
 /* Sidebar */
 section[data-testid="stSidebar"] {
-    background-color: #FFFFFF;
+    background-color: var(--bg-surface);
     border-right: 1px solid var(--border-light);
 }
 
 .profile-card {
-    background: #F8FAFC;
+    background: #F2F6FF;
     border-radius: 12px;
     padding: 1.5rem;
     text-align: center;
@@ -193,7 +270,7 @@ section[data-testid="stSidebar"] {
 .profile-role {
     font-family: 'Inter', sans-serif;
     font-size: 0.85rem;
-    color: #64748B;
+    color: var(--muted);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -208,7 +285,7 @@ section[data-testid="stSidebar"] {
     width: 100%;
     padding: 0.6rem;
     margin-top: 0.75rem;
-    background-color: white;
+    background-color: var(--bg-surface);
     border: 1px solid var(--border-light);
     border-radius: 6px;
     color: var(--secondary);
@@ -221,7 +298,7 @@ section[data-testid="stSidebar"] {
 .social-link:hover {
     border-color: var(--primary);
     color: var(--primary);
-    background-color: #F8FAFC;
+    background-color: #EEF3FF;
 }
 
 /* Divider */
@@ -238,7 +315,7 @@ hr {
     padding-top: 2rem;
     border-top: 1px solid var(--border-light);
     text-align: center;
-    color: #64748B;
+    color: var(--muted);
     font-size: 0.85rem;
     font-weight: 400;
 }
@@ -247,7 +324,7 @@ hr {
 .badge {
     display: inline-block;
     padding: 0.35rem 1rem;
-    background-color: #F1F5F9;
+    background-color: #EEF3FF;
     color: var(--primary);
     border-radius: 9999px;
     font-size: 0.75rem;
@@ -256,4 +333,61 @@ hr {
     letter-spacing: 0.05em;
     margin-bottom: 1rem;
     border: 1px solid var(--border-light);
+}
+
+.badge-outline {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-light);
+    color: var(--muted);
+}
+
+.highlight {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.media-card {
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+    padding: 1.5rem;
+    background: var(--bg-surface);
+    box-shadow: var(--shadow-sm);
+}
+
+.media-button {
+    background-color: var(--accent);
+    color: #FFFFFF;
+    border: 1px solid #072B63;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.media-button:hover {
+    background-color: var(--accent-hover);
+}
+
+[data-testid="stCaptionContainer"], .stCaption, .stCaption p {
+    color: var(--muted) !important;
+}
+
+[data-testid="stWidgetLabel"] {
+    color: var(--primary) !important;
+    font-weight: 600;
+}
+
+input, textarea, select {
+    color: var(--primary) !important;
+}
+
+div[data-testid="stAlert"] {
+    border-radius: 10px;
+    border: 1px solid var(--border-light);
+    background-color: #F4F7FF;
+    color: var(--primary) !important;
+}
+
+div[data-testid="stAlert"] p {
+    color: var(--primary) !important;
 }

@@ -76,11 +76,10 @@ Add these 4 separate records to point `bytemind.co.nz` to GitHub:
 ---
 
 ## Troubleshooting
-*   **"Refused to connect":** If your Streamlit app shows a grey sad face, it might be blocking embedding.
-    *   Fix: Create a file `.streamlit/config.toml` in your repo with:
-        ```toml
-        [server]
-        enableCORS = false
-        enableXsrfProtection = false
-        ```
-*   **Mobile View:** Sometimes the iframe doesn't resize perfectly on phones. This is the trade-off for this method, but it solves the domain issue immediately.
+*   **"Refused to connect" or Empty White Page:**
+    *   **Cause 1: The App is Private.** (Most Common)
+        *   Streamlit apps cannot be embedded if they require login.
+        *   **Fix:** Go to your Streamlit Dashboard -> Click "Share" (or Settings) -> **Make the app Public** (visible to everyone).
+    *   **Cause 2: Infinite Redirect Loop.**
+        *   If the app keeps refreshing or shows nothing, it's likely stuck trying to authenticate. Making it **Public** fixes this.
+*   **Mobile View:** Sometimes the iframe doesn't resize perfectly on phones. This is the trade-off for this method.

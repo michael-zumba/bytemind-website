@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indices | ByteMind Ltd</title>
+    <link rel="icon" href="assets/images/profile_dr_zhang.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo/bytemind-logo.png" alt="ByteMind" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                <span style="display:none; font-weight:800; font-size:1.5rem; color:var(--primary);">ByteMind</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="indices.html" class="active">Indices</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <div class="hero-wrapper animate-fade-in-up" style="padding: 3rem 1.5rem; margin-bottom: 2rem;">
+            <div class="badge">Economic Intelligence</div>
+            <h1 class="hero-title-text">ByteMind Indices</h1>
+            <p style="font-size: 1.2rem; color: #4B5563; max-width: 600px; margin: 0 auto;">Real-time economic indicators powered by open data.</p>
+        </div>
+
+        <!-- Methodology Accordion -->
+        <div class="accordion">
+            <div class="accordion-header" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('open');">
+                <h3>View Methodology & Data Sources <span style="float:right; font-size:1rem;">▼</span></h3>
+            </div>
+            <div class="accordion-content">
+                <h4>1. Tax Efficiency Friction Index (TEFI)</h4>
+                <p><strong>Objective:</strong> Measures the friction businesses face due to corporate tax rates and compliance burden.</p>
+                <p><strong>Formula:</strong> TEFI Score = Normalize ((Tax Rate × 1.5) + (Compliance Hours / 5))</p>
+                <p><em>Where 'Normalize' scales the raw friction score from 0 (Best) to 100 (Worst).</em></p>
+                <p><strong>Data Sources:</strong></p>
+                <ul>
+                    <li><strong>Corporate Tax Rates:</strong> OECD Corporate Tax Statistics (CTS) - Table II.1.</li>
+                    <li><strong>Compliance Hours:</strong> World Bank Doing Business (Historical) & PwC Paying Taxes Reports.</li>
+                </ul>
+                
+                <h4 style="margin-top: 1rem;">2. NZ SME Resilience Index</h4>
+                <p><strong>Objective:</strong> Tracks the economic health of Small-to-Medium Enterprises in New Zealand using real-time spending and growth data.</p>
+                <p><strong>Components:</strong></p>
+                <ul>
+                    <li><strong>Retail Spending Trend (50% Weight):</strong> Monthly change in Electronic Card Transactions (ECT) - Retail Industry (Seasonally Adjusted).</li>
+                    <li><strong>Enterprise Growth (30% Weight):</strong> Year-on-Year growth in registered enterprises.</li>
+                    <li><strong>Employment Growth (20% Weight):</strong> Year-on-Year growth in SME employment.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'tefi')">Tax Efficiency Friction Index (TEFI)</button>
+            <button class="tab-btn" onclick="openTab(event, 'sme')">NZ SME Resilience Index</button>
+        </div>
+
+        <!-- TEFI Tab -->
+        <div id="tefi" class="tab-content" style="display:block;">
+            <h3>1. Tech Export Friction Index (TEFI)</h3>
+            <p><strong>What is it?</strong> A measure of how difficult and costly it is for a NZ tech company to expand into these markets.</p>
+            <p class="caption">Lower Score = Easier to do business. Higher Score = More tax/compliance friction.</p>
+            
+            <div id="tefi-chart" style="width:100%; height:500px; margin-bottom: 2rem;"></div>
+            
+            <div class="accordion">
+                <div class="accordion-header" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('open');">
+                    <h4>View Underlying Data <span style="float:right; font-size:0.9rem;">▼</span></h4>
+                </div>
+                <div class="accordion-content">
+                    <div id="tefi-table" style="overflow-x:auto;"></div>
+                    <a href="data/tefi_raw.csv" download class="btn btn-secondary btn-sm" style="margin-top:1rem;">Download CSV</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SME Tab -->
+        <div id="sme" class="tab-content" style="display:none;">
+            <h3>2. NZ SME Resilience Index</h3>
+            <p>This index summarises SME resilience using retail spending, enterprise growth, and employment growth.</p>
+            
+            <div class="metric-card">
+                <div class="metric-label">NZ SME Resilience Score</div>
+                <div id="sme-score" class="metric-value">Loading...</div>
+            </div>
+
+            <div id="sme-chart" style="width:100%; height:400px; margin-bottom: 2rem;"></div>
+
+            <div class="accordion">
+                <div class="accordion-header" onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('open');">
+                    <h4>View Underlying Data <span style="float:right; font-size:0.9rem;">▼</span></h4>
+                </div>
+                <div class="accordion-content">
+                    <div id="sme-table" style="overflow-x:auto;"></div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>ByteMind Ltd</strong></p>
+            <p>Strategic Tax Intelligence & Economic Data Analytics</p>
+            <p style="opacity: 0.6; font-size: 0.75rem; margin-top: 1rem;">© 2026 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/indices.js"></script>
+</body>
+</html>

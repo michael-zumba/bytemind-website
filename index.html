@@ -3,75 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByteMind - Tax Consultancy & Economic Insights</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
-        iframe {
-            display: block;
-            width: 100%;
-            height: 100%;
-            border: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 2;
-        }
-        .fallback-container {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 1;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            max-width: 400px;
-            width: 90%;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #ff4b4b; /* Streamlit Red */
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-        .btn:hover {
-            background-color: #ff2b2b;
-        }
-    </style>
+    <title>ByteMind Ltd | Strategic Tax Intelligence</title>
+    <link rel="icon" href="assets/images/profile_dr_zhang.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+    
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 </head>
 <body>
-    <div class="fallback-container">
-        <h2>Loading ByteMind...</h2>
-        <p>If the application does not appear within a few seconds, it may be blocked by your browser settings.</p>
-        <!-- 
-           IMPORTANT: Update this href to match the src in the iframe below 
-        -->
-        <a href="https://bytemind-website.streamlit.app" target="_blank" class="btn">Open App Directly</a>
-    </div>
 
-    <!-- 
-      🛑 CRITICAL STEP: YOU MUST EDIT THE URL BELOW! 🛑
-      
-      1. Go to https://share.streamlit.io
-      2. Open your deployed app.
-      3. COPY the exact URL from your browser address bar.
-         (It usually looks like: https://bytemind-website-xyz123.streamlit.app)
-      4. PASTE it into the src="" attribute below.
-    -->
-    <iframe src="https://bytemind-website.streamlit.app/?embed=true" allow="camera; microphone; geolocation"></iframe>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <!-- Check if logo exists, else text -->
+                <img src="assets/logo/bytemind-logo.png" alt="ByteMind" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                <span style="display:none; font-weight:800; font-size:1.5rem; color:var(--primary);">ByteMind</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="services.html">Services</a>
+                <a href="indices.html">Indices</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero-wrapper animate-fade-in-up">
+            <div class="badge">Strategic Tax Intelligence</div>
+            <h1 class="hero-title-text">Smarter Tax Strategy<br>for Global Growth</h1>
+            <p class="hero-subtitle-text animate-delay-1">
+                Combining <strong>academic rigour</strong> with <strong>practical consulting</strong> to help New Zealand SMEs and Exporters navigate complex tax environments.
+            </p>
+            <div style="margin-top: 2rem;">
+                <a href="services.html" class="btn btn-primary">Explore Our Services</a>
+            </div>
+        </section>
+
+        <!-- Value Proposition -->
+        <section class="section-spacer">
+            <h2 style="text-align: center; margin-bottom: 0.5rem;">The Data Advantage</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto; margin-bottom: 3rem; color: #4B5563;">
+                We don't just give advice; we back it up with proprietary data. Track the friction of doing business across major markets.
+            </p>
+            
+            <!-- Chart Placeholder -->
+            <div id="tefi-chart-preview" style="width:100%; height:450px;"></div>
+        </section>
+
+        <hr>
+
+        <!-- Latest Insights -->
+        <section class="section-spacer">
+            <h2>Latest Insights</h2>
+            <p>Analysis of tax policy changes that impact NZ exporters.</p>
+            
+            <div id="posts-grid" class="grid-2">
+                <!-- Posts will be loaded here via JS -->
+            </div>
+            
+            <!-- Article Viewer Modal/Overlay -->
+            <div id="article-viewer" class="hidden">
+                <div class="article-content">
+                    <button id="close-article" class="btn btn-secondary">← Back to Insights</button>
+                    <div id="article-body"></div>
+                    <hr>
+                    <button id="close-article-bottom" class="btn btn-primary">Close Article</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p><strong>ByteMind Ltd</strong></p>
+            <p>Strategic Tax Intelligence & Economic Data Analytics</p>
+            <p style="opacity: 0.6; font-size: 0.75rem; margin-top: 1rem;">© 2026 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>

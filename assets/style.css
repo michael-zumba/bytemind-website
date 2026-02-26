@@ -155,10 +155,19 @@ a:hover {
     transition: all 0.2s ease !important;
 }
 
+/* Force text inside buttons to be white, overriding global p styles */
+.stButton > button p, .stButton > button div, .stButton > button span {
+    color: #FFFFFF !important;
+}
+
 .stButton > button:hover {
     background-color: var(--accent-hover) !important;
     transform: translateY(-1px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25) !important;
+}
+
+.stButton > button:hover p, .stButton > button:hover div, .stButton > button:hover span {
+    color: #FFFFFF !important;
 }
 
 .stButton > button:active {

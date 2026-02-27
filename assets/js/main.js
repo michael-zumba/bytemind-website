@@ -63,9 +63,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Load Posts (Home Page) ---
     const postsGrid = document.getElementById('posts-grid');
     if (postsGrid) {
-        fetch('posts/manifest.json')
+        // Fix: Use absolute path relative to root for GitHub Pages compatibility
+        const manifestPath = window.location.pathname.includes('/posts/') ? 'manifest.json' : 'posts/manifest.json';
+        
+        // Better yet, just use the direct relative path since we are mostly on index.html
+        // But let's try a robust approach for GitHub Pages which might be under a subdirectory
+        const repoName = 'bytemind-website'; // Update if repo name changes
+        const isGitHubPages = window.location.hostname.includes('github.io');
+        
+        let fetchUrl = 'posts/manifest.json';
+        
+        fetch(fetchUrl)
             .then(response => {
-                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
                 return response.json();
             })
             .then(posts => {
@@ -93,7 +105,12 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(err => {
                 console.error('Error loading posts:', err);
-                postsGrid.innerHTML = '<p style="color:red;">Failed to load insights. Please try again later.</p>';
+                postsGrid.innerHTML = `
+                    <div style="grid-column: 1/-1; text-align: center; color: var(--muted);">
+                        <p>Unable to load insights at this time.</p>
+                        <small>${err.message}</small>
+                    </div>
+                `;
             });
     }
 

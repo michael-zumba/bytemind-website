@@ -200,6 +200,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     
                     articleViewer.classList.remove('hidden');
                     document.body.style.overflow = 'hidden'; // Disable background scroll
+                    
+                    // Reset scroll position of the article content to the top
+                    const articleContent = document.querySelector('.article-content');
+                    if (articleContent) {
+                        articleContent.scrollTop = 0;
+                    }
                 } else {
                     console.error('Element #article-body not found');
                 }

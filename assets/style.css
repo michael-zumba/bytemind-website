@@ -329,7 +329,7 @@ p { margin-bottom: 1.25rem; color: var(--secondary); }
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem;
+    padding: 2rem 1rem;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -342,16 +342,32 @@ p { margin-bottom: 1.25rem; color: var(--secondary); }
 
 .article-content {
     background: white;
-    padding: 3rem;
+    padding: 2.5rem 3rem;
     border-radius: 16px;
     max-width: 800px;
     width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
+    max-height: 90vh; /* Limits height so it fits in viewport */
+    overflow-y: auto; /* Enables vertical scrolling inside the modal */
+    overscroll-behavior: contain; /* Prevents scroll chaining to the background */
     position: relative;
     box-shadow: var(--shadow-xl);
     transform: scale(0.95);
     transition: transform 0.3s ease;
+}
+
+/* Custom Scrollbar for Article Content */
+.article-content::-webkit-scrollbar {
+    width: 8px;
+}
+.article-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+.article-content::-webkit-scrollbar-thumb {
+    background-color: var(--border-light);
+    border-radius: 20px;
+}
+.article-content::-webkit-scrollbar-thumb:hover {
+    background-color: var(--muted);
 }
 
 #article-viewer:not(.hidden) .article-content {

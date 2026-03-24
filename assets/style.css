@@ -346,9 +346,10 @@ p { margin-bottom: 1.25rem; color: var(--secondary); }
     border-radius: 16px;
     max-width: 800px;
     width: 100%;
-    max-height: 90vh; /* Limits height so it fits in viewport */
-    overflow-y: auto; /* Enables vertical scrolling inside the modal */
-    overscroll-behavior: contain; /* Prevents scroll chaining to the background */
+    max-height: 85vh; /* Keep it shorter than viewport */
+    overflow-y: auto; /* Allow scrolling inside */
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
     position: relative;
     box-shadow: var(--shadow-xl);
     transform: scale(0.95);

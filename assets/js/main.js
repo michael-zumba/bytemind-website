@@ -185,17 +185,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Convert any mermaid code blocks (rendered by marked as <pre><code class="language-mermaid">)
                     // into actual mermaid divs so mermaid.init() can find them.
                     const mermaidBlocks = articleBody.querySelectorAll('code.language-mermaid');
-                    mermaidBlocks.forEach(block => {
+                    mermaidBlocks.forEach((block, index) => {
                         const pre = block.parentElement;
                         const div = document.createElement('div');
                         div.className = 'mermaid';
-                        div.textContent = block.textContent;
+                        // Need to ensure raw text content without HTML entities from marked
+                        div.textContent = block.innerText || block.textContent;
                         pre.parentNode.replaceChild(div, pre);
                     });
 
                     // Render mermaid diagrams if library is loaded
                     if (typeof mermaid !== 'undefined') {
-                        mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+                        try {
+                            mermaid.initialize({ startOnLoad: false, theme: 'default' });
+                            mermaid.run({
+                                querySelector: '.mermaid'
+                            });
+                        } catch (e) {
+                            console.error('Mermaid render error:', e);
+                        }
                     }
                     
                     articleViewer.classList.remove('hidden');

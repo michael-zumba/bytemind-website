@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         const div = document.createElement('div');
                         div.className = 'mermaid';
                         // Need to ensure raw text content without HTML entities from marked
-                        div.textContent = block.innerText || block.textContent;
+                        div.textContent = block.textContent;
                         pre.parentNode.replaceChild(div, pre);
                     });
 
@@ -198,9 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (typeof mermaid !== 'undefined') {
                         try {
                             mermaid.initialize({ startOnLoad: false, theme: 'default' });
-                            mermaid.run({
-                                querySelector: '.mermaid'
-                            });
+                            mermaid.init(undefined, document.querySelectorAll('.mermaid'));
                         } catch (e) {
                             console.error('Mermaid render error:', e);
                         }

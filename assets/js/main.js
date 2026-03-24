@@ -82,7 +82,15 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(posts => {
                 postsGrid.innerHTML = ''; // Clear loading placeholder if any
-                posts.forEach((post, index) => {
+                
+                // Sort posts by date descending (newest first)
+                posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+                
+                // Apply limit if data-limit attribute exists
+                const limit = postsGrid.getAttribute('data-limit');
+                const postsToDisplay = limit ? posts.slice(0, parseInt(limit, 10)) : posts;
+
+                postsToDisplay.forEach((post, index) => {
                     const card = document.createElement('div');
                     card.className = 'media-card';
                     card.innerHTML = `

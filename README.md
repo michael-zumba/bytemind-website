@@ -53,14 +53,38 @@ Then visit `http://localhost:8000`.
 The site is hosted via **GitHub Pages**.
 
 ### Updating the Live Site
-1.  Make your changes locally.
-2.  Commit and push to the `main` branch:
+
+The site uses continuous deployment through GitHub Pages. This means that as soon as you push code changes to the `main` branch, GitHub automatically rebuilds and publishes the website online.
+
+Here is the step-by-step process to push your changes:
+
+1.  **Open the Terminal**: Open a terminal window in your IDE (like VS Code or Trae) and make sure you are in the `ByteMind_Website` directory.
+    ```bash
+    cd "/Users/zhangy6j/Python Projects/Personal/ByteMind Project/ByteMind_Website"
+    ```
+
+2.  **Stage your changes**: Tell Git which files you want to include in the update. The `.` means "include everything that changed".
     ```bash
     git add .
-    git commit -m "Update content or design"
+    ```
+
+3.  **Commit your changes**: Package the changes with a descriptive message of what you did.
+    ```bash
+    git commit -m "Describe your changes here (e.g., Added new tax article)"
+    ```
+
+4.  **Push to the live website**: Send the packaged changes to the GitHub repository. This triggers the website update.
+    ```bash
     git push origin main
     ```
-3.  GitHub Pages will automatically rebuild and deploy the site (usually within 1-2 minutes).
+
+*(Alternatively, you can combine these steps into one quick command:)*
+```bash
+git add . && git commit -m "Update website content" && git push origin main
+```
+
+**What happens next?**
+After running `git push`, wait about **1-2 minutes**. GitHub Pages will automatically process the files and deploy the site. Refresh `www.bytemind.co.nz` in your browser to see your updates live!
 
 ### First-Time Setup (If not already configured)
 1.  Go to the repository on GitHub.

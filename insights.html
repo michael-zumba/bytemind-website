@@ -3,17 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByteMind Ltd | Strategic Tax Intelligence</title>
-    <meta name="description" content="Strategic Tax Intelligence and Economic Data Analytics for New Zealand SMEs and Exporters. Expert advice backed by proprietary research.">
+    <title>Insights | ByteMind Ltd</title>
+    <meta name="description" content="Latest tax strategies, economic data analytics, and insights for New Zealand SMEs and Exporters.">
     <meta name="author" content="Dr Yuqian Zhang">
-    <meta name="keywords" content="Tax Strategy, Economic Data, NZ Exporters, SME Resilience, Tax Compliance, TEFI Index">
-    
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.bytemind.co.nz/">
-    <meta property="og:title" content="ByteMind Ltd | Strategic Tax Intelligence">
-    <meta property="og:description" content="Smarter Tax Strategy for Global Growth. Combining academic rigour with practical consulting.">
-    <meta property="og:image" content="assets/images/profile_dr_zhang.png">
     
     <link rel="icon" href="assets/images/profile_dr_zhang.png">
     
@@ -24,9 +16,6 @@
     
     <!-- CSS -->
     <link rel="stylesheet" href="assets/style.css">
-    
-    <!-- Plotly.js -->
-    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
 </head>
 <body>
 
@@ -39,10 +28,10 @@
                 <span style="display:none; font-weight:800; font-size:1.5rem; color:var(--primary);">ByteMind</span>
             </a>
             <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
+                <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
                 <a href="indices.html">Indices</a>
-                <a href="insights.html">Insights</a>
+                <a href="insights.html" class="active">Insights</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </div>
@@ -57,42 +46,14 @@
     <!-- Main Content -->
     <main class="container">
         
-        <!-- Hero Section -->
-        <section class="hero-wrapper animate-fade-in-up">
-            <div class="badge">Strategic Tax Intelligence</div>
-            <h1 class="hero-title-text">Smarter Tax Strategy<br>for Global Growth</h1>
-            <p class="hero-subtitle-text animate-delay-1">
-                Combining <strong>academic rigour</strong> with <strong>practical consulting</strong> to help New Zealand SMEs and Exporters navigate complex tax environments.
-            </p>
-            <div style="margin-top: 2rem;">
-                <a href="services.html" class="btn btn-primary">Explore Our Services</a>
-            </div>
-        </section>
-
-        <!-- Value Proposition -->
-        <section class="section-spacer">
-            <h2 style="text-align: center; margin-bottom: 0.5rem;">The Data Advantage</h2>
-            <p style="text-align: center; max-width: 600px; margin: 0 auto; margin-bottom: 3rem; color: #4B5563;">
-                We don't just give advice; we back it up with proprietary data. Track the friction of doing business across major markets.
+        <section class="section-spacer animate-fade-in-up">
+            <h1 style="text-align: center; margin-bottom: 1rem;">Tax Insights & Opinions</h1>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 3rem auto; color: #4B5563;">
+                Expert analysis, tax strategies, and economic updates to help New Zealand SMEs and Exporters navigate complex tax environments.
             </p>
             
-            <!-- Chart Placeholder -->
-            <div id="tefi-chart-preview" style="width:100%; height:450px;"></div>
-        </section>
-
-        <hr>
-
-        <!-- Latest Insights -->
-        <section class="section-spacer">
-            <h2>Latest Insights</h2>
-            <p>Analysis of tax policy changes that impact NZ exporters.</p>
-            
-            <div id="posts-grid" class="grid-2" data-limit="2">
-                <!-- Posts will be loaded here via JS -->
-            </div>
-            
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="insights.html" class="btn btn-secondary">View All Insights</a>
+            <div id="posts-grid" class="grid-2">
+                <!-- Posts will be loaded here via JS. No data-limit attribute means ALL posts load. -->
             </div>
             
             <!-- Article Viewer Modal/Overlay -->
@@ -119,7 +80,6 @@
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-    <!-- Marked.js -->
     <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
     <script src="assets/js/main.js"></script>
 

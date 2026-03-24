@@ -179,7 +179,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 const articleBody = document.getElementById('article-body');
                 if (articleBody) {
+                    // Update content first
                     articleBody.innerHTML = htmlContent;
+                    
+                    // Convert any mermaid code blocks (rendered by marked as <pre><code class="language-mermaid">)
+                    // into actual mermaid divs so mermaid.init() can find them.
+                    const mermaidBlocks = articleBody.querySelectorAll('code.language-mermaid');
+                    mermaidBlocks.forEach(block => {
+                        const pre = block.parentElement;
+                        const div = document.createElement('div');
+                        div.className = 'mermaid';
+                        div.textContent = block.textContent;
+                        pre.parentNode.replaceChild(div, pre);
+                    });
+
+                    // Render mermaid diagrams if library is loaded
+                    if (typeof mermaid !== 'undefined') {
+                        mermaid.init(undefined, document.querySelectorAll('.mermaid'));
+                    }
+                    
                     articleViewer.classList.remove('hidden');
                     document.body.style.overflow = 'hidden'; // Disable background scroll
                 } else {

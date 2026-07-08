@@ -1,4 +1,43 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    // --- Reports Grid (Reports Page) ---
+    const reportsGrid = document.getElementById('reports-grid');
+    if (reportsGrid) {
+        fetch('reports/manifest.json')
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                return response.json();
+            })
+            .then(reports => {
+                reportsGrid.innerHTML = '';
+                reports.sort((a, b) => new Date(b.date) - new Date(a.date));
+                reports.forEach(report => {
+                    const card = document.createElement('div');
+                    card.className = 'report-card';
+                    const topicsHtml = report.topics
+                        ? report.topics.map(t => `<span style="font-size:0.7rem;color:var(--muted);margin-right:0.5rem;">${t}</span>`).join('')
+                        : '';
+                    card.innerHTML = `
+                        <span class="report-label">Analytical Brief</span>
+                        <h4>${report.title}</h4>
+                        <div class="caption">${report.date.toUpperCase()}</div>
+                        <p>${report.summary}</p>
+                        <div style="margin-top:auto;padding-top:1rem;">
+                            ${topicsHtml}
+                        </div>
+                        <a href="reports/${report.filename}" style="margin-top:1rem;" class="btn btn-primary btn-sm">Read Full Report</a>
+                    `;
+                    reportsGrid.appendChild(card);
+                });
+            })
+            .catch(err => {
+                console.error('Error loading reports:', err);
+                if (reportsGrid) {
+                    reportsGrid.innerHTML = '<div style="grid-column:1/-1;text-align:center;color:var(--muted);"><p>Unable to load reports at this time.</p></div>';
+                }
+            });
+    }
+
     
     // --- Mobile Menu Toggle ---
     const menuBtn = document.querySelector('.mobile-menu-btn');

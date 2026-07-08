@@ -3,17 +3,23 @@
 This repository contains the source code for the ByteMind Ltd website (www.bytemind.co.nz).
 The website is a static site (HTML/CSS/JS) hosted on GitHub Pages, designed for performance, security, and ease of maintenance without backend dependencies.
 
+## Positioning
+
+ByteMind Ltd is a **boutique consulting firm** specialising in business analytics, digital transformation, and strategic advisory for professional services (accounting, tax, finance). The firm contracts with professional bodies (including CPA Australia) and serves clients across New Zealand, Australia, and the Asia-Pacific region. The website functions as a credibility platform, a content hub for proprietary research, and a lead-generation channel.
+
 ## Structure
 
 *   `index.html`: Home page.
-*   `services.html`: Services page.
+*   `services.html`: Services page (Business Analytics, Global Growth Roadmap, Fractional Tax Director, SME Health Check, Digital Transformation Advisory).
 *   `indices.html`: Economic Indices (Charts powered by Plotly.js).
+*   `insights.html`: Short-form articles and tax updates.
+*   `reports.html`: Deep analytical reports (distinct from shorter Insights articles).
 *   `about.html`: About page.
 *   `contact.html`: Contact page.
 *   `assets/`: CSS (modern design system), JS (interactive logic), Images, Logos.
 *   `data/`: Data files (CSV/TXT) for Economic Indices.
-*   `posts/`: Markdown files for "Latest Insights".
-*   `legacy_streamlit/`: Archived Python files from the previous version.
+*   `posts/`: Markdown files for "Latest Insights" (short-form articles).
+*   `reports/`: Self-contained HTML reports for deep analytical briefs (long-form, with interactive charts).
 
 ## How to Update Content
 
@@ -31,11 +37,38 @@ The website is a static site (HTML/CSS/JS) hosted on GitHub Pages, designed for 
     ```
     *   *Note: Ensure the JSON syntax is valid (commas between objects).*
 
-### 2. Updating Indices Data
+### 2. Adding a New Research Report
+Research reports are deep analytical briefs (HTML format, with interactive charts) that appear on the Reports page. They are distinct from shorter Insights articles.
+
+1.  **Create the report**: Your AI agent should produce a self-contained HTML report with all assets (CSS, JS, fonts, charts) in its own subfolder under `reports/`. See `reports/property-market-analysis/` for an example structure.
+    ```
+    reports/
+      your-report-name/
+        index.html          (the report itself)
+        assets/
+          charts.js         (any chart data/configuration)
+        _shared/
+          js/               (libraries like echarts.min.js)
+          fonts/            (self-hosted fonts)
+    ```
+2.  **Register the report**: Open `reports/manifest.json` and add an entry:
+    ```json
+    {
+        "filename": "your-report-name/index.html",
+        "title": "Your Report Title",
+        "date": "YYYY-MM-DD",
+        "summary": "A brief summary of the report...",
+        "type": "report",
+        "topics": ["Topic A", "Topic B"]
+    }
+    ```
+3.  **(Optional) Create a summary post**: Add a Markdown file in `posts/` that summarises the key findings and links to the full report. Register it in `posts/manifest.json` as usual. This surfaces the report on the Insights page and the home page while directing readers to the full version.
+
+### 3. Updating Indices Data
 *   **TEFI (Tax Friction):** Update `data/tefi_raw.csv`. The chart on the Indices page will automatically reflect changes.
 *   **SME Resilience:** Update `data/nz_sme_resilience.csv` and `data/nz_sme_score.txt`.
 
-### 3. Modifying Design
+### 4. Modifying Design
 *   Edit `assets/style.css`. The site uses a variable-based design system (`:root`) for colors, spacing, and shadows.
 *   Common variables: `--primary`, `--accent`, `--bg-body`.
 

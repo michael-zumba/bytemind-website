@@ -648,7 +648,81 @@ sup a:hover { text-decoration: underline; }
 <p><strong>Substance is decisive.</strong> The largest risk in tax optimisation is not getting a rule wrong but adopting a structure without the commercial substance to support it. Every position should be able to withstand the question the Commissioner will ask: is this arrangement what it purports to be, and would a business person have entered it for reasons beyond tax? Where the honest answer is no, the arrangement should not be adopted.</p>
 
 <!-- ============================================================ -->
-<!-- 12. REFERENCES -->
+<!-- 12. DATA, SOURCES, AND METHODOLOGY -->
+<!-- ============================================================ -->
+<h2>12. Data, Sources, and Methodology</h2>
+
+<p>This report contains no scraped, sampled, or estimated data. Every value is either a statutory rate or threshold transcribed directly from an official source, or a figure computed deterministically from those statutory parameters using standard New Zealand income tax arithmetic. The datasets behind each figure are provided below as downloadable CSV files so the numbers can be checked and reused.</p>
+
+<h3>12.1 How the figures are constructed</h3>
+
+<p><strong>Personal income tax (Table in Section 2.1 and Figure 1).</strong> New Zealand's scale is progressive with no tax-free threshold, so total tax is the sum across bands of the income taxed in each band multiplied by that band's 2025/26 rate. As a worked check, tax on $60,000 is (15,600 x 10.5%) + (37,900 x 17.5%) + (6,500 x 30%) = $10,220.50, which matches IRD's own published example for a $60,000 earner. The effective (average) rate is cumulative tax divided by income. These figures are income tax only; the ACC earners' levy is charged separately.</p>
+
+<p><strong>Entity comparison (Figure 2).</strong> On $250,000 of profit for a single owner with no other income: the sole trader pays $76,577.50 (all at personal rates); the company retaining all profit pays $70,000 (28%); the hybrid pays $49,277.50 personal tax on a $180,000 salary plus $19,600 on $70,000 retained at 28%, totalling $68,877.50. The company and hybrid figures are a deferral, not a permanent saving, because distributing retained profit to a 39% shareholder adds an 11 percentage point dividend top-up.</p>
+
+<p><strong>Investment Boost (Figure 3).</strong> For an illustrative $100,000 eligible asset with a 10% diminishing-value rate, the year-one deduction without the Boost is $10,000, and with the Boost is $20,000 upfront plus $8,000 on the remaining $80,000, totalling $28,000. Lifetime deductions are unchanged; the Boost brings them forward.</p>
+
+<p><strong>KiwiSaver and headline rates (Figures 4 and 5).</strong> These are direct transcriptions of statutory rates with no calculation involved.</p>
+
+<h3>12.2 Downloadable data</h3>
+
+<p>All statutory parameters were verified against the official sources in the reference list, with every URL confirmed live on 9 July 2026. The master parameter file records the applicable period and source URL for each value.</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Dataset</th><th>Used in</th><th>Download</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Master list of all headline rates and thresholds, with source URLs</td>
+      <td>Whole report</td>
+      <td><a href="data/key_tax_parameters_2025_26.csv" download>key_tax_parameters_2025_26.csv</a></td>
+    </tr>
+    <tr>
+      <td>2025/26 personal income tax bands</td>
+      <td>Section 2.1 table</td>
+      <td><a href="data/table1_personal_tax_brackets_2025_26.csv" download>table1_personal_tax_brackets_2025_26.csv</a></td>
+    </tr>
+    <tr>
+      <td>Marginal and effective rate by income level</td>
+      <td>Figure 1</td>
+      <td><a href="data/figure1_marginal_effective_rates_2025_26.csv" download>figure1_marginal_effective_rates_2025_26.csv</a></td>
+    </tr>
+    <tr>
+      <td>Current-year tax on $250,000 by structure</td>
+      <td>Figure 2</td>
+      <td><a href="data/figure2_entity_tax_comparison.csv" download>figure2_entity_tax_comparison.csv</a></td>
+    </tr>
+    <tr>
+      <td>Investment Boost year-one deduction</td>
+      <td>Figure 3</td>
+      <td><a href="data/figure3_investment_boost_year_one.csv" download>figure3_investment_boost_year_one.csv</a></td>
+    </tr>
+    <tr>
+      <td>KiwiSaver default contribution rate by date</td>
+      <td>Figure 4</td>
+      <td><a href="data/figure4_kiwisaver_default_rate.csv" download>figure4_kiwisaver_default_rate.csv</a></td>
+    </tr>
+    <tr>
+      <td>Headline tax rate by income vehicle</td>
+      <td>Figure 5</td>
+      <td><a href="data/figure5_headline_rates_by_vehicle.csv" download>figure5_headline_rates_by_vehicle.csv</a></td>
+    </tr>
+    <tr>
+      <td>Data construction notes and methodology</td>
+      <td>All figures</td>
+      <td><a href="data/README.md" download>README.md</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>Because there is no random process, seed, or external pipeline, every derived figure can be reproduced from the statutory parameters using the arithmetic in Section 12.1 and the data README. All monetary values are in New Zealand dollars.</p>
+
+
+<!-- ============================================================ -->
+<!-- 13. REFERENCES -->
 <!-- ============================================================ -->
 <footer>
 <div class="sources">

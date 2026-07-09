@@ -664,7 +664,93 @@ sup a:hover { text-decoration: underline; }
 <p><strong>Climate and insurance risk.</strong> An emerging factor not captured in historical data is the impact of climate-related risks on property values and insurability. New Zealand's exposure to coastal flooding and erosion, particularly in Auckland, Wellington, and Christchurch, could materially affect property values in affected areas over the medium term. This is a source of downside risk that is concentrated geographically but potentially significant in aggregate.</p>
 
 <!-- ============================================================ -->
-<!-- 10. REFERENCES -->
+<!-- 10. DATA, SOURCES, AND METHODOLOGY -->
+<!-- ============================================================ -->
+<h2>10. Data, Sources, and Methodology</h2>
+
+<p>The data behind each figure is available for download below. This is an analytical brief rather than a raw data release, so the datasets combine three kinds of series, which should not be confused: <mark class="key">indicative annual points read from official long-run series</mark> (used to show decade-scale trends and turning points), <mark class="key">author computations</mark> (the deviation-from-trend and z-score constructs), and <mark class="key">illustrative comparisons</mark> (the policy-milestone and international-episode charts). For authoritative, full-resolution data, use the official source links in each row of the sources file.</p>
+
+<h3>10.1 How the series are constructed</h3>
+
+<p><strong>Real house prices (Figures 1, 2, 8).</strong> Real house prices are nominal prices deflated by the consumer price index on the BIS harmonised basis (2010=100). Figure 1 plots indicative annual points for New Zealand and Australia. Figure 2 compares the approximate real price change around discrete policy events; the events are not evenly spaced, so it is a comparison rather than a continuous series. Figure 8 reports peak-to-trough real declines by episode, with New Zealand and Australia asterisked because their corrections were ongoing at the time of writing.</p>
+
+<p><strong>Price-to-income (Figure 3).</strong> The OECD analytical price-to-income indicator (2015=100); the dashed line is the median of the plotted series (88.9) as a long-run reference.</p>
+
+<p><strong>Deviation from trend (Figure 4).</strong> Computed by the author with a one-sided Hodrick-Prescott filter (lambda = 400,000, consistent with the BIS convention for long series) on the real house price series, expressed as the percentage deviation of the series from the filtered trend. Because the filter adapts to structural shifts, it should be read as indicative of cyclical position rather than a precise valuation gap.</p>
+
+<p><strong>Valuation z-scores (Figure 5).</strong> For each metric (price-to-income, price-to-rent, real HPI deviation from trend, and household debt-to-income), the z-score is the value minus the series mean divided by the series standard deviation, over the available sample. Two snapshots are shown: the Q4 2021 peak and Q1 2025.</p>
+
+<p><strong>Credit and supply (Figures 6 and 7).</strong> Indicative annual points reproducing the profile of RBNZ series (1-year fixed carded mortgage rate; household debt as a percentage of disposable income) and Stats NZ series (dwelling consents issued; net permanent and long-term migration).</p>
+
+<h3>10.2 Downloadable data</h3>
+
+<p>All source URLs were verified as live on 9 July 2026. The sources file records the source, URL, and a construction note for every individual series.</p>
+
+<div class="table-wrap">
+<table>
+  <thead>
+    <tr><th>Dataset</th><th>Figure</th><th>Download</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Source, URL, and construction note for every series</td>
+      <td>All figures</td>
+      <td><a href="data/figure_sources_and_methodology.csv" download>figure_sources_and_methodology.csv</a></td>
+    </tr>
+    <tr>
+      <td>NZ and AU real house price index (2010=100), 1970-2025</td>
+      <td>Figure 1</td>
+      <td><a href="data/figure1_real_house_price_index_nz_au.csv" download>figure1_real_house_price_index_nz_au.csv</a></td>
+    </tr>
+    <tr>
+      <td>NZ real HPI growth at selected policy milestones</td>
+      <td>Figure 2</td>
+      <td><a href="data/figure2_policy_milestone_real_growth.csv" download>figure2_policy_milestone_real_growth.csv</a></td>
+    </tr>
+    <tr>
+      <td>NZ price-to-income ratio (2015=100) and long-run median</td>
+      <td>Figure 3</td>
+      <td><a href="data/figure3_price_to_income_nz.csv" download>figure3_price_to_income_nz.csv</a></td>
+    </tr>
+    <tr>
+      <td>NZ real HPI deviation from HP-filtered trend</td>
+      <td>Figure 4</td>
+      <td><a href="data/figure4_real_price_deviation_from_trend_nz.csv" download>figure4_real_price_deviation_from_trend_nz.csv</a></td>
+    </tr>
+    <tr>
+      <td>Composite valuation z-scores, current versus 2021 peak</td>
+      <td>Figure 5</td>
+      <td><a href="data/figure5_valuation_zscores.csv" download>figure5_valuation_zscores.csv</a></td>
+    </tr>
+    <tr>
+      <td>NZ 1-year fixed mortgage rate and household DTI</td>
+      <td>Figure 6</td>
+      <td><a href="data/figure6_mortgage_rate_and_dti_nz.csv" download>figure6_mortgage_rate_and_dti_nz.csv</a></td>
+    </tr>
+    <tr>
+      <td>NZ building consents and net migration</td>
+      <td>Figure 7</td>
+      <td><a href="data/figure7_building_consents_and_migration_nz.csv" download>figure7_building_consents_and_migration_nz.csv</a></td>
+    </tr>
+    <tr>
+      <td>International peak-to-trough real house price declines</td>
+      <td>Figure 8</td>
+      <td><a href="data/figure8_international_real_price_declines.csv" download>figure8_international_real_price_declines.csv</a></td>
+    </tr>
+    <tr>
+      <td>Data construction notes and full methodology</td>
+      <td>All figures</td>
+      <td><a href="data/README.md" download>README.md</a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<p>The primary sources are the Bank for International Settlements (real house price long series), the OECD (price-to-income indicators), the Reserve Bank of New Zealand (mortgage rates and household debt), and Stats NZ (building consents and migration), all listed with their URLs in the reference section below and in the sources file.</p>
+
+
+<!-- ============================================================ -->
+<!-- 11. REFERENCES -->
 <!-- ============================================================ -->
 <footer>
 <div class="sources">

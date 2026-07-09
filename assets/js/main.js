@@ -50,66 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- TEFI Chart Preview (Home Page) ---
-    const tefiChartDiv = document.getElementById('tefi-chart-preview');
-    if (tefiChartDiv) {
-        if (typeof Papa !== 'undefined') {
-            Papa.parse("data/tefi_raw.csv", {
-                download: true,
-                header: true,
-                complete: function(results) {
-                    const data = results.data;
-                    // Sort by TEFI Score
-                    data.sort((a, b) => parseFloat(a["TEFI Score (0-100)"]) - parseFloat(b["TEFI Score (0-100)"]));
-                    
-                    const countries = data.map(row => row.Country);
-                    const scores = data.map(row => parseFloat(row["TEFI Score (0-100)"]));
-                    
-                    const trace = {
-                        x: countries,
-                        y: scores,
-                        type: 'bar',
-                        marker: {
-                            color: scores,
-                            colorscale: [
-                                [0, '#CBD5E1'],
-                                [0.33, '#94A3B8'],
-                                [0.66, '#64748B'],
-                                [1, '#1E3A8A']
-                            ],
-                            showscale: false
-                        }
-                    };
-                    
-                    const layout = {
-                        margin: { l: 40, r: 40, t: 40, b: 40 },
-                        font: { family: "Inter, sans-serif", size: 12, color: "#1F2937" },
-                        xaxis: { showgrid: false },
-                        yaxis: { showgrid: true, gridcolor: "#F3F4F6", title: "Friction Score (Lower is Better)" },
-                        paper_bgcolor: "rgba(0,0,0,0)",
-                        plot_bgcolor: "rgba(0,0,0,0)",
-                        autosize: true
-                    };
-                    
-                    if (typeof Plotly !== 'undefined') {
-                        Plotly.newPlot('tefi-chart-preview', [trace], layout, {displayModeBar: false, responsive: true});
-                    }
-                }
-            });
-        }
-    }
-
-    // --- Load Posts (Home Page) ---
+    // --- Load Posts (Home Page & Insights Page) ---
     const postsGrid = document.getElementById('posts-grid');
     if (postsGrid) {
-        // Fix: Use absolute path relative to root for GitHub Pages compatibility
-        const manifestPath = window.location.pathname.includes('/posts/') ? 'manifest.json' : 'posts/manifest.json';
-        
-        // Better yet, just use the direct relative path since we are mostly on index.html
-        // But let's try a robust approach for GitHub Pages which might be under a subdirectory
-        const repoName = 'bytemind-website'; // Update if repo name changes
-        const isGitHubPages = window.location.hostname.includes('github.io');
-        
         let fetchUrl = 'posts/manifest.json';
         
         fetch(fetchUrl)

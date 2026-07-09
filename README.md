@@ -11,7 +11,7 @@ ByteMind Ltd is a **boutique consulting firm** specialising in business analytic
 
 *   `index.html`: Home page.
 *   `services.html`: Services page (Business Analytics, Global Growth Roadmap, Fractional Tax Director, SME Health Check, Digital Transformation Advisory).
-*   `indices.html`: Economic Indices (Charts powered by Plotly.js).
+*   `indices.html`: Housing Market Indicators (interactive ECharts, data from BIS, OECD, RBNZ, Stats NZ).
 *   `insights.html`: Short-form articles and tax updates.
 *   `reports.html`: Deep analytical reports (distinct from shorter Insights articles).
 *   `about.html`: About page.
@@ -65,8 +65,10 @@ Research reports are deep analytical briefs (HTML format, with interactive chart
 3.  **(Optional) Create a summary post**: Add a Markdown file in `posts/` that summarises the key findings and links to the full report. Register it in `posts/manifest.json` as usual. This surfaces the report on the Insights page and the home page while directing readers to the full version.
 
 ### 3. Updating Indices Data
-*   **TEFI (Tax Friction):** Update `data/tefi_raw.csv`. The chart on the Indices page will automatically reflect changes.
-*   **SME Resilience:** Update `data/nz_sme_resilience.csv` and `data/nz_sme_score.txt`.
+*   **Real House Prices:** Update `data/nz_au_real_hpi.csv`. Data is also stored inline in `assets/js/indices.js` for offline reliability.
+*   **Valuation Metrics:** Update `data/nz_valuation_metrics.csv` (price-to-income, real HPI deviation, mortgage rates, household DTI).
+*   **Supply & Demographics:** Update `data/nz_supply_demographics.csv` (building consents, net migration).
+*   **International Comparison:** Update `data/international_comparison.csv`.
 
 ### 4. Modifying Design
 *   Edit `assets/style.css`. The site uses a variable-based design system (`:root`) for colors, spacing, and shadows.

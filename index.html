@@ -361,6 +361,26 @@ p { margin-bottom: 1.25rem; color: var(--color-text-secondary); }
   color: var(--color-text-muted);
 }
 
+/* Hero Wrapper */
+.hero-wrapper {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: var(--space-8) 0;
+}
+
+.hero-wrapper .accent-bar {
+  margin: 0 auto 1.5rem auto;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 560px;
+  margin: 0 auto 2rem auto;
+  line-height: var(--leading-relaxed);
+}
+
 /* Hero Grid */
 .hero-grid {
   display: grid;
@@ -535,22 +555,12 @@ p { margin-bottom: 1.25rem; color: var(--color-text-secondary); }
 
         <!-- 1. Hero Section — Asymmetric Editorial -->
         <section class="section animate-fade-in-up">
-            <div class="hero-grid">
-                <div>
-                    <div class="section-eyebrow">ByteMind Ltd</div>
-                    <div class="accent-bar"></div>
-                    <h1>Evidence. Strategy. Growth.</h1>
-                    <p>Boutique consulting for professional service firms. We apply academic rigour to business analytics, digital transformation, and cross-border strategy.</p>
-                    <a href="services.html" class="btn btn-primary" data-dom-id="cta-services">Explore Our Services</a>
-                </div>
-                <div class="card">
-                    <div class="metric-value">12+</div>
-                    <div class="metric-label">A* Journals Published</div>
-                    <div class="metric-value">8+</div>
-                    <div class="metric-label">Years of Cross-Border Advisory</div>
-                    <div class="metric-value">50+</div>
-                    <div class="metric-label">Data-Driven Reports</div>
-                </div>
+            <div class="hero-wrapper">
+                <div class="section-eyebrow">ByteMind Ltd</div>
+                <div class="accent-bar"></div>
+                <h1>Evidence. Strategy. Growth.</h1>
+                <p class="hero-subtitle">Boutique consulting for professional service firms. We apply academic rigour to business analytics, digital transformation, and cross-border strategy.</p>
+                <a href="services.html" class="btn btn-primary" data-dom-id="cta-services">Explore Our Services</a>
             </div>
         </section>
 

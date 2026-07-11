@@ -1,31 +1,31 @@
 ---
 title: "New Zealand Property Market: Plateau, Crash, or Continued Growth?"
 date: 2026-07-08
-summary: "An evidence-based assessment of NZ housing market trajectories over the next five years, drawing on BIS long-run data, OECD affordability metrics, and international comparator episodes."
+summary: "A clear, evidence-based look at where the NZ housing market is likely to head over the next five years, using long-run data from the BIS, the OECD, and past booms and busts overseas."
 ---
 
 ## Summary
 
-New Zealand and Australia have both experienced one of the most sustained housing booms in the developed world over the past three decades. This analytical brief draws on harmonised cross-country data from the Bank for International Settlements, OECD affordability indicators, RBNZ and RBA housing statistics, and the academic literature on financial crises and housing supply to assess whether current valuations are historically anomalous and what trajectories are most likely.
+New Zealand and Australia have both had one of the longest housing booms in the developed world over the past 30 years. This brief uses long-run data from the Bank for International Settlements, affordability measures from the OECD, housing figures from the RBNZ and RBA, and research on past housing crashes to answer two questions: are house prices unusually high by historical standards, and where are they likely to go next?
 
 ## Key Findings
 
-**Current State.** NZ real house prices have declined approximately 12 percent in real terms from the 2021 peak, with year-on-year real decline accelerating to -4.2 percent as of Q4 2025. The OECD price-to-income ratio stands at 105.8 (2015=100), down from 142.9 at peak but still above the long-run median of 88.9.
+**Where prices are now.** NZ house prices, after adjusting for inflation, have fallen about 12 percent from their 2021 peak, and the yearly fall reached -4.2 percent by the end of 2025. The OECD price-to-income measure (how expensive houses are compared with incomes) sits at 105.8 (2015=100), down from 142.9 at the peak but still above its long-run middle value of 88.9.
 
-**Valuation Normalisation.** Across four valuation metrics (price-to-income, price-to-rent, real HPI deviation from trend, and household debt-to-income), the average z-score has declined from approximately 2.44 at peak to approximately 1.00 currently. The market remains above historical norms but no longer exhibits the extreme overvaluation characteristic of a classic bubble episode.
+**Prices look less stretched.** We combined four measures of value (price-to-income, price-to-rent, prices versus their long-run trend, and household debt versus income). On average these have come back from about 2.44 standard deviations above normal at the peak to about 1.00 now. Prices are still above their historical norms, but no longer at the extreme levels you would expect in a classic bubble.
 
-**Credit Conditions.** NZ household debt-to-disposable-income ratio remains elevated at approximately 170 percent, among the highest in the OECD. However, credit-to-GDP gaps are negative, DTI and LVR macroprudential tools are active, and bank capital ratios are strong. The RBNZ's 2025 solvency stress test confirmed banks can absorb loan losses under adverse scenarios.
+**Household debt is high, but the banks are solid.** New Zealand households owe about 170 percent of their yearly after-tax income, one of the highest levels in the OECD. Even so, credit is not growing faster than the economy, lending limits (debt-to-income and loan-to-value rules) are in force, and banks are well funded. The RBNZ's 2025 stress test showed banks could absorb loan losses even in a severe downturn.
 
-**International Comparisons.** Analysis of five historical boom-bust episodes (Ireland, Spain, Japan, Sweden 1990s, Sweden 2022-2024, Canada) suggests that the presence of a banking crisis is the critical bifurcation between orderly corrections and catastrophic crashes. New Zealand scores well on crisis-predictive indicators.
+**What overseas history tells us.** We looked at several past booms and busts (Ireland, Spain, Japan, Sweden in the 1990s, Sweden in 2022-2024, and Canada). The clearest dividing line between an orderly slowdown and a severe crash is whether a banking crisis happens at the same time. On the warning signs that usually predict trouble, New Zealand scores well.
 
-## Trajectory Assessment
+## What Happens Next
 
-| Scenario | Probability | Real Price Change (5yr) |
+| Scenario | Chance | Real Price Change (5yr) |
 |---|---|---|
-| A: Prolonged Plateau | 55-65% | -5% to +5% |
-| B: Continued Growth | 20-25% | +10% to +25% |
-| C: Sharp Correction | 10-15% | -20% to -35% |
+| A: Long, flat period | 55-65% | -5% to +5% |
+| B: Renewed growth | 20-25% | +10% to +25% |
+| C: Sharp fall | 10-15% | -20% to -35% |
 
-The central finding is that New Zealand's housing market is undergoing an orderly correction without systemic financial stress. The most likely trajectory is a prolonged plateau in real terms, with nominal prices growing at or below income growth over the next three to five years.
+The main conclusion is that New Zealand's housing market is going through an orderly slowdown, not a crisis. The most likely path is a long, flat period once inflation is taken into account, with prices rising at or below the pace of incomes over the next three to five years.
 
 [Read the full analytical brief](/reports/property-market-analysis/)

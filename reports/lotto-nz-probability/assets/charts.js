@@ -1,6 +1,5 @@
 // charts.js -- Lotto NZ: Two Lenses of Probability
 // Author: Dr Yuqian Zhang, 20 July 2026
-// Data: Lotto NZ official results Excel + lotto.net, verified 20 July 2026
 
 (function() {
 
@@ -11,18 +10,17 @@ var ink     = style.getPropertyValue('--ink').trim();
 var muted   = style.getPropertyValue('--muted').trim();
 var rule    = style.getPropertyValue('--rule').trim();
 
+var commonTooltip = {
+    backgroundColor: '#1f2937',
+    borderColor: '#374151',
+    textStyle: { color: '#f9fafb', fontSize: 13 }
+};
+
 /* ==================================================================
-   Figure 1: Published Lotto NZ Odds by Game and Division
-   Source: mylotto.co.nz game information
+   Figure 1: Published Lotto NZ Odds
    ================================================================== */
 (function() {
     var chart = echarts.init(document.getElementById('chart-lotto-odds'), null, { renderer: 'svg' });
-
-    var lottoOdds     = [3838380, 639730, 19386, 7754, 485, 363, 35];
-    var powerballOdds = [38383800, 6397300, 193858, 77543, 4846, 3635, 352];
-    var strikeOdds    = [2193360, 15244, 256, 12];
-    var divLabels     = ['Div 1', 'Div 2', 'Div 3', 'Div 4', 'Div 5', 'Div 6', 'Div 7'];
-
     chart.setOption({
         animation: false,
         color: [accent, accent2, muted],
@@ -33,9 +31,9 @@ var rule    = style.getPropertyValue('--rule').trim();
             textStyle: { color: '#f9fafb', fontSize: 13 },
             formatter: function(params) {
                 var s = params[0].axisValue + '<br/>';
-                params.forEach(function(p) {
-                    s += p.marker + ' ' + p.seriesName + ': 1 in ' + p.value.toLocaleString('en-NZ') + '<br/>';
-                });
+                for (var j = 0; j < params.length; j++) {
+                    s += params[j].marker + ' ' + params[j].seriesName + ': 1 in ' + params[j].value.toLocaleString() + '<br/>';
+                }
                 return s;
             }
         },
@@ -54,11 +52,7 @@ var rule    = style.getPropertyValue('--rule').trim();
         },
         xAxis: {
             type: 'category',
-            data: divLabels,
-            name: 'Division',
-            nameLocation: 'middle',
-            nameGap: 30,
-            nameTextStyle: { color: muted, fontSize: 12 },
+            data: ['Div 1','Div 2','Div 3','Div 4','Div 5','Div 6','Div 7'],
             axisLine: { lineStyle: { color: rule } },
             axisTick: { show: false },
             axisLabel: { color: ink, fontSize: 11 }
@@ -71,50 +65,29 @@ var rule    = style.getPropertyValue('--rule').trim();
             axisTick: { show: false },
             splitLine: { lineStyle: { color: rule } },
             axisLabel: {
-                color: ink,
-                fontSize: 11,
-                formatter: function(val) {
-                    if (val >= 1000000) return (val / 1000000).toFixed(0) + 'M';
-                    if (val >= 1000) return (val / 1000).toFixed(0) + 'k';
-                    return val;
+                color: ink, fontSize: 11,
+                formatter: function(v) {
+                    if (v >= 1000000) return (v/1000000).toFixed(0)+'M';
+                    if (v >= 1000) return (v/1000).toFixed(0)+'k';
+                    return v;
                 }
             },
-            min: 10,
-            max: 50000000
+            min: 10, max: 50000000
         },
         series: [
-            {
-                name: 'Lotto',
-                type: 'bar',
-                data: lottoOdds,
-                barGap: '10%',
-                barWidth: '25%',
-                itemStyle: { borderRadius: [4, 4, 0, 0] }
-            },
-            {
-                name: 'Powerball',
-                type: 'bar',
-                data: powerballOdds,
-                barWidth: '25%',
-                itemStyle: { borderRadius: [4, 4, 0, 0] }
-            },
-            {
-                name: 'Strike',
-                type: 'bar',
-                data: strikeOdds,
-                barWidth: '25%',
-                itemStyle: { borderRadius: [4, 4, 0, 0] }
-            }
+            { name: 'Lotto', type: 'bar', data: [3838380,639730,19386,7754,485,363,35], barWidth: '22%',
+               itemStyle: { borderRadius: [4,4,0,0] } },
+            { name: 'Powerball', type: 'bar', data: [38383800,6397300,193858,77543,4846,3635,352], barWidth: '22%',
+               itemStyle: { borderRadius: [4,4,0,0] } },
+            { name: 'Strike', type: 'bar', data: [2193360,15244,256,12], barWidth: '22%',
+               itemStyle: { borderRadius: [4,4,0,0] } }
         ]
     });
-
     window.addEventListener('resize', function() { chart.resize(); });
 })();
 
 /* ==================================================================
-   Figure 2: Powerball Jackpot History, 2025-2026
-   Draw dates: Lotto NZ official results Excel (29-06-2026)
-   Jackpot amounts: lotto.net, verified 20 July 2026
+   Figure 2: Powerball Jackpot History
    ================================================================== */
 (function() {
     var chart = echarts.init(document.getElementById('chart-powerball-history'), null, { renderer: 'svg' });
@@ -277,28 +250,28 @@ var rule    = style.getPropertyValue('--rule').trim();
         '24 Jun',
         '27 Jun'
     ];
-
     var jackpots = [4.0, 5.0, 7.0, 4.0, 5.0, 6.0, 8.3, 4.0, 5.0, 6.0, 8.0, 10.5, 4.0, 5.0, 6.0, 8.0, 10.5, 4.0, 5.0, 6.0, 8.0, 11.0, 4.0, 5.3, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 20.0, 23.3, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 17.2, 4.0, 5.0, 10.0, 12.0, 15.0, 17.0, 20.0, 25.0, 30.2, 4.0, 5.0, 6.0, 8.0, 10.3, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 17.0, 20.2, 4.0, 5.0, 6.0, 8.0, 10.0, 12.5, 4.0, 5.0, 6.0, 10.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 17.0, 20.0, 23.0, 25.0, 28.0, 30.0, 33.0, 36.0, 40.0, 45.0, 55.2, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 4.0, 5.0, 6.2, 4.0, 5.5, 4.0, 5.0, 6.0, 8.0, 10.2, 4.0, 5.3, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.2, 4.5, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 17.0, 20.0, 23.0, 25.5, 4.0, 8.0, 10.0, 12.0, 14.3, 4.0, 5.5, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 15.0, 18.0, 20.0, 23.0, 25.0, 28.2, 4.5, 4.0, 5.0, 7.0, 10.0, 12.0, 15.0];
     var statuses = ['Rollover', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Rollover', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Won', 'Won', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover', 'Rollover'];
 
     var wonData = [];
     var rolloverData = [];
-
     for (var i = 0; i < jackpots.length; i++) {
         if (statuses[i] === 'Won') {
-            wonData.push({ value: jackpots[i], itemStyle: { color: accent, borderRadius: [4, 4, 0, 0] } });
+            wonData.push({ value: jackpots[i], itemStyle: { color: accent, borderRadius: [4,4,0,0] } });
             rolloverData.push(null);
         } else {
             wonData.push(null);
-            rolloverData.push({ value: jackpots[i], itemStyle: { color: rule, borderRadius: [4, 4, 0, 0] } });
+            rolloverData.push({ value: jackpots[i], itemStyle: { color: rule, borderRadius: [4,4,0,0] } });
         }
     }
 
-    var recordIdx = jackpots.indexOf(55.2);
+    var recordIdx = -1;
+    for (var k = 0; k < jackpots.length; k++) {
+        if (jackpots[k] >= 55 && statuses[k] === 'Won') { recordIdx = k; break; }
+    }
 
-    chart.setOption({
+    var option = {
         animation: false,
-        color: [accent, rule],
         tooltip: {
             trigger: 'axis',
             backgroundColor: '#1f2937',
@@ -306,56 +279,39 @@ var rule    = style.getPropertyValue('--rule').trim();
             textStyle: { color: '#f9fafb', fontSize: 13 },
             formatter: function(params) {
                 var s = params[0].axisValue + '<br/>';
-                params.forEach(function(p) {
-                    if (p.value != null) {
-                        s += p.marker + ' ' + p.seriesName + ': $' + p.value.toFixed(1) + 'M<br/>';
+                for (var j = 0; j < params.length; j++) {
+                    if (params[j].value != null) {
+                        s += params[j].marker + ' ' + params[j].seriesName + ': $' + params[j].value + 'M<br/>';
                     }
-                });
+                }
                 return s;
             }
         },
         grid: { left: 60, right: 40, top: 50, bottom: 50 },
         title: {
             text: 'Powerball Jackpot History, 2025-2026',
-            left: 'center',
-            top: 8,
+            left: 'center', top: 8,
             textStyle: { fontSize: 15, fontWeight: 600, color: ink }
         },
         legend: {
             bottom: 0,
             textStyle: { color: ink, fontSize: 11 },
-            itemWidth: 18,
-            itemHeight: 10
+            itemWidth: 18, itemHeight: 10
         },
-        dataZoom: [
-            {
-                type: 'slider',
-                bottom: 25,
-                height: 18,
-                borderColor: rule,
-                backgroundColor: 'transparent',
-                fillerColor: 'rgba(128,128,128,0.15)',
-                handleStyle: { color: accent, borderColor: accent },
-                textStyle: { color: ink, fontSize: 10 },
-                start: 0,
-                end: 100
-            }
-        ],
+        dataZoom: [{
+            type: 'slider', bottom: 25, height: 18,
+            borderColor: rule,
+            backgroundColor: 'transparent',
+            fillerColor: 'rgba(128,128,128,0.15)',
+            handleStyle: { color: accent, borderColor: accent },
+            textStyle: { color: ink, fontSize: 10 },
+            start: 0, end: 100
+        }],
         xAxis: {
-            type: 'category',
-            data: dates,
-            name: 'Draw date (2025-2026)',
-            nameLocation: 'middle',
-            nameGap: 35,
-            nameTextStyle: { color: muted, fontSize: 12 },
+            type: 'category', data: dates,
             axisLine: { lineStyle: { color: rule } },
             axisTick: { show: false },
-            axisLabel: {
-                color: ink,
-                fontSize: 9,
-                interval: 8,
-                rotate: 45
-            }
+            axisLabel: { color: ink, fontSize: 9, interval: 8, rotate: 45 }
         },
         yAxis: {
             type: 'value',
@@ -364,46 +320,27 @@ var rule    = style.getPropertyValue('--rule').trim();
             axisLine: { show: false },
             axisTick: { show: false },
             splitLine: { lineStyle: { color: rule } },
-            axisLabel: {
-                color: ink,
-                fontSize: 11,
-                formatter: function(val) { return '$' + val + 'M'; }
-            },
+            axisLabel: { color: ink, fontSize: 11, formatter: function(v) { return '$'+v+'M'; } },
             max: 60
         },
         series: [
-            {
-                name: 'Rollover',
-                type: 'bar',
-                data: rolloverData,
-                barWidth: '70%',
-                stack: 'jackpot'
-            },
-            {
-                name: 'Won',
-                type: 'bar',
-                data: wonData,
-                barWidth: '70%',
-                stack: 'jackpot',
-                itemStyle: { color: accent },
-                markLine: {
-                    silent: true,
-                    symbol: 'none',
-                    lineStyle: { color: accent2, type: 'dashed', width: 1.5 },
-                    label: {
-                        show: true,
-                        position: 'start',
-                        color: accent2,
-                        fontSize: 10,
-                        fontWeight: 600,
-                        formatter: 'NZ Record $55.2M'
-                    },
-                    data: [{ xAxis: dates[recordIdx] }]
-                }
-            }
+            { name: 'Rollover', type: 'bar', data: rolloverData, barWidth: '70%', stack: 'x' },
+            { name: 'Won', type: 'bar', data: wonData, barWidth: '70%', stack: 'x',
+                itemStyle: { color: accent } }
         ]
-    });
+    };
 
+    if (recordIdx >= 0) {
+        option.series[1].markLine = {
+            silent: true, symbol: 'none',
+            lineStyle: { color: accent2, type: 'dashed', width: 1.5 },
+            label: { show: true, position: 'start', color: accent2, fontSize: 10, fontWeight: 600,
+                     formatter: 'NZ Record $55.2M' },
+            data: [{ xAxis: dates[recordIdx] }]
+        };
+    }
+
+    chart.setOption(option);
     window.addEventListener('resize', function() { chart.resize(); });
 })();
 
@@ -413,42 +350,37 @@ var rule    = style.getPropertyValue('--rule').trim();
 (function() {
     var chart = echarts.init(document.getElementById('chart-two-lenses'), null, { renderer: 'svg' });
 
-    var cats = [
-        'Powerball Div 1\n(single line)',
-        'Powerball Div 1\n(annual, 4 lines x 104 draws)',
-        'Powerball Div 1\n(annual, 10 lines x 104 draws)',
-        'Powerball struck\n(any given draw, ~2.5M lines)',
-        'Powerball struck\n(annual, 25 wins in 156 draws)'
-    ];
+    var cats = ['Powerball Div 1 (single line)',
+                'Powerball Div 1 (annual, 4 lines)',
+                'Powerball Div 1 (annual, 10 lines)',
+                'Powerball struck (any draw)',
+                'Powerball struck (annual 2025-26)'];
     var odds = [38383800, 92269, 36907, 15.9, 6.2];
+    var colors = [accent, accent, accent, accent2, accent2];
 
     chart.setOption({
         animation: false,
-        color: [accent, accent2],
         tooltip: {
             trigger: 'axis',
             backgroundColor: '#1f2937',
             borderColor: '#374151',
             textStyle: { color: '#f9fafb', fontSize: 13 },
             formatter: function(params) {
-                var name = params[0].axisValue.replace(/\n/g, ' ');
-                return name + '<br/>' + params[0].marker + ' Odds: 1 in ' +
-                    Number(params[0].value).toLocaleString('en-NZ', { maximumFractionDigits: 1 });
+                return params[0].name + '<br/>' + params[0].marker +
+                       ' Odds: 1 in ' + Number(params[0].value).toLocaleString();
             }
         },
         grid: { left: 90, right: 80, top: 50, bottom: 70 },
         title: {
-            text: 'Two Lenses of Probability: Raw Odds vs Empirical Reality',
-            left: 'center',
-            top: 8,
+            text: 'Two Lenses of Probability',
+            left: 'center', top: 8,
             textStyle: { fontSize: 14, fontWeight: 600, color: ink }
         },
         xAxis: {
-            type: 'category',
-            data: cats,
+            type: 'category', data: cats,
             axisLine: { lineStyle: { color: rule } },
             axisTick: { show: false },
-            axisLabel: { color: ink, fontSize: 9, interval: 0 }
+            axisLabel: { color: ink, fontSize: 10, interval: 0, rotate: 30 }
         },
         yAxis: {
             type: 'log',
@@ -458,81 +390,30 @@ var rule    = style.getPropertyValue('--rule').trim();
             axisTick: { show: false },
             splitLine: { lineStyle: { color: rule } },
             axisLabel: {
-                color: ink,
-                fontSize: 11,
-                formatter: function(val) {
-                    if (val >= 1000000) return (val / 1000000).toFixed(0) + 'M';
-                    if (val >= 1000) return (val / 1000).toFixed(0) + 'k';
-                    return val.toFixed(0);
+                color: ink, fontSize: 11,
+                formatter: function(v) {
+                    if (v >= 1000000) return (v/1000000).toFixed(0)+'M';
+                    return v;
                 }
             },
-            min: 1,
-            max: 100000000
+            min: 1, max: 100000000
         },
-        series: [
-            {
-                type: 'bar',
-                data: odds.map(function(v, i) {
-                    return {
-                        value: v,
-                        itemStyle: {
-                            color: i < 3 ? accent : accent2,
-                            borderRadius: [6, 6, 0, 0]
-                        }
-                    };
-                }),
-                barWidth: '50%',
-                label: {
-                    show: true,
-                    position: 'top',
-                    color: ink,
-                    fontSize: 10,
-                    formatter: function(p) {
-                        var v = p.value;
-                        if (v >= 1000000) return '1 in ' + (v / 1000000).toFixed(1) + 'M';
-                        if (v >= 1000) return '1 in ' + (v / 1000).toFixed(1) + 'k';
-                        return '1 in ' + v.toFixed(1);
-                    }
-                },
-                markArea: {
-                    silent: true,
-                    label: { show: false },
-                    data: [
-                        [
-                            { xAxis: cats[0], itemStyle: { color: 'rgba(158,107,31,0.06)' } },
-                            { xAxis: cats[2], itemStyle: { color: 'rgba(158,107,31,0.06)' } }
-                        ],
-                        [
-                            { xAxis: cats[3], itemStyle: { color: 'rgba(158,107,31,0.06)' } },
-                            { xAxis: cats[4], itemStyle: { color: 'rgba(158,107,31,0.06)' } }
-                        ]
-                    ]
-                }
-            },
-            {
-                type: 'scatter',
-                data: [
-                    { value: [cats[0], 38383800], symbolSize: 0 },
-                    { value: [cats[4], 6.2], symbolSize: 0 }
-                ],
-                markLine: {
-                    silent: true,
-                    symbol: 'none',
-                    lineStyle: { color: accent2, type: 'dashed', width: 2 },
-                    label: {
-                        show: true,
-                        position: 'insideEndTop',
-                        color: accent2,
-                        fontSize: 9,
-                        fontWeight: 600,
-                        formatter: 'Unconditional\n(per-line)'
-                    },
-                    data: [{ xAxis: cats[0] }]
+        series: [{
+            type: 'bar',
+            data: odds.map(function(v, i) {
+                return { value: v, itemStyle: { color: colors[i], borderRadius: [6,6,0,0] } };
+            }),
+            barWidth: '50%',
+            label: {
+                show: true, position: 'top', color: ink, fontSize: 10,
+                formatter: function(p) {
+                    var v = p.value;
+                    if (v >= 1000000) return '1 in '+(v/1000000).toFixed(1)+'M';
+                    return '1 in '+v.toFixed(1);
                 }
             }
-        ]
+        }]
     });
-
     window.addEventListener('resize', function() { chart.resize(); });
 })();
 

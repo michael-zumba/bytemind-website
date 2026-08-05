@@ -1,56 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found | ByteMind Ltd</title>
     <link rel="icon" href="assets/bytemind-logo.png?v=2026">
-    
-    <!-- Fonts -->
+    <meta name="description" content="The page you are looking for could not be found. Head back to the ByteMind homepage or explore our services and research.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="colors_and_type.css">
 </head>
 <body>
 
-    <!-- Navigation -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <img src="assets/logo/bytemind-logo.png" alt="ByteMind" onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
-                <span style="display:none; font-weight:800; font-size:1.5rem; color:var(--primary);">ByteMind</span>
-            </a>
+            <a href="index.html" class="logo-link">ByteMind</a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="services.html">Services</a>
+                <a href="indices.html">Indices</a>
                 <a href="insights.html">Insights</a>
                 <a href="reports.html">Reports</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </div>
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="container" style="text-align: center; padding: 8rem 0;">
-        <h1 style="font-size: 6rem; color: var(--accent); margin-bottom: 1rem;">404</h1>
-        <h2 style="margin-top: 0;">Page Not Found</h2>
-        <p style="max-width: 500px; margin: 0 auto 2rem auto;">
-            The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
-        </p>
-        <a href="index.html" class="btn btn-primary">Return to Home</a>
+    <main class="container" id="main-content">
+        <section class="section" style="text-align:center; max-width:640px; margin:0 auto;">
+            <div class="eyebrow">404</div>
+            <h1>Page Not Found</h1>
+            <p class="hero-subtitle" style="margin-bottom:2rem;">
+                The page you are looking for may have been moved or no longer exists.
+            </p>
+            <a href="index.html" class="btn btn-primary">Return to Home</a>
+        </section>
+
+        <section class="section" style="padding-top:0;">
+            <div class="section-header">
+                <div class="eyebrow">Keep Exploring</div>
+                <h2>Popular Pages</h2>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <h4>Services</h4>
+                    <p>Analytics, digital transformation, and cross-border tax advisory.</p>
+                    <a href="services.html" class="inline-link">Explore services &rarr;</a>
+                </div>
+                <div class="card">
+                    <h4>Research Reports</h4>
+                    <p>Evidence-based analytical briefs for decision-makers.</p>
+                    <a href="reports.html" class="inline-link">Read the reports &rarr;</a>
+                </div>
+                <div class="card">
+                    <h4>Contact</h4>
+                    <p>Start a conversation — we reply within one business day.</p>
+                    <a href="contact.html" class="inline-link">Get in touch &rarr;</a>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <p style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.1rem;color:var(--primary);margin-bottom:0.5rem;">ByteMind Ltd</p>
-                    <p style="font-size:0.85rem;color:var(--muted);max-width:280px;">Business analytics, digital transformation, and strategic advisory for professional services across the Asia-Pacific region.</p>
+                    <p class="footer-brand-name">ByteMind Ltd</p>
+                    <p class="footer-brand-desc">Business analytics, digital transformation, and strategic advisory for professional services across the Asia-Pacific region.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Pages</h4>
@@ -64,8 +88,8 @@
                 <div class="footer-col">
                     <h4>Connect</h4>
                     <a href="mailto:bytemind.nz@gmail.com">Email</a>
-                    <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/michael-zumba/bytemind-website" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/michael-zumba/bytemind-website" target="_blank" rel="noopener noreferrer">GitHub</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -73,6 +97,37 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    (function () {
+      var btn = document.querySelector('.mobile-menu-btn');
+      var links = document.querySelector('.nav-links');
+      if (!btn || !links) return;
+      function setMenu(open) {
+        links.classList.toggle('active', open);
+        btn.classList.toggle('open', open);
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        document.body.style.overflow = open ? 'hidden' : '';
+      }
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        setMenu(!links.classList.contains('active'));
+      });
+      links.addEventListener('click', function (e) {
+        if (e.target.closest('a')) setMenu(false);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') setMenu(false);
+      });
+      document.addEventListener('click', function (e) {
+        if (links.classList.contains('active') && !e.target.closest('.navbar')) setMenu(false);
+      });
+      var nav = document.querySelector('.navbar');
+      function onScroll() { if (nav) nav.classList.toggle('scrolled', window.scrollY > 8); }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+    </script>
 
 </body>
 </html>

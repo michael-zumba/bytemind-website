@@ -64,6 +64,32 @@
   --container-padding: 1.5rem;
 }
 
+/* ── Legacy token compatibility (old design system references) ── */
+:root {
+  --font-heading: var(--font-serif);
+  --font-body: var(--font-sans);
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 700;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-body: 1rem;
+  --text-h1: clamp(30px, 3.8vw, 46px);
+  --text-h3: 1.375rem;
+  --text-h4: 1.125rem;
+  --leading-tight: 1.15;
+  --leading-normal: 1.6;
+  --leading-relaxed: 1.7;
+  --tracking-wide: 0.08em;
+  --color-accent-500: var(--color-primary-400);
+  --color-accent-600: var(--color-primary-600);
+  --color-neutral-100: var(--color-primary-50);
+  --color-neutral-900: var(--color-primary-900);
+  --shadow-sm: var(--shadow-card);
+  --shadow-floating: var(--shadow-float);
+}
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 body {
@@ -213,8 +239,8 @@ p { margin-bottom: 1.25rem; color: var(--color-text-secondary); line-height: 1.6
 .footer-col a { display: block; color: rgba(250, 249, 243, 0.65); font-size: 0.875rem; margin-bottom: var(--space-3); transition: color 0.2s; }
 .footer-col a:hover { color: rgba(250, 249, 243, 0.9); }
 .footer-brand-name { font-family: var(--font-serif); font-weight: 500; font-size: 1.15rem; color: rgba(250, 249, 243, 0.9); margin-bottom: 0.5rem; }
-.footer-brand-desc { font-size: 0.875rem; color: rgba(250, 249, 243, 0.5); max-width: 280px; line-height: 1.6; }
-.footer-bottom { border-top: 1px solid rgba(250, 249, 243, 0.08); padding-top: var(--space-6); text-align: center; font-size: 0.75rem; color: rgba(250, 249, 243, 0.35); }
+.footer-brand-desc { font-size: 0.875rem; color: rgba(250, 249, 243, 0.65); max-width: 280px; line-height: 1.6; }
+.footer-bottom { border-top: 1px solid rgba(250, 249, 243, 0.08); padding-top: var(--space-6); text-align: center; font-size: 0.75rem; color: rgba(250, 249, 243, 0.55); }
 
 /* ── Grid ── */
 .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-10); }
@@ -263,6 +289,30 @@ p { margin-bottom: 1.25rem; color: var(--color-text-secondary); line-height: 1.6
 
 /* ── Accent bar ── */
 .accent-bar { width: 48px; height: 2px; background: var(--color-primary-400); border-radius: var(--radius-full); }
+
+/* ── Skip link ── */
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 3000;
+  background: var(--color-primary); color: var(--color-primary-foreground);
+  padding: 0.65rem 1.25rem; border-radius: 0 0 var(--radius-md) 0;
+  font-family: var(--font-sans); font-weight: 600; font-size: 0.85rem;
+}
+.skip-link:focus { left: 0; }
+
+/* ── Trust strip (homepage) ── */
+.trust-strip {
+  display: flex; justify-content: center; align-items: center;
+  gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-8);
+}
+
+/* ── Process cards (homepage) ── */
+.process-card .tier-icon { font-family: var(--font-mono); font-size: 0.95rem; color: var(--color-primary-600); }
+
+/* ── Section link row ── */
+.section-link-row { text-align: center; margin-top: var(--space-10); }
+
+/* ── Form note ── */
+.form-note { font-size: 0.8rem; color: var(--color-text-muted); margin-top: var(--space-3); }
 
 /* ── Inline Link ── */
 .inline-link { color: var(--color-primary); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(26, 58, 42, 0.2); transition: text-decoration-color 0.2s; }

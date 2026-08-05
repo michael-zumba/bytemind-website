@@ -98,6 +98,12 @@
         <section class="section-spacer">
             <p class="intro-text">Our reports combine academic rigour with practical insight, designed as comprehensive reference documents rather than short-form commentary.</p>
 
+            <div class="reports-toolbar">
+                <input type="search" id="report-search" class="report-search" placeholder="Search reports by title or topic..." aria-label="Search reports">
+                <div id="topic-filters" class="topic-filters" role="group" aria-label="Filter reports by topic"></div>
+                <p id="reports-count" class="reports-count" role="status"></p>
+            </div>
+
             <div id="reports-grid" class="grid-2">
                 <div class="loading-placeholder">Loading reports...</div>
             </div>
@@ -146,6 +152,92 @@
     document.addEventListener('DOMContentLoaded', function () {
 
         var reportsGrid = document.getElementById('reports-grid');
+        var searchInput = document.getElementById('report-search');
+        var topicFilters = document.getElementById('topic-filters');
+        var countLabel = document.getElementById('reports-count');
+        var allReports = [];
+        var query = '';
+        var activeTopic = null;
+
+        function escapeHtml(str) {
+            return String(str)
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+        }
+
+        function matches(report) {
+            var haystack = (report.title + ' ' + report.summary + ' ' + (report.topics || []).join(' ')).toLowerCase();
+            if (query && haystack.indexOf(query) === -1) return false;
+            if (activeTopic && !(report.topics || []).some(function (t) { return t === activeTopic; })) return false;
+            return true;
+        }
+
+        function renderTopics() {
+            if (!topicFilters) return;
+            var topics = [];
+            allReports.forEach(function (r) {
+                (r.topics || []).forEach(function (t) {
+                    if (topics.indexOf(t) === -1) topics.push(t);
+                });
+            });
+            topics.sort();
+            topicFilters.innerHTML = topics.map(function (t) {
+                return '<button type="button" class="topic-chip' + (t === activeTopic ? ' active' : '') +
+                    '" data-topic="' + escapeHtml(t) + '" aria-pressed="' + (t === activeTopic) + '">' + escapeHtml(t) + '</button>';
+            }).join('');
+            topicFilters.querySelectorAll('.topic-chip').forEach(function (chip) {
+                chip.addEventListener('click', function () {
+                    activeTopic = chip.dataset.topic === activeTopic ? null : chip.dataset.topic;
+                    renderTopics();
+                    renderReports();
+                });
+            });
+        }
+
+        function renderReports() {
+            if (!reportsGrid) return;
+            var filtered = allReports.filter(matches);
+            reportsGrid.innerHTML = '';
+            if (filtered.length === 0) {
+                reportsGrid.innerHTML = '<div class="empty-state"><p>No reports match your search.</p><p style="margin:var(--space-3) 0 0;"><button type="button" class="btn btn-secondary btn-sm" id="clear-filters">Clear filters</button></p></div>';
+                var clear = document.getElementById('clear-filters');
+                if (clear) {
+                    clear.addEventListener('click', function () {
+                        query = '';
+                        activeTopic = null;
+                        if (searchInput) searchInput.value = '';
+                        renderTopics();
+                        renderReports();
+                    });
+                }
+            }
+            filtered.forEach(function (report) {
+                var card = document.createElement('div');
+                card.className = 'report-card';
+
+                var topicsHtml = '';
+                if (report.topics) {
+                    topicsHtml = report.topics.map(function (t) {
+                        return '<span class="report-topic-tag">' + escapeHtml(t) + '</span>';
+                    }).join('');
+                }
+
+                card.innerHTML =
+                    '<span class="report-label">Analytical Brief</span>' +
+                    '<h3 class="report-title">' + escapeHtml(report.title) + '</h3>' +
+                    '<div class="report-date">' + escapeHtml(report.date.toUpperCase()) + '</div>' +
+                    '<p>' + escapeHtml(report.summary) + '</p>' +
+                    '<div class="report-topics">' + topicsHtml + '</div>' +
+                    '<a href="reports/' + escapeHtml(report.filename) + '" class="btn btn-primary btn-sm">Read Full Report</a>';
+
+                reportsGrid.appendChild(card);
+            });
+            if (countLabel) {
+                countLabel.textContent = filtered.length + (filtered.length === 1 ? ' report' : ' reports') +
+                    (query || activeTopic ? ' matched' : ' available');
+            }
+        }
+
         if (reportsGrid) {
             fetch('reports/manifest.json')
                 .then(function (response) {
@@ -153,31 +245,11 @@
                     return response.json();
                 })
                 .then(function (reports) {
-                    reportsGrid.innerHTML = '';
-                    reports.sort(function (a, b) {
+                    allReports = reports.slice().sort(function (a, b) {
                         return new Date(b.date) - new Date(a.date);
                     });
-                    reports.forEach(function (report) {
-                        var card = document.createElement('div');
-                        card.className = 'report-card';
-
-                        var topicsHtml = '';
-                        if (report.topics) {
-                            topicsHtml = report.topics.map(function (t) {
-                                return '<span class="report-topic-tag">' + t + '</span>';
-                            }).join('');
-                        }
-
-                        card.innerHTML =
-                            '<span class="report-label">Analytical Brief</span>' +
-                            '<h4>' + report.title + '</h4>' +
-                            '<div class="report-date">' + report.date.toUpperCase() + '</div>' +
-                            '<p>' + report.summary + '</p>' +
-                            '<div class="report-topics">' + topicsHtml + '</div>' +
-                            '<a href="reports/' + report.filename + '" class="btn btn-primary btn-sm">Read Full Report</a>';
-
-                        reportsGrid.appendChild(card);
-                    });
+                    renderTopics();
+                    renderReports();
                 })
                 .catch(function (err) {
                     console.error('Error loading reports:', err);
@@ -185,6 +257,12 @@
                         reportsGrid.innerHTML = '<div class="error-placeholder"><p>Unable to load reports at this time.</p></div>';
                     }
                 });
+            if (searchInput) {
+                searchInput.addEventListener('input', function () {
+                    query = searchInput.value.trim().toLowerCase();
+                    renderReports();
+                });
+            }
         }
 
     });
@@ -231,8 +309,9 @@
             letter-spacing: var(--tracking-wide);
             margin-bottom: var(--space-4);
         }
-        .report-card h4 {
+        .report-card h3 {
             margin-bottom: var(--space-2);
+            font-size: 1.3rem;
         }
         .report-card p {
             color: var(--color-text-secondary);
@@ -244,12 +323,79 @@
             padding-top: var(--space-4);
         }
         .report-topic-tag {
-            font-size: var(--text-xs);
-            color: var(--color-text-muted);
-            margin-right: var(--space-3);
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: var(--font-weight-semibold);
+            letter-spacing: 0.04em;
+            color: var(--color-primary-600);
+            background: var(--color-primary-50);
+            border: 1px solid rgba(26, 58, 42, 0.12);
+            border-radius: var(--radius-full);
+            padding: 0.2rem 0.7rem;
+            margin-right: var(--space-2);
+            margin-bottom: var(--space-2);
         }
         .report-card .btn {
             margin-top: var(--space-4);
+        }
+        .reports-toolbar {
+            margin-bottom: var(--space-8);
+        }
+        .report-search {
+            width: 100%;
+            max-width: 420px;
+            padding: 0.65rem 1rem;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            color: var(--color-text-primary);
+            background: var(--color-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .report-search:focus {
+            border-color: var(--color-primary-400);
+            box-shadow: 0 0 0 3px var(--color-focus-ring);
+        }
+        .topic-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-3);
+            margin-top: var(--space-5);
+        }
+        .topic-chip {
+            font-family: var(--font-sans);
+            font-size: 0.75rem;
+            font-weight: var(--font-weight-semibold);
+            letter-spacing: 0.03em;
+            padding: 0.3rem 0.8rem;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            background: var(--color-card);
+            color: var(--color-text-secondary);
+            border: 1px solid var(--color-border);
+            transition: all 0.2s ease;
+        }
+        .topic-chip:hover {
+            border-color: var(--color-primary-300);
+            color: var(--color-primary);
+        }
+        .topic-chip.active {
+            background: var(--color-primary);
+            color: var(--color-primary-foreground);
+            border-color: var(--color-primary);
+        }
+        .reports-count {
+            margin: var(--space-5) 0 0;
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+        }
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: var(--color-text-muted);
+            padding: var(--space-12) 0;
         }
         .loading-placeholder {
             grid-column: 1 / -1;

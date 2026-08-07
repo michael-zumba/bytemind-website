@@ -13,14 +13,26 @@ document.addEventListener('DOMContentLoaded', function () {
     var ink = '#1f1e1a';         // near-black text
     var font = 'Inter, system-ui, sans-serif';
 
+    var charts = [];
+
     function setOption(domId, option) {
         var dom = document.getElementById(domId);
         if (!dom) return;
         var chart = echarts.init(dom, null, { renderer: 'svg' });
         option.textStyle = { fontFamily: font, color: muted };
         chart.setOption(option);
-        window.addEventListener('resize', function () { chart.resize(); });
+        charts.push(chart);
     }
+
+    function resizeCharts() {
+        charts.forEach(function (chart) { chart.resize(); });
+    }
+    window.resizeCharts = resizeCharts;
+
+    window.addEventListener('resize', resizeCharts);
+    // Charts that start inside hidden tabs/panels init at a tiny width.
+    // Re-measure after the page settles so every chart fills its container.
+    setTimeout(resizeCharts, 120);
 
     function renderTable(domId, columns, rows) {
         var dom = document.getElementById(domId);
@@ -223,7 +235,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         },
         grid: { left: 110, right: 44, top: 16, bottom: 36 },
-        xAxis: valAxis('Real price decline (%)'),
+        xAxis: Object.assign(valAxis('Real price decline (%)'), { nameLocation: 'middle', nameGap: 30 }),
         yAxis: Object.assign(catAxis(intlCountries), { axisLabel: { color: ink, fontWeight: 600, fontSize: 12 } }),
         series: [{
             type: 'bar', barWidth: '55%',
@@ -272,7 +284,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         },
         grid: { left: 110, right: 52, top: 16, bottom: 36 },
-        xAxis: valAxis('TEFI score (0 = best, 100 = worst)'),
+        xAxis: Object.assign(valAxis('TEFI score (0-100)'), { nameLocation: 'middle', nameGap: 30 }),
         yAxis: Object.assign(catAxis(tefiSorted.map(function (d) { return d.country; })), {
             inverse: true,
             axisLabel: {
@@ -310,14 +322,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // ============================================================
     var smeData = [
         { metric: 'Retail Spending (monthly)', value: -1.1, source: 'Stats NZ ECT (Jan 2026)' },
-        { metric: 'Enterprise Growth (year-on-year)', value: 0.5, source: 'Stats NZ Demography (Feb 2025)' },
-        { metric: 'Employment Growth (year-on-year)', value: -2.2, source: 'Stats NZ Demography (Feb 2025)' }
+        { metric: 'Enterprise Growth (YoY)', value: 0.5, source: 'Stats NZ Demography (Feb 2025)' },
+        { metric: 'Employment Growth (YoY)', value: -2.2, source: 'Stats NZ Demography (Feb 2025)' }
     ];
 
     setOption('chart-sme', {
         tooltip: shadowTooltip(),
         grid: { left: 185, right: 56, top: 16, bottom: 36 },
-        xAxis: valAxis('Change (%)'),
+        xAxis: Object.assign(valAxis('Change (%)'), { nameLocation: 'middle', nameGap: 30 }),
         yAxis: Object.assign(catAxis(smeData.map(function (d) { return d.metric; })), {
             axisLabel: { color: ink, fontSize: 12 }
         }),

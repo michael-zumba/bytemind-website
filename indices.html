@@ -386,6 +386,9 @@
       panel.setAttribute('aria-hidden', 'false');
       evt.currentTarget.className += ' active';
       evt.currentTarget.setAttribute('aria-selected', 'true');
+      if (typeof resizeCharts === 'function') {
+        setTimeout(resizeCharts, 0);
+      }
     }
 
     // Indicator family switching: show one family panel, hide the rest
@@ -405,6 +408,9 @@
       panel.setAttribute('aria-hidden', 'false');
       evt.currentTarget.className += ' active';
       evt.currentTarget.setAttribute('aria-selected', 'true');
+      if (typeof resizeCharts === 'function') {
+        setTimeout(resizeCharts, 0);
+      }
     }
 
     // Accessible accordions

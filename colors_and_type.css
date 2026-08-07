@@ -321,6 +321,12 @@ p { margin-bottom: 1.25rem; color: var(--color-text-secondary); line-height: 1.6
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .animate-fade-in-up { animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-fade-in-up { animation: none; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .display { font-size: clamp(32px, 7vw, 48px); }

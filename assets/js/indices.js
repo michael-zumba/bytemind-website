@@ -321,7 +321,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // NZ SME Resilience — component changes
     // ============================================================
     var smeData = [
-        { metric: 'Retail Spending (monthly)', value: -1.1, source: 'Stats NZ ECT (Jan 2026)' },
+        { metric: 'Retail Spending Trend (monthly)', value: -1.1, source: 'Stats NZ ECT (Jan 2026)' },
         { metric: 'Enterprise Growth (YoY)', value: 0.5, source: 'Stats NZ Demography (Feb 2025)' },
         { metric: 'Employment Growth (YoY)', value: -2.2, source: 'Stats NZ Demography (Feb 2025)' }
     ];

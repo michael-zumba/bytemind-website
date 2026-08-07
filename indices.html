@@ -6,16 +6,16 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/logo/favicon-32.png?v=2026">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ByteMind Indices | Data &amp; Indicators</title>
-    <meta name="description" content="Evidence-based indicators from ByteMind: New Zealand and Australia housing markets, the Tax Efficiency & Friction Index (TEFI), and the NZ SME Resilience Index — interactive charts, downloadable data, and related research reports.">
+    <meta name="description" content="Evidence-based indicators from ByteMind: housing markets, the Tax Efficiency & Friction Index (TEFI), NZ SME Resilience, and research indicators for AI, digital assets, cyber risk, and tourism — with downloadable data.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ByteMind Ltd">
     <meta property="og:title" content="ByteMind Indices | Data & Indicators">
-    <meta property="og:description" content="Housing market, tax efficiency, and NZ SME resilience indicators with interactive charts, downloadable data, and related research reports.">
+    <meta property="og:description" content="Housing market, tax efficiency, NZ SME resilience, and research indicators for AI, digital assets, cyber risk, and tourism — with interactive charts and downloadable data.">
     <meta property="og:url" content="https://www.bytemind.co.nz/indices.html">
     <meta property="og:image" content="https://www.bytemind.co.nz/assets/og-image.png">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="ByteMind Indices | Data & Indicators">
-    <meta name="twitter:description" content="Housing market, tax efficiency, and NZ SME resilience indicators with interactive charts, downloadable data, and related research reports.">
+    <meta name="twitter:description" content="Housing market, tax efficiency, NZ SME resilience, and research indicators for AI, digital assets, cyber risk, and tourism — with interactive charts and downloadable data.">
     <link rel="canonical" href="https://www.bytemind.co.nz/indices.html">
     <script type="application/ld+json">
     {
@@ -92,7 +92,7 @@
     <section class="indices-hero animate-fade-in-up">
       <div class="badge">Indices &amp; Indicators</div>
       <h1>ByteMind Indices</h1>
-      <p class="hero-subtitle">Evidence-based indicators built from official data — housing markets, tax efficiency, and New Zealand SME resilience — with the full analytical reports behind the numbers.</p>
+      <p class="hero-subtitle">Evidence-based indicators built from official data — housing markets, tax efficiency, New Zealand SME resilience, and selected research indicators — with the full analytical reports behind the numbers.</p>
     </section>
 
     <!-- 2. Indicator families -->
@@ -100,6 +100,7 @@
       <button class="tab-btn active" role="tab" id="fam-housing" aria-selected="true" aria-controls="panel-housing" onclick="openFamily(event, 'housing')">Housing Market</button>
       <button class="tab-btn" role="tab" id="fam-tefi" aria-selected="false" aria-controls="panel-tefi" onclick="openFamily(event, 'tefi')">Tax Efficiency (TEFI)</button>
       <button class="tab-btn" role="tab" id="fam-sme" aria-selected="false" aria-controls="panel-sme" onclick="openFamily(event, 'sme')">NZ SME Resilience</button>
+      <button class="tab-btn" role="tab" id="fam-research" aria-selected="false" aria-controls="panel-research" onclick="openFamily(event, 'research')">Research Indicators</button>
     </div>
 
     <!-- 3. Housing Market -->
@@ -328,6 +329,93 @@
         <div id="accordion-sme-table" class="accordion-content">
           <div id="sme-table" class="data-table-wrap"></div>
           <a href="data/nz_sme_resilience.csv" download class="btn btn-secondary btn-sm csv-link">Download CSV</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Research Indicators -->
+    <div id="panel-research" class="family-panel" role="tabpanel" aria-labelledby="fam-research">
+      <h2>Research Indicators</h2>
+      <p class="panel-intro">Selected indicators drawn from ByteMind's analytical reports. Full methodology, sources, and downloadable data live with each report.</p>
+
+      <section class="metric-strip" aria-label="Research indicator snapshot">
+        <div class="metric-item">
+          <div class="metric-value">20.2%</div>
+          <span class="metric-label">OECD Firm AI Adoption (2025)</span>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">$2.75T</div>
+          <span class="metric-label">Crypto Market Cap (year-end 2025)</span>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">$4.88M</div>
+          <span class="metric-label">Average Data Breach Cost (2024)</span>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">3.51M</div>
+          <span class="metric-label">NZ Visitor Arrivals (2025)</span>
+        </div>
+      </section>
+      <p class="metric-note">Sources: OECD; CoinMarketCap/CoinGecko; IBM Cost of a Data Breach; Stats NZ International Travel. See each report for full methodology.</p>
+
+      <h3 class="chart-heading">AI Adoption: OECD Firms vs McKinsey Survey</h3>
+      <p class="caption">OECD firms with 10+ employees use a strict adoption definition; McKinsey's global survey counts any functional use. The gap highlights how measurement choices shape the picture.</p>
+      <div id="chart-ai-adoption" class="chart-box chart-md" role="img" aria-label="Line chart of AI adoption rates from OECD firms and the McKinsey global survey from 2020 to 2025"></div>
+
+      <div class="accordion">
+        <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-ai-adoption-table">
+          <span class="accordion-title accordion-title--sm">View Data Table</span>
+          <span class="accordion-icon">&#9660;</span>
+        </button>
+        <div id="accordion-ai-adoption-table" class="accordion-content">
+          <div id="ai-adoption-table" class="data-table-wrap"></div>
+          <a href="reports/ai-digital-transformation/data/ai_adoption_timeline.csv" download class="btn btn-secondary btn-sm csv-link">Download CSV</a>
+        </div>
+      </div>
+
+      <h3 class="chart-heading chart-heading--spaced">Digital Asset Market Capitalisation</h3>
+      <p class="caption">Total cryptocurrency market capitalisation (bars) and the AI token segment (line, right axis). Crypto data are annual year-end; AI token data are Q4 snapshots from 2020 to 2025 and a Q2 2026 snapshot.</p>
+      <div id="chart-digital-assets" class="chart-box chart-md" role="img" aria-label="Combined chart of cryptocurrency market capitalisation and AI token market capitalisation from 2013 to 2026"></div>
+
+      <div class="accordion">
+        <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-digital-table">
+          <span class="accordion-title accordion-title--sm">View Data Table</span>
+          <span class="accordion-icon">&#9660;</span>
+        </button>
+        <div id="accordion-digital-table" class="accordion-content">
+          <div id="digital-table" class="data-table-wrap"></div>
+          <a href="reports/blockchain-crypto/data/crypto_market_cap.csv" download class="btn btn-secondary btn-sm csv-link">Download Crypto CSV</a>
+          <a href="reports/ai-tokens-future-asset/data/ai_tokens_market_cap.csv" download class="btn btn-secondary btn-sm csv-link">Download AI Token CSV</a>
+        </div>
+      </div>
+
+      <h3 class="chart-heading chart-heading--spaced">Global Average Data Breach Cost</h3>
+      <p class="caption">Average total cost of a data breach, global and US, in USD millions. Source: IBM Cost of a Data Breach (2015-2025).</p>
+      <div id="chart-breach-cost" class="chart-box chart-md" role="img" aria-label="Chart of global and US average data breach costs from 2015 to 2025"></div>
+
+      <div class="accordion">
+        <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-breach-table">
+          <span class="accordion-title accordion-title--sm">View Data Table</span>
+          <span class="accordion-icon">&#9660;</span>
+        </button>
+        <div id="accordion-breach-table" class="accordion-content">
+          <div id="breach-table" class="data-table-wrap"></div>
+          <a href="reports/cybersecurity-risk-disclosure/data/cyber_breach_trends.csv" download class="btn btn-secondary btn-sm csv-link">Download CSV</a>
+        </div>
+      </div>
+
+      <h3 class="chart-heading chart-heading--spaced">NZ International Visitor Arrivals</h3>
+      <p class="caption">Annual overseas visitor arrivals from Stats NZ. The 2026 figure is a partial year (January-April only).</p>
+      <div id="chart-tourism-arrivals" class="chart-box chart-md" role="img" aria-label="Bar chart of annual New Zealand visitor arrivals from 2017 to 2026"></div>
+
+      <div class="accordion">
+        <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-tourism-table">
+          <span class="accordion-title accordion-title--sm">View Data Table</span>
+          <span class="accordion-icon">&#9660;</span>
+        </button>
+        <div id="accordion-tourism-table" class="accordion-content">
+          <div id="tourism-table" class="data-table-wrap"></div>
+          <a href="reports/nz-tourism-nowcasting/data/nz_tourism_arrivals_annual.csv" download class="btn btn-secondary btn-sm csv-link">Download CSV</a>
         </div>
       </div>
     </div>

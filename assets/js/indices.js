@@ -1,5 +1,5 @@
 // indices.js — ByteMind Indices
-// Data sources: BIS, OECD, RBNZ, Stats NZ
+// Data sources: BIS, OECD, RBNZ, Stats NZ, IBM, CoinMarketCap/CoinGecko
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -352,4 +352,119 @@ document.addEventListener('DOMContentLoaded', function () {
 
     renderTable('sme-table', ['Metric', 'Value (%)', 'Source', 'Impact on Resilience'],
         smeData.map(function (d) { return [d.metric, d.value, d.source, d.value >= 0 ? 'Positive' : 'Negative']; }));
+
+    // ============================================================
+    // Research Indicators — AI Adoption (OECD vs McKinsey)
+    // ============================================================
+    var aiYears = ['2020', '2021', '2022', '2023', '2024', '2025'];
+    var aiOecd = [5.6, 7.5, 8.2, 8.7, 14.2, 20.2];
+    var aiMck = [50, 56, 50, 55, 72, 88];
+
+    setOption('chart-ai-adoption', {
+        tooltip: lineTooltip(),
+        legend: { data: ['OECD firms (10+ employees)', 'McKinsey global survey'], top: 0, textStyle: { color: muted } },
+        grid: { left: 48, right: 24, top: 44, bottom: 40 },
+        xAxis: catAxis(aiYears),
+        yAxis: valAxis('Adoption (%)'),
+        color: [accent, warn],
+        series: [
+            { name: 'OECD firms (10+ employees)', type: 'line', data: aiOecd, smooth: true, lineStyle: { width: 2.5 }, symbol: 'circle', symbolSize: 5 },
+            { name: 'McKinsey global survey', type: 'line', data: aiMck, smooth: true, lineStyle: { width: 2.5 }, symbol: 'circle', symbolSize: 5 }
+        ]
+    });
+
+    renderTable('ai-adoption-table', ['Year', 'OECD Firms (%)', 'McKinsey Survey (%)'],
+        aiYears.map(function (y, i) { return [y, aiOecd[i], aiMck[i]]; }));
+
+    // ============================================================
+    // Research Indicators — Digital Asset Market Capitalisation
+    // ============================================================
+    var daYears = ['2013', '2014', '2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'];
+    var cryptoCap = [10, 5, 7, 17, 573, 125, 191, 774, 2260, 829, 1720, 3400, 2750, null];
+    var aiTokenCap = [null, null, null, null, null, null, null, 0.6, 3.8, 0.8, 4.5, 15.0, 23.5, 20.0];
+
+    setOption('chart-digital-assets', {
+        tooltip: lineTooltip(),
+        legend: { data: ['Crypto Market Cap (USD B)', 'AI Token Market Cap (USD B)'], top: 0, textStyle: { color: muted } },
+        grid: { left: 56, right: 56, top: 44, bottom: 40 },
+        xAxis: catAxis(daYears),
+        yAxis: [
+            valAxis('Crypto (USD B)'),
+            Object.assign(valAxis('AI Tokens (USD B)'), { splitLine: { show: false } })
+        ],
+        color: [accent, warn],
+        series: [
+            { name: 'Crypto Market Cap (USD B)', type: 'bar', data: cryptoCap, barWidth: '58%', itemStyle: { color: accent2, opacity: 0.85, borderRadius: [2, 2, 0, 0] } },
+            { name: 'AI Token Market Cap (USD B)', type: 'line', yAxisIndex: 1, data: aiTokenCap, smooth: true, lineStyle: { width: 2.5 }, symbol: 'circle', symbolSize: 5, itemStyle: { color: warn } }
+        ]
+    });
+
+    renderTable('digital-table', ['Year', 'Crypto Market Cap (USD B)', 'AI Token Market Cap (USD B)'],
+        daYears.map(function (y, i) { return [y, cryptoCap[i], aiTokenCap[i]]; }));
+
+    // ============================================================
+    // Research Indicators — Data Breach Cost
+    // ============================================================
+    var breachYears = ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025'];
+    var breachGlobal = [3.79, 4.00, 3.62, 3.86, 3.92, 3.86, 4.24, 4.35, 4.45, 4.88, 4.44];
+    var breachUS = [6.53, 7.01, 7.91, 8.19, 8.64, 8.64, 9.05, 9.44, 9.48, 10.22, 10.22];
+
+    setOption('chart-breach-cost', {
+        tooltip: lineTooltip(),
+        legend: { data: ['Global average (USD M)', 'US average (USD M)'], top: 0, textStyle: { color: muted } },
+        grid: { left: 56, right: 24, top: 44, bottom: 40 },
+        xAxis: catAxis(breachYears),
+        yAxis: valAxis('Cost (USD millions)'),
+        color: [accent2, error],
+        series: [
+            { name: 'Global average (USD M)', type: 'bar', data: breachGlobal, barWidth: '50%', itemStyle: { color: accent2, opacity: 0.85, borderRadius: [2, 2, 0, 0] } },
+            { name: 'US average (USD M)', type: 'line', data: breachUS, smooth: true, lineStyle: { width: 2.5 }, symbol: 'circle', symbolSize: 5, itemStyle: { color: error } }
+        ]
+    });
+
+    renderTable('breach-table', ['Year', 'Global Average (USD M)', 'US Average (USD M)'],
+        breachYears.map(function (y, i) { return [y, breachGlobal[i], breachUS[i]]; }));
+
+    // ============================================================
+    // Research Indicators — NZ Visitor Arrivals
+    // ============================================================
+    var tourYears = ['2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'];
+    var tourArrivals = [3733707, 3863217, 3888473, 996350, 206862, 1433832, 2955074, 3313802, 3509432, 1441025];
+
+    setOption('chart-tourism-arrivals', {
+        tooltip: {
+            trigger: 'axis', appendToBody: true,
+            formatter: function (p) {
+                var v = p[0].value;
+                return p[0].axisValue + ': ' + (v / 1000000).toFixed(2) + 'M arrivals' +
+                    (p[0].axisValue === '2026' ? ' (Jan-Apr only)' : '');
+            }
+        },
+        grid: { left: 56, right: 24, top: 44, bottom: 40 },
+        xAxis: catAxis(tourYears),
+        yAxis: Object.assign(valAxis('Arrivals'), {
+            axisLabel: { color: muted, fontSize: 11, formatter: function (v) { return (v / 1000000).toFixed(1) + 'M'; } }
+        }),
+        series: [{
+            name: 'Visitor Arrivals',
+            type: 'bar',
+            data: tourArrivals,
+            barWidth: '58%',
+            itemStyle: {
+                color: function (p) { return p.dataIndex === 9 ? warn : accent2; },
+                opacity: 0.85,
+                borderRadius: [2, 2, 0, 0]
+            },
+            label: {
+                show: true, position: 'top',
+                formatter: function (p) { return (p.value / 1000000).toFixed(2) + 'M'; },
+                color: ink, fontSize: 10
+            }
+        }]
+    });
+
+    renderTable('tourism-table', ['Year', 'Visitor Arrivals', 'Note'],
+        tourYears.map(function (y, i) {
+            return [y, tourArrivals[i], y === '2026' ? 'Partial year (Jan-Apr)' : ''];
+        }));
 });

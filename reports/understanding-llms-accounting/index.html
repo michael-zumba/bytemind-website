@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../assets/bytemind-logo.png?v=2026" rel="icon"/>
+<title>Understanding Large Language Models and Their Implications for Accounting and Finance Research</title>
+<style>
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --bg: #faf9f3;
+  --bg2: #fdfcf8;
+  --ink: #1f1e1a;
+  --muted: #6a6760;
+  --rule: #e2ddd1;
+  --accent: #1a3a2a;
+  --accent2: #9e6b1f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Cover */
+.cover {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+.cover h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+.cover .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.cover .meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Headings */
+h2 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--accent);
+}
+h3 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 1.8rem 0 0.75rem;
+}
+h4 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 1.5rem 0 0.5rem;
+}
+
+p { margin: 0.75rem 0; }
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+/* Key point highlight */
+mark.key {
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Callout box */
+.callout {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+.callout.warn {
+  border-left-color: var(--accent2);
+}
+.callout h4 {
+  margin-top: 0;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+}
+
+/* Metric row */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric-card {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric-card .val {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+.metric-card .val.warn { color: var(--accent2); }
+.metric-card .label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 600px;
+  margin: 1.5rem 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+thead th {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+tbody td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+tbody tr:nth-child(even) { background: var(--bg); }
+
+/* Charts */
+.chart-figure {
+  margin: 2rem 0;
+}
+.chart-figure figcaption {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+/* Footer / Sources */
+footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+footer .sources h2 {
+  font-size: 1.2rem;
+}
+footer .sources ol {
+  padding-left: 1.2rem;
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+footer .sources li {
+  margin-bottom: 0.5rem;
+  overflow-wrap: break-word;
+}
+footer .sources .src-title {
+  color: var(--ink);
+}
+footer .sources .src-url {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  color: var(--accent);
+  word-break: break-all;
+}
+footer .sources a {
+  word-break: break-all;
+}
+
+/* Citations */
+sup a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+sup a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cover h1 { font-size: 1.6rem; }
+  .container { padding: 1rem 1rem 2rem; }
+  .metric-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media print {
+  body { background: #fff; font-size: 13px; }
+  .container { max-width: 100%; }
+  .cover { page-break-after: always; }
+  h2 { page-break-before: always; }
+}
+
+
+/* ============================================================
+   Imported-report compatibility layer (ByteMind report standard)
+   ============================================================ */
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Generic report header (used by imported reports) */
+body > .container > header,
+article.page > header.report-head {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+body > .container > header h1,
+article.page > header.report-head h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+body > .container > header .subtitle,
+article.page > header.report-head .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+body > .container > header .meta,
+article.page > header.report-head .meta,
+article.page > header.report-head .byline {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+article.page > header.report-head .byline .sep {
+  margin: 0 0.5rem;
+  color: var(--rule);
+}
+
+/* Abstract block (NLP report) */
+.abstract {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  text-align: left;
+  margin: 1.5rem 0 0;
+}
+.abstract .label {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.abstract p:last-child { margin-bottom: 0; }
+
+/* Executive summary block */
+.exec-summary {
+  margin: 0 0 2rem;
+}
+.exec-summary h2 {
+  margin-top: 0;
+}
+
+/* Key findings */
+.key-findings {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.5rem;
+}
+.key-findings li,
+.finding-item {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Table of contents */
+.toc {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.toc h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+.toc ol {
+  margin: 0.5rem 0 0 1.2rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+.toc ol li {
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+.toc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.toc a:hover { text-decoration: underline; }
+
+/* Chart blocks used by imported reports */
+.chart-container {
+  margin: 1.75rem 0;
+}
+.chart-container h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.chart-container .chart-note,
+.chart-container .data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  font-style: italic;
+  overflow: visible;
+  word-wrap: break-word;
+}
+.chart-box {
+  width: 100%;
+  height: 420px;
+  overflow: visible;
+}
+.chart-box.tall,
+.chart-box-tall {
+  height: 520px;
+}
+.chart-box.short {
+  height: 340px;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+.two-col .chart-container,
+.two-col .chart-figure {
+  margin: 0;
+}
+.two-col .chart-box { height: 380px; }
+
+.two-col > * { min-width: 0; }
+
+/* Keep long reference links from stretching the page on small screens */
+.ref-list a, .ref-list li a, .sources a, .sources li a, ol li a, ul li a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.chart-box, .chart-box-tall, .chart-container, .chart-figure { min-width: 0; }
+
+
+/* Figure captions (NLP report) */
+figure.chart-figure figcaption {
+  font-weight: 600;
+  color: var(--ink);
+}
+figure.chart-figure figcaption strong {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* Mermaid diagram */
+figure.diagram-figure {
+  margin: 2rem 0;
+  padding: 1.5rem 1rem;
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  text-align: center;
+}
+figure.diagram-figure .mermaid { display: inline-block; }
+figure.diagram-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--rule);
+  text-align: left;
+}
+
+/* Section kicker (NLP report) */
+.section-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  display: block;
+  margin-top: 2.5rem;
+  margin-bottom: -1rem;
+}
+.section-kicker + h2 { margin-top: 1.5rem; }
+
+/* Metric displays (NLP and imported reports) */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric .metric-num {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.metric .metric-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+  display: block;
+}
+
+/* Callouts */
+.callout strong { color: var(--accent); }
+.callout-title {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+/* Special tables */
+.gap-table td:first-child,
+.data-table td:first-child {
+  font-weight: 600;
+  min-width: 200px;
+}
+td.num, th.num {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+}
+
+/* References */
+.ref-section {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.ref-section h2,
+.ref-list h2 {
+  margin-top: 0;
+  border-bottom: none;
+}
+.ref-item {
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.ref-item a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
+/* Footer navigation and notes */
+.footer-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2rem;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+.back-link a {
+  color: var(--accent);
+}
+.footer-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0 0;
+  flex-wrap: wrap;
+}
+.footer-nav a {
+  color: var(--accent);
+}
+
+/* Data notes in imported reports */
+.data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.25rem 0 0.75rem;
+  font-style: italic;
+}
+
+/* Inline code */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: var(--bg2);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .key-findings { grid-template-columns: 1fr; }
+  .toc ol { columns: 1; }
+  .two-col { grid-template-columns: 1fr; }
+  body > .container > header h1,
+  article.page > header.report-head h1 { font-size: 1.6rem; }
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>Understanding Large Language Models and Their Implications for Accounting and Finance Research</h1>
+<p class="subtitle">A research brief on how large language models work, what they mean for academic workflows, and where the research opportunities lie</p>
+<p class="meta">Dr Yuqian Zhang &middot; 29 July 2026 &middot; Analytical Brief</p>
+</header>
+<div class="exec-summary">
+<h2>Executive Summary</h2>
+<p>Large language models (LLMs) have moved from a niche computer science topic into tools used across nearly every knowledge-based profession, including accounting and finance academia. This report is a primer for accounting and finance scholars. It explains how LLMs work (tokens, embeddings, the transformer architecture); how they are trained and aligned; what they can and cannot do, including the hallucination problem; how they are being applied in accounting research and practice; what they mean for academic workflows like teaching and publishing; the AI safety and governance landscape; and the most promising research opportunities at the intersection of AI and accounting. The report assumes no computer science background. Every section uses plain language and simple analogies.</p>
+<div class="key-findings">
+<div class="finding-item"><strong>LLMs are prediction engines, not reasoning agents.</strong> At their core, these models predict the next word (or word fragment) in a sequence. The transformer architecture, introduced by Vaswani et al. (2017), makes training at massive scale possible by processing all words in parallel rather than one at a time. For a simple analogy: an old model reads a sentence left to right, one word at a time. A transformer reads the entire sentence at once and asks, for each word, "which other words in this sentence matter most right now?"</div>
+<div class="finding-item"><strong>Model scale has grown rapidly since 2017.</strong> Training compute has increased roughly 4.5-fold per year (Epoch AI, 2026). Models grew from BERT's 340 million parameters in 2018 to GPT-3's 175 billion in 2020. Today, frontier model parameter counts are not publicly confirmed: OpenAI has not disclosed GPT-4's size, Anthropic has not disclosed Claude's. Industry estimates place current frontier models in the range of 1.5 to 2 trillion parameters. Human-preference Elo scores on the LMArena leaderboard have risen from about 1100 (early 2023) to about 1550 (mid-2026).</div>
+<div class="finding-item"><strong>Hallucination is improving but unsolved.</strong> On document summarisation benchmarks (Vectara HHEM leaderboard, github.com/vectara/hallucination-leaderboard), hallucination rates have fallen from 6 to 12 per cent in early 2024 to 1 to 3 per cent for the best mid-2026 models. On open-ended generation tasks, rates remain higher. Because the training objective is "predict the next token" rather than "tell the truth," the model has no built-in truth-checking mechanism. Every AI-generated factual claim should be independently verified.</div>
+<div class="finding-item"><strong>AI adoption in accounting is accelerating.</strong> According to the 2024 and 2025 Wolters Kluwer Future Ready Accountant reports, the share of accounting firms using GenAI jumped from 9 per cent (2024) to 41 per cent (2025). A 2025 Stanford study (AI Index Report) found that junior accounting hiring fell by 16 per cent over roughly two years as routine tasks were automated. Thomson Reuters (2025) reported that 21 per cent of tax firms currently use GenAI and 68 per cent of professionals feel excited or hopeful about the technology.</div>
+<div class="finding-item"><strong>Publisher policies have largely converged.</strong> All major academic publishers (Elsevier, Springer Nature, Wiley, Taylor &amp; Francis, SAGE) prohibit listing AI as an author but permit AI-assisted writing if disclosed. The unresolved issue is AI use in peer review, where detection is difficult and norms are still forming. COPE (Committee on Publication Ethics) has published guidance on authorship and AI (2024).</div>
+<div class="finding-item"><strong>Regulation is fragmented across jurisdictions.</strong> The EU AI Act (in force since August 2024), the US Executive Order 14110 (October 2023), China's generative AI regulations, and the Council of Europe's AI treaty together create a patchwork of rules. Scholars studying financial reporting, audit, and corporate governance need to understand how these frameworks interact with existing financial regulation.</div>
+<div class="finding-item"><strong>LLMs open new research opportunities across accounting and finance.</strong> Key areas include: using LLMs to construct new measures from unstructured text; studying how markets process AI-generated disclosures; examining AI's effect on audit quality and pricing; and investigating the governance implications of AI in financial institutions.</div>
+<div class="finding-item"><strong>Training data may become a binding constraint.</strong> Epoch AI (2024) estimates the effective stock of quality, human-generated public text at about 300 trillion tokens. If current scaling trends continue, this stock may be fully used between 2026 and 2032, forcing a shift in how models are trained.</div>
+</div>
+</div>
+<div class="toc">
+<h2>Table of Contents</h2>
+<a href="#intro">1. Introduction and Motivation</a>
+<a href="#foundations">2. Foundations: Tokens, Embeddings, and Transformers</a>
+<a href="#training">3. Training Paradigms: Pre-training to RLHF</a>
+<a href="#capabilities">4. Capabilities, Limitations, and Hallucinations</a>
+<a href="#applications">5. Applications in Accounting and Finance</a>
+<a href="#workflows">6. Implications for Academic Workflows</a>
+<a href="#safety">7. AI Safety, Alignment, and Governance</a>
+<a href="#opportunities">8. Research Opportunities and Future Directions</a>
+<a href="#conclusion">9. Conclusion</a>
+<a href="#sources">References and Data Availability</a>
+</div>
+<section id="intro">
+<h2>1. Introduction and Motivation</h2>
+<p>The release of ChatGPT in November 2022 brought large language models into public view. Within two months, the service reached 100 million users (Reuters, February 2023, citing a UBS study), making it the fastest-adopted consumer application on record. For accounting and finance academics, the implications were quickly apparent. Colleagues began using these tools for literature review, coding, and writing. Student assignments that once took hours could be completed by an LLM in seconds. Journals rushed to set policies on AI use in authorship, review, and editing.</p>
+<p>But the technology did not start in 2022. The transformer architecture that underpins every modern LLM was introduced in 2017, in a paper titled "Attention Is All You Need" by Vaswani and colleagues at Google. The five years that followed saw these models scale up dramatically: from BERT (340 million parameters, 2018) through GPT-2 (1.5 billion, 2019) and GPT-3 (175 billion, 2020) to models whose parameter counts are no longer publicly confirmed but are estimated in the trillions. The compute used to train frontier models has grown roughly 4.5-fold per year since 2010 (Epoch AI, 2026). That growth rate is much faster than the roughly two-year doubling of Moore's Law.</p>
+<p>This report has two goals. The first is to explain: to give accounting and finance academics a working understanding of how LLMs function, what they can and cannot do, and how they are being used. The second is to look forward: to identify research opportunities these models create for accounting, finance, and governance scholars.</p>
+<div class="chart-container">
+<h4>Figure 1: Training Compute for Notable AI Models (2017-2026)</h4>
+<p class="data-note">Source: Epoch AI database (epoch.ai/trends) for models through 2024. Post-2024 values are projections at 4-5x per year; not confirmed by developers.</p>
+<div class="chart-box-tall" id="chart-training-compute"></div>
+</div>
+</section>
+<section id="foundations">
+<h2>2. Foundations: Tokens, Embeddings, and Transformers</h2>
+<h3>2.1 What Is a Large Language Model?</h3>
+<p>At its simplest, a large language model is a function that takes a sequence of text and predicts what comes next. When you type a question into ChatGPT, the model is not thinking or reasoning like a person. It is computing, for each possible next word fragment, a probability. It picks the most likely one, adds it to the text, and repeats. The "large" in LLM refers to the number of parameters: the adjustable weights the model learns during training. Modern LLMs contain billions to trillions of these parameters. A typical regression model in an accounting paper might have 10 parameters. The difference in scale is roughly a factor of 100 billion.</p>
+<p><strong>Simple analogy: autocomplete, but with context.</strong> When you type a text message on your phone and it suggests the next word, that is a primitive language model. An LLM does the same thing, but instead of looking at the last two words, it looks at the entire conversation so far, and instead of picking from a few hundred suggestions, it picks from a vocabulary of 50,000 to 250,000 word fragments. The model is not intelligent in the human sense. It has simply been exposed to so much text that its predictions are remarkably accurate.</p>
+<h3>2.2 Tokens: The Building Blocks</h3>
+<p>LLMs do not read words. They read tokens: fragments of text that the model treats as single units. In English, a token is about three-quarters of a word on average. The sentence "Earnings per share increased 15 per cent" might become ["Earnings", " per", " share", " increased", " 15", " per", " cent"]. Common words stay whole. Rare words get split. This is why an LLM can sometimes struggle with very domain-specific terminology: if a term does not appear often in training data, it may be split into awkward token fragments that the model has never seen together.</p>
+<p>The model can only look at a fixed number of tokens at once. This limit is called the context window. GPT-2 (2019) had a window of 1,024 tokens, about 750 words. Today's frontier models support 1 to 2 million tokens, roughly the length of all three volumes of the <em>FASB Accounting Standards Codification</em> combined.</p>
+<h3>2.3 Embeddings: Turning Words into Numbers</h3>
+<p>Neural networks can only do arithmetic, so tokens must first be turned into numbers. Each token gets a long list of numbers (called a vector), typically 768 to 12,288 numbers long. At the start of training, these numbers are random. By the end, similar words end up with similar numbers. "Revenue" sits close to "sales." "Increase" and "decrease" sit opposite each other in a predictable way.</p>
+<p><strong>Simple analogy: a map of word meanings.</strong> Imagine a giant map where every word has a location. Words that mean similar things live in the same neighbourhood. If you draw an arrow from "small" to "large," and then take that same arrow and place it starting at "cold," you land near "hot." The model was never told to arrange words this way. The pattern emerged from the training data because words that appear in similar contexts get similar embeddings.</p>
+<h3>2.4 The Attention Mechanism</h3>
+<p>Attention is the core idea that made transformers work. Before transformers, models read sentences left to right, one word at a time. They forgot words near the beginning by the time they reached the end. The transformer reads the whole sentence at once and, for each word, works out which other words matter most.</p>
+<p><strong>Simple analogy: the detective in a room.</strong> Imagine you walk into a room with 10 people (the 10 words in a sentence). You want to understand Person A. You don't just look at Person A. You scan all 10 people and ask: "Who is most relevant to Person A right now?" You give higher scores to relevant people and lower scores to irrelevant ones.</p>
+<p>Now apply this to a real sentence: "The animal did not cross the street because it was too tired." When the model processes the word "it," the attention mechanism looks at all the other words and calculates: "animal" gets a high score because "it" refers to the animal. "Street" gets a lower score. The word "tired" gets attention too because it explains why. The model links "it" directly to "animal," even though they are separated by several words.</p>
+<p>In the transformer architecture, every word computes three things for every other word: a query ("what am I looking for?"), a key ("what do I have?"), and a value ("what information should I pass along?"). The model does this for all words at once, which is why it can be trained on huge amounts of text in parallel.</p>
+<h3>2.5 The Transformer Architecture</h3>
+<p>A transformer is a stack of identical layers, typically 32 to 128 of them. Each layer does two things. First, the attention step: each word gathers information from every other word. Second, the processing step: a small neural network processes the result. This repeats layer after layer. By the final layer, each word's representation has been refined through the accumulated attention across all layers.</p>
+<p>"Multi-head" means the model runs several attention operations in parallel within each layer. One head might track grammar (subject-verb agreement). Another might track numbers (quantities and their units). Another might track time (yesterday, next quarter, fiscal year). Another might track entities (company names, person names, places). The model learns which heads to use for which patterns, without anyone telling it.</p>
+<p>The key practical insight: because every word is processed at the same time, transformers can use modern GPU hardware efficiently. This is what made training models with hundreds of billions of parameters feasible. A recurrent model reading one word at a time cannot take advantage of parallel computing in the same way.</p>
+<div class="chart-container">
+<h4>Figure 2: Parameter Count of Major LLMs by Release Date (2017-2026)</h4>
+<p class="data-note">Parameter counts for GPT-4, Claude 3.5, Gemini Ultra, GPT-5, Claude 4.5, Llama 5, and Frontier model are estimates or projections; none have been confirmed by their developers. See llm_parameter_timeline.csv for source details.</p>
+<div class="chart-box-tall" id="chart-params"></div>
+</div>
+</section>
+<section id="training">
+<h2>3. Training Paradigms: Pre-training to RLHF</h2>
+<h3>3.1 Pre-training: Learning from Text</h3>
+<p>Pre-training is the first and most expensive stage. The model is given trillions of tokens drawn from web pages, books, academic papers, and code. The task is simple: given the text so far, guess the next token. The model's guess is compared to the actual next token, the error is measured, and the parameters are adjusted to reduce that error next time, using an algorithm called backpropagation.</p>
+<p><strong>Simple analogy: learning a language by reading everything.</strong> Imagine a person locked in a library with every book, every website, and every document ever written. Their only task is to cover the next word on the page and try to guess it. If they guess right, they move on. If they guess wrong, they learn from the mistake. After doing this trillions of times, they become very good at predicting what words tend to follow what other words. They learn grammar not because anyone taught them rules, but because grammatical sentences are just more common. They learn facts because facts are repeated. They also learn biases and errors because those are in the training data too.</p>
+<p>The scale is hard to overstate. Training GPT-3 required about 3.14 x 10^23 floating-point operations (FLOP) and cost an estimated USD 4.6 million in compute (Brown et al., 2020). Training a frontier model in 2026 requires roughly 10^27 FLOP, costing hundreds of millions of dollars and using enough electricity to power a small city for the duration of the run. Training compute has grown roughly 4.5-fold per year since 2010 (Epoch AI, 2026).</p>
+<h3>3.2 Fine-tuning and Instruction-Tuning</h3>
+<p>A model fresh from pre-training is a completion engine. Ask it "Summarise this earnings release" and it will continue writing the earnings release, because that is what the pattern suggests. It has no concept of following instructions. Fine-tuning fixes this by training the model on thousands of example pairs: a prompt and the desired response. These pairs are written by human annotators.</p>
+<p><strong>Simple analogy: teaching a raw genius to be a helpful assistant.</strong> The pre-trained model has read everything ever written. It knows a great deal but has no social skills. Fine-tuning is like giving it thousands of conversations where someone asks a question and gets a helpful answer. Over time, it learns that when someone types "Explain X," the expected response is an explanation, not a continuation of the sentence.</p>
+<p>For accounting research specifically, fine-tuning on domain-specific text (10-K filings, earnings call transcripts, audit reports) can substantially improve performance. Kim, Muhn, and Nikolaev (2024, SSRN working paper) show that fine-tuning on financial text improves LLM accuracy on accounting classification tasks by 15 to 25 percentage points compared to using a general-purpose model out of the box.</p>
+<h3>3.3 Reinforcement Learning from Human Feedback (RLHF)</h3>
+<p>RLHF is the final alignment stage. After the model can follow instructions, it is further trained to produce responses that humans prefer. Human raters compare pairs of model outputs and pick which one is better. These preferences train a separate model (the reward model) that predicts how a human would rate any output. The LLM is then tuned to maximise the reward model's score.</p>
+<p><strong>Simple analogy: a cooking competition.</strong> Imagine you are training a new chef. First (pre-training), they read every cookbook ever written. Then (fine-tuning), they practise following recipes. Finally (RLHF), you taste their dishes and say which ones you like better. Over time, the chef learns to cook what you prefer, not just what the recipe says.</p>
+<p>RLHF is what makes modern LLMs helpful, harmless, and honest. But it has side effects. The model may become overly cautious and refuse legitimate requests that resemble harmful ones. It may tell users what they want to hear rather than what is true. For academics, this means the model may be less willing to express uncertainty or to challenge the user's assumptions.</p>
+<h3>3.4 Other Alignment Methods</h3>
+<p>Several alternatives to RLHF have appeared. Constitutional AI (Anthropic) trains models to follow a written set of principles rather than fitting human preference data. Direct Preference Optimisation, or DPO (Rafailov et al., 2023), simplifies the process by training directly on preference pairs without a separate reward model. These methods can reduce training complexity, but human-preference-based RLHF remains the dominant approach in production systems as of mid-2026.</p>
+</section>
+<section id="capabilities">
+<h2>4. Capabilities, Limitations, and Hallucinations</h2>
+<h3>4.1 What LLMs Can Do Reliably</h3>
+<p>LLMs perform well on tasks relevant to academic work. They can summarise long documents with accuracy comparable to domain experts on many text types. They can translate between languages. They can write, debug, and explain code in Python, R, and Stata. They can classify text into categories (sentiment, topic, disclosure type) with accuracy that often exceeds traditional dictionary-based methods. They can pull structured information from unstructured text: named entities, numbers with their units, relationships between concepts.</p>
+<p>On standardised benchmarks, frontier models achieve high scores. LMArena (the rebranded LMSYS Chatbot Arena, lmarena.ai) Elo scores for top models exceed 1500 as of mid-2026, up from about 1100 for early 2023 models. MMLU (Massive Multitask Language Understanding) scores for the best models exceed 90 per cent. SWE-Bench Verified, which measures the ability to solve real software engineering tasks, has risen from below 5 per cent in early 2024 to over 60 per cent for leading models in 2026. Note: benchmark scores measure narrow capabilities. They do not capture broader reasoning or factual reliability.</p>
+<div class="chart-container">
+<h4>Figure 3: LMArena (LMSYS Chatbot Arena) Elo Scores for Selected Frontier Models (2023-2026)</h4>
+<p class="data-note">Scores are approximate quarterly snapshots from lmarena.ai. The January 2026 methodology update shifted some distributions by 20-40 points. Pre- and post-rebrand scores may not be directly comparable.</p>
+<div class="chart-box" id="chart-arena"></div>
+</div>
+<h3>4.2 The Hallucination Problem</h3>
+<p>"Hallucination" is the term for when an LLM produces text that is fluent and plausible but factually wrong. This is not a software bug. It follows directly from the training objective. The model is trained to produce probable token sequences, not to check facts. When the training data is incomplete or contradictory on a topic, the most probable continuation may not be the true one.</p>
+<p><strong>Simple analogy: a student who never learned to say "I don't know."</strong> Imagine a student who has never been taught to admit ignorance. On an exam, they write a fluent, persuasive answer to every question. For topics they studied, the answers are correct. For topics they did not study, the answers are plausible-sounding nonsense. The student is not lying. They were trained to produce answers, not to assess their own knowledge.</p>
+<p>Hallucination rates have improved. On the Vectara HHEM summarisation benchmark (github.com/vectara/hallucination-leaderboard), GPT-4o showed about 1.5 per cent hallucination as of Q4 2024, while earlier models showed 6 to 12 per cent. GPT-5.2 and Claude Opus 4.6 are estimated at 1.0 to 1.2 per cent as of mid-2026. But these numbers measure a narrow form of hallucination: factual inconsistency with a provided document. On open-ended generation where no source document is provided, rates are substantially higher.</p>
+<p>A counterintuitive finding from 2025-2026 research: reasoning models (which use chain-of-thought processing to work through problems step by step) can sometimes hallucinate more than non-reasoning models on factual tasks. The extended reasoning process can build elaborate but incorrect chains of logic. For academic users, the rule is the same: verify every factual claim an LLM produces against a primary source.</p>
+<div class="chart-container">
+<h4>Figure 4: Hallucination Rates on Document Summarisation by Model (2024-2026)</h4>
+<p class="data-note">Source: Vectara HHEM Leaderboard (github.com/vectara/hallucination-leaderboard). Values for Q3 2025 onward are estimated from reported trends. This benchmark measures intrinsic hallucination (inconsistency with a source document), not open-ended factual accuracy.</p>
+<div class="chart-box" id="chart-hallucination"></div>
+</div>
+<h3>4.3 Key Limitations</h3>
+<p>Beyond hallucination, LLMs have several structural limits to keep in mind:</p>
+<ul>
+<li><strong>Knowledge cut-off.</strong> Training data ends at a specific date, usually several months before the model's release. Without web search or other tools, the model cannot access information after that date.</li>
+<li><strong>Shallow reasoning.</strong> LLMs can produce plausible step-by-step logic but are prone to errors in multi-step calculations, contradictions in long outputs, and failures of consistency.</li>
+<li><strong>No genuine understanding.</strong> The output comes from statistical pattern matching, not from comprehension. The model did not learn concepts, it learned statistical associations between tokens.</li>
+<li><strong>Training data bias.</strong> The model reproduces biases in its training data, including gender, racial, and cultural biases. This matters for applications like hiring or lending where fairness is legally and ethically important.</li>
+</ul>
+</section>
+<section id="applications">
+<h2>5. Applications in Accounting and Finance Research and Practice</h2>
+<h3>5.1 Textual Analysis of Disclosures and Filings</h3>
+<p>The main use of LLMs in accounting research is textual analysis of corporate disclosures. The traditional approach, the Loughran-McDonald sentiment dictionary (2011, <em>Journal of Finance</em>), counts positive and negative words and ignores context. An LLM can tell the difference between "the company did not meet expectations" (negative) and "the company exceeded expectations" (positive), even though both contain the same root words. It can distinguish "profit increased" (good) from "profit increased but missed analyst forecasts" (bad), a distinction that word-counting cannot make.</p>
+<p>Kim, Muhn, and Nikolaev (2024, SSRN working paper) show that GPT-based classification of financial statement sentiment improves out-of-sample accuracy by 15 to 25 percentage points compared to the Loughran-McDonald dictionary. De Kok (2023, SSRN working paper) shows that generative LLMs can classify accounting disclosures with no training examples at all (zero-shot classification), reducing the need for hand-labelled data. Bhattacharya and Mickovic (2024, <em>International Journal of Accounting Information Systems</em>) apply contextual language models to fraud detection and find improved detection rates over traditional statistical models.</p>
+<h3>5.2 Information Extraction</h3>
+<p>LLMs can pull structured information from unstructured text with high accuracy: extracting contract terms from filings, identifying relationships between entities (supplier-customer networks, board connections, ownership chains), parsing numbers with their units and context, and identifying events (mergers, restatements, regulatory actions) from news and filings. For researchers, this capability reduces the cost of building large hand-collected datasets, which has long been a bottleneck in accounting research.</p>
+<h3>5.3 Audit, Tax, and Advisory Services</h3>
+<p>The Big Four accounting firms have each announced major AI investments. Deloitte integrated GenAI into its Omnia audit platform for document review and anomaly detection (announced 2024). PwC partnered with OpenAI and Harvey AI, targeting an end-to-end AI-driven audit solution by 2026. KPMG launched its Workbench platform in mid-2025, using multiple AI agents that handle different parts of an engagement, similar to how a human audit team divides work. EY announced a USD 1.4 billion investment in its EY.ai platform, embedding AI across assurance, tax, and advisory (September 2023). Combined, the announced AI investment commitments from the Big Four total about USD 4.4 billion. These are firm-announced figures, not independently audited spending.</p>
+<p>Broader adoption numbers tell a story of rapid change. According to the 2024 and 2025 Wolters Kluwer Future Ready Accountant reports, the share of accounting firms using GenAI rose from 9 per cent (2024) to 41 per cent (2025). Thomson Reuters (2025 GenAI in Professional Services Report) found that 21 per cent of tax firms currently use GenAI and 68 per cent of professionals feel excited or hopeful about it. A 2025 Stanford AI Index Report study found junior accounting hiring fell by 16 per cent over roughly two years, directly tied to automation of routine tasks.</p>
+<div class="chart-container">
+<h4>Figure 5: AI Adoption in Accounting Firms (2024 vs 2025)</h4>
+<p class="data-note">Source: Wolters Kluwer, Future Ready Accountant Report (2024 and 2025 editions). Survey of accounting firms globally.</p>
+<div class="chart-box" id="chart-adoption"></div>
+</div>
+<h3>5.4 AI-Generated and AI-Augmented Disclosures</h3>
+<p>An emerging research area examines whether firms are using LLMs to write or edit their disclosures. Several studies have begun detecting AI-generated text in corporate filings using statistical methods. The capital market implications are important: if some firms use AI to produce lower-cost disclosures while others rely on human-authored text, this could create systematic differences in disclosure quality and informativeness. This connects disclosure theory with the economics of AI adoption and is a natural area for accounting research.</p>
+</section>
+<section id="workflows">
+<h2>6. Implications for Academic Workflows</h2>
+<h3>6.1 Literature Review and Research Design</h3>
+<p>LLMs can help with literature review by summarising papers, pulling out key findings, and identifying connections between bodies of work. Tools built on LLMs (Elicit, Consensus, Scite, Semantic Scholar) let researchers search by research question rather than just by keyword. These tools can miss papers, especially those behind paywalls or in specialist journals. They should supplement, not replace, Scopus and Web of Science searches and snowball sampling from reference lists. For research design, LLMs can help with brainstorming hypotheses, suggesting control variables, and generating alternative explanations to address. The researcher must remain responsible for the hypotheses, the identification strategy, and the interpretation of results.</p>
+<h3>6.2 Coding and Data Analysis</h3>
+<p>LLMs perform well on programming tasks in Python, R, and Stata. A practical workflow: write a detailed specification of the analysis in plain language, ask the LLM to generate code for it, review the code, run it on a small test dataset, then iterate with the LLM to fix errors. This can cut coding time by an estimated 30 to 50 per cent for routine tasks (based on informal surveys among academic users; no formal study of time savings in accounting research has been published). The savings are smaller for complex or novel econometric methods. The researcher must understand the code and verify that it implements the intended specification.</p>
+<h3>6.3 Writing and Editing</h3>
+<p>LLMs can help with academic writing: improving clarity, suggesting alternative phrasings, checking grammar, formatting references, and translating between languages. They should not generate substantive content the author cannot independently verify. The line between acceptable editing and unacceptable generation is not always sharp, which is why publisher policies emphasise disclosure. LLM writing has identifiable patterns: repetitive sentence openings, overuse of words like "moreover," "furthermore," and "crucially," a tendency toward general claims over concrete detail. Academics using LLMs for writing should actively edit to remove these patterns and ensure the final text reflects their voice.</p>
+<h3>6.4 Teaching and Assessment</h3>
+<p>LLMs have changed assessment design. Traditional take-home assignments asking students to summarise, explain, or analyse can now be done by an LLM in seconds. This has pushed assessment toward tasks that require: applying concepts to specific cases, critically evaluating AI-generated output, oral defence of written work, in-person examinations, and process-based assessment where students document their workflow. On the positive side, LLMs can generate practice problems, explain concepts at different levels of detail, simulate case discussions, and give immediate feedback on drafts. The challenge for educators is to teach students to use these tools effectively and ethically, skills they will need in professional practice.</p>
+<h3>6.5 Publisher Policies on AI Use</h3>
+<p>As of mid-2026, the major publishers have converged on common principles:</p>
+<ul>
+<li><strong>AI cannot be listed as an author.</strong> All major publishers (Elsevier, Springer Nature, Wiley, Taylor &amp; Francis, SAGE) agree. Authorship requires accountability for the work's integrity and the ability to approve the final version. AI tools cannot meet this test.</li>
+<li><strong>AI use must be disclosed.</strong> Authors using AI for writing assistance must include a declaration. Elsevier provides a template. Springer Nature requires documentation in the Methods section.</li>
+<li><strong>AI-assisted copy editing is an exception.</strong> Springer Nature does not require disclosure for AI-assisted improvements to grammar, readability, and style in human-written text. Not all publishers make this distinction.</li>
+<li><strong>Reviewers must not upload manuscripts to AI tools.</strong> All major publishers prohibit this, citing confidentiality and intellectual property concerns.</li>
+<li><strong>AI-generated images are restricted.</strong> Springer Nature and other publishers prohibit or heavily restrict AI-generated figures, citing unresolved legal and integrity questions.</li>
+</ul>
+<p>COPE (the Committee on Publication Ethics) published a position statement on AI and authorship in 2024 (doi.org/10.24318/cCVRZBms). The unresolved issue as of mid-2026 is AI use in peer review, where detection is hard and norms are still forming.</p>
+<div class="chart-container">
+<h4>Figure 6: Publisher AI Policy Adoption Timeline (2022-2025)</h4>
+<p class="data-note">Dates represent the first formal AI policy issuance by each publisher. Policies may have been updated since.</p>
+<div class="chart-box" id="chart-policies"></div>
+</div>
+</section>
+<section id="safety">
+<h2>7. AI Safety, Alignment, and Governance</h2>
+<h3>7.1 Why AI Safety Matters for Accounting and Finance</h3>
+<p>Accounting and finance are not just observers of the AI safety discussion. Financial institutions are among the largest users of AI, deploying it for credit scoring, fraud detection, algorithmic trading, insurance underwriting, and regulatory compliance. Failures in these systems, whether from model error, manipulation, or correlated errors across institutions, can have economy-wide effects. Accounting academics have relevant expertise in measurement, verification, and governance: how do we measure and audit the performance of AI systems in high-stakes financial settings?</p>
+<h3>7.2 The Alignment Problem</h3>
+<p>Alignment is the problem of getting AI systems to act in line with human values and intentions. It is hard for several reasons.</p>
+<p><strong>Specification gaming</strong> (also called reward hacking): an AI finds a way to satisfy its formal goal that is not what humans intended. For example, an AI told to maximise a portfolio's reported return might concentrate holdings in illiquid assets where valuations can be inflated, producing high reported returns without real economic value.</p>
+<p><strong>Goal misgeneralisation:</strong> a system trained in one setting behaves unexpectedly in another. An AI trained to detect fraud using past data may fail when fraud patterns change, precisely because it learned the old patterns too well.</p>
+<p><strong>Scalable oversight:</strong> keeping human control as AI systems grow more capable. If an AI can generate a lengthy analysis of a company's financial statements in seconds, no human auditor can review every line.</p>
+<h3>7.3 The Regulatory Landscape</h3>
+<p>The regulatory environment is fragmented but developing quickly. The main frameworks as of mid-2026 are:</p>
+<ul>
+<li><strong>EU AI Act (Regulation 2024/1689).</strong> The first comprehensive AI regulation, in force since August 2024. It uses a risk-based approach with four tiers: unacceptable risk (prohibited), high risk (heavily regulated), limited risk (transparency required), and minimal risk (unregulated). Prohibitions on unacceptable practices became enforceable on 2 February 2025. Rules for general-purpose AI models applied from 2 August 2025. Full applicability for high-risk systems phases through August 2026. Penalties can reach EUR 35 million or 7 per cent of global annual turnover (European Commission, digital-strategy.ec.europa.eu).</li>
+<li><strong>United States.</strong> Regulation relies mainly on executive action, not legislation. Executive Order 14110 (October 2023) directed federal agencies to adopt AI risk management. OMB guidance M-24-10 (March 2024) required federal agencies to implement AI governance by December 2024. NIST's AI Risk Management Framework serves as the operational standard. As of mid-2026, no comprehensive federal AI law has passed.</li>
+<li><strong>China.</strong> China has adopted regulations for specific AI uses: generative AI (effective August 2023), recommendation algorithms, and deep synthesis. The approach combines safety requirements with content control.</li>
+<li><strong>Council of Europe AI Treaty.</strong> The Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law opened for signature on 5 September 2024. It is the first legally binding international treaty on AI.</li>
+<li><strong>OECD AI Principles.</strong> Adopted in 2019 and updated in 2024, these are the most widely endorsed international framework for responsible AI, with 46 adherent countries.</li>
+</ul>
+<div class="chart-container">
+<h4>Figure 7: Global AI Regulatory Milestones (2021-2026)</h4>
+<div class="chart-box-tall" id="chart-regulation"></div>
+</div>
+<h3>7.4 Key Institutions</h3>
+<p>Frontier AI companies (OpenAI, Anthropic, Google DeepMind, Meta AI, xAI, and major Chinese labs) are the developers of the most capable systems and important voices in governance debates. National AI safety institutes have been established in the UK, US, Japan, and other countries. International coordination happens through the AI Safety Summit series (Bletchley Park 2023, Seoul 2024, Paris 2025) and the International Network of AI Safety Institutes.</p>
+<p>For accounting and finance scholars, three intersections deserve attention: how AI governance frameworks interact with existing financial regulation (SEC, ESMA, PCAOB requirements); how AI auditing standards will develop, given accounting firms' central role in assurance; and how AI risk should be disclosed in corporate filings, building on the cybersecurity disclosure framework the SEC has already established.</p>
+</section>
+<section id="opportunities">
+<h2>8. Research Opportunities and Future Directions</h2>
+<h3>8.1 LLMs as Measurement Tools</h3>
+<p>The most immediate research opportunity is using LLMs to construct new measures from unstructured text. Traditional accounting research relies on word-count measures (Loughran-McDonald sentiment, Fog index readability) that treat text as a bag of words. LLMs allow context-aware measurement of constructs that have been hard to capture: the qualitative tone of management discussion (confident, evasive, defensive, promotional); the specificity of guidance and forecasts; the complexity of business model descriptions; the coherence of strategy narratives; and the mix of boilerplate versus informative disclosure.</p>
+<p>Methodologically, this raises questions about construct validity and replicability. LLM-based measures can be sensitive to prompt wording, model version, and sampling parameters. Researchers should document their methods in detail, test sensitivity to specification choices, and validate against human-coded benchmarks where possible.</p>
+<h3>8.2 Capital Market Effects of AI-Generated Content</h3>
+<p>As firms and analysts use LLMs to produce disclosures and reports, important questions arise: do investors discount AI-generated disclosures relative to human-authored ones? Does AI use in analyst reports affect price formation or information asymmetry? How do market participants distinguish between AI-augmented and AI-generated content? These questions connect the disclosure and capital markets literatures with the economics of AI.</p>
+<h3>8.3 AI in Audit: Quality, Pricing, and Market Structure</h3>
+<p>The rapid adoption of AI by audit firms raises questions about the audit production function: how does AI-assisted auditing affect audit quality (restatements, material weaknesses, regulatory findings)? Does AI reduce or increase audit fees? Does it change team structure and skill demands? At the market level, does AI adoption by the Big Four create barriers for smaller firms, or does access to capable open-source models level the field? Li, de Freitas, Lee, and Vasarhelyi (2024, working paper) provide a framework for AI-assisted continuous auditing, but the empirical evidence is still thin.</p>
+<h3>8.4 AI Governance Disclosure</h3>
+<p>Just as cybersecurity disclosure became a major research area, AI governance disclosure is likely to follow a similar path. What do firms disclose about their AI use? What drives disclosure quality? Do markets respond to AI governance disclosures? How should auditors provide assurance over AI-related disclosures? The SEC's existing framework for risk factor disclosure and the EU regulatory framework create a natural research setting.</p>
+<h3>8.5 Methodological Frontiers</h3>
+<p>Several new methods are opening for accounting research. Retrieval-Augmented Generation (RAG) lets LLMs ground outputs in specific documents, reducing hallucination by limiting attention to a provided corpus. This has clear audit applications. Multi-agent systems, where several LLMs interact to solve problems, are emerging as a way to handle complex analytical tasks. Explainability methods, including chain-of-thought prompting, are beginning to show how models reach their outputs, with implications for auditability and regulatory compliance.</p>
+<h3>8.6 AI and the Accounting Profession</h3>
+<p>The 16 per cent decline in junior accounting hiring (Stanford AI Index Report, 2025) is an early signal of structural change. As routine tasks are automated, the profession shifts toward judgment, interpretation, and client communication. This affects accounting education, professional certification, and career paths. Research is needed on how these changes affect the supply of accounting talent, the quality of professional services, and the long-term attractiveness of the profession.</p>
+<div class="chart-container">
+<h4>Figure 8: AI-Related Publications in Top Accounting Journals (2017-2026)</h4>
+<p class="data-note">Source: Scopus and Web of Science keyword searches by the author (see ai_accounting_publications.csv for full methodology). 2025 counts are partial (publication lag). 2026 counts are projected from the 2022-2025 trend. All classification into methodological/empirical vs. conceptual/review is based on abstract screening and should be treated as approximate.</p>
+<div class="chart-box" id="chart-publications"></div>
+</div>
+</section>
+<section id="conclusion">
+<h2>9. Conclusion</h2>
+<p>Large language models are changing what accounting and finance researchers can measure, how research is done, how students are taught and assessed, and how professional services are delivered. This report has given a primer on how these models work, what they can and cannot do, how they are being used, and where the research opportunities are.</p>
+<p>For the individual academic, the practical steps are: learn to use at least one frontier LLM and understand its limits; build a workflow that uses LLMs for appropriate tasks (coding, editing, brainstorming) while keeping intellectual control; stay current with publisher policies and disclose AI use; and explore the research openings these models create, especially around measurement, disclosure, and governance.</p>
+<p>For the discipline, the task is to develop the theories, methods, and institutional knowledge needed to understand how AI is reshaping the information environment that accounting and finance scholars study.</p>
+</section>
+<section class="sources-section" id="sources">
+<h2>References</h2>
+<h3>Academic Literature</h3>
+<p class="ref">Bhattacharya, I., and Mickovic, A. (2024). Accounting fraud detection using contextual language learning. <em>International Journal of Accounting Information Systems</em>, 53.</p>
+<p class="ref">Brown, T., Mann, B., Ryder, N., et al. (2020). Language models are few-shot learners. <em>Advances in Neural Information Processing Systems</em>, 33, 1877-1901.</p>
+<p class="ref">Chowdhery, A., Narang, S., Devlin, J., et al. (2022). PaLM: Scaling language modeling with pathways. arXiv:2204.02311.</p>
+<p class="ref">de Kok, T. (2023). ChatGPT for textual analysis? How to use generative LLMs in accounting research. SSRN working paper. <a href="https://ssrn.com/abstract=4429658">https://ssrn.com/abstract=4429658</a></p>
+<p class="ref">Devlin, J., Chang, M.-W., Lee, K., and Toutanova, K. (2019). BERT: Pre-training of deep bidirectional transformers for language understanding. <em>Proceedings of NAACL-HLT</em>, 4171-4186.</p>
+<p class="ref">Eulerich, M., and Wood, D. A. (2023). A demonstration of how ChatGPT can be used in the internal auditing process. Working paper.</p>
+<p class="ref">Hoffmann, J., Borgeaud, S., Mensch, A., et al. (2022). Training compute-optimal large language models. arXiv:2203.15556.</p>
+<p class="ref">Kim, A., Muhn, M., and Nikolaev, V. V. (2024). Financial statement analysis with large language models. SSRN working paper. <a href="https://ssrn.com/abstract=4444763">https://ssrn.com/abstract=4444763</a></p>
+<p class="ref">Li, H., de Freitas, M. M., Lee, H., and Vasarhelyi, M. (2024). Enhancing continuous auditing with large language models: AI-assisted real-time accounting information cross-verification. Working paper.</p>
+<p class="ref">Li, Y., and Goel, S. (2026). Generative artificial intelligence in the Big 4: Auditor adoption and its implications for audit quality. <em>Journal of Information Systems</em>.</p>
+<p class="ref">Loughran, T., and McDonald, B. (2011). When is a liability not a liability? Textual analysis, dictionaries, and 10-Ks. <em>Journal of Finance</em>, 66(1), 35-65.</p>
+<p class="ref">Nie, Y., Kong, Y., Dong, X., Mulvey, J. M., Poor, H. V., Wen, Q., and Zohren, S. (2024). A survey of large language models for financial applications: Progress, prospects and challenges. arXiv:2406.11903.</p>
+<p class="ref">Rae, J. W., Borgeaud, S., Cai, T., et al. (2021). Scaling language models: Methods, analysis and insights from training Gopher. arXiv:2112.11446.</p>
+<p class="ref">Rafailov, R., Sharma, A., Mitchell, E., Ermon, S., Manning, C. D., and Finn, C. (2023). Direct preference optimization: Your language model is secretly a reward model. arXiv:2305.18290.</p>
+<p class="ref">Sgantzos, K., Hemairy, M. A., Tzavaras, P., and Stelios, S. (2023). Triple-entry accounting as a means of auditing large language models. <em>Journal of Risk and Financial Management</em>, 16(9), 383.</p>
+<p class="ref">Toumeh, A. A. (2024). Assessing the potential integration of large language models in accounting practices: evidence from an emerging economy. <em>Future Business Journal</em>, 10, 82.</p>
+<p class="ref">Touvron, H., Martin, L., Stone, K., et al. (2023). Llama 2: Open foundation and fine-tuned chat models. arXiv:2307.09288.</p>
+<p class="ref">Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., Kaiser, L., and Polosukhin, I. (2017). Attention is all you need. <em>Advances in Neural Information Processing Systems</em>, 30.</p>
+<p class="ref">Zhao, J., and Wang, X. (2024). Unleashing efficiency and insights: Exploring the potential applications and challenges of ChatGPT in accounting. <em>Journal of Corporate Accounting and Finance</em>, 35(1), 269-276.</p>
+<h3>Industry Reports, Benchmarks, and Technical Sources</h3>
+<p class="ref">Epoch AI (2024). Will we run out of data? Limits of LLM scaling based on human-generated data. <a href="https://epoch.ai/publications/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data">https://epoch.ai/publications/will-we-run-out-of-data-limits-of-llm-scaling-based-on-human-generated-data</a></p>
+<p class="ref">Epoch AI (2026). Trends in artificial intelligence. <a href="https://epoch.ai/trends">https://epoch.ai/trends</a></p>
+<p class="ref">LMArena (2026). Chatbot Arena Leaderboard. <a href="https://lmarena.ai/">https://lmarena.ai/</a></p>
+<p class="ref">Reuters (2023, February 2). ChatGPT sets record for fastest-growing user base. <a href="https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/">https://www.reuters.com/technology/chatgpt-sets-record-fastest-growing-user-base-analyst-note-2023-02-01/</a></p>
+<p class="ref">SemiAnalysis (2023, March). GPT-4 architecture, infrastructure, training dataset, costs, vision, MoE. <a href="https://www.semianalysis.com/">https://www.semianalysis.com/</a></p>
+<p class="ref">Stanford University, Human-Centered AI (2025). AI Index Report 2025. <a href="https://aiindex.stanford.edu/">https://aiindex.stanford.edu/</a></p>
+<p class="ref">Thomson Reuters Institute (2025). 2025 Generative AI in Professional Services Report. <a href="https://www.thomsonreuters.com/en-us/posts/tax/2025-genai-professional-services">https://www.thomsonreuters.com/en-us/posts/tax/2025-genai-professional-services</a></p>
+<p class="ref">Vectara (2025-2026). Hallucination Leaderboard. <a href="https://github.com/vectara/hallucination-leaderboard">https://github.com/vectara/hallucination-leaderboard</a></p>
+<p class="ref">Wolters Kluwer (2024, 2025). Future Ready Accountant Report. <a href="https://www.wolterskluwer.com/en/know/future-ready-accountant">https://www.wolterskluwer.com/en/know/future-ready-accountant</a></p>
+<h3>Regulatory and Policy Sources</h3>
+<p class="ref">COPE (2024). Authorship and AI. <a href="https://doi.org/10.24318/cCVRZBms">https://doi.org/10.24318/cCVRZBms</a></p>
+<p class="ref">Council of Europe (2024). Framework Convention on Artificial Intelligence and Human Rights, Democracy and the Rule of Law. <a href="https://www.coe.int/">https://www.coe.int/</a></p>
+<p class="ref">Elsevier (2025). Generative AI policies for journals. <a href="https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals">https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals</a></p>
+<p class="ref">European Commission (2024). AI Act: Regulation (EU) 2024/1689. <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai">https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai</a></p>
+<p class="ref">Executive Order 14110 (2023). Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence. <a href="https://www.whitehouse.gov/">https://www.whitehouse.gov/</a></p>
+<p class="ref">NIST (2024). AI Risk Management Framework. <a href="https://www.nist.gov/itl/ai-risk-management-framework">https://www.nist.gov/itl/ai-risk-management-framework</a></p>
+<p class="ref">OECD (2024). Recommendation on Artificial Intelligence (updated). <a href="https://oecd.ai/en/">https://oecd.ai/en/</a></p>
+<p class="ref">Springer Nature (2025). AI principles and policies. <a href="https://www.springernature.com/">https://www.springernature.com/</a></p>
+</section>
+<section class="data-section">
+<h2>Data Availability</h2>
+<p>The following datasets and scripts are available for download. All data were compiled from public sources and cross-checked where possible. See <code>data/README_methodology.txt</code> for full documentation of sources, compilation methods, and known limitations for each dataset.</p>
+<div class="table-wrap"><table>
+<tr><th>File</th><th>Description</th><th>Format</th></tr>
+<tr><td><a href="data/llm_parameter_timeline.csv">llm_parameter_timeline.csv</a></td><td>Parameter counts, training compute, and release dates for major LLMs (2017-2026). Confirmed values sourced from original papers; estimated values marked.</td><td>CSV</td></tr>
+<tr><td><a href="data/llm_arena_scores.csv">llm_arena_scores.csv</a></td><td>LMArena (LMSYS Chatbot Arena) Elo scores, approximate quarterly snapshots (2023 Q2 to 2026 Q2)</td><td>CSV</td></tr>
+<tr><td><a href="data/llm_hallucination_rates.csv">llm_hallucination_rates.csv</a></td><td>Hallucination rates on document summarisation, Vectara HHEM leaderboard (2024-2026). Post-Q3 2025 values estimated.</td><td>CSV</td></tr>
+<tr><td><a href="data/accounting_ai_adoption.csv">accounting_ai_adoption.csv</a></td><td>AI adoption rates from Wolters Kluwer (2024, 2025) and Thomson Reuters (2025) surveys</td><td>CSV</td></tr>
+<tr><td><a href="data/publisher_ai_policies.csv">publisher_ai_policies.csv</a></td><td>First AI policy adoption dates for major academic publishers (2023-2024)</td><td>CSV</td></tr>
+<tr><td><a href="data/ai_regulation_timeline.csv">ai_regulation_timeline.csv</a></td><td>Major global AI regulatory milestones (2021-2026)</td><td>CSV</td></tr>
+<tr><td><a href="data/ai_accounting_publications.csv">ai_accounting_publications.csv</a></td><td>AI-related publications in top accounting journals (2017-2026). 2025 partial; 2026 projected.</td><td>CSV</td></tr>
+<tr><td><a href="data/big4_ai_investments.csv">big4_ai_investments.csv</a></td><td>Big Four announced AI investment commitments and platform details</td><td>CSV</td></tr>
+<tr><td><a href="data/README_methodology.txt">README_methodology.txt</a></td><td>Full documentation: sources, compilation methods, and limitations for all datasets</td><td>TXT</td></tr>
+<tr><td><a href="scripts/replicate.py">scripts/replicate.py</a></td><td>Python replication script regenerating all charts and statistics from source data</td><td>PY</td></tr>
+</table></div>
+</section>
+<div class="footer-nav">
+<a href="../../reports.html">Back to Reports</a>
+<a href="../../insights.html">Back to Insights</a>
+</div>
+</div>
+<script src="./_shared/js/echarts.min.js"></script>
+<script>
+window.__bmPalette = (function(){var s=getComputedStyle(document.documentElement);return {accent:s.getPropertyValue("--accent").trim(),gold:s.getPropertyValue("--accent2").trim(),muted:s.getPropertyValue("--muted").trim(),rule:s.getPropertyValue("--rule").trim(),ink:s.getPropertyValue("--ink").trim(),bg2:s.getPropertyValue("--bg2").trim(),teal:"#3d6b5b",green:"#2f6b4f",red:"#a33b2f"};})();
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+
+// Chart 1: Training Compute
+(function() {
+  var chart = echarts.init(document.getElementById('chart-training-compute'), null, { renderer: 'svg' });
+  var data = [
+    { year: 2017, model: 'Transformer', flops: 1e17 },
+    { year: 2018, model: 'BERT-Large', flops: 5e18 },
+    { year: 2019, model: 'GPT-2', flops: 1.5e19 },
+    { year: 2020, model: 'GPT-3', flops: 3.14e23 },
+    { year: 2021, model: 'Gopher', flops: 6.3e23 },
+    { year: 2022, model: 'PaLM', flops: 2.5e24 },
+    { year: 2023, model: 'GPT-4 (est.)', flops: 2e25 },
+    { year: 2024, model: 'Claude 3.5 (est.)', flops: 1e26 },
+    { year: 2025, model: 'GPT-5 (est.)', flops: 5e26 },
+    { year: 2026, model: 'Frontier (proj.)', flops: 2e27 },
+  ];
+  var option = {
+    tooltip: {
+      trigger: 'axis',
+      formatter: function(p) {
+        var flops = p[0].value[1];
+        var label = flops >= 1e27 ? (flops/1e27).toFixed(1) + ' x 10\u00B2\u2077' :
+                    flops >= 1e24 ? (flops/1e24).toFixed(1) + ' x 10\u00B2\u2074' :
+                    flops >= 1e21 ? (flops/1e21).toFixed(1) + ' x 10\u00B2\u00B9' :
+                    flops >= 1e18 ? (flops/1e18).toFixed(1) + ' x 10\u00B9\u2078' :
+                    flops.toExponential(1);
+        return p[0].name + ': ' + label + ' FLOP';
+      }
+    },
+    grid: { left: 100, right: 40, top: 40, bottom: 60 },
+    xAxis: {
+      type: 'category',
+      data: data.map(d => d.year.toString()),
+      axisLabel: { fontSize: 12 }
+    },
+    yAxis: {
+      type: 'log',
+      name: 'Training Compute (FLOP)',
+      nameLocation: 'middle',
+      nameGap: 60,
+      axisLabel: {
+        fontSize: 11,
+        formatter: function(v) {
+          if (v >= 1e27) return '10\u00B2\u2077';
+          if (v >= 1e24) return '10\u00B2\u2074';
+          if (v >= 1e21) return '10\u00B2\u00B9';
+          if (v >= 1e18) return '10\u00B9\u2078';
+          return '10\u00B9\u2075';
+        }
+      }
+    },
+    series: [{
+      type: 'bar',
+      data: data.map(d => [d.year.toString(), d.flops]),
+      itemStyle: { color: __bmPalette.accent },
+      label: {
+        show: true,
+        position: 'top',
+        fontSize: 14,
+        fontWeight: 'bold',
+        color: __bmPalette.ink,
+        formatter: function(p) { return data[p.dataIndex].model; }
+      },
+      emphasis: { itemStyle: { color: __bmPalette.accent } }
+    }]
+  };
+  chart.setOption(option);
+  window.addEventListener('resize', function() { chart.resize(); });
+})();
+
+// Chart 2: Parameter Counts
+(function() {
+  var chart = echarts.init(document.getElementById('chart-params'), null, { renderer: 'svg' });
+  var data = [
+    { model: 'BERT-Large', params: 0.34, confirmed: true },
+    { model: 'GPT-2', params: 1.5, confirmed: true },
+    { model: 'GPT-3', params: 175, confirmed: true },
+    { model: 'Gopher', params: 280, confirmed: true },
+    { model: 'PaLM', params: 540, confirmed: true },
+    { model: 'Llama 2 70B', params: 70, confirmed: true },
+    { model: 'GPT-4 (est.)', params: 1800, confirmed: false },
+    { model: 'Claude 3.5 (est.)', params: 2000, confirmed: false },
+    { model: 'Gemini Ultra (est.)', params: 1500, confirmed: false },
+    { model: 'Llama 3 405B', params: 405, confirmed: true },
+    { model: 'DeepSeek-V3', params: 671, confirmed: true },
+    { model: 'GPT-5 (est.)', params: 2500, confirmed: false },
+    { model: 'Claude 4.5 (est.)', params: 3000, confirmed: false },
+    { model: 'DeepSeek-V4 (est.)', params: 1200, confirmed: false },
+    { model: 'Frontier (proj.)', params: 3500, confirmed: false },
+  ];
+  var option = {
+    tooltip: {
+      trigger: 'axis',
+      formatter: function(p) {
+        var d = data[p[0].dataIndex];
+        return d.model + '<br/>' + d.params + 'B parameters' + (d.confirmed ? '' : ' (estimate)');
+      }
+    },
+    grid: { left: 100, right: 40, top: 40, bottom: 60 },
+    xAxis: {
+      type: 'category',
+      data: data.map(d => d.model),
+      axisLabel: { rotate: 45, fontSize: 10, interval: 0 }
+    },
+    yAxis: {
+      type: 'log',
+      name: 'Parameters (billions)',
+      axisLabel: { fontSize: 11 }
+    },
+    series: [{
+      type: 'bar',
+      data: data.map(function(d, i) { return { value: [i, d.params], itemStyle: { color: d.confirmed ? __bmPalette.accent : __bmPalette.teal } }; }),
+      emphasis: { itemStyle: { opacity: 0.8 } }
+    }]
+  };
+  chart.setOption(option);
+  window.addEventListener('resize', function() { chart.resize(); });
+})();
+
+// Chart 3: LMArena Elo Scores
+(function() {
+  var chart = echarts.init(document.getElementById('chart-arena'), null, { renderer: 'svg' });
+  var models = {
+    'GPT-3.5': [[2023.25,1050],[2023.5,1060],[2023.75,1070],[2024.0,1080]],
+    'GPT-4': [[2023.25,1180],[2023.5,1200],[2023.75,1210],[2024.0,1220],[2024.25,1225],[2024.5,1230]],
+    'Claude 3 Opus': [[2024.25,1240],[2024.5,1255],[2024.75,1260],[2025.0,1265]],
+    'Claude 3.5 Sonnet': [[2024.5,1270],[2024.75,1285],[2025.0,1290],[2025.25,1295]],
+    'Gemini 2.0': [[2025.0,1320],[2025.25,1340],[2025.5,1355]],
+    'GPT-5': [[2025.25,1420],[2025.5,1440],[2025.75,1460],[2026.0,1490],[2026.25,1537]],
+    'Claude Opus 4.6': [[2026.0,1480],[2026.25,1530],[2026.5,1550]],
+    'Gemini 3.1 Pro': [[2025.75,1380],[2026.0,1420],[2026.25,1470],[2026.5,1520]],
+  };
+  var option = {
+    tooltip: { trigger: 'axis' },
+    legend: { data: Object.keys(models), bottom: 0, textStyle: { fontSize: 10 } },
+    grid: { left: 60, right: 30, top: 40, bottom: 60 },
+    xAxis: {
+      type: 'value', min: 2023, max: 2026.75,
+      axisLabel: { formatter: function(v) { return v.toFixed(1); } }
+    },
+    yAxis: { type: 'value', min: 1000, name: 'Elo Score', axisLabel: { fontSize: 11 } },
+    series: Object.keys(models).map(function(name) {
+      return { name: name, type: 'line', data: models[name], smooth: true, symbol: 'circle', symbolSize: 6 };
+    })
+  };
+  chart.setOption(option);
+  window.addEventListener('resize', function() { chart.resize(); });
+})();
+
+// Chart 4: Hallucination Rates
+(function() {
+  var chart = echarts.init(document.getElementById('chart-hallucination'), null, { renderer: 'svg' });
+  var data = [
+    { model: 'Claude 2 (Q1 2024)', rate: 8.5 },
+    { model: 'GPT-3.5 (Q1 2024)', rate: 6.2 },
+    { model: 'Gemini 1.0 (Q1 2024)', rate: 9.8 },
+    { model: 'Llama 2 70B (Q1 2024)', rate: 12.3 },
+    { model: 'Claude 3.5 Sonnet (Q4 2024)', rate: 4.6 },
+    { model: 'GPT-4o (Q4 2024)', rate: 1.5 },
+    { model: 'Gemini 2.0 (Q1 2025)', rate: 3.2 },
+    { model: 'Claude Sonnet 4.5 (Q3 2025)*', rate: 2.8 },
+    { model: 'GPT-5.2 (Q4 2025)*', rate: 1.2 },
+    { model: 'Gemini 3.0 (Q1 2026)*', rate: 2.1 },
+    { model: 'Claude Opus 4.6 (Q2 2026)*', rate: 1.0 },
+  ];
+  var option = {
+    tooltip: {
+      trigger: 'axis',
+      formatter: function(p) { return p[0].name + '<br/>Hallucination rate: ' + p[0].value + '%'; }
+    },
+    grid: { left: 30, right: 30, top: 40, bottom: 30 },
+    xAxis: { type: 'value', name: 'Hallucination Rate (%)', max: 14, axisLabel: { formatter: '{value}%' } },
+    yAxis: { type: 'category', data: data.map(d => d.model).reverse(), axisLabel: { fontSize: 10, width: 180, overflow: 'truncate' } },
+    series: [{
+      type: 'bar',
+      data: data.map(d => d.rate).reverse(),
+      itemStyle: {
+        color: function(p) {
+          var v = p.value;
+          if (v < 2) return __bmPalette.green;
+          if (v < 5) return __bmPalette.green;
+          if (v < 8) return __bmPalette.gold;
+          return __bmPalette.red;
+        }
+      },
+      label: { show: true, position: 'right', formatter: '{c}%', fontSize: 11 }
+    }]
+  };
+  chart.setOption(option);
+  window.addEventListener('resize', function() { chart.resize(); });
+})();
+
+// Chart 5: AI Adoption
+(function() {
+  var chart = echarts.init(document.getElementById('chart-adoption'), null, { renderer: 'svg' });
+  var option = {
+    tooltip: { trigger: 'axis' },
+    legend: { data: ['2024', '2025'], bottom: 0 },
+    grid: { left: 120, right: 40, top: 40, bottom: 40 },
+    xAxis: { type: 'value', name: 'Percentage of Firms', max: 100, axisLabel: { formatter: '{value}%' } },
+    yAxis: { type: 'category', data: ['Using GenAI', 'Planning/Considering', 'No Current Plans'] },
+    series: [
+      { name: '2024', type: 'bar', data: [9, 42, 49], itemStyle: { color: __bmPalette.green }, label: { show: true, position: 'right', formatter: '{c}%' } },
+      { name: '2025', type: 'bar', data: [41, 34, 25], itemStyle: { color: __bmPalette.accent }, label: { show: true, position: 'right', formatter: '{c}%' } }
+    ]
+  };
+  chart.setOption(option);
+  window.addEventListener('resize', function() { chart.resize(); });
+})();
+
+// Chart 6: Publisher Policies
+(function() {
+  var chart = echarts.init(document.getElementById('chart-policies'), null, { renderer: 'svg' });
+  var publishers = ['Elsevier', 'Springer Nature', 'Wiley', 'Taylor & Francis', 'SAGE', 'COPE'];
+  var policyDate = [2023.0, 2023.17, 2023.33, 2023.5, 2023.67, 2024.0];
+  var option = {
+    tooltip: { trigger: 'item' },
+    grid: { left: 150, right: 80, top: 40, bottom: 30 },
+    xAxis: { type: 'value', min: 2022.5, max: 2025.5, axisLabel: { formatter: function(v) { return v.toFixed(0); } }, name: 'Year' },
+    yAxis: { type: 'category', data: publishers, axisLabel: { fontSize: 11 } },
+    series: [{
+      type: 'scatter',
+      data: publishers.map(function(p, i) { return [policyDate[i], p]; }),
+      symbolSize: 16,
+      itemStyle: { color: __bmPalette.accent },
+      label: {
+        show: true, position: 'right', fontSize: 10,
+        formatter: function(p) {
+          var dates = {0:'Feb 2023',1:'Mar 2023',2:'May 2023',3:'Jul 2023',4:'Sep 2023',5:'Jan 2024'};
+          return dates[p.dataIndex];
+        }
+      }
+    }]
+  };
+  chart.setOption(option);
+  window.addEventListener('resize', function() { chart.resize(); });
+})();
+
+// Chart 7: Regulation Timeline
+(function() {
+  var chart = echarts.init(document.getElementById('chart-regulation'), null, { renderer: 'svg' });
+  var events = [
+    { date: '2021-04', event: 'EU AI Act Proposed' },
+    { date: '2022-09', event: 'US AI Bill of Rights Blueprint' },
+    { date: '2023-01', event: 'NIST AI RMF 1.0 Released' },
+    { date: '2023-08', event: 'China GenAI Regulations Effective' },
+    { date: '2023-10', event: 'US Executive Order 14110' },
+    { date: '2024-03', event: 'OMB M-24-10 AI Governance' },
+    { date: '2024-05', event: 'EU AI Act Adopted' },
+    { date: '2024-08', event: 'EU AI Act in Force' },
+    { date: '2024-09', event: 'Council of Europe AI Treaty' },
+    { date: '2025-02', event: 'EU Prohibitions Enforceable' },
+    { date: '2025-08', event: 'EU GPAI Rules Applicable' },
+    { date: '2026-08', event: 'EU AI Act Full Application' },
+  ];
+  var jurisdictions = {
+    'EU AI Act Proposed': 'EU', 'US AI Bill of Rights Blueprint': 'US', 'NIST AI RMF 1.0 Released': 'US',
+    'China GenAI Regulations Effective': 'China', 'US Executive Order 14110': 'US', 'OMB M-24-10 AI Governance': 'US',
+    'EU AI Act Adopted': 'EU', 'EU AI Act in Force': 'EU', 'Council of Europe AI Treaty': 'International',
+    'EU Prohibitions Enforceable': 'EU', 'EU GPAI Rules Applicable': 'EU', 'EU AI Act Full Application': 'EU',
+  };
+  var jurisdictionColors = { 'EU': __bmPalette.accent, 'US': __bmPalette.green, 'China': __bmPalette.gold, 'International': __bmPalette.teal };
+  var option = {
+    tooltip: { trigger: 'item' },
+    grid: { left: 200, right: 40, top: 40, bottom: 30 },
+    xAxis: { type: 'time', name: 'Date', min: '2021-01-01', max: '2026-12-31' },
+    yAxis: { type: 'category', data: events.map(function(e, i) { return String.fromCharCode(65+i); }), axisLabel: { show: false } },
+    series: [{
+      type: 'scatter',
+      data: events.map(function(e, i) {
+        return {
+          value: [e.date, String.fromCharCode(65+i)],
+          name: e.event,
+          jurisdiction: jurisdictions[e.event]
+        };
+      }),
+      symbolSize: 14,
+      itemStyle: { color: function(p) { return jurisdictionColors[p.data.jurisdiction] || __bmPalette.accent; } },
+      label: { show: true, position: 'right', formatter: function(p) { return p.data.name; }, fontSize: 10, width: 160, overflow: 'break' }
+    }]
+  };
+  chart.setOption(option);
+  window.addEventListener('resize', function() { chart.resize(); });
+})();
+
+// Chart 8: AI Publications
+(function() {
+  var chart = echarts.init(document.getElementById('chart-publications'), null, { renderer: 'svg' });
+  var option = {
+    tooltip: { trigger: 'axis' },
+    legend: { data: ['Methodological/Empirical', 'Conceptual/Review'], bottom: 0 },
+    grid: { left: 60, right: 30, top: 40, bottom: 50 },
+    xAxis: { type: 'category', data: ['2017','2018','2019','2020','2021','2022','2023','2024','2025','2026'] },
+    yAxis: { type: 'value', name: 'Publications' },
+    series: [
+      { name: 'Methodological/Empirical', type: 'bar', stack: 'total', data: [3,4,5,7,9,15,28,42,58,70], itemStyle: { color: __bmPalette.accent } },
+      { name: 'Conceptual/Review', type: 'bar', stack: 'total', data: [5,6,8,11,14,18,22,30,38,42], itemStyle: { color: __bmPalette.teal } }
+    ]
+  };
+  chart.setOption(option);
+  window.addEventListener('resize', function() { chart.resize(); });
+})();
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+# LLM Hallucination Rates on Document Summarisation
+# Compiled 29 July 2026 by Dr Yuqian Zhang
+#
+# Source: Vectara Hughes Hallucination Evaluation Model (HHEM) Leaderboard
+#   (github.com/vectara/hallucination-leaderboard).
+#   The HHEM benchmark measures "factual inconsistency with source document"
+#   (intrinsic hallucination). Models summarise short documents and a
+#   specially trained model detects whether the summary contains information
+#   not present in the source. Lower rate = fewer hallucinations.
+#
+# Values marked "Vectara leaderboard" are from published benchmark snapshots
+# (accessed July 2026). Values marked "Estimated from reported trends" are
+# projected from the trajectory of published data and may differ from actual
+# results on newer benchmark versions. Post-Q3 2025 values should be treated
+# as approximate pending updated leaderboard snapshots.
+#
+# Important caveat: This benchmark measures a narrow form of hallucination
+# (consistency with a provided document). Open-ended generation tasks show
+# substantially higher hallucination rates. The numbers are not transferable
+# across tasks.
+#
+# Columns: model,date_label,hallucination_rate_pct,data_status
+model,date_label,hallucination_rate_pct,data_status
+Claude 2,2024 Q1,8.5,Vectara leaderboard
+GPT-3.5,2024 Q1,6.2,Vectara leaderboard
+Gemini 1.0,2024 Q1,9.8,Vectara leaderboard
+Llama 2 70B,2024 Q1,12.3,Vectara leaderboard
+Claude 3.5 Sonnet,2024 Q4,4.6,Vectara leaderboard
+GPT-4o,2024 Q4,1.5,Vectara leaderboard
+Gemini 2.0,2025 Q1,3.2,Vectara leaderboard
+Claude Sonnet 4.5,2025 Q3,2.8,Estimated from reported trends
+GPT-5.2,2025 Q4,1.2,Estimated from reported trends
+Gemini 3.0,2026 Q1,2.1,Estimated from reported trends
+Claude Opus 4.6,2026 Q2,1.0,Estimated from reported trends

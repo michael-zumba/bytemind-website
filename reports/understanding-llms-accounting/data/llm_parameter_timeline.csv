@@ -1,0 +1,49 @@
+# LLM Parameter Timeline (2017-2026)
+# Compiled 29 July 2026 by Dr Yuqian Zhang
+#
+# Sources for confirmed values:
+#   - Vaswani et al. (2017), "Attention Is All You Need" - Transformer base model
+#   - Devlin et al. (2019), "BERT: Pre-training of Deep Bidirectional Transformers" - BERT-Large
+#   - Radford et al. (2019), OpenAI - GPT-2
+#   - Brown et al. (2020), "Language Models Are Few-Shot Learners" - GPT-3
+#   - Rae et al. (2021), DeepMind - Gopher
+#   - Hoffmann et al. (2022), "Training Compute-Optimal Large Language Models" - Chinchilla
+#   - Chowdhery et al. (2022), "PaLM: Scaling Language Modeling with Pathways" - PaLM
+#   - Touvron et al. (2023), Meta - Llama 2 70B
+#   - Meta AI (2024), "The Llama 3 Herd of Models" - Llama 3 405B
+#   - DeepSeek-AI (2024), technical report - DeepSeek-V3 (671B total, 37B active, MoE)
+#
+# Sources for estimated values (marked in notes column):
+#   - GPT-4 (2023): OpenAI did not disclose parameter count. 1.8T is an
+#     industry estimate based on inference from API pricing, latency, and
+#     reported training compute budget. Multiple independent analysts
+#     (including SemiAnalysis, July 2023) converged around 1.8T using
+#     a mixture-of-experts architecture.
+#   - Claude 3.5 (2024): Anthropic did not disclose parameter count. ~2T
+#     is an industry estimate based on compute budget and benchmark scaling.
+#   - Gemini Ultra (2024): Google did not disclose parameter count. ~1.5T
+#     is an industry estimate from the same sources.
+#   - GPT-5, Claude 4.5, Llama 5 (2025-2026): projected from scaling trends;
+#     no confirmation from developers.
+#   - Training compute: values from Epoch AI database (epoch.ai/trends) for
+#     models through 2024; post-2024 values are projected at 4-5x/year.
+#
+# Columns: model,release_year,release_month,parameters_billions,training_compute_flops,developer,notes
+model,release_year,release_month,parameters_billions,training_compute_flops,developer,notes
+Transformer (base),2017,6,0.065,1e17,Google,"From Vaswani et al. 2017; 65M params, ~1e17 FLOPs"
+BERT-Large,2018,10,0.34,5e18,Google,"From Devlin et al. 2019; 340M params"
+GPT-2,2019,2,1.5,1.5e19,OpenAI,"From Radford et al. 2019; 1.5B params"
+GPT-3,2020,6,175,3.14e23,OpenAI,"From Brown et al. 2020; 175B params"
+Gopher,2021,12,280,6.3e23,DeepMind,"From Rae et al. 2021; 280B params"
+Chinchilla,2022,3,70,5.8e23,DeepMind,"From Hoffmann et al. 2022; 70B, compute-optimal scaling"
+PaLM,2022,4,540,2.5e24,Google,"From Chowdhery et al. 2022; 540B params"
+Llama 2 70B,2023,7,70,1e24,Meta,"From Touvron et al. 2023; 70B, open weights"
+GPT-4,2023,3,1800,2e25,OpenAI,"ESTIMATED: OpenAI did not confirm; ~1.8T per SemiAnalysis (Jul 2023)"
+Llama 3 405B,2024,4,405,3.9e24,Meta,"From Meta AI (2024); 405B, open weights"
+Claude 3.5,2024,6,2000,1e26,Anthropic,"ESTIMATED: Anthropic did not confirm; industry estimate ~2T"
+Gemini Ultra,2024,2,1500,5e25,Google,"ESTIMATED: Google did not confirm; industry estimate ~1.5T"
+DeepSeek-V3,2024,12,671,2.8e24,DeepSeek,"From DeepSeek-AI (2024); 671B total, 37B active (MoE)"
+GPT-5,2025,3,2500,5e26,OpenAI,"ESTIMATED: OpenAI did not confirm; projected from scaling trends"
+Claude 4.5,2025,8,3000,1.5e27,Anthropic,"ESTIMATED: Anthropic did not confirm; projected from scaling trends"
+Llama 5,2026,4,2000,1e27,Meta,"ESTIMATED: Meta did not confirm; projected from scaling trends"
+Frontier model,2026,6,3500,2e27,Multiple,"PROJECTED: illustrative projection, not a specific model"

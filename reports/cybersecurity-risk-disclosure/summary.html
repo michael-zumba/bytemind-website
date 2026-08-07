@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../../assets/bytemind-logo.png?v=2026">
+<title>Summary: Cybersecurity Risk Disclosure by Publicly Listed Firms</title>
+<style>
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --bg: #faf9f3;
+  --bg2: #fdfcf8;
+  --ink: #1f1e1a;
+  --muted: #6a6760;
+  --rule: #e2ddd1;
+  --accent: #1a3a2a;
+  --accent2: #9e6b1f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Cover */
+.cover {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+.cover h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+.cover .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.cover .meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Headings */
+h2 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--accent);
+}
+h3 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 1.8rem 0 0.75rem;
+}
+h4 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 1.5rem 0 0.5rem;
+}
+
+p { margin: 0.75rem 0; }
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+/* Key point highlight */
+mark.key {
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Callout box */
+.callout {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+.callout.warn {
+  border-left-color: var(--accent2);
+}
+.callout h4 {
+  margin-top: 0;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+}
+
+/* Metric row */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric-card {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric-card .val {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+.metric-card .val.warn { color: var(--accent2); }
+.metric-card .label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 600px;
+  margin: 1.5rem 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+thead th {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+tbody td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+tbody tr:nth-child(even) { background: var(--bg); }
+
+/* Charts */
+.chart-figure {
+  margin: 2rem 0;
+}
+.chart-figure figcaption {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+/* Footer / Sources */
+footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+footer .sources h2 {
+  font-size: 1.2rem;
+}
+footer .sources ol {
+  padding-left: 1.2rem;
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+footer .sources li {
+  margin-bottom: 0.5rem;
+  overflow-wrap: break-word;
+}
+footer .sources .src-title {
+  color: var(--ink);
+}
+footer .sources .src-url {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  color: var(--accent);
+  word-break: break-all;
+}
+footer .sources a {
+  word-break: break-all;
+}
+
+/* Citations */
+sup a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+sup a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cover h1 { font-size: 1.6rem; }
+  .container { padding: 1rem 1rem 2rem; }
+  .metric-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media print {
+  body { background: #fff; font-size: 13px; }
+  .container { max-width: 100%; }
+  .cover { page-break-after: always; }
+  h2 { page-break-before: always; }
+}
+
+
+/* ============================================================
+   Imported-report compatibility layer (ByteMind report standard)
+   ============================================================ */
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Generic report header (used by imported reports) */
+body > .container > header,
+article.page > header.report-head {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+body > .container > header h1,
+article.page > header.report-head h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+body > .container > header .subtitle,
+article.page > header.report-head .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+body > .container > header .meta,
+article.page > header.report-head .meta,
+article.page > header.report-head .byline {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+article.page > header.report-head .byline .sep {
+  margin: 0 0.5rem;
+  color: var(--rule);
+}
+
+/* Abstract block (NLP report) */
+.abstract {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  text-align: left;
+  margin: 1.5rem 0 0;
+}
+.abstract .label {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.abstract p:last-child { margin-bottom: 0; }
+
+/* Executive summary block */
+.exec-summary {
+  margin: 0 0 2rem;
+}
+.exec-summary h2 {
+  margin-top: 0;
+}
+
+/* Key findings */
+.key-findings {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.5rem;
+}
+.key-findings li,
+.finding-item {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Table of contents */
+.toc {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.toc h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+.toc ol {
+  margin: 0.5rem 0 0 1.2rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+.toc ol li {
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+.toc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.toc a:hover { text-decoration: underline; }
+
+/* Chart blocks used by imported reports */
+.chart-container {
+  margin: 1.75rem 0;
+}
+.chart-container h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.chart-container .chart-note,
+.chart-container .data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  font-style: italic;
+  overflow: visible;
+  word-wrap: break-word;
+}
+.chart-box {
+  width: 100%;
+  height: 420px;
+  overflow: visible;
+}
+.chart-box.tall,
+.chart-box-tall {
+  height: 520px;
+}
+.chart-box.short {
+  height: 340px;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+.two-col .chart-container,
+.two-col .chart-figure {
+  margin: 0;
+}
+.two-col .chart-box { height: 380px; }
+
+.two-col > * { min-width: 0; }
+
+/* Keep long reference links from stretching the page on small screens */
+.ref-list a, .ref-list li a, .sources a, .sources li a, ol li a, ul li a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.chart-box, .chart-box-tall, .chart-container, .chart-figure { min-width: 0; }
+
+
+/* Figure captions (NLP report) */
+figure.chart-figure figcaption {
+  font-weight: 600;
+  color: var(--ink);
+}
+figure.chart-figure figcaption strong {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* Mermaid diagram */
+figure.diagram-figure {
+  margin: 2rem 0;
+  padding: 1.5rem 1rem;
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  text-align: center;
+}
+figure.diagram-figure .mermaid { display: inline-block; }
+figure.diagram-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--rule);
+  text-align: left;
+}
+
+/* Section kicker (NLP report) */
+.section-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  display: block;
+  margin-top: 2.5rem;
+  margin-bottom: -1rem;
+}
+.section-kicker + h2 { margin-top: 1.5rem; }
+
+/* Metric displays (NLP and imported reports) */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric .metric-num {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.metric .metric-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+  display: block;
+}
+
+/* Callouts */
+.callout strong { color: var(--accent); }
+.callout-title {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+/* Special tables */
+.gap-table td:first-child,
+.data-table td:first-child {
+  font-weight: 600;
+  min-width: 200px;
+}
+td.num, th.num {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+}
+
+/* References */
+.ref-section {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.ref-section h2,
+.ref-list h2 {
+  margin-top: 0;
+  border-bottom: none;
+}
+.ref-item {
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.ref-item a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
+/* Footer navigation and notes */
+.footer-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2rem;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+.back-link a {
+  color: var(--accent);
+}
+.footer-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0 0;
+  flex-wrap: wrap;
+}
+.footer-nav a {
+  color: var(--accent);
+}
+
+/* Data notes in imported reports */
+.data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.25rem 0 0.75rem;
+  font-style: italic;
+}
+
+/* Inline code */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: var(--bg2);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .key-findings { grid-template-columns: 1fr; }
+  .toc ol { columns: 1; }
+  .two-col { grid-template-columns: 1fr; }
+  body > .container > header h1,
+  article.page > header.report-head h1 { font-size: 1.6rem; }
+}
+
+
+/* One-page summary cards (imported reports) */
+.summary-card {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.5rem;
+  margin: 0 0 1.5rem;
+}
+.summary-card h2 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ink);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.4rem;
+  margin: 0 0 0.75rem;
+}
+.summary-card p:last-child { margin-bottom: 0; }
+.highlight-box {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  font-size: 0.95rem;
+}
+.highlight-box strong { color: var(--accent); }
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+.stat-item {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+}
+.footer-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--rule);
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+@media (max-width: 640px) {
+  .stats-grid { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="container">
+  <a class="back-link" href="index.html">&larr; Back to full report</a>
+
+  <header>
+    <h1>Cybersecurity Risk Disclosure by Publicly Listed Firms: State, Drivers, and Consequences</h1>
+    <p class="subtitle">One-Page Summary</p>
+    <p class="meta">Dr Yuqian Zhang &middot; 10 July 2026 &middot; Analytical Brief</p>
+  </header>
+
+  <div class="summary-card">
+    <h2>What This Report Is About</h2>
+    <p>This report examines how publicly listed firms disclose cybersecurity risks after the SEC introduced mandatory rules in July 2023. It covers the regulatory landscape in the United States, the European Union, and globally, and analyses what firms actually disclose, what drives their disclosure choices, and how markets respond.</p>
+    <p>The SEC rules represent the most significant expansion of mandatory non-financial risk disclosure since the Sarbanes-Oxley Act of 2002. They require firms to report material cybersecurity incidents within four business days and to describe their risk management and governance practices in annual filings.</p>
+  </div>
+
+  <div class="summary-card">
+    <h2>Key Findings</h2>
+    <div class="highlight-box">
+      <strong>Materiality is the central challenge.</strong> In the first year, 55 distinct cyber incidents triggered SEC filings. Over half of these filings characterised materiality as "undetermined" or gave mixed signals across multiple filings. Only about 15 per cent of filings provided dollar amounts or person-count quantification. This suggests firms and their advisors are still working out what "material" means in the cybersecurity context.
+    </div>
+    <div class="highlight-box">
+      <strong>Regulatory fragmentation raises costs for multinational firms.</strong> The SEC requires disclosure within four business days of materiality determination. The EU NIS2 Directive requires 24-hour early warning. The EU DORA regulation requires initial notification within four hours, the strictest timeline globally. A firm operating across these jurisdictions faces inconsistent and overlapping obligations.
+    </div>
+    <div class="highlight-box">
+      <strong>Cybersecurity disclosure affects the cost of capital.</strong> Academic research shows that post-breach firms pay about 30 basis points more on bank loans. High-cybersecurity-risk firms earn an 8.3 per cent annual equity premium. The average data breach cost reached a record USD 4.88 million in 2024.
+    </div>
+  </div>
+
+  <div class="summary-card">
+    <h2>Key Statistics</h2>
+    <div class="stats-grid">
+      <div class="stat-item">55 distinct cyber incidents triggered SEC filings in the first year (to January 2025)</div>
+      <div class="stat-item">12 days on average from detection to filing; about half of firms file within 4 business days</div>
+      <div class="stat-item">Only about 15% of filings include dollar or person-count quantification</div>
+      <div class="stat-item">14% of filings describe incidents as material; 33% as immaterial; 28% as undetermined</div>
+      <div class="stat-item">USD 4.88 million: average data breach cost in 2024 (record high)</div>
+      <div class="stat-item">8.3% annual equity risk premium for high-cybersecurity-risk firms</div>
+      <div class="stat-item">Ransomware appeared in 44% of breaches, a 37% increase from the prior year</div>
+      <div class="stat-item">Third-party involvement in breaches doubled from 15% to 30%</div>
+      <div class="stat-item">USD 15.3 billion in global cyber insurance premiums in 2024</div>
+      <div class="stat-item">68% of S&P 100 companies assign full board responsibility for ERM including cybersecurity</div>
+    </div>
+  </div>
+
+  <div class="summary-card">
+    <h2>Regulatory and Enforcement Landscape</h2>
+    <p>The SEC has signalled it will enforce these rules. In October 2024, the SEC charged four companies for misleading disclosures related to the SolarWinds breach, and in October 2023 it charged SolarWinds and its CISO personally with civil fraud. The message is clear: cybersecurity governance representations are within the enforcement remit, and individual officers can be held personally accountable.</p>
+    <p>In the EU, NIS2 covers 18 sectors and DORA covers 21 categories of financial entities. Penalties can reach EUR 10 million or 2 per cent of global annual turnover for essential entities under NIS2.</p>
+  </div>
+
+  <div class="summary-card">
+    <h2>Why It Matters</h2>
+    <p>Cybersecurity disclosure sits at the intersection of accounting, regulation, and corporate governance. As breach costs rise and ransomware evolves into a systemic economic threat (projected to cause USD 265 billion in annual damages by 2031), understanding what firms disclose, why they disclose it, and how markets process that information is of first-order importance for investors, regulators, and corporate boards.</p>
+    <p>The report provides 13 interactive data visualisations, downloadable datasets, and a structured research agenda for scholars interested in this area.</p>
+  </div>
+
+  <div class="footer-note">
+    <p>This is a summary of the full research brief. <a href="index.html">Read the complete report</a> for detailed methodology, data visualisations, and references.</p>
+  </div>
+</div>
+
+
+</body>
+</html>

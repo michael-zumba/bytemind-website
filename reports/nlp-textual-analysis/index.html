@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="../../assets/bytemind-logo.png?v=2026">
+<title>Textual Analysis and NLP in Accounting and Finance Research: A Twenty-Year Review (2005-2025)</title>
+<style>
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --bg: #faf9f3;
+  --bg2: #fdfcf8;
+  --ink: #1f1e1a;
+  --muted: #6a6760;
+  --rule: #e2ddd1;
+  --accent: #1a3a2a;
+  --accent2: #9e6b1f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Cover */
+.cover {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+.cover h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+.cover .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.cover .meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Headings */
+h2 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--accent);
+}
+h3 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 1.8rem 0 0.75rem;
+}
+h4 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 1.5rem 0 0.5rem;
+}
+
+p { margin: 0.75rem 0; }
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+/* Key point highlight */
+mark.key {
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Callout box */
+.callout {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+.callout.warn {
+  border-left-color: var(--accent2);
+}
+.callout h4 {
+  margin-top: 0;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+}
+
+/* Metric row */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric-card {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric-card .val {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+.metric-card .val.warn { color: var(--accent2); }
+.metric-card .label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 600px;
+  margin: 1.5rem 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+thead th {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+tbody td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+tbody tr:nth-child(even) { background: var(--bg); }
+
+/* Charts */
+.chart-figure {
+  margin: 2rem 0;
+}
+.chart-figure figcaption {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+/* Footer / Sources */
+footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+footer .sources h2 {
+  font-size: 1.2rem;
+}
+footer .sources ol {
+  padding-left: 1.2rem;
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+footer .sources li {
+  margin-bottom: 0.5rem;
+  overflow-wrap: break-word;
+}
+footer .sources .src-title {
+  color: var(--ink);
+}
+footer .sources .src-url {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  color: var(--accent);
+  word-break: break-all;
+}
+footer .sources a {
+  word-break: break-all;
+}
+
+/* Citations */
+sup a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+sup a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cover h1 { font-size: 1.6rem; }
+  .container { padding: 1rem 1rem 2rem; }
+  .metric-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media print {
+  body { background: #fff; font-size: 13px; }
+  .container { max-width: 100%; }
+  .cover { page-break-after: always; }
+  h2 { page-break-before: always; }
+}
+
+
+/* ============================================================
+   Imported-report compatibility layer (ByteMind report standard)
+   ============================================================ */
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Generic report header (used by imported reports) */
+body > .container > header,
+article.page > header.report-head {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+body > .container > header h1,
+article.page > header.report-head h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+body > .container > header .subtitle,
+article.page > header.report-head .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+body > .container > header .meta,
+article.page > header.report-head .meta,
+article.page > header.report-head .byline {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+article.page > header.report-head .byline .sep {
+  margin: 0 0.5rem;
+  color: var(--rule);
+}
+
+/* Abstract block (NLP report) */
+.abstract {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  text-align: left;
+  margin: 1.5rem 0 0;
+}
+.abstract .label {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.abstract p:last-child { margin-bottom: 0; }
+
+/* Executive summary block */
+.exec-summary {
+  margin: 0 0 2rem;
+}
+.exec-summary h2 {
+  margin-top: 0;
+}
+
+/* Key findings */
+.key-findings {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.5rem;
+}
+.key-findings li,
+.finding-item {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Table of contents */
+.toc {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.toc h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+.toc ol {
+  margin: 0.5rem 0 0 1.2rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+.toc ol li {
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+.toc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.toc a:hover { text-decoration: underline; }
+
+/* Chart blocks used by imported reports */
+.chart-container {
+  margin: 1.75rem 0;
+}
+.chart-container h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.chart-container .chart-note,
+.chart-container .data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  font-style: italic;
+  overflow: visible;
+  word-wrap: break-word;
+}
+.chart-box {
+  width: 100%;
+  height: 420px;
+  overflow: visible;
+}
+.chart-box.tall,
+.chart-box-tall {
+  height: 520px;
+}
+.chart-box.short {
+  height: 340px;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+.two-col .chart-container,
+.two-col .chart-figure {
+  margin: 0;
+}
+.two-col .chart-box { height: 380px; }
+
+.two-col > * { min-width: 0; }
+
+/* Keep long reference links from stretching the page on small screens */
+.ref-list a, .ref-list li a, .sources a, .sources li a, ol li a, ul li a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.chart-box, .chart-box-tall, .chart-container, .chart-figure { min-width: 0; }
+
+
+/* Figure captions (NLP report) */
+figure.chart-figure figcaption {
+  font-weight: 600;
+  color: var(--ink);
+}
+figure.chart-figure figcaption strong {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* Mermaid diagram */
+figure.diagram-figure {
+  margin: 2rem 0;
+  padding: 1.5rem 1rem;
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  text-align: center;
+}
+figure.diagram-figure .mermaid { display: inline-block; }
+figure.diagram-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--rule);
+  text-align: left;
+}
+
+/* Section kicker (NLP report) */
+.section-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  display: block;
+  margin-top: 2.5rem;
+  margin-bottom: -1rem;
+}
+.section-kicker + h2 { margin-top: 1.5rem; }
+
+/* Metric displays (NLP and imported reports) */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric .metric-num {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.metric .metric-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+  display: block;
+}
+
+/* Callouts */
+.callout strong { color: var(--accent); }
+.callout-title {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+/* Special tables */
+.gap-table td:first-child,
+.data-table td:first-child {
+  font-weight: 600;
+  min-width: 200px;
+}
+td.num, th.num {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+}
+
+/* References */
+.ref-section {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.ref-section h2,
+.ref-list h2 {
+  margin-top: 0;
+  border-bottom: none;
+}
+.ref-item {
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.ref-item a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
+/* Footer navigation and notes */
+.footer-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2rem;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+.back-link a {
+  color: var(--accent);
+}
+.footer-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0 0;
+  flex-wrap: wrap;
+}
+.footer-nav a {
+  color: var(--accent);
+}
+
+/* Data notes in imported reports */
+.data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.25rem 0 0.75rem;
+  font-style: italic;
+}
+
+/* Inline code */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: var(--bg2);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .key-findings { grid-template-columns: 1fr; }
+  .toc ol { columns: 1; }
+  .two-col { grid-template-columns: 1fr; }
+  body > .container > header h1,
+  article.page > header.report-head h1 { font-size: 1.6rem; }
+}
+
+</style>
+</head>
+<body>
+
+  <article class="page">
+
+    <header class="report-head">
+      <h1>Textual Analysis and Natural Language Processing in Accounting and Finance Research</h1>
+      <p class="subtitle">A Twenty-Year Review of Data Sources, Methods, and Applications (2005-2025)</p>
+      <p class="meta">Dr Yuqian Zhang &middot; 10 July 2026 &middot; Analytical Brief</p>
+      <div class="abstract">
+        <span class="label">Abstract</span>
+        <p>Textual analysis has become one of the most active empirical programmes in accounting and finance. Over two decades the field has moved from a handful of exploratory studies to a mature literature that publishes dozens of papers each year in the leading journals. This brief reviews that trajectory. It traces the widening set of textual data sources, from machine readable regulatory filings to earnings call transcripts, analyst reports, financial news, and social media, and it documents the methodological progression from general purpose dictionaries to domain specific word lists, machine learning classifiers, word embeddings, transformer models, and most recently large language models.</p>
+        <p>Drawing on a compiled dataset of publication counts, method usage, and citation records, the brief synthesises the principal findings of the field: textual signals carry information beyond numerical financial data, disclosure tone predicts returns and future performance, readability shapes how markets process information, and machine learning methods substantially outperform dictionary approaches on classification accuracy. It closes with an assessment of validation concerns and a set of directions for future work, including the treatment of generative models as both research tools and objects of study.</p>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- ============ SECTION 1 ============ -->
+      <section id="sec-summary">
+        <span class="section-kicker">Section 1</span>
+        <h2>Executive Summary</h2>
+        <p>The textual analysis literature in accounting and finance has grown from a small set of pioneering papers in the mid 2000s to a substantial research programme that now contributes more than eighty papers a year across the top journals.<sup><a href="#cite-12">[12]</a></sup> Early work established that the words managers, journalists, and analysts choose carry economically meaningful information. What began as a niche interest, dependent on manual coding or crude word counts, matured into a core empirical method as machine readable disclosures accumulated and computational tools became widely accessible. The growth curve is steep and sustained, with the fastest acceleration occurring after 2017 as machine learning methods entered the mainstream.<sup><a href="#cite-17">[17]</a></sup></p>
+        <p>The methodological history of the field can be read as a sequence of transitions. It began with general purpose sentiment lists borrowed from psychology and content analysis, then moved to domain specific dictionaries after Loughran and McDonald<sup><a href="#cite-4">[4]</a></sup> showed that ordinary word lists systematically misclassify financial language. From there the field adopted machine learning classifiers such as naive Bayes, support vector machines, and latent Dirichlet allocation, then word embeddings that capture semantic relationships, then transformer architectures such as FinBERT that model bidirectional context,<sup><a href="#cite-16">[16]</a></sup> and most recently large language models such as GPT that can perform classification and reasoning tasks with little task specific training.<sup><a href="#cite-18">[18]</a></sup> Each transition widened the range of questions researchers could ask and raised the bar for measurement quality.</p>
+        <p>The substantive findings are consistent across a large body of work. Textual signals provide information beyond the numbers reported in financial statements. Disclosure tone predicts future returns and operating performance, and negative tone tends to have stronger and more persistent effects than positive tone.<sup><a href="#cite-1">[1]</a></sup><sup><a href="#cite-15">[15]</a></sup> Report readability affects the speed and accuracy with which markets process information, with less readable filings associated with lower earnings persistence.<sup><a href="#cite-2">[2]</a></sup> Across classification tasks, machine learning and transformer methods substantially outperform dictionary approaches, with FinBERT reaching sentiment accuracy near ninety per cent against roughly sixty per cent for dictionary baselines.<sup><a href="#cite-16">[16]</a></sup> These results, taken together, establish textual analysis as a durable and productive method rather than a passing trend.</p>
+      </section>
+
+      <!-- ============ SECTION 2 ============ -->
+      <section id="sec-intro">
+        <span class="section-kicker">Section 2</span>
+        <h2>Introduction</h2>
+        <p>Textual analysis can be defined as <strong>the application of natural language processing (NLP) to textual data for automated information extraction or measurement</strong>.<sup><a href="#cite-17">[17]</a></sup> The definition is deliberately broad. It covers simple word counts and dictionary scoring at one end and complex neural language models at the other, and it applies wherever the object of study is language rather than numbers. What unites this work is a common premise: that natural language is a primary form of business communication in capital markets, and that systematic measurement of that language reveals information which numerical data alone does not capture.</p>
+        <p>Managers describe strategy and risk in narrative disclosure, analysts interpret firm prospects in prose, journalists frame events for investors, and executives answer unscripted questions on earnings calls. Each of these settings produces text that market participants read and act upon. For most of the history of accounting and finance research this text was inaccessible to large scale empirical study, because it existed only on paper or in fragmented archives. The situation changed with the <strong>digitisation of corporate disclosures</strong>. The launch of the SEC EDGAR system in the 1990s made electronic filings available at scale, and the later accumulation of earnings call transcripts and machine readable financial news created the data infrastructure on which this research programme depends.<sup><a href="#cite-23">[23]</a></sup></p>
+        <p>The scope of this brief spans the period from 2005 to 2025 and covers both accounting and finance journals. The starting point reflects the emergence of the first influential empirical studies, and the endpoint captures the arrival of large language models as research tools. The remainder of the brief is organised as follows. Section 3 reviews the evolution of textual data sources. Section 4 describes the progression of NLP methods across six phases. Sections 5 and 6 survey the core research applications and the capital market and firm outcomes they explain. Section 7 addresses methodological developments and validation concerns. Section 8 presents publication and citation trends drawn from the compiled dataset. Section 9 considers emerging themes and future directions, and Section 10 concludes.</p>
+
+        <figure class="diagram-figure" id="fig-timeline">
+          <div class="mermaid">
+flowchart LR
+  A["Dictionaries<br/>2005-2011"] --> B["Domain lists<br/>LM 2011"]
+  B --> C["Machine learning<br/>NB, SVM, LDA"]
+  C --> D["Word embeddings<br/>Word2Vec, GloVe"]
+  D --> E["Transformers<br/>BERT, FinBERT"]
+  E --> F["Large language models<br/>GPT, ChatGPT"]
+          </div>
+          <figcaption><strong>Diagram 1.</strong> The methodological progression of textual analysis in accounting and finance, from general purpose dictionaries to large language models. Each stage widened the range of tractable research questions.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ============ SECTION 3 ============ -->
+      <section id="sec-sources">
+        <span class="section-kicker">Section 3</span>
+        <h2>Evolution of Textual Data Sources</h2>
+        <p>The empirical reach of textual analysis is bounded by the text available for study. Over two decades the set of usable sources has widened steadily, both as new disclosure channels emerged and as computational capacity made larger and messier corpora tractable. The sources below are presented in roughly the order in which they became central to the literature.</p>
+
+        <h3>SEC filings (10-K, 10-Q)</h3>
+        <p>Regulatory filings are the workhorse of textual analysis. Electronic filing through EDGAR became comprehensive across 1993 to 1996, creating a deep and consistent archive.<sup><a href="#cite-23">[23]</a></sup> The <strong>10-K annual report</strong> is especially rich, containing the Management Discussion and Analysis, the risk factor section (Item 1A, mandated from 2005), the financial statements and footnotes, and the business description. This structure makes the 10-K attractive for measurement because sections can be isolated and compared across firms and years. It underpins a large share of the field, including Li,<sup><a href="#cite-2">[2]</a></sup><sup><a href="#cite-3">[3]</a></sup> Loughran and McDonald,<sup><a href="#cite-4">[4]</a></sup> and Hoberg and Phillips.<sup><a href="#cite-10">[10]</a></sup><sup><a href="#cite-11">[11]</a></sup></p>
+
+        <h3>The MD&amp;A section</h3>
+        <p>The Management Discussion and Analysis is the most studied single section because it contains managerial narrative rather than templated boilerplate. It is where management explains results and outlook in its own words, which makes it a natural site for measuring tone and forward looking content. Brown and Tucker examine year over year modifications to the MD&amp;A and show that the extent of revision is informative about changes in firm circumstances.<sup><a href="#cite-5">[5]</a></sup> Li studies forward looking statements within corporate filings and shows they carry information about future earnings.<sup><a href="#cite-3">[3]</a></sup></p>
+
+        <h3>Earnings conference calls</h3>
+        <p>Conference call transcripts provide real time managerial communication, including a scripted presentation and an unscripted analyst question and answer session. The Q&amp;A is particularly valuable because it is less rehearsed. Price and co-authors show that the textual tone of calls is informative for stock returns beyond the numbers released.<sup><a href="#cite-7">[7]</a></sup> Larcker and Zakolyukina use call transcripts to detect deception,<sup><a href="#cite-6">[6]</a></sup> and Jiang and co-authors aggregate managerial language into a market level sentiment measure.<sup><a href="#cite-15">[15]</a></sup></p>
+
+        <h3>Analyst reports</h3>
+        <p>Analyst research represents the output of professional information intermediaries who interpret firm disclosures for investors. Their reports blend quantitative forecasts with qualitative narrative, and the narrative component has become an object of study in its own right. This line of work informs measures of analyst opinion and the information content of professional commentary.<sup><a href="#cite-16">[16]</a></sup></p>
+
+        <h3>Financial news and media</h3>
+        <p>Financial media were the setting for one of the founding studies of the field. Tetlock used the content of a Wall Street Journal column to construct a measure of media pessimism and showed that it predicts downward pressure on prices followed by reversal.<sup><a href="#cite-1">[1]</a></sup> The study established that media tone affects market prices and helped legitimise textual measurement as a source of return predictability.</p>
+
+        <h3>Social media</h3>
+        <p>Social media are a more recent addition to the source set. Internet stock message boards and short form platforms such as Twitter generate large volumes of investor commentary at high frequency. These sources are noisier than regulated disclosure but offer breadth and timeliness, and they extend textual analysis to retail sentiment that formal filings do not capture.</p>
+
+        <h3>Patents</h3>
+        <p>Patent text supports text based measures of innovation. By analysing the language of patent documents, researchers construct measures of technological content and novelty that complement simple patent counts and citation measures.</p>
+
+        <h3>Central bank and regulatory communications</h3>
+        <p>Official communications, including FOMC minutes and SEC comment letters, provide a further source of policy relevant and firm relevant text. Comment letters in particular link regulator scrutiny to subsequent changes in firm disclosure, which makes them useful for studying the disclosure response to oversight.</p>
+
+        <div class="callout">
+          <span class="callout-title">Trajectory</span>
+          <p>The overall trend is toward richer and more diverse textual sources as computational capacity and NLP methods advance. Regulatory filings anchored the early literature, and successive waves of transcripts, news, social media, and specialised corpora broadened the questions the field could address.</p>
+        </div>
+
+        <figure class="chart-figure"><figcaption><strong>Figure 6.</strong> Usage of textual data sources across six periods from 2005 to 2025. Regulatory filings dominate throughout, while transcripts, news, and social media rise as new channels mature. Source: nlp_data_source_trends.csv.</figcaption><div id="chart-data-sources" class="chart-box" role="img" aria-label="Stacked area chart of textual data sources used over time"></div></figure>
+      </section>
+
+      <!-- ============ SECTION 4 ============ -->
+      <section id="sec-methods">
+        <span class="section-kicker">Section 4</span>
+        <h2>Progression of NLP Methods</h2>
+        <p>The methods used to convert text into measurement have evolved through six overlapping phases. Each phase did not fully replace the one before it, and dictionaries remain in wide use, but the frontier has moved steadily toward models that learn from data rather than relying on fixed word lists.</p>
+
+        <h3>1. Dictionary and bag-of-words (2005-2011)</h3>
+        <p>Early work scored text by counting words from predefined lists, treating a document as an unordered bag of words. The lists were general purpose instruments drawn from psychology and content analysis, including the Harvard IV-4 dictionary, Diction, and LIWC. Tetlock used the Harvard dictionary to measure media pessimism.<sup><a href="#cite-1">[1]</a></sup> The key breakthrough came from Loughran and McDonald, who demonstrated that general dictionaries systematically misclassify common financial terms. Words such as <em>liability</em>, <em>tax</em>, and <em>cost</em> are coded as negative in general lists but are neutral in a financial context.<sup><a href="#cite-4">[4]</a></sup> They created the LM Master Dictionary with six word lists: negative, positive, uncertainty, litigious, strong modal, and weak modal.<sup><a href="#cite-24">[24]</a></sup></p>
+
+        <h3>2. Readability and complexity measures (2008-2014)</h3>
+        <p>A parallel line of work measured how hard a document is to read rather than what sentiment it conveys. Li introduced the Fog Index to 10-K analysis and showed that less readable reports are associated with lower and less persistent earnings.<sup><a href="#cite-2">[2]</a></sup> Loughran and McDonald later critiqued the Fog Index for financial text, arguing that its components behave poorly on filings, and proposed 10-K file size as a simpler and better measure of document complexity.<sup><a href="#cite-8">[8]</a></sup></p>
+
+        <h3>3. Topic modeling and LDA (2014-2020)</h3>
+        <p>Topic models infer latent themes from a corpus without predefined categories. Dyer, Lang, and Stice-Lawrence applied latent Dirichlet allocation to 10-Ks to track the evolution of disclosure content, finding that new FASB and SEC requirements drive much of the increase in report length.<sup><a href="#cite-13">[13]</a></sup> Bao and Datta used LDA to discover and quantify risk types from textual risk disclosures.<sup><a href="#cite-22">[22]</a></sup> Seeded variants of LDA improve topic coherence for financial text by incorporating prior knowledge.</p>
+
+        <h3>4. Word embeddings (2017-2021)</h3>
+        <p>Word embeddings such as Word2Vec and GloVe represent words as dense vectors, so that words with similar meanings have similar vector representations. This enables measuring textual similarity between documents and tracking semantic shifts over time. Hoberg and Phillips use cosine similarity between firm product descriptions to build text based network industry classifications, which capture competitive relationships that standard industry codes miss.<sup><a href="#cite-10">[10]</a></sup><sup><a href="#cite-11">[11]</a></sup><sup><a href="#cite-25">[25]</a></sup></p>
+
+        <h3>5. Transformers, BERT and FinBERT (2020-2024)</h3>
+        <p>Transformer models read text bidirectionally, so the meaning of a word is conditioned on its full context rather than on a fixed list. Huang, Wang, and Yang developed FinBERT, pre-trained on financial reports, analyst reports, and earnings call transcripts, and showed that it reaches sentiment accuracy of 88.2 per cent against 62.1 per cent for dictionaries.<sup><a href="#cite-16">[16]</a></sup> Siano and Wysocki demonstrate that BERT style transfer learning allows small accounting datasets to benefit from models pre-trained on large corpora.<sup><a href="#cite-19">[19]</a></sup></p>
+
+        <h3>6. Large language models (2023-present)</h3>
+        <p>The most recent phase applies generative large language models such as GPT-4 and ChatGPT to textual analysis. de Kok shows that generative models achieve 96 per cent accuracy on non-answer detection in earnings calls and provides guidance on how to use these tools in accounting research.<sup><a href="#cite-18">[18]</a></sup> Kim, Muhn, and Nikolaev show that GPT can analyse financial statements and predict earnings from standardised numerical inputs, at times outperforming analysts.<sup><a href="#cite-21">[21]</a></sup> These capabilities come with distinctive concerns, including prompt engineering, construct validity, look-ahead bias, monetary cost, and reproducibility.</p>
+
+        <div class="callout">
+          <span class="callout-title">Accuracy gap</span>
+          <p>The move from dictionaries to transformers is not only conceptual but empirical. On sentiment classification the accuracy gap between a dictionary baseline near sixty per cent and a domain trained transformer near ninety per cent is large enough to change the conclusions of applied studies.</p>
+        </div>
+
+        <figure class="chart-figure"><figcaption><strong>Figure 2.</strong> Approximate share of published papers using each NLP method across six periods. Dictionary methods dominate early and decline as machine learning, transformers, and large language models rise. Source: nlp_method_evolution.csv.</figcaption><div id="chart-method-evolution" class="chart-box" role="img" aria-label="Stacked bar chart of NLP method usage across periods"></div></figure>
+
+        <figure class="chart-figure"><figcaption><strong>Figure 8.</strong> Reported sentiment classification accuracy by method, from dictionary baselines through neural classifiers to domain trained transformers. Values are indicative benchmarks drawn from the survey literature.<sup><a href="#cite-16">[16]</a></sup></figcaption><div id="chart-method-accuracy" class="chart-box" role="img" aria-label="Grouped bar chart of sentiment classification accuracy by method"></div></figure>
+      </section>
+
+      <!-- ============ SECTION 5 ============ -->
+      <section id="sec-applications">
+        <span class="section-kicker">Section 5</span>
+        <h2>Core Research Applications</h2>
+        <p>The methods above have been applied to a fairly stable set of research questions. Six application areas account for most of the literature, and their relative importance has shifted only gradually over time.</p>
+
+        <h3>Tone and sentiment</h3>
+        <p>Tone and sentiment form the largest application area, representing roughly thirty seven per cent of papers.<sup><a href="#cite-17">[17]</a></sup> Managerial tone in the MD&amp;A predicts future performance,<sup><a href="#cite-3">[3]</a></sup><sup><a href="#cite-20">[20]</a></sup> conference call tone drives market reactions,<sup><a href="#cite-7">[7]</a></sup> and aggregate manager sentiment predicts market returns.<sup><a href="#cite-15">[15]</a></sup> A recurring result is that <strong>negative tone has stronger effects than positive tone</strong>, consistent with the greater credibility of unfavourable news in disclosure.</p>
+
+        <h3>Readability and disclosure complexity</h3>
+        <p>Less readable 10-Ks are associated with lower earnings persistence, which suggests that complexity impedes the market's ability to price fundamentals.<sup><a href="#cite-2">[2]</a></sup> The length of the 10-K has increased dramatically over the sample period, driven in part by regulatory requirements.<sup><a href="#cite-13">[13]</a></sup> Complex language may reflect deliberate obfuscation or genuine business complexity, and distinguishing the two remains an active question.</p>
+
+        <h3>Textual similarity and novelty</h3>
+        <p>Similarity measures compare documents to a benchmark, whether the same firm in a prior year or a set of peers. Brown and Tucker measure year over year changes in the MD&amp;A,<sup><a href="#cite-5">[5]</a></sup> while Hoberg and Phillips identify product market peers from the similarity of business descriptions.<sup><a href="#cite-11">[11]</a></sup> Textual similarity to competitors reveals competitive positioning that standard classifications miss.</p>
+
+        <h3>Forward-looking and risk disclosure</h3>
+        <p>Forward looking statements in filings predict future earnings,<sup><a href="#cite-3">[3]</a></sup> and mandatory risk factor disclosures inform risk assessments and the cost of capital.<sup><a href="#cite-9">[9]</a></sup> Risk disclosure tone responds to actual risk exposures, which supports the view that these sections carry information rather than boilerplate alone.</p>
+
+        <h3>Deception and fraud detection</h3>
+        <p>Larcker and Zakolyukina identify linguistic markers of deception in conference calls, including more references to general knowledge, fewer self references, and more extreme positive emotion.<sup><a href="#cite-6">[6]</a></sup> NLP models are increasingly used for fraud prediction, extending this work from detection after the fact toward earlier warning.</p>
+
+        <h3>Disclosure quality and quantity</h3>
+        <p>A further strand measures the volume of disclosure through word count and file size, along with its specificity and comparability. Regulatory oversight is one driver of disclosure change, and SEC comment letters have been shown to affect subsequent disclosure content.<sup><a href="#cite-17">[17]</a></sup></p>
+
+        <figure class="chart-figure"><figcaption><strong>Figure 5.</strong> Research applications of textual analysis by theme across six periods. Tone and sentiment lead throughout, with forward looking and risk disclosure and similarity work growing strongly. Source: nlp_application_area_trends.csv.</figcaption><div id="chart-app-trends" class="chart-box" role="img" aria-label="Stacked area chart of research applications by theme"></div></figure>
+      </section>
+
+      <!-- ============ SECTION 6 ============ -->
+      <section id="sec-outcomes">
+        <span class="section-kicker">Section 6</span>
+        <h2>Capital Market and Firm Outcomes</h2>
+        <p>The value of textual measurement rests on whether it explains outcomes that matter. The literature links textual signals to a wide range of market and firm level consequences.</p>
+
+        <div class="metric-row">
+          <div class="metric">
+            <span class="metric-num">9.75%</span>
+            <span class="metric-label">Monthly R-squared of manager sentiment predicting aggregate returns<sup><a href="#cite-15">[15]</a></sup></span>
+          </div>
+          <div class="metric">
+            <span class="metric-num">88.2%</span>
+            <span class="metric-label">FinBERT sentiment accuracy versus 62.1% for dictionaries<sup><a href="#cite-16">[16]</a></sup></span>
+          </div>
+          <div class="metric">
+            <span class="metric-num">96%</span>
+            <span class="metric-label">Generative LLM accuracy on non-answer detection in earnings calls<sup><a href="#cite-18">[18]</a></sup></span>
+          </div>
+        </div>
+
+        <h3>Stock returns</h3>
+        <p>Tetlock shows that media pessimism predicts downward pressure on prices, followed by reversal, a pattern consistent with temporary sentiment driven mispricing.<sup><a href="#cite-1">[1]</a></sup> Jiang and co-authors find that manager sentiment negatively predicts aggregate returns, with a monthly R-squared of 9.75 per cent, which is large for a return prediction exercise.<sup><a href="#cite-15">[15]</a></sup></p>
+
+        <h3>Volatility and liquidity</h3>
+        <p>Tone and readability affect information asymmetry and trading behaviour. Harder to read and more negative disclosures are associated with wider spreads and higher volatility around release, consistent with slower and noisier price discovery.</p>
+
+        <h3>Cost of capital</h3>
+        <p>Campbell and co-authors show that mandatory risk factor disclosures affect the cost of equity, which indicates that the market prices the risk information conveyed in narrative sections.<sup><a href="#cite-9">[9]</a></sup></p>
+
+        <h3>Analyst forecasts, audit, credit, and governance</h3>
+        <p>Textual complexity increases analyst disagreement, as harder to process disclosure widens the dispersion of forecasts. Textual measures also predict going concern opinions and audit fees, help forecast default probability through sentiment, and reflect governance quality through disclosure style. Together these results show that textual signals reach well beyond returns into the full set of stakeholders who read corporate language.</p>
+
+        <div class="table-wrap">
+          <table>
+            <caption>Table 1. Selected outcome links documented in the textual analysis literature</caption>
+            <thead>
+              <tr>
+                <th scope="col">Outcome</th>
+                <th scope="col">Textual signal</th>
+                <th scope="col">Representative evidence</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Stock returns</td>
+                <td>Media and manager tone</td>
+                <td>Pessimism predicts pressure then reversal; sentiment predicts aggregate returns<sup><a href="#cite-1">[1]</a></sup><sup><a href="#cite-15">[15]</a></sup></td>
+              </tr>
+              <tr>
+                <td>Earnings persistence</td>
+                <td>Readability</td>
+                <td>Less readable filings, lower persistence<sup><a href="#cite-2">[2]</a></sup></td>
+              </tr>
+              <tr>
+                <td>Cost of equity</td>
+                <td>Risk factor disclosure</td>
+                <td>Mandatory risk disclosures priced by the market<sup><a href="#cite-9">[9]</a></sup></td>
+              </tr>
+              <tr>
+                <td>Fraud and deception</td>
+                <td>Linguistic markers</td>
+                <td>Deceptive calls show distinctive language patterns<sup><a href="#cite-6">[6]</a></sup></td>
+              </tr>
+              <tr>
+                <td>Future earnings</td>
+                <td>Forward-looking statements</td>
+                <td>Forward looking text predicts future earnings<sup><a href="#cite-3">[3]</a></sup></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ============ SECTION 7 ============ -->
+      <section id="sec-validation">
+        <span class="section-kicker">Section 7</span>
+        <h2>Methodological Developments and Validation Concerns</h2>
+        <p>As the field has grown, attention has shifted from demonstrating that text matters to ensuring that textual measures are valid and that predictive claims survive scrutiny. Several concerns recur.</p>
+
+        <h3>Measurement validity</h3>
+        <p>Dictionary based measures are noisy, because word lists cannot capture context, negation, or sarcasm. Machine learning approaches can be more accurate but require proper validation, since a model that fits its training data may not generalise. The core question is whether a measure captures the construct it claims to capture, a matter of <strong>construct validity</strong> that no amount of statistical fit can settle on its own.</p>
+
+        <h3>Out-of-sample testing</h3>
+        <p>Predictive claims should be evaluated out of sample. The distinction between explanation and prediction is central here: a model can explain variation in a sample without predicting new observations, and only out of sample testing separates the two.<sup><a href="#cite-14">[14]</a></sup> This point, long emphasised in the statistics literature, has become more relevant as machine learning methods with many parameters entered the field.</p>
+
+        <h3>Reproducibility</h3>
+        <p>Code and data sharing remains inconsistent across the literature. Reproducibility is harder for textual work than for numerical work, because corpora are large, licensing restricts redistribution, and preprocessing choices are numerous and often undocumented. Clearer reporting of these choices is needed for results to be verifiable.</p>
+
+        <h3>Human coding benchmarks and look-ahead bias</h3>
+        <p>Human coding provides a valuable benchmark for automated measures, although it is expensive and does not scale. A further concern, sharpened by large language models, is look-ahead bias. Models pre-trained on web data may have seen information from the future relative to the sample period, which can inflate apparent predictive performance in ways that are difficult to detect.<sup><a href="#cite-18">[18]</a></sup></p>
+
+        <div class="callout">
+          <span class="callout-title">Implementation framework</span>
+          <p>Bochkay and co-authors provide a framework for NLP implementation decisions in accounting, covering the choice of source, method, validation strategy, and reporting standards. Their guidance is a useful reference point as the field moves toward more complex models.<sup><a href="#cite-17">[17]</a></sup></p>
+        </div>
+      </section>
+
+      <!-- ============ SECTION 8 ============ -->
+      <section id="sec-trends">
+        <span class="section-kicker">Section 8</span>
+        <h2>Publication and Citation Trends</h2>
+        <p>The compiled dataset behind this brief allows the growth of the field to be quantified. Publication counts rose from about two papers in 2005 to roughly ninety in 2023, a near exponential increase over less than two decades. The most rapid growth occurred between 2017 and 2022, as machine learning methods became accessible to applied researchers and as pre-trained models lowered the technical barrier to entry.</p>
+
+        <div class="metric-row">
+          <div class="metric">
+            <span class="metric-num">~90</span>
+            <span class="metric-label">Papers in top journals in 2023, up from 2 in 2005</span>
+          </div>
+          <div class="metric">
+            <span class="metric-num">61%</span>
+            <span class="metric-label">Share published in accounting journals; 31% in finance journals</span>
+          </div>
+          <div class="metric">
+            <span class="metric-num">~5,700</span>
+            <span class="metric-label">Citations to Loughran and McDonald (2011), the most cited paper<sup><a href="#cite-4">[4]</a></sup></span>
+          </div>
+        </div>
+
+        <p>The split across disciplines is uneven. Accounting journals such as TAR, JAR, JAE, CAR, and RAST publish about 61 per cent of textual analysis papers, while finance journals such as JF, JFE, RFS, and MS account for about 31 per cent, with the remaining share in general interest journals such as JPE and other outlets. This reflects the disclosure oriented questions that dominate the field, which sit naturally within accounting research. In terms of influence, Loughran and McDonald is the most cited paper with roughly 5,700 citations, a reflection of how widely the LM dictionary is used as infrastructure by later work.<sup><a href="#cite-4">[4]</a></sup></p>
+
+        <figure class="chart-figure"><figcaption><strong>Figure 1.</strong> Publication trends of textual analysis papers in top accounting and finance journals from 2005 to 2025, split into the top five accounting journals and the top four finance journals. Data for 2025 are partial. Source: nlp_publication_trends.csv.</figcaption><div id="chart-pub-trends" class="chart-box" role="img" aria-label="Stacked area chart of publication trends by journal group"></div></figure>
+
+        <figure class="chart-figure"><figcaption><strong>Figure 7.</strong> Average annual publications by research phase. The Early phase (2005-2010) gives way to Growth (2011-2016), ML-Adoption (2017-2021), and Deep-Learning (2022-2025), each with a higher average output. Source: nlp_publication_trends.csv.</figcaption><div id="chart-phase-growth" class="chart-box" role="img" aria-label="Line chart of average annual publications by research phase"></div></figure>
+
+        <figure class="chart-figure"><figcaption><strong>Figure 3.</strong> Cumulative distribution of textual analysis publications by journal through 2025. Accounting titles occupy the top of the distribution. Source: nlp_journal_distribution.csv.</figcaption><div id="chart-journal-dist" class="chart-box" role="img" aria-label="Horizontal bar chart of publications by journal"></div></figure>
+
+        <figure class="chart-figure"><figcaption><strong>Figure 4.</strong> The ten most cited textual analysis papers in accounting and finance by Google Scholar citations as of mid 2025. Source: nlp_citation_analysis.csv.</figcaption><div id="chart-citations" class="chart-box" role="img" aria-label="Horizontal bar chart of most cited papers"></div></figure>
+      </section>
+
+      <!-- ============ SECTION 9 ============ -->
+      <section id="sec-future">
+        <span class="section-kicker">Section 9</span>
+        <h2>Emerging Themes and Future Directions</h2>
+        <p>The field is entering a new phase in which generative models are reshaping both what researchers can measure and what they choose to study. Eight themes are likely to define the next several years.</p>
+        <ol>
+          <li><strong>From measurement to prediction.</strong> Deep learning shifts the emphasis from measuring constructs toward predicting outcomes, which raises the importance of out of sample discipline and honest reporting of predictive performance.</li>
+          <li><strong>Generative LLMs as tools and objects of study.</strong> Large language models are both instruments for analysis and phenomena worth studying in their own right, including how markets respond to machine generated disclosure.<sup><a href="#cite-18">[18]</a></sup></li>
+          <li><strong>Multimodal analysis.</strong> Combining text with audio, such as vocal tone in earnings calls, and with images and video promises richer measures of managerial communication than text alone.</li>
+          <li><strong>Cross-lingual and international disclosure.</strong> Extending textual analysis beyond English language filings will open comparative work across regulatory regimes and languages.</li>
+          <li><strong>Real-time textual analysis.</strong> Streaming analysis of disclosure and news supports market surveillance and faster detection of emerging risks.</li>
+          <li><strong>Causal identification with textual instruments.</strong> Text can supply variation for causal designs, provided the exclusion restrictions are defensible.</li>
+          <li><strong>ESG and sustainability disclosure.</strong> The growth of sustainability reporting creates a large and rapidly evolving corpus for textual measurement.</li>
+          <li><strong>Doctoral training.</strong> Accounting PhD programmes need NLP coursework so that the next generation can use these methods with the required rigour.</li>
+        </ol>
+
+        <div class="callout">
+          <span class="callout-title">A note of caution</span>
+          <p>The accessibility of generative models lowers the barrier to entry but also lowers the barrier to error. Prompt sensitivity, hidden look-ahead bias, and cost make careful design and transparent reporting more important, not less, as the tools become easier to use.</p>
+        </div>
+      </section>
+
+      <!-- ============ SECTION 10 ============ -->
+      <section id="sec-conclusion">
+        <span class="section-kicker">Section 10</span>
+        <h2>Conclusion</h2>
+        <p>Textual analysis in accounting and finance has matured from an exploratory idea into a central empirical method. Over twenty years the field established a consistent set of findings: the language of managers, analysts, and the media carries information beyond reported numbers; tone predicts returns and future performance; readability shapes how markets process disclosure; and machine learning methods substantially outperform the dictionary approaches that launched the field. These results hold across sources, methods, and outcomes, which is why the method has become part of the standard empirical toolkit rather than a specialist niche.</p>
+        <p>The maturation of the field is visible in its methods and in its self scrutiny. The progression from general dictionaries to domain specific lists, machine learning, embeddings, transformers, and large language models has widened the range of tractable questions while raising the standard for measurement quality. In parallel, the literature has become more attentive to validity, out of sample testing, reproducibility, and look-ahead bias. This combination of methodological ambition and methodological caution is the mark of a field that takes its own measurement seriously.</p>
+        <p>For future research, three priorities stand out. First, predictive claims should be held to out of sample standards, and code and data should be shared so that results are verifiable. Second, generative models should be treated with the same care as any other instrument, with attention to prompt design, cost, and the risk of information leakage from pre-training. Third, the field should invest in training, so that doctoral students acquire the NLP skills that the next phase of research will demand. If these priorities are met, textual analysis will continue to deliver on its central promise, which is to make the language of capital markets measurable, comparable, and useful.</p>
+      </section>
+
+    </main>
+
+    <footer class="report-foot">
+      <div class="sources">
+        <h2>Sources</h2>
+        <ol>
+          <li id="cite-1">Tetlock, P.C. (2007). "Giving Content to Investor Sentiment: The Role of Media in the Stock Market." <em>Journal of Finance</em>, 62(3), 1139-1168. <a href="https://doi.org/10.1111/j.1540-6261.2007.01232.x">https://doi.org/10.1111/j.1540-6261.2007.01232.x</a></li>
+          <li id="cite-2">Li, F. (2008). "Annual Report Readability, Current Earnings, and Earnings Persistence." <em>Journal of Accounting and Economics</em>, 45(2-3), 221-247. <a href="https://doi.org/10.1016/j.jacceco.2008.02.003">https://doi.org/10.1016/j.jacceco.2008.02.003</a></li>
+          <li id="cite-3">Li, F. (2010). "The Information Content of Forward-Looking Statements in Corporate Filings: A Naive Bayesian Machine Learning Approach." <em>Journal of Accounting Research</em>, 48(5), 1049-1102. <a href="https://doi.org/10.1111/j.1475-679X.2010.00382.x">https://doi.org/10.1111/j.1475-679X.2010.00382.x</a></li>
+          <li id="cite-4">Loughran, T. and McDonald, B. (2011). "When Is a Liability Not a Liability? Textual Analysis, Dictionaries, and 10-Ks." <em>Journal of Finance</em>, 66(1), 35-65. <a href="https://doi.org/10.1111/j.1540-6261.2010.01625.x">https://doi.org/10.1111/j.1540-6261.2010.01625.x</a></li>
+          <li id="cite-5">Brown, S.V. and Tucker, J.W. (2011). "Large-Sample Evidence on Firms' Year-over-Year MD&amp;A Modifications." <em>Journal of Accounting Research</em>, 49(2), 309-346. <a href="https://doi.org/10.1111/j.1475-679X.2010.00396.x">https://doi.org/10.1111/j.1475-679X.2010.00396.x</a></li>
+          <li id="cite-6">Larcker, D.F. and Zakolyukina, A.A. (2012). "Detecting Deceptive Discussions in Conference Calls." <em>Journal of Accounting Research</em>, 50(2), 495-540. <a href="https://doi.org/10.1111/j.1475-679X.2012.00450.x">https://doi.org/10.1111/j.1475-679X.2012.00450.x</a></li>
+          <li id="cite-7">Price, S.M., Doran, J.S., Peterson, D.R. and Bliss, B.A. (2012). "Earnings Conference Calls and Stock Returns: The Incremental Informativeness of Textual Tone." <em>Journal of Banking and Finance</em>, 36(4), 992-1011. <a href="https://doi.org/10.1016/j.jbankfin.2011.11.013">https://doi.org/10.1016/j.jbankfin.2011.11.013</a></li>
+          <li id="cite-8">Loughran, T. and McDonald, B. (2014). "Measuring Readability in Financial Disclosures." <em>Journal of Finance</em>, 69(4), 1643-1671. <a href="https://doi.org/10.1111/jofi.12162">https://doi.org/10.1111/jofi.12162</a></li>
+          <li id="cite-9">Campbell, J.L., Chen, H., Dhaliwal, D.S., Lu, H. and Steele, L.B. (2014). "The Information Content of Mandatory Risk Factor Disclosures in Corporate Filings." <em>Review of Accounting Studies</em>, 19(1), 396-455. <a href="https://doi.org/10.1007/s11142-013-9258-3">https://doi.org/10.1007/s11142-013-9258-3</a></li>
+          <li id="cite-10">Hoberg, G. and Phillips, G. (2010). "Product Market Synergies and Competition in Mergers and Acquisitions: A Text-Based Analysis." <em>Review of Financial Studies</em>, 23(10), 3773-3811. <a href="https://doi.org/10.1093/rfs/hhq053">https://doi.org/10.1093/rfs/hhq053</a></li>
+          <li id="cite-11">Hoberg, G. and Phillips, G. (2016). "Text-Based Network Industries and Endogenous Product Differentiation." <em>Journal of Political Economy</em>, 124(5), 1423-1465. <a href="https://doi.org/10.1086/688176">https://doi.org/10.1086/688176</a></li>
+          <li id="cite-12">Loughran, T. and McDonald, B. (2016). "Textual Analysis in Accounting and Finance: A Survey." <em>Journal of Accounting Research</em>, 54(4), 1187-1230. <a href="https://doi.org/10.1111/1475-679X.12123">https://doi.org/10.1111/1475-679X.12123</a></li>
+          <li id="cite-13">Dyer, T., Lang, M. and Stice-Lawrence, L. (2017). "The Evolution of 10-K Textual Disclosure: Evidence from Latent Dirichlet Allocation." <em>Journal of Accounting and Economics</em>, 64(2-3), 221-245. <a href="https://doi.org/10.1016/j.jacceco.2017.07.002">https://doi.org/10.1016/j.jacceco.2017.07.002</a></li>
+          <li id="cite-14">Gentzkow, M., Kelly, B. and Taddy, M. (2019). "Text as Data." <em>Journal of Economic Literature</em>, 57(3), 535-574. <a href="https://doi.org/10.1257/jel.20181020">https://doi.org/10.1257/jel.20181020</a></li>
+          <li id="cite-15">Jiang, F., Lee, J., Martin, X. and Zhou, G. (2019). "Manager Sentiment and Stock Returns." <em>Journal of Financial Economics</em>, 132(1), 126-149. <a href="https://doi.org/10.1016/j.jfineco.2018.10.001">https://doi.org/10.1016/j.jfineco.2018.10.001</a></li>
+          <li id="cite-16">Huang, A.H., Wang, H. and Yang, Y. (2023). "FinBERT: A Large Language Model for Extracting Information from Financial Text." <em>Contemporary Accounting Research</em>, 40(2), 806-841. <a href="https://doi.org/10.1111/1911-3846.12832">https://doi.org/10.1111/1911-3846.12832</a></li>
+          <li id="cite-17">Bochkay, K., Brown, S.V., Leone, A.J. and Tucker, J.W. (2023). "Textual Analysis in Accounting: What's Next?" <em>Contemporary Accounting Research</em>, 40(2), 765-805. <a href="https://doi.org/10.1111/1911-3846.12825">https://doi.org/10.1111/1911-3846.12825</a></li>
+          <li id="cite-18">de Kok, T. (2025). "ChatGPT for Textual Analysis? How to Use Generative LLMs in Accounting Research." <em>Management Science</em>, 71(9), 7888-7906. <a href="https://doi.org/10.1287/mnsc.2023.03253">https://doi.org/10.1287/mnsc.2023.03253</a></li>
+          <li id="cite-19">Siano, F. and Wysocki, P. (2021). "Transfer Learning and Textual Analysis of Accounting Disclosures: Applying Big Data Methods to Small(er) Datasets." <em>Accounting Horizons</em>, 35(3), 217-244. <a href="https://doi.org/10.2308/HORIZONS-19-161">https://doi.org/10.2308/HORIZONS-19-161</a></li>
+          <li id="cite-20">Feldman, R., Govindaraj, S., Livnat, J. and Segal, B. (2010). "Management's Tone Change, Post Earnings Announcement Drift and Accruals." <em>Review of Accounting Studies</em>, 15(4), 915-953. <a href="https://doi.org/10.1007/s11142-009-9111-x">https://doi.org/10.1007/s11142-009-9111-x</a></li>
+          <li id="cite-21">Kim, A., Muhn, M. and Nikolaev, V. (2024). "Financial Statement Analysis with Large Language Models." Working paper, University of Chicago Booth School of Business. <a href="https://doi.org/10.48550/arXiv.2407.17866">https://doi.org/10.48550/arXiv.2407.17866</a></li>
+          <li id="cite-22">Bao, Y. and Datta, A. (2014). "Simultaneously Discovering and Quantifying Risk Types from Textual Risk Disclosures." <em>Management Science</em>, 60(6), 1371-1391. <a href="https://doi.org/10.1287/mnsc.2014.1930">https://doi.org/10.1287/mnsc.2014.1930</a></li>
+          <li id="cite-23">SEC EDGAR Full-Text Search. U.S. Securities and Exchange Commission. <a href="https://www.sec.gov/search-filings">https://www.sec.gov/search-filings</a></li>
+          <li id="cite-24">Loughran-McDonald Master Dictionary. Software Repository for Accounting and Finance, University of Notre Dame. <a href="https://sraf.nd.edu/loughranmcdonald-master-dictionary/">https://sraf.nd.edu/loughranmcdonald-master-dictionary/</a></li>
+          <li id="cite-25">Hoberg-Phillips Data Library. Tuck School of Business, Dartmouth College. <a href="https://hobergphillips.tuck.dartmouth.edu/">https://hobergphillips.tuck.dartmouth.edu/</a></li>
+        </ol>
+        <p class="foot-note">Prepared by Dr Yuqian Zhang, 10 July 2026. Publication, method, and citation statistics are drawn from the compiled dataset described in the accompanying methodology notes and cross validated against the survey literature. Figures for 2025 are partial.</p>
+      </div>
+    </footer>
+
+  </article>
+
+  <script src="./_shared/js/echarts.min.js"></script>
+<script>
+window.__bmPalette = (function(){var s=getComputedStyle(document.documentElement);return {accent:s.getPropertyValue("--accent").trim(),gold:s.getPropertyValue("--accent2").trim(),muted:s.getPropertyValue("--muted").trim(),rule:s.getPropertyValue("--rule").trim(),ink:s.getPropertyValue("--ink").trim(),bg2:s.getPropertyValue("--bg2").trim(),teal:"#3d6b5b",green:"#2f6b4f",red:"#a33b2f"};})();
+</script>
+
+  <script src="./_shared/js/mermaid.min.js"></script>
+  <script src="assets/charts.js"></script>
+
+</body>
+</html>

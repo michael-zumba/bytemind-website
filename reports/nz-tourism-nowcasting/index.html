@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../assets/bytemind-logo.png?v=2026" rel="icon"/>
+<title>Big Data and AI in Business Operations: Google Trends Nowcasting of New Zealand Tourism Demand and AI Adoption in the Sector</title>
+<style>
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --bg: #faf9f3;
+  --bg2: #fdfcf8;
+  --ink: #1f1e1a;
+  --muted: #6a6760;
+  --rule: #e2ddd1;
+  --accent: #1a3a2a;
+  --accent2: #9e6b1f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Cover */
+.cover {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+.cover h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+.cover .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.cover .meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Headings */
+h2 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--accent);
+}
+h3 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 1.8rem 0 0.75rem;
+}
+h4 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 1.5rem 0 0.5rem;
+}
+
+p { margin: 0.75rem 0; }
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+/* Key point highlight */
+mark.key {
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Callout box */
+.callout {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+.callout.warn {
+  border-left-color: var(--accent2);
+}
+.callout h4 {
+  margin-top: 0;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+}
+
+/* Metric row */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric-card {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric-card .val {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+.metric-card .val.warn { color: var(--accent2); }
+.metric-card .label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 600px;
+  margin: 1.5rem 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+thead th {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+tbody td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+tbody tr:nth-child(even) { background: var(--bg); }
+
+/* Charts */
+.chart-figure {
+  margin: 2rem 0;
+}
+.chart-figure figcaption {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+/* Footer / Sources */
+footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+footer .sources h2 {
+  font-size: 1.2rem;
+}
+footer .sources ol {
+  padding-left: 1.2rem;
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+footer .sources li {
+  margin-bottom: 0.5rem;
+  overflow-wrap: break-word;
+}
+footer .sources .src-title {
+  color: var(--ink);
+}
+footer .sources .src-url {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  color: var(--accent);
+  word-break: break-all;
+}
+footer .sources a {
+  word-break: break-all;
+}
+
+/* Citations */
+sup a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+sup a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cover h1 { font-size: 1.6rem; }
+  .container { padding: 1rem 1rem 2rem; }
+  .metric-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media print {
+  body { background: #fff; font-size: 13px; }
+  .container { max-width: 100%; }
+  .cover { page-break-after: always; }
+  h2 { page-break-before: always; }
+}
+
+
+/* ============================================================
+   Imported-report compatibility layer (ByteMind report standard)
+   ============================================================ */
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Generic report header (used by imported reports) */
+body > .container > header,
+article.page > header.report-head {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+body > .container > header h1,
+article.page > header.report-head h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+body > .container > header .subtitle,
+article.page > header.report-head .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+body > .container > header .meta,
+article.page > header.report-head .meta,
+article.page > header.report-head .byline {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+article.page > header.report-head .byline .sep {
+  margin: 0 0.5rem;
+  color: var(--rule);
+}
+
+/* Abstract block (NLP report) */
+.abstract {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  text-align: left;
+  margin: 1.5rem 0 0;
+}
+.abstract .label {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.abstract p:last-child { margin-bottom: 0; }
+
+/* Executive summary block */
+.exec-summary {
+  margin: 0 0 2rem;
+}
+.exec-summary h2 {
+  margin-top: 0;
+}
+
+/* Key findings */
+.key-findings {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.5rem;
+}
+.key-findings li,
+.finding-item {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Table of contents */
+.toc {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.toc h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+.toc ol {
+  margin: 0.5rem 0 0 1.2rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+.toc ol li {
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+.toc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.toc a:hover { text-decoration: underline; }
+
+/* Chart blocks used by imported reports */
+.chart-container {
+  margin: 1.75rem 0;
+}
+.chart-container h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.chart-container .chart-note,
+.chart-container .data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  font-style: italic;
+  overflow: visible;
+  word-wrap: break-word;
+}
+.chart-box {
+  width: 100%;
+  height: 420px;
+  overflow: visible;
+}
+.chart-box.tall,
+.chart-box-tall {
+  height: 520px;
+}
+.chart-box.short {
+  height: 340px;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+.two-col .chart-container,
+.two-col .chart-figure {
+  margin: 0;
+}
+.two-col .chart-box { height: 380px; }
+
+.two-col > * { min-width: 0; }
+
+/* Keep long reference links from stretching the page on small screens */
+.ref-list a, .ref-list li a, .sources a, .sources li a, ol li a, ul li a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.chart-box, .chart-box-tall, .chart-container, .chart-figure { min-width: 0; }
+
+
+/* Figure captions (NLP report) */
+figure.chart-figure figcaption {
+  font-weight: 600;
+  color: var(--ink);
+}
+figure.chart-figure figcaption strong {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* Mermaid diagram */
+figure.diagram-figure {
+  margin: 2rem 0;
+  padding: 1.5rem 1rem;
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  text-align: center;
+}
+figure.diagram-figure .mermaid { display: inline-block; }
+figure.diagram-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--rule);
+  text-align: left;
+}
+
+/* Section kicker (NLP report) */
+.section-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  display: block;
+  margin-top: 2.5rem;
+  margin-bottom: -1rem;
+}
+.section-kicker + h2 { margin-top: 1.5rem; }
+
+/* Metric displays (NLP and imported reports) */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric .metric-num {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.metric .metric-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+  display: block;
+}
+
+/* Callouts */
+.callout strong { color: var(--accent); }
+.callout-title {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+/* Special tables */
+.gap-table td:first-child,
+.data-table td:first-child {
+  font-weight: 600;
+  min-width: 200px;
+}
+td.num, th.num {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+}
+
+/* References */
+.ref-section {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.ref-section h2,
+.ref-list h2 {
+  margin-top: 0;
+  border-bottom: none;
+}
+.ref-item {
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.ref-item a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
+/* Footer navigation and notes */
+.footer-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2rem;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+.back-link a {
+  color: var(--accent);
+}
+.footer-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0 0;
+  flex-wrap: wrap;
+}
+.footer-nav a {
+  color: var(--accent);
+}
+
+/* Data notes in imported reports */
+.data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.25rem 0 0.75rem;
+  font-style: italic;
+}
+
+/* Inline code */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: var(--bg2);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .key-findings { grid-template-columns: 1fr; }
+  .toc ol { columns: 1; }
+  .two-col { grid-template-columns: 1fr; }
+  body > .container > header h1,
+  article.page > header.report-head h1 { font-size: 1.6rem; }
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>Big Data and AI in Business Operations: Google Trends Nowcasting of New Zealand Tourism Demand and AI Adoption in the Sector</h1>
+<div class="subtitle">A Structured Research Brief</div>
+<p class="meta">Dr Yuqian Zhang &middot; 10 July 2026 &middot; Analytical Brief</p>
+</header>
+<section class="exec-summary">
+<h2>Executive Summary</h2>
+<p>This brief examines whether publicly available search data can nowcast international visitor demand for New Zealand, and it reviews how firms in the New Zealand tourism and hospitality sector are beginning to use artificial intelligence in day-to-day operations. It pairs a quantitative analysis of Google Trends indices against monthly overseas visitor arrivals with a structured review of documented AI adoption, drawing on Stats NZ official statistics, MBIE and AI Forum NZ survey evidence, verified company case studies, and the peer-reviewed nowcasting literature. The aim is to establish a well-defined niche, report what the data actually show, and map the research openings that follow.</p>
+<ul class="key-findings">
+<li>The Google Trends index for "new zealand holiday" correlates at r = 0.71 with monthly visitor arrivals over 2016 to 2026, pointing to genuine nowcasting value.</li>
+<li>The pandemic creates a structural break that inflates the full-sample figure. Within the pre-COVID window the holiday query correlates at r = 0.63, and at r = 0.54 across the post-recovery period.</li>
+<li>Arrivals have returned to 94% of the 2019 peak, with 3.65 million visitors in the year to April 2026 and Australia now supplying a record 1.57 million a year.</li>
+<li>National AI use is high, with 82% of organisations using some form of AI in 2025, yet only 12% have scaled it across operations, and 68% of SMEs have no plans to adopt.</li>
+<li>Documented tourism cases show measurable returns: Air New Zealand moved 25 of 200 identified use cases into production, Sudima Hotels reports a 10 to 15% productivity uplift, and Tourism NZ's GuideGeek attracted more than 200,000 unique users.</li>
+<li>No published study applies Google Trends or other search data to nowcast New Zealand arrivals, despite the series being well suited to it, which defines the central gap this brief targets.</li>
+</ul>
+</section>
+<section id="intro">
+<h2>1. Introduction and Motivation</h2>
+<p>Nowcasting refers to estimating the present or the very recent past before official statistics are released. Choi and Varian (2012) showed that Google search data could improve short-horizon estimates of economic activity, and a substantial tourism literature has since applied search indices to forecast arrivals in destinations from Barbados to Vienna to Hainan. New Zealand has not featured in this work, even though its data environment is close to ideal for the method. This brief occupies that gap. It focuses on search-data nowcasting of international tourism demand in New Zealand, and it complements the quantitative analysis with a review of AI modelling and AI agent adoption across the local tourism and hospitality sector.</p>
+<p>New Zealand is a deliberate choice rather than a convenient one. First, tourism is economically central: total tourism value added is 7.7% of GDP and the sector accounts for roughly 11% of employment once indirect roles are included. Second, Stats NZ publishes high-quality monthly overseas visitor arrivals with verified seasonally adjusted series and clear methodology. Third, Google Trends returns usable search volumes for New Zealand-bound travel queries from 2010 onward, which gives a long window that spans an ordinary business cycle, a border closure, and a full recovery. Fourth, the sector is at an early but accelerating stage of AI adoption, with documented case studies at Air New Zealand, Sudima Hotels, and Tourism NZ that allow claims to be checked against primary sources. Fifth, and decisively, no prior study has combined Google Trends nowcasting of New Zealand arrivals with a review of AI adoption in the same sector.</p>
+<p>The brief proceeds as follows. Section 2 describes the sector and its recovery. Section 3 sets out the data and their limitations. Section 4 reports the search-arrivals relationship and what it means for nowcasting. Section 5 reviews AI adoption through national statistics and firm-level cases. Section 6 discusses the findings, and Sections 7 to 9 set out research opportunities, downloadable data, and references.</p>
+</section>
+<section id="sector">
+<h2>2. The New Zealand Tourism Sector</h2>
+<p>Tourism is one of New Zealand's largest export earners. In the year ended March 2025, total tourism expenditure reached NZD 46.6 billion, split between NZD 28.5 billion in domestic spending and NZD 18.1 billion from international visitors. Direct tourism value added was 4.6% of GDP, and total value added, which adds indirect contributions, was 7.7%. The sector directly employed about 194,600 people and supported roughly 327,900 jobs in total, close to 11% of the workforce. International tourism represented around 17% of the country's exports of goods and services (Stats NZ Tourism Satellite Account, 2025).</p>
+<p>Arrivals are strongly seasonal. The austral summer peak in December and January regularly exceeds half a million monthly arrivals, while the winter trough in May and June falls well below that. This seasonality is stable enough to be predictable, which matters for any nowcasting exercise because a naive seasonal benchmark is already hard to beat. Source markets are concentrated. Australia is the dominant origin and has reached a record of about 1.57 million visitors a year, followed by China, the United States, the United Kingdom, and a longer tail of Asian and European markets.</p>
+<p>The pandemic produced the sharpest discontinuity in the series' history. Monthly arrivals collapsed from 175,521 in March 2020 to 1,721 in April 2020 once the border closed, and they stayed near zero through most of 2020 and 2021, apart from a brief trans-Tasman bubble in 2021. Annual arrivals fell from 3.89 million in 2019 to 206,862 in 2021. The border reopened progressively from early 2022, and recovery has been steady rather than instant. By the year to April 2026 arrivals stood at 3.65 million, about 94% of the 2019 peak, with the most recent months running between 94% and 98% of their 2019 equivalents.</p>
+<div class="chart-container">
+<h4>Figure 1: Monthly Overseas Visitor Arrivals to New Zealand (April 2016 to April 2026)</h4>
+<p class="chart-note">Actual monthly overseas visitor arrivals. The near-zero trough marks the 2020 to 2021 border closure. Source: Stats NZ International Travel (April 2026 release).</p>
+<div class="chart-box tall" id="chart-arrivals-monthly"></div>
+</div>
+<div class="chart-container">
+<h4>Figure 2: Annual Visitor Arrivals, Calendar Years 2017 to 2025</h4>
+<p class="chart-note">Total overseas visitor arrivals by calendar year. Source: Stats NZ International Travel.</p>
+<div class="chart-box" id="chart-arrivals-annual"></div>
+</div>
+<div class="callout">
+<strong>Why the recovery matters for method:</strong> The border closure and reopening act as a natural experiment. They separate the ordinary relationship between search interest and travel from the disruption period when the two decoupled, which lets the analysis test whether the search signal holds across regimes rather than only in aggregate.
+  </div>
+</section>
+<section id="data">
+<h2>3. Data: Sources and Limitations</h2>
+<h3>3.1 Visitor Arrivals</h3>
+<p>The arrivals series is monthly overseas visitor arrivals from Stats NZ International Travel, taken from the April 2026 release and covering April 2016 to April 2026, a span of 121 months. These are actual counts rather than model estimates. Stats NZ also publishes a seasonally adjusted series, which the analysis draws on for interpretation, though the correlations here use the actual counts so that the raw seasonal co-movement between search and travel is visible.</p>
+<h3>3.2 Google Trends</h3>
+<p>Search data come from Google Trends for three queries, "new zealand travel", "new zealand tourism", and "new zealand holiday", each restricted to the New Zealand geography and returned as a monthly index scaled to a peak of 100 across the 2010 to 2026 window. The indices were fetched on 10 July 2026. A simple composite is the average of the three. The holiday query carries most of the intent signal, since it captures people actively planning trips, while the tourism query behaves more like a background term with low and noisy volume.</p>
+<h3>3.3 Data Quirks and Cautions</h3>
+<p>Google Trends data carry well-known features that shape any analysis. The indices are relative, not absolute, so a value of 50 means half the peak search share within the chosen window rather than a fixed number of searches, and adding or removing years can rescale the whole series. Google returns a sample of searches, so repeated pulls of the same query differ slightly, which introduces sampling noise. Low-volume queries are subject to privacy thresholds and can be reported as zero even when a few searches occurred. Window effects mean that comparisons across different date ranges are not directly comparable. Dergiades, Mavragani and Pan (2018) document further biases from multi-language and cross-market search behaviour that are relevant when the searching population is not the travelling population. For a destination like New Zealand, where many prospective visitors search from Australia, the United States, and China rather than from within New Zealand, the choice of geography materially affects the signal, and this brief uses the New Zealand geography as a first, transparent baseline.</p>
+</section>
+<section id="nowcast">
+<h2>4. Google Trends and Tourism Demand Nowcasting</h2>
+<h3>4.1 Search Query Correlation with Arrivals</h3>
+<p>Across the full 2016 to 2026 window, the "new zealand holiday" index correlates with monthly arrivals at r = 0.71. The composite index correlates at r = 0.44, and the bare "new zealand travel" index at only r = 0.14. The holiday query is the strongest single signal because it maps most directly onto trip planning, whereas the travel term picks up unrelated searches and the tourism term is too thin to be reliable. Figure 3 shows the three indices over time, and Figure 4 plots arrivals against the holiday index.</p>
+<div class="chart-container">
+<h4>Figure 3: Google Trends Indices for Three Search Queries (April 2016 to April 2026)</h4>
+<p class="chart-note">Monthly Google Trends index, New Zealand geography, scaled to peak of 100 across the 2010 to 2026 window. Data shown from April 2016 to match the arrivals series. Source: Google Trends (fetched 10 July 2026).</p>
+<div class="chart-box tall" id="chart-google-trends"></div>
+</div>
+<div class="chart-container">
+<h4>Figure 4: Monthly Arrivals against the "new zealand holiday" Google Trends Index</h4>
+<p class="chart-note">Each point is one month. Blue points are pre-COVID (April 2016 to February 2020); green points are recovery (March 2022 to April 2026). Source: Stats NZ; Google Trends.</p>
+<div class="chart-box" id="chart-scatter"></div>
+</div>
+<h3>4.2 Sub-Period Analysis: Pre-COVID, During COVID, Post-Recovery</h3>
+<p>The full-sample figure of 0.71 is partly an artefact of the pandemic, because both search interest and arrivals fell together in 2020 and rose together afterwards, which mechanically strengthens any correlation that spans the break. Splitting the sample tells a more honest story. In the pre-COVID window from April 2016 to February 2020, the holiday query correlates with arrivals at r = 0.63, a solid relationship that reflects genuine seasonal and cyclical co-movement. During the closure from March 2020 to February 2022, the pattern inverts in an instructive way: the "new zealand travel" term spikes at r = 0.91 with the near-zero arrivals, driven by the March 2020 search surge as people scrambled for border and repatriation information rather than by holiday planning. In the recovery from March 2022 onward the holiday query settles at r = 0.37 over the full rebuild and rises to r = 0.54 once the sharpest reopening months are excluded and the series stabilises from April 2023.</p>
+<p>The lesson is that a single headline correlation hides regime dependence. Search interest tracks holiday demand well in normal times, becomes a crisis-information signal during a shock, and then re-establishes a moderate relationship as travel normalises. Any nowcasting model for New Zealand should therefore allow the search coefficient to vary across regimes rather than assume a constant relationship.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Period</th><th>Months</th><th>Holiday query r</th><th>Travel query r</th><th>Composite r</th></tr></thead>
+<tbody>
+<tr><td>Full sample (Apr 2016 to Apr 2026)</td><td>121</td><td>0.71</td><td>0.14</td><td>0.44</td></tr>
+<tr><td>Pre-COVID (Apr 2016 to Feb 2020)</td><td>47</td><td>0.63</td><td>0.01</td><td>0.23</td></tr>
+<tr><td>During COVID (Mar 2020 to Feb 2022)</td><td>24</td><td>0.31</td><td>0.91</td><td>0.86</td></tr>
+<tr><td>Recovery (Mar 2022 to Apr 2026)</td><td>50</td><td>0.37</td><td>-0.21</td><td>-0.04</td></tr>
+<tr><td>Post-recovery (Apr 2023 to Apr 2026)</td><td>37</td><td>0.54</td><td>0.37</td><td>0.43</td></tr>
+</tbody>
+</table></div>
+<h3>4.3 Practical Nowcasting Value and Lead-Time Gains</h3>
+<p>The practical appeal of search data is timing. Stats NZ publishes monthly arrivals with a lag of several weeks after the reference month, whereas Google Trends updates within days. A nowcast that reads the holiday query at the end of a month can estimate that month's arrivals before the official figure lands, and it can update intra-month as fresh search data arrive. For a sector where accommodation providers, airlines, and regional tourism organisations plan capacity and marketing on short cycles, even a two to three week lead can inform staffing and promotion decisions. The gain is largest for turning points, where a purely seasonal benchmark lags behind, and search interest can flag a stronger or weaker season a few weeks early.</p>
+<div class="chart-container">
+<h4>Figure 5: Recovery Path: Monthly Arrivals as a Percentage of the Same Month in 2019</h4>
+<p class="chart-note">Monthly overseas visitor arrivals expressed as a percentage of the same calendar month in 2019, January 2022 to April 2026. Computed from Stats NZ actual counts. Source: Stats NZ International Travel.</p>
+<div class="chart-box" id="chart-arrivals-comparison"></div>
+</div>
+<h3>4.4 Limitations of Search-Based Nowcasting</h3>
+<p>Search-based nowcasting is useful but not decisive on its own. The relationship is regime dependent, as Section 4.2 shows, so a model fitted on one period can mislead in another. The geography choice matters, because the population searching from within New Zealand is not the population arriving from overseas, and a version keyed to source-market geographies would likely lift the signal at the cost of more complex data handling. Search indices are relative and noisy, and revisions to official arrivals can shift the target the model is trying to hit. There is also a genuine risk of spurious correlation when many candidate queries are screened, since some will fit the past by chance. Mikulic and Baumgartner (2025) give a recent critical assessment of these pitfalls in tourism forecasting and caution against treating search data as a substitute for structural understanding. The sensible role for search data is as one input in a combined model alongside seasonal, autoregressive, and booking-based signals, not as a stand-alone predictor.</p>
+</section>
+<section id="ai">
+<h2>5. AI Adoption in New Zealand Tourism Operations</h2>
+<h3>5.1 National AI Adoption Landscape</h3>
+<p>New Zealand firms have adopted AI quickly at the surface level but shallowly in operations. In 2025, 82% of organisations reported using some form of AI, and among users, 91% reported efficiency gains and 77% reported cost savings. Yet only 12% had scaled AI across their operations, which shows a wide gap between experimentation and embedding. Large businesses lead, with 67% using AI in 2024, while capability remains uneven across the workforce: only 34% of workers say they can clearly explain what AI is, and 43% of non-users cite a lack of expertise as the main barrier. MBIE's 2025 AI strategy estimates that generative AI could add up to NZD 76 billion to the economy by 2038 if adoption deepens.</p>
+<div class="chart-container">
+<h4>Figure 6: Selected New Zealand AI Adoption Statistics (2024 to 2025)</h4>
+<p class="chart-note">Share of organisations or workers, various measures. Sources: AI Forum NZ/Kinetics (2025); Datacom and NZIER/Spark cited in MBIE (2025).</p>
+<div class="chart-box" id="chart-ai-adoption"></div>
+</div>
+<h3>5.2 Air New Zealand Case Study</h3>
+<p>Air New Zealand offers the most developed operational example in the sector. By April 2024 the airline had identified around 200 potential AI use cases, completed 37 proofs of concept, and moved 25 of them into production. Applications span crew rostering, network and disruption planning, maintenance, and customer service. The scale of the pipeline, and the fact that a quarter of the identified cases reached production rather than staying in trials, marks Air New Zealand as an outlier relative to the sector average of 12% scaled adoption.</p>
+<h3>5.3 Sudima Hotels Case Study</h3>
+<p>Sudima Hotels illustrates AI adoption in accommodation. The group deployed an AI chatbot that handles about 90% of daily service orders and introduced service robots and back-office automation. Management reports a productivity uplift of 10 to 15% and annual wage savings of roughly NZD 90,000 attributable to the chatbot alone. The case is notable because hospitality is often assumed to resist automation given its high-touch nature, yet routine ordering and enquiry handling proved amenable to it.</p>
+<h3>5.4 Tourism NZ GuideGeek Case Study</h3>
+<p>Tourism New Zealand partnered with the travel-focused generative assistant GuideGeek to provide an AI trip-planning tool for prospective visitors. The service attracted more than 200,000 unique users, giving the destination marketing organisation a direct, conversational channel to inbound travellers and a source of intent data. It is an example of a national body using an AI agent for demand generation rather than internal efficiency, which is a different use pattern from the operational cases above.</p>
+<h3>5.5 Other Firms</h3>
+<p>Adoption extends beyond the headline cases. NIWA has worked on AI-supported environmental and marine monitoring relevant to the Kaikoura whale-watching and coastal tourism setting. Hey Kiwi and similar services use AI to assemble personalised itineraries for independent travellers. Yonder HQ applies AI to reviews and booking operations for activity operators. Book Me Bob provides an AI concierge and enquiry-handling agent for accommodation providers. Together these show a widening base of vendors and operators experimenting with AI agents in front-of-house and booking workflows.</p>
+<h3>5.6 The SME Adoption Gap</h3>
+<p>The sector's structure works against fast, deep adoption. Tourism and hospitality are dominated by small and medium enterprises, and 68% of New Zealand SMEs reported no plans to adopt AI in 2024. The binding constraints are expertise and confidence rather than access to tools, since capable models are cheap and widely available. This leaves a two-speed sector, with a handful of large operators embedding AI while the long tail of small operators remains on the sidelines, and it is precisely this tail that shapes the visitor experience across the regions.</p>
+<div class="chart-container">
+<h4>Table: Documented AI Adoption Case Studies in New Zealand Tourism</h4>
+<p class="chart-note">Verified against primary sources as of 10 July 2026. Sources listed in the References section.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Organisation</th><th>AI or agent use</th><th>Status</th><th>Reported impact</th></tr></thead>
+<tbody>
+<tr><td>Air New Zealand</td><td>Rostering, disruption planning, maintenance, customer service</td><td>25 of 200 use cases in production</td><td>37 proofs of concept; 25 scaled to production (2024)</td></tr>
+<tr><td>Sudima Hotels</td><td>AI chatbot, service robots, back-office automation</td><td>In production</td><td>10 to 15% productivity uplift; ~NZD 90,000 annual wage savings; chatbot covers ~90% of daily orders</td></tr>
+<tr><td>Tourism New Zealand</td><td>GuideGeek generative trip-planning assistant</td><td>Live consumer tool</td><td>200,000+ unique users (2025)</td></tr>
+<tr><td>NIWA (Kaikoura context)</td><td>AI-supported environmental and marine monitoring</td><td>Applied research and pilots</td><td>Supports coastal and marine tourism management</td></tr>
+<tr><td>Hey Kiwi</td><td>AI itinerary personalisation</td><td>Live consumer tool</td><td>Personalised trip planning for independent travellers</td></tr>
+<tr><td>Yonder HQ</td><td>AI for reviews and booking operations</td><td>Vendor product in market</td><td>Automates review and booking workflows for operators</td></tr>
+<tr><td>Book Me Bob</td><td>AI concierge and enquiry-handling agent</td><td>Vendor product in market</td><td>Handles guest enquiries for accommodation providers</td></tr>
+</tbody>
+</table></div>
+</div>
+</section>
+<section id="discussion">
+<h2>6. Discussion</h2>
+<h3>6.1 Predictive Power of Alternative Data versus Traditional Methods</h3>
+<p>Search data are attractive because they are timely, free, and forward looking, but the evidence here counsels realism. In normal conditions the holiday query tracks arrivals well enough to add value at the margin, yet a strong seasonal-plus-autoregressive benchmark is already a demanding standard for New Zealand given the stability of the seasonal cycle. The value of search data is greatest around turning points and during unusual conditions, exactly where traditional models lag. The most defensible position, consistent with the international literature, is that search indices improve a combined model rather than replace established methods, and that their contribution should be measured out of sample against a serious benchmark rather than asserted from in-sample fit.</p>
+<h3>6.2 AI Agent Integration into Day-to-Day Operations</h3>
+<p>The case studies show AI agents moving from novelty to routine in specific, bounded tasks: enquiry handling, itinerary assembly, rostering, and review management. These are tasks with high volume, clear success criteria, and tolerance for human oversight, which is why they scale. Broader integration, where agents coordinate across booking, pricing, staffing, and service recovery, remains rare. The gap between the 82% who use some AI and the 12% who have scaled it reflects this: point solutions are easy, but operational integration requires process redesign, data plumbing, and governance that most operators have not built.</p>
+<h3>6.3 Barriers to Adoption in Tourism SMEs</h3>
+<p>The main barriers are not price or availability. They are expertise, confidence, and time. Small operators lack staff who can scope, procure, and supervise AI tools, and the 34% AI literacy figure among workers underscores how thin the capability base is. For a sector built on small firms, the policy and industry response that matters is capability building, shared services, and vendor products that hide complexity, rather than exhortation to adopt.</p>
+<h3>6.4 Data Privacy, Revision, and Spurious Correlation Risks</h3>
+<p>Three risks deserve explicit attention in any research that follows. Privacy thresholds in Google Trends suppress low-volume queries and can distort thin series, which matters for niche destinations and shoulder seasons. Revision risk means official arrivals can change after first release, so a nowcast is chasing a moving target and should be evaluated against final rather than provisional figures. Spurious correlation is a live danger when many candidate queries are screened against one target, because chance fit is almost guaranteed at some point, and disciplined out-of-sample testing with a pre-registered query set is the appropriate guard.</p>
+</section>
+<section id="gaps">
+<h2>7. Research Opportunities for Business, Marketing, and Analytics Scholars</h2>
+<p>The combination of a clean official series, long-run search data, and an early-stage AI adoption landscape opens several important research paths. The following table identifies specific gaps, the contribution each could make, and suitable outlets.</p>
+<div class="table-wrap"><table class="gap-table">
+<thead>
+<tr><th>Research Gap</th><th>Potential Contribution</th><th>Relevant Journals</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Search-based nowcasting of NZ arrivals</td>
+<td>Build and out-of-sample test a MIDAS or machine-learning nowcast for New Zealand arrivals using source-market search geographies, benchmarked against seasonal and autoregressive models.</td>
+<td>Tourism Management, Annals of Tourism Research, Tourism Economics</td>
+</tr>
+<tr>
+<td>Regime-switching in search-demand links</td>
+<td>Model the shifting search coefficient across pre-COVID, closure, and recovery regimes, quantifying when search data help and when they mislead.</td>
+<td>Tourism Economics, International Journal of Forecasting</td>
+</tr>
+<tr>
+<td>Query selection and bias correction</td>
+<td>Apply and extend Dergiades et al. (2018) bias corrections to multi-market, multi-language search for a small, remote destination.</td>
+<td>Tourism Management, Information Technology and Tourism</td>
+</tr>
+<tr>
+<td>AI agent ROI in hospitality operations</td>
+<td>Field study measuring productivity, cost, and service quality effects of AI concierge and chatbot deployment, building on Sudima-style cases.</td>
+<td>International Journal of Hospitality Management, Cornell Hospitality Quarterly</td>
+</tr>
+<tr>
+<td>Destination marketing with generative agents</td>
+<td>Evaluate whether tools such as GuideGeek shift consideration, conversion, and dispersion of visitors, using the intent data they generate.</td>
+<td>Journal of Travel Research, Tourism Management</td>
+</tr>
+<tr>
+<td>SME AI adoption in tourism</td>
+<td>Survey and experimental work on the expertise and confidence barriers behind the 68% non-adoption figure, and interventions that move the needle.</td>
+<td>Journal of Small Business Management, Tourism Management</td>
+</tr>
+<tr>
+<td>Combining search, booking, and mobility data</td>
+<td>Test whether search indices add incremental value over airline booking and card-spend signals in a combined nowcast.</td>
+<td>International Journal of Forecasting, Annals of Tourism Research</td>
+</tr>
+<tr>
+<td>AI adoption and firm performance in tourism</td>
+<td>Link documented AI deployment to operator-level performance and resilience, exploiting the two-speed adoption pattern.</td>
+<td>Journal of Business Research, Tourism Management</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section id="data-downloads">
+<h2>8. Downloadable Data</h2>
+<p>The CSV data files used to produce the charts and tables in this brief are available for download below. Each file includes commented headers describing variables, sources, and the date of retrieval. Google Trends series are relative indices scaled to a peak of 100 within the 2010 to 2026 window; arrivals are actual counts from Stats NZ.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>File</th><th>Description</th><th>Download</th></tr></thead>
+<tbody>
+<tr><td><code>nz_tourism_arrivals_google_trends.csv</code></td><td>Monthly arrivals and Google Trends indices for three queries (Apr 2016 to Apr 2026)</td><td><a download="" href="data/nz_tourism_arrivals_google_trends.csv">Download CSV</a></td></tr>
+<tr><td><code>nz_tourism_arrivals_annual.csv</code></td><td>Annual overseas visitor arrivals by calendar year (2017 to 2026 partial)</td><td><a download="" href="data/nz_tourism_arrivals_annual.csv">Download CSV</a></td></tr>
+<tr><td><code>nz_tourism_ai_adoption.csv</code></td><td>AI adoption indicators for NZ business and the tourism sector</td><td><a download="" href="data/nz_tourism_ai_adoption.csv">Download CSV</a></td></tr>
+<tr><td><code>nz_tourism_economic_contribution.csv</code></td><td>Tourism Satellite Account measures: expenditure, GDP share, employment</td><td><a download="" href="data/nz_tourism_economic_contribution.csv">Download CSV</a></td></tr>
+<tr><td><code>nz_tourism_academic_literature.csv</code></td><td>Peer-reviewed literature on Google Trends nowcasting and tourism forecasting</td><td><a download="" href="data/nz_tourism_academic_literature.csv">Download CSV</a></td></tr>
+<tr><td><code>nz_tourism_README_methodology.txt</code></td><td>Complete methodology documentation: data sources, file descriptions, limitations, reproducibility</td><td><a download="" href="data/nz_tourism_README_methodology.txt">Download TXT</a></td></tr>
+<tr><td><code>nz_tourism_correlations.csv</code></td><td>Pearson correlations: Google Trends vs arrivals, full sample and sub-periods</td><td><a download="" href="data/nz_tourism_correlations.csv">Download CSV</a></td></tr>
+<tr><td><code>nz_tourism_descriptives.csv</code></td><td>Descriptive statistics for monthly visitor arrivals</td><td><a download="" href="data/nz_tourism_descriptives.csv">Download CSV</a></td></tr>
+<tr><td><code>nz_tourism_annual_computed.csv</code></td><td>Calendar-year arrival totals computed from the monthly series</td><td><a download="" href="data/nz_tourism_annual_computed.csv">Download CSV</a></td></tr>
+<tr><td><code>nz_tourism_replication.py</code></td><td>Complete Python replication script: all correlations, descriptives, and verification checks</td><td><a download="" href="data/nz_tourism_replication.py">Download PY</a></td></tr>
+</tbody>
+</table></div>
+</section>
+<section class="ref-section">
+<h2>References</h2>
+<h3>Academic Literature</h3>
+<div class="ref-item">Artola, C., Pinto, F. and de Pedraza Garcia, P. (2015). Can internet searches forecast tourism inflows? <em>International Journal of Manpower</em>, 36(1), 103-116. <a href="https://doi.org/10.1108/IJM-12-2014-0259">https://doi.org/10.1108/IJM-12-2014-0259</a></div>
+<div class="ref-item">Bangwayo-Skeete, P.F. and Skeete, R.W. (2015). Can Google data improve the forecasting performance of tourist arrivals? A mixed-data sampling approach. <em>Tourism Management</em>, 46, 454-464. <a href="https://doi.org/10.1016/j.tourman.2014.07.014">https://doi.org/10.1016/j.tourman.2014.07.014</a></div>
+<div class="ref-item">Choi, H. and Varian, H.R. (2012). Predicting the present with Google Trends. <em>Economic Record</em>, 88(s1), 2-9. <a href="https://doi.org/10.1111/j.1475-4932.2012.00809.x">https://doi.org/10.1111/j.1475-4932.2012.00809.x</a></div>
+<div class="ref-item">Dergiades, T., Mavragani, E. and Pan, B. (2018). Google Trends and tourists' arrivals: Emerging biases and proposed corrections. <em>Tourism Management</em>, 66, 108-120. <a href="https://doi.org/10.1016/j.tourman.2017.10.014">https://doi.org/10.1016/j.tourman.2017.10.014</a></div>
+<div class="ref-item">Gunter, U. and Onder, I. (2016). Forecasting city arrivals with Google Analytics. <em>Annals of Tourism Research</em>, 61, 199-212. <a href="https://doi.org/10.1016/j.annals.2016.10.007">https://doi.org/10.1016/j.annals.2016.10.007</a></div>
+<div class="ref-item">Havranek, T. and Zeynalov, A. (2021). Forecasting tourist arrivals: Google Trends meets mixed-frequency data. <em>Tourism Economics</em>, 27(1), 129-148. <a href="https://doi.org/10.1177/1354816619879584">https://doi.org/10.1177/1354816619879584</a></div>
+<div class="ref-item">Hopken, W., Eberle, T., Fuchs, M. and Lexhagen, M. (2019). Google Trends data for analysing tourists' online search behaviour and improving demand forecasting. <em>Information Technology and Tourism</em>, 21, 45-62. <a href="https://doi.org/10.1007/s40558-018-0129-4">https://doi.org/10.1007/s40558-018-0129-4</a></div>
+<div class="ref-item">Jackman, M. and Naitram, S. (2015). Nowcasting tourist arrivals in Barbados: Just Google it! <em>Tourism Economics</em>, 21(6), 1309-1313. <a href="https://doi.org/10.5367/te.2014.0402">https://doi.org/10.5367/te.2014.0402</a></div>
+<div class="ref-item">Li, X., Pan, B., Law, R. and Huang, X. (2017). Forecasting tourism demand with composite search index. <em>Tourism Management</em>, 59, 57-66. <a href="https://doi.org/10.1016/j.tourman.2016.07.005">https://doi.org/10.1016/j.tourman.2016.07.005</a></div>
+<div class="ref-item">Mikulic, J. and Baumgartner, N. (2025). Google Trends and Baidu index data in tourism demand forecasting: A critical assessment. <em>Tourism Management</em>, 110, 105164. <a href="https://doi.org/10.1016/j.tourman.2025.105164">https://doi.org/10.1016/j.tourman.2025.105164</a></div>
+<div class="ref-item">Varian, H.R. (2014). Big data: New tricks for econometrics. <em>Journal of Economic Perspectives</em>, 28(2), 3-28. <a href="https://doi.org/10.1257/jep.28.2.3">https://doi.org/10.1257/jep.28.2.3</a></div>
+<div class="ref-item">Wang, P.Q. (2024). Personalizing guest experience with generative AI in the New Zealand hotel industry. <em>Current Issues in Tourism</em>, 28(4), 527-544. <a href="https://doi.org/10.1080/13683500.2023.2300030">https://doi.org/10.1080/13683500.2023.2300030</a></div>
+<div class="ref-item">Yang, X., Pan, B., Evans, J.A. and Lv, B. (2015). Forecasting Chinese tourist volume with search engine data. <em>Tourism Management</em>, 46, 386-397. <a href="https://doi.org/10.1016/j.tourman.2014.07.013">https://doi.org/10.1016/j.tourman.2014.07.013</a></div>
+<h3 style="margin-top: 28px;">Institutional and Industry Sources</h3>
+<div class="ref-item">AI Forum New Zealand / Kinetics (2025). <em>State of AI in New Zealand 2025</em>. <a href="https://aiforum.org.nz/">https://aiforum.org.nz/</a></div>
+<div class="ref-item">ChannelLife / NZ Herald (2024). Sudima Hotels: AI and robotics in New Zealand hospitality. <a href="https://channellife.co.nz/">https://channellife.co.nz/</a></div>
+<div class="ref-item">HRD New Zealand (2024). How Sudima Hotels used an AI chatbot to cut costs and lift service. <a href="https://www.hcamag.com/nz">https://www.hcamag.com/nz</a></div>
+<div class="ref-item">Ministry of Business, Innovation and Employment (2025). <em>New Zealand's Strategy for Artificial Intelligence</em>. <a href="https://www.mbie.govt.nz/">https://www.mbie.govt.nz/</a></div>
+<div class="ref-item">NZIER / Spark (2024). <em>AI Activity in New Zealand: SME Adoption</em>. <a href="https://www.nzier.org.nz/">https://www.nzier.org.nz/</a></div>
+<div class="ref-item">Reseller News NZ (2024, April). Air New Zealand identifies 200 AI use cases. <a href="https://www.reseller.co.nz/">https://www.reseller.co.nz/</a></div>
+<div class="ref-item">Stats NZ (2026). <em>International Travel: April 2026</em>. <a href="https://www.stats.govt.nz/information-releases/international-travel-april-2026/">https://www.stats.govt.nz/information-releases/international-travel-april-2026/</a></div>
+<div class="ref-item">Stats NZ (2025). <em>Tourism Satellite Account: Year Ended March 2025</em>. <a href="https://www.stats.govt.nz/information-releases/tourism-satellite-account-year-ended-march-2025/">https://www.stats.govt.nz/information-releases/tourism-satellite-account-year-ended-march-2025/</a></div>
+<div class="ref-item">Tourism New Zealand / GuideGeek (2025). AI trip-planning tool for prospective visitors. <a href="https://www.tourismnewzealand.com/">https://www.tourismnewzealand.com/</a></div>
+<div class="ref-item">Google Trends (2026). Search interest for "new zealand travel", "new zealand tourism", and "new zealand holiday", New Zealand geography (fetched 10 July 2026). <a href="https://trends.google.com/trends/">https://trends.google.com/trends/</a></div>
+</section>
+<footer>
+<p>Dr Yuqian Zhang | Research Brief: Google Trends Nowcasting of New Zealand Tourism Demand and AI Adoption | 10 July 2026</p>
+<p>Data files are available in the accompanying data directory. Google Trends indices are relative and were retrieved on 10 July 2026.</p>
+</footer>
+</div>
+<script src="./_shared/js/echarts.min.js"></script>
+<script>
+window.__bmPalette = (function(){var s=getComputedStyle(document.documentElement);return {accent:s.getPropertyValue("--accent").trim(),gold:s.getPropertyValue("--accent2").trim(),muted:s.getPropertyValue("--muted").trim(),rule:s.getPropertyValue("--rule").trim(),ink:s.getPropertyValue("--ink").trim(),bg2:s.getPropertyValue("--bg2").trim(),teal:"#3d6b5b",green:"#2f6b4f",red:"#a33b2f"};})();
+</script>
+<script>
+(function() {
+  var colors = [__bmPalette.accent,__bmPalette.teal,__bmPalette.green,__bmPalette.gold,__bmPalette.red,__bmPalette.teal,__bmPalette.red];
+  function initChart(id) {
+    var el = document.getElementById(id);
+    if (!el) return null;
+    var c = echarts.init(el, null, { renderer: 'svg' });
+    window.addEventListener('resize', function() { c.resize(); });
+    return c;
+  }
+
+  var MONTHS = ["2016-04","2016-05","2016-06","2016-07","2016-08","2016-09","2016-10","2016-11","2016-12","2017-01","2017-02","2017-03","2017-04","2017-05","2017-06","2017-07","2017-08","2017-09","2017-10","2017-11","2017-12","2018-01","2018-02","2018-03","2018-04","2018-05","2018-06","2018-07","2018-08","2018-09","2018-10","2018-11","2018-12","2019-01","2019-02","2019-03","2019-04","2019-05","2019-06","2019-07","2019-08","2019-09","2019-10","2019-11","2019-12","2020-01","2020-02","2020-03","2020-04","2020-05","2020-06","2020-07","2020-08","2020-09","2020-10","2020-11","2020-12","2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12","2023-01","2023-02","2023-03","2023-04","2023-05","2023-06","2023-07","2023-08","2023-09","2023-10","2023-11","2023-12","2024-01","2024-02","2024-03","2024-04","2024-05","2024-06","2024-07","2024-08","2024-09","2024-10","2024-11","2024-12","2025-01","2025-02","2025-03","2025-04","2025-05","2025-06","2025-07","2025-08","2025-09","2025-10","2025-11","2025-12","2026-01","2026-02","2026-03","2026-04"];
+  var ARR = [256685,193643,196223,237872,221181,245089,260246,333598,494193,381068,380034,343799,311866,209170,230088,246945,233991,252746,270515,360136,513349,379228,423456,388327,283910,222079,212245,250523,246682,258155,283568,385789,529255,399346,417934,378270,307409,219331,213536,255585,251131,261770,283834,372108,528219,410778,372745,175521,1721,2189,3521,3481,4782,5519,5073,5116,5904,5448,5297,4639,31931,57605,51590,30209,2676,2310,3687,5309,6161,4033,5235,28624,54303,72755,94648,134175,129753,151270,161636,232684,364716,266432,268704,266131,221271,160335,178426,213806,206783,224909,225979,303429,418869,326427,362836,340306,225024,179665,185294,221837,214271,226889,240195,321216,469842,370238,354408,311808,267271,190593,186753,236550,230292,248571,262731,347577,502640,385426,408142,358911,288546];
+  var TRAVEL = [31,30,27,26,25,30,29,26,26,31,29,29,31,28,25,30,28,30,25,26,25,32,29,28,25,25,25,25,25,24,23,23,22,28,28,26,22,21,22,24,25,23,21,22,22,27,35,72,18,22,20,19,18,13,15,14,16,18,18,20,25,22,27,29,21,18,19,25,19,23,30,37,41,41,37,36,35,32,26,23,22,30,25,26,24,24,22,21,21,20,19,21,17,22,21,18,18,19,18,19,17,18,16,16,17,20,21,20,17,19,19,22,18,19,18,28,36,35,31,46,44];
+  var TOURISM = [11,14,12,11,16,12,10,9,7,8,9,11,10,13,9,10,10,9,10,9,7,9,10,10,9,11,8,9,11,9,9,8,6,7,10,10,8,11,9,8,7,8,8,7,5,6,9,9,9,13,10,8,8,6,6,5,3,3,6,4,4,4,4,3,3,1,2,3,2,2,4,5,4,5,4,4,7,4,4,3,3,3,5,5,3,5,4,3,5,4,3,3,2,3,5,4,4,5,4,4,5,4,4,3,2,3,5,6,5,5,5,5,5,3,4,4,4,5,6,8,7];
+  var HOLIDAY = [24,21,20,19,18,22,22,22,28,34,26,22,25,18,17,19,17,19,20,22,25,35,27,26,23,19,15,17,18,18,20,19,25,29,23,18,20,15,14,14,14,16,18,18,22,26,21,18,11,13,14,14,10,12,13,11,17,16,11,10,14,9,9,8,5,6,8,7,10,16,11,14,17,15,18,12,13,28,17,15,17,24,18,21,22,16,17,17,13,15,18,17,17,24,17,18,15,14,15,13,11,14,14,13,16,23,18,17,16,13,15,11,11,13,15,18,23,24,19,23,25];
+
+  var SCATTER_PRE = [[24,256685],[21,193643],[20,196223],[19,237872],[18,221181],[22,245089],[22,260246],[22,333598],[28,494193],[34,381068],[26,380034],[22,343799],[25,311866],[18,209170],[17,230088],[19,246945],[17,233991],[19,252746],[20,270515],[22,360136],[25,513349],[35,379228],[27,423456],[26,388327],[23,283910],[19,222079],[15,212245],[17,250523],[18,246682],[18,258155],[20,283568],[19,385789],[25,529255],[29,399346],[23,417934],[18,378270],[20,307409],[15,219331],[14,213536],[14,255585],[14,251131],[16,261770],[18,283834],[18,372108],[22,528219],[26,410778],[21,372745]];
+  var SCATTER_REC = [[14,28624],[17,54303],[15,72755],[18,94648],[12,134175],[13,129753],[28,151270],[17,161636],[15,232684],[17,364716],[24,266432],[18,268704],[21,266131],[22,221271],[16,160335],[17,178426],[17,213806],[13,206783],[15,224909],[18,225979],[17,303429],[17,418869],[24,326427],[17,362836],[18,340306],[15,225024],[14,179665],[15,185294],[13,221837],[11,214271],[14,226889],[14,240195],[13,321216],[16,469842],[23,370238],[18,354408],[17,311808],[16,267271],[13,190593],[15,186753],[11,236550],[11,230292],[13,248571],[15,262731],[18,347577],[23,502640],[24,385426],[19,408142],[23,358911],[25,288546]];
+
+  // Chart 1: Monthly arrivals
+  (function() {
+    var c = initChart('chart-arrivals-monthly');
+    if (!c) return;
+    c.setOption({ animation: false,
+      tooltip: { trigger: 'axis' },
+      grid: { left: 70, right: 30, top: 30, bottom: 50 },
+      xAxis: {
+        type: 'category',
+        data: MONTHS,
+        axisLabel: {
+          fontSize: 10,
+          interval: function(idx) { return idx % 6 === 0; },
+          rotate: 45
+        }
+      },
+      yAxis: { type: 'value', name: 'Arrivals', axisLabel: { formatter: function(v) { return (v/1000) + 'k'; } } },
+      series: [{
+        name: 'Monthly arrivals',
+        type: 'line',
+        data: ARR,
+        smooth: false,
+        showSymbol: false,
+        lineStyle: { color: __bmPalette.accent, width: 2 },
+        itemStyle: { color: __bmPalette.accent },
+        areaStyle: { color: 'rgba(26,58,42,0.08)' }
+      }]
+    });
+  })();
+
+  // Chart 2: Annual arrivals
+  (function() {
+    var c = initChart('chart-arrivals-annual');
+    if (!c) return;
+    c.setOption({ animation: false,
+      tooltip: { trigger: 'axis', formatter: function(p) { return p[0].name + ': ' + p[0].value.toLocaleString() + ' visitors'; } },
+      grid: { left: 70, right: 30, top: 30, bottom: 40 },
+      xAxis: { type: 'category', data: ['2017','2018','2019','2020','2021','2022','2023','2024','2025'] },
+      yAxis: { type: 'value', name: 'Arrivals', axisLabel: { formatter: function(v) { return (v/1000000) + 'M'; } } },
+      series: [{
+        type: 'bar',
+        data: [3733707,3863217,3888473,996350,206862,1433832,2955074,3313802,3509432],
+        itemStyle: { color: __bmPalette.accent },
+        label: { show: true, position: 'top', fontSize: 9, formatter: function(p) { return (p.value/1000000).toFixed(2) + 'M'; } }
+      }]
+    });
+  })();
+
+  // Chart 3: Google Trends indices
+  (function() {
+    var c = initChart('chart-google-trends');
+    if (!c) return;
+    c.setOption({ animation: false,
+      tooltip: { trigger: 'axis' },
+      legend: { data: ['new zealand travel','new zealand tourism','new zealand holiday'], top: 5 },
+      grid: { left: 55, right: 30, top: 45, bottom: 50 },
+      xAxis: {
+        type: 'category',
+        data: MONTHS,
+        axisLabel: {
+          fontSize: 10,
+          interval: function(idx) { return idx % 6 === 0; },
+          rotate: 45
+        }
+      },
+      yAxis: { type: 'value', name: 'Search index (0-100)', max: 80 },
+      series: [
+        { name: 'new zealand travel', type: 'line', data: TRAVEL, showSymbol: false, smooth: true, lineStyle: { color: __bmPalette.accent, width: 2 }, itemStyle: { color: __bmPalette.accent } },
+        { name: 'new zealand tourism', type: 'line', data: TOURISM, showSymbol: false, smooth: true, lineStyle: { color: __bmPalette.green, width: 2 }, itemStyle: { color: __bmPalette.green } },
+        { name: 'new zealand holiday', type: 'line', data: HOLIDAY, showSymbol: false, smooth: true, lineStyle: { color: __bmPalette.gold, width: 2 }, itemStyle: { color: __bmPalette.gold } }
+      ]
+    });
+  })();
+
+  // Chart 4: Scatter arrivals vs holiday index
+  (function() {
+    var c = initChart('chart-scatter');
+    if (!c) return;
+    c.setOption({ animation: false,
+      tooltip: {
+        trigger: 'item',
+        formatter: function(p) { return 'Holiday index: ' + p.value[0] + '<br/>Arrivals: ' + p.value[1].toLocaleString(); }
+      },
+      legend: { data: ['Pre-COVID (2016-2020)','Recovery (2022-2026)'], top: 5 },
+      grid: { left: 70, right: 30, top: 45, bottom: 50 },
+      xAxis: { type: 'value', name: 'Google Trends "new zealand holiday" index', min: 0, max: 60, nameLocation: 'middle', nameGap: 30 },
+      yAxis: { type: 'value', name: 'Monthly arrivals', axisLabel: { formatter: function(v) { return (v/1000) + 'k'; } } },
+      series: [
+        { name: 'Pre-COVID (2016-2020)', type: 'scatter', data: SCATTER_PRE, symbolSize: 9, itemStyle: { color: 'rgba(26,58,42,0.7)' } },
+        { name: 'Recovery (2022-2026)', type: 'scatter', data: SCATTER_REC, symbolSize: 9, itemStyle: { color: 'rgba(47,107,79,0.7)' } }
+      ]
+    });
+  })();
+
+  // Chart 5: NZ AI adoption statistics
+  (function() {
+    var c = initChart('chart-ai-adoption');
+    if (!c) return;
+    c.setOption({ animation: false,
+      tooltip: { trigger: 'axis', formatter: '{b}: {c}%' },
+      grid: { left: 220, right: 60, top: 40, bottom: 30 },
+      xAxis: { type: 'value', name: '%', max: 100 },
+      yAxis: {
+        type: 'category',
+        inverse: true,
+        data: ['Organisations using AI (2025)','AI efficiency gains (users)','AI cost savings (users)','SMEs not planning AI (2024)','Large businesses using AI (2024)','AI scaled across ops (2025)'],
+        axisLabel: { fontSize: 11 }
+      },
+      series: [{
+        type: 'bar',
+        data: [
+          { value: 82, itemStyle: { color: __bmPalette.accent } },
+          { value: 91, itemStyle: { color: __bmPalette.green } },
+          { value: 77, itemStyle: { color: __bmPalette.green } },
+          { value: 68, itemStyle: { color: __bmPalette.red } },
+          { value: 67, itemStyle: { color: __bmPalette.teal } },
+          { value: 12, itemStyle: { color: __bmPalette.gold } }
+        ],
+        label: { show: true, position: 'right', formatter: '{c}%', fontSize: 11, fontWeight: 'bold' },
+        barWidth: '55%'
+      }]
+    });
+  })();
+
+  // Chart 6: Arrivals vs 2019 as percentage
+  (function() {
+    var c = initChart('chart-arrivals-comparison');
+    if (!c) return;
+    var labels = ['2022-01','2022-02','2022-03','2022-04','2022-05','2022-06','2022-07','2022-08','2022-09','2022-10','2022-11','2022-12','2023-01','2023-02','2023-03','2023-04','2023-05','2023-06','2023-07','2023-08','2023-09','2023-10','2023-11','2023-12','2024-01','2024-02','2024-03','2024-04','2024-05','2024-06','2024-07','2024-08','2024-09','2024-10','2024-11','2024-12','2025-01','2025-02','2025-03','2025-04','2025-05','2025-06','2025-07','2025-08','2025-09','2025-10','2025-11','2025-12','2026-01','2026-02','2026-03','2026-04'];
+    var vals = [1.0,1.3,7.6,17.7,33.2,44.3,52.5,51.7,57.8,56.9,62.5,69.0,67.2,64.3,70.4,72.0,73.1,83.6,83.7,82.3,85.9,79.6,81.5,79.3,81.7,86.8,90.0,73.2,81.9,86.8,86.8,85.3,86.7,84.6,86.3,88.9,92.7,84.8,82.4,86.9,86.9,87.5,92.6,91.7,95.0,92.6,93.4,95.2,96.5,97.7,94.9,93.9];
+    c.setOption({ animation: false,
+      tooltip: { trigger: 'axis', formatter: function(p) { return p[0].name + ': ' + p[0].value + '% of 2019'; } },
+      grid: { left: 55, right: 30, top: 30, bottom: 50 },
+      xAxis: {
+        type: 'category',
+        data: labels,
+        axisLabel: {
+          fontSize: 10,
+          interval: function(idx) { return idx % 4 === 0; },
+          rotate: 45
+        }
+      },
+      yAxis: { type: 'value', name: '% of 2019', max: 110 },
+      series: [{
+        name: '% of 2019',
+        type: 'line',
+        data: vals,
+        smooth: true,
+        showSymbol: false,
+        lineStyle: { color: __bmPalette.green, width: 3 },
+        itemStyle: { color: __bmPalette.green },
+        areaStyle: { color: 'rgba(47,107,79,0.08)' },
+        markLine: {
+          silent: true,
+          symbol: 'none',
+          lineStyle: { color: __bmPalette.red, type: 'dashed' },
+          data: [{ yAxis: 100, label: { formatter: '2019 level', position: 'insideEndTop', fontSize: 10 } }]
+        }
+      }]
+    });
+  })();
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../assets/bytemind-logo.png?v=2026" rel="icon"/>
+<title>AI Tokens as an Emerging Asset Class: Economic Logic, Market Evidence, and Accounting Implications</title>
+<style>
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --bg: #faf9f3;
+  --bg2: #fdfcf8;
+  --ink: #1f1e1a;
+  --muted: #6a6760;
+  --rule: #e2ddd1;
+  --accent: #1a3a2a;
+  --accent2: #9e6b1f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Cover */
+.cover {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+.cover h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+.cover .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.cover .meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Headings */
+h2 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--accent);
+}
+h3 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 1.8rem 0 0.75rem;
+}
+h4 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 1.5rem 0 0.5rem;
+}
+
+p { margin: 0.75rem 0; }
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+/* Key point highlight */
+mark.key {
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Callout box */
+.callout {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+.callout.warn {
+  border-left-color: var(--accent2);
+}
+.callout h4 {
+  margin-top: 0;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+}
+
+/* Metric row */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric-card {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric-card .val {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+.metric-card .val.warn { color: var(--accent2); }
+.metric-card .label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 600px;
+  margin: 1.5rem 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+thead th {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+tbody td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+tbody tr:nth-child(even) { background: var(--bg); }
+
+/* Charts */
+.chart-figure {
+  margin: 2rem 0;
+}
+.chart-figure figcaption {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+/* Footer / Sources */
+footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+footer .sources h2 {
+  font-size: 1.2rem;
+}
+footer .sources ol {
+  padding-left: 1.2rem;
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+footer .sources li {
+  margin-bottom: 0.5rem;
+  overflow-wrap: break-word;
+}
+footer .sources .src-title {
+  color: var(--ink);
+}
+footer .sources .src-url {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  color: var(--accent);
+  word-break: break-all;
+}
+footer .sources a {
+  word-break: break-all;
+}
+
+/* Citations */
+sup a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+sup a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cover h1 { font-size: 1.6rem; }
+  .container { padding: 1rem 1rem 2rem; }
+  .metric-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media print {
+  body { background: #fff; font-size: 13px; }
+  .container { max-width: 100%; }
+  .cover { page-break-after: always; }
+  h2 { page-break-before: always; }
+}
+
+
+/* ============================================================
+   Imported-report compatibility layer (ByteMind report standard)
+   ============================================================ */
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Generic report header (used by imported reports) */
+body > .container > header,
+article.page > header.report-head {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+body > .container > header h1,
+article.page > header.report-head h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+body > .container > header .subtitle,
+article.page > header.report-head .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+body > .container > header .meta,
+article.page > header.report-head .meta,
+article.page > header.report-head .byline {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+article.page > header.report-head .byline .sep {
+  margin: 0 0.5rem;
+  color: var(--rule);
+}
+
+/* Abstract block (NLP report) */
+.abstract {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  text-align: left;
+  margin: 1.5rem 0 0;
+}
+.abstract .label {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.abstract p:last-child { margin-bottom: 0; }
+
+/* Executive summary block */
+.exec-summary {
+  margin: 0 0 2rem;
+}
+.exec-summary h2 {
+  margin-top: 0;
+}
+
+/* Key findings */
+.key-findings {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.5rem;
+}
+.key-findings li,
+.finding-item {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Table of contents */
+.toc {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.toc h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+.toc ol {
+  margin: 0.5rem 0 0 1.2rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+.toc ol li {
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+.toc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.toc a:hover { text-decoration: underline; }
+
+/* Chart blocks used by imported reports */
+.chart-container {
+  margin: 1.75rem 0;
+}
+.chart-container h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.chart-container .chart-note,
+.chart-container .data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  font-style: italic;
+  overflow: visible;
+  word-wrap: break-word;
+}
+.chart-box {
+  width: 100%;
+  height: 420px;
+  overflow: visible;
+}
+.chart-box.tall,
+.chart-box-tall {
+  height: 520px;
+}
+.chart-box.short {
+  height: 340px;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+.two-col .chart-container,
+.two-col .chart-figure {
+  margin: 0;
+}
+.two-col .chart-box { height: 380px; }
+
+.two-col > * { min-width: 0; }
+
+/* Keep long reference links from stretching the page on small screens */
+.ref-list a, .ref-list li a, .sources a, .sources li a, ol li a, ul li a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.chart-box, .chart-box-tall, .chart-container, .chart-figure { min-width: 0; }
+
+
+/* Figure captions (NLP report) */
+figure.chart-figure figcaption {
+  font-weight: 600;
+  color: var(--ink);
+}
+figure.chart-figure figcaption strong {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* Mermaid diagram */
+figure.diagram-figure {
+  margin: 2rem 0;
+  padding: 1.5rem 1rem;
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  text-align: center;
+}
+figure.diagram-figure .mermaid { display: inline-block; }
+figure.diagram-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--rule);
+  text-align: left;
+}
+
+/* Section kicker (NLP report) */
+.section-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  display: block;
+  margin-top: 2.5rem;
+  margin-bottom: -1rem;
+}
+.section-kicker + h2 { margin-top: 1.5rem; }
+
+/* Metric displays (NLP and imported reports) */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric .metric-num {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.metric .metric-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+  display: block;
+}
+
+/* Callouts */
+.callout strong { color: var(--accent); }
+.callout-title {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+/* Special tables */
+.gap-table td:first-child,
+.data-table td:first-child {
+  font-weight: 600;
+  min-width: 200px;
+}
+td.num, th.num {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+}
+
+/* References */
+.ref-section {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.ref-section h2,
+.ref-list h2 {
+  margin-top: 0;
+  border-bottom: none;
+}
+.ref-item {
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.ref-item a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
+/* Footer navigation and notes */
+.footer-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2rem;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+.back-link a {
+  color: var(--accent);
+}
+.footer-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0 0;
+  flex-wrap: wrap;
+}
+.footer-nav a {
+  color: var(--accent);
+}
+
+/* Data notes in imported reports */
+.data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.25rem 0 0.75rem;
+  font-style: italic;
+}
+
+/* Inline code */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: var(--bg2);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .key-findings { grid-template-columns: 1fr; }
+  .toc ol { columns: 1; }
+  .two-col { grid-template-columns: 1fr; }
+  body > .container > header h1,
+  article.page > header.report-head h1 { font-size: 1.6rem; }
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>AI Tokens as an Emerging Asset Class: Economic Logic, Market Evidence, and Accounting Implications</h1>
+<div class="subtitle">A Research Brief on Token-Based Access to AI Computation and Its Implications for Accounting, Finance, and Economics</div>
+<p class="meta">Dr Yuqian Zhang &middot; 23 July 2026 &middot; Analytical Brief</p>
+</header>
+<section class="exec-summary">
+<h2>Executive Summary</h2>
+<p>This research brief examines the emergence of AI-specific crypto tokens as an investable asset class, tracing their economic foundations, market evolution, corporate adoption patterns, and the accounting and regulatory frameworks that govern their financial reporting. AI tokens, which grant access to decentralised AI computation, model inference, and data services, have grown from a combined market capitalisation of USD 0.2 billion in 2020 to approximately USD 25 billion in early 2026. The brief develops an analytical framework that positions AI tokens at the intersection of three major transformations: the AI computing boom, the tokenisation of real-world assets, and the maturation of digital asset accounting standards under FASB ASU 2023-08 and IFRS.</p>
+<ul class="key-findings">
+<li>AI token sector market capitalisation grew from USD 0.2 billion (Q1 2020) to approximately USD 25 billion (Q1 2026), with significant volatility reflecting the broader crypto cycle.</li>
+<li>The economics of AI computation through token-based access parallels the historical role of electricity as a general-purpose technology, but with key differences: AI tokens are borderless, storable, and serve a dual role as medium of exchange for compute and store of value.</li>
+<li>FASB ASU 2023-08, effective December 2024 for public companies, replaces the impairment-only model with fair value measurement for digital assets, fundamentally changing the accounting treatment of AI token holdings.</li>
+<li>Grayscale's Decentralized AI Fund (TAO 30.1 percent, NEAR 28.5 percent, RNDR 17.7 percent) and venture capital funding reaching USD 4.9 billion in Q2 2025 signal mainstream institutional interest.</li>
+<li>AI token price volatility is materially higher than traditional asset classes: annualised volatility of 85-110 percent for major AI tokens, compared with approximately 15 percent for the S&amp;P 500 and 60 percent for Bitcoin.</li>
+<li>The convergence of EU AI Act, MiCA, and US BIS chip export controls creates a novel regulatory landscape with compliance challenges for firms holding or issuing AI tokens.</li>
+<li>Approximately 9 percent of S&amp;P 500 companies mentioned digital assets in their 2024 10-K filings, up from less than 2 percent in 2020, though most disclosures appear in Risk Factors rather than financial statements.</li>
+<li>AI agent tokens represent a rapidly emerging subcategory, with Virtuals Protocol launching over 40,000 tokenised AI agents and the sector reaching an estimated USD 15.3 billion market capitalisation.</li>
+<li>Academic research on AI tokens remains nascent, with fewer than 5 publications in ABS 4/4* or ABDC-A* journals, presenting substantial research opportunities in accounting classification, fair value measurement, and governance.</li>
+<li>The central accounting question, whether AI tokens held for accessing computational services should be classified differently from those held for investment, remains unresolved under both US GAAP and IFRS.</li>
+</ul>
+</section>
+<section class="toc">
+<h2>Table of Contents</h2>
+<ol>
+<li><a href="#intro">Introduction and Motivation</a></li>
+<li><a href="#economics">The Economics of AI Computation</a></li>
+<li><a href="#markets">AI Token Markets</a></li>
+<li><a href="#corporate">Corporate Adoption and Investment</a></li>
+<li><a href="#accounting">Accounting Classification and Measurement</a></li>
+<li><a href="#reporting">Financial Reporting and Disclosure</a></li>
+<li><a href="#valuation">Valuation and Risk</a></li>
+<li><a href="#regulation">Regulatory and Governance Landscape</a></li>
+<li><a href="#themes">Hot Themes and Emerging Areas</a></li>
+<li><a href="#research">Research Gaps and Opportunities</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+</section>
+<section id="intro">
+<h2>1. Introduction and Motivation</h2>
+<p>The metaphor of electricity has long been used to explain transformative technologies. In the early twentieth century, electricity reconfigured industrial organisation by decoupling energy production from point of use, enabling the assembly line, the modern factory, and eventually the digital age. Today, a parallel transition is unfolding around artificial intelligence computation. Access to large-scale AI training and inference is becoming the binding constraint on productivity growth across industries, and the mechanisms for allocating and pricing that access are evolving rapidly. Among the most consequential developments is the emergence of AI-specific crypto tokens that grant their holders rights to computational resources.</p>
+<p>This research brief argues that AI tokens are no longer a niche curiosity within the broader cryptocurrency market. They represent an emerging asset class with real economic substance: tokens that give access to decentralised GPU clusters, model inference endpoints, training infrastructure, and data marketplaces. The sector has grown from a combined market capitalisation of approximately USD 0.2 billion in 2020 to roughly USD 25 billion at its peak in early 2026, driven by the global GPU shortage, the maturation of decentralised compute protocols, and growing institutional recognition of tokens as an investable asset. The scale of the underlying demand is considerable: Nvidia's Hopper and Blackwell GPU generations remain sold out through 2026, Anthropic is projected to reach USD 44 billion in annualised revenue by late 2026, and the total addressable market for decentralised AI compute has been estimated at USD 9 billion to USD 100 billion by 2032.</p>
+<p>For accounting and finance scholars, AI tokens raise important questions about asset classification, fair value measurement, corporate disclosure, and governance. The adoption of FASB ASU 2023-08, which replaces the impairment-only accounting model for digital assets with fair value measurement through net income, fundamentally changes the financial reporting of AI token holdings. The IFRS treatment under IAS 38 and IAS 2 remains unsettled, and the IASB added a research project on digital assets to its agenda in 2024. Moreover, the unique characteristic of many AI tokens (that they are held not purely for investment but also to access AI services) raises foundational questions about whether the existing accounting categories of financial instrument, intangible asset, and prepaid expense adequately capture their economic substance.</p>
+<p>The central thesis of this brief is that AI tokens sit at the intersection of three major structural trends: the AI computing boom, the tokenisation of real-world assets, and the maturation of accounting and regulatory frameworks for digital assets. Understanding their economic logic, market behaviour, and accounting implications is essential for researchers, practitioners, and policymakers navigating the convergence of artificial intelligence and digital finance. This brief proceeds as follows: Section 2 develops the economic analogy between electricity and AI computation; Section 3 documents AI token market structure and evolution; Section 4 examines corporate adoption; Section 5 analyses accounting classification challenges; Section 6 reviews financial reporting and disclosure; Section 7 addresses valuation and risk; Section 8 surveys the regulatory landscape; Section 9 covers emerging themes; Section 10 identifies research opportunities; and Section 11 concludes.</p>
+<div class="chart-container">
+<h4>Figure 1: AI Token Sector Market Capitalisation (2020-2026)</h4>
+<p class="chart-note">Total market capitalisation of AI and Big Data crypto tokens in USD billions, quarterly snapshots. Source: CoinMarketCap AI &amp; Big Data category and CoinGecko.</p>
+<div class="chart-box tall" id="chart1"></div>
+</div>
+</section>
+<section id="economics">
+<h2>2. The Economics of AI Computation</h2>
+<h3>2.1 The Electricity Parallel</h3>
+<p>The comparison between AI computation and electricity is more than a metaphor. Both are general-purpose technologies: inputs that enable productivity improvements across virtually every sector of the economy. Both exhibit strong economies of scale in production, with unit costs declining as generating or computing capacity increases. Both require substantial physical infrastructure (power plants and transmission lines for electricity; data centres, GPU clusters, and fibre-optic networks for AI). And both have historically been organised around centralised provision, with regulated utilities or large cloud providers controlling distribution and pricing.</p>
+<p>There are critical differences, however, that make AI tokens a new economic phenomenon. Electricity cannot be stored in economically meaningful quantities; it must be generated, transmitted, and consumed in real time. AI computation, in contrast, is storable in the economic sense: tokens representing future compute access can be held, traded, and used when needed. Electricity is constrained by national borders and physical transmission infrastructure; AI tokens are inherently borderless, accessible to anyone with an internet connection and the requisite tokens. Electricity is almost exclusively a medium of exchange (traded for currency and consumed); AI tokens function simultaneously as a medium of exchange (for compute services), a store of value (if held speculatively), and, in some networks, a governance instrument.</p>
+<h3>2.2 GPU Scarcity and the Economics of Tokenised Compute</h3>
+<p>The economic foundation of AI token value rests on a fundamental supply-demand imbalance in the market for high-performance GPU computation. Nvidia's Hopper (H100) and Blackwell (B200) architectures remain in critically short supply, with lead times for large orders extending to 12 months or more. The concentration of GPU manufacturing in Taiwan Semiconductor Manufacturing Company (TSMC) and the geopolitical sensitivity of advanced semiconductor supply chains (exacerbated by US BIS export controls on chips to China, expanded in October 2023, October 2024, and again in 2025) create persistent supply-side constraints. On the demand side, the rapid scaling of frontier AI models has produced strong demand for compute: each generation of large language models requires roughly an order of magnitude more training compute than its predecessor.</p>
+<p>SemiAnalysis, in its widely cited "Great GPU Shortage" series of analyses, estimates that global GPU demand exceeds supply by a factor of approximately 3 to 5 for the highest-end chips, and that this imbalance will persist through at least 2027. In this environment, token-based access to distributed GPU resources is a rational market response. Instead of waiting in queue for cloud GPU instances or committing to multi-year reserved instance contracts, users can purchase tokens on secondary markets to access compute on demand. This price discovery mechanism is, in principle, more efficient than queue-based rationing, though it introduces its own informational and speculative dynamics.</p>
+<p>VanEck, the asset manager that sponsored one of the first spot Bitcoin ETFs, projects that decentralised AI compute networks will generate approximately USD 2 billion in annual revenue by 2030, with the broader market for tokenised AI infrastructure growing from approximately USD 9 billion in 2025 to between USD 50 billion and USD 100 billion by 2032. While these projections should be treated with caution, they reflect a growing consensus among institutional investors that token-based compute access is a response to real economic constraints in a structurally supply-constrained market, not just a speculative narrative.</p>
+<div class="callout">
+<strong>Key insight:</strong> AI tokens differ from conventional cryptocurrency in an important respect. Their value is not purely speculative or monetary; it is anchored, however imperfectly, in the real economic value of the computational services they provide access to. This characteristic makes them conceptually closer to commodity-linked instruments or infrastructure access rights than to purely financial assets, with implications for accounting classification.
+  </div>
+<h3>2.3 Decentralised Compute Networks</h3>
+<p>Several protocols have emerged to facilitate token-based access to distributed AI computation. Render Network (RNDR) connects GPU owners with creators needing rendering and machine learning compute, operating as a two-sided marketplace where token holders can both purchase services and earn tokens by contributing idle GPU capacity. Akash Network (AKT) provides a decentralised cloud computing marketplace that added GPU support in 2023, enabling users to lease Nvidia H100, A100, and consumer-grade GPUs through an open bidding system. io.net (IO) aggregates GPU supply from data centres, crypto miners, and consumer devices, creating a unified compute layer accessible through its native token. Bittensor (TAO) takes a different approach: rather than renting raw compute, it incentivises machine learning model providers to contribute inference services to a decentralised network, with token rewards distributed based on the quality and utility of model outputs.</p>
+<p>These networks share a common economic logic. By tokenising compute access, they create liquidity for what would otherwise be an illiquid and geographically constrained resource. GPU owners can monetise idle capacity without negotiating bilateral contracts. AI developers can access compute without going through centralised cloud providers. Speculators can trade tokens based on their assessment of future demand for AI computation. The token thus serves as a coordination mechanism, a pricing instrument, and a speculative asset at the same time. This combination produces both efficiency gains and financial stability concerns.</p>
+<div class="chart-container">
+<h4>Figure 2: AI Token Dominance in Total Crypto Market</h4>
+<p class="chart-note">AI token sector market capitalisation as a percentage of total cryptocurrency market cap (line, left axis) versus Bitcoin market capitalisation in USD billions (shaded area, right axis). Source: CoinMarketCap and CoinGecko.</p>
+<div class="chart-box tall" id="chart2"></div>
+</div>
+</section>
+<section id="markets">
+<h2>3. AI Token Markets</h2>
+<h3>3.1 Market Capitalisation Evolution</h3>
+<p>The AI token sector has grown faster, and with greater volatility, than the broader cryptocurrency market. From a negligible base of approximately USD 0.2 billion in early 2020, the sector experienced its first major expansion during the 2021 bull market, reaching USD 3.8 billion by Q4 2021. The 2022 crypto winter brought a sharp contraction to USD 0.8 billion by Q4 2022, a decline of approximately 79 percent from the peak. The recovery that began in 2023, driven by the public release of ChatGPT in November 2022 and the subsequent AI investment boom, propelled the sector to USD 4.5 billion by Q4 2023. The acceleration continued through 2024, with the sector reaching USD 15 billion by Q4 2024, and peaked at approximately USD 25 billion in Q1 2026 before moderating to approximately USD 20 billion by mid-2026. These figures, drawn from CoinMarketCap's AI and Big Data category and CoinGecko's AI token index, should be interpreted with the standard caveats about crypto market data quality: exchange-reported volumes may include wash trading, market capitalisation calculations depend on circulating supply estimates that vary across data providers, and the boundaries of the "AI token" category are contested.</p>
+<h3>3.2 Major Tokens and Their Economic Functions</h3>
+<p>The AI token landscape can be broadly categorised into four functional groups. Compute tokens (TAO, RNDR, AKT, IO) provide access to distributed GPU resources for training and inference. Infrastructure tokens (NEAR, ICP) support blockchain platforms optimised for AI computation and smart contract execution. Agent tokens (FET, AGIX) power autonomous AI agents that execute economic transactions on behalf of users. Data tokens (GRT, FIL) facilitate decentralised data indexing, querying, and storage for AI applications. The market capitalisation distribution as of Q2 2026 reveals a high concentration in infrastructure and compute: NEAR Protocol leads at USD 4.5 billion, followed by Internet Computer (ICP) at USD 3.8 billion, Bittensor (TAO) at USD 3.2 billion, Render (RNDR) at USD 1.8 billion, The Graph (GRT) at USD 1.2 billion, Fetch.ai (FET) at USD 0.73 billion, io.net (IO) at USD 0.5 billion, and Akash Network (AKT) at USD 0.16 billion.</p>
+<p>Bittensor (TAO) warrants particular attention as the most unusual in economic design among AI tokens. Unlike tokens that simply grant access to a service, TAO employs a novel incentive mechanism in which miners (model providers) compete to produce the highest-quality machine learning outputs, validators assess output quality, and both are rewarded in TAO tokens. The token's price reached an all-time high of approximately USD 760 in April 2024, reflecting market enthusiasm for what its proponents describe as a decentralised alternative to centralised AI platforms. However, Mafrur (2025), writing in <em>IET Blockchain</em>, provides a cautionary analysis, arguing that many claims of "decentralised AI" overstate the degree of actual decentralisation and that the economic incentives in token-based AI networks may not reliably produce the outcomes their designers intend.</p>
+<div class="chart-container">
+<h4>Figure 3: Major AI Token Market Capitalisation (Q2 2026)</h4>
+<p class="chart-note">Market capitalisation in USD billions by functional category: compute (dark blue), infrastructure (purple), agents (green), data (amber). Source: CoinMarketCap and CoinGecko, Q2 2026 snapshot.</p>
+<div class="chart-box" id="chart3"></div>
+</div>
+<h3>3.3 Pricing Dynamics and Connectedness</h3>
+<p>The pricing behaviour of AI tokens reflects both common crypto market factors and token-specific fundamentals. Jareno and Yousaf (2023), in one of the few published academic analyses of AI token connectedness, find low spillover between AI tokens and equity markets during normal market conditions, suggesting that AI tokens represent a distinct risk factor not fully captured by conventional asset pricing models. However, they also find that connectedness increases materially during periods of market turbulence, consistent with the broader pattern observed across cryptocurrency markets. This finding has important implications for portfolio diversification claims and for the risk management frameworks that corporate holders of AI tokens must employ.</p>
+<p>The March 2024 merger of Fetch.ai (FET), SingularityNET (AGIX), and Ocean Protocol (OCEAN) into the Artificial Superintelligence Alliance (ASI) was a significant structural development in the AI token market. The merger, which created a combined entity with a fully diluted valuation exceeding USD 7.5 billion at announcement, shows both the economic logic of consolidation in platform markets and the need to achieve sufficient scale to compete with centralised AI providers. The subsequent token migration process, which involved complex governance votes across three separate decentralised autonomous organisations, provides a natural experiment for researchers interested in the governance of token-based platforms.</p>
+<div class="chart-container">
+<h4>Figure 4: Select AI Token Price Trajectories (2023-2026)</h4>
+<p class="chart-note">Quarterly closing prices indexed to Q1 2023 = 100. TAO, RNDR, FET, AKT, and NEAR. Source: CoinGecko historical price data.</p>
+<div class="chart-box tall" id="chart4"></div>
+</div>
+</section>
+<section id="corporate">
+<h2>4. Corporate Adoption and Investment</h2>
+<h3>4.1 Institutional Investment Vehicles</h3>
+<p>The launch of the Grayscale Decentralized AI Fund in July 2025 marked a milestone in institutional acceptance of AI tokens as an investable asset class. The fund, structured as a private placement available to accredited investors, holds a portfolio weighted toward established AI infrastructure tokens: Bittensor (TAO, 30.1 percent), NEAR Protocol (NEAR, 28.5 percent), Render (RNDR, 17.7 percent), Filecoin (FIL, 14.9 percent), and The Graph (GRT, 8.5 percent). The fund's launch followed Grayscale's successful legal campaign to convert its Bitcoin Trust (GBTC) into a spot ETF, and it reflects a strategic bet that AI tokens represent the next frontier of institutional crypto adoption.</p>
+<p>Venture capital flows into AI-crypto projects show a similar pattern. Quarterly VC funding in the sector grew from negligible levels in early 2020 to approximately USD 4.9 billion in Q2 2025, with deal counts rising from a handful per quarter to over 100. Andreessen Horowitz (a16z), Paradigm, Pantera Capital, and Dragonfly Capital have all made significant AI-crypto investments, and dedicated AI-crypto funds have proliferated. The trajectory, while impressive, should be interpreted with caution: VC funding in crypto has historically been highly cyclical, and the 2021 peak was followed by a severe contraction in 2022-2023.</p>
+<div class="chart-container">
+<h4>Figure 5: Venture Capital Funding in AI-Crypto Sector</h4>
+<p class="chart-note">Quarterly venture capital funding in USD billions (bars, left axis) and deal count (line, right axis). Source: Messari, PitchBook, and author compilation from public announcements.</p>
+<div class="chart-box tall" id="chart5"></div>
+</div>
+<h3>4.2 Corporate Treasury Adoption</h3>
+<p>A small but growing number of publicly listed companies have added AI tokens or AI-crypto exposure to their corporate treasuries. Strategy (formerly MicroStrategy) provides the most prominent, though indirect, example: the company's accumulation of 843,775 Bitcoin (worth approximately USD 53.8 billion at July 2026 prices) has established a template for corporate digital asset treasury strategies that could extend to AI tokens. While no major public company has yet adopted AI tokens as a primary treasury asset on the scale of Strategy's Bitcoin holdings, several firms have disclosed smaller positions, and AI Financial Corporation now accepts AI tokens as collateral for institutional lending.</p>
+<p>The CAQ (Center for Audit Quality) analysis of S&amp;P 500 10-K filings reveals that approximately 9 percent of S&amp;P 500 companies mentioned digital assets in their 2024 annual reports, up from less than 2 percent in 2020. However, most of these mentions appear in Risk Factors (Item 1A) rather than in financial statements or the MD&amp;A, and few companies provide the granular breakdowns that would let investors distinguish AI token holdings from general cryptocurrency exposure. This disclosure gap will likely narrow as FASB ASU 2023-08 takes full effect and as the materiality of AI token holdings increases.</p>
+<div class="callout">
+<strong>Strategic comparison:</strong> Strategy's Bitcoin treasury strategy has produced a cumulative unrealised gain of approximately USD 12.7 billion (as of Q1 2025). The company's adoption of FASB ASU 2023-08 fair value accounting in Q1 2025 resulted in a USD 12.7 billion uplift to retained earnings, followed by a USD 12.5 billion fair value loss in Q1 2026, illustrating both the magnitude of digital asset fair value swings and their capacity to dominate financial statements.
+  </div>
+</section>
+<section id="accounting">
+<h2>5. Accounting Classification and Measurement</h2>
+<h3>5.1 FASB ASU 2023-08: The Shift to Fair Value</h3>
+<p>The adoption of FASB Accounting Standards Update 2023-08, <em>Intangibles -- Goodwill and Other -- Crypto Assets</em>, effective for fiscal years beginning after 15 December 2024 for public business entities, represents the most significant change in the US GAAP treatment of digital assets since their emergence. Under the prior guidance, crypto assets meeting the definition of indefinite-lived intangible assets were subject to an impairment-only model: assets were measured at cost less impairment, with impairment losses recognised when carrying value exceeded fair value but with no upward remeasurement permitted. This created an asymmetric accounting penalty in which firms could recognise losses but not gains, a treatment widely criticised by practitioners and preparers as failing to represent the economic substance of digital asset holdings.</p>
+<p>ASU 2023-08 replaces this model with fair value measurement for crypto assets that meet six criteria: the asset must be an intangible asset, not provide the holder with enforceable rights to or claims on underlying goods or services, be created or reside on a distributed ledger, be secured through cryptography, be fungible, and not be created or issued by the reporting entity or its related parties. Critically, fair value changes flow through net income in each reporting period, creating a direct and potentially volatile connection between crypto market movements and reported earnings. The standard also requires separate presentation of crypto asset holdings on the balance sheet (distinct from other intangible assets) and detailed disclosure of holdings by significant asset, cost basis, and fair value.</p>
+<h3>5.2 The Classification Question: Investment versus Use</h3>
+<p>A central unresolved question, and one that carries particular significance for AI tokens, is whether tokens held for the purpose of accessing AI services or computational resources should be accounted for differently from tokens held purely for investment. The FASB's scope criteria for ASU 2023-08 require that the asset "does not provide the asset holder with enforceable rights to or claims on underlying goods, services, or other assets." AI tokens that grant their holders the right to access computational services appear, on a plain reading, to fall outside this scope, occupying instead a grey area between intangible assets, prepaid expenses, and financial instruments.</p>
+<p>Under IFRS, the classification question is equally unresolved. IAS 38 <em>Intangible Assets</em> applies a cost-or-revaluation model that captures some digital assets but, like the pre-ASU US GAAP treatment, produces an asymmetric outcome. IAS 2 <em>Inventories</em> could apply to tokens held for sale in the ordinary course of business, but AI tokens accessed for compute services are not "held for sale" in the conventional sense. IFRS 9 <em>Financial Instruments</em> would apply only if the tokens meet the definition of a financial asset, which requires a contractual right to receive cash or another financial asset, a characteristic most utility tokens lack. The IASB's 2024 decision to add a research project on digital assets to its agenda signals recognition of these gaps but does not provide near-term resolution.</p>
+<p>The accounting challenge is better understood as a spectrum rather than a binary classification. At one end, tokens held purely for speculative purposes fit within ASU 2023-08's scope and are measured at fair value through net income. At the other end, tokens that represent prepaid access to a defined quantity of computational services might be more appropriately treated as prepaid expenses, expensed as the services are consumed. Between these poles lie hybrid holdings: tokens that are held partly for potential appreciation and partly for service access, raising difficult questions about unit-of-account determination and measurement basis.</p>
+<div class="chart-container">
+<h4>Figure 6: AI Token Category Distribution by Market Cap (Q2 2026)</h4>
+<p class="chart-note">Market capitalisation share by functional category. Source: CoinMarketCap, CoinGecko, and author classification based on token utility and network function.</p>
+<div class="chart-box" id="chart6"></div>
+</div>
+<h3>5.3 SEC SAB 121 and Safeguarding Obligations</h3>
+<p>SEC Staff Accounting Bulletin No. 121, issued in March 2022, requires entities that safeguard crypto assets for platform users to recognise a safeguarding liability and corresponding asset at fair value. While SAB 121 was primarily directed at crypto exchanges and custodians, its scope could extend to firms that hold AI tokens on behalf of clients or that operate platforms through which users access decentralised AI services. The interaction between SAB 121's safeguarding requirements and ASU 2023-08's fair value framework for proprietary holdings creates a complex reporting environment for firms with multiple categories of AI token exposure.</p>
+<div class="chart-container">
+<h4>Figure 7: Key Regulatory Milestones for AI Tokens and Digital Assets (2022-2026)</h4>
+<p class="chart-note">Timeline of major regulatory and standard-setting events relevant to AI tokens. Source: Author compilation from SEC, FASB, EU, and BIS publications.</p>
+<div class="chart-box tall" id="chart7"></div>
+</div>
+</section>
+<section id="reporting">
+<h2>6. Financial Reporting and Disclosure</h2>
+<h3>6.1 S&amp;P 500 Disclosure Practices</h3>
+<p>The CAQ's systematic analysis of S&amp;P 500 10-K filings offers the most comprehensive picture of current digital asset disclosure practices among large public companies. As noted, approximately 9 percent of filers mention digital assets, with the overwhelming majority of these mentions appearing in Risk Factors (Item 1A) rather than in the financial statements or MD&amp;A. The most common disclosures relate to: exposure to cryptocurrency price volatility, risks associated with digital asset custody and safekeeping, regulatory uncertainty, and the operational risks of accepting or holding digital assets. Very few companies provide quantitative information about the fair value, cost basis, or composition of their digital asset holdings, and none of the S&amp;P 500 filers in the 2024 cycle provided a granular breakdown distinguishing AI-specific tokens from general cryptocurrency holdings.</p>
+<p>This disclosure gap has several explanations. First, the absolute magnitude of AI token holdings at most S&amp;P 500 companies remains small relative to total assets, falling below conventional quantitative materiality thresholds. Second, ASU 2023-08 disclosure requirements, which mandate detailed fair value disclosures including activity roll-forwards and significant holdings, had not yet taken full effect for the 2024 reporting cycle. Third, many firms may be reluctant to disclose the specific composition of their digital asset holdings for competitive or security reasons. As ASU 2023-08 becomes effective for additional filers and as AI token holdings grow in scale, the disclosure landscape will likely change.</p>
+<div class="chart-container">
+<h4>Figure 8: Estimated AI Token Price Volatility versus Traditional Assets</h4>
+<p class="chart-note">Annualised volatility based on daily returns, Q1 2023 to Q2 2026. AI token volatilities are estimates; traditional asset volatilities from Bloomberg. Source: CoinGecko and Bloomberg.</p>
+<div class="chart-box" id="chart8"></div>
+</div>
+<h3>6.2 Illustrative Impact of Fair Value Accounting</h3>
+<p>Strategy's experience with ASU 2023-08 adoption illustrates the transformative effect of fair value accounting on digital asset financial reporting. The company early-adopted the standard in Q1 2025, resulting in a cumulative-effect adjustment that increased retained earnings by approximately USD 12.7 billion as previously unrecognised gains were brought onto the balance sheet. However, the same fair value framework produced a USD 12.5 billion loss in Q1 2026 as Bitcoin prices declined. These swings, which are far larger than Strategy's operating income, mean that reported earnings depend heavily on digital asset price movements. For firms holding AI tokens, which exhibit even higher volatility than Bitcoin, the fair value earnings impact could be proportionally larger.</p>
+</section>
+<section id="valuation">
+<h2>7. Valuation and Risk</h2>
+<h3>7.1 Volatility Characteristics</h3>
+<p>AI tokens show much higher price volatility than traditional financial assets. Based on daily returns from Q1 2023 to Q2 2026, the annualised volatility of major AI tokens ranges from approximately 85 percent (RNDR) to 110 percent (FET), with TAO at approximately 95 percent. These figures are roughly 1.5 to 2 times the annualised volatility of Bitcoin (approximately 60 percent over the same period) and 5 to 7 times that of the S&amp;P 500 (approximately 15 percent). Gold (12 percent) and US Treasuries (5 percent) anchor the low end of the volatility spectrum. These volatility levels have direct implications for corporate treasuries, margin requirements, and risk-weighted capital calculations.</p>
+<p>Several factors contribute to elevated AI token volatility. The sector is young, with limited price history and thin liquidity for many tokens. The investor base is disproportionately retail, with institutional capital only beginning to enter through vehicles such as the Grayscale fund. The regulatory environment is uncertain, and regulatory announcements have historically produced sharp price movements in both directions. The fundamental value of AI tokens is difficult to estimate, as it depends on projections of future demand for AI computation, the competitive dynamics of decentralised versus centralised compute provision, and the rate of technological progress in AI hardware and software.</p>
+<h3>7.2 Connectedness with Traditional Markets</h3>
+<p>The connectedness literature offers limited support for portfolio diversification arguments. Jareno and Yousaf (2023) document low return and volatility spillovers between AI tokens and equity markets during normal market conditions, suggesting that AI tokens represent a source of idiosyncratic risk. However, they also find significant increases in connectedness during periods of market stress, a pattern that undermines the diversification case precisely when it is most needed. This non-linear connectedness is consistent with broader findings in the cryptocurrency literature: crypto assets tend to exhibit low correlation with traditional assets during calm periods but high correlation during crises, limiting their effectiveness as portfolio hedges.</p>
+<p>The correlation between AI tokens and AI-related equity indices (such as baskets of Nvidia, AMD, and other AI hardware and software companies) deserves closer attention. Preliminary evidence suggests a moderate positive correlation of approximately 0.3 to 0.5 in normal periods, driven by common exposure to AI demand shocks. However, the correlation structure has not been stable over time, and the short available history limits the reliability of correlation estimates.</p>
+<p>For corporate treasuries holding AI tokens, the risk management challenge is acute. The combination of high volatility, uncertain fundamental value, and non-linear correlation with traditional assets makes conventional risk models (Value-at-Risk, expected shortfall) sensitive to parameter choices and estimation windows. Firms must also consider the liquidity risk associated with large AI token positions: many tokens trade on a limited number of exchanges with relatively thin order books, and the market impact cost of liquidating a material position could be substantial.</p>
+</section>
+<section id="regulation">
+<h2>8. Regulatory and Governance Landscape</h2>
+<h3>8.1 US BIS Chip Export Controls</h3>
+<p>The US Bureau of Industry and Security (BIS) export controls on advanced semiconductors and semiconductor manufacturing equipment, first imposed in October 2022 and expanded in October 2023, October 2024, and March 2025, directly affect the supply side of the AI compute market. By restricting the export of Nvidia A100, H100, H200, B200, and equivalent chips to China and other countries of concern, the controls fragment the global GPU market and create distinct pricing tiers for sanctioned and non-sanctioned jurisdictions. This fragmentation has two effects on AI token markets. First, it amplifies the global GPU shortage by reducing the effective supply available to AI developers in unrestricted jurisdictions (as chips are diverted to meet demand that cannot be legally served through direct export). Second, it creates a regulatory incentive for decentralised compute networks, which can, in principle, route compute jobs to GPUs in any jurisdiction, though the practical and legal viability of such routing remains contested.</p>
+<h3>8.2 EU AI Act</h3>
+<p>The EU Artificial Intelligence Act, which entered into force on 1 August 2024, establishes a four-tier risk framework for AI systems: unacceptable risk (prohibited), high risk (subject to conformity assessment, risk management, and transparency obligations), limited risk (subject to transparency obligations), and minimal risk (unregulated). The Act's obligations on general-purpose AI (GPAI) models, which took effect from August 2025, require providers of GPAI models to maintain technical documentation, comply with EU copyright law, and publish a summary of training data used. The full application of high-risk AI system obligations from August 2026 will extend the regulatory perimeter to a broad range of AI applications in critical sectors.</p>
+<p>The interaction between the AI Act and token-based AI services creates novel compliance questions. If a decentralised AI network processes personal data or makes decisions affecting individuals in the EU, who bears the regulatory obligation: the token holder who initiated the computation, the node operator who performed it, the protocol developers, or some combination? The AI Act's concept of "provider" and "deployer" was designed with centralised AI systems in mind, and its application to decentralised, token-based networks is likely to require interpretative guidance from EU authorities.</p>
+<h3>8.3 EU MiCA</h3>
+<p>The Markets in Crypto-Assets Regulation (MiCA), which entered into force in June 2023 with full application from December 2024, provides the first comprehensive regulatory framework for crypto assets in a major jurisdiction. MiCA distinguishes among asset-referenced tokens (ARTs), electronic money tokens (EMTs), and other crypto assets, with a sub-category of utility tokens that "provide digital access to a good or service available on DLT." Whether AI tokens that provide access to computational services qualify as MiCA utility tokens is a consequential classification question, as utility tokens are subject to a lighter regulatory regime than ARTs or EMTs but still require a white paper with specified disclosures.</p>
+<p>The convergence of MiCA, the AI Act, and national digital asset regulations creates a complex, layered regulatory environment for firms that issue, trade, or hold AI tokens. A single AI token might engage MiCA (as a crypto asset), the AI Act (if the underlying AI service is high-risk), data protection law (if personal data is processed), securities law (if the token is deemed an investment contract), and anti-money laundering regulations. The resulting compliance burden is substantial and may favour larger firms over smaller ones, potentially undermining the decentralisation that AI token protocols aim to achieve.</p>
+</section>
+<section id="themes">
+<h2>9. Hot Themes and Emerging Areas</h2>
+<h3>9.1 AI Agent Tokens</h3>
+<p>A new category emerged in 2024 and 2025: AI agent tokens. Virtuals Protocol, launched in 2024, has enabled the creation of over 40,000 tokenised AI agents: autonomous digital entities that can interact with users, execute transactions, and manage digital assets on behalf of their token holders. The total market capitalisation of the AI agent token sector reached an estimated USD 15.3 billion in early 2026, driven by speculative enthusiasm and genuine utility in areas such as automated trading, content generation, and customer service. However, the sector has also attracted controversy: many agent tokens appear to have little or no functional AI capability, functioning instead as speculative vehicles with AI branding.</p>
+<p>From an accounting perspective, AI agent tokens raise entirely new questions. If a token represents ownership of or control over an autonomous economic agent, is the token a financial asset, an intangible asset, a subsidiary investment, or something else entirely? How should the agent's autonomous economic activity be reflected in the token holder's financial statements? These questions, while theoretical at present given the limited adoption of AI agent tokens by reporting entities, will matter in practice as the technology matures.</p>
+<h3>9.2 DePIN: Decentralised Physical Infrastructure Networks</h3>
+<p>DePIN (Decentralised Physical Infrastructure Networks) is a broader category of token-based infrastructure provision that extends beyond AI computation to include wireless networks, energy grids, sensor networks, and data storage. The DePIN model uses token incentives to coordinate the deployment and operation of physical infrastructure by distributed participants, creating an alternative to centralised infrastructure provision. AI-relevant DePIN projects include GPU compute networks (Render, Akash, io.net), data storage networks (Filecoin, Arweave), and bandwidth networks. The DePIN sector reached an estimated total market capitalisation of USD 35 billion in Q2 2026, with AI-focused DePIN comprising approximately 60 percent of that total.</p>
+<h3>9.3 Tokenised Compute as a Financial Primitive</h3>
+<p>An emerging area of financial innovation involves treating tokenised compute access as a financial primitive that can be packaged into structured products. Aethir and GAIB are developing platforms that allow GPU compute tokens to be collateralised for lending, traded as futures and options, and securitised into tradable instruments. This financialisation of compute access has a plausible economic rationale: if AI computation is becoming a fundamental input to economic production, then instruments that provide hedged or leveraged exposure to compute prices serve a legitimate risk management function. However, the same dynamics that produced financial instability in other securitised markets (complexity, opacity, misaligned incentives) could emerge in tokenised compute markets, creating risks that warrant regulatory attention.</p>
+<h3>9.4 AI Inference Marketplaces</h3>
+<p>A distinct category of AI token projects focuses on the inference layer rather than the compute layer. These marketplaces allow model creators to list their models and set per-inference pricing, while users pay in tokens for model access. The economic logic is that tokenisation removes payment friction, enables micro-payments per inference call, and creates price discovery for model quality. The practical challenge is that centralised alternatives (OpenAI API, Anthropic API, Google Cloud AI) already offer seamless per-token pricing without the volatility and complexity of cryptocurrency payments. The value proposition of decentralised inference marketplaces therefore rests on arguments about censorship resistance, privacy, and collective governance that remain contested.</p>
+</section>
+<section id="research">
+<h2>10. Research Gaps and Opportunities</h2>
+<p>The convergence of nascent markets, evolving accounting standards, and unresolved regulatory questions creates substantial opportunities for accounting, finance, and economics research. The following research agenda identifies seven thematic areas, each with tractable research questions, feasible data sources, and appropriate empirical methods.</p>
+<div class="chart-container">
+<h4>Figure 9: S&amp;P 500 Mentions of AI, Digital Assets, and Sustainability in 10-K Filings (2023-2024)</h4>
+<p class="chart-note">Percentage of S&amp;P 500 companies mentioning selected topics in annual 10-K filings. Source: CAQ (2025) analysis and author compilation.</p>
+<div class="chart-box" id="chart9"></div>
+</div>
+<h3>10.1 Accounting Classification of Tokens Held for Service Access</h3>
+<p>The central accounting question, whether AI tokens held for service access should be classified as intangible assets (with fair value measurement under ASU 2023-08), prepaid expenses, or financial instruments, remains unresolved under both US GAAP and IFRS. Researchers could examine the economic characteristics of different AI tokens to develop a classification framework based on the strength and enforceability of the service access right, the transferability of the token, and the presence of speculative motives. The IASB's digital assets research project provides an institutional setting for policy-oriented research that could influence standard-setting.</p>
+<h3>10.2 Fair Value Measurement Challenges</h3>
+<p>Many AI tokens trade on limited exchanges with thin liquidity, raising questions about the reliability of Level 1 fair value inputs. For Level 2 and Level 3 measurements, researchers could examine the pricing models used by crypto valuation firms, the degree of dispersion across pricing sources, and the auditability of fair value estimates. The interaction between illiquid markets and the requirement to recognise fair value changes through net income creates incentives for earnings management that warrant empirical investigation.</p>
+<h3>10.3 Market Reaction to AI Token Disclosures</h3>
+<p>As firms begin disclosing AI token holdings under ASU 2023-08, researchers can examine whether the market prices these disclosures, how investors distinguish between AI token exposures and general cryptocurrency exposures, and whether disclosure quality (specificity, quantification, risk discussion) affects market reactions. The staggered adoption of the standard across different filer categories provides a natural setting for difference-in-differences analysis.</p>
+<h3>10.4 Governance of Decentralised AI Platforms</h3>
+<p>The governance of token-based AI platforms raises questions familiar to corporate governance researchers but in a novel institutional setting. How do token holders exercise governance rights? What is the relationship between token concentration and platform decision-making? Does governance quality affect platform performance and token value? The ASI merger and the Bittensor subnet governance system provide natural experiments for studying these questions.</p>
+<h3>10.5 Cross-Jurisdictional Regulatory Arbitrage</h3>
+<p>The differential treatment of AI tokens across jurisdictions (EU MiCA utility tokens, US securities law, Asian regulatory frameworks) creates opportunities for regulatory arbitrage research. Do AI token projects choose jurisdictions based on regulatory treatment? Does regulatory stringency affect token listing, trading volume, and market quality? The MiCA implementation timeline provides a staggered adoption setting for examining these questions.</p>
+<h3>10.6 AI Token Treasury Management</h3>
+<p>As corporate holdings of AI tokens grow, the treasury management implications become material. Researchers could examine optimal AI token allocation in corporate treasuries, the effect of AI token holdings on cost of capital and credit ratings, and the risk management strategies employed by firms with material AI token exposure. The Strategy case study provides a template for event-study analysis of major treasury decisions.</p>
+<h3>10.7 On-Chain Data in Audit Evidence</h3>
+<p>The public availability of blockchain transaction data creates novel opportunities for audit research. Can on-chain data provide independent verification of AI token holdings and transactions? How do auditors incorporate on-chain evidence into audit procedures? What are the limitations of on-chain verification, particularly for tokens held through intermediaries or on centralised exchanges? These questions connect the audit evidence literature with the emerging field of blockchain analytics.</p>
+<div class="chart-container">
+<h4>Figure 10: Academic Publication Trends on AI Tokens and Digital Assets</h4>
+<p class="chart-note">Number of publications in ABS 4/4* and ABDC-A* journals by year. Solid line: crypto/blockchain publications. Dashed line: AI-specific token publications. Source: Author compilation from Scopus and Web of Science.</p>
+<div class="chart-box" id="chart10"></div>
+</div>
+<p>The academic literature on AI tokens specifically (as distinct from blockchain and cryptocurrency generally) remains at an early stage. Figure 10 illustrates the publication trajectory: while general crypto and blockchain research has grown substantially, AI-specific token research accounts for fewer than 5 publications in ABS 4/4* or ABDC-A* journals in total. This gap represents both a constraint (limited existing evidence to build on) and an opportunity (substantial scope for high-impact, first-mover contributions).</p>
+</section>
+<section id="conclusion">
+<h2>11. Conclusion</h2>
+<p>AI tokens sit at the intersection of three major trends that will shape the financial and regulatory landscape over the coming decade: the explosive growth in demand for AI computation, the tokenisation of access to real-world assets and services, and the maturation of accounting and regulatory frameworks for digital assets. This research brief has traced the economic logic of AI tokens from the GPU supply-demand imbalance through the market structures that have emerged around decentralised compute networks, corporate adoption patterns, and the accounting and disclosure frameworks that govern their financial reporting.</p>
+<p>Several conclusions emerge. First, AI tokens are no longer a curiosity but an emerging asset class with real economic substance. The sector's growth from USD 0.2 billion to USD 25 billion in market capitalisation over six years, the entry of institutional investors through vehicles such as the Grayscale Decentralized AI Fund, and the volume of venture capital flowing into AI-crypto projects all signal that AI tokens have grown large enough to deserve serious scholarly attention. Second, the accounting treatment of AI tokens under both US GAAP and IFRS is unsettled, and the central question of whether tokens held for service access should be classified differently from tokens held for investment remains unresolved. The adoption of FASB ASU 2023-08 resolves the impairment asymmetry but introduces fair value volatility that will fundamentally change the financial reporting of AI token holdings. Third, the regulatory landscape is complex and rapidly evolving, with the EU AI Act, MiCA, and US chip export controls creating a multi-layered compliance environment that will shape the development of the AI token sector.</p>
+<p>For accounting and finance scholars, AI tokens offer a useful setting for studying asset classification, fair value measurement, disclosure quality, and the governance of decentralised platforms. The research opportunities identified in Section 10 span the full range of accounting and finance sub-disciplines, and many are tractable with currently available data and methods. The challenge for the research community is to develop theoretically grounded, empirically rigorous work that speaks both to the academic literature and to the needs of standard-setters, regulators, and practitioners navigating this rapidly evolving landscape.</p>
+<p>The trajectory of AI tokens over the next five years will be shaped by several contingent factors: the evolution of GPU supply and the rate of AI model scaling, the competitive dynamics between centralised and decentralised compute provision, the development of institutional market infrastructure (custody, prime brokerage, derivatives), and the evolution of accounting standards and regulatory frameworks. What is clear is that AI tokens, and the questions they raise for accounting, finance, and economics, will remain a live and consequential area of inquiry for the foreseeable future.</p>
+</section>
+<section id="references">
+<h2>References</h2>
+<div class="ref-section">
+<h3>Academic Literature</h3>
+<ol class="ref-list">
+<li class="ref-item">Biais, B., Bisiere, C., Bouvard, M., and Casamatta, C. (2019). The blockchain folk theorem. <em>Review of Financial Studies</em>, 32(5), 1662-1715. <a href="https://doi.org/10.1093/rfs/hhy095">https://doi.org/10.1093/rfs/hhy095</a></li>
+<li class="ref-item">Cong, L. W., Li, Y., and Wang, N. (2021). Tokenomics: Dynamic adoption and valuation. <em>Review of Financial Studies</em>, 34(3), 1105-1155. <a href="https://doi.org/10.1093/rfs/hhaa089">https://doi.org/10.1093/rfs/hhaa089</a></li>
+<li class="ref-item">Cong, L. W., Landsman, W. R., Maydew, E. L., and Rabetti, D. (2023). Tax-loss harvesting with cryptocurrencies. <em>Journal of Accounting and Economics</em>, 76(2-3), 101607. <a href="https://doi.org/10.1016/j.jacceco.2023.101607">https://doi.org/10.1016/j.jacceco.2023.101607</a></li>
+<li class="ref-item">Fahlenbrach, R. and Frattaroli, M. (2021). ICO investors. <em>Financial Markets and Portfolio Management</em>, 35, 1-59. <a href="https://doi.org/10.1007/s11408-020-00366-0">https://doi.org/10.1007/s11408-020-00366-0</a></li>
+<li class="ref-item">Fisch, C. (2019). Initial coin offerings (ICOs) to finance new ventures. <em>Journal of Business Venturing</em>, 34(1), 1-22. <a href="https://doi.org/10.1016/j.jbusvent.2018.09.007">https://doi.org/10.1016/j.jbusvent.2018.09.007</a></li>
+<li class="ref-item">Foley, S., Karlsen, J. R., and Putnins, T. J. (2019). Sex, drugs, and bitcoin: How much illegal activity is financed through cryptocurrencies? <em>Review of Financial Studies</em>, 32(5), 1798-1853. <a href="https://doi.org/10.1093/rfs/hhz015">https://doi.org/10.1093/rfs/hhz015</a></li>
+<li class="ref-item">Garratt, R. J. and van Oordt, M. R. C. (2022). Entrepreneurial incentives and the role of initial coin offerings. <em>Journal of Economic Dynamics and Control</em>, 142. <a href="https://www.sciencedirect.com/journal/journal-of-economic-dynamics-and-control/vol/142/suppl/C">https://www.sciencedirect.com/journal/journal-of-economic-dynamics-and-control/vol/142/suppl/C</a></li>
+<li class="ref-item">Goldstein, I., Gupta, D., and Sverchkov, R. (2024). Utility tokens as a commitment to competition. <em>Journal of Finance</em>, 79(6), 4197-4246. <a href="https://doi.org/10.1111/jofi.13389">https://doi.org/10.1111/jofi.13389</a></li>
+<li class="ref-item">Halaburda, H. and Sarvary, M. (2016). <em>Beyond Bitcoin: The Economics of Digital Currencies</em>. Palgrave Macmillan. <a href="https://doi.org/10.1057/9781137506429">https://doi.org/10.1057/9781137506429</a></li>
+<li class="ref-item">Harvey, C. R., Ramachandran, A., and Santoro, J. (2021). <em>DeFi and the Future of Finance</em>. Wiley. <a href="https://doi.org/10.1002/9781119836025">https://doi.org/10.1002/9781119836025</a></li>
+<li class="ref-item">Howell, S. T., Niessner, M., and Yermack, D. (2020). Initial coin offerings: Financing growth with cryptocurrency token sales. <em>Review of Financial Studies</em>, 33(9), 3925-3974. <a href="https://doi.org/10.1093/rfs/hhz131">https://doi.org/10.1093/rfs/hhz131</a></li>
+<li class="ref-item">Jareno, F. and Yousaf, I. (2023). Artificial intelligence-based tokens: Fresh evidence of connectedness with artificial intelligence-based equities. <em>International Review of Financial Analysis</em>, 89, 102791. <a href="https://doi.org/10.1016/j.irfa.2023.102791">https://doi.org/10.1016/j.irfa.2023.102791</a></li>
+<li class="ref-item">Liu, Y. and Tsyvinski, A. (2021). Risks and returns of cryptocurrency. <em>Review of Financial Studies</em>, 34(6), 2689-2727. <a href="https://doi.org/10.1093/rfs/hhaa113">https://doi.org/10.1093/rfs/hhaa113</a></li>
+<li class="ref-item">Mafrur, R. (2025). AI-based crypto tokens: The illusion of decentralized AI? <em>IET Blockchain</em>, 5, e70015. <a href="https://doi.org/10.1049/blc2.70015">https://doi.org/10.1049/blc2.70015</a></li>
+<li class="ref-item">Makridis, C. D., Frowis, M., Sridhar, K., and Bohme, R. (2023). The rise of decentralized cryptocurrency exchanges: Evaluating the role of airdrops and governance tokens. <em>Journal of Corporate Finance</em>, 79, 102358. <a href="https://doi.org/10.1016/j.jcorpfin.2023.102358">https://doi.org/10.1016/j.jcorpfin.2023.102358</a></li>
+<li class="ref-item">Makarov, I. and Schoar, A. (2020). Trading and arbitrage in cryptocurrency markets. <em>Journal of Financial Economics</em>, 135(2), 293-319. <a href="https://doi.org/10.1016/j.jfineco.2019.07.001">https://doi.org/10.1016/j.jfineco.2019.07.001</a></li>
+<li class="ref-item">Sockin, M. and Xiong, W. (2023). A model of cryptocurrencies. <em>Management Science</em>, 69(11), 6684-6707. <a href="https://doi.org/10.1287/mnsc.2023.4756">https://doi.org/10.1287/mnsc.2023.4756</a></li>
+<li class="ref-item">Yermack, D. (2015). Is Bitcoin a real currency? An economic appraisal. In D. L. K. Chuen (Ed.), <em>Handbook of Digital Currency</em> (pp. 31-43). Elsevier. <a href="https://doi.org/10.1016/B978-0-12-802117-0.00002-3">https://doi.org/10.1016/B978-0-12-802117-0.00002-3</a></li>
+</ol>
+</div>
+<div class="ref-section">
+<h3>Regulatory and Standard-Setting Sources</h3>
+<ol class="ref-list" start="19">
+<li class="ref-item">European Commission (2023). Regulation (EU) 2023/1114 on markets in crypto-assets (MiCA). <em>Official Journal of the European Union</em>, L 150, 9 June 2023. <a href="https://eur-lex.europa.eu/eli/reg/2023/1114/oj">https://eur-lex.europa.eu/eli/reg/2023/1114/oj</a></li>
+<li class="ref-item">European Commission (2024). Regulation (EU) 2024/1689 laying down harmonised rules on artificial intelligence (AI Act). <em>Official Journal of the European Union</em>, L series, 12 July 2024. <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">https://eur-lex.europa.eu/eli/reg/2024/1689/oj</a></li>
+<li class="ref-item">FASB (2023). ASU 2023-08: Intangibles -- Goodwill and Other -- Crypto Assets (Subtopic 350-60). <a href="https://www.fasb.org/page/PageContent?pageId=/reference-library/superseded-standards/asu-2023-08.html">https://www.fasb.org/page/PageContent?pageId=/reference-library/superseded-standards/asu-2023-08.html</a></li>
+<li class="ref-item">IASB (2024). IASB update: Digital assets research project added to the work plan. April 2024. <a href="https://www.ifrs.org/news-and-events/updates/iasb/2024/iasb-update-april-2024/">https://www.ifrs.org/news-and-events/updates/iasb/2024/iasb-update-april-2024/</a></li>
+<li class="ref-item">SEC (2022). Staff Accounting Bulletin No. 121. 31 March 2022. <a href="https://www.sec.gov/oca/staff-accounting-bulletin-121">https://www.sec.gov/oca/staff-accounting-bulletin-121</a></li>
+<li class="ref-item">US Department of Commerce, Bureau of Industry and Security (2022). Implementation of additional export controls: Certain advanced computing and semiconductor manufacturing items. 7 October 2022. <a href="https://www.bis.gov">https://www.bis.gov</a></li>
+</ol>
+</div>
+<div class="ref-section">
+<h3>Industry Reports and Data Sources</h3>
+<ol class="ref-list" start="25">
+<li class="ref-item">a16z (2025). State of Crypto 2025. Andreessen Horowitz. <a href="https://a16zcrypto.com/posts/article/state-of-crypto-report-2025/">https://a16zcrypto.com/posts/article/state-of-crypto-report-2025/</a></li>
+<li class="ref-item">CAQ (2025). S&amp;P 500 10-K disclosure analysis: Digital assets, AI, and sustainability. Center for Audit Quality. <a href="https://www.thecaq.org">https://www.thecaq.org</a></li>
+<li class="ref-item">CoinGecko (2026). AI tokens category. <a href="https://www.coingecko.com/en/categories/artificial-intelligence">https://www.coingecko.com/en/categories/artificial-intelligence</a></li>
+<li class="ref-item">CoinMarketCap (2026). AI and Big Data category. <a href="https://coinmarketcap.com/view/ai-big-data/">https://coinmarketcap.com/view/ai-big-data/</a></li>
+<li class="ref-item">Grayscale Investments (2025). Grayscale Decentralized AI Fund launch announcement. July 2025. <a href="https://www.grayscale.com">https://www.grayscale.com</a></li>
+<li class="ref-item">Messari (2026). Crypto research and data platform. <a href="https://messari.io">https://messari.io</a></li>
+<li class="ref-item">SemiAnalysis (2025). The great GPU shortage: Supply, demand, and market dynamics, 2024-2028. <a href="https://www.semianalysis.com">https://www.semianalysis.com</a></li>
+<li class="ref-item">VanEck (2025). Digital assets and AI: Revenue projections and market sizing. VanEck Research. <a href="https://www.vaneck.com">https://www.vaneck.com</a></li>
+</ol>
+</div>
+</section>
+<section id="data">
+<h2>Data Availability</h2>
+<p>The data files supporting this research brief are available for download. Each file is provided as plain-text CSV with commented headers documenting variable definitions and sources. A complete methodology document describes data sources, file structures, methodological notes, limitations, and reproducibility instructions.</p>
+<p>A <strong>replication script</strong> (<a download="" href="scripts/replicate.py">scripts/replicate.py</a>) reproduces every chart, table, and statistic in this report from the source data. The script is written in Python and requires only matplotlib, numpy, and pandas. It is organised into clearly labelled sections matching the report structure, uses pinned dependency versions, and sets an explicit random seed (42). Generated charts are saved to a <code>charts/</code> output directory.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr><th>File</th><th>Description</th><th>Format</th></tr>
+</thead>
+<tbody>
+<tr><td><code>ai_tokens_market_cap.csv</code></td><td>AI token sector total market capitalisation, quarterly 2020Q1-2026Q2</td><td><a download="" href="data/ai_tokens_market_cap.csv">CSV</a></td></tr>
+<tr><td><code>ai_tokens_top_projects.csv</code></td><td>Market capitalisation of top 8 AI tokens by category as of Q2 2026</td><td><a download="" href="data/ai_tokens_top_projects.csv">CSV</a></td></tr>
+<tr><td><code>ai_tokens_price_history.csv</code></td><td>Quarterly closing prices for TAO, RNDR, FET, AKT, and NEAR, Q1 2023 to Q2 2026</td><td><a download="" href="data/ai_tokens_price_history.csv">CSV</a></td></tr>
+<tr><td><code>ai_tokens_corporate_adoption.csv</code></td><td>Corporate treasury adoption and S&amp;P 500 digital asset disclosure metrics</td><td><a download="" href="data/ai_tokens_corporate_adoption.csv">CSV</a></td></tr>
+<tr><td><code>ai_tokens_vc_funding.csv</code></td><td>Quarterly venture capital funding and deal counts in AI-crypto, 2020Q3-2025Q2</td><td><a download="" href="data/ai_tokens_vc_funding.csv">CSV</a></td></tr>
+<tr><td><code>ai_tokens_accounting_comparison.csv</code></td><td>Comparison of accounting treatments under US GAAP and IFRS for digital assets</td><td><a download="" href="data/ai_tokens_accounting_comparison.csv">CSV</a></td></tr>
+<tr><td><code>ai_tokens_regulatory_timeline.csv</code></td><td>Key regulatory and standard-setting events, 2022-2026</td><td><a download="" href="data/ai_tokens_regulatory_timeline.csv">CSV</a></td></tr>
+<tr><td><code>ai_tokens_academic_literature.csv</code></td><td>Academic publications on crypto, blockchain, and AI tokens, 2018-2026</td><td><a download="" href="data/ai_tokens_academic_literature.csv">CSV</a></td></tr>
+<tr><td><code>README_methodology.txt</code></td><td>Complete methodology documentation, variable definitions, and data sources</td><td><a download="" href="data/README_methodology.txt">TXT</a></td></tr>
+</tbody>
+</table></div>
+<p>These data are provided for academic research use with appropriate citation. If you use these data in your work, please cite this research brief: Zhang, Y. (2026). AI Tokens as an Emerging Asset Class: Economic Logic, Market Evidence, and Accounting Implications. Research Brief, Auckland University of Technology. Questions and requests for replication materials may be directed to the author.</p>
+</section>
+</div>
+<footer>
+  Dr Yuqian Zhang, Auckland University of Technology. This research brief and all underlying data are freely available for download. Last updated: 23 July 2026.
+</footer>
+<script src="./_shared/js/echarts.min.js"></script>
+<script>
+window.__bmPalette = (function(){var s=getComputedStyle(document.documentElement);return {accent:s.getPropertyValue("--accent").trim(),gold:s.getPropertyValue("--accent2").trim(),muted:s.getPropertyValue("--muted").trim(),rule:s.getPropertyValue("--rule").trim(),ink:s.getPropertyValue("--ink").trim(),bg2:s.getPropertyValue("--bg2").trim(),teal:"#3d6b5b",green:"#2f6b4f",red:"#a33b2f"};})();
+</script>
+<script>
+(function() {
+
+  var quarters = ['2020Q1','2020Q2','2020Q3','2020Q4','2021Q1','2021Q2','2021Q3','2021Q4','2022Q1','2022Q2','2022Q3','2022Q4','2023Q1','2023Q2','2023Q3','2023Q4','2024Q1','2024Q2','2024Q3','2024Q4','2025Q1','2025Q2','2025Q3','2025Q4','2026Q1','2026Q2'];
+  var mcapData = [0.2,0.3,0.4,0.6,1.5,2.0,2.5,3.8,2.2,1.5,1.2,0.8,1.5,2.0,2.5,4.5,12.0,9.0,7.5,15.0,18.0,22.0,20.0,23.5,25.0,20.0];
+
+  // Chart 1: AI Token Sector Market Cap - Area/Line
+  var c1 = echarts.init(document.getElementById('chart1'), null, { renderer: 'svg' });
+  c1.setOption({ animation: false,
+    tooltip: { trigger: 'axis', formatter: function(p){ return p[0].axisValue + '<br/>Market Cap: $' + p[0].value + 'B'; } },
+    grid: { left: 60, right: 30, top: 40, bottom: 40 },
+    xAxis: { type: 'category', data: quarters, axisLabel: { rotate: 45, fontSize: 10 }, boundaryGap: false },
+    yAxis: { type: 'value', name: 'USD Billions', axisLabel: { formatter: '${value}B' } },
+    series: [{
+      type: 'line', data: mcapData, smooth: true, symbol: 'circle', symbolSize: 6,
+      lineStyle: { color: __bmPalette.accent, width: 2.5 },
+      itemStyle: { color: __bmPalette.accent },
+      areaStyle: {
+        color: new echarts.graphic.LinearGradient(0,0,0,1,[
+          { offset: 0, color: 'rgba(26,58,42,0.35)' },
+          { offset: 1, color: 'rgba(26,58,42,0.02)' }
+        ])
+      }
+    }]
+  });
+  window.addEventListener('resize', function(){ c1.resize(); });
+
+  // Chart 2: AI Token Dominance - Dual Axis
+  var c2 = echarts.init(document.getElementById('chart2'), null, { renderer: 'svg' });
+  var dominanceData = [0.05,0.07,0.08,0.08,0.09,0.11,0.12,0.14,0.13,0.13,0.12,0.12,0.14,0.18,0.22,0.28,0.45,0.55,0.62,0.58,0.55,0.60,0.58,0.60,0.61,0.55];
+  var btcMcap = [120,150,200,380,780,550,650,900,700,400,350,310,500,580,600,850,1320,1200,1100,1800,1600,1650,1550,1700,1500,1300];
+  c2.setOption({ animation: false,
+    tooltip: { trigger: 'axis' },
+    grid: { left: 60, right: 70, top: 40, bottom: 40 },
+    legend: { data: ['AI Dominance %','BTC Market Cap $B'], bottom: 0, textStyle: { fontSize: 11 } },
+    xAxis: { type: 'category', data: quarters, axisLabel: { rotate: 45, fontSize: 10 }, boundaryGap: false },
+    yAxis: [
+      { type: 'value', name: 'Dominance %', axisLabel: { formatter: '{value}%' } },
+      { type: 'value', name: 'BTC $B', axisLabel: { formatter: '${value}B' } }
+    ],
+    series: [
+      {
+        name: 'AI Dominance %', type: 'line', yAxisIndex: 0, smooth: true, data: dominanceData,
+        lineStyle: { color: __bmPalette.teal, width: 2.5 }, itemStyle: { color: __bmPalette.teal },
+        symbol: 'circle', symbolSize: 4
+      },
+      {
+        name: 'BTC Market Cap $B', type: 'line', yAxisIndex: 1, smooth: true, data: btcMcap,
+        lineStyle: { color: 'rgba(26,58,42,0.4)', width: 0 },
+        itemStyle: { color: 'rgba(26,58,42,0.01)' },
+        symbol: 'none',
+        areaStyle: { color: 'rgba(26,58,42,0.12)' }
+      }
+    ]
+  });
+  window.addEventListener('resize', function(){ c2.resize(); });
+
+  // Chart 3: Major AI Token Market Cap - Horizontal Bar
+  var c3 = echarts.init(document.getElementById('chart3'), null, { renderer: 'svg' });
+  c3.setOption({ animation: false,
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, formatter: function(p){ return p[0].name + ': $' + p[0].value + 'B'; } },
+    grid: { left: 120, right: 40, top: 30, bottom: 30 },
+    xAxis: { type: 'value', name: 'USD Billions', axisLabel: { formatter: '${value}B' } },
+    yAxis: { type: 'category', data: ['AKT','IO','FET','GRT','RNDR','TAO','ICP','NEAR'], axisLabel: { fontSize: 11 }, inverse: true },
+    series: [{
+      type: 'bar',
+      data: [
+        { value: 0.16, itemStyle: { color: __bmPalette.accent } },
+        { value: 0.5, itemStyle: { color: __bmPalette.accent } },
+        { value: 0.73, itemStyle: { color: __bmPalette.green } },
+        { value: 1.2, itemStyle: { color: __bmPalette.gold } },
+        { value: 1.8, itemStyle: { color: __bmPalette.accent } },
+        { value: 3.2, itemStyle: { color: __bmPalette.accent } },
+        { value: 3.8, itemStyle: { color: __bmPalette.teal } },
+        { value: 4.5, itemStyle: { color: __bmPalette.teal } }
+      ],
+      label: { show: true, position: 'right', formatter: '${c}B', fontSize: 10 }
+    }]
+  });
+  window.addEventListener('resize', function(){ c3.resize(); });
+
+  // Chart 4: AI Token Price Trajectories - Indexed Multi-line
+  var c4 = echarts.init(document.getElementById('chart4'), null, { renderer: 'svg' });
+  var q = ['Q1 2023','Q2 2023','Q3 2023','Q4 2023','Q1 2024','Q2 2024','Q3 2024','Q4 2024','Q1 2025','Q2 2025','Q3 2025','Q4 2025','Q1 2026','Q2 2026'];
+  var tao = [100,55.0,87.9,302.3,681.5,307.8,373.7,516.6,417.7,332.5,274.8,340.7,307.8,224.1];
+  var rndr = [100,175.0,141.7,375.0,875.0,600.0,483.3,683.3,375.0,316.7,250.0,350.0,291.7,250.0];
+  var fet = [100,65.8,57.9,184.2,763.2,394.7,315.8,473.7,236.8,73.7,57.9,92.1,78.9,65.8];
+  var akt = [100,144.7,289.5,710.5,1342.1,1105.3,763.2,921.1,552.6,394.7,315.8,473.7,342.1,144.7];
+  var near = [100,66.7,54.8,181.0,342.9,242.9,214.3,276.2,190.5,152.4,133.3,166.7,181.0,214.3];
+  c4.setOption({ animation: false,
+    tooltip: { trigger: 'axis' },
+    grid: { left: 60, right: 30, top: 40, bottom: 40 },
+    legend: { data: ['TAO','RNDR','FET','AKT','NEAR'], bottom: 0, textStyle: { fontSize: 11 } },
+    xAxis: { type: 'category', data: q, axisLabel: { rotate: 30, fontSize: 10 }, boundaryGap: false },
+    yAxis: { type: 'value', name: 'Index (Q1 2023 = 100)' },
+    series: [
+      { name: 'TAO', type: 'line', data: tao, smooth: true, lineStyle: { color: __bmPalette.accent, width: 2 }, itemStyle: { color: __bmPalette.accent }, symbol: 'circle', symbolSize: 4 },
+      { name: 'RNDR', type: 'line', data: rndr, smooth: true, lineStyle: { color: __bmPalette.teal, width: 2 }, itemStyle: { color: __bmPalette.teal }, symbol: 'circle', symbolSize: 4 },
+      { name: 'FET', type: 'line', data: fet, smooth: true, lineStyle: { color: __bmPalette.green, width: 2 }, itemStyle: { color: __bmPalette.green }, symbol: 'circle', symbolSize: 4 },
+      { name: 'AKT', type: 'line', data: akt, smooth: true, lineStyle: { color: __bmPalette.gold, width: 2 }, itemStyle: { color: __bmPalette.gold }, symbol: 'circle', symbolSize: 4 },
+      { name: 'NEAR', type: 'line', data: near, smooth: true, lineStyle: { color: __bmPalette.red, width: 2 }, itemStyle: { color: __bmPalette.red }, symbol: 'circle', symbolSize: 4 }
+    ]
+  });
+  window.addEventListener('resize', function(){ c4.resize(); });
+
+  // Chart 5: VC Funding - Bar + Line Dual Axis
+  var c5 = echarts.init(document.getElementById('chart5'), null, { renderer: 'svg' });
+  var vcQ = ['2020Q3','2020Q4','2021Q1','2021Q2','2021Q3','2021Q4','2022Q1','2022Q2','2022Q3','2022Q4','2023Q1','2023Q2','2023Q3','2023Q4','2024Q1','2024Q2','2024Q3','2024Q4','2025Q1','2025Q2'];
+  var funding = [0.15,0.25,0.80,1.20,1.50,2.10,1.80,0.90,0.50,0.35,0.80,1.10,1.50,2.00,3.00,2.50,2.80,3.50,4.20,4.90];
+  var deals = [12,18,35,48,55,65,50,40,30,25,35,45,55,65,80,75,85,95,105,120];
+  c5.setOption({ animation: false,
+    tooltip: { trigger: 'axis' },
+    grid: { left: 60, right: 60, top: 40, bottom: 40 },
+    legend: { data: ['Funding $B','Deal Count'], bottom: 0, textStyle: { fontSize: 11 } },
+    xAxis: { type: 'category', data: vcQ, axisLabel: { rotate: 45, fontSize: 10 } },
+    yAxis: [
+      { type: 'value', name: 'USD Billions', axisLabel: { formatter: '${value}B' } },
+      { type: 'value', name: 'Deals', axisLabel: { formatter: '{value}' } }
+    ],
+    series: [
+      { name: 'Funding $B', type: 'bar', data: funding, itemStyle: { color: __bmPalette.accent }, barWidth: '55%' },
+      { name: 'Deal Count', type: 'line', yAxisIndex: 1, data: deals, smooth: true,
+        lineStyle: { color: __bmPalette.teal, width: 2.5 }, itemStyle: { color: __bmPalette.teal }, symbol: 'circle', symbolSize: 6 }
+    ]
+  });
+  window.addEventListener('resize', function(){ c5.resize(); });
+
+  // Chart 6: AI Token Category Distribution - Pie
+  var c6 = echarts.init(document.getElementById('chart6'), null, { renderer: 'svg' });
+  c6.setOption({ animation: false,
+    tooltip: { trigger: 'item', formatter: '{b}: {c}%' },
+    legend: { orient: 'vertical', right: 10, top: 'center', textStyle: { fontSize: 11 } },
+    series: [{
+      type: 'pie', radius: ['40%','72%'], center: ['38%','50%'],
+      data: [
+        { value: 17, name: 'Decentralised ML (TAO)', itemStyle: { color: __bmPalette.accent } },
+        { value: 42, name: 'AI Infrastructure (NEAR+ICP)', itemStyle: { color: __bmPalette.teal } },
+        { value: 13, name: 'GPU Compute (RNDR+AKT+IO)', itemStyle: { color: __bmPalette.accent } },
+        { value: 4, name: 'AI Agents (FET)', itemStyle: { color: __bmPalette.green } },
+        { value: 14, name: 'Data & Storage (GRT+FIL)', itemStyle: { color: __bmPalette.gold } },
+        { value: 4, name: 'AI Services (AGIX+OCEAN)', itemStyle: { color: __bmPalette.red } },
+        { value: 6, name: 'Other', itemStyle: { color: __bmPalette.muted } }
+      ],
+      label: { formatter: '{b}\n{d}%', fontSize: 10 }
+    }]
+  });
+  window.addEventListener('resize', function(){ c6.resize(); });
+
+  // Chart 7: Regulatory Timeline
+  var c7 = echarts.init(document.getElementById('chart7'), null, { renderer: 'svg' });
+  c7.setOption({ animation: false,
+    tooltip: { trigger: 'item', formatter: '{b}<br/>{c}' },
+    grid: { left: 200, containLabel: true, right: 40, top: 40, bottom: 30 },
+    xAxis: { type: 'time', axisLabel: { fontSize: 11 } },
+    yAxis: { type: 'category', data: ['EU AI Act full application','FASB digital assets project','EU AI Act GPAI obligations','Grayscale Decentralized AI Fund','BIS expands chip controls','EU AI Act enters into force','SEC approves spot Ether ETFs','SEC approves spot Bitcoin ETFs','FASB ASU 2023-08','EU MiCA enters into force','US BIS chip export controls','SEC SAB 121'], axisLabel: { fontSize: 10 } },
+    series: [{
+      type: 'scatter', symbolSize: 12,
+      data: [
+        ['2026-08-02','EU AI Act full application'],['2025-10-15','FASB digital assets project'],['2025-08-02','EU AI Act GPAI obligations'],
+        ['2025-07-16','Grayscale Decentralized AI Fund'],['2024-10-17','BIS expands chip controls'],['2024-08-01','EU AI Act enters into force'],
+        ['2024-07-23','SEC approves spot Ether ETFs'],['2024-01-10','SEC approves spot Bitcoin ETFs'],['2023-12-15','FASB ASU 2023-08'],
+        ['2023-06-09','EU MiCA enters into force'],['2022-10-07','US BIS chip export controls'],['2022-03-31','SEC SAB 121']
+      ],
+      itemStyle: { color: __bmPalette.accent }
+    }]
+  });
+  window.addEventListener('resize', function(){ c7.resize(); });
+
+  // Chart 8: Volatility Comparison - Horizontal Bar
+  var c8 = echarts.init(document.getElementById('chart8'), null, { renderer: 'svg' });
+  c8.setOption({ animation: false,
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, formatter: function(p){ return p[0].name + ': ' + p[0].value + '% ann.'; } },
+    grid: { left: 140, right: 40, top: 30, bottom: 30 },
+    xAxis: { type: 'value', name: 'Annualised Volatility %', axisLabel: { formatter: '{value}%' } },
+    yAxis: { type: 'category', data: ['US Treasuries','Gold','S&P 500','Bitcoin','RNDR','TAO','FET'], axisLabel: { fontSize: 11 }, inverse: true },
+    series: [{
+      type: 'bar',
+      data: [
+        { value: 5, itemStyle: { color: __bmPalette.muted } },
+        { value: 12, itemStyle: { color: __bmPalette.gold } },
+        { value: 15, itemStyle: { color: __bmPalette.green } },
+        { value: 60, itemStyle: { color: __bmPalette.gold } },
+        { value: 85, itemStyle: { color: __bmPalette.teal } },
+        { value: 95, itemStyle: { color: __bmPalette.accent } },
+        { value: 110, itemStyle: { color: __bmPalette.red } }
+      ],
+      label: { show: true, position: 'right', formatter: '{c}%', fontSize: 10 },
+      barWidth: '55%'
+    }]
+  });
+  window.addEventListener('resize', function(){ c8.resize(); });
+
+  // Chart 9: S&P 500 10-K Mentions - Bar
+  var c9 = echarts.init(document.getElementById('chart9'), null, { renderer: 'svg' });
+  c9.setOption({ animation: false,
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+    grid: { left: 50, right: 30, top: 40, bottom: 50 },
+    legend: { data: ['2023','2024'], bottom: 0, textStyle: { fontSize: 11 } },
+    xAxis: { type: 'category', data: ['AI Mentions','Digital Assets','EU CSRD','Calif. Climate','Net Zero'], axisLabel: { rotate: 25, fontSize: 10 } },
+    yAxis: { type: 'value', name: '% of S&P 500', axisLabel: { formatter: '{value}%' } },
+    series: [
+      { name: '2023', type: 'bar', data: [78,8,18,14,35], itemStyle: { color: __bmPalette.accent }, barGap: '10%' },
+      { name: '2024', type: 'bar', data: [85,9,21,18,29], itemStyle: { color: __bmPalette.teal } }
+    ]
+  });
+  window.addEventListener('resize', function(){ c9.resize(); });
+
+  // Chart 10: Academic Publication Trends - Dual Line
+  var c10 = echarts.init(document.getElementById('chart10'), null, { renderer: 'svg' });
+  var years = ['2018','2019','2020','2021','2022','2023','2024','2025','2026'];
+  var crypto = [0,0,1,3,1,2,1,1,1];
+  var aiTokens = [0,0,0,0,0,1,2,1,0];
+  c10.setOption({ animation: false,
+    tooltip: { trigger: 'axis' },
+    grid: { left: 50, right: 30, top: 40, bottom: 40 },
+    legend: { data: ['Crypto/Blockchain','AI-Specific Tokens'], bottom: 0, textStyle: { fontSize: 11 } },
+    xAxis: { type: 'category', data: years, axisLabel: { fontSize: 11 }, boundaryGap: false },
+    yAxis: { type: 'value', name: 'Publications', minInterval: 1 },
+    series: [
+      { name: 'Crypto/Blockchain', type: 'line', data: crypto, lineStyle: { color: __bmPalette.accent, width: 2.5 }, itemStyle: { color: __bmPalette.accent }, symbol: 'circle', symbolSize: 7 },
+      { name: 'AI-Specific Tokens', type: 'line', data: aiTokens, lineStyle: { color: __bmPalette.teal, width: 2.5, type: 'dashed' }, itemStyle: { color: __bmPalette.teal }, symbol: 'diamond', symbolSize: 8 }
+    ]
+  });
+  window.addEventListener('resize', function(){ c10.resize(); });
+
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../assets/bytemind-logo.png?v=2026" rel="icon"/>
+<title>AI and Digital Transformation: Impact on Business Practices, Firm Performance, and Corporate Reporting (2015-2025)</title>
+<style>
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --bg: #faf9f3;
+  --bg2: #fdfcf8;
+  --ink: #1f1e1a;
+  --muted: #6a6760;
+  --rule: #e2ddd1;
+  --accent: #1a3a2a;
+  --accent2: #9e6b1f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Cover */
+.cover {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+.cover h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+.cover .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.cover .meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Headings */
+h2 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--accent);
+}
+h3 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 1.8rem 0 0.75rem;
+}
+h4 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 1.5rem 0 0.5rem;
+}
+
+p { margin: 0.75rem 0; }
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+/* Key point highlight */
+mark.key {
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Callout box */
+.callout {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+.callout.warn {
+  border-left-color: var(--accent2);
+}
+.callout h4 {
+  margin-top: 0;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+}
+
+/* Metric row */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric-card {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric-card .val {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+.metric-card .val.warn { color: var(--accent2); }
+.metric-card .label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 600px;
+  margin: 1.5rem 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+thead th {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+tbody td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+tbody tr:nth-child(even) { background: var(--bg); }
+
+/* Charts */
+.chart-figure {
+  margin: 2rem 0;
+}
+.chart-figure figcaption {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+/* Footer / Sources */
+footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+footer .sources h2 {
+  font-size: 1.2rem;
+}
+footer .sources ol {
+  padding-left: 1.2rem;
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+footer .sources li {
+  margin-bottom: 0.5rem;
+  overflow-wrap: break-word;
+}
+footer .sources .src-title {
+  color: var(--ink);
+}
+footer .sources .src-url {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  color: var(--accent);
+  word-break: break-all;
+}
+footer .sources a {
+  word-break: break-all;
+}
+
+/* Citations */
+sup a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+sup a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cover h1 { font-size: 1.6rem; }
+  .container { padding: 1rem 1rem 2rem; }
+  .metric-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media print {
+  body { background: #fff; font-size: 13px; }
+  .container { max-width: 100%; }
+  .cover { page-break-after: always; }
+  h2 { page-break-before: always; }
+}
+
+
+/* ============================================================
+   Imported-report compatibility layer (ByteMind report standard)
+   ============================================================ */
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Generic report header (used by imported reports) */
+body > .container > header,
+article.page > header.report-head {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+body > .container > header h1,
+article.page > header.report-head h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+body > .container > header .subtitle,
+article.page > header.report-head .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+body > .container > header .meta,
+article.page > header.report-head .meta,
+article.page > header.report-head .byline {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+article.page > header.report-head .byline .sep {
+  margin: 0 0.5rem;
+  color: var(--rule);
+}
+
+/* Abstract block (NLP report) */
+.abstract {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  text-align: left;
+  margin: 1.5rem 0 0;
+}
+.abstract .label {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.abstract p:last-child { margin-bottom: 0; }
+
+/* Executive summary block */
+.exec-summary {
+  margin: 0 0 2rem;
+}
+.exec-summary h2 {
+  margin-top: 0;
+}
+
+/* Key findings */
+.key-findings {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.5rem;
+}
+.key-findings li,
+.finding-item {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Table of contents */
+.toc {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.toc h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+.toc ol {
+  margin: 0.5rem 0 0 1.2rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+.toc ol li {
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+.toc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.toc a:hover { text-decoration: underline; }
+
+/* Chart blocks used by imported reports */
+.chart-container {
+  margin: 1.75rem 0;
+}
+.chart-container h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.chart-container .chart-note,
+.chart-container .data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  font-style: italic;
+  overflow: visible;
+  word-wrap: break-word;
+}
+.chart-box {
+  width: 100%;
+  height: 420px;
+  overflow: visible;
+}
+.chart-box.tall,
+.chart-box-tall {
+  height: 520px;
+}
+.chart-box.short {
+  height: 340px;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+.two-col .chart-container,
+.two-col .chart-figure {
+  margin: 0;
+}
+.two-col .chart-box { height: 380px; }
+
+.two-col > * { min-width: 0; }
+
+/* Keep long reference links from stretching the page on small screens */
+.ref-list a, .ref-list li a, .sources a, .sources li a, ol li a, ul li a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.chart-box, .chart-box-tall, .chart-container, .chart-figure { min-width: 0; }
+
+
+/* Figure captions (NLP report) */
+figure.chart-figure figcaption {
+  font-weight: 600;
+  color: var(--ink);
+}
+figure.chart-figure figcaption strong {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* Mermaid diagram */
+figure.diagram-figure {
+  margin: 2rem 0;
+  padding: 1.5rem 1rem;
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  text-align: center;
+}
+figure.diagram-figure .mermaid { display: inline-block; }
+figure.diagram-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--rule);
+  text-align: left;
+}
+
+/* Section kicker (NLP report) */
+.section-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  display: block;
+  margin-top: 2.5rem;
+  margin-bottom: -1rem;
+}
+.section-kicker + h2 { margin-top: 1.5rem; }
+
+/* Metric displays (NLP and imported reports) */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric .metric-num {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.metric .metric-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+  display: block;
+}
+
+/* Callouts */
+.callout strong { color: var(--accent); }
+.callout-title {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+/* Special tables */
+.gap-table td:first-child,
+.data-table td:first-child {
+  font-weight: 600;
+  min-width: 200px;
+}
+td.num, th.num {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+}
+
+/* References */
+.ref-section {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.ref-section h2,
+.ref-list h2 {
+  margin-top: 0;
+  border-bottom: none;
+}
+.ref-item {
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.ref-item a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
+/* Footer navigation and notes */
+.footer-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2rem;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+.back-link a {
+  color: var(--accent);
+}
+.footer-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0 0;
+  flex-wrap: wrap;
+}
+.footer-nav a {
+  color: var(--accent);
+}
+
+/* Data notes in imported reports */
+.data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.25rem 0 0.75rem;
+  font-style: italic;
+}
+
+/* Inline code */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: var(--bg2);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .key-findings { grid-template-columns: 1fr; }
+  .toc ol { columns: 1; }
+  .two-col { grid-template-columns: 1fr; }
+  body > .container > header h1,
+  article.page > header.report-head h1 { font-size: 1.6rem; }
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>AI and Digital Transformation: Impact on Business Practices, Firm Performance, and Corporate Reporting</h1>
+<div class="subtitle">A Structured Research Brief, 2015-2025</div>
+<p class="meta">Dr Yuqian Zhang &middot; 10 July 2026 &middot; Analytical Brief</p>
+</header>
+<section class="exec-summary">
+<h2>Executive Summary</h2>
+<p>This research brief synthesises evidence on the impact of artificial intelligence (AI) and digital transformation on business practices, firm performance, and corporate reporting over the past decade. Drawing on OECD statistics, industry surveys from McKinsey, Deloitte, PwC, and EY, peer-reviewed academic research, and regulatory developments from the EU, SEC, and standard-setting bodies, the brief identifies adoption trends, productivity effects, audit transformation, disclosure implications, and research opportunities for accounting scholars.</p>
+<ul class="key-findings">
+<li>OECD firm-level AI adoption more than doubled from 8.7% (2023) to 20.2% (2025), driven by generative AI becoming widely available.</li>
+<li>Large firms (250+ employees) reached 40% adoption in 2024; SMEs reached 11.5%, a widening gap.</li>
+<li>AI adopters show productivity gains of 4-15%, but 56% of CEOs report zero measurable ROI to date (PwC, 2026).</li>
+<li>Big Four audit firms have invested billions in AI platforms (GL.ai, Helix, Ignite, Zora AI), reshaping audit methodology.</li>
+<li>S&amp;P 500 AI risk disclosures in 10-K filings surged from 12% (2023) to 72% (2025); AI securities litigation doubled from 2023 to 2024.</li>
+<li>The EU AI Act (effective August 2024) and SEC disclosure discussions signal a new regulatory era for AI governance.</li>
+</ul>
+</section>
+<section id="adoption">
+<h2>1. AI and Digital Technology Adoption Trends</h2>
+<h3>1.1 Adoption by Sector</h3>
+<p>AI adoption is highly concentrated in knowledge-intensive services. The ICT sector leads with 57.3% of firms using AI in 2025, followed by professional, scientific, and technical services at 36.8%. In 2024, the most recent year with full sectoral coverage, ICT adoption stood at 44.6%, compared with 7.2% in construction and 7.8% in accommodation and food services (OECD, 2026). The pattern reflects both the origin of AI technologies in the ICT sector and the relative ease of integrating AI into digital-first workflows. Among slower-adopting sectors, 2025 growth was strongest in accommodation and food services (62.5% year-on-year) and construction (59.1%), suggesting catch-up is underway (OECD, 2026).</p>
+<div class="chart-container">
+<h4>Figure 1: AI Adoption Rates by Sector, OECD Countries (2021-2025)</h4>
+<p class="chart-note">Share of enterprises with 10+ employees reporting AI use. Source: OECD ICT Access and Usage by Businesses Database (2025); OECD (2026).</p>
+<div class="chart-box tall" id="chart-sector"></div>
+</div>
+<h3>1.2 Adoption by Firm Size</h3>
+<p>Firm size remains the strongest predictor of AI adoption. In 2024, 40% of firms with 250 or more employees actively used AI, compared with 11.5% of SMEs. The adoption gap has widened: in 2020, large firms were 4.3 times more likely to use AI than SMEs; by 2024, this ratio stood at 3.5 times, but the absolute gap grew from 13.8 to 28.5 percentage points. Among SMEs that use generative AI, only 29% deploy it in core business activities; the majority confine AI to peripheral tasks. Younger firms, including startups, show notably higher AI adoption regardless of scale, suggesting that established routines and habits, rather than resource constraints alone, drive the gap (OECD, 2025). Preliminary 2025 data from the OECD show large-firm adoption reaching 52.0% and small-firm adoption at 17.4%, indicating the gap continues to expand (OECD, 2026).</p>
+<div class="chart-container">
+<h4>Figure 2: AI Adoption Rates by Firm Size, OECD Countries (2020-2024)</h4>
+<p class="chart-note">Source: OECD/BCG/INSEAD (2025). Preliminary 2025 data: 52.0% large, 17.4% small (OECD, 2026; definition differs slightly).</p>
+<div class="chart-box" id="chart-firmsize"></div>
+</div>
+<h3>1.3 Adoption Over Time and the GenAI Acceleration</h3>
+<p>OECD data reveal a sharp jump in 2024, at the same time that general-purpose generative AI tools such as ChatGPT and Copilot became widely available. Between 2023 and 2025, aggregate AI adoption more than doubled from 8.7% to 20.2%. McKinsey's broader global survey (which counts any use in at least one business function) places the 2025 figure at 88%. The divergence between OECD official statistics (firm-level, 10+ employees, strict definition) and McKinsey survey data (any functional use) highlights how hard it is to define and measure AI adoption consistently (OECD, 2026; McKinsey, 2025).</p>
+<div class="two-col">
+<div class="chart-container" style="margin:0;">
+<h4>Figure 3a: OECD AI Adoption Timeline (Total AI)</h4>
+<p class="chart-note">Source: OECD ICT Access and Usage Database.</p>
+<div class="chart-box" id="chart-timeline-oecd"></div>
+</div>
+<div class="chart-container" style="margin:0;">
+<h4>Figure 3b: McKinsey Global AI Adoption</h4>
+<p class="chart-note">Source: McKinsey Global Survey (2025).</p>
+<div class="chart-box" id="chart-timeline-mck"></div>
+</div>
+</div>
+</section>
+<section id="productivity">
+<h2>2. Effects on Firm Productivity, Cost Structures, and Financial Performance</h2>
+<p>The academic and industry evidence on AI's productivity effects is broadly positive but mixed. OECD estimates suggest AI could add 0.2 to 1.3 percentage points in annual labour productivity growth across G7 economies over the next decade. At the firm level, AI users show productivity gains of 4% to 15%, depending on the study and methodology (OECD, 2025). Productivity gains may follow a J-shaped pattern: dipping temporarily before improving, as firms go through costly restructuring to weave AI into their workflows.</p>
+<p>McKinsey identified 46 "GenAI high performers" among 876 surveyed firms (5.3%). These leaders attribute over 10% of EBIT to AI deployment and achieve returns exceeding $10.30 per dollar invested, nearly three times the average. Yet the contrast with PwC's finding that 56% of CEOs report zero measurable AI ROI in the past 12 months shows how large the implementation gap remains. Only 6% of organisations have achieved significant enterprise-wide AI impact (McKinsey, 2025; PwC, 2026).</p>
+<div class="chart-container">
+<h4>Figure 4: AI Productivity and Performance Estimates</h4>
+<p class="chart-note">Source: OECD (2025), McKinsey (2025), Deloitte (2025), EY (2024), PwC (2026), Brynjolfsson et al. (2023).</p>
+<div class="chart-box tall" id="chart-productivity"></div>
+</div>
+</section>
+<section id="audit">
+<h2>3. Digital Transformation in Auditing, Financial Reporting, and Management Control</h2>
+<h3>3.1 The Big Four and AI-Driven Audit Transformation</h3>
+<p>The Big Four accounting firms have invested heavily in AI platforms that now analyse entire populations of journal entries rather than traditional samples. EY's Helix platform analyses 100% of client journal entries. PwC developed GL.ai with H2O.ai to detect irregularities invisible to traditional sampling. KPMG's Ignite platform scans millions of accounting entries using machine learning. Deloitte's Zora AI, built with Nvidia, automates finance and procurement workflows, with projected cost reductions of up to 25% in these functions (PwC, 2023; KPMG, 2024; Deloitte, 2025).</p>
+<p>KPMG committed USD 2 billion over five years (2020-2025) targeting USD 12 billion in added revenue. PwC invested USD 1 billion in generative AI through its partnership with Microsoft and OpenAI. Adoption of AI-assisted tax preparation surged, with some firms reporting over 80% of individual return preparation handled through automated workflows in 2025 (KPMG, 2024; PwC, 2023).</p>
+<div class="chart-container">
+<h4>Figure 5: Big Four AI Audit Platforms, Capabilities, and Investments</h4>
+<p class="chart-note">Source: PwC (2023); KPMG (2024); Deloitte (2025); EY (2024).</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Firm</th><th>AI Platform</th><th>Key Capability</th><th>Disclosed Investment</th></tr></thead>
+<tbody>
+<tr><td>Deloitte</td><td>Zora AI (with Nvidia)</td><td>Finance and procurement automation; projected 25% cost reduction</td><td>Not separately disclosed</td></tr>
+<tr><td>PwC</td><td>GL.ai (with H2O.ai)</td><td>General ledger anomaly detection; partnership with Microsoft/OpenAI</td><td>USD 1 billion (2023)</td></tr>
+<tr><td>EY</td><td>EY Helix; EY Atlas</td><td>100% journal entry population analysis; global knowledge platform</td><td>Not separately disclosed</td></tr>
+<tr><td>KPMG</td><td>KPMG Ignite; Clara; Workbench</td><td>ML-driven anomaly scanning; real-time audit insights; multi-agent approach</td><td>USD 2 billion (2020-2025)</td></tr>
+</tbody>
+</table></div>
+</div>
+<h3>3.2 Management Control Systems and Digital Transformation</h3>
+<p>AI is reshaping management accounting from a reactive, backward-looking function toward proactive, strategic partnership. Machine learning applications in cost control, budgeting, and performance measurement enable predictive and prescriptive analytics that simulate complex business scenarios (Ranta, Ylinen, and Jarvenpaa, 2023). However, Wassie and Lakatos (2024), reviewing 62 articles published between 2019 and 2023, found that Asia and Europe dominate AI accounting research, with the Middle East and Africa showing minimal engagement. The literature reveals critical gaps in governance frameworks, empirical validation, and skill development pathways.</p>
+<div class="callout">
+<strong>Key development:</strong> The FRC (UK) raised concerns in June 2025 about the rising use of AI by auditors, questioning whether audit quality controls keep pace with AI deployment. The PCAOB similarly highlighted AI in its 2024 inspection reports, noting persistent audit deficiencies at firms despite AI adoption.
+  </div>
+</section>
+<section id="country">
+<h2>4. Country-Level Digital Readiness and Regulatory Developments</h2>
+<h3>4.1 Digital Competitiveness Rankings</h3>
+<p>Singapore, Switzerland, and Denmark lead the IMD World Digital Competitiveness Ranking (2024), measured across knowledge, technology, and future readiness pillars (IMD, 2024). Within the EU, Finland (76.0), the Netherlands (72.5), and Denmark (71.0) score highest on the DESI 2024 composite index (European Commission, 2024). The World Bank's Digital Adoption Index, though now dated (2016 for most countries), provides a useful baseline, with a 0-1 scale showing advanced economies clustered above 0.75 and emerging economies substantially lower, with India at 0.42 (World Bank, 2016).</p>
+<div class="chart-container">
+<h4>Figure 6: IMD World Digital Competitiveness Ranking, Top 20 (2024)</h4>
+<p class="chart-note">Source: IMD World Digital Competitiveness Ranking (2024). Higher scores indicate greater digital competitiveness.</p>
+<div class="chart-box tall" id="chart-imd"></div>
+</div>
+<h3>4.2 Regulatory Landscape</h3>
+<p>The EU AI Act, adopted in March 2024 and entering into force on 1 August 2024, is the world's first comprehensive AI regulation. It uses a risk-based framework with four categories (unacceptable, high, limited, minimal), phased compliance deadlines through 2030, and penalties up to 7% of global annual turnover for non-compliance. Prohibited practices provisions applied from February 2025; high-risk system obligations begin phasing in from August 2026.</p>
+<p>In the United States, the SEC's Investor Advisory Committee recommended AI-specific disclosure guidelines in December 2025, and S&amp;P 500 companies have significantly expanded AI risk factor disclosures. Reputational risk from AI is the most frequently cited concern (38% of S&amp;P 500 firms in 2025), followed by cybersecurity risk (20%) and regulatory uncertainty (41 firms explicitly flag the EU AI Act). AI-related securities class actions rose from 7 cases in 2023 to 14 in 2024 (Conference Board/ESGAUGE, 2025; Fisher &amp; Phillips, 2025).</p>
+<div class="chart-container">
+<h4>Figure 7: S&amp;P 500 AI Risk Disclosure Categories (2025)</h4>
+<p class="chart-note">Source: Conference Board/ESGAUGE (2025). Categories are not mutually exclusive; firms may cite multiple risks.</p>
+<div class="chart-box short" id="chart-disclosure"></div>
+</div>
+</section>
+<section id="capital">
+<h2>5. Corporate AI/Digital Investment Disclosures and Capital Market Implications</h2>
+<p>AI-related disclosures in corporate filings have grown rapidly. The Conference Board and ESGAUGE report that 72% of S&amp;P 500 companies disclosed at least one material AI risk in their 2025 10-K filings, up from just 12% in 2023 (Conference Board/ESGAUGE, 2025). Eisfeldt et al. (2023) find that firms with higher exposure to generative AI experienced larger increases in market value following the release of ChatGPT. Earnings call analysis by the European Central Bank confirms that early AI engagement boosted stock market performance beyond the immediate impact on expected earnings (Ca' Zorzi et al., 2025).</p>
+<p>Babina et al. (2024) show that AI-investing firms experience higher growth in sales, employment, and market valuations, driven primarily by product innovation. These findings show that AI disclosures carry economically meaningful information to capital markets, but also raise questions about whether firms with limited AI substance are using disclosure language to ride the AI narrative without matching investment.</p>
+<div class="two-col">
+<div class="chart-container" style="margin:0;">
+<h4>Figure 8a: S&amp;P 500 AI Risk Disclosures in 10-K Filings</h4>
+<p class="chart-note">Source: Conference Board/ESGAUGE (2025).</p>
+<div class="chart-box" id="chart-10k"></div>
+</div>
+<div class="chart-container" style="margin:0;">
+<h4>Figure 8b: AI-Related Securities Class Actions (US)</h4>
+<p class="chart-note">Source: Fisher &amp; Phillips AI Litigation Tracker (2025).</p>
+<div class="chart-box" id="chart-litigation"></div>
+</div>
+</div>
+</section>
+<section id="gaps">
+<h2>6. Research Gaps and Opportunities for Accounting Scholars</h2>
+<p>The intersection of AI, digital transformation, and accounting presents substantial opportunities for important research. The following table identifies specific gaps and relevant journal outlets for accounting scholars.</p>
+<div class="table-wrap"><table class="gap-table">
+<thead>
+<tr><th>Research Gap</th><th>Potential Contribution</th><th>Relevant Journals</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>AI disclosure quality and market pricing</td>
+<td>Develop and validate a measure of substantive vs. opportunistic AI disclosure; test whether auditors or regulators can improve disclosure credibility.</td>
+<td>The Accounting Review, Journal of Accounting Research, Journal of Accounting and Economics</td>
+</tr>
+<tr>
+<td>AI in audit methodology and audit quality</td>
+<td>Examine whether AI-assisted audits reduce restatements, improve fraud detection, or alter auditor judgment. Natural experiments from Big Four AI rollouts.</td>
+<td>Auditing: A Journal of Practice and Theory, Contemporary Accounting Research</td>
+</tr>
+<tr>
+<td>Management control in AI-intensive firms</td>
+<td>How do AI predictions alter budgeting, performance evaluation, and incentive design? Field studies in firms transitioning to AI-driven decision-making.</td>
+<td>Management Science, Accounting, Organizations and Society</td>
+</tr>
+<tr>
+<td>AI adoption and cost stickiness</td>
+<td>Does AI investment change firms' cost behaviour, such as asymmetric cost responses to revenue changes? Links to the cost stickiness literature.</td>
+<td>The Accounting Review, Review of Accounting Studies</td>
+</tr>
+<tr>
+<td>Digital reporting standards and comparability</td>
+<td>Assess the impact of the IASB's digital financial reporting project on cross-firm and cross-country comparability. Inline XBRL adoption effects.</td>
+<td>European Accounting Review, Accounting and Business Research</td>
+</tr>
+<tr>
+<td>AI governance and internal control</td>
+<td>How do firms design internal controls over AI systems? Implications for SOX 404 and internal control frameworks in the AI era.</td>
+<td>Journal of Accounting Research, Contemporary Accounting Research</td>
+</tr>
+<tr>
+<td>Cross-country digital readiness and firm outcomes</td>
+<td>How does country-level digital infrastructure moderate the relationship between firm-level AI investment and performance?</td>
+<td>Journal of International Business Studies, Journal of Accounting and Economics</td>
+</tr>
+<tr>
+<td>AI, labour, and human capital disclosures</td>
+<td>Extend Eisfeldt et al. (2023): how do AI workforce investments interact with financial reporting and voluntary disclosure choices?</td>
+<td>Journal of Financial Economics, The Accounting Review</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<section id="data-downloads">
+<h2>7. Downloadable Data</h2>
+<p>The CSV data files used to produce the charts in this brief are available for download below, along with a Python replication script that reproduces all charts and statistics from the source data. All files include commented headers describing variables, sources, and methodology. For full documentation, download ai_README_methodology.txt below or visit the <a href="data/README.md">Data &amp; Code</a> page.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>File</th><th>Description</th><th>Download</th></tr></thead>
+<tbody>
+<tr><td><code>replicate.py</code></td><td>Python replication script: reproduces all 9 charts and verifies key statistics</td><td><a download="" href="scripts/replicate.py">Download Python</a></td></tr>
+<tr><td><code>ai_adoption_by_sector.csv</code></td><td>AI adoption rates by economic sector, OECD (2021-2025)</td><td><a download="" href="data/ai_adoption_by_sector.csv">Download CSV</a></td></tr>
+<tr><td><code>ai_adoption_by_firm_size.csv</code></td><td>AI adoption rates by firm size category, OECD (2020-2024)</td><td><a download="" href="data/ai_adoption_by_firm_size.csv">Download CSV</a></td></tr>
+<tr><td><code>ai_adoption_timeline.csv</code></td><td>Aggregate AI and GenAI adoption timeline, OECD and McKinsey</td><td><a download="" href="data/ai_adoption_timeline.csv">Download CSV</a></td></tr>
+<tr><td><code>ai_productivity_effects.csv</code></td><td>Firm-level and macroeconomic AI productivity estimates</td><td><a download="" href="data/ai_productivity_effects.csv">Download CSV</a></td></tr>
+<tr><td><code>ai_investment_disclosures.csv</code></td><td>Corporate AI investment, disclosure, and litigation trends</td><td><a download="" href="data/ai_investment_disclosures.csv">Download CSV</a></td></tr>
+<tr><td><code>country_digital_readiness.csv</code></td><td>Multi-index country digital readiness scores (IMD, DESI, DAI)</td><td><a download="" href="data/country_digital_readiness.csv">Download CSV</a></td></tr>
+<tr><td><code>academic_literature_summary.csv</code></td><td>Key academic literature on AI, digital transformation, and accounting</td><td><a download="" href="data/academic_literature_summary.csv">Download CSV</a></td></tr>
+<tr><td><code>regulatory_timeline.csv</code></td><td>Chronology of AI and digital reporting regulatory developments</td><td><a download="" href="data/regulatory_timeline.csv">Download CSV</a></td></tr>
+<tr><td><code>ai_README_methodology.txt</code></td><td>Full methodology documentation (data sources, preprocessing, limitations)</td><td><a download="" href="data/ai_README_methodology.txt">Download TXT</a></td></tr>
+</tbody>
+</table></div>
+</section>
+<section class="ref-section">
+<h2>References</h2>
+<h3>Academic Literature</h3>
+<div class="ref-item">Babina, T., Fedyk, A., He, A.X., and Hodson, J. (2024). Artificial intelligence, firm growth, and product innovation. <em>Journal of Financial Economics</em>, 151, 103745. <a href="https://doi.org/10.1016/j.jfineco.2023.103745">https://doi.org/10.1016/j.jfineco.2023.103745</a></div>
+<div class="ref-item">Brynjolfsson, E., Li, D., and Raymond, L.R. (2023). Generative AI at work. NBER Working Paper No. 31161. <a href="https://doi.org/10.3386/w31161">https://doi.org/10.3386/w31161</a></div>
+<div class="ref-item">Eisfeldt, A.L., Schubert, G., and Zhang, M.B. (2023). Generative AI and firm values. NBER Working Paper No. 31222. <a href="https://doi.org/10.3386/w31222">https://doi.org/10.3386/w31222</a></div>
+<div class="ref-item">Ca' Zorzi, M., Lopardo, G., and Manu, A-S. (2025). Verba volant, transcripta manent: What corporate earnings calls reveal about the AI stock rally. ECB Working Paper No. 3093. <a href="https://www.ecb.europa.eu/pub/pdf/scpwps/ecb.wp3093~458d28b4bc.en.pdf">https://www.ecb.europa.eu/pub/pdf/scpwps/ecb.wp3093~458d28b4bc.en.pdf</a></div>
+<div class="ref-item">Ranta, M., Ylinen, M., and Jarvenpaa, M. (2023). Machine learning in management accounting research: Literature review and pathways for the future. <em>European Accounting Review</em>, 32(3), 607-636. <a href="https://doi.org/10.1080/09638180.2022.2137221">https://doi.org/10.1080/09638180.2022.2137221</a></div>
+<div class="ref-item">Wassie, F.A. and Lakatos, L.P. (2024). Artificial intelligence in accounting: A systematic literature review. <em>Cogent Business and Management</em>, 11(1). <a href="https://doi.org/10.1080/23311975.2024.23311975">https://doi.org/10.1080/23311975.2024.23311975</a></div>
+<h3 style="margin-top: 28px;">Institutional Reports and Data Sources</h3>
+<div class="ref-item">Conference Board/ESGAUGE (2025). AI Risk Disclosures in the S&amp;P 500: Reputation, Cybersecurity, and Regulation. <a href="https://corpgov.law.harvard.edu/2025/10/15/ai-risk-disclosures-in-the-sp-500-reputation-cybersecurity-and-regulation/">https://corpgov.law.harvard.edu/2025/10/15/ai-risk-disclosures-in-the-sp-500-reputation-cybersecurity-and-regulation/</a></div>
+<div class="ref-item">Deloitte (2025). <em>State of AI in the Enterprise</em>, 5th Edition. <a href="https://www.deloitte.com/global/en/about/press-room/deloitte-state-of-ai-q1-2025.html">https://www.deloitte.com/global/en/about/press-room/deloitte-state-of-ai-q1-2025.html</a></div>
+<div class="ref-item">European Commission (2024). <em>Digital Decade 2024: State of the Digital Decade Report</em>. <a href="https://digital-strategy.ec.europa.eu/en/library/report-state-digital-decade-2024">https://digital-strategy.ec.europa.eu/en/library/report-state-digital-decade-2024</a></div>
+<div class="ref-item">EY (2024). <em>EY AI Pulse Survey</em>. <a href="https://www.ey.com/en_gl/insights/ai/ey-ai-pulse-survey">https://www.ey.com/en_gl/insights/ai/ey-ai-pulse-survey</a></div>
+<div class="ref-item">Fisher &amp; Phillips LLP (2025). <em>AI Litigation Tracker</em>. <a href="https://www.fisherphillips.com/en/services/emerging-workforce-mobility/artificial-intelligence/ai-litigation-tracker.html">https://www.fisherphillips.com/en/services/emerging-workforce-mobility/artificial-intelligence/ai-litigation-tracker.html</a></div>
+<div class="ref-item">IMD (2024). <em>World Digital Competitiveness Ranking 2024</em>. <a href="https://www.imd.org/centers/wcc/world-competitiveness-center/rankings/world-digital-competitiveness-ranking/">https://www.imd.org/centers/wcc/world-competitiveness-center/rankings/world-digital-competitiveness-ranking/</a></div>
+<div class="ref-item">KPMG (2024). <em>KPMG Global AI Strategy and Investment Report</em>. <a href="https://kpmg.com/xx/en/our-insights/ai-and-technology.html">https://kpmg.com/xx/en/our-insights/ai-and-technology.html</a></div>
+<div class="ref-item">McKinsey &amp; Company (2025). <em>The State of AI in 2025</em>. McKinsey Global Survey. <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai</a></div>
+<div class="ref-item">OECD (2025). <em>The Adoption of Artificial Intelligence in Firms: New Evidence for Policymaking</em>. OECD/BCG/INSEAD. <a href="https://doi.org/10.1787/f9ef33c3-en">https://doi.org/10.1787/f9ef33c3-en</a></div>
+<div class="ref-item">OECD (2025). <em>AI Adoption by Small and Medium-Sized Enterprises</em>. <a href="https://doi.org/10.1787/426399c1-en">https://doi.org/10.1787/426399c1-en</a></div>
+<div class="ref-item">OECD (2026). AI Use by Individuals Surges Across the OECD as Adoption by Firms Continues to Expand. OECD Announcement, 28 January 2026. <a href="https://www.oecd.org/en/about/news/announcements/2026/01/ai-use-by-individuals-surges-across-the-oecd-as-adoption-by-firms-continues-to-expand.html">https://www.oecd.org/en/about/news/announcements/2026/01/ai-use-by-individuals-surges-across-the-oecd-as-adoption-by-firms-continues-to-expand.html</a></div>
+<div class="ref-item">PwC (2023). <em>PwC Announces $1 Billion Investment in Generative AI</em>. <a href="https://www.pwc.com/gx/en/news-room/press-releases/2023/pwc-announces-1-billion-investment-in-generative-ai.html">https://www.pwc.com/gx/en/news-room/press-releases/2023/pwc-announces-1-billion-investment-in-generative-ai.html</a></div>
+<div class="ref-item">PwC (2026). <em>29th Annual Global CEO Survey</em>. <a href="https://www.pwc.com/gx/en/issues/c-suite-insights/ceo-survey.html">https://www.pwc.com/gx/en/issues/c-suite-insights/ceo-survey.html</a></div>
+<div class="ref-item">World Bank (2016). <em>Digital Adoption Index. World Development Report 2016: Digital Dividends</em>. <a href="https://www.worldbank.org/en/publication/wdr2016/Digital-Adoption-Index">https://www.worldbank.org/en/publication/wdr2016/Digital-Adoption-Index</a></div>
+</section>
+<footer>
+<p>Dr Yuqian Zhang | Research Brief: AI and Digital Transformation (2015-2025) | 10 July 2026</p>
+<p>Data files and methodology: see data/README_methodology.txt in the accompanying directory.</p>
+</footer>
+</div>
+<script src="./_shared/js/echarts.min.js"></script>
+<script>
+window.__bmPalette = (function(){var s=getComputedStyle(document.documentElement);return {accent:s.getPropertyValue("--accent").trim(),gold:s.getPropertyValue("--accent2").trim(),muted:s.getPropertyValue("--muted").trim(),rule:s.getPropertyValue("--rule").trim(),ink:s.getPropertyValue("--ink").trim(),bg2:s.getPropertyValue("--bg2").trim(),teal:"#3d6b5b",green:"#2f6b4f",red:"#a33b2f"};})();
+</script>
+<script>
+(function() {
+  var colors = [__bmPalette.accent,__bmPalette.teal,__bmPalette.green,__bmPalette.gold,__bmPalette.red,__bmPalette.teal,__bmPalette.red];
+  function initChart(id) {
+    var el = document.getElementById(id);
+    if (!el) return null;
+    var c = echarts.init(el, null, { renderer: 'svg' });
+    window.addEventListener('resize', function() { c.resize(); });
+    return c;
+  }
+
+  // Figure 1: Sector adoption
+  (function() {
+    var c = initChart('chart-sector');
+    if (!c) return;
+    c.setOption({ animation: false,
+      tooltip: { trigger: 'axis' },
+      legend: { data: ['2021','2022','2023','2024','2025'], top: 5 },
+      grid: { left: 180, containLabel: true, right: 40, top: 40, bottom: 30 },
+      xAxis: { type: 'value', name: 'Adoption rate (%)', max: 65 },
+      yAxis: {
+        type: 'category',
+        inverse: true,
+        data: ['ICT','Professional, scientific & technical','Wholesale & retail trade','Manufacturing','Transportation & storage','Accommodation & food services','Construction'],
+        axisLabel: { fontSize: 11 }
+      },
+      series: [
+        { name: '2021', type: 'bar', data: [28.0,16.0,7.8,8.0,5.6,4.8,4.5], itemStyle: { color: __bmPalette.accent } },
+        { name: '2022', type: 'bar', data: [32.0,19.0,9.5,9.5,6.8,5.5,5.2], itemStyle: { color: __bmPalette.accent } },
+        { name: '2023', type: 'bar', data: [38.0,23.0,11.8,11.0,7.8,6.5,6.0], itemStyle: { color: __bmPalette.accent } },
+        { name: '2024', type: 'bar', data: [44.6,25.3,14.1,13.2,9.2,7.8,7.2], itemStyle: { color: __bmPalette.accent } },
+        { name: '2025', type: 'bar', data: [57.3,36.8,null,null,null,null,null], itemStyle: { color: __bmPalette.accent } }
+      ]
+    });
+  })();
+
+  // Figure 2: Firm size adoption
+  (function() {
+    var c = initChart('chart-firmsize');
+    if (!c) return;
+    c.setOption({ animation: false,
+      tooltip: { trigger: 'axis' },
+      legend: { data: ['Large (250+ employees)','All firms','SME (<250 employees)'], top: 5 },
+      grid: { left: 60, containLabel: true, right: 30, top: 40, bottom: 30 },
+      xAxis: { type: 'category', data: ['2020','2021','2022','2023','2024'] },
+      yAxis: { type: 'value', name: 'Adoption rate (%)', max: 45 },
+      series: [
+        { name: 'Large (250+ employees)', type: 'line', data: [18.0,22.0,26.0,32.0,40.0], smooth: true, lineStyle: { color: __bmPalette.green, width: 3 }, itemStyle: { color: __bmPalette.green }, symbolSize: 8 },
+        { name: 'All firms', type: 'line', data: [5.6,7.5,8.2,8.7,14.2], smooth: true, lineStyle: { color: __bmPalette.accent, width: 3 }, itemStyle: { color: __bmPalette.accent }, symbolSize: 8 },
+        { name: 'SME (<250 employees)', type: 'line', data: [4.2,5.8,6.3,6.8,11.5], smooth: true, lineStyle: { color: __bmPalette.gold, width: 3 }, itemStyle: { color: __bmPalette.gold }, symbolSize: 8 }
+      ]
+    });
+  })();
+
+  // Figure 3a: OECD timeline
+  (function() {
+    var c = initChart('chart-timeline-oecd');
+    if (!c) return;
+    c.setOption({ animation: false,
+      tooltip: { trigger: 'axis' },
+      legend: { data: ['Total AI'], top: 5 },
+      grid: { left: 50, containLabel: true, right: 30, top: 40, bottom: 30 },
+      xAxis: { type: 'category', data: ['2020','2021','2022','2023','2024','2025'] },
+      yAxis: { type: 'value', name: '%', max: 30 },
+      series: [
+        { name: 'Total AI', type: 'line', data: [5.6,7.5,8.2,8.7,14.2,20.2], smooth: true, lineStyle: { color: __bmPalette.accent, width: 3 }, itemStyle: { color: __bmPalette.accent }, symbolSize: 8 }
+      ]
+    });
+  })();
+
+  // Figure 3b: McKinsey timeline
+  (function() {
+    var c = initChart('chart-timeline-mck');
+    if (!c) return;
+    c.setOption({ animation: false,
+      tooltip: { trigger: 'axis' },
+      legend: { data: ['Total AI','Generative AI'], top: 5 },
+      grid: { left: 50, containLabel: true, right: 30, top: 40, bottom: 30 },
+      xAxis: { type: 'category', data: ['2020','2021','2022','2023','2024','2025'] },
+      yAxis: { type: 'value', name: '%', max: 100 },
+      series: [
+        { name: 'Total AI', type: 'line', data: [50.0,56.0,50.0,55.0,72.0,88.0], smooth: true, lineStyle: { color: __bmPalette.green, width: 3 }, itemStyle: { color: __bmPalette.green }, symbolSize: 8 },
+        { name: 'Generative AI', type: 'line', data: [null,null,null,37.0,65.0,72.0], smooth: true, lineStyle: { color: __bmPalette.teal, width: 3 }, itemStyle: { color: __bmPalette.teal }, symbolSize: 8 }
+      ]
+    });
+  })();
+
+  // Figure 4: Productivity estimates
+  (function() {
+    var c = initChart('chart-productivity');
+    if (!c) return;
+    c.setOption({ animation: false,
+      tooltip: { trigger: 'axis' },
+      grid: { left: 280, containLabel: true, right: 40, top: 40, bottom: 30 },
+      xAxis: { type: 'value', name: '%' },
+      yAxis: {
+        type: 'category',
+        inverse: true,
+        data: [
+          'EY: Operational efficiency gains',
+          'EY: Employee productivity gains',
+          'PwC: Zero measurable AI ROI (CEOs)',
+          'Deloitte: ROI meeting expectations (leaders)',
+          'Deloitte: ROI exceeding 30%',
+          'McKinsey: Revenue increase (upper bound)',
+          'McKinsey: EBIT contribution (high performers)',
+          'McKinsey: Revenue increase (lower bound)',
+          'Brynjolfsson et al. (2023): AI-assisted agent productivity',
+          'OECD (2025): Firm productivity premium (upper bound)',
+          'OECD (2025): Firm productivity premium'
+        ],
+        axisLabel: { fontSize: 10 }
+      },
+      series: [{
+        type: 'bar',
+        data: [
+          { value: 77.0, itemStyle: { color: __bmPalette.accent } },
+          { value: 74.0, itemStyle: { color: __bmPalette.accent } },
+          { value: 56.0, itemStyle: { color: __bmPalette.red } },
+          { value: 74.0, itemStyle: { color: __bmPalette.green } },
+          { value: 20.0, itemStyle: { color: __bmPalette.green } },
+          { value: 10.0, itemStyle: { color: __bmPalette.gold } },
+          { value: 10.0, itemStyle: { color: __bmPalette.gold } },
+          { value: 5.0, itemStyle: { color: __bmPalette.gold } },
+          { value: 14.0, itemStyle: { color: __bmPalette.teal } },
+          { value: 15.0, itemStyle: { color: __bmPalette.teal } },
+          { value: 4.0, itemStyle: { color: __bmPalette.teal } }
+        ],
+        label: { show: true, position: 'right', formatter: '{c}%', fontSize: 10 }
+      }]
+    });
+  })();
+
+  // Figure 6: IMD
+  (function() {
+    var c = initChart('chart-imd');
+    if (!c) return;
+    c.setOption({ animation: false,
+      tooltip: { trigger: 'axis', formatter: function(p) { return p[0].name + ': score ' + p[0].value; } },
+      grid: { left: 120, containLabel: true, right: 60, top: 40, bottom: 30 },
+      xAxis: { type: 'value', name: 'IMD WDC Score (0-100)', max: 105 },
+      yAxis: {
+        type: 'category',
+        inverse: true,
+        data: ['Singapore','Switzerland','Denmark','United States','Sweden','Netherlands','Finland','Norway','South Korea','United Kingdom','Germany','France','Japan','China','Canada','Australia','Ireland','Spain','Italy','India']
+      },
+      series: [{
+        type: 'bar',
+        data: [100.0,98.5,96.2,95.8,94.1,93.5,92.8,91.6,89.9,88.7,87.5,85.3,84.1,83.0,81.8,80.5,79.2,77.8,76.3,74.5],
+        itemStyle: { color: __bmPalette.accent },
+        label: { show: true, position: 'right', fontSize: 10 }
+      }]
+    });
+  })();
+
+  // Figure 7: S&P 500 risk disclosures (bar chart: non-exclusive categories)
+  (function() {
+    var c = initChart('chart-disclosure');
+    if (!c) return;
+    c.setOption({ animation: false,
+      tooltip: { trigger: 'axis', formatter: '{b}: {c}% of S&P 500 firms' },
+      grid: { left: 180, containLabel: true, right: 60, top: 40, bottom: 30 },
+      xAxis: { type: 'value', name: '% of S&P 500', max: 50 },
+      yAxis: {
+        type: 'category',
+        inverse: true,
+        data: ['Reputational risk','Cybersecurity risk (AI-related)'],
+        axisLabel: { fontSize: 12 }
+      },
+      series: [{
+        type: 'bar',
+        data: [
+          { value: 38.0, itemStyle: { color: __bmPalette.red } },
+          { value: 20.0, itemStyle: { color: __bmPalette.gold } }
+        ],
+        label: { show: true, position: 'right', formatter: '{c}%', fontSize: 12, fontWeight: 'bold' },
+        barWidth: '50%'
+      }]
+    });
+  })();
+
+  // Figure 8a: 10-K AI risk disclosures
+  (function() {
+    var c = initChart('chart-10k');
+    if (!c) return;
+    c.setOption({ animation: false,
+      tooltip: { trigger: 'axis' },
+      grid: { left: 70, containLabel: true, right: 20, top: 40, bottom: 30 },
+      xAxis: { type: 'category', data: ['2023','2025'] },
+      yAxis: { type: 'value', name: '% of S&P 500', nameGap: 12, max: 80 },
+      series: [{
+        type: 'bar',
+        data: [12.0,72.0],
+        itemStyle: { color: __bmPalette.accent },
+        label: { show: true, position: 'top', formatter: '{c}%', fontSize: 13, fontWeight: 'bold' }
+      }]
+    });
+  })();
+
+  // Figure 8b: AI litigation
+  (function() {
+    var c = initChart('chart-litigation');
+    if (!c) return;
+    c.setOption({ animation: false,
+      tooltip: { trigger: 'axis' },
+      grid: { left: 70, containLabel: true, right: 20, top: 40, bottom: 30 },
+      xAxis: { type: 'category', data: ['2023','2024','2025*'] },
+      yAxis: { type: 'value', name: 'Cases filed', nameGap: 12, max: 18 },
+      series: [{
+        type: 'bar',
+        data: [7,14,12],
+        itemStyle: { color: __bmPalette.red },
+        label: { show: true, position: 'top', formatter: '{c}', fontSize: 13, fontWeight: 'bold' }
+      }]
+    });
+  })();
+
+})();
+</script>
+</body>
+</html>

@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <link rel="icon" href="assets/bytemind-logo.png?v=2026">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Housing Market Indicators | ByteMind Ltd</title>
-    <meta name="description" content="Long-run housing market data for New Zealand and Australia from the BIS, OECD, RBNZ, and Stats NZ — interactive charts and downloadable CSVs.">
+    <title>ByteMind Indices | Data &amp; Indicators</title>
+    <meta name="description" content="Evidence-based indicators from ByteMind: New Zealand and Australia housing markets, the Tax Efficiency & Friction Index (TEFI), and the NZ SME Resilience Index — interactive charts and downloadable data.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ByteMind Ltd">
-    <meta property="og:title" content="Housing Market Indicators | ByteMind Ltd">
+    <meta property="og:title" content="ByteMind Indices | Data & Indicators">
     <meta property="og:description" content="Long-run housing market data for New Zealand and Australia from the BIS, OECD, RBNZ, and Stats NZ — interactive charts and downloadable CSVs.">
     <meta property="og:url" content="https://www.bytemind.co.nz/indices.html">
     <meta property="og:image" content="https://www.bytemind.co.nz/assets/bytemind-logo.png">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Housing Market Indicators | ByteMind Ltd">
+    <meta name="twitter:title" content="ByteMind Indices | Data & Indicators">
     <meta name="twitter:description" content="Long-run housing market data for New Zealand and Australia from the BIS, OECD, RBNZ, and Stats NZ — interactive charts and downloadable CSVs.">
     <link rel="canonical" href="https://www.bytemind.co.nz/indices.html">
     <script type="application/ld+json">
@@ -94,10 +94,20 @@
 
     <!-- 1. Hero -->
     <section class="indices-hero animate-fade-in-up">
-      <div class="badge">Data &amp; Indicators</div>
-      <h1>Housing Market Indicators</h1>
-      <p class="hero-subtitle">Long-run property market data for New Zealand and Australia, drawn from the Bank for International Settlements, the OECD, the Reserve Bank of New Zealand, and Stats NZ.</p>
+      <div class="badge">Indices &amp; Indicators</div>
+      <h1>ByteMind Indices</h1>
+      <p class="hero-subtitle">Evidence-based indicators built from official data: housing markets, tax efficiency, and New Zealand SME resilience.</p>
     </section>
+
+    <!-- 2. Indicator families -->
+    <div class="tabs" id="family-tabs" role="tablist" aria-label="Indicator families">
+      <button class="tab-btn active" role="tab" id="fam-housing" aria-selected="true" aria-controls="panel-housing" onclick="openFamily(event, 'housing')">Housing Market</button>
+      <button class="tab-btn" role="tab" id="fam-tefi" aria-selected="false" aria-controls="panel-tefi" onclick="openFamily(event, 'tefi')">Tax Efficiency (TEFI)</button>
+      <button class="tab-btn" role="tab" id="fam-sme" aria-selected="false" aria-controls="panel-sme" onclick="openFamily(event, 'sme')">NZ SME Resilience</button>
+    </div>
+
+    <!-- 3. Housing Market -->
+    <div id="panel-housing" class="family-panel active" role="tabpanel" aria-labelledby="fam-housing">
 
     <!-- KPI snapshot (2025) -->
     <section class="metric-strip" aria-label="Latest housing indicators">
@@ -120,7 +130,7 @@
     </section>
     <p class="metric-note">Sources: BIS (real HPI), OECD (price-to-income), RBNZ (mortgage rates &amp; DTI), Stats NZ (consents &amp; migration). See "About the Data" for methodology.</p>
 
-    <!-- 2. About the Data -->
+    <!-- About the Data -->
     <div class="accordion">
       <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-about">
         <span class="accordion-title">About the Data</span>
@@ -128,18 +138,18 @@
       </button>
       <div id="accordion-about" class="accordion-content">
         <h4>Real House Price Indices</h4>
-        <p>Harmonised long series from the Bank for International Settlements (BIS), base year 2010=100, deflated by CPI. Available from 1970 for both New Zealand and Australia. These are the most credible cross-country comparable house price series available.</p>
+        <p>Comparable long-run series from the Bank for International Settlements (BIS), base year 2010=100, adjusted for inflation. Available from 1970 for both New Zealand and Australia.</p>
         <p><strong>Source:</strong> BIS Residential Property Price Statistics, Q3 2025 release.</p>
 
         <h4 class="data-subhead">Price-to-Income Ratio</h4>
-        <p>OECD Affordable Housing Database indicator, seasonally adjusted, 2015=100. Tracks the relationship between nominal house prices and nominal disposable income per capita. The long-run median (1986-2025) is 88.9.</p>
+        <p>OECD indicator, seasonally adjusted, 2015=100. It tracks house prices relative to disposable income per person. The long-run median (1986-2025) is 88.9.</p>
         <p><strong>Source:</strong> OECD Affordable Housing Database, Indicator HM1.2.</p>
 
         <h4 class="data-subhead">Real HPI Deviation from Trend</h4>
-        <p>Percentage deviation of the real HPI from its long-run stochastic trend, estimated using a one-sided Hodrick-Prescott filter (lambda=400,000). Positive values indicate overvaluation relative to trend.</p>
+        <p>How far real house prices sit above or below their long-run trend. Positive values mean prices are above trend.</p>
 
         <h4 class="data-subhead">Mortgage Rates &amp; Household DTI</h4>
-        <p>1-year fixed mortgage rates from the RBNZ B20 series. Household debt-to-disposable-income ratio from RBNZ key statistics.</p>
+        <p>1-year fixed mortgage rates from the RBNZ B20 series. Household debt relative to disposable income from RBNZ key statistics.</p>
         <p><strong>Source:</strong> RBNZ B20, C40, and household debt statistics.</p>
 
         <h4 class="data-subhead">Building Consents &amp; Net Migration</h4>
@@ -148,7 +158,7 @@
       </div>
     </div>
 
-    <!-- 3. Tabs -->
+    <!-- Housing sub-tabs -->
     <div class="tabs" role="tablist" aria-label="Chart categories">
       <button class="tab-btn active" role="tab" id="tab-hpi" aria-selected="true" aria-controls="hpi" onclick="openTab(event, 'hpi')">Real House Prices</button>
       <button class="tab-btn" role="tab" id="tab-valuation" aria-selected="false" aria-controls="valuation" onclick="openTab(event, 'valuation')">Valuation Metrics</button>
@@ -156,12 +166,10 @@
       <button class="tab-btn" role="tab" id="tab-international" aria-selected="false" aria-controls="international" onclick="openTab(event, 'international')">International Comparison</button>
     </div>
 
-    <!-- 4. Tab Content Areas -->
-
     <!-- Tab 1: Real House Prices -->
     <div id="hpi" class="tab-content active" role="tabpanel" aria-labelledby="tab-hpi">
       <h3 class="chart-heading">NZ &amp; Australia Real House Price Indices (BIS, 2010=100)</h3>
-      <p class="caption">Real prices deflated by CPI. The structural break around 2000 is evident in both countries.</p>
+      <p class="caption">Real prices, adjusted for inflation. Both countries show a clear break around 2000.</p>
       <div id="chart-hpi" class="chart-box chart-lg" role="img" aria-label="Line chart of New Zealand and Australia real house price indices from 1970 to 2025"></div>
 
       <div class="accordion">
@@ -179,11 +187,11 @@
     <!-- Tab 2: Valuation Metrics -->
     <div id="valuation" class="tab-content" role="tabpanel" aria-labelledby="tab-valuation">
       <h3 class="chart-heading">NZ Price-to-Income Ratio (OECD, 2015=100)</h3>
-      <p class="caption">Dashed line represents the long-run median (88.9). At 105.8 as of 2025, the ratio is elevated but has declined 26% from the 2021 peak of 142.9.</p>
+      <p class="caption">The dashed line is the long-run median (88.9). At 105.8 in 2025, the ratio is high but down 26% from its 2021 peak of 142.9.</p>
       <div id="chart-pti" class="chart-box chart-md" role="img" aria-label="Chart of New Zealand price-to-income ratio, 2015 equals 100"></div>
 
       <h3 class="chart-heading chart-heading--spaced">Real HPI Deviation from Long-Run Trend</h3>
-      <p class="caption">Positive values indicate overvaluation. The deviation has fallen from +38% at the 2021 peak to approximately +8%.</p>
+      <p class="caption">Above zero means prices are above trend. The gap has fallen from +38% at the 2021 peak to about +8%.</p>
       <div id="chart-deviation" class="chart-box chart-md" role="img" aria-label="Chart of real house price index deviation from its long-run trend"></div>
 
       <h3 class="chart-heading chart-heading--spaced">Mortgage Rates &amp; Household Debt-to-Income</h3>
@@ -223,7 +231,7 @@
     <!-- Tab 4: International Comparison -->
     <div id="international" class="tab-content" role="tabpanel" aria-labelledby="tab-international">
       <h3 class="chart-heading">Real House Price Declines: Peak to Trough</h3>
-      <p class="caption">Selected advanced economy housing corrections. NZ and AU corrections have been moderate by historical standards.</p>
+      <p class="caption">Selected housing corrections in advanced economies. New Zealand and Australia were mild by historical standards.</p>
       <div id="chart-intl" class="chart-box chart-md" role="img" aria-label="Chart of real house price declines from peak to trough in selected advanced economies"></div>
 
       <div class="accordion">
@@ -234,6 +242,96 @@
         <div id="accordion-intl" class="accordion-content">
           <div id="intl-table" class="data-table-wrap"></div>
           <a href="data/international_comparison.csv" download class="btn btn-secondary btn-sm csv-link">Download CSV</a>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /panel-housing -->
+
+    <!-- 4. Tax Efficiency & Friction Index (TEFI) -->
+    <div id="panel-tefi" class="family-panel" role="tabpanel" aria-labelledby="fam-tefi">
+      <h2>Tax Efficiency &amp; Friction Index</h2>
+      <p class="panel-intro">How much friction do businesses face from corporate tax rates and tax compliance? The score runs from 0 (least friction) to 100 (most). New Zealand scores 65.4 — mid-pack among the ten economies compared.</p>
+
+      <div id="chart-tefi" class="chart-box chart-tefi" role="img" aria-label="Horizontal bar chart of tax efficiency and friction scores across ten economies, New Zealand highlighted"></div>
+
+      <div class="accordion">
+        <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-tefi-method">
+          <span class="accordion-title accordion-title--sm">Methodology &amp; Sources</span>
+          <span class="accordion-icon">&#9660;</span>
+        </button>
+        <div id="accordion-tefi-method" class="accordion-content">
+          <h4>What it measures</h4>
+          <p>The friction businesses face from two things: the corporate tax rate and the time spent on tax compliance. Higher scores mean more friction.</p>
+          <h4 class="data-subhead">How the score is built</h4>
+          <p>Each country's tax rate and estimated compliance hours are combined into a single score from 0 (best) to 100 (worst). Formula: normalised [(tax rate × 1.5) + (compliance hours ÷ 5)].</p>
+          <h4 class="data-subhead">Sources</h4>
+          <p>OECD Corporate Tax Statistics (2025); World Bank Doing Business (historical) and PwC Paying Taxes for compliance hours.</p>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-tefi-table">
+          <span class="accordion-title accordion-title--sm">View Data Table</span>
+          <span class="accordion-icon">&#9660;</span>
+        </button>
+        <div id="accordion-tefi-table" class="accordion-content">
+          <div id="tefi-table" class="data-table-wrap"></div>
+          <a href="data/tefi_raw.csv" download class="btn btn-secondary btn-sm csv-link">Download CSV</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. NZ SME Resilience Index -->
+    <div id="panel-sme" class="family-panel" role="tabpanel" aria-labelledby="fam-sme">
+      <h2>NZ SME Resilience Index</h2>
+      <p class="panel-intro">A plain-language health check for New Zealand small businesses, built from the latest official Stats NZ data. The index scores resilience from 0 (weak) to 100 (strong).</p>
+
+      <section class="metric-strip" aria-label="SME resilience indicators">
+        <div class="metric-item">
+          <div class="metric-value">37.1</div>
+          <span class="metric-label">Resilience Score / 100</span>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">-1.1%</div>
+          <span class="metric-label">Retail Spending (monthly)</span>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">+0.5%</div>
+          <span class="metric-label">Enterprise Growth (year-on-year)</span>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">-2.2%</div>
+          <span class="metric-label">Employment Growth (year-on-year)</span>
+        </div>
+      </section>
+      <p class="metric-note">A score of 37.1 means moderate pressure on small businesses: spending is down and employment is falling, while the number of businesses is still growing slightly.</p>
+
+      <div id="chart-sme" class="chart-box chart-sme" role="img" aria-label="Bar chart of SME resilience components: retail spending, enterprise growth, and employment growth"></div>
+
+      <div class="accordion">
+        <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-sme-method">
+          <span class="accordion-title accordion-title--sm">Methodology &amp; Sources</span>
+          <span class="accordion-icon">&#9660;</span>
+        </button>
+        <div id="accordion-sme-method" class="accordion-content">
+          <h4>What it measures</h4>
+          <p>The economic health of New Zealand small and medium enterprises, using the latest official data.</p>
+          <h4 class="data-subhead">Components</h4>
+          <p>Retail spending trend (monthly change in electronic card transactions, seasonally adjusted), enterprise growth (year-on-year), and employment growth (year-on-year).</p>
+          <h4 class="data-subhead">Sources</h4>
+          <p>Stats NZ Electronic Card Transactions (Jan 2026) and Business Demography (Feb 2025) releases.</p>
+        </div>
+      </div>
+
+      <div class="accordion">
+        <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-sme-table">
+          <span class="accordion-title accordion-title--sm">View Data Table</span>
+          <span class="accordion-icon">&#9660;</span>
+        </button>
+        <div id="accordion-sme-table" class="accordion-content">
+          <div id="sme-table" class="data-table-wrap"></div>
+          <a href="data/nz_sme_resilience.csv" download class="btn btn-secondary btn-sm csv-link">Download CSV</a>
         </div>
       </div>
     </div>
@@ -290,6 +388,25 @@
       evt.currentTarget.setAttribute('aria-selected', 'true');
     }
 
+    // Indicator family switching: show one family panel, hide the rest
+    function openFamily(evt, familyName) {
+      var panels = document.getElementsByClassName('family-panel');
+      for (var i = 0; i < panels.length; i++) {
+        panels[i].classList.remove('active');
+        panels[i].setAttribute('aria-hidden', 'true');
+      }
+      var tabs = document.querySelectorAll('#family-tabs .tab-btn');
+      for (var j = 0; j < tabs.length; j++) {
+        tabs[j].className = tabs[j].className.replace(' active', '');
+        tabs[j].setAttribute('aria-selected', 'false');
+      }
+      var panel = document.getElementById('panel-' + familyName);
+      panel.classList.add('active');
+      panel.setAttribute('aria-hidden', 'false');
+      evt.currentTarget.className += ' active';
+      evt.currentTarget.setAttribute('aria-selected', 'true');
+    }
+
     // Accessible accordions
     document.querySelectorAll('.accordion-header').forEach(function (header) {
       header.addEventListener('click', function () {
@@ -302,8 +419,7 @@
     });
 
     // Keyboard navigation for tabs (arrow keys, Home, End)
-    var tablist = document.querySelector('.tabs');
-    if (tablist) {
+    document.querySelectorAll('.tabs').forEach(function (tablist) {
       tablist.addEventListener('keydown', function (e) {
         var tabs = Array.prototype.slice.call(tablist.querySelectorAll('.tab-btn'));
         var idx = tabs.indexOf(document.activeElement);
@@ -319,7 +435,7 @@
           next.click();
         }
       });
-    }
+    });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
   <script src="assets/js/indices.js"></script>
@@ -456,11 +572,21 @@
     /* Tab panels */
     .tab-content { display: none; }
     .tab-content.active { display: block; }
+    .family-panel { display: none; }
+    .family-panel.active { display: block; }
+    .panel-intro {
+      max-width: 720px;
+      color: var(--color-text-secondary);
+      line-height: var(--leading-relaxed);
+      margin-bottom: var(--space-8);
+    }
 
     /* Chart boxes */
     .chart-box { width: 100%; margin-bottom: var(--space-8); }
     .chart-lg { height: 480px; }
     .chart-md { height: 400px; }
+    .chart-tefi { height: 420px; }
+    .chart-sme { height: 300px; }
     .chart-heading { margin-bottom: var(--space-2); }
     .chart-heading--spaced { margin-top: var(--space-10); }
     .caption {

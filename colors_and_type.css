@@ -231,7 +231,7 @@ p { margin-bottom: 1.25rem; color: var(--color-text-secondary); line-height: 1.6
 
 /* ── Footer ── */
 .footer {
-  margin-top: var(--space-32); padding: var(--space-20) 0;
+  margin-top: var(--space-24); padding: var(--space-20) 0;
   background: var(--color-primary-900); color: var(--color-primary-foreground);
 }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--space-10); text-align: left; margin-bottom: var(--space-10); }
@@ -248,14 +248,134 @@ p { margin-bottom: 1.25rem; color: var(--color-text-secondary); line-height: 1.6
 .grid-2-1 { display: grid; grid-template-columns: 2fr 1fr; gap: var(--space-10); }
 
 /* ── Spacing ── */
-.section { padding: var(--space-32) 0; }
-.section-rule { border: none; border-top: 1px solid var(--color-border); margin: var(--space-16) 0; }
+.section { padding: var(--space-20) 0; }
+.section-rule { border: none; border-top: 1px solid var(--color-border); margin: var(--space-12) 0; }
 .section-header { text-align: center; max-width: 640px; margin: 0 auto var(--space-12); }
 
 /* ── Hero ── */
 .hero-wrapper { text-align: center; max-width: 760px; margin: 0 auto; padding: var(--space-16) 0; }
 .hero-wrapper .accent-bar { margin: 0 auto var(--space-6) auto; }
 .hero-subtitle { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 400; font-style: italic; color: var(--color-muted-foreground); max-width: 580px; margin: 0 auto 2.25rem auto; line-height: 1.65; }
+
+/* ── Interior page hero ── */
+.page-hero {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: var(--space-16) 0 var(--space-12);
+}
+.page-hero .accent-bar { margin: 0 auto var(--space-6) auto; }
+.page-hero .hero-intro {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-muted-foreground);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── Lead paragraph ── */
+.lead {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+/* ── Editorial lists: capabilities, steps, principles ── */
+.capability-list,
+.steps,
+.principle-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-12);
+}
+.capability-item,
+.step,
+.principle {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-8);
+}
+.capability-num {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--color-primary-500);
+  margin-bottom: var(--space-4);
+}
+.capability-item h3,
+.step h4,
+.principle h4 { margin-bottom: var(--space-3); }
+.capability-item p,
+.step p,
+.principle p { margin-bottom: 0; }
+
+/* ── Featured research (editorial block, not a card) ── */
+.research-feature {
+  border-left: 3px solid var(--color-primary);
+  padding: var(--space-4) var(--space-8);
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+}
+.research-feature h3 { margin: var(--space-3) 0 var(--space-2); }
+
+/* ── Service card lists ── */
+.service-list { list-style: none; margin: var(--space-6) 0; }
+.service-list li {
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border-light);
+  font-size: 0.95rem;
+}
+.service-list li:last-child { border-bottom: none; }
+.service-outcome {
+  margin: 0;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-light);
+  font-size: var(--text-sm);
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+/* ── Founder block (about page, understated) ── */
+.founder-card {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: var(--space-10);
+  align-items: start;
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-10);
+  max-width: 860px;
+  margin: 0 auto;
+}
+.founder-photo {
+  width: 150px;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+.founder-card .founder-subtitle { margin-bottom: var(--space-5); }
+.credential-line {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted-foreground);
+  margin-top: var(--space-5);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border-light);
+}
+
+/* ── Inline link row ── */
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-8);
+  margin-top: var(--space-8);
+}
 
 /* ── About Page ── */
 .hero-grid { display: grid; grid-template-columns: minmax(0, 340px) 1fr; gap: var(--space-20); align-items: center; padding: var(--space-20) 0 var(--space-12); }
@@ -337,6 +457,8 @@ p { margin-bottom: 1.25rem; color: var(--color-text-secondary); line-height: 1.6
   .mobile-menu-btn { display: flex; }
   .hero-grid { grid-template-columns: 1fr; gap: var(--space-8); padding: var(--space-12) 0 var(--space-8); }
   .stat-grid, .grid-2-1 { grid-template-columns: 1fr; }
+  .capability-list, .steps, .principle-list { grid-template-columns: 1fr; gap: var(--space-8); }
+  .founder-card { grid-template-columns: 1fr; gap: var(--space-8); padding: var(--space-8); }
   .footer-grid { grid-template-columns: 1fr; }
   .section { padding: var(--space-20) 0; }
   .cta-banner { padding: var(--space-16) var(--space-6); }

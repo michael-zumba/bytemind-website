@@ -406,7 +406,7 @@
             </div>
         </section>
 
-        <!-- ===== Demo video placeholder ===== -->
+        <!-- ===== Demo video ===== -->
         <section class="section" id="demo">
             <div class="section-head reveal">
                 <div class="eyebrow">Watch it work</div>
@@ -415,19 +415,17 @@
                 <div class="accent-bar"></div>
             </div>
 
-            <!-- TODO: Replace this placeholder panel with the demo video embed
-                 (e.g. a YouTube/Vimeo iframe with the same 16:9 proportions). -->
             <div class="demo reveal">
-                <div class="demo-inner">
-                    <div class="play-btn" aria-hidden="true">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M8 5.5v13l11-6.5-11-6.5Z"></path>
-                        </svg>
-                    </div>
-                    <h3>Watch ByteProof in action</h3>
-                    <p>The demo video is on its way. This space will play it here, so you can see tracked changes and any-app polish in under two minutes.</p>
-                    <span class="demo-tag">Demo video coming soon</span>
-                </div>
+                <video class="demo-video" controls playsinline preload="metadata"
+                       poster="assets/byteproof/byteproof-app-main.png"
+                       aria-label="ByteProof demonstration video">
+                    <source src="assets/byteproof/byteproof-intro.mp4" type="video/mp4">
+                    Your browser does not support embedded video.
+                </video>
+                <!-- To stream via YouTube instead, replace the <video> above with:
+                     <iframe class="demo-video" src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID"
+                             title="ByteProof demo" frameborder="0" allowfullscreen></iframe> -->
+                <p class="demo-note">Watch tracked changes, reviewer comments, and any-app polish in under nine minutes.</p>
             </div>
         </section>
 

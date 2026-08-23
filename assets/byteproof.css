@@ -1055,6 +1055,35 @@ a {
   max-width: 440px;
 }
 
+.demo-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.demo-card {
+  margin: 0;
+}
+
+.demo-card h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.15rem;
+  color: var(--card);
+  margin: 1rem 0 0.35rem;
+}
+
+.demo-card p {
+  color: rgba(250, 249, 243, 0.68);
+  font-size: 0.88rem;
+  max-width: none;
+  margin: 0;
+}
+
 .demo-tag {
   display: inline-block;
   margin-top: 1.6rem;
@@ -1460,6 +1489,10 @@ a {
   }
 
   .example-row {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-grid {
     grid-template-columns: 1fr;
   }
 

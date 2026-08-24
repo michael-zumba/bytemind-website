@@ -1,0 +1,16 @@
+# Prompting science benchmarks: chain-of-thought and zero-shot reasoning
+# improvements, and PromptRobust adversarial-prompt robustness results.
+# Variables: study, year, benchmark, indicator, value, unit, note, source.
+# Accuracy values are accuracy on the named benchmark before and after the
+# prompting intervention, as reported in the papers. Compiled from the
+# papers; no stable machine-readable endpoint.
+study,year,benchmark,indicator,value,unit,note,source
+Wei et al. 2022,2022,GSM8K PaLM 540B,accuracy_standard_prompting,17.9,percent,Standard few-shot prompting baseline accuracy on GSM8K,arXiv:2201.11903
+Wei et al. 2022,2022,GSM8K PaLM 540B,accuracy_chain_of_thought,58.1,percent,Chain-of-thought prompting raised GSM8K accuracy to 58.1 percent,arXiv:2201.11903
+Kojima et al. 2022,2022,MultiArith text-davinci-002,accuracy_standard_prompting,17.7,percent,Standard prompting baseline accuracy on MultiArith,NeurIPS 2022 and arXiv:2205.11916
+Kojima et al. 2022,2022,MultiArith text-davinci-002,accuracy_zero_shot_cot,78.7,percent,Zero-shot chain-of-thought raised MultiArith accuracy to 78.7 percent,NeurIPS 2022 and arXiv:2205.11916
+Kojima et al. 2022,2022,GSM8K text-davinci-002,accuracy_standard_prompting,10.4,percent,Standard prompting baseline accuracy on GSM8K,NeurIPS 2022 and arXiv:2205.11916
+Kojima et al. 2022,2022,GSM8K text-davinci-002,accuracy_zero_shot_cot,40.7,percent,Zero-shot chain-of-thought raised GSM8K accuracy to 40.7 percent,NeurIPS 2022 and arXiv:2205.11916
+Zhu et al. 2023,2023,PromptRobust,adversarial_prompts,4788,count,PromptRobust generated 4788 adversarial prompts,arXiv:2306.04528
+Zhu et al. 2023,2023,PromptRobust,tasks,8,count,Evaluation covered 8 tasks,arXiv:2306.04528
+Zhu et al. 2023,2023,PromptRobust,datasets,13,count,Evaluation covered 13 datasets,arXiv:2306.04528

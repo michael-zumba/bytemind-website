@@ -1,0 +1,81 @@
+{
+  "ai-era-daily-life": {
+    "sources_note": "Sources: OECD; CoinMarketCap/CoinGecko; IBM Cost of a Data Breach; Stats NZ International Travel; Gallup World Poll / World Happiness Report; OpenAI announcements.",
+    "metrics": [
+      {
+        "value": "5.65",
+        "label": "Global Life Satisfaction, 0-10 (2025)"
+      },
+      {
+        "value": "72",
+        "label": "Positive Experience Index (2024)"
+      }
+    ],
+    "panels": [
+      {
+        "heading": "Global Life Satisfaction Before and After ChatGPT",
+        "caption": "Cantril ladder life evaluation, unweighted world mean (0-10). Source: World Happiness Report 2026 (Gallup World Poll data). The rise is concentrated in 2020-2021, before ChatGPT; the post-2022 path is broadly flat.",
+        "chartId": "chart-life-satisfaction",
+        "aria": "Line chart of global life satisfaction from 2011 to 2025",
+        "labels": ["2011", "2012", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"],
+        "values": [5.392, 5.419, 5.376, 5.382, 5.354, 5.376, 5.407, 5.473, 5.533, 5.554, 5.54, 5.528, 5.578, 5.65],
+        "seriesName": "Global mean (0-10)",
+        "unit": "Cantril ladder (0-10)",
+        "tableId": "life-satisfaction-table",
+        "tableColumns": ["Year", "Global Mean (0-10)", "Countries"],
+        "tableRows": [
+          ["2011", "5.392", "156"], ["2012", "5.419", "156"], ["2014", "5.376", "158"],
+          ["2015", "5.382", "157"], ["2016", "5.354", "155"], ["2017", "5.376", "156"],
+          ["2018", "5.407", "156"], ["2019", "5.473", "153"], ["2020", "5.533", "149"],
+          ["2021", "5.554", "146"], ["2022", "5.54", "137"], ["2023", "5.528", "143"],
+          ["2024", "5.578", "147"], ["2025", "5.65", "147"]
+        ],
+        "csvPath": "reports/ai-era-daily-life/data/ai_era_life_satisfaction.csv"
+      }
+    ],
+    "card": {
+      "title": "Generative AI and Everyday Life",
+      "desc": "Wellbeing, work, and skills before and after ChatGPT, with 14 charts and 15 downloadable datasets.",
+      "link": "reports/ai-era-daily-life/"
+    }
+  },
+  "prompt-literacy-ai-era": {
+    "sources_note": "Sources: OECD; CoinMarketCap/CoinGecko; IBM Cost of a Data Breach; Stats NZ International Travel; OpenAI announcements; Pew Research Center.",
+    "metrics": [
+      {
+        "value": "800M",
+        "label": "ChatGPT Weekly Active Users (Oct 2025)"
+      },
+      {
+        "value": "44%",
+        "label": "US Adults Who Have Used ChatGPT (2026)"
+      }
+    ],
+    "panels": [
+      {
+        "heading": "ChatGPT Weekly Active Users",
+        "caption": "Weekly active users in millions, from OpenAI announcements and reported figures, November 2023 to October 2025.",
+        "chartId": "chart-chatgpt-weekly",
+        "aria": "Line chart of ChatGPT weekly active users from November 2023 to October 2025",
+        "labels": ["Nov 2023", "Aug 2024", "Aug 2025", "Oct 2025"],
+        "values": [100, 200, 700, 800],
+        "seriesName": "Weekly active users (millions)",
+        "unit": "Users (millions)",
+        "tableId": "chatgpt-weekly-table",
+        "tableColumns": ["Date", "Weekly Active Users (M)", "Note"],
+        "tableRows": [
+          ["2023-11-06", "100", "Announced at OpenAI DevDay"],
+          ["2024-08-29", "200", "Reported via Axios"],
+          ["2025-08-04", "700", "On track to 700 million"],
+          ["2025-10-06", "800", "Announced at DevDay"]
+        ],
+        "csvPath": "reports/prompt-literacy-ai-era/data/chatgpt_weekly_users.csv"
+      }
+    ],
+    "card": {
+      "title": "Prompt Literacy in the AI Era",
+      "desc": "The value, measurement, and accounting implications of effective human-AI conversation, with 12 charts and 13 downloadable datasets.",
+      "link": "reports/prompt-literacy-ai-era/"
+    }
+  }
+}

@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../assets/bytemind-logo.png?v=2026" rel="icon"/>
+<link rel="stylesheet" href="../chart-download.css"/>
+<title>Prompt Literacy in the AI Era: Value, Measurement, and the Accounting Question</title>
+<style>
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --bg: #faf9f3;
+  --bg2: #fdfcf8;
+  --ink: #1f1e1a;
+  --muted: #6a6760;
+  --rule: #e2ddd1;
+  --accent: #1a3a2a;
+  --accent2: #9e6b1f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Cover */
+.cover {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+.cover h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+.cover .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.cover .meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Headings */
+h2 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--accent);
+}
+h3 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 1.8rem 0 0.75rem;
+}
+h4 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 1.5rem 0 0.5rem;
+}
+
+p { margin: 0.75rem 0; }
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+/* Key point highlight */
+mark.key {
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Callout box */
+.callout {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+.callout.warn {
+  border-left-color: var(--accent2);
+}
+.callout h4 {
+  margin-top: 0;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+}
+
+/* Metric row */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric-card {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric-card .val {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+.metric-card .val.warn { color: var(--accent2); }
+.metric-card .label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 600px;
+  margin: 1.5rem 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+thead th {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+tbody td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+tbody tr:nth-child(even) { background: var(--bg); }
+
+/* Charts */
+.chart-figure {
+  margin: 2rem 0;
+}
+.chart-figure figcaption {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+/* Footer / Sources */
+footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+footer .sources h2 {
+  font-size: 1.2rem;
+}
+footer .sources ol {
+  padding-left: 1.2rem;
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+footer .sources li {
+  margin-bottom: 0.5rem;
+  overflow-wrap: break-word;
+}
+footer .sources .src-title {
+  color: var(--ink);
+}
+footer .sources .src-url {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  color: var(--accent);
+  word-break: break-all;
+}
+footer .sources a {
+  word-break: break-all;
+}
+
+/* Citations */
+sup a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+sup a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cover h1 { font-size: 1.6rem; }
+  .container { padding: 1rem 1rem 2rem; }
+  .metric-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media print {
+  body { background: #fff; font-size: 13px; }
+  .container { max-width: 100%; }
+  .cover { page-break-after: always; }
+  h2 { page-break-before: always; }
+}
+
+
+/* ============================================================
+   Imported-report compatibility layer (ByteMind report standard)
+   ============================================================ */
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Generic report header (used by imported reports) */
+body > .container > header,
+article.page > header.report-head {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+body > .container > header h1,
+article.page > header.report-head h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+body > .container > header .subtitle,
+article.page > header.report-head .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+body > .container > header .meta,
+article.page > header.report-head .meta,
+article.page > header.report-head .byline {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+article.page > header.report-head .byline .sep {
+  margin: 0 0.5rem;
+  color: var(--rule);
+}
+
+/* Abstract block (NLP report) */
+.abstract {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  text-align: left;
+  margin: 1.5rem 0 0;
+}
+.abstract .label {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.abstract p:last-child { margin-bottom: 0; }
+
+/* Executive summary block */
+.exec-summary {
+  margin: 0 0 2rem;
+}
+.exec-summary h2 {
+  margin-top: 0;
+}
+
+/* Key findings */
+.key-findings {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.5rem;
+}
+.key-findings li,
+.finding-item {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Table of contents */
+.toc {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.toc h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+.toc ol {
+  margin: 0.5rem 0 0 1.2rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+.toc ol li {
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+.toc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.toc a:hover { text-decoration: underline; }
+
+/* Chart blocks used by imported reports */
+.chart-container {
+  margin: 1.75rem 0;
+}
+.chart-container h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.chart-container .chart-note,
+.chart-container .data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  font-style: italic;
+  overflow: visible;
+  word-wrap: break-word;
+}
+.chart-box {
+  width: 100%;
+  height: 420px;
+  overflow: visible;
+}
+.chart-box.tall,
+.chart-box-tall {
+  height: 520px;
+}
+.chart-box.short {
+  height: 340px;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+.two-col .chart-container,
+.two-col .chart-figure {
+  margin: 0;
+}
+.two-col .chart-box { height: 380px; }
+
+.two-col > * { min-width: 0; }
+
+/* Keep long reference links from stretching the page on small screens */
+.ref-list a, .ref-list li a, .sources a, .sources li a, ol li a, ul li a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.chart-box, .chart-box-tall, .chart-container, .chart-figure { min-width: 0; }
+
+
+/* Figure captions (NLP report) */
+figure.chart-figure figcaption {
+  font-weight: 600;
+  color: var(--ink);
+}
+figure.chart-figure figcaption strong {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* Mermaid diagram */
+figure.diagram-figure {
+  margin: 2rem 0;
+  padding: 1.5rem 1rem;
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  text-align: center;
+}
+figure.diagram-figure .mermaid { display: inline-block; }
+figure.diagram-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--rule);
+  text-align: left;
+}
+
+/* Section kicker (NLP report) */
+.section-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  display: block;
+  margin-top: 2.5rem;
+  margin-bottom: -1rem;
+}
+.section-kicker + h2 { margin-top: 1.5rem; }
+
+/* Metric displays (NLP and imported reports) */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric .metric-num {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.metric .metric-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+  display: block;
+}
+
+/* Callouts */
+.callout strong { color: var(--accent); }
+.callout-title {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+/* Special tables */
+.gap-table td:first-child,
+.data-table td:first-child {
+  font-weight: 600;
+  min-width: 200px;
+}
+td.num, th.num {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+}
+
+/* References */
+.ref-section {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.ref-section h2,
+.ref-list h2 {
+  margin-top: 0;
+  border-bottom: none;
+}
+.ref-item {
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.ref-item a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
+/* Footer navigation and notes */
+.footer-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2rem;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+.back-link a {
+  color: var(--accent);
+}
+.footer-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0 0;
+  flex-wrap: wrap;
+}
+.footer-nav a {
+  color: var(--accent);
+}
+
+/* Data notes in imported reports */
+.data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.25rem 0 0.75rem;
+  font-style: italic;
+}
+
+/* Inline code */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: var(--bg2);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .key-findings { grid-template-columns: 1fr; }
+  .toc ol { columns: 1; }
+  .two-col { grid-template-columns: 1fr; }
+  body > .container > header h1,
+  article.page > header.report-head h1 { font-size: 1.6rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="container">
+
+<a href="../../reports.html" class="back-link">&larr; Back to website</a>
+
+<header class="cover">
+  <h1>Prompt Literacy in the AI Era: Value, Measurement, and the Accounting Question</h1>
+  <p class="subtitle">A Research Brief on the Economic, Business, and Accounting Implications of Effective Human-AI Conversation (2022-2026)</p>
+  <p class="meta">Dr Yuqian Zhang &middot; 24 August 2026 &middot; Analytical Brief</p>
+</header>
+
+<section class="exec-summary">
+  <h2>Executive Summary</h2>
+  <p>The launch of ChatGPT in November 2022 gave ordinary workers, students, and households a daily conversation partner for the first time. Five years on, that conversation has become a measurable economic activity. ChatGPT reached 100 million weekly active users within a year of launch and about 800 million by October 2025, while the share of US adults who say they have ever used it rose from 14 percent in March 2023 to 44 percent by February 2026 (Figures 1 and 2). Organisations moved even faster than consumers: the share of firms regularly using generative AI in at least one business function rose from 33 percent in McKinsey's 2023 survey wave to 65 percent in early 2024 and 79 percent in the 2025 wave (Figure 7).</p>
+  <p>This report asks what the skill behind those conversations consists of, how it should be measured, and what it is worth. The skill, which this report calls prompt literacy, has three parts: crafting a clear instruction, fixing a poor response, and knowing when the conversation is worth having. The evidence shows that prompt design materially changes model output: chain-of-thought prompting raised GSM8K accuracy from 17.9 to 58.1 percent in Wei et al. (2022), and zero-shot chain-of-thought raised MultiArith accuracy from 17.7 to 78.7 percent in Kojima et al. (2022) (Figure 3). Controlled experiments show large short-run productivity gains, from 40 percent faster writing with ChatGPT (Noy and Zhang 2023) to 15 percent higher customer support productivity (Brynjolfsson, Li, and Raymond 2025), but also a sharp risk: consultants working outside the AI capability frontier were 19 percentage points less likely to produce correct solutions (Dell'Acqua et al. 2026) (Figures 5 and 6).</p>
+  <p>The central question of the report is whether accounting, long called the language of business, can become the structured vocabulary of the AI era. The answer is treated as a hypothesis, not a conclusion. Three parts of the thesis have real evidence: structured reporting taxonomies are being rebuilt for AI (XBRL International's 2025 modernisation is explicitly designed to accelerate AI integration), assurance of AI outputs is being claimed as an accounting-led function (IAASB's September 2024 Technology Position, IFAC and IESBA guidance, and Big Four AI assurance offerings), and the UK's XBRL filing programmes have produced more than six million structured documents. Two parts remain untested: whether accounting vocabulary improves prompting in controlled experiments, and whether accountants outperform other professionals at prompt design or verification. No rigorous study of either question was found, and this report says so plainly rather than asserting an advantage.</p>
+  <p>For business and economics, the practical conclusion is that prompt literacy is a real but partly measurable skill. It shows up in job postings (prompt engineering mentions rose from 1,400 to nearly 6,300 between 2023 and 2024), in education (more than 327,000 learners in Vanderbilt's prompt engineering course alone), and in the way work is organised (75 percent of knowledge workers reported using generative AI at work in 2024). There is still no accepted test of the skill, surveys measure different things, and posting counts can reflect hype as much as genuine demand. The report separates sourced evidence from interpretation, and labels every number with its survey wave and source so that readers can check the claims themselves. All data, charts, and the replication script are open access.</p>
+</section>
+<div class="callout" id="key-terms">
+  <h4>Key Terms</h4>
+<p><strong>Prompt literacy</strong> — The skill of crafting clear AI instructions, fixing poor responses, and judging when a conversation with an AI is worth having.</p><p><strong>Chain-of-thought prompting</strong> — A prompting technique that asks the model to reason step by step, sharply improving performance on arithmetic and logic benchmarks.</p><p><strong>Capability frontier</strong> — The boundary beyond which an AI system&#x27;s raw capabilities cannot reliably complete a task; prompt skill matters most inside the frontier.</p><p><strong>Assurance</strong> — The accounting and auditing discipline of providing verifiable, evidence-based confidence, applied in the report to AI-era information.</p><p><strong>Accounting as language</strong> — The thesis that accounting, long the language of business, could become the standardised vocabulary for instructing and interrogating AI systems.</p>
+</div>
+
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol>
+    <li><a href="#introduction">Introduction and Motivation</a></li>
+    <li><a href="#background">Background: The Emergence of Human-AI Conversation as a Skill</a></li>
+    <li><a href="#defining">Defining and Measuring Prompt Literacy</a></li>
+    <li><a href="#data">Data and Method</a></li>
+    <li><a href="#labour">Findings: Labour Market and Economic Value</a></li>
+    <li><a href="#business">Findings: Business and Organisational Implications</a></li>
+    <li><a href="#verification">Findings: Verification, Risk, and the Audit Mindset</a></li>
+    <li><a href="#accounting">The Accounting Thesis: Test, Not Assert</a></li>
+    <li><a href="#scenarios">Future Trends and Scenarios</a></li>
+    <li><a href="#research">Research Opportunities and Gaps</a></li>
+    <li><a href="#replication">Data Availability and Replication</a></li>
+    <li><a href="#references">References</a></li>
+    <li><a href="#sources">Sources</a></li>
+  </ol>
+</nav>
+
+<section id="introduction">
+  <h2>1. Introduction and Motivation</h2>
+  <p>Before November 2022, conversing with a general-purpose language model was a specialist activity. After November 2022, it became an everyday one. ChatGPT was the first widely available system that let an ordinary person hold a natural-language conversation with a model that could write, summarise, reason, and code. The quality of that conversation depends on a human skill that had no meaningful pre-AI counterpart: the ability to say what one wants clearly enough for a machine to act on it, to recognise when the machine's answer is wrong, and to repair the request until the answer is right.</p>
+  <p>This report examines that skill, which it calls prompt literacy, over the period 2022 to 2026 in a global context, with pre-November-2022 material used only as baseline context. It asks three questions. First, what does the skill consist of, and how should it be defined and measured? Second, what is its economic and business value: does it show up in job markets, wages, productivity, and the way firms organise work? Third, and most distinctively, can accounting, long called the language of business, capture the trends of the AI era and become the new vocabulary of the AI era: a standardised, verifiable way of instructing and interrogating AI systems?</p>
+  <p>The skill itself has three components, which this report keeps separate throughout because they are different abilities and are measured by different evidence. The first is decomposing an intention into a structured, to-the-point instruction: breaking a vague goal into steps, constraints, and success criteria. The second is choosing accurate vocabulary and phrases so the model can interpret the instruction: naming entities, specifying formats, and giving context. The third is rapidly diagnosing, exploring, and fixing what goes wrong through iterative testing: reading a bad output, guessing why it failed, changing the prompt, and trying again.</p>
+  <p>Two mistakes are common in public discussion. One is to treat every improvement in AI-assisted work as evidence that prompt skill matters, when part of the gain comes from the model itself and from general AI adoption. The other is to treat prompt literacy as a fixed profession called prompt engineering, when the evidence suggests it is becoming a general workplace capability. The report's central task is to separate evidence from metaphor, and to test the accounting-as-language thesis rather than assert it. Sections 2 to 4 define the skill and the data; Sections 5 to 7 report what is measured; Section 8 tests the accounting thesis; Sections 9 and 10 set out scenarios and research gaps.</p>
+</section>
+
+<section id="background">
+  <h2>2. Background: The Emergence of Human-AI Conversation as a Skill</h2>
+  <p>ChatGPT reached 100 million weekly active users by November 2023, 200 million by August 2024, was reported on track to reach 700 million by August 2025, and passed 800 million by October 2025 (Figure 1). These are platform announcements, not independent measurements, but they establish the scale of the phenomenon: hundreds of millions of people now write instructions to a language model every week.</p>
+
+  <div class="chart-container">
+    <h4>Figure 1: ChatGPT Weekly Active Users, OpenAI Announcements (2023-2025)</h4>
+    <p class="chart-note">Weekly active user figures as announced by OpenAI, November 2023 to October 2025. The August 2025 figure was announced as "on track" rather than achieved. Vertical dashed line: ChatGPT launch, November 2022. Source: author compilation from OpenAI announcements and press reporting (Business Insider, Axios, TechRepublic).</p>
+    <div class="chart-box" id="chart-weekly-users"></div>
+  </div>
+
+  <p>Adoption in the United States rose quickly but remains partial. The share of US adults who had ever used ChatGPT rose from 14 percent in March 2023 to 18 percent in July 2023, 23 percent in February 2024, 34 percent in the February-March 2025 wave, and 44 percent by February 2026 (Figure 2). In the 2025 wave, 58 percent of adults aged 18 to 29 had used it, well above the 34 percent all-adult share. The important caveat for this report is that ever-use is not prompt literacy. Many users ask simple questions; the survey evidence cannot tell us how many users decompose, debug, and verify. General AI adoption must therefore be kept separate from prompt-skill-specific effects throughout.</p>
+
+  <div class="chart-container">
+    <h4>Figure 2: US Adults Who Have Ever Used ChatGPT (Pew Research Center, 2023-2026)</h4>
+    <p class="chart-note">Share of US adults saying they have ever used ChatGPT, by Pew Research Center survey wave: March 2023 (14 percent), July 2023 (18 percent), February 2024 (23 percent), February-March 2025 (34 percent), February 2026 (44 percent). All observations are post-launch; the pre-November-2022 baseline is zero because the product did not exist. Source: Pew Research Center short reads and reports, 2023 to 2026.</p>
+    <div class="chart-box" id="chart-pew-adoption"></div>
+  </div>
+
+  <p>The job market showed the skill component almost immediately. In the US job-posting data compiled by Lightcast for the Stanford AI Index, postings mentioning prompt engineering rose from 1,400 in 2023 to nearly 6,300 in 2024, while postings mentioning generative AI rose from 16,000 to more than 66,000 (Figure 4, Section 5). Education responded even faster: Vanderbilt's "Prompt Engineering for ChatGPT" course passed 327,000 learners, Google launched its five-step Prompting Essentials course in October 2024, and UNESCO published AI competency frameworks for students and teachers in September 2024 (Figure 11, Section 9). What had been a niche technique discussed in machine-learning papers became, within two years, a mainstream workplace and classroom topic.</p>
+  <p>This report treats the skill as a general capability rather than a specialist technique, and that choice matters for measurement. A specialist technique can be studied in isolation. A general literacy has to be defined, taught, and assessed against the background of everything else people do with language and work. The next section defines it.</p>
+</section>
+
+<section id="defining">
+  <h2>3. Defining and Measuring Prompt Literacy</h2>
+  <p>Prompt literacy is defined here as the ability to achieve a desired outcome from a language model through written instruction, where the outcome is produced by the model but the instruction is designed, evaluated, and repaired by the human. The definition deliberately excludes model skill: it is a property of the person, not the system. It also excludes general AI literacy, which earlier literature defined before ChatGPT as knowledge about what AI is, what it can do, and how to use it responsibly (Long and Magerko 2020; Ng et al. 2021). Prompt literacy is narrower and more specific: it is about the quality of the instruction itself.</p>
+  <p>The construct has three components, measured by different indicators and never conflated in this report:</p>
+  <p><strong>Prompt crafting.</strong> The ability to convert an intention into a structured instruction with the right vocabulary, context, constraints, and format. The strongest evidence that crafting matters comes from benchmarking studies that hold the model and task fixed and vary only the prompt. Chain-of-thought prompting, which asks the model to reason step by step, raised PaLM 540B accuracy on GSM8K from 17.9 to 58.1 percent (Wei et al. 2022). Zero-shot chain-of-thought raised MultiArith accuracy from 17.7 to 78.7 percent and GSM8K accuracy from 10.4 to 40.7 percent on the same model (Kojima et al. 2022) (Figure 3).</p>
+
+  <div class="chart-container">
+    <h4>Figure 3: Prompting Interventions and Reasoning Accuracy</h4>
+    <p class="chart-note">Accuracy on standard-prompting versus chain-of-thought prompting for the same model and task, as reported in Wei et al. (2022) and Kojima et al. (2022). The paired bars show that the prompt, not the model, drives the improvement. Source: arXiv:2201.11903 and arXiv:2205.11916.</p>
+    <div class="chart-box" id="chart-benchmarks"></div>
+  </div>
+
+  <p><strong>Prompt debugging.</strong> The ability to diagnose why an output is wrong and repair the instruction. Direct measurement is scarce. The nearest large-scale evidence is negative: small changes in wording can break model behaviour. PromptRobust, a benchmark of 4,788 adversarial prompts spanning 8 tasks and 13 datasets, found that contemporary large language models are not robust to adversarial prompt variations (Zhu et al. 2023). Field research with non-expert users found that people tend to write task-specific, one-off prompts and struggle to design robust, generalisable strategies (Zamfirescu-Pereira et al. 2023). In other words, the debugging component exists and is hard, but no standardised test of it has been published.</p>
+  <p><strong>Perceived value.</strong> What people think the skill is worth, measured by self-reported confidence, training, and use. This is the weakest type of evidence and is reported separately throughout. Survey data in this report (Pew, Microsoft-LinkedIn, McKinsey) measure adoption and attitudes, not skill; the report never treats perceived value as evidence of ability.</p>
+  <p>The measurement situation is clear: the field has benchmarks that hold the human fixed and vary the model (HELM, Liang et al. 2023, is the canonical example), and benchmarks that hold the model fixed and vary the prompt, but no validated instrument that measures a person's prompt literacy as a stable trait. Performance on standardised prompt-design tasks is the right idea, but no agreed task battery exists, and results across studies are weakly comparable. The Data and Method section reflects this: every dimension in Table 1 names an indicator, its primary source, and one main limitation.</p>
+</section>
+
+<section id="data">
+  <h2>4. Data and Method</h2>
+  <p>The report covers seven dimensions. For each dimension, Table 1 names a single indicator, the primary source used, and one main limitation. The three components of prompt literacy (crafting, debugging, and perceived value) appear as separate rows where relevant, so they are never conflated.</p>
+
+  <table class="indicator-table">
+    <thead>
+      <tr>
+        <th>Dimension</th>
+        <th>Named indicator</th>
+        <th>Primary source</th>
+        <th>One main limitation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Emergence of human-AI conversation as a skill</td>
+        <td>Growth in prompting-related job postings; adoption rates of AI tools at work</td>
+        <td>Lightcast job postings for the Stanford AI Index; Pew, McKinsey, Microsoft-LinkedIn surveys</td>
+        <td>Posting counts can reflect hype rather than genuine skill demand</td>
+      </tr>
+      <tr>
+        <td>Defining and measuring the skill: prompt crafting</td>
+        <td>Performance on structured-instruction benchmarks with the model held fixed</td>
+        <td>Wei et al. 2022; Kojima et al. 2022</td>
+        <td>Benchmarks measure prompt effects, not individual skill levels</td>
+      </tr>
+      <tr>
+        <td>Defining and measuring the skill: prompt debugging</td>
+        <td>Robustness under adversarial prompt variation; user strategy quality</td>
+        <td>Zhu et al. 2023 (PromptRobust); Zamfirescu-Pereira et al. 2023</td>
+        <td>No validated test of debugging skill exists; proxies are ad hoc</td>
+      </tr>
+      <tr>
+        <td>Defining and measuring the skill: perceived value</td>
+        <td>Self-reported use, training, and confidence</td>
+        <td>Pew, McKinsey, Microsoft-LinkedIn surveys</td>
+        <td>Self-reports overstate ability and are not comparable across surveys</td>
+      </tr>
+      <tr>
+        <td>Labour market and economic value</td>
+        <td>Posting counts for prompt-related roles; productivity effects from experiments</td>
+        <td>Lightcast; Noy and Zhang 2023; Brynjolfsson, Li, and Raymond 2025; Dell'Acqua et al. 2026; Peng et al. 2023</td>
+        <td>Short horizons, small samples, and selection effects; gains may not persist</td>
+      </tr>
+      <tr>
+        <td>Business and organisational implications</td>
+        <td>Enterprise AI adoption and training rates; share of firms with AI usage policies</td>
+        <td>McKinsey State of AI; World Economic Forum Future of Jobs 2025; Microsoft-LinkedIn Work Trend Index 2024</td>
+        <td>Self-reported and inconsistent definitions across surveys</td>
+      </tr>
+      <tr>
+        <td>Accounting as the language of business in the AI era</td>
+        <td>Use of structured accounting vocabularies in AI interaction; volume of AI assurance activity and guidance</td>
+        <td>XBRL International; IFRS and IASB; IAASB; AICPA-CIMA; Big Four publications</td>
+        <td>Evidence is nascent; much of the thesis is conceptual and must be labelled argument</td>
+      </tr>
+      <tr>
+        <td>Verification, risk, and the audit mindset</td>
+        <td>Prevalence of verification practices; error rates in AI-assisted work; organisational AI controls</td>
+        <td>Dell'Acqua et al. 2026; IAASB and AICPA-CIMA guidance; enterprise governance reports</td>
+        <td>Verification behaviour is hard to observe directly; surveys may overstate good practice</td>
+      </tr>
+      <tr>
+        <td>Future trends and scenarios</td>
+        <td>Growth in curricula, credentials, and professional-body guidance; model interface capability</td>
+        <td>Vanderbilt; Google; UNESCO; World Economic Forum; model capability benchmarks</td>
+        <td>Inherently speculative; presented as scenarios with stated assumptions, not forecasts</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Two data conventions run through the report. First, survey waves are labelled exactly. McKinsey's figures are reported by wave (2023, early 2024, 2025), Pew's by field period (for example, February-March 2025 rather than "June 2025", which is when the short read was published), and Microsoft-LinkedIn's by the 2024 annual survey. Second, primary figures are preferred over secondary restatements. Where a secondary source restates a primary statistic, the variant is noted; the Stanford AI Index's reading of McKinsey survey data (55 percent of organisations using AI in 2023, 78 percent in 2024) is reported separately from McKinsey's own gen AI adoption series (33, 65, and 79 percent), because the two measure different things and are often conflated.</p>
+  <p>All underlying data are open access. The compiled CSV files listed in <a href="#replication">Section 11 (Data Availability and Replication)</a> back every statistic quoted in this report, with commented headers recording each wave and source. <a href="data/README_methodology.txt">README_methodology.txt</a> describes compilation methods and limitations, and <a href="scripts/replicate.py">scripts/replicate.py</a> reproduces every chart and prints every statistic from the CSV files. One genuinely open dataset, the Anthropic Economic Index interaction-type file on Hugging Face, is downloaded by the script with local caching as a verification check. Every number in this report is printed by the replication script; the report contains no number the script does not produce.</p>
+</section>
+
+<section id="labour">
+  <h2>5. Findings: Labour Market and Economic Value</h2>
+  <p>The economic value question has two parts: does prompt skill show up in hiring, and does it raise measured productivity? The hiring evidence is strong on volume and weak on wages. Lightcast's US job-posting data show that mentions of prompt engineering rose from 1,400 postings in 2023 to nearly 6,300 in 2024; mentions of generative AI as a skill rose from 16,000 to more than 66,000; and mentions of large language modeling rose from 5,000 to 20,000 (Figure 4). The counts are postings, not de-duplicated job titles, and they are demand signals that can reflect hype as much as verified skill requirements. No peer-reviewed estimate of a wage premium specifically for prompt literacy was found in the period covered; the report therefore does not claim one.</p>
+
+  <div class="chart-container">
+    <h4>Figure 4: US Job Postings Mentioning AI Skills (Lightcast for Stanford AI Index 2025)</h4>
+    <p class="chart-note">Job postings mentioning each skill, 2023 versus 2024. Logarithmic scale because posting volumes differ by more than an order of magnitude across skills. Postings are demand signals, not de-duplicated job titles. Source: Lightcast analysis for the Stanford AI Index 2025.</p>
+    <div class="chart-box" id="chart-postings"></div>
+  </div>
+
+  <p>The productivity evidence is stronger and comes from four controlled experiments with different tasks, populations, and measurement conventions (Figure 5). Noy and Zhang (2023) randomly assigned 453 college-educated writing professionals to use ChatGPT for a writing task and found that the treatment group completed tasks 40 percent faster with quality rated 18 percent higher by independent evaluators. Brynjolfsson, Li, and Raymond (2025) studied 5,172 customer support agents and found a 15 percent average increase in productivity, measured as issues resolved per hour, with the largest gains for novice and low-experience workers. Dell'Acqua et al. (2026) ran a preregistered experiment with 758 management consultants at Boston Consulting Group and found that consultants inside the AI capability frontier completed 12.2 percent more tasks on average and completed them 25.1 percent more quickly, with significantly higher quality. Peng et al. (2023) randomly assigned 95 professional developers to use GitHub Copilot and found that the treatment group completed the task 55.8 percent faster.</p>
+
+  <div class="chart-container">
+    <h4>Figure 5: Productivity Gains in Controlled Experiments</h4>
+    <p class="chart-note">Measured gains from four controlled experiments: time to complete (Noy and Zhang 2023), productivity as issues resolved per hour (Brynjolfsson, Li, and Raymond 2025), tasks completed (Dell'Acqua et al. 2026), and task speed (Peng et al. 2023). Each experiment used different tasks and outcome measures; the bars are not directly comparable magnitudes.</p>
+    <div class="chart-box" id="chart-productivity"></div>
+  </div>
+
+  <p>The same experiments measure the boundary of the skill. In Dell'Acqua et al. (2026), consultants asked to solve problems outside the AI capability frontier were 19 percentage points less likely to produce correct solutions when they had AI access than when they did not (Figure 6). The finding has two lessons. It shows that prompt literacy includes knowing when not to delegate, and it warns against extrapolating headline gains to all tasks. The experiments also share three limitations that the report states rather than hides: they run over days or weeks, not years; they use tasks chosen by the researchers; and the participants knew they were being studied. Whether the gains persist, generalise, or compound is not yet established by any published study in the period.</p>
+
+  <div class="chart-container">
+    <h4>Figure 6: Quality Risk Outside the AI Capability Frontier (Dell'Acqua et al.)</h4>
+    <p class="chart-note">Change in the likelihood of producing a correct solution for tasks outside the AI capability frontier, comparing consultants with AI access to those without. Source: Dell'Acqua et al. (2026), Organization Science 37(2):403-423.</p>
+    <div class="chart-box short" id="chart-outside-frontier"></div>
+  </div>
+
+  <p>Two cautions apply to all of these numbers. First, these experiments measure AI assistance, not prompt skill specifically; part of the gain would accrue to a user with a mediocre prompt. Second, the posting evidence measures demand for skills as advertised, which can lag or exaggerate the skills actually used on the job. The interpretation supported by the evidence is that prompt literacy raises the return to AI access for tasks inside the capability frontier, especially for less experienced workers, and that the return turns negative outside it. The evidence does not yet support a claim about the long-run wage premium for the skill, and this report does not make one.</p>
+</section>
+
+<section id="business">
+  <h2>6. Findings: Business and Organisational Implications</h2>
+  <p>Firms moved from experimentation to routine use within three years. In McKinsey's Global Survey on AI, the share of organisations regularly using generative AI in at least one business function rose from 33 percent in the 2023 wave to 65 percent in the early 2024 wave (fielded February 22 to March 5, 2024) and 79 percent in the 2025 wave (fielded June 25 to July 29, 2025); in the 2025 wave, 88 percent of organisations reported using AI in at least one function (Figure 7). The Stanford AI Index's reading of the same McKinsey data gives 55 percent of organisations reporting AI use in 2023 and 78 percent in 2024; the two series are kept separate because they measure different things.</p>
+
+  <div class="chart-container">
+    <h4>Figure 7: Organisational Adoption of Generative AI (McKinsey State of AI)</h4>
+    <p class="chart-note">Share of organisations regularly using generative AI in at least one business function, by McKinsey survey wave: 33 percent (2023), 65 percent (early 2024), 79 percent (2025). The final bar shows the 2025 wave reading of AI use in any function (88 percent). Source: McKinsey State of AI reports, 2023 to 2025.</p>
+    <div class="chart-box" id="chart-org-adoption"></div>
+  </div>
+
+  <p>At the worker level, Microsoft and LinkedIn's 2024 Work Trend Index, a survey of 31,000 people in 31 countries, found that 75 percent of knowledge workers use generative AI at work, that 66 percent of leaders would not hire someone without AI skills, and that 71 percent of leaders would rather hire a less experienced candidate with AI skills than a more experienced candidate without them. Pew's narrower measure of actual use paints a more sober picture: 16 percent of US workers said at least some of their work was done with AI in the October 2024 survey, rising to 21 percent in the September 2025 survey (Figure 8). The gap between the two surveys is partly definitional (knowledge workers versus all workers; "use" versus "at least some of my work is done with AI") and partly real; this report shows both rather than averaging them.</p>
+
+  <div class="chart-container">
+    <h4>Figure 8: AI Use at Work (Pew Research Center and Microsoft-LinkedIn)</h4>
+    <p class="chart-note">Left pair: share of US workers saying at least some of their work is done with AI, October 2024 (16 percent) and September 2025 (21 percent). Right group: Microsoft and LinkedIn Work Trend Index 2024 readings for knowledge workers (75 percent use generative AI), leaders who would not hire without AI skills (66 percent), and leaders preferring a less experienced candidate with AI skills (71 percent). Definitions differ across surveys and are not directly comparable.</p>
+    <div class="chart-box" id="chart-worker-use"></div>
+  </div>
+
+  <p>Platform evidence shows how AI is actually woven into work. Anthropic's Economic Index, based on anonymised Claude conversations, found that about 36 percent of occupations used AI for at least a quarter of their associated tasks in the January 2025 sample, with about 4 percent using it across three-quarters or more of tasks; pooling data across reports, the share of occupations reached 49 percent in the January 2026 report (Figure 9a). The first report classified 57 percent of AI tasks as augmentation, where AI collaborates with the worker, and 43 percent as automation, where AI directly performs the task; by the November 2025 sample, augmentation stood at 52 percent and automation at 45 percent (Figure 9b). The pattern that holds across both reports is that AI use is broad but shallow: many occupations touch AI on some tasks, very few delegate most of their work to it.</p>
+
+  <div class="two-col">
+    <div class="chart-container">
+      <h4>Figure 9a: Occupations Using AI for at Least a Quarter of Tasks (Anthropic Economic Index)</h4>
+      <p class="chart-note">Share of occupations with Claude used in at least 25 percent of associated tasks: January 2025 sample (36 percent) and November 2025 sample pooled with earlier reports (49 percent). Source: Anthropic Economic Index first report (10 February 2025) and fourth report (15 January 2026).</p>
+      <div class="chart-box" id="chart-coverage"></div>
+    </div>
+    <div class="chart-container">
+      <h4>Figure 9b: Augmentation versus Automation (Anthropic Economic Index)</h4>
+      <p class="chart-note">Share of Claude conversations classified as augmentation or automation: January 2025 sample (57 percent augmentation, 43 percent automation) and November 2025 sample (52 percent augmentation, 45 percent automation). Source: Anthropic Economic Index first and fourth reports.</p>
+      <div class="chart-box" id="chart-aug-automation"></div>
+    </div>
+  </div>
+
+  <p>Three organisational implications follow. First, the roles changed faster than the skills: prompt engineering and AI trainer roles appeared in job postings (Section 5), and Microsoft-LinkedIn's hiring numbers show that employers expect AI skills at entry. Second, training became a board-level question: the World Economic Forum's Future of Jobs Report 2025 expects 39 percent of workers' core skills to change by 2030, and 85 percent of employers say they plan to prioritise reskilling and upskilling. Third, governance lagged adoption: the survey evidence measures usage far better than it measures usage policies, and the report flags that gap rather than filling it with anecdotes. The self-reported nature of all these surveys is their shared limitation; definitions of "regular use", "use at work", and "AI skills" differ across McKinsey, Pew, and Microsoft-LinkedIn, and cross-survey comparisons are indicative only.</p>
+</section>
+
+<section id="verification">
+  <h2>7. Findings: Verification, Risk, and the Audit Mindset</h2>
+  <p>Effective AI conversation does not end when the model replies. The third component of the skill is knowing how to check outputs, catch errors, and recognise when not to trust the model. The evidence that this matters comes from the same experiment: the study that showed 12.2 percent more tasks completed inside the frontier also showed a 19 percentage point drop in correct solutions outside it (Dell'Acqua et al. 2026, Figure 6). If users cannot tell which side of the frontier they are on, the expected value of AI assistance can be negative.</p>
+  <p>Direct evidence on verification behaviour is thin, and the report says so. Verification is hard to observe: a user who quietly fact-checks an output leaves no trace in most datasets, and surveys asking people whether they verify outputs may get flattering answers. PromptRobust's finding that 4,788 adversarial prompts across 8 tasks and 13 datasets degrade model performance (Zhu et al. 2023) implies that users face an unstable target: the same request can succeed or fail depending on small wording changes. Anthropic's own data show that users treat AI outputs differently by task, with augmentation (where the human checks and edits) remaining the most common pattern at 52 percent of conversations in the November 2025 sample, against 45 percent automation.</p>
+  <p>The audit mindset hypothesis is that accounting-trained people, whose professional discipline is built on verification, documentation, and professional scepticism, are better positioned for this component of the skill. That hypothesis is plausible and currently unsupported by direct evidence. No published study comparing accountants with other professionals on prompt design or verification tasks was found in the period covered, and the report does not claim an advantage. What the evidence does support is narrower: organisations are building verification into AI governance (IAASB's Technology Position and the assurance guidance discussed in Section 8), and the market for checking AI outputs is emerging as an accounting-adjacent service. Section 8 examines that development directly.</p>
+</section>
+
+<section id="accounting">
+  <h2>8. The Accounting Thesis: Test, Not Assert</h2>
+  <p>Accounting has long been called the language of business because it gives economic activity a standardised vocabulary: chart of accounts, double-entry logic, accruals, disclosures, and audit verification. The thesis examined here is that this structured vocabulary can become the new vocabulary of the AI era: a standardised, verifiable way of instructing and interrogating AI systems for business decisions. The thesis has three testable parts, and the report's discipline is to state, for each part, what is evidence, what is argument, and what is absent.</p>
+  <p><strong>Part one: structured accounting vocabularies improve human-AI communication.</strong> The strongest evidence is infrastructure-level. XBRL International announced in March 2025 a modernised taxonomy specification explicitly designed to "directly facilitate and accelerate the integration of artificial intelligence with structured data and business rules", and followed with publications on making data AI-ready (October and November 2025). The UK's XBRL filing programmes, which require company tax filings and voluntary accounts filings in structured form, have produced more than six million XBRL documents. This is evidence that structured business reporting is being rebuilt for machine consumption, and that accounting-standard vocabulary is becoming machine-readable. It is not evidence that accountants write better prompts; the step from structured taxonomies to better instructions is an argument from analogy that no published experiment has tested.</p>
+  <p><strong>Part two: accountants perform differently from others on prompt-design tasks.</strong> No rigorous study of this question was found. The report searched for controlled comparisons of accountants versus other professionals on prompt crafting, debugging, or verification, and found none in the period covered. There is academic work on how well language models perform on accounting exam tasks, but that measures the model, not the accountant, and is not cited as evidence about accountants' prompting skill. Part two is therefore recorded as untested: a clear research gap, not a finding.</p>
+  <p><strong>Part three: assurance of AI outputs is emerging as an accounting-led function.</strong> This has the clearest institutional evidence. IAASB adopted its Technology Position at its September 2024 meeting, setting out how audit and assurance standards will adapt to technology. IFAC and IESBA published "Navigating the Gen AI Revolution: Implications for the Accounting Profession" in June 2024. In June 2025, Deloitte, EY, and PwC were reported as preparing AI assurance services, and PwC launched an AI assurance offering that month; these launch items are media-reported rather than primary firm publications and are labelled as such. Figure 10 assembles the timeline.</p>
+
+  <div class="chart-container">
+    <h4>Figure 10: Accounting-Led AI Assurance and Structured Reporting Activity (2024-2026)</h4>
+    <p class="chart-note">Timeline of standard-setting and firm activity: IFAC and IESBA guidance (June 2024), IAASB Technology Position (September 2024), XBRL International taxonomy modernisation (March 2025), Big Four AI assurance preparation as reported by the Financial Times and City AM (June 2025), PwC's AI assurance launch (June 2025), XBRL International publications on AI-ready data (October and November 2025), and the UK's six million XBRL documents (accessed 2026). Big Four launch items are media-reported.</p>
+    <div class="chart-box tall" id="chart-assurance"></div>
+  </div>
+
+  <p>The three parts of the thesis get three different answers. Part three is evidenced: the standard-setting bodies and the largest firms are moving, in their own publications, toward AI assurance as a professional function. Part one is partially evidenced at the infrastructure level and argued at the skill level. Part two is untested. Overall, the thesis that accounting can become the language of the AI era remains a hypothesis: institutions are moving toward AI assurance, but no direct evidence shows that accounting training improves the human side of the conversation. The report also notes what it could not verify: claims that accountants are better prompters, and specific claims about Big Four AI assurance market size, are either unsupported or media-reported, and are not repeated as fact.</p>
+</section>
+
+<section id="scenarios">
+  <h2>9. Future Trends and Scenarios</h2>
+  <p>Whether prompt literacy becomes a general literacy, a specialist profession, or a transitional skill is a question about the future, and this report answers it with scenarios, each with stated assumptions, rather than point forecasts. The leading indicators are the education response (Figure 11) and the pace of interface improvement.</p>
+
+  <div class="chart-container">
+    <h4>Figure 11: Education and Curriculum Responses to Prompt Literacy (2024-2025)</h4>
+    <p class="chart-note">Timeline of education responses: UNESCO AI competency frameworks for students and teachers (September 2024), Google Prompting Essentials launch (October 2024), Vanderbilt reporting more than 327,000 learners in its prompt engineering course and 500,000 across related courses (October 2024), and the World Economic Forum Future of Jobs 2025 expectations that 39 percent of core skills will change by 2030 and 85 percent of employers will prioritise reskilling (January 2025).</p>
+    <div class="chart-box tall" id="chart-education"></div>
+  </div>
+
+  <p><strong>Scenario one: general literacy.</strong> Prompt literacy becomes a basic capability like reading and writing, embedded in school curricula (UNESCO's frameworks point this way) and expected of every knowledge worker (Microsoft-LinkedIn's 66 percent of leaders who would not hire without AI skills point this way). Under this scenario, the accounting implication is that structured vocabulary matters more, not less: as everyone learns to converse with AI, the professional premium shifts to domain vocabularies and verification discipline, which is exactly the accounting thesis. The economic implication is a broad, mostly positive productivity shift with distributional costs for workers who do not acquire the skill.</p>
+  <p><strong>Scenario two: specialist profession.</strong> Prompt engineering becomes a certified specialism, as the first wave of job postings and courses suggested (1,400 to nearly 6,300 postings from 2023 to 2024; 327,000 learners by October 2024). Under this scenario, organisations hire prompt engineers and AI trainers, and professional bodies develop credentials. The accounting implication is that the AI assurance function becomes a distinct specialism alongside audit, with its own standards and liability questions. The economic implication is concentrated rents for a small group and slower diffusion of the skill.</p>
+  <p><strong>Scenario three: transitional skill.</strong> Interfaces improve faster than skills diffuse, so the explicit craft of prompting fades into ordinary interaction: models become better at inferring intent, handling ambiguity, and checking their own work. Under this scenario, today's prompt engineering premium decays, and the durable skill is the underlying ability to specify problems and verify answers, which is the same decomposition and verification discipline the report identifies at the core of prompt literacy. The accounting implication is that the language-of-business thesis survives in a stronger form: structured specification and verification remain valuable even when the prompting craft disappears. The economic implication is that today's measured productivity gains understate the long-run effect, because the skill requirement falls while the capability rises.</p>
+  <p>The report does not weight the scenarios; their likelihood depends on how fast interfaces improve, which is the hardest input to predict. One conclusion holds across all three scenarios: the underlying abilities, decomposing problems, specifying them precisely, and verifying outputs, are the core of the construct.</p>
+</section>
+
+<section id="research">
+  <h2>10. Research Opportunities and Gaps</h2>
+  <p>The evidence reviewed points to eight research opportunities, rated in Figure 12 by theory significance and data availability on 0 to 10 scales. The ratings are the author's analytical assessment, not survey measurements, and are stated as such in the data file.</p>
+
+  <div class="chart-container">
+    <h4>Figure 12: Research Opportunities by Data Availability and Theory Significance</h4>
+    <p class="chart-note">Author ratings (0 to 10) of eight research opportunities. Axes are zoomed to the range the data occupy: data availability 2 to 7, theory significance 6 to 9. The ratings are analytical judgements recorded in research_opportunities.csv, not survey or experimental measurements.</p>
+    <div class="chart-box tall" id="chart-research"></div>
+  </div>
+
+  <p>Four gaps matter most for economics, business, and accounting scholars. First, the wage premium question: with posting data showing demand and experiments showing short-run productivity, the missing piece is a wage estimate that links verified prompt skill (rather than job titles) to earnings. Second, persistence: every headline experiment is short-horizon, and no study in the period shows whether the 40 percent writing gain or the 15 percent support gain survives a year of routine use. Third, measurement: the field needs a validated prompt literacy assessment, without which the construct cannot be compared across studies, occupations, or countries. Fourth, the accounting question: controlled experiments comparing accountants with other professionals on prompt crafting, debugging, and verification would test the language-of-business thesis directly, and none exists yet.</p>
+  <p>Two more gaps are worth noting. Organisation-level training return on investment is the question boards actually face, and the data are proprietary and inconsistent. And the AI assurance market is being built in real time, but its size, pricing, and quality are not yet measured in any public dataset. Each of these is a realistic project for a dissertation or a grant, which is why they are rated explicitly.</p>
+</section>
+
+<section id="replication">
+  <h2>11. Data Availability and Replication</h2>
+  <p>All data, methodology, and code are open access and downloadable. The compiled datasets back every statistic in this report, and each CSV begins with commented headers naming the indicator, wave, and source.</p>
+  <ul class="download-list">
+    <li><a href="data/chatgpt_adoption_us.csv" download>ChatGPT ever-use among US adults (Pew Research Center, 2023-2026)</a></li>
+    <li><a href="data/chatgpt_weekly_users.csv" download>ChatGPT weekly active users (OpenAI announcements, 2023-2025)</a></li>
+    <li><a href="data/org_genai_adoption.csv" download>Organisational generative AI adoption (McKinsey waves and Stanford AI Index variant)</a></li>
+    <li><a href="data/worker_ai_use.csv" download>AI use at work (Pew and Microsoft-LinkedIn)</a></li>
+    <li><a href="data/job_postings_ai_skills.csv" download>US job postings mentioning AI skills (Lightcast for Stanford AI Index)</a></li>
+    <li><a href="data/job_share_ai_tasks.csv" download>Anthropic Economic Index occupation coverage and augmentation-automation shares</a></li>
+    <li><a href="data/productivity_experiments.csv" download>Controlled productivity experiments</a></li>
+    <li><a href="data/prompting_benchmarks.csv" download>Prompting science benchmarks</a></li>
+    <li><a href="data/education_offerings.csv" download>Education and curriculum responses</a></li>
+    <li><a href="data/ai_assurance_activity.csv" download>Accounting-led AI assurance and structured reporting activity</a></li>
+    <li><a href="data/audit_verification_behavior.csv" download>Verification and error-risk evidence</a></li>
+    <li><a href="data/research_opportunities.csv" download>Research opportunities with author ratings</a></li>
+    <li><a href="data/README_methodology.txt" download>Methodology notes and limitations (README_methodology.txt)</a></li>
+    <li><a href="scripts/replicate.py" download>Replication script (scripts/replicate.py)</a></li>
+  </ul>
+  <p>The replication script reproduces every chart in this report as a PNG and prints every statistic quoted in the report and summary. Its printed output is the source of truth: the report contains no number the script does not produce. The script auto-downloads the open Anthropic Economic Index interaction-type dataset with local caching, and reads all other datasets from the data folder because the underlying organisations publish headline figures in PDFs and press releases without stable machine-readable endpoints. The script sets an explicit random seed (42), pins dependency versions, checks that every data file and column exists, and organises its output by report section.</p>
+</section>
+
+<section id="references">
+  <div class="ref-section">
+    <h2>12. References</h2>
+    <h3>Peer-reviewed and preprint literature</h3>
+    <ol class="ref-list">
+      <li>Brown, T. B., Mann, B., Ryder, N., Subbiah, M., Kaplan, J., Dhariwal, P., et al. (2020). Language models are few-shot learners. arXiv:2005.14165. <a href="https://arxiv.org/abs/2005.14165">https://arxiv.org/abs/2005.14165</a></li>
+      <li>Brynjolfsson, E., Li, D., and Raymond, L. R. (2025). Generative AI at work. The Quarterly Journal of Economics, 140(2), 889-942. <a href="https://doi.org/10.1093/qje/qjae044">https://doi.org/10.1093/qje/qjae044</a></li>
+      <li>Dell'Acqua, F., McFowland, E., Mollick, E. R., Lifshitz-Assaf, H., Kellogg, K., Rajendran, S., Krayer, L., Candelon, F., and Lakhani, K. R. (2026). Navigating the jagged technological frontier: Field experimental evidence of the effects of AI on knowledge worker productivity and quality. Organization Science, 37(2), 403-423. <a href="https://doi.org/10.1287/orsc.2025.21838">https://doi.org/10.1287/orsc.2025.21838</a></li>
+      <li>Kojima, T., Gu, S. S., Reid, M., Matsuo, Y., and Iwasawa, Y. (2022). Large language models are zero-shot reasoners. Advances in Neural Information Processing Systems 35 (NeurIPS 2022). arXiv:2205.11916. <a href="https://arxiv.org/abs/2205.11916">https://arxiv.org/abs/2205.11916</a></li>
+      <li>Liang, P., Bommasani, R., Lee, T., Tsipras, D., Soylu, D., Yasunaga, M., et al. (2023). Holistic evaluation of language models. Annals of the New York Academy of Sciences, 1525(1), 140-146. <a href="https://doi.org/10.1111/nyas.15007">https://doi.org/10.1111/nyas.15007</a></li>
+      <li>Long, D., and Magerko, B. (2020). What is AI literacy? Competencies and design considerations. Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems, 1-16. <a href="https://doi.org/10.1145/3313831.3376727">https://doi.org/10.1145/3313831.3376727</a></li>
+      <li>Ng, D. T. K., Leung, J. K. L., Chu, S. K. W., and Qiao, M. S. (2021). Conceptualizing AI literacy: An exploratory review. Computers and Education: Artificial Intelligence, 2, 100041. <a href="https://doi.org/10.1016/j.caeai.2021.100041">https://doi.org/10.1016/j.caeai.2021.100041</a></li>
+      <li>Noy, S., and Zhang, W. (2023). Experimental evidence on the productivity effects of generative artificial intelligence. Science, 381(6654), 187-192. <a href="https://www.science.org/doi/10.1126/science.adh2586">https://www.science.org/doi/10.1126/science.adh2586</a></li>
+      <li>Peng, S., Kalliamvakou, E., Cihon, P., and Demirer, M. (2023). The impact of AI on developer productivity: Evidence from GitHub Copilot. arXiv:2302.06590. <a href="https://arxiv.org/abs/2302.06590">https://arxiv.org/abs/2302.06590</a></li>
+      <li>Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., Chi, E., Le, Q., and Zhou, D. (2022). Chain-of-thought prompting elicits reasoning in large language models. arXiv:2201.11903. <a href="https://arxiv.org/abs/2201.11903">https://arxiv.org/abs/2201.11903</a></li>
+      <li>Zamfirescu-Pereira, J. D., Wong, R. Y., Hartmann, B., and Yang, Q. (2023). Why Johnny can't prompt: How non-AI experts try (and fail) to design LLM prompts. Proceedings of the 2023 CHI Conference on Human Factors in Computing Systems, 1-21. <a href="https://doi.org/10.1145/3544548.3581388">https://doi.org/10.1145/3544548.3581388</a></li>
+      <li>Zhu, K., Wang, J., Zhou, J., Wang, Z., Chen, H., Wang, Y., Ji, L., Li, Y., Zhang, N., Zhang, Z., et al. (2023). PromptRobust: Towards evaluating the robustness of large language models on adversarial prompts. arXiv:2306.04528. <a href="https://arxiv.org/abs/2306.04528">https://arxiv.org/abs/2306.04528</a></li>
+    </ol>
+    <h3>Institutional and survey sources</h3>
+    <ol class="ref-list" start="13">
+      <li>Anthropic (2025). Introducing the Anthropic Economic Index. 10 February 2025. <a href="https://www.anthropic.com/news/the-anthropic-economic-index">https://www.anthropic.com/news/the-anthropic-economic-index</a></li>
+      <li>Anthropic (2026). The Anthropic Economic Index report: New building blocks for understanding AI use. 15 January 2026. <a href="https://www.anthropic.com/research/economic-index-primitives">https://www.anthropic.com/research/economic-index-primitives</a></li>
+      <li>IAASB (2024). The IAASB's Technology Position. September 2024. <a href="https://www.iaasb.org/_flysystem/azure-private/2024-09/20240916-IAASB-Agenda%20Item%204-C%20Technology%20Position%20(Clean%20version%20of%204-B).pdf">IAASB Technology Position PDF</a></li>
+      <li>IFAC and IESBA (2024). Navigating the Gen AI Revolution: Implications for the Accounting Profession. 21 June 2024. <a href="https://www.ifac.org/knowledge-gateway/discussion/navigating-gen-ai-revolution-implications-accounting-profession">IFAC Knowledge Gateway</a></li>
+      <li>Lightcast (2025). Lightcast and Stanford University: Annual AI Report 2025. <a href="https://lightcast.io/resources/research/stanford-ai-index-2025">https://lightcast.io/resources/research/stanford-ai-index-2025</a></li>
+      <li>McKinsey and Company (2023). The state of AI in 2023: Generative AI's breakout year. August 2023. <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai</a></li>
+      <li>McKinsey and Company (2024). The state of AI in early 2024: Gen AI adoption spikes and starts to generate value. 30 May 2024. <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai</a></li>
+      <li>McKinsey and Company (2025). AI at work but not at scale. Week in Charts. December 2025. <a href="https://www.mckinsey.com/featured-insights/week-in-charts/ai-at-work-but-not-at-scale">https://www.mckinsey.com/featured-insights/week-in-charts/ai-at-work-but-not-at-scale</a></li>
+      <li>Microsoft and LinkedIn (2024). Work Trend Index 2024: AI at work is here. Now comes the hard part. May 2024. <a href="https://news.microsoft.com/en-nz/2024/05/09/ai-at-work-is-here-now-comes-the-hard-part/">https://news.microsoft.com/en-nz/2024/05/09/ai-at-work-is-here-now-comes-the-hard-part/</a></li>
+      <li>Stanford Institute for Human-Centered AI (2025). The 2025 AI Index Report: Economy. <a href="https://hai.stanford.edu/ai-index/2025-ai-index-report/economy">https://hai.stanford.edu/ai-index/2025-ai-index-report/economy</a></li>
+      <li>UNESCO (2024). What you need to know about UNESCO's new AI competency frameworks for students and teachers. 3 September 2024. <a href="https://www.unesco.org/en/articles/what-you-need-know-about-unescos-new-ai-competency-frameworks-students-and-teachers">https://www.unesco.org/en/articles/what-you-need-know-about-unescos-new-ai-competency-frameworks-students-and-teachers</a></li>
+      <li>World Economic Forum (2025). The Future of Jobs Report 2025. January 2025. <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/3-skills-outlook/">https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/3-skills-outlook/</a></li>
+      <li>XBRL International (2025). XBRL International takes significant step toward modernised taxonomy specification. 28 March 2025. <a href="https://www.xbrl.org/news/xbrl-international-takes-significant-step-toward-modernised-taxonomy-specification/">https://www.xbrl.org/news/xbrl-international-takes-significant-step-toward-modernised-taxonomy-specification/</a></li>
+      <li>XBRL International (2025). From digital to intelligent reporting with AI and XBRL. 11 October 2025. <a href="https://www.xbrl.org/news/from-digital-to-intelligent-reporting-with-ai-and-xbrl/">https://www.xbrl.org/news/from-digital-to-intelligent-reporting-with-ai-and-xbrl/</a></li>
+      <li>XBRL International (2025). Making data AI-ready with XBRL. 7 November 2025. <a href="https://www.xbrl.org/news/making-data-ai-ready-with-xbrl/">https://www.xbrl.org/news/making-data-ai-ready-with-xbrl/</a></li>
+      <li>XBRL UK (accessed 2026). XBRL in the UK. <a href="https://www.xbrl.org.uk/projects/">https://www.xbrl.org.uk/projects/</a></li>
+    </ol>
+  </div>
+</section>
+
+<section id="sources">
+  <div class="ref-section">
+    <h2>13. Sources</h2>
+    <p>Primary sources for the statistics quoted in this report. Every URL below was fetched or searched before publication; publisher blocks (403) from academic sites are noted where they occur.</p>
+    <ol class="ref-list">
+      <li>Pew Research Center (2023). A majority of Americans have heard of ChatGPT, but few have tried it themselves. 24 May 2023. <a href="https://www.pewresearch.org/short-reads/2023/05/24/a-majority-of-americans-have-heard-of-chatgpt-but-few-have-tried-it-themselves/">https://www.pewresearch.org/short-reads/2023/05/24/a-majority-of-americans-have-heard-of-chatgpt-but-few-have-tried-it-themselves/</a></li>
+      <li>Pew Research Center (2023). Most Americans haven't used ChatGPT; few think it will have a major impact on their job. 28 August 2023. <a href="https://www.pewresearch.org/short-reads/2023/08/28/most-americans-havent-used-chatgpt-few-think-it-will-have-a-major-impact-on-their-job/">https://www.pewresearch.org/short-reads/2023/08/28/most-americans-havent-used-chatgpt-few-think-it-will-have-a-major-impact-on-their-job/</a></li>
+      <li>Pew Research Center (2024). Americans' use of ChatGPT is ticking up, but few trust its election information. 26 March 2024. <a href="https://www.pewresearch.org/short-reads/2024/03/26/americans-use-of-chatgpt-is-ticking-up-but-few-trust-its-election-information/">https://www.pewresearch.org/short-reads/2024/03/26/americans-use-of-chatgpt-is-ticking-up-but-few-trust-its-election-information/</a></li>
+      <li>Pew Research Center (2025). Workers' exposure to AI. 25 February 2025 (survey conducted October 2024). <a href="https://www.pewresearch.org/social-trends/2025/02/25/workers-exposure-to-ai/">https://www.pewresearch.org/social-trends/2025/02/25/workers-exposure-to-ai/</a></li>
+      <li>Pew Research Center (2025). 34% of U.S. adults have used ChatGPT, about double the share in 2023. 25 June 2025. <a href="https://www.pewresearch.org/short-reads/2025/06/25/34-of-us-adults-have-used-chatgpt-about-double-the-share-in-2023/">https://www.pewresearch.org/short-reads/2025/06/25/34-of-us-adults-have-used-chatgpt-about-double-the-share-in-2023/</a></li>
+      <li>Pew Research Center (2025). About 1 in 5 U.S. workers now use AI in their job, up since last year. 6 October 2025. <a href="https://www.pewresearch.org/short-reads/2025/10/06/about-1-in-5-us-workers-now-use-ai-in-their-job-up-since-last-year/">https://www.pewresearch.org/short-reads/2025/10/06/about-1-in-5-us-workers-now-use-ai-in-their-job-up-since-last-year/</a></li>
+      <li>Pew Research Center (2026). Americans and AI 2026: Chatbots, smart devices and views on impact. 17 June 2026. <a href="https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/">https://www.pewresearch.org/internet/2026/06/17/americans-and-ai-2026-chatbots-smart-devices-and-views-on-impact/</a></li>
+      <li>OpenAI via Axios (2024). OpenAI says ChatGPT usage has doubled since last year. 29 August 2024. <a href="https://www.axios.com/2024/08/29/openai-says-chatgpt-usage-has-doubled-since-last-year/">https://www.axios.com/2024/08/29/openai-says-chatgpt-usage-has-doubled-since-last-year/</a></li>
+      <li>TechRepublic (2025). ChatGPT's on track for 700M weekly users milestone: OpenAI goes mainstream. 4 August 2025. <a href="https://www.techrepublic.com/article/news-chatgpt-700-million-weekly-users/">https://www.techrepublic.com/article/news-chatgpt-700-million-weekly-users/</a></li>
+      <li>Business Insider (2025). OpenAI's ChatGPT has 800 million weekly users. 7 October 2025. <a href="https://www.businessinsider.com/chatgpt-users-openai-sam-altman-devday-llm-artificial-intelligence-2025-10">https://www.businessinsider.com/chatgpt-users-openai-sam-altman-devday-llm-artificial-intelligence-2025-10</a></li>
+      <li>Vanderbilt University (2024). Pioneering AI education: Vanderbilt and Coursera lead the way in global generative AI. 31 October 2024. <a href="https://news.vanderbilt.edu/2024/10/31/pioneering-ai-education-vanderbilt-and-coursera-lead-the-way-in-global-generative-ai/">https://news.vanderbilt.edu/2024/10/31/pioneering-ai-education-vanderbilt-and-coursera-lead-the-way-in-global-generative-ai/</a></li>
+      <li>Google (2024). Learn how to write AI prompts in 5 easy steps with this new course from Google. 27 October 2024. <a href="https://blog.google/company-news/outreach-and-initiatives/grow-with-google/learn-how-to-write-ai-prompts-in-5-easy-steps-with-this-new-course-from-google/">https://blog.google/company-news/outreach-and-initiatives/grow-with-google/learn-how-to-write-ai-prompts-in-5-easy-steps-with-this-new-course-from-google/</a></li>
+      <li>City AM (2025). Big Four giants eye AI assurance tools to tap in on client concerns. 2 June 2025. <a href="https://www.cityam.com/big-four-giants-eye-ai-assurance-tools-to-tap-in-on-client-concerns/">https://www.cityam.com/big-four-giants-eye-ai-assurance-tools-to-tap-in-on-client-concerns/</a></li>
+      <li>Accounting Times (2025). PwC launches AI assurance offering to support AI adoption. 20 June 2025. <a href="https://www.accountingtimes.com.au/technology/pwc-aims-to-bolster-ai-adoption-with-assurance-offering">https://www.accountingtimes.com.au/technology/pwc-aims-to-bolster-ai-adoption-with-assurance-offering</a></li>
+      <li>Anthropic (2025-2026). Anthropic Economic Index open datasets. Hugging Face. <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex">https://huggingface.co/datasets/Anthropic/EconomicIndex</a></li>
+    </ol>
+    <p>Academic DOIs were verified against Crossref (title, journal, volume, pages, year) before publication. Publisher sites may return 403 to automated requests; none of the cited URLs returned 404 at verification time.</p>
+  </div>
+</section>
+
+<footer>
+  <p>(c) Dr Yuqian Zhang, Auckland University of Technology and ByteMind Ltd. All rights reserved.</p>
+  <p>Source: Zhang, Y. (2026). Prompt Literacy in the AI Era. Available at: https://zhangyuqian.com/prompt-literacy-ai-era/</p>
+</footer>
+
+</div>
+
+
+<div class="footer-nav">
+<a href="../../reports.html">Back to Reports</a>
+<a href="../../insights.html">Back to Insights</a>
+</div>
+</div>
+<script src="./_shared/js/echarts.min.js"></script>
+<script>
+window.__bmPalette = (function(){var s=getComputedStyle(document.documentElement);return {accent:s.getPropertyValue("--accent").trim(),gold:s.getPropertyValue("--accent2").trim(),muted:s.getPropertyValue("--muted").trim(),rule:s.getPropertyValue("--rule").trim(),ink:s.getPropertyValue("--ink").trim(),bg2:s.getPropertyValue("--bg2").trim(),teal:"#3d6b5b",green:"#2f6b4f",red:"#a33b2f"};})();
+</script>
+<script>
+(function () {
+  var NAVY = '#1e3a5f';
+  var GREEN = '#27ae60';
+  var RED = '#c0392b';
+  var BLUE = '#7ba3cc';
+  var AMBER = '#f39c12';
+  var INK = '#1c1917';
+  var SUB = '#57534e';
+  var GRID = '#e7e5e4';
+
+  var c1 = echarts.init(document.getElementById('chart-weekly-users'));
+  c1.setOption({
+    tooltip: { trigger: 'axis', valueFormatter: function (v) { return v + ' million'; } },
+    grid: { left: 70, right: 40, top: 50, bottom: 45 },
+    xAxis: {
+      type: 'time',
+      axisLabel: { color: SUB },
+      splitLine: { show: false }
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Weekly active users (millions)',
+      nameTextStyle: { color: SUB },
+      axisLabel: { color: SUB },
+      splitLine: { lineStyle: { color: GRID } }
+    },
+    series: [{
+      name: 'Weekly active users',
+      type: 'line',
+      data: [['2023-11-06', 100], ['2024-08-29', 200], ['2025-08-04', 700], ['2025-10-06', 800]],
+      symbolSize: 8,
+      lineStyle: { width: 3, color: NAVY },
+      itemStyle: { color: NAVY },
+      label: { show: true, position: 'top', formatter: '{c}', color: NAVY, fontSize: 11 },
+      markLine: {
+        symbol: 'none',
+        data: [{ xAxis: '2022-11-30' }],
+        lineStyle: { color: RED, type: 'dashed', width: 1.2 },
+        label: { formatter: 'ChatGPT launch, Nov 2022', position: 'insideEndTop', color: RED, fontSize: 10 }
+      }
+    }]
+  });
+
+  var c2 = echarts.init(document.getElementById('chart-pew-adoption'));
+  c2.setOption({
+    tooltip: { trigger: 'axis' },
+    grid: { left: 60, right: 30, top: 50, bottom: 45 },
+    xAxis: {
+      type: 'category',
+      data: ['Mar 2023', 'Jul 2023', 'Feb 2024', 'Feb-Mar 2025', 'Feb 2026'],
+      axisLabel: { color: SUB },
+      splitLine: { show: false }
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Share of US adults (percent)',
+      nameTextStyle: { color: SUB },
+      axisLabel: { color: SUB },
+      splitLine: { lineStyle: { color: GRID } }
+    },
+    series: [{
+      name: 'Ever used ChatGPT',
+      type: 'bar',
+      data: [14, 18, 23, 34, 44],
+      barWidth: '52%',
+      itemStyle: { color: BLUE },
+      label: { show: true, position: 'top', formatter: '{c}%', color: NAVY, fontSize: 11 }
+    }]
+  });
+
+  var c3 = echarts.init(document.getElementById('chart-benchmarks'));
+  c3.setOption({
+    tooltip: { trigger: 'axis' },
+    legend: { data: ['Standard prompting', 'Chain-of-thought prompting'], top: 0, textStyle: { color: SUB } },
+    grid: { left: 60, right: 30, top: 50, bottom: 45 },
+    xAxis: {
+      type: 'category',
+      data: ['Wei et al. 2022 GSM8K', 'Kojima et al. MultiArith', 'Kojima et al. GSM8K'],
+      axisLabel: { color: SUB },
+      splitLine: { show: false }
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Accuracy (percent)',
+      nameTextStyle: { color: SUB },
+      axisLabel: { color: SUB },
+      splitLine: { lineStyle: { color: GRID } }
+    },
+    series: [
+      {
+        name: 'Standard prompting',
+        type: 'bar',
+        data: [17.9, 17.7, 10.4],
+        itemStyle: { color: BLUE },
+        label: { show: true, position: 'top', formatter: '{c}%', color: BLUE, fontSize: 10 }
+      },
+      {
+        name: 'Chain-of-thought prompting',
+        type: 'bar',
+        data: [58.1, 78.7, 40.7],
+        itemStyle: { color: NAVY },
+        label: { show: true, position: 'top', formatter: '{c}%', color: NAVY, fontSize: 10 }
+      }
+    ]
+  });
+
+  var c4 = echarts.init(document.getElementById('chart-postings'));
+  c4.setOption({
+    tooltip: { trigger: 'axis', valueFormatter: function (v) { return Number(v).toLocaleString(); } },
+    legend: { data: ['2023', '2024'], top: 0, textStyle: { color: SUB } },
+    grid: { left: 70, right: 40, top: 50, bottom: 45 },
+    xAxis: {
+      type: 'category',
+      data: ['Prompt engineering', 'Generative AI', 'Large language models'],
+      axisLabel: { color: SUB },
+      splitLine: { show: false }
+    },
+    yAxis: {
+      type: 'log',
+      min: 1000,
+      max: 100000,
+      name: 'Job postings (log scale)',
+      nameTextStyle: { color: SUB },
+      axisLabel: { color: SUB, formatter: function (v) { return Number(v).toLocaleString(); } },
+      splitLine: { lineStyle: { color: GRID } }
+    },
+    series: [
+      {
+        name: '2023',
+        type: 'bar',
+        data: [1400, 16000, 5000],
+        itemStyle: { color: BLUE },
+        label: { show: true, position: 'top', formatter: function (p) { return Number(p.value).toLocaleString(); }, color: BLUE, fontSize: 9 }
+      },
+      {
+        name: '2024',
+        type: 'bar',
+        data: [6300, 66000, 20000],
+        itemStyle: { color: NAVY },
+        label: { show: true, position: 'top', formatter: function (p) { return Number(p.value).toLocaleString(); }, color: NAVY, fontSize: 9 }
+      }
+    ]
+  });
+
+  var c5 = echarts.init(document.getElementById('chart-productivity'));
+  c5.setOption({
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+    grid: { left: 260, right: 50, top: 40, bottom: 40 },
+    xAxis: {
+      type: 'value',
+      name: 'Measured gain (percent)',
+      nameTextStyle: { color: SUB },
+      axisLabel: { color: SUB },
+      splitLine: { lineStyle: { color: GRID } }
+    },
+    yAxis: {
+      type: 'category',
+      data: ['Noy and Zhang: time to complete', 'Brynjolfsson et al.: productivity', "Dell'Acqua et al.: tasks completed", 'Peng et al.: task speed'],
+      axisLabel: { color: SUB },
+      splitLine: { show: false }
+    },
+    series: [{
+      name: 'Measured gain',
+      type: 'bar',
+      data: [
+        { value: 40, itemStyle: { color: NAVY } },
+        { value: 15, itemStyle: { color: GREEN } },
+        { value: 12.2, itemStyle: { color: BLUE } },
+        { value: 55.8, itemStyle: { color: AMBER } }
+      ],
+      barWidth: '55%',
+      label: { show: true, position: 'right', formatter: '{c}%', color: NAVY, fontSize: 11 }
+    }]
+  });
+
+  var c6 = echarts.init(document.getElementById('chart-outside-frontier'));
+  c6.setOption({
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+    grid: { left: 280, right: 70, top: 40, bottom: 40 },
+    xAxis: {
+      type: 'value',
+      min: -25,
+      max: 0,
+      name: 'Percentage points',
+      nameTextStyle: { color: SUB },
+      axisLabel: { color: SUB },
+      splitLine: { lineStyle: { color: GRID } }
+    },
+    yAxis: {
+      type: 'category',
+      data: ['AI users, outside the capability frontier'],
+      axisLabel: { color: SUB },
+      splitLine: { show: false }
+    },
+    series: [{
+      name: 'Change in likelihood of correct solutions',
+      type: 'bar',
+      data: [-19],
+      itemStyle: { color: RED },
+      barWidth: '35%',
+      label: { show: true, position: 'left', formatter: '{c} percentage points', color: RED, fontSize: 11 }
+    }]
+  });
+
+  var c7 = echarts.init(document.getElementById('chart-org-adoption'));
+  c7.setOption({
+    tooltip: { trigger: 'axis' },
+    grid: { left: 60, right: 30, top: 50, bottom: 45 },
+    xAxis: {
+      type: 'category',
+      data: ['2023', 'Early 2024', '2025', '2025 overall AI'],
+      axisLabel: { color: SUB },
+      splitLine: { show: false }
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Share of organisations (percent)',
+      nameTextStyle: { color: SUB },
+      axisLabel: { color: SUB },
+      splitLine: { lineStyle: { color: GRID } }
+    },
+    series: [{
+      name: 'Adoption share',
+      type: 'bar',
+      data: [
+        { value: 33, itemStyle: { color: NAVY } },
+        { value: 65, itemStyle: { color: NAVY } },
+        { value: 79, itemStyle: { color: NAVY } },
+        { value: 88, itemStyle: { color: GREEN } }
+      ],
+      barWidth: '46%',
+      label: { show: true, position: 'top', formatter: '{c}%', color: NAVY, fontSize: 11 }
+    }]
+  });
+
+  var c8 = echarts.init(document.getElementById('chart-worker-use'));
+  c8.setOption({
+    tooltip: { trigger: 'axis' },
+    grid: { left: 70, right: 30, top: 50, bottom: 60 },
+    xAxis: {
+      type: 'category',
+      data: ['Pew Oct 2024', 'Pew Sep 2025', 'Knowledge workers\nuse gen AI', 'Leaders not hiring\nwithout AI skills', 'Prefer less experienced\nwith AI skills'],
+      axisLabel: { color: SUB, interval: 0, fontSize: 10 },
+      splitLine: { show: false }
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Share (percent)',
+      nameTextStyle: { color: SUB },
+      axisLabel: { color: SUB },
+      splitLine: { lineStyle: { color: GRID } }
+    },
+    series: [{
+      name: 'Share',
+      type: 'bar',
+      data: [
+        { value: 16, itemStyle: { color: BLUE } },
+        { value: 21, itemStyle: { color: BLUE } },
+        { value: 75, itemStyle: { color: NAVY } },
+        { value: 66, itemStyle: { color: NAVY } },
+        { value: 71, itemStyle: { color: NAVY } }
+      ],
+      barWidth: '46%',
+      label: { show: true, position: 'top', formatter: '{c}%', color: NAVY, fontSize: 10 }
+    }]
+  });
+
+  var c9a = echarts.init(document.getElementById('chart-coverage'));
+  c9a.setOption({
+    tooltip: { trigger: 'axis' },
+    grid: { left: 50, right: 20, top: 50, bottom: 45 },
+    xAxis: {
+      type: 'category',
+      data: ['January 2025 sample', 'November 2025 sample'],
+      axisLabel: { color: SUB },
+      splitLine: { show: false }
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Occupations (percent)',
+      nameTextStyle: { color: SUB },
+      axisLabel: { color: SUB },
+      splitLine: { lineStyle: { color: GRID } }
+    },
+    series: [{
+      name: 'Occupations with AI in at least 25 percent of tasks',
+      type: 'bar',
+      data: [
+        { value: 36, itemStyle: { color: BLUE } },
+        { value: 49, itemStyle: { color: NAVY } }
+      ],
+      barWidth: '42%',
+      label: { show: true, position: 'top', formatter: '{c}%', color: NAVY, fontSize: 12 }
+    }]
+  });
+
+  var c9b = echarts.init(document.getElementById('chart-aug-automation'));
+  c9b.setOption({
+    tooltip: { trigger: 'axis' },
+    legend: { data: ['January 2025 sample', 'November 2025 sample'], top: 0, textStyle: { color: SUB } },
+    grid: { left: 50, right: 20, top: 50, bottom: 45 },
+    xAxis: {
+      type: 'category',
+      data: ['Augmentation', 'Automation'],
+      axisLabel: { color: SUB },
+      splitLine: { show: false }
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Share of conversations (percent)',
+      nameTextStyle: { color: SUB },
+      axisLabel: { color: SUB },
+      splitLine: { lineStyle: { color: GRID } }
+    },
+    series: [
+      {
+        name: 'January 2025 sample',
+        type: 'bar',
+        data: [57, 43],
+        itemStyle: { color: BLUE },
+        label: { show: true, position: 'top', formatter: '{c}%', color: BLUE, fontSize: 10 }
+      },
+      {
+        name: 'November 2025 sample',
+        type: 'bar',
+        data: [52, 45],
+        itemStyle: { color: NAVY },
+        label: { show: true, position: 'top', formatter: '{c}%', color: NAVY, fontSize: 10 }
+      }
+    ]
+  });
+
+  var assuranceItems = [
+    ['2024-06-21', 'IFAC and IESBA: Gen AI guidance'],
+    ['2024-09-16', 'IAASB: Technology Position adopted'],
+    ['2025-03-28', 'XBRL: modernised taxonomy specification'],
+    ['2025-06-02', 'Big Four: AI assurance preparation (media-reported)'],
+    ['2025-06-20', 'PwC: AI assurance offering launched'],
+    ['2025-10-11', 'XBRL: digital to intelligent reporting'],
+    ['2025-11-07', 'XBRL: making data AI-ready'],
+    ['2026-01-01', 'XBRL UK: six million documents']
+  ];
+  var c10 = echarts.init(document.getElementById('chart-assurance'));
+  c10.setOption({
+    tooltip: { trigger: 'item', formatter: function (p) { return p.data.name; } },
+    grid: { left: 60, right: 300, top: 50, bottom: 45 },
+    xAxis: {
+      type: 'time',
+      min: '2024-03-01',
+      max: '2026-06-01',
+      axisLabel: { color: SUB },
+      splitLine: { show: false }
+    },
+    yAxis: {
+      type: 'value',
+      min: -0.5,
+      max: 7.5,
+      show: false
+    },
+    series: [{
+      type: 'scatter',
+      symbolSize: 14,
+      itemStyle: { color: NAVY },
+      data: assuranceItems.map(function (d, i) {
+        return { value: [d[0], i], name: d[1] };
+      }),
+      label: {
+        show: true,
+        position: 'right',
+        formatter: function (p) { return p.data.name; },
+        color: NAVY,
+        fontSize: 9
+      }
+    }]
+  });
+
+  var eduItems = [
+    ['2024-09-03', 'UNESCO: AI competency frameworks'],
+    ['2024-10-28', 'Google: Prompting Essentials'],
+    ['2024-10-31', 'Vanderbilt: 327,000 learners (prompt course)'],
+    ['2024-10-31', 'Vanderbilt: 500,000 learners (related courses)'],
+    ['2025-01-07', 'WEF: 39% of core skills to change by 2030'],
+    ['2025-01-07', 'WEF: 85% of employers prioritise reskilling']
+  ];
+  var c11 = echarts.init(document.getElementById('chart-education'));
+  c11.setOption({
+    tooltip: { trigger: 'item', formatter: function (p) { return p.data.name; } },
+    grid: { left: 60, right: 300, top: 50, bottom: 45 },
+    xAxis: {
+      type: 'time',
+      min: '2023-08-01',
+      max: '2025-08-01',
+      axisLabel: { color: SUB },
+      splitLine: { show: false }
+    },
+    yAxis: {
+      type: 'value',
+      min: -0.5,
+      max: 5.5,
+      show: false
+    },
+    series: [{
+      type: 'scatter',
+      symbolSize: 14,
+      itemStyle: { color: GREEN },
+      data: eduItems.map(function (d, i) {
+        return { value: [d[0], i], name: d[1] };
+      }),
+      label: {
+        show: true,
+        position: 'right',
+        formatter: function (p) { return p.data.name; },
+        color: NAVY,
+        fontSize: 9
+      }
+    }]
+  });
+
+  var oppData = [
+    ['Wage premium for prompt literacy', 6, 9],
+    ['Causal persistence of productivity gains', 4, 9],
+    ['Validated prompt literacy assessment', 3, 8],
+    ['Accounting vocabulary and prompt quality', 3, 8],
+    ['Verification behaviour and audit mindset', 4, 8],
+    ['Organisational training return on investment', 5, 7],
+    ['General literacy versus specialist profession', 3, 7],
+    ['AI assurance market development', 6, 7]
+  ];
+  var c12 = echarts.init(document.getElementById('chart-research'));
+  c12.setOption({
+    tooltip: { trigger: 'item', formatter: function (p) { return p.data.name; } },
+    grid: { left: 60, right: 220, top: 40, bottom: 45 },
+    xAxis: {
+      type: 'value',
+      name: 'Data availability (author rating)',
+      nameTextStyle: { color: SUB },
+      min: 1.5,
+      max: 7.5,
+      axisLabel: { color: SUB },
+      splitLine: { lineStyle: { color: GRID } }
+    },
+    yAxis: {
+      type: 'value',
+      name: 'Theory significance (author rating)',
+      nameTextStyle: { color: SUB },
+      min: 5.5,
+      max: 10.5,
+      axisLabel: { color: SUB },
+      splitLine: { lineStyle: { color: GRID } }
+    },
+    series: [{
+      type: 'scatter',
+      symbolSize: 15,
+      itemStyle: { color: AMBER },
+      data: oppData.map(function (d, i) {
+        return {
+          name: d[0],
+          value: [d[1], d[2]],
+          label: {
+            show: true,
+            position: i % 2 === 0 ? 'top' : 'bottom',
+            formatter: d[0],
+            color: NAVY,
+            fontSize: 9
+          }
+        };
+      })
+    }]
+  });
+
+  window.addEventListener('resize', function () {
+    [c1, c2, c3, c4, c5, c6, c7, c8, c9a, c9b, c10, c11, c12].forEach(function (c) {
+      c.resize();
+    });
+  });
+})();
+</script>
+<script src="../chart-download.js"></script>
+</body>
+</html>

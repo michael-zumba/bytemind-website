@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="../../assets/bytemind-logo.png?v=2026" rel="icon"/>
+<link rel="stylesheet" href="../chart-download.css"/>
+<title>Generative AI and Everyday Life: Wellbeing, Work, and Skills Before and After ChatGPT (2015-2026)</title>
+<style>
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  src: url('./_shared/fonts/CrimsonPro-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('./_shared/fonts/InstrumentSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./_shared/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --bg: #faf9f3;
+  --bg2: #fdfcf8;
+  --ink: #1f1e1a;
+  --muted: #6a6760;
+  --rule: #e2ddd1;
+  --accent: #1a3a2a;
+  --accent2: #9e6b1f;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--bg);
+}
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Cover */
+.cover {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+.cover h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+.cover .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+.cover .meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Headings */
+h2 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 2.5rem 0 1rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--accent);
+}
+h3 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 1.8rem 0 0.75rem;
+}
+h4 {
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 1.5rem 0 0.5rem;
+}
+
+p { margin: 0.75rem 0; }
+strong { font-weight: 700; }
+em { font-style: italic; }
+
+/* Key point highlight */
+mark.key {
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Callout box */
+.callout {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.92rem;
+}
+.callout.warn {
+  border-left-color: var(--accent2);
+}
+.callout h4 {
+  margin-top: 0;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+}
+
+/* Metric row */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric-card {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric-card .val {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.25rem;
+}
+.metric-card .val.warn { color: var(--accent2); }
+.metric-card .label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+/* Tables */
+.table-wrap {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 600px;
+  margin: 1.5rem 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+thead th {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+tbody td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--rule);
+}
+tbody tr:nth-child(even) { background: var(--bg); }
+
+/* Charts */
+.chart-figure {
+  margin: 2rem 0;
+}
+.chart-figure figcaption {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.75rem;
+}
+
+/* Footer / Sources */
+footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+}
+footer .sources h2 {
+  font-size: 1.2rem;
+}
+footer .sources ol {
+  padding-left: 1.2rem;
+  font-size: 0.83rem;
+  color: var(--muted);
+}
+footer .sources li {
+  margin-bottom: 0.5rem;
+  overflow-wrap: break-word;
+}
+footer .sources .src-title {
+  color: var(--ink);
+}
+footer .sources .src-url {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  color: var(--accent);
+  word-break: break-all;
+}
+footer .sources a {
+  word-break: break-all;
+}
+
+/* Citations */
+sup a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.75em;
+  font-weight: 600;
+}
+sup a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  .cover h1 { font-size: 1.6rem; }
+  .container { padding: 1rem 1rem 2rem; }
+  .metric-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media print {
+  body { background: #fff; font-size: 13px; }
+  .container { max-width: 100%; }
+  .cover { page-break-after: always; }
+  h2 { page-break-before: always; }
+}
+
+
+/* ============================================================
+   Imported-report compatibility layer (ByteMind report standard)
+   ============================================================ */
+
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* Generic report header (used by imported reports) */
+body > .container > header,
+article.page > header.report-head {
+  text-align: center;
+  padding: 4rem 0 3rem;
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: 3rem;
+}
+body > .container > header h1,
+article.page > header.report-head h1 {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ink);
+  margin-bottom: 1rem;
+}
+body > .container > header .subtitle,
+article.page > header.report-head .subtitle {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 1.15rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+body > .container > header .meta,
+article.page > header.report-head .meta,
+article.page > header.report-head .byline {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+article.page > header.report-head .byline .sep {
+  margin: 0 0.5rem;
+  color: var(--rule);
+}
+
+/* Abstract block (NLP report) */
+.abstract {
+  background: var(--bg2);
+  border-left: 4px solid var(--accent);
+  padding: 1.25rem 1.5rem;
+  font-size: 0.95rem;
+  text-align: left;
+  margin: 1.5rem 0 0;
+}
+.abstract .label {
+  font-family: 'Instrument Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.abstract p:last-child { margin-bottom: 0; }
+
+/* Executive summary block */
+.exec-summary {
+  margin: 0 0 2rem;
+}
+.exec-summary h2 {
+  margin-top: 0;
+}
+
+/* Key findings */
+.key-findings {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1.25rem 0 0.5rem;
+}
+.key-findings li,
+.finding-item {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--accent);
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Table of contents */
+.toc {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0;
+}
+.toc h2 {
+  margin-top: 0;
+  border-bottom: none;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+.toc ol {
+  margin: 0.5rem 0 0 1.2rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+.toc ol li {
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+.toc a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.toc a:hover { text-decoration: underline; }
+
+/* Chart blocks used by imported reports */
+.chart-container {
+  margin: 1.75rem 0;
+}
+.chart-container h4 {
+  margin: 0 0 0.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.chart-container .chart-note,
+.chart-container .data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  font-style: italic;
+  overflow: visible;
+  word-wrap: break-word;
+}
+.chart-box {
+  width: 100%;
+  height: 420px;
+  overflow: visible;
+}
+.chart-box.tall,
+.chart-box-tall {
+  height: 520px;
+}
+.chart-box.short {
+  height: 340px;
+}
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+.two-col .chart-container,
+.two-col .chart-figure {
+  margin: 0;
+}
+.two-col .chart-box { height: 380px; }
+
+.two-col > * { min-width: 0; }
+
+/* Keep long reference links from stretching the page on small screens */
+.ref-list a, .ref-list li a, .sources a, .sources li a, ol li a, ul li a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.chart-box, .chart-box-tall, .chart-container, .chart-figure { min-width: 0; }
+
+
+/* Figure captions (NLP report) */
+figure.chart-figure figcaption {
+  font-weight: 600;
+  color: var(--ink);
+}
+figure.chart-figure figcaption strong {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* Mermaid diagram */
+figure.diagram-figure {
+  margin: 2rem 0;
+  padding: 1.5rem 1rem;
+  background: #ffffff;
+  border: 1px solid var(--rule);
+  text-align: center;
+}
+figure.diagram-figure .mermaid { display: inline-block; }
+figure.diagram-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 1rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--rule);
+  text-align: left;
+}
+
+/* Section kicker (NLP report) */
+.section-kicker {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  display: block;
+  margin-top: 2.5rem;
+  margin-bottom: -1rem;
+}
+.section-kicker + h2 { margin-top: 1.5rem; }
+
+/* Metric displays (NLP and imported reports) */
+.metric-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.metric {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+}
+.metric .metric-num {
+  font-family: 'Crimson Pro', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.metric .metric-label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.3;
+  display: block;
+}
+
+/* Callouts */
+.callout strong { color: var(--accent); }
+.callout-title {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+/* Special tables */
+.gap-table td:first-child,
+.data-table td:first-child {
+  font-weight: 600;
+  min-width: 200px;
+}
+td.num, th.num {
+  text-align: right;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+}
+
+/* References */
+.ref-section {
+  background: var(--bg2);
+  border: 1px solid var(--rule);
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.ref-section h2,
+.ref-list h2 {
+  margin-top: 0;
+  border-bottom: none;
+}
+.ref-item {
+  margin-bottom: 0.6rem;
+  font-size: 0.88rem;
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+.ref-item a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
+/* Footer navigation and notes */
+.footer-note {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2rem;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+.back-link a {
+  color: var(--accent);
+}
+.footer-nav {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0 0;
+  flex-wrap: wrap;
+}
+.footer-nav a {
+  color: var(--accent);
+}
+
+/* Data notes in imported reports */
+.data-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.25rem 0 0.75rem;
+  font-style: italic;
+}
+
+/* Inline code */
+code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85em;
+  background: var(--bg2);
+  padding: 0.1em 0.35em;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .key-findings { grid-template-columns: 1fr; }
+  .toc ol { columns: 1; }
+  .two-col { grid-template-columns: 1fr; }
+  body > .container > header h1,
+  article.page > header.report-head h1 { font-size: 1.6rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="container">
+
+<a href="../../reports.html" class="back-link">&larr; Back to website</a>
+
+<header class="cover">
+  <h1>Generative AI and Everyday Life: Wellbeing, Work, and Skills Before and After ChatGPT (2015-2026)</h1>
+  <p class="subtitle">A Research Brief on the Pre-AI and Post-AI Eras in a Global Context</p>
+  <p class="meta">Dr Yuqian Zhang &middot; 23 August 2026 &middot; Analytical Brief</p>
+</header>
+
+<section class="exec-summary">
+  <h2>Executive Summary</h2>
+  <p>This research brief examines how generative AI has reshaped everyday life, comparing the pre-AI era (roughly 2015 to 2022) with the post-AI era (2023 to 2026) in a global context. The launch of ChatGPT in November 2022 marks a sharp inflection point: generative AI moved from a specialised research tool to a mass-market utility embedded in search, writing, coding, education, and daily tasks. The brief asks what changed for ordinary people across seven dimensions: quality of life, happiness, perceived freedom, stress, job security, the groups most affected, and the possibility that AI is letting non-experts perform work once reserved for specialists.</p>
+  <p>The central task is to separate measurable change from anecdote and hype. The honest answer, after reviewing the large-scale survey and experimental evidence, is that the most reliable effects so far are concentrated in work and skills, while the wellbeing aggregates that dominate public debate are moving slowly and remain entangled with the pandemic recovery and the cost-of-living shock. Where the evidence cannot yet support a claim, the report says so.</p>
+  <ul class="key-findings">
+    <li>Generative AI became a mass-market utility faster than any consumer application before it. ChatGPT reached roughly 100 million weekly users within a year of launch and about 800 million by October 2025. The share of US adults who had ever used it rose from 18 percent in 2023 to 44 percent in 2026 (Pew Research Center).</li>
+    <li>Evaluative wellbeing moved modestly across the boundary. The unweighted world average of the Cantril life ladder rose from 5.38 in 2015 to 5.65 in 2025 (World Happiness Report data), but most of the rise happened in 2020 and 2021, before ChatGPT, and the post-2022 path is flat for several large economies.</li>
+    <li>Affective wellbeing tells a different story. The global Negative Experience Index hit a record 33 in 2021 and fell to 31 by 2024, while the Positive Experience Index recovered from 69 to 72. Levels in 2024 are close to pre-pandemic norms, not a new AI-driven collapse, and the pandemic confound makes causal attribution to AI impossible.</li>
+    <li>Daily stress fell from its pandemic peak of 41 percent (2021) to 37 percent (2024) among all adults, but workplace stress remains high: 41 percent of employees worldwide reported a lot of daily stress in 2024, and 46 percent of knowledge workers reported burnout in Microsoft's 2024 Work Trend Index.</li>
+    <li>Job security concerns are elevated but displacement so far is modest. Only about 5.5 percent of employment in high-income countries sits in occupations highly exposed to generative AI automation (ILO), while the IMF estimates about 60 percent of jobs in advanced economies are exposed to AI in some form, roughly half benefiting and half facing negative effects.</li>
+    <li>The effects are unevenly distributed. Young adults adopted ChatGPT far faster than older adults (58 percent of 18 to 29 year olds in the US by 2025 versus 10 percent of those 65 and over), women's employment is more exposed to automation than men's (3.7 versus 1.4 percent of employment), and urban workers in the OECD are more exposed than rural workers (32 versus 21 percent).</li>
+    <li>Experiments consistently show large productivity gains, with the biggest gains often going to less experienced workers: 40 percent faster professional writing (Noy and Zhang 2023), 34 percent gains for novice customer support agents (Brynjolfsson, Li, and Raymond 2025), and 26 percent more completed tasks for software developers (Cui et al. 2026). But complex tasks tell a more cautious story: one field experiment found low-performing entrepreneurs did about 10 percent worse with AI advice.</li>
+    <li>The empowerment question is open. Generative AI clearly lowers barriers to entry in some tasks, yet the same tools can reduce learning when used as a crutch. Students with unstructured ChatGPT access performed 48 percent better on practice problems but 17 percent worse on an exam taken without the tool (Bastani et al. 2024).</li>
+  </ul>
+</section>
+<div class="callout" id="key-terms">
+  <h4>Key Terms</h4>
+<p><strong>Cantril ladder</strong> — A 0-10 life-evaluation scale used by Gallup and the World Happiness Report to measure how people rate their lives overall.</p><p><strong>Evaluative wellbeing</strong> — A judgement-based measure of life satisfaction, kept separate in the report from day-to-day emotional experience.</p><p><strong>Affective wellbeing</strong> — Day-to-day emotional experience, measured by Gallup&#x27;s Positive and Negative Experience Indexes.</p><p><strong>AI exposure</strong> — The share of an occupation&#x27;s tasks that overlap with what generative AI can do; distinct from actual job displacement.</p><p><strong>Causal identification</strong> — The research problem of separating AI&#x27;s effect from other forces such as the pandemic recovery and the cost-of-living shock.</p>
+</div>
+
+
+<section class="toc">
+  <h2>Table of Contents</h2>
+  <ol>
+    <li><a href="#intro">Introduction and Motivation</a></li>
+    <li><a href="#method">Data and Method</a></li>
+    <li><a href="#qol">Quality of Life and Life Satisfaction</a></li>
+    <li><a href="#happiness">Happiness and Affective Wellbeing</a></li>
+    <li><a href="#freedom">Perceived Freedom and Autonomy</a></li>
+    <li><a href="#stress">Stress and Mental Health</a></li>
+    <li><a href="#jobs">Job Security</a></li>
+    <li><a href="#distribution">Distribution of Effects</a></li>
+    <li><a href="#empowerment">Non-Expert Empowerment versus Deskilling</a></li>
+    <li><a href="#discussion">Discussion: What the Evidence Supports</a></li>
+    <li><a href="#research">Research Opportunities</a></li>
+    <li><a href="#references">References</a></li>
+    <li><a href="#data">Data Availability</a></li>
+  </ol>
+</section>
+
+<section id="intro">
+  <h2>1. Introduction and Motivation</h2>
+
+  <p>On 30 November 2022, OpenAI released ChatGPT as a free research preview. Within five days it had passed one million users, and within two months an estimated 100 million people had tried it, a rate of adoption that UBS analysts described as the fastest for any consumer application in history. The product was not a new technology in the strict sense. It rested on the transformer architecture introduced in 2017 and on language models that OpenAI, Google, and others had been scaling for years. What changed in late 2022 was access. A chatbot that anyone could open in a browser turned generative AI from a specialist tool into a mass-market utility, and the pace of diffusion since then has been extraordinary: 100 million weekly users by November 2023, 400 million by February 2025, and about 800 million by October 2025.</p>
+
+  <p>This report asks what that diffusion has meant for ordinary people. The question is harder than it looks. Everyday life is not one variable but many, and the effects of a general-purpose technology are expected to show up differently across evaluative judgements (how people rate their lives), emotional experience (how people feel day to day), perceived control (whether people feel freer or more managed), health (stress and mental strain), and economic position (job security and earnings). The report therefore separates wellbeing into the two constructs that survey research has learned to keep apart: life evaluation and affective experience (Kahneman and Deaton 2010; Diener et al. 2010). It then examines perceived freedom, stress, job security, the distribution of gains and losses, and the emerging claim that AI lets non-experts do work once reserved for specialists.</p>
+
+  <p>The analytical window is 2015 to 2026, split at the ChatGPT launch. The pre-AI era (2015 to 2022) is long enough to establish baselines that include the pandemic; the post-AI era (2023 to 2026) is short but already rich in survey and experimental data. A pre/post comparison of this kind is suggestive, not causal. Three confounders sit squarely in the window: the post-pandemic recovery in social contact and mental health, the 2022 to 2023 inflation and cost-of-living shock, and pre-existing trends in happiness, stress, and automation. Where a change could equally reflect these forces, the report says so rather than crediting AI.</p>
+
+  <p>The evidence base combines large international surveys (Gallup World Poll, World Happiness Report, Pew Research Center, Microsoft Work Trend Index), labour market analyses (ILO, IMF, OECD, World Economic Forum), and a fast-growing experimental literature on generative AI and productivity. The first five dimensions are comparatively well measured; the last two (distribution and non-expert empowerment) are more conceptual, and the report operationalises each explicitly and flags where the data are thin.</p>
+</section>
+
+<section id="method">
+  <h2>2. Data and Method</h2>
+
+  <p>Table 1 lists the indicator used for each dimension, the primary source, and the main limitation. The guiding rule is that every dimension is measured by a named indicator, reported separately from the others, and discussed with its measurement problems visible.</p>
+
+  <div class="chart-container">
+    <h4>Table 1: Dimensions, Indicators, and Sources</h4>
+    <p class="chart-note">Indicators are kept separate: evaluative wellbeing, affect, stress, and perceived freedom are different constructs and are never combined into a single number in this report.</p>
+    <table class="indicator-table">
+      <thead>
+        <tr><th>Dimension</th><th>Indicator</th><th>Primary sources</th><th>Main limitation</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Quality of life and life satisfaction</td><td>Cantril ladder life evaluation (0 to 10), country means</td><td>World Happiness Report 2026 (Gallup World Poll data)</td><td>3-year rolling averages; unweighted global mean</td></tr>
+        <tr><td>Happiness and affective wellbeing</td><td>Positive and Negative Experience Indexes (0 to 100)</td><td>Gallup Global Emotions reports, 2016 to 2024</td><td>Index mixes five emotions; yearly samples vary</td></tr>
+        <tr><td>Perceived freedom and autonomy</td><td>Share satisfied with freedom to choose what to do with life</td><td>Gallup World Poll articles (2018, 2025, 2026)</td><td>Global series published only for a few years</td></tr>
+        <tr><td>Stress and mental health</td><td>Share experiencing a lot of daily stress; workplace stress share; burnout share</td><td>Gallup Global Emotions; Gallup State of the Global Workplace; Microsoft Work Trend Index</td><td>Different samples and questions across series</td></tr>
+        <tr><td>Job security</td><td>Perceived worry about job loss; occupational AI exposure; projected job churn</td><td>Gallup, Microsoft, Pew; ILO, IMF, OECD, WEF</td><td>Perceived and measured risk can diverge</td></tr>
+        <tr><td>Distribution of effects</td><td>Usage and exposure by age, gender, income group, geography</td><td>Pew; ILO; IMF; OECD</td><td>Usage and exposure are different concepts</td></tr>
+        <tr><td>Non-expert empowerment</td><td>Experimental productivity and quality effects by skill level</td><td>Noy and Zhang 2023; Brynjolfsson et al. 2025; Cui et al. 2026; Dell'Acqua et al. 2023; Otis et al. 2024; Bastani et al. 2024</td><td>Small settings; tasks differ; short horizons</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Two aggregation choices need stating. First, the global life evaluation mean is unweighted across countries, so small countries count as much as large ones; this is the standard convention in World Happiness Report summaries and is noted wherever a global number appears. Second, Gallup publishes some global figures as averages and others as medians across countries. The freedom series in Section 5 keeps those two formats labelled rather than merging them.</p>
+
+  <p>The report treats November 2022 as the inflection point in every chart, but it does not assume that the boundary is clean. Section 10 returns to the confounders and asks what a causal research design would need. Throughout, "exposed" means that a share of an occupation's tasks overlaps with what generative AI can do, not that jobs are disappearing, and the report is careful to distinguish exposure from displacement, and perceived risk from measured risk.</p>
+</section>
+
+<section id="qol">
+  <h2>3. Quality of Life and Life Satisfaction</h2>
+
+  <p>Life satisfaction is the most direct evaluative measure of whether lives are going well, and it has been collected consistently by the Gallup World Poll through the Cantril ladder since 2005. The World Happiness Report publishes country-level values as three-year rolling averages, and the unweighted world mean of those values is the closest thing to a global happiness trend. It rose from about 5.38 in 2015 to 5.65 in 2025, an increase of roughly a quarter of a point on a 0 to 10 scale (Figure 2).</p>
+
+  <div class="chart-container">
+    <h4>Figure 1: Generative AI Milestones and the ChatGPT Inflection Point (2016-2026)</h4>
+    <p class="chart-note">Major public milestones in generative AI development and diffusion. The vertical line marks the ChatGPT launch in November 2022. Source: author compilation from OpenAI, Google, Microsoft, DeepMind, Stability AI, GitHub, DeepSeek, the European Union, and the Nobel Foundation announcements.</p>
+    <div class="chart-box tall" id="chart-timeline"></div>
+  </div>
+
+  <p>The timing matters. The world mean moved from 5.38 in 2015 to 5.55 in 2021, before ChatGPT existed, and the 2021 to 2022 period saw a slight decline (5.55 to 5.54). The post-launch path is a recovery that had already begun: 5.53 in 2023, 5.58 in 2024, 5.65 in 2025. A simple pre/post comparison gives a rise from an average of 5.45 across the 2015 to 2022 rows to 5.59 across the 2023 to 2025 rows, but attributing that rise to AI would ignore the pandemic recovery, which plausibly explains a large share of it. The honest reading is that global life evaluation is slightly higher in the post-AI era than in the pre-AI era, that the improvement started before ChatGPT, and that no credible design yet separates the AI contribution from the recovery contribution.</p>
+
+  <div class="chart-container">
+    <h4>Figure 2: Life Evaluation Before and After ChatGPT (2011-2025)</h4>
+    <p class="chart-note">Cantril ladder life evaluation (0 to 10), three-year rolling averages as published by the World Happiness Report 2026. The world series is the unweighted mean across countries; selected economies are shown for context. Vertical line: November 2022.</p>
+    <div class="chart-box tall" id="chart-life-ladder"></div>
+  </div>
+
+  <p>The country-level pattern is more instructive than the global mean, because it shows how little the ChatGPT boundary explains. In the United States, life evaluation fell from 7.10 in 2015 to 6.72 in 2024 before a partial recovery to 6.82 in 2025, with most of the decline concentrated between 2019 and 2023, a period dominated by the pandemic, political polarisation, and inflation. The United Kingdom shows a similar hump: 6.73 in 2015, 7.17 in 2019, and back to 6.69 by 2025. Australia drifted down from 7.31 to 6.92. Japan moved the other way, from 5.92 to 6.13, continuing a slow improvement that predates generative AI. India's ladder rose from 4.40 to 4.54 over the full window despite a pandemic dip. No pattern in these series lines up with the November 2022 boundary, which is itself the key finding: at the level of national aggregates, generative AI has not yet moved the life satisfaction needle in any detectable direction.</p>
+</section>
+
+<section id="happiness">
+  <h2>4. Happiness and Affective Wellbeing</h2>
+
+  <p>Life evaluation answers a reflective question about life as a whole. Affective wellbeing answers a different question about yesterday: did you feel enjoyment, laughter, worry, stress, sadness, or anger during a lot of the day? Gallup aggregates the five positive experiences into a Positive Experience Index and the five negative experiences into a Negative Experience Index. Both are reported here as separate constructs, because the two measures can move in different directions and because conflating them is a common error in public discussion of AI and happiness.</p>
+
+  <div class="chart-container">
+    <h4>Figure 3: Global Positive and Negative Experience Indices (2015-2024)</h4>
+    <p class="chart-note">Gallup World Poll Positive and Negative Experience Indexes, 0 to 100. Higher values mean more pervasive positive or negative daily emotions. Vertical line: November 2022. Source: Gallup Global Emotions reports (2016 to 2024 editions) and Gallup State of the World's Emotional Health (2025).</p>
+    <div class="chart-box tall" id="chart-affect"></div>
+  </div>
+
+  <p>The two indices trace a pandemic-shaped arc. The Positive Experience Index held at 71 through 2018 to 2020, dropped to 69 in 2021, recovered to 70 in 2022 and 71 in 2023, and reached 72 in 2024, its best reading of the past decade. The Negative Experience Index rose from 28 in 2016 to a record 33 in 2021 and 2022, then fell to 31 in 2023 and 2024. In other words, the emotional dip and the recovery both happened before and during the pandemic, and by 2024 global affect had returned to roughly its 2019 level. Generative AI entered daily life in this window, but the direction of the affect data is opposite to what a simple "AI makes us miserable" narrative would predict, and the timing fits the pandemic story far better.</p>
+
+  <p>The caveat is measurement. Global indices average across more than 140 countries, which hides large regional and demographic variation, and they measure the prevalence of emotions, not their intensity. A technology that improves life for some groups while worsening it for others could leave a global index flat. The distributional analysis in Section 8 therefore matters as much as the averages. What the affect data can support is a bounded claim: there is no visible global deterioration in daily emotional experience in the post-launch years, and the widely repeated claim that AI has made the world unhappier is not supported by the survey record to date.</p>
+</section>
+
+<section id="freedom">
+  <h2>5. Perceived Freedom and Autonomy</h2>
+
+  <p>Perceived freedom is the felt sense of control over one's own life, and it is harder to measure than life satisfaction. The best available global indicator is the Gallup World Poll question on satisfaction with the freedom to choose what to do with one's life. Gallup reports that satisfaction with this freedom is higher now than two decades ago: a worldwide average of 80 percent in 2017, a median of 81 percent across 142 countries in 2024, and a median of 82 percent across 138 countries in 2025. The United States is a striking exception. Satisfaction among US adults fell from a 2007 to 2021 average of 83 percent to 71 percent in 2023 and 72 percent in 2024, and the decline is concentrated among women, whose satisfaction dropped from 81 percent in 2021 to 66 percent in 2024, a period that coincides with the loss of federal abortion protections and with deepening political polarisation (Figure 4).</p>
+
+  <div class="chart-container">
+    <h4>Figure 4: Satisfaction With Personal Freedom (Gallup World Poll)</h4>
+    <p class="chart-note">Bars: worldwide figures published by Gallup for 2017 (average across countries), 2024 and 2025 (medians across countries). Line: US women, annual series 2015 to 2024. Sources: Gallup (2018, 2025, 2026).</p>
+    <div class="chart-box tall" id="chart-freedom"></div>
+  </div>
+
+  <p>Two features of this chart deserve emphasis. First, the global trend runs against the claim that AI is eroding felt freedom: on the one measure that has been tracked for two decades, the world reports more satisfaction with personal freedom, not less. Second, the American decline is a reminder that perceived freedom responds to institutions and politics more than to technology. The US drop began in 2022, at the same time as the ChatGPT launch, but it coincides precisely with the Dobbs decision, and Gallup's own analysis links the timing to that event. Generative AI is not the obvious culprit in this series.</p>
+
+  <p>The workplace is where the freedom question gets sharper, and where the data are thinner. The optimistic mechanism is that AI removes drudgery and gives workers more time for meaningful tasks. The pessimistic mechanism is algorithmic management: monitoring, pacing, and decision support that reduces worker discretion. Gallup's State of the Global Workplace data show that only about one in five employees worldwide were engaged at work in 2024, with 62 percent not engaged, but that series has been flat or declining since long before ChatGPT, so it cannot be attributed to AI. Research on algorithmic management and worker autonomy is emerging but has not yet produced the large, comparable time series that the freedom dimension needs. This is flagged in Section 11 as one of the clearest measurement gaps in the field.</p>
+</section>
+
+<section id="stress">
+  <h2>6. Stress and Mental Health</h2>
+
+  <p>Stress is the best-measured emotional indicator in the Gallup World Poll, and it has its own trajectory that does not map onto the AI timeline. Among all adults worldwide, the share reporting a lot of stress on the previous day rose from 37 percent in 2017 to a record 40 percent in 2020 and 41 percent in 2021, then fell back to 37 percent in 2023 and 2024 (Figure 5). The pandemic year 2020 also produced a 25 percent increase in the global prevalence of anxiety and depression, according to the World Health Organization, and those elevated levels have not fully normalised. Whatever generative AI has done to mental health, it entered a world already recovering from a historic stress shock, and the aggregate stress series shows improvement, not deterioration, in the post-launch years.</p>
+
+  <div class="chart-container">
+    <h4>Figure 5: Self-Reported Daily Stress Worldwide (2017-2024)</h4>
+    <p class="chart-note">All adults (Gallup Global Emotions, share experiencing a lot of stress) and employees (Gallup State of the Global Workplace, share experiencing a lot of daily stress). The two series use different samples and questions and are plotted separately. Vertical line: November 2022.</p>
+    <div class="chart-box tall" id="chart-stress"></div>
+  </div>
+
+  <p>The workplace series tells a less comforting story. Employee stress hit 43 percent in 2020, 44 percent in 2021 and 2022, and remained at 41 percent in 2023 and 2024, still above its 2019 level of 38 percent. Microsoft's 2024 Work Trend Index, which surveys knowledge workers in 31 countries, found that 75 percent used generative AI at work and 46 percent reported burnout, with 68 percent saying they struggled with the pace and volume of work. These numbers sit side by side without a clean causal story: AI use and burnout rose together, but so did workload, restructuring, and the lingering effects of the pandemic. The most defensible statement is that generative AI is entering workplaces that were already stressed, that the always-on tools add a new cognitive load for some workers, and that no existing study cleanly separates the AI contribution from the workload contribution.</p>
+
+  <div class="callout">
+    <strong>Careful reading:</strong> the population-wide stress trend fell after 2021 while workplace stress stayed high. These are different samples with different questions, and combining them into a single "stress crisis" claim would misread both.
+  </div>
+
+  <p>Two further notes. First, the WHO's 25 percent increase refers to the first pandemic year (2020), not to AI, and citing it as an AI effect would be an error. Second, the most plausible AI-specific mental health channel is workplace: fear of displacement, skill obsolescence, and monitoring. The survey evidence on worry is consistent with that channel being real but limited, which is the subject of the next section.</p>
+</section>
+
+<section id="jobs">
+  <h2>7. Job Security</h2>
+
+  <p>Job security is the dimension where the economics literature is deepest, and where perceived and measured risk diverge most sharply. The perceived risk is real and rising. In September 2023, 22 percent of US workers told Gallup they worried technology would make their job obsolete, up from 15 percent in 2021. Microsoft's 2023 Work Trend Index found 49 percent of global knowledge workers worried AI would replace their job, and 70 percent said they would delegate as much work as possible to AI. By February 2025, Pew found 52 percent of US workers worried about AI use in the workplace, with 32 percent saying AI would lead to fewer job opportunities in their field (Figure 6). These are substantial numbers, and they moved up almost exactly with the ChatGPT timeline.</p>
+
+  <div class="two-col">
+    <div class="chart-container">
+      <h4>Figure 6a: Workers Who Worry About AI and Their Jobs</h4>
+      <p class="chart-note">Shares of workers reporting job-related worry about technology or AI, by survey. Questions differ across surveys; each bar states its source and wording. Sources: Gallup Work and Education poll (2021, 2023); Microsoft Work Trend Index (2023); Pew Research Center (February 2025).</p>
+      <div class="chart-box short" id="chart-job-worries"></div>
+    </div>
+    <div class="chart-container">
+      <h4>Figure 6b: How US Workers Feel About AI in the Workplace</h4>
+      <p class="chart-note">US workers reporting each feeling about AI use in the workplace, February 2025. Source: Pew Research Center. Multiple feelings could be selected.</p>
+      <div class="chart-box short" id="chart-pew-sentiment"></div>
+    </div>
+  </div>
+
+  <p>The measured risk is far smaller, at least so far. The ILO's 2023 analysis of generative AI and jobs found that only 5.5 percent of total employment in high-income countries sits in occupations potentially exposed to the automating effects of the technology, and 0.4 percent in low-income countries. The larger effect is augmentation: 13.4 percent of employment in high-income countries and 10.4 percent in low-income countries could be enhanced rather than replaced, which is why the ILO concluded that the technology is more likely to change the quality of jobs than to destroy them. The IMF's 2024 analysis uses a wider definition of exposure and finds that almost 40 percent of global employment is exposed to AI, about 60 percent in advanced economies, 40 percent in emerging markets, and 26 percent in low-income countries. The OECD's 2024 regional analysis estimates that about 26 percent of OECD workers are currently exposed to generative AI, with a potential for up to 70 percent as the technology spreads, and 39 percent of the potentially exposed workers considered highly exposed (Figure 7).</p>
+
+  <div class="chart-container">
+    <h4>Figure 7: Estimates of AI Exposure Across Studies and Definitions</h4>
+    <p class="chart-note">Shares of employment or tasks potentially exposed to AI, by study, scope, and definition. The measures are not directly comparable; exposure means task overlap, not job loss. Sources: ILO (2023); IMF (2024); OECD (2024); Frey and Osborne (2017) shown for historical context.</p>
+    <div class="chart-box tall" id="chart-exposure"></div>
+  </div>
+
+  <p>Projections of future churn are larger but still net positive in the latest round. The World Economic Forum's 2023 Future of Jobs Report expected 23 percent of jobs to change between 2023 and 2027, with 69 million jobs created and 83 million eliminated, a net reduction of 14 million. Its 2025 report, covering 2025 to 2030, projects 170 million jobs created and 92 million displaced, a net gain of 78 million, with 39 percent of workers' core skills expected to change (Figure 8). The swing from net negative to net positive between the two reports is itself a reminder that these are employer expectations, not outcomes, and that they respond to the economic cycle as much as to technology.</p>
+
+  <div class="chart-container">
+    <h4>Figure 8: Projected Job Creation and Displacement (WEF Future of Jobs)</h4>
+    <p class="chart-note">Projections from the World Economic Forum Future of Jobs Reports 2023 and 2025, based on employer surveys. Values are expectations over the stated horizons, not realised outcomes.</p>
+    <div class="chart-box" id="chart-job-transformation"></div>
+  </div>
+
+  <p>Three further observations tie the perception gap to the economics. First, exposure is not destiny: the occupations with the highest exposure, such as clerical work where the ILO estimates nearly a quarter of tasks are highly exposed, are the same occupations where augmentation may raise productivity and where wage effects will depend on how firms share the gains. Second, the historical record of automation scares is not reassuring about the fear itself: Frey and Osborne's 2013 estimate that 47 percent of US employment was at high risk of automation did not translate into mass displacement in the following decade, and task-level studies have consistently produced lower displacement estimates than occupation-level ones (Autor 2015). Third, wage data through 2025 do not yet show a generative-AI-driven displacement wave in national statistics, though the window is short and the effects are expected to show up in task content before they show up in employment counts.</p>
+</section>
+
+<section id="distribution">
+  <h2>8. Distribution of Effects</h2>
+
+  <p>Who gains and who loses depends on which side of three gaps a person sits: the usage gap, the exposure gap, and the skill gap. The usage gap is the largest and the best measured. Pew's 2025 survey found 58 percent of US adults aged 18 to 29 had used ChatGPT, versus 41 percent of those aged 30 to 49, 25 percent of those aged 50 to 64, and 10 percent of those 65 and over (Figure 9a). An earlier Pew survey found the same pattern: 62 percent of Americans thought AI would have a major impact on workers generally, but only 28 percent thought it would have a major impact on them personally, a gap between generalised anxiety and personal expectation that is itself a distributional fact: those who expect to be affected are not evenly spread across the population.</p>
+
+  <div class="two-col">
+    <div class="chart-container">
+      <h4>Figure 9a: US Adults Who Have Used ChatGPT, by Age (2025)</h4>
+      <p class="chart-note">Share of each age group who say they have ever used ChatGPT. Source: Pew Research Center, June 2025.</p>
+      <div class="chart-box short" id="chart-age-usage"></div>
+    </div>
+    <div class="chart-container">
+      <h4>Figure 9b: AI Exposure by Group (ILO, IMF, OECD)</h4>
+      <p class="chart-note">Exposure measures by gender (ILO 2023, share of employment potentially automatable; ILO 2026, share of occupations potentially exposed), country income group (IMF 2024, share of employment exposed), and urban versus rural OECD regions (OECD 2024, workers currently exposed).</p>
+      <div class="chart-box short" id="chart-exposure-groups"></div>
+    </div>
+  </div>
+
+  <p>The exposure gap runs the other way from the usage gap. The ILO finds that women's employment is more than twice as exposed to generative AI automation as men's: 3.7 percent of female employment worldwide versus 1.4 percent of male employment, driven by the concentration of women in clerical work, and the gap is larger in high-income countries. An ILO analysis published in 2026 finds the same pattern at the occupation level: about 29 percent of female-dominated occupations are exposed to generative AI, versus 16 percent of male-dominated occupations. The IMF finds exposure rising with development: about 60 percent of jobs in advanced economies are exposed versus 26 percent in low-income countries, because richer economies have more cognitive, white-collar work. The OECD finds a spatial version of the same pattern: 32 percent of workers in urban regions are currently exposed versus 21 percent in rural regions, and the OECD warns that generative AI could widen regional divides rather than narrow them. Education lines up with all of these: highly exposed occupations are disproportionately held by degree holders, and Gallup's 2023 finding that job obsolescence worry rose fastest among college-educated US workers is consistent with that.</p>
+
+  <p>Pulling the three gaps together produces a clear but uncomfortable picture. The people best placed to benefit, young and highly educated workers in rich countries, are also the most exposed, because exposure mostly means augmentation, and augmentation is where the productivity gains are. The people most at risk of displacement are those in clerical and administrative roles, disproportionately women, where tasks are more substitutable. And the people least exposed, such as workers in low-income countries and in physical, in-person occupations, are also the least likely to capture productivity gains, because they lack the complementary digital infrastructure and skills. Generative AI thus has the profile of a technology that could either compress or widen global inequality, depending on how its gains are distributed through training, wages, and social protection. The evidence so far is not sufficient to say which outcome dominates.</p>
+</section>
+
+<section id="empowerment">
+  <h2>9. Non-Expert Empowerment versus Deskilling</h2>
+
+  <p>The most consequential claim about generative AI is that it lets non-experts perform work once reserved for specialists: a person who cannot code can generate working scripts, a person who cannot draft legal language can produce a first-pass contract clause, and a student can receive instant explanations. The claim deserves to be tested, not asserted, because the evidence cuts both ways. The experimental literature on productivity is large enough to support real conclusions about where empowerment happens, and the learning literature is clear enough to show where it fails.</p>
+
+  <div class="chart-container">
+    <h4>Figure 10: Experimental Evidence on Generative AI and Productivity</h4>
+    <p class="chart-note">Percentage changes in productivity or quality measures from randomised experiments. Green bars: quality outcomes; navy bars: speed or output; red: negative effect. Sources: Noy and Zhang (2023); Peng et al. (2023); Brynjolfsson, Li, and Raymond (2025); Cui et al. (2026); Dell'Acqua et al. (2023); Otis et al. (2024).</p>
+    <div class="chart-box tall" id="chart-productivity"></div>
+  </div>
+
+  <p>The consistent finding across tasks is that generative AI raises measured output, often dramatically. Noy and Zhang's randomised experiment with 453 college-educated professionals found ChatGPT reduced the time to complete writing tasks by 40 percent while improving judged quality by 18 percent. Peng et al. found developers with GitHub Copilot completed a coding task 55.8 percent faster. In a Fortune 500 customer support setting, Brynjolfsson, Li, and Raymond found the AI assistant raised issues resolved per hour by 14 percent on average, with a 34 percent gain for novice and low-skilled workers and near zero for experienced agents. Cui et al., running three field experiments across Microsoft, Accenture, and a Fortune 100 firm, found a 26 percent increase in completed software tasks. Dell'Acqua et al.'s experiment with management consultants found 12.2 percent more tasks completed, 25.1 percent faster work, and more than 40 percent higher output quality, with below-average consultants improving 43 percent versus 17 percent for above-average performers. This is the strongest version of the empowerment story: on well-defined tasks, the least skilled gain the most, which is what a general-purpose technology that compresses the cost of expertise should look like.</p>
+
+  <p>The counter-evidence comes from two places. The first is task complexity. Otis et al. ran a five-month field experiment in which 640 Kenyan small business owners received a GPT-4 business mentor. High-performing entrepreneurs increased profits by about 15 percent, but low performers did nearly 10 percent worse, because they lacked the complementary skills to act on the AI's advice. Empowerment is conditional on the ability to evaluate and execute, and where that ability is absent, AI can widen the gap rather than close it. The second is learning. Bastani et al. studied Turkish high school students in mathematics: those with unstructured ChatGPT access solved 48 percent more practice problems, but scored 17 percent worse on an exam taken without the tool, while students using a structured tutor prompt improved 127 percent on practice problems (Figure 11). The crutch effect is real: doing the task with AI does not equal learning to do the task, and unsupervised use can substitute for skill formation.</p>
+
+  <div class="chart-container">
+    <h4>Figure 11: Generative AI Can Raise Practice Performance but Reduce Learning (Bastani et al. 2024)</h4>
+    <p class="chart-note">High school mathematics experiment. Bars show performance change relative to a no-AI control on practice problems with AI access and on an exam without access. Source: Bastani et al. (2024), SSRN 4895486, published in PNAS (2025).</p>
+    <div class="chart-box" id="chart-learning"></div>
+  </div>
+
+  <p>The honest synthesis is that generative AI is a genuine democratising technology for tasks with clear evaluation criteria, that its benefits on such tasks are largest for novices, and that it is a deskilling technology when it substitutes for the practice that builds expertise. These are not contradictory. The same tool that lets a junior developer ship code can prevent a student from learning to code. The empirical frontier is now about context: for which tasks, under which feedback and guardrail conditions, does AI-assisted performance translate into capability? The research opportunities in Section 11 are built around that question. What the current evidence cannot support is either of the extreme claims, that AI has levelled expertise everywhere or that it is deskilling an entire generation.</p>
+</section>
+
+<section id="discussion">
+  <h2>10. Discussion: What the Evidence Supports</h2>
+
+  <p>Reviewed together, the seven dimensions support four solid conclusions and three honest non-conclusions.</p>
+
+  <p><strong>First, generative AI has diffused faster than any comparable consumer technology, and its adoption is real and measurable.</strong> ChatGPT went from launch to 100 million weekly users in a year and to about 800 million by October 2025. McKinsey surveys show the share of organisations using AI in at least one function rising from 55 percent in 2023 to 72 percent in 2024 and 88 percent in 2025, with regular generative AI use up from 33 percent in 2023 to 65 percent in 2024 and 79 percent in 2025 (Figure 13). Pew's 44 percent ChatGPT usage among US adults in 2026 makes generative AI a mainstream consumer utility. This is not hype; it is the factual base on which the wellbeing questions sit.</p>
+
+  <div class="two-col">
+    <div class="chart-container">
+      <h4>Figure 12a: ChatGPT Weekly Active Users (millions)</h4>
+      <p class="chart-note">Weekly active users as announced by OpenAI: 100 million (November 2023), 200 million (August 2024), 400 million (February 2025), 500 million (March 2025), 700 million (August 2025), 800 million (October 2025).</p>
+      <div class="chart-box short" id="chart-chatgpt-users"></div>
+    </div>
+    <div class="chart-container">
+      <h4>Figure 12b: US Adults Who Have Ever Used ChatGPT (2023-2026)</h4>
+      <p class="chart-note">Share of US adults who say they have ever used ChatGPT. Source: Pew Research Center (June 2025; June 2026).</p>
+      <div class="chart-box short" id="chart-pew-usage"></div>
+    </div>
+  </div>
+
+  <div class="chart-container">
+    <h4>Figure 13: Organisational AI Adoption (McKinsey State of AI)</h4>
+    <p class="chart-note">Share of surveyed organisations using AI in at least one business function and the share regularly using generative AI, 2023 to 2025. Sources: McKinsey State of AI surveys (2023; early 2024; 2025). The Stanford AI Index Report (2025) re-states a later 2024 survey reading of 78 percent.</p>
+    <div class="chart-box" id="chart-org-adoption"></div>
+  </div>
+
+  <p><strong>Second, the productivity evidence for AI at work is unusually strong for a technology this young.</strong> Six independent randomised experiments, spanning writing, coding, customer support, consulting, and entrepreneurship, find gains of 12 to 56 percent, with the largest gains among less experienced workers in most settings. The OECD, Stanford, and the ILO all reach the same conclusion from different angles: the near-term effect of generative AI is augmentation, not mass substitution. This does not mean displacement will not come, but it means the reasonable baseline expectation is task reallocation and skill change, not a wave of unemployment.</p>
+
+  <p><strong>Third, the wellbeing aggregates do not show an AI effect, and the burden of proof is on those who claim one.</strong> Global life evaluation, positive and negative affect, and population-wide stress all improved after their pandemic lows, and their movements align more with the pandemic recovery than with the ChatGPT boundary. The freedom data show the world feeling more, not less, free, with the notable exception of the United States, where the decline coincides with a political and legal event, not a technology. A responsible economist reading these series should conclude that generative AI has not yet produced a detectable aggregate effect on measured wellbeing in either direction.</p>
+
+  <p><strong>Fourth, the risks are real and concentrated where the aggregates cannot see them.</strong> Workplace stress is high and flat, job worry rose from 15 to 22 percent between 2021 and 2023, clerical workers and women face the highest automation exposure, and the learning experiments show that unsupervised AI use can reduce skill formation. The distributional profile is the opposite of reassuring: usage is highest among the young and educated, exposure is highest among the same groups through augmentation, and displacement risk is highest among clerical workers who are disproportionately women.</p>
+
+  <p>The three non-conclusions follow directly. It cannot be claimed that AI has improved global wellbeing, because the confounders (pandemic recovery, cost-of-living shock, pre-existing trends) are too entangled and no credible causal design exists yet. It cannot be claimed that AI has harmed wellbeing, for the same reason. And it cannot be claimed that the non-expert empowerment question is settled, because the same body of experiments shows gains for novices on well-defined tasks and losses for low performers on complex ones. The defensible position is narrower and more useful: generative AI changes the value of skills, and the direction of that change depends on task structure, feedback, and the surrounding institutions.</p>
+</section>
+
+<section id="research">
+  <h2>11. Research Opportunities</h2>
+
+  <p>The window 2023 to 2026 is short, which makes the existing evidence remarkable but also means the field is wide open. The highest-value opportunities combine the natural experiments created by AI rollout with the wellbeing and labour outcomes that the surveys track (Figure 14).</p>
+
+  <div class="chart-container">
+    <h4>Figure 14: Research Opportunities by Data Availability and Theoretical Significance</h4>
+    <p class="chart-note">Author assessment on 0 to 10 scales, intended as a research agenda, not a measurement. Positions reflect the state of data access and the theoretical payoff of each topic. The axes are zoomed to the region the eight topics occupy.</p>
+    <div class="chart-box tall" id="chart-research"></div>
+  </div>
+
+  <p>Eight topics stand out. (1) Causal effects of AI on wellbeing: staggered firm-level and school-level AI rollouts matched to employee and student outcomes would identify effects that the aggregate series cannot. (2) Algorithmic management and perceived freedom: linked employer-employee data with task-level monitoring could finally measure whether AI expands or erodes autonomy. (3) AI and job quality: repeated cross-sections of task content, work intensity, and working conditions would show whether augmentation changes the quality of jobs before it changes their quantity. (4) Deskilling versus empowerment: longitudinal measurement of skills before and after AI adoption, building on the Bastani et al. design, is the single most policy-relevant gap. (5) Distributional effects: ILO and IMF exposure measures matched to labour force surveys would allow the usage, exposure, and skill gaps to be tracked over time. (6) AI in education: school-level panels with variation in AI policy would test which guardrails preserve learning. (7) Mental health: administrative health records linked to AI exposure would test the stress channel with outcomes that self-reports miss. (8) Labour policy and social protection: cross-country variation in training, wage, and social protection responses would show which policies shape the distribution of gains.</p>
+
+  <p>For each topic, the report's datasets provide the starting point: the exposure measures, the survey series, and the experimental results are all open and downloadable, and the replication script reproduces every chart. The methodological message is the same as the substantive one: measure the constructs separately, respect the confounders, and let the evidence accumulate.</p>
+</section>
+<section id="references">
+  <h2>References</h2>
+
+  <div class="ref-section">
+    <h3>Academic Literature</h3>
+    <ol class="ref-list">
+      <li>Autor, D. H. (2015). Why are there still so many jobs? The history and future of workplace automation. <em>Journal of Economic Perspectives</em>, 29(3), 3-30. <a href="https://doi.org/10.1257/jep.29.3.3">https://doi.org/10.1257/jep.29.3.3</a></li>
+      <li>Bastani, H., Bastani, O., Sungu, A., Ge, H., Kabakci, O., and Mariman, R. (2024). Generative AI can harm learning. SSRN Working Paper 4895486; published in <em>Proceedings of the National Academy of Sciences</em> (2025). <a href="https://doi.org/10.2139/ssrn.4895486">https://doi.org/10.2139/ssrn.4895486</a></li>
+      <li>Brown, T. B., Mann, B., Ryder, N., et al. (2020). Language models are few-shot learners. <em>Advances in Neural Information Processing Systems</em>, 33. <a href="https://arxiv.org/abs/2005.14165">https://arxiv.org/abs/2005.14165</a></li>
+      <li>Brynjolfsson, E., Li, D., and Raymond, L. R. (2025). Generative AI at work. <em>The Quarterly Journal of Economics</em>, 140(2), 889-942. <a href="https://doi.org/10.1093/qje/qjae044">https://doi.org/10.1093/qje/qjae044</a></li>
+      <li>Cui, K. Z., Demirer, M., Jaffe, S., Musolff, L., Peng, S., and Salz, T. (2026). The effects of generative AI on high-skilled work: Evidence from three field experiments with software developers. <em>Management Science</em>. <a href="https://doi.org/10.1287/mnsc.2025.00535">https://doi.org/10.1287/mnsc.2025.00535</a></li>
+      <li>Dell'Acqua, F., McFowland, E., Mollick, E., Lifshitz-Assaf, H., Kellogg, K., Rajendran, S., Krayer, L., Candelon, F., and Lakhani, K. (2023). Navigating the jagged technological frontier: Field experimental evidence of the effects of AI on knowledge worker productivity and quality. Harvard Business School Working Paper 24-013. <a href="https://ssrn.com/abstract=4573321">https://ssrn.com/abstract=4573321</a></li>
+      <li>Devlin, J., Chang, M.-W., Lee, K., and Toutanova, K. (2019). BERT: Pre-training of deep bidirectional transformers for language understanding. <em>Proceedings of NAACL-HLT</em>. <a href="https://arxiv.org/abs/1810.04805">https://arxiv.org/abs/1810.04805</a></li>
+      <li>Diener, E., Ng, W., Harter, J., and Arora, R. (2010). Wealth and happiness across the world: Material prosperity predicts life evaluation, whereas psychosocial prosperity predicts positive feeling. <em>Journal of Personality and Social Psychology</em>, 99(1), 52-61. <a href="https://doi.org/10.1037/a0018066">https://doi.org/10.1037/a0018066</a></li>
+      <li>Felten, E. W., Raj, M., and Seamans, R. (2021). Occupational, industry, and geographic exposure to artificial intelligence: A novel dataset and its potential uses. <em>Strategic Management Journal</em>, 42(12), 2195-2217. <a href="https://doi.org/10.1002/smj.3286">https://doi.org/10.1002/smj.3286</a></li>
+      <li>Frey, C. B., and Osborne, M. A. (2017). The future of employment: How susceptible are jobs to computerisation? <em>Technological Forecasting and Social Change</em>, 114, 254-280. <a href="https://doi.org/10.1016/j.techfore.2016.08.019">https://doi.org/10.1016/j.techfore.2016.08.019</a></li>
+      <li>Kahneman, D., and Deaton, A. (2010). High income improves evaluation of life but not emotional well-being. <em>Proceedings of the National Academy of Sciences</em>, 107(38), 16489-16493. <a href="https://doi.org/10.1073/pnas.1011492107">https://doi.org/10.1073/pnas.1011492107</a></li>
+      <li>Noy, S., and Zhang, W. (2023). Experimental evidence on the productivity effects of generative artificial intelligence. <em>Science</em>, 381(6574), 187-192. <a href="https://doi.org/10.1126/science.adh2586">https://doi.org/10.1126/science.adh2586</a></li>
+      <li>Otis, N. G., Clarke, R., Delecourt, S., Holtz, D., and Koning, R. (2024). The uneven impact of generative AI on entrepreneurial performance. Harvard Business School Working Paper 24-042; published in <em>Management Science</em> (2026). <a href="https://doi.org/10.1287/mnsc.2024.06909">https://doi.org/10.1287/mnsc.2024.06909</a></li>
+      <li>Peng, S., Kalliamvakou, E., Cihon, P., and Demirer, M. (2023). The impact of AI on developer productivity: Evidence from GitHub Copilot. arXiv:2302.06590. <a href="https://arxiv.org/abs/2302.06590">https://arxiv.org/abs/2302.06590</a></li>
+      <li>Radford, A., Narasimhan, K., Salimans, T., and Sutskever, I. (2018). Improving language understanding by generative pre-training. OpenAI. <a href="https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf">https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf</a></li>
+      <li>Vaswani, A., Shazeer, N., Parmar, N., et al. (2017). Attention is all you need. <em>Advances in Neural Information Processing Systems</em>, 30. <a href="https://arxiv.org/abs/1706.03762">https://arxiv.org/abs/1706.03762</a></li>
+      <li>Webb, M. (2020). The impact of artificial intelligence on the labor market. Working paper, Stanford University. <a href="https://www.michaelwebb.co/webb_ai.pdf">https://www.michaelwebb.co/webb_ai.pdf</a></li>
+    </ol>
+  </div>
+
+  <div class="ref-section">
+    <h3>Institutional Reports, Surveys, and Data Sources</h3>
+    <ol class="ref-list" start="18">
+      <li>Gallup (2018). Freedom rings in places you might not expect. <a href="https://news.gallup.com/opinion/gallup/235973/freedom-rings-places-not-expect.aspx">https://news.gallup.com/opinion/gallup/235973/freedom-rings-places-not-expect.aspx</a></li>
+      <li>Gallup (2024). Global Emotions 2024: Negative emotions fell globally for the first time since 2014. Gallup World Poll. <a href="https://www.gallup.com/file/analytics/646205/Global%20Emotions%202024%20Report_Global%20Press%20Release.pdf">https://www.gallup.com/file/analytics/646205/Global%20Emotions%202024%20Report_Global%20Press%20Release.pdf</a></li>
+      <li>Gallup (2025). Tracking the world's emotional health. <a href="https://news.gallup.com/poll/695963/tracking-world-emotional-health.aspx">https://news.gallup.com/poll/695963/tracking-world-emotional-health.aspx</a></li>
+      <li>Gallup (2025). Land of the free? Fewer Americans agree. <a href="https://news.gallup.com/poll/660440/land-free-fewer-americans-agree.aspx">https://news.gallup.com/poll/660440/land-free-fewer-americans-agree.aspx</a></li>
+      <li>Gallup (2026). People worldwide more satisfied with their freedom in life. <a href="https://news.gallup.com/poll/710513/people-worldwide-satisfied-freedom-life.aspx">https://news.gallup.com/poll/710513/people-worldwide-satisfied-freedom-life.aspx</a></li>
+      <li>Gallup (2024). State of the Global Workplace 2024. <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx">https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx</a></li>
+      <li>Gallup (2025). State of the Global Workplace 2025. <a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx">https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx</a></li>
+      <li>ILO (2023). Generative AI and jobs: A global analysis of potential effects on job quantity and quality. ILO Working Paper 96. <a href="https://www.ilo.org/publications/generative-ai-and-jobs-global-analysis-potential-effects-job-quantity-and">https://www.ilo.org/publications/generative-ai-and-jobs-global-analysis-potential-effects-job-quantity-and</a></li>
+      <li>ILO (2026). New ILO data confirm women face higher workplace risks from generative AI than men. <a href="https://www.ilo.org/resource/news/new-ilo-data-confirm-women-face-higher-workplace-risks-generative-ai-men">https://www.ilo.org/resource/news/new-ilo-data-confirm-women-face-higher-workplace-risks-generative-ai-men</a></li>
+      <li>IMF (2024). AI will transform the global economy. Let's make sure it benefits humanity. <a href="https://www.imf.org/en/blogs/articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity">https://www.imf.org/en/blogs/articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity</a></li>
+      <li>McKinsey and Company (2024). The state of AI in early 2024: Gen AI adoption spikes and starts to generate value. <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai</a></li>
+      <li>McKinsey and Company (2025). The state of AI in 2025: Agents, innovation, and transformation. <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai">https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai</a></li>
+      <li>Microsoft (2023). Will AI fix work? 2023 Work Trend Index. <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/will-ai-fix-work">https://www.microsoft.com/en-us/worklab/work-trend-index/will-ai-fix-work</a></li>
+      <li>Microsoft (2024). AI at work is here. Now comes the hard part. 2024 Work Trend Index. <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part">https://www.microsoft.com/en-us/worklab/work-trend-index/ai-at-work-is-here-now-comes-the-hard-part</a></li>
+      <li>OECD (2024). Generative AI set to exacerbate regional divide in OECD countries. <a href="https://www.oecd.org/en/about/news/press-releases/2024/11/generative-ai-set-to-exacerbate-regional-divide-in-oecd-countries-says-first-regional-analysis-on-its-impact-on-local-job-markets.html">https://www.oecd.org/en/about/news/press-releases/2024/11/generative-ai-set-to-exacerbate-regional-divide-in-oecd-countries-says-first-regional-analysis-on-its-impact-on-local-job-markets.html</a></li>
+      <li>Pew Research Center (2023). AI in hiring and evaluating workers: What Americans think. <a href="https://www.pewresearch.org/internet/2023/04/20/ai-in-hiring-and-evaluating-workers-what-americans-think/">https://www.pewresearch.org/internet/2023/04/20/ai-in-hiring-and-evaluating-workers-what-americans-think/</a></li>
+      <li>Pew Research Center (2025). 34% of U.S. adults have used ChatGPT, about double the share in 2023. <a href="https://www.pewresearch.org/short-reads/2025/06/25/34-of-us-adults-have-used-chatgpt-about-double-the-share-in-2023/">https://www.pewresearch.org/short-reads/2025/06/25/34-of-us-adults-have-used-chatgpt-about-double-the-share-in-2023/</a></li>
+      <li>Pew Research Center (2025). Workers' views of AI use in the workplace. <a href="https://www.pewresearch.org/social-trends/2025/02/25/workers-views-of-ai-use-in-the-workplace/">https://www.pewresearch.org/social-trends/2025/02/25/workers-views-of-ai-use-in-the-workplace/</a></li>
+      <li>Pew Research Center (2026). Americans and AI. <a href="https://www.pewresearch.org/internet/2026/06/17/americans-and-ai/">https://www.pewresearch.org/internet/2026/06/17/americans-and-ai/</a></li>
+      <li>Stanford Institute for Human-Centered Artificial Intelligence (2025). AI Index Report 2025. <a href="https://hai.stanford.edu/ai-index/2025-ai-index-report">https://hai.stanford.edu/ai-index/2025-ai-index-report</a></li>
+      <li>UBS via CNBC TV18 (2023). ChatGPT sets record for fastest-growing user base, says study. <a href="https://www.cnbctv18.com/technology/chatgpt-sets-record-for-fastest-growing-user-base-says-study-15840751.htm">https://www.cnbctv18.com/technology/chatgpt-sets-record-for-fastest-growing-user-base-says-study-15840751.htm</a></li>
+      <li>World Economic Forum (2023). Future of Jobs Report 2023. <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2023/">https://www.weforum.org/publications/the-future-of-jobs-report-2023/</a></li>
+      <li>World Economic Forum (2025). Future of Jobs Report 2025. <a href="https://www.weforum.org/publications/the-future-of-jobs-report-2025/">https://www.weforum.org/publications/the-future-of-jobs-report-2025/</a></li>
+      <li>World Health Organization (2022). COVID-19 pandemic triggers 25% increase in prevalence of anxiety and depression worldwide. <a href="https://www.who.int/news/item/02-03-2022-covid-19-pandemic-triggers-25-increase-in-prevalence-of-anxiety-and-depression-worldwide">https://www.who.int/news/item/02-03-2022-covid-19-pandemic-triggers-25-increase-in-prevalence-of-anxiety-and-depression-worldwide</a></li>
+      <li>World Happiness Report (2026). Data for Figure 2.1. Wellbeing Research Centre. <a href="https://files.worldhappiness.report/WHR26_Data_Figure_2.1.xlsx">https://files.worldhappiness.report/WHR26_Data_Figure_2.1.xlsx</a></li>
+      <li>Business Insider (2025). OpenAI's ChatGPT has 800 million weekly users. <a href="https://www.businessinsider.com/chatgpt-users-openai-sam-altman-devday-llm-artificial-intelligence-2025-10">https://www.businessinsider.com/chatgpt-users-openai-sam-altman-devday-llm-artificial-intelligence-2025-10</a></li>
+    </ol>
+  </div>
+</section>
+
+<section id="data">
+  <h2>Data Availability</h2>
+
+  <p>All data underlying this research brief are open access and downloadable from this page. Each CSV begins with comment lines documenting variable definitions and sources. A complete methodology document (<a href="data/README_methodology.txt" download>README_methodology.txt</a>) describes sources, compilation methods, and known limitations.</p>
+
+  <p>The <a href="scripts/replicate.py" download>replication script</a> reproduces every chart and statistic in this report. It is written in Python with pinned dependency versions, sets an explicit random seed (42), auto-downloads the publicly available World Happiness Report data file with local caching, and reads the compiled datasets from the data folder. Generated charts are saved to the <code>charts/</code> directory.</p>
+
+  <table>
+    <thead>
+      <tr><th>File</th><th>Description</th><th>Download</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>ai_era_milestones.csv</code></td><td>Major generative AI milestones, 2016 to 2026, with the ChatGPT launch marked as the inflection point</td><td><a href="data/ai_era_milestones.csv" download>CSV</a></td></tr>
+      <tr><td><code>ai_era_life_satisfaction.csv</code></td><td>Cantril ladder life evaluation for the world and four selected economies, 2011 to 2025</td><td><a href="data/ai_era_life_satisfaction.csv" download>CSV</a></td></tr>
+      <tr><td><code>ai_era_affect_indices.csv</code></td><td>Gallup Positive and Negative Experience Indices and population stress share, 2015 to 2024</td><td><a href="data/ai_era_affect_indices.csv" download>CSV</a></td></tr>
+      <tr><td><code>ai_era_freedom_satisfaction.csv</code></td><td>Gallup satisfaction with personal freedom, United States and worldwide, 2015 to 2025</td><td><a href="data/ai_era_freedom_satisfaction.csv" download>CSV</a></td></tr>
+      <tr><td><code>ai_era_stress.csv</code></td><td>Population and workplace daily stress shares, 2017 to 2024</td><td><a href="data/ai_era_stress.csv" download>CSV</a></td></tr>
+      <tr><td><code>ai_era_job_security_perceived.csv</code></td><td>Perceived job security and AI attitudes from Gallup, Microsoft, and Pew surveys</td><td><a href="data/ai_era_job_security_perceived.csv" download>CSV</a></td></tr>
+      <tr><td><code>ai_era_ai_exposure.csv</code></td><td>Employment exposure estimates from ILO, IMF, OECD, and Frey and Osborne</td><td><a href="data/ai_era_ai_exposure.csv" download>CSV</a></td></tr>
+      <tr><td><code>ai_era_ai_adoption_chatgpt.csv</code></td><td>ChatGPT weekly and monthly active user milestones, 2023 to 2025</td><td><a href="data/ai_era_ai_adoption_chatgpt.csv" download>CSV</a></td></tr>
+      <tr><td><code>ai_era_ai_adoption_pew.csv</code></td><td>US adult ChatGPT usage by year and age group (Pew Research Center)</td><td><a href="data/ai_era_ai_adoption_pew.csv" download>CSV</a></td></tr>
+      <tr><td><code>ai_era_ai_adoption_orgs.csv</code></td><td>Organisational AI and generative AI adoption, 2023 to 2025 (McKinsey)</td><td><a href="data/ai_era_ai_adoption_orgs.csv" download>CSV</a></td></tr>
+      <tr><td><code>ai_era_distribution.csv</code></td><td>AI usage and exposure by age, gender, income group, and geography</td><td><a href="data/ai_era_distribution.csv" download>CSV</a></td></tr>
+      <tr><td><code>ai_era_productivity_evidence.csv</code></td><td>Experimental productivity effects by study, outcome, and skill group</td><td><a href="data/ai_era_productivity_evidence.csv" download>CSV</a></td></tr>
+      <tr><td><code>ai_era_job_transformation.csv</code></td><td>World Economic Forum job creation and displacement projections</td><td><a href="data/ai_era_job_transformation.csv" download>CSV</a></td></tr>
+      <tr><td><code>ai_era_learning_evidence.csv</code></td><td>Bastani et al. experiment on generative AI and learning</td><td><a href="data/ai_era_learning_evidence.csv" download>CSV</a></td></tr>
+      <tr><td><code>ai_era_research_opportunities.csv</code></td><td>Research opportunity scores used for Figure 14 (author assessment)</td><td><a href="data/ai_era_research_opportunities.csv" download>CSV</a></td></tr>
+      <tr><td><code>README_methodology.txt</code></td><td>Complete data and methodology documentation</td><td><a href="data/README_methodology.txt" download>TXT</a></td></tr>
+    </tbody>
+  </table>
+
+  <p>These data are provided for academic research use with appropriate citation. If you use them, please cite: Zhang, Y. (2026). Generative AI and Everyday Life: Wellbeing, Work, and Skills Before and After ChatGPT (2015-2026). Research Brief, Auckland University of Technology. Available at: <a href="https://zhangyuqian.com/ai-era-daily-life/">https://zhangyuqian.com/ai-era-daily-life/</a>.</p>
+</section>
+
+</div>
+<footer>
+  <p>Research Brief | Dr Yuqian Zhang | Auckland University of Technology | 23 August 2026</p>
+</footer>
+
+<!-- ECHARTS JAVASCRIPT -->
+
+<div class="footer-nav">
+<a href="../../reports.html">Back to Reports</a>
+<a href="../../insights.html">Back to Insights</a>
+</div>
+</div>
+<script src="./_shared/js/echarts.min.js"></script>
+<script>
+window.__bmPalette = (function(){var s=getComputedStyle(document.documentElement);return {accent:s.getPropertyValue("--accent").trim(),gold:s.getPropertyValue("--accent2").trim(),muted:s.getPropertyValue("--muted").trim(),rule:s.getPropertyValue("--rule").trim(),ink:s.getPropertyValue("--ink").trim(),bg2:s.getPropertyValue("--bg2").trim(),teal:"#3d6b5b",green:"#2f6b4f",red:"#a33b2f"};})();
+</script>
+<script>
+window._echartsReady = true;
+(function() {
+  // Figure 1: Milestones timeline
+  var c1 = echarts.init(document.getElementById('chart-timeline'));
+  c1.setOption({
+    tooltip: { trigger: 'item', formatter: function(p) { return p.data[2] + '<br/>' + p.data[0]; } },
+    grid: { left: 220, containLabel: true, right: 40, top: 40, bottom: 40 },
+    xAxis: { type: 'time', axisLabel: { fontSize: 11 } },
+    yAxis: { type: 'category', axisLabel: { fontSize: 10 },
+      data: ['EU AI Act general obligations apply','ChatGPT reaches 800M weekly users','ChatGPT on track for 700M weekly users','ChatGPT reaches 500M weekly users','ChatGPT reaches 400M weekly users','DeepSeek releases R1','Nobel prizes recognise AI research','ChatGPT reaches 200M weekly users','EU AI Act enters into force','OpenAI releases GPT-4o','EU institutions agree the AI Act','ChatGPT reaches 100M weekly users','Google releases Bard','OpenAI releases GPT-4','Microsoft launches AI-powered Bing','ChatGPT launches','Stable Diffusion released','GitHub Copilot generally available','OpenAI releases DALL-E','OpenAI releases GPT-3','OpenAI releases GPT-2','Google releases BERT','OpenAI releases GPT-1','Transformer paper published','AlphaGo defeats Lee Sedol'] },
+    series: [{
+      type: 'scatter', symbolSize: 13,
+      data: [
+        ['2016-03-15','AlphaGo defeats Lee Sedol','AlphaGo defeats Lee Sedol'],['2017-06-12','Transformer paper published','Transformer paper published'],
+        ['2018-06-11','OpenAI releases GPT-1','OpenAI releases GPT-1'],['2018-10-11','Google releases BERT','Google releases BERT'],
+        ['2019-02-14','OpenAI releases GPT-2','OpenAI releases GPT-2'],['2020-06-11','OpenAI releases GPT-3','OpenAI releases GPT-3'],
+        ['2021-01-05','OpenAI releases DALL-E','OpenAI releases DALL-E'],['2022-06-21','GitHub Copilot generally available','GitHub Copilot generally available'],
+        ['2022-08-22','Stable Diffusion released','Stable Diffusion released'],['2022-11-30','ChatGPT launches','ChatGPT launches'],
+        ['2023-02-07','Microsoft launches AI-powered Bing','Microsoft launches AI-powered Bing'],['2023-03-14','OpenAI releases GPT-4','OpenAI releases GPT-4'],
+        ['2023-03-21','Google releases Bard','Google releases Bard'],['2023-11-06','ChatGPT reaches 100M weekly users','ChatGPT reaches 100M weekly users'],
+        ['2023-12-08','EU institutions agree the AI Act','EU institutions agree the AI Act'],['2024-05-13','OpenAI releases GPT-4o','OpenAI releases GPT-4o'],
+        ['2024-08-01','EU AI Act enters into force','EU AI Act enters into force'],['2024-08-29','ChatGPT reaches 200M weekly users','ChatGPT reaches 200M weekly users'],
+        ['2024-10-08','Nobel prizes recognise AI research','Nobel prizes recognise AI research'],['2025-01-20','DeepSeek releases R1','DeepSeek releases R1'],
+        ['2025-02-20','ChatGPT reaches 400M weekly users','ChatGPT reaches 400M weekly users'],['2025-03-31','ChatGPT reaches 500M weekly users','ChatGPT reaches 500M weekly users'],
+        ['2025-08-04','ChatGPT on track for 700M weekly users','ChatGPT on track for 700M weekly users'],['2025-10-07','ChatGPT reaches 800M weekly users','ChatGPT reaches 800M weekly users'],
+        ['2026-08-02','EU AI Act general obligations apply','EU AI Act general obligations apply']
+      ].map(function(d) { return [d[0], d[1], d[2]]; }),
+      itemStyle: { color: '#1e3a5f' },
+      markLine: {
+        silent: true, symbol: 'none',
+        lineStyle: { color: '#c0392b', type: 'dashed' },
+        label: { formatter: 'ChatGPT launch', color: '#c0392b', fontSize: 11, position: 'end' },
+        data: [{ xAxis: '2022-11-30' }]
+      }
+    }]
+  });
+  window.addEventListener('resize', function() { c1.resize(); });
+})();
+
+(function() {
+  // Figure 2: Life evaluation
+  var years = ['2011','2012','2014','2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'];
+  var c2 = echarts.init(document.getElementById('chart-life-ladder'));
+  c2.setOption({
+    tooltip: { trigger: 'axis' },
+    legend: { data: ['World mean','United States','United Kingdom','Japan','Australia'], top: 0, textStyle: { fontSize: 10 } },
+    grid: { left: 50, containLabel: true, right: 30, top: 45, bottom: 35 },
+    xAxis: { type: 'category', data: years, axisLabel: { fontSize: 10 } },
+    yAxis: { type: 'value', name: 'Cantril ladder (0-10)', min: 3.5, max: 7.8, axisLabel: { fontSize: 10 } },
+    series: [
+      { name: 'World mean', type: 'line', data: [5.392,5.419,5.376,5.382,5.354,5.376,5.407,5.473,5.533,5.554,5.54,5.528,5.578,5.65], lineStyle: { color: '#1e3a5f', width: 3 }, itemStyle: { color: '#1e3a5f' }, symbolSize: 6,
+        markLine: { silent: true, symbol: 'none', lineStyle: { color: '#c0392b', type: 'dashed' }, label: { formatter: 'Nov 2022', color: '#c0392b', fontSize: 10, position: 'end' }, data: [{ xAxis: '2022' }] } },
+      { name: 'United States', type: 'line', data: [7.27,7.082,7.119,7.104,6.993,6.886,6.892,6.94,6.951,6.977,6.894,6.725,6.724,6.816], lineStyle: { color: '#c0392b', width: 1.8 }, itemStyle: { color: '#c0392b' }, symbolSize: 4 },
+      { name: 'United Kingdom', type: 'line', data: [6.936,6.883,6.867,6.725,6.714,6.814,7.054,7.165,7.064,6.943,6.796,6.749,6.728,6.694], lineStyle: { color: '#27ae60', width: 1.8 }, itemStyle: { color: '#27ae60' }, symbolSize: 4 },
+      { name: 'Japan', type: 'line', data: [6.059,6.064,5.987,5.921,5.92,5.915,5.886,5.871,5.94,6.039,6.129,6.06,6.147,6.13], lineStyle: { color: '#f39c12', width: 1.8 }, itemStyle: { color: '#f39c12' }, symbolSize: 4 },
+      { name: 'Australia', type: 'line', data: [7.345,7.35,7.284,7.313,7.284,7.272,7.228,7.223,7.183,7.162,7.095,7.057,6.974,6.916], lineStyle: { color: '#3b6e9e', width: 1.8 }, itemStyle: { color: '#3b6e9e' }, symbolSize: 4 }
+    ]
+  });
+  window.addEventListener('resize', function() { c2.resize(); });
+})();
+
+(function() {
+  // Figure 3: Affect indices
+  var years = ['2015','2016','2017','2018','2019','2020','2021','2022','2023','2024'];
+  var c3 = echarts.init(document.getElementById('chart-affect'));
+  c3.setOption({
+    tooltip: { trigger: 'axis' },
+    legend: { data: ['Positive Experience Index','Negative Experience Index'], top: 0, textStyle: { fontSize: 10 } },
+    grid: { left: 50, containLabel: true, right: 30, top: 45, bottom: 35 },
+    xAxis: { type: 'category', data: years, axisLabel: { fontSize: 10 } },
+    yAxis: { type: 'value', min: 20, max: 80, axisLabel: { fontSize: 10 } },
+    series: [
+      { name: 'Positive Experience Index', type: 'line', data: [71,70,69,71,71,71,69,70,71,72], lineStyle: { color: '#27ae60', width: 2.8 }, itemStyle: { color: '#27ae60' }, symbolSize: 7,
+        markLine: { silent: true, symbol: 'none', lineStyle: { color: '#c0392b', type: 'dashed' }, label: { formatter: 'Nov 2022', color: '#c0392b', fontSize: 10, position: 'end' }, data: [{ xAxis: '2022' }] } },
+      { name: 'Negative Experience Index', type: 'line', data: [null,28,30,30,31,32,33,33,31,31], lineStyle: { color: '#c0392b', width: 2.8 }, itemStyle: { color: '#c0392b' }, symbolSize: 7 }
+    ]
+  });
+  window.addEventListener('resize', function() { c3.resize(); });
+})();
+
+(function() {
+  // Figure 4: Freedom satisfaction
+  var years = ['2015','2016','2017','2018','2019','2020','2021','2022','2023','2024','2025'];
+  var c4 = echarts.init(document.getElementById('chart-freedom'));
+  c4.setOption({
+    tooltip: { trigger: 'axis' },
+    legend: { data: ['World median/average','US women'], top: 0, textStyle: { fontSize: 10 } },
+    grid: { left: 50, containLabel: true, right: 30, top: 45, bottom: 35 },
+    xAxis: { type: 'category', data: years, axisLabel: { fontSize: 10 } },
+    yAxis: { type: 'value', min: 50, max: 100, axisLabel: { formatter: '{value}%', fontSize: 10 } },
+    series: [
+      { name: 'World median/average', type: 'bar', barMaxWidth: 28,
+        data: [null,null,80,null,null,null,null,null,null,81,82],
+        itemStyle: { color: '#7ba3cc' },
+        label: { show: true, position: 'top', fontSize: 10, formatter: '{c}%' } },
+      { name: 'US women', type: 'line', data: [86,80,88,81,82,82,81,71,69,66,null],
+        lineStyle: { color: '#1e3a5f', width: 2.6 }, itemStyle: { color: '#1e3a5f' }, symbolSize: 7,
+        markLine: { silent: true, symbol: 'none', lineStyle: { color: '#c0392b', type: 'dashed' }, label: { formatter: 'Nov 2022', color: '#c0392b', fontSize: 10, position: 'end' }, data: [{ xAxis: '2022' }] } }
+    ]
+  });
+  window.addEventListener('resize', function() { c4.resize(); });
+})();
+
+(function() {
+  // Figure 5: Stress
+  var years = ['2017','2018','2019','2020','2021','2022','2023','2024'];
+  var c5 = echarts.init(document.getElementById('chart-stress'));
+  c5.setOption({
+    tooltip: { trigger: 'axis' },
+    legend: { data: ['All adults (population)','Employees (workplace)'], top: 0, textStyle: { fontSize: 10 } },
+    grid: { left: 50, containLabel: true, right: 30, top: 45, bottom: 35 },
+    xAxis: { type: 'category', data: years, axisLabel: { fontSize: 10 } },
+    yAxis: { type: 'value', min: 30, max: 50, axisLabel: { formatter: '{value}%', fontSize: 10 } },
+    series: [
+      { name: 'All adults (population)', type: 'line', data: [37,35,35,40,41,40,37,37], lineStyle: { color: '#3b6e9e', width: 2.6 }, itemStyle: { color: '#3b6e9e' }, symbolSize: 7,
+        markLine: { silent: true, symbol: 'none', lineStyle: { color: '#c0392b', type: 'dashed' }, label: { formatter: 'Nov 2022', color: '#c0392b', fontSize: 10, position: 'end' }, data: [{ xAxis: '2022' }] } },
+      { name: 'Employees (workplace)', type: 'line', data: [null,null,38,43,44,44,41,41], lineStyle: { color: '#c0392b', width: 2.6 }, itemStyle: { color: '#c0392b' }, symbolSize: 7 }
+    ]
+  });
+  window.addEventListener('resize', function() { c5.resize(); });
+})();
+
+(function() {
+  // Figure 12a: ChatGPT weekly users
+  var c6a = echarts.init(document.getElementById('chart-chatgpt-users'));
+  c6a.setOption({
+    tooltip: { trigger: 'axis', formatter: function(p) { return p[0].axisValue + '<br/>' + p[0].value + ' million'; } },
+    grid: { left: 60, containLabel: true, right: 30, top: 40, bottom: 40 },
+    xAxis: { type: 'time', axisLabel: { fontSize: 10 } },
+    yAxis: { type: 'value', name: 'Millions', axisLabel: { fontSize: 10 } },
+    series: [{
+      type: 'line', smooth: true, symbolSize: 9, areaStyle: { color: 'rgba(30,58,95,0.2)' },
+      data: [['2023-11-06',100],['2024-08-29',200],['2025-02-20',400],['2025-03-31',500],['2025-08-04',700],['2025-10-07',800]],
+      lineStyle: { color: '#1e3a5f', width: 2.8 }, itemStyle: { color: '#1e3a5f' },
+      label: { show: true, position: 'top', fontSize: 10, formatter: '{c}M' }
+    }]
+  });
+  window.addEventListener('resize', function() { c6a.resize(); });
+})();
+
+(function() {
+  // Figure 12b: Pew ChatGPT usage
+  var c6b = echarts.init(document.getElementById('chart-pew-usage'));
+  c6b.setOption({
+    tooltip: { trigger: 'axis', formatter: '{b}: {c}%' },
+    grid: { left: 50, containLabel: true, right: 30, top: 40, bottom: 35 },
+    xAxis: { type: 'category', data: ['2023','2024','2025','2026'], axisLabel: { fontSize: 10 } },
+    yAxis: { type: 'value', max: 55, axisLabel: { formatter: '{value}%', fontSize: 10 } },
+    series: [{
+      type: 'bar', data: [18,23,34,44], barMaxWidth: 44, itemStyle: { color: '#3b6e9e' },
+      label: { show: true, position: 'top', fontSize: 10, formatter: '{c}%' }
+    }]
+  });
+  window.addEventListener('resize', function() { c6b.resize(); });
+})();
+
+(function() {
+  // Figure 13: Organisational adoption
+  var c7 = echarts.init(document.getElementById('chart-org-adoption'));
+  c7.setOption({
+    tooltip: { trigger: 'axis', formatter: '{b}: {c}%' },
+    legend: { data: ['AI in at least one function','Generative AI regularly'], top: 0, textStyle: { fontSize: 10 } },
+    grid: { left: 50, containLabel: true, right: 30, top: 45, bottom: 35 },
+    xAxis: { type: 'category', data: ['2023','2024','2025'], axisLabel: { fontSize: 10 } },
+    yAxis: { type: 'value', max: 100, axisLabel: { formatter: '{value}%', fontSize: 10 } },
+    series: [
+      { name: 'AI in at least one function', type: 'bar', data: [55,72,88], barMaxWidth: 34, itemStyle: { color: '#1e3a5f' }, label: { show: true, position: 'top', fontSize: 10, formatter: '{c}%' } },
+      { name: 'Generative AI regularly', type: 'bar', data: [33,65,79], barMaxWidth: 34, itemStyle: { color: '#f39c12' }, label: { show: true, position: 'top', fontSize: 10, formatter: '{c}%' } }
+    ]
+  });
+  window.addEventListener('resize', function() { c7.resize(); });
+})();
+
+(function() {
+  // Figure 7: Exposure estimates (horizontal bars)
+  var rows = [
+    'ILO | Low-income: employment highly exposed', 'ILO | Low-income: employment potentially augmented',
+    'ILO | World: male employment potentially automatable', 'ILO | World: clerical tasks highly exposed (approx)',
+    'ILO | World: female employment potentially automatable', 'ILO | High-income: employment highly exposed',
+    'ILO | High-income: employment potentially augmented', 'IMF | Low-income: employment exposed',
+    'IMF | Emerging: employment exposed', 'IMF | World: employment exposed', 'IMF | Advanced: employment exposed',
+    'OECD | Rural: workers currently exposed', 'OECD | Average: workers currently exposed',
+    'OECD | Urban: workers currently exposed', 'OECD | Average: potential exposure', 'Frey and Osborne | US: high risk (2013 estimate)'
+  ];
+  var vals = [0.4,10.4,1.4,24,3.7,5.5,13.4,26,40,40,60,21,26,32,70,47];
+  var c8 = echarts.init(document.getElementById('chart-exposure'));
+  c8.setOption({
+    tooltip: { trigger: 'axis', formatter: '{b}: {c}%' },
+    grid: { left: 300, containLabel: true, right: 50, top: 40, bottom: 30 },
+    xAxis: { type: 'value', max: 80, axisLabel: { formatter: '{value}%', fontSize: 10 } },
+    yAxis: { type: 'category', data: rows, axisLabel: { fontSize: 9.5 } },
+    series: [{
+      type: 'bar', data: vals.map(function(v, i) {
+        var color = '#7f8c8d';
+        if (rows[i].indexOf('ILO') === 0) color = '#1e3a5f';
+        if (rows[i].indexOf('IMF') === 0) color = '#3b6e9e';
+        if (rows[i].indexOf('OECD') === 0) color = '#27ae60';
+        return { value: v, itemStyle: { color: color } };
+      }),
+      barMaxWidth: 16,
+      label: { show: true, position: 'right', fontSize: 9, formatter: '{c}%' }
+    }]
+  });
+  window.addEventListener('resize', function() { c8.resize(); });
+})();
+
+(function() {
+  // Figure 6a: Job worries
+  var c9a = echarts.init(document.getElementById('chart-job-worries'));
+  c9a.setOption({
+    tooltip: { trigger: 'axis', formatter: '{b}: {c}%' },
+    grid: { left: 135, containLabel: true, right: 30, top: 40, bottom: 30 },
+    xAxis: { type: 'value', max: 65, axisLabel: { formatter: '{value}%', fontSize: 10 } },
+    yAxis: { type: 'category', axisLabel: { fontSize: 9.5 },
+      data: ['Pew 2025\n(worried about AI)','Microsoft 2023\n(AI will replace my job)','Gallup 2023\n(tech makes job obsolete)','Gallup 2021\n(tech makes job obsolete)'] },
+    series: [{
+      type: 'bar', data: [52,49,22,15], barMaxWidth: 26,
+      itemStyle: { color: function(p) { return ['#c0392b','#f39c12','#3b6e9e','#7f8c8d'][p.dataIndex]; } },
+      label: { show: true, position: 'right', fontSize: 10, formatter: '{c}%' }
+    }]
+  });
+  window.addEventListener('resize', function() { c9a.resize(); });
+})();
+
+(function() {
+  // Figure 6b: Pew sentiment
+  var c9b = echarts.init(document.getElementById('chart-pew-sentiment'));
+  c9b.setOption({
+    tooltip: { trigger: 'axis', formatter: '{b}: {c}%' },
+    grid: { left: 50, containLabel: true, right: 30, top: 40, bottom: 35 },
+    xAxis: { type: 'category', data: ['Worried','Overwhelmed','Hopeful','Excited'], axisLabel: { fontSize: 10 } },
+    yAxis: { type: 'value', max: 65, axisLabel: { formatter: '{value}%', fontSize: 10 } },
+    series: [{
+      type: 'bar', data: [52,33,36,29], barMaxWidth: 40,
+      itemStyle: { color: function(p) { return ['#c0392b','#f39c12','#27ae60','#3b6e9e'][p.dataIndex]; } },
+      label: { show: true, position: 'top', fontSize: 10, formatter: '{c}%' }
+    }]
+  });
+  window.addEventListener('resize', function() { c9b.resize(); });
+})();
+
+(function() {
+  // Figure 9a: ChatGPT usage by age
+  var c10a = echarts.init(document.getElementById('chart-age-usage'));
+  c10a.setOption({
+    tooltip: { trigger: 'axis', formatter: '{b}: {c}%' },
+    grid: { left: 50, containLabel: true, right: 30, top: 40, bottom: 35 },
+    xAxis: { type: 'category', data: ['18-29','30-49','50-64','65+'], axisLabel: { fontSize: 10 } },
+    yAxis: { type: 'value', max: 70, axisLabel: { formatter: '{value}%', fontSize: 10 } },
+    series: [{
+      type: 'bar', data: [58,41,25,10], barMaxWidth: 44, itemStyle: { color: '#1e3a5f' },
+      label: { show: true, position: 'top', fontSize: 10, formatter: '{c}%' }
+    }]
+  });
+  window.addEventListener('resize', function() { c10a.resize(); });
+})();
+
+(function() {
+  // Figure 9b: Exposure by group
+  var rows = ['Men worldwide\n(ILO 2023)','Women worldwide\n(ILO 2023)','Male-dominated\noccupations (ILO 2026)','Female-dominated\noccupations (ILO 2026)','Rural OECD\nregions (OECD 2024)','Low-income\ncountries (IMF 2024)','Emerging\nmarkets (IMF 2024)','Urban OECD\nregions (OECD 2024)','World (IMF 2024)','Advanced\neconomies (IMF 2024)'];
+  var vals = [1.4,3.7,16,29,21,26,40,32,40,60];
+  var c10b = echarts.init(document.getElementById('chart-exposure-groups'));
+  c10b.setOption({
+    tooltip: { trigger: 'axis', formatter: '{b}: {c}%' },
+    grid: { left: 130, containLabel: true, right: 30, top: 40, bottom: 30 },
+    xAxis: { type: 'value', max: 70, axisLabel: { formatter: '{value}%', fontSize: 10 } },
+    yAxis: { type: 'category', data: rows, axisLabel: { fontSize: 9.5 } },
+    series: [{
+      type: 'bar', data: vals.map(function(v, i) {
+        var color = '#7f8c8d';
+        if (rows[i].indexOf('Women') === 0 || rows[i].indexOf('Female') === 0) color = '#c0392b';
+        if (rows[i].indexOf('Men') === 0 || rows[i].indexOf('Male') === 0) color = '#f39c12';
+        if (rows[i].indexOf('Advanced') === 0) color = '#1e3a5f';
+        if (rows[i].indexOf('Emerging') === 0 || rows[i].indexOf('Low-income') === 0) color = '#3b6e9e';
+        if (rows[i].indexOf('Urban') === 0) color = '#27ae60';
+        if (rows[i].indexOf('Rural') === 0) color = '#27ae60';
+        return { value: v, itemStyle: { color: color } };
+      }),
+      barMaxWidth: 20,
+      label: { show: true, position: 'right', fontSize: 9, formatter: '{c}%' }
+    }]
+  });
+  window.addEventListener('resize', function() { c10b.resize(); });
+})();
+
+(function() {
+  // Figure 10: Productivity evidence
+  var rows = [
+    'Otis et al. (low performers): profits', 'Brynjolfsson et al. (all agents): issues resolved/hr',
+    'Dell\'Acqua et al. (all): tasks completed', 'Dell\'Acqua et al. (above avg): quality',
+    'Cui et al. (all developers): tasks completed', 'Brynjolfsson et al. (novices): issues resolved/hr',
+    'Noy and Zhang (all): quality', 'Noy and Zhang (all): time saved',
+    'Dell\'Acqua et al. (below avg): quality', 'Dell\'Acqua et al. (all): quality',
+    'Dell\'Acqua et al. (all): speed', 'Peng et al. (developers): time saved',
+    'Otis et al. (high performers): profits'
+  ];
+  var vals = [-10,14,12.2,17,26.1,34,18,40,43,40,25.1,55.8,15];
+  var c11 = echarts.init(document.getElementById('chart-productivity'));
+  c11.setOption({
+    tooltip: { trigger: 'axis', formatter: '{b}: {c}%' },
+    grid: { left: 280, containLabel: true, right: 50, top: 40, bottom: 30 },
+    xAxis: { type: 'value', axisLabel: { formatter: '{value}%', fontSize: 10 } },
+    yAxis: { type: 'category', data: rows, axisLabel: { fontSize: 9.5 } },
+    series: [{
+      type: 'bar', data: vals.map(function(v) {
+        return { value: v, itemStyle: { color: v < 0 ? '#c0392b' : '#1e3a5f' } };
+      }),
+      barMaxWidth: 16,
+      label: { show: true, position: 'right', fontSize: 9, formatter: function(p) { return (p.value > 0 ? '+' : '') + p.value + '%'; } }
+    }]
+  });
+  window.addEventListener('resize', function() { c11.resize(); });
+})();
+
+(function() {
+  // Figure 11: Learning evidence
+  var c12 = echarts.init(document.getElementById('chart-learning'));
+  c12.setOption({
+    tooltip: { trigger: 'axis', formatter: '{b}: {c}%' },
+    legend: { data: ['Practice problems with AI access','Exam without AI access'], top: 0, textStyle: { fontSize: 10 } },
+    grid: { left: 60, containLabel: true, right: 30, top: 45, bottom: 35 },
+    xAxis: { type: 'category', data: ['GPT Base (unstructured access)','GPT Tutor (structured prompt)'], axisLabel: { fontSize: 10 } },
+    yAxis: { type: 'value', axisLabel: { formatter: '{value}%', fontSize: 10 } },
+    series: [
+      { name: 'Practice problems with AI access', type: 'bar', data: [48,127], barMaxWidth: 46, itemStyle: { color: '#27ae60' }, label: { show: true, position: 'top', fontSize: 10, formatter: '+{c}%' } },
+      { name: 'Exam without AI access', type: 'bar', data: [-17, null], barMaxWidth: 46, itemStyle: { color: '#c0392b' }, label: { show: true, position: 'bottom', fontSize: 10, formatter: '{c}%' } }
+    ]
+  });
+  window.addEventListener('resize', function() { c12.resize(); });
+})();
+
+(function() {
+  // Figure 8: Job transformation
+  var c13 = echarts.init(document.getElementById('chart-job-transformation'));
+  c13.setOption({
+    tooltip: { trigger: 'axis', formatter: '{b}<br/>{a}: {c} million' },
+    legend: { data: ['Jobs created (projected)','Jobs displaced (projected)','Net change (projected)'], top: 0, textStyle: { fontSize: 10 } },
+    grid: { left: 50, containLabel: true, right: 30, top: 45, bottom: 35 },
+    xAxis: { type: 'category', data: ['WEF 2023 (2023-2027)','WEF 2025 (2025-2030)'], axisLabel: { fontSize: 10 } },
+    yAxis: { type: 'value', axisLabel: { fontSize: 10 } },
+    series: [
+      { name: 'Jobs created (projected)', type: 'bar', data: [69,170], barMaxWidth: 34, itemStyle: { color: '#27ae60' }, label: { show: true, position: 'top', fontSize: 10, formatter: '{c}M' } },
+      { name: 'Jobs displaced (projected)', type: 'bar', data: [83,92], barMaxWidth: 34, itemStyle: { color: '#c0392b' }, label: { show: true, position: 'top', fontSize: 10, formatter: '{c}M' } },
+      { name: 'Net change (projected)', type: 'bar', data: [-14,78], barMaxWidth: 34, itemStyle: { color: '#1e3a5f' }, label: { show: true, position: 'top', fontSize: 10, formatter: '{c}M' } }
+    ]
+  });
+  window.addEventListener('resize', function() { c13.resize(); });
+})();
+
+(function() {
+  // Figure 14: Research opportunities
+  var c14 = echarts.init(document.getElementById('chart-research'));
+  c14.setOption({
+    tooltip: { trigger: 'item', formatter: '{b}' },
+    grid: { left: 60, containLabel: true, right: 40, top: 40, bottom: 40 },
+    xAxis: { type: 'value', name: 'Data availability (0-10)', min: 3, max: 9, axisLabel: { fontSize: 9 } },
+    yAxis: { type: 'value', name: 'Theoretical significance (0-10)', min: 6, max: 11, axisLabel: { fontSize: 9 } },
+    series: [{
+      type: 'scatter', symbolSize: function(d) { return 32; },
+      data: [
+        [6,9,'Causal effects of AI on wellbeing'],[5,8,'Algorithmic management and freedom'],
+        [7,8,'AI and job quality'],[6,10,'Deskilling versus empowerment'],
+        [8,8,'Distributional effects'],[7,9,'AI in education and skill formation'],
+        [5,7,'Mental health and AI stress'],[4,7,'Labour policy and social protection']
+      ],
+      itemStyle: { color: '#1e3a5f', opacity: 0.75 },
+      label: { show: true, fontSize: 9.5, formatter: function(p) { return p.data[2]; },
+        position: function(pt) { return pt.dataIndex % 2 === 0 ? 'top' : 'bottom'; }, distance: 8 }
+    }]
+  });
+  window.addEventListener('resize', function() { c14.resize(); });
+})();
+</script>
+<script src="../chart-download.js"></script>
+</body>
+</html>

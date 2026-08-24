@@ -124,8 +124,26 @@
         <div class="metric-value">5.3%</div>
         <span class="metric-label">1-Year Fixed Mortgage (2025)</span>
       </div>
-    </section>
-    <p class="metric-note">Sources: BIS (real HPI), OECD (price-to-income), RBNZ (mortgage rates &amp; DTI), Stats NZ (consents &amp; migration). See "About the Data" for methodology.</p>
+    <!-- SYNC-METRIC:ai-era-daily-life -->
+        <div class="metric-item">
+          <div class="metric-value">5.65</div>
+          <span class="metric-label">Global Life Satisfaction, 0-10 (2025)</span>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">72</div>
+          <span class="metric-label">Positive Experience Index (2024)</span>
+        </div>
+<!-- SYNC-METRIC:prompt-literacy-ai-era -->
+        <div class="metric-item">
+          <div class="metric-value">800M</div>
+          <span class="metric-label">ChatGPT Weekly Active Users (Oct 2025)</span>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value">44%</div>
+          <span class="metric-label">US Adults Who Have Used ChatGPT (2026)</span>
+        </div>
+</section>
+    <p class="metric-note">Sources: OECD; CoinMarketCap/CoinGecko; IBM Cost of a Data Breach; Stats NZ International Travel; OpenAI announcements; Pew Research Center.</p>
 
     <!-- About the Data -->
     <div class="accordion">
@@ -418,7 +436,37 @@
           <a href="reports/nz-tourism-nowcasting/data/nz_tourism_arrivals_annual.csv" download class="btn btn-secondary btn-sm csv-link">Download CSV</a>
         </div>
       </div>
-    </div>
+    <!-- SYNC-PANEL:ai-era-daily-life -->
+      <h3 class="chart-heading chart-heading--spaced">Global Life Satisfaction Before and After ChatGPT</h3>
+      <p class="caption">Cantril ladder life evaluation, unweighted world mean (0-10). Source: World Happiness Report 2026 (Gallup World Poll data). The rise is concentrated in 2020-2021, before ChatGPT; the post-2022 path is broadly flat.</p>
+      <div id="chart-life-satisfaction" class="chart-box chart-md" role="img" aria-label="Line chart of global life satisfaction from 2011 to 2025"></div>
+      <div class="accordion">
+        <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-life-satisfaction-table">
+          <span class="accordion-title accordion-title--sm">View Data Table</span>
+          <span class="accordion-icon">&#9660;</span>
+        </button>
+        <div id="accordion-life-satisfaction-table" class="accordion-content">
+          <div id="life-satisfaction-table" class="data-table-wrap"></div>
+          <a href="reports/ai-era-daily-life/data/ai_era_life_satisfaction.csv" download class="btn btn-secondary btn-sm csv-link">Download CSV</a>
+        </div>
+      </div>
+
+<!-- SYNC-PANEL:prompt-literacy-ai-era -->
+      <h3 class="chart-heading chart-heading--spaced">ChatGPT Weekly Active Users</h3>
+      <p class="caption">Weekly active users in millions, from OpenAI announcements and reported figures, November 2023 to October 2025.</p>
+      <div id="chart-chatgpt-weekly" class="chart-box chart-md" role="img" aria-label="Line chart of ChatGPT weekly active users from November 2023 to October 2025"></div>
+      <div class="accordion">
+        <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-chatgpt-weekly-table">
+          <span class="accordion-title accordion-title--sm">View Data Table</span>
+          <span class="accordion-icon">&#9660;</span>
+        </button>
+        <div id="accordion-chatgpt-weekly-table" class="accordion-content">
+          <div id="chatgpt-weekly-table" class="data-table-wrap"></div>
+          <a href="reports/prompt-literacy-ai-era/data/chatgpt_weekly_users.csv" download class="btn btn-secondary btn-sm csv-link">Download CSV</a>
+        </div>
+      </div>
+
+</div>
 
         <!-- Related Research -->
         <section class="section" style="padding-top:var(--space-16);">
@@ -444,7 +492,19 @@
               <p>Entity choice, deductions, provisional tax, and the incentives Parliament has deliberately provided.</p>
               <a href="reports/nz-tax-optimisation/" class="inline-link">Read the report &rarr;</a>
             </div>
-          </div>
+          <!-- SYNC-CARD:ai-era-daily-life -->
+            <div class="card">
+              <h4>Generative AI and Everyday Life</h4>
+              <p>Wellbeing, work, and skills before and after ChatGPT, with 14 charts and 15 downloadable datasets.</p>
+              <a href="reports/ai-era-daily-life/" class="inline-link">Read the report &rarr;</a>
+            </div>
+<!-- SYNC-CARD:prompt-literacy-ai-era -->
+            <div class="card">
+              <h4>Prompt Literacy in the AI Era</h4>
+              <p>The value, measurement, and accounting implications of effective human-AI conversation, with 12 charts and 13 downloadable datasets.</p>
+              <a href="reports/prompt-literacy-ai-era/" class="inline-link">Read the report &rarr;</a>
+            </div>
+</div>
 
           <div class="section-link-row" style="text-align:center;margin-top:var(--space-10);">
             <a href="reports.html" class="inline-link">Browse the full research library &rarr;</a>

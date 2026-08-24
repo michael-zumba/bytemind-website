@@ -467,4 +467,32 @@ document.addEventListener('DOMContentLoaded', function () {
         tourYears.map(function (y, i) {
             return [y, tourArrivals[i], y === '2026' ? 'Partial year (Jan-Apr)' : ''];
         }));
+
+    // ==== SYNC: ai-era-daily-life ====
+    var v_chart_life_satisfaction_years = ["2011", "2012", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"];
+    var v_chart_life_satisfaction_values = [5.392, 5.419, 5.376, 5.382, 5.354, 5.376, 5.407, 5.473, 5.533, 5.554, 5.54, 5.528, 5.578, 5.65];
+    setOption('chart-life-satisfaction', {
+        tooltip: lineTooltip(),
+        legend: { data: ['Global mean (0-10)'], top: 0, textStyle: { color: muted } },
+        grid: { left: 56, right: 24, top: 44, bottom: 40 },
+        xAxis: catAxis(v_chart_life_satisfaction_years),
+        yAxis: valAxis('Cantril ladder (0-10)'),
+        color: [accent2],
+        series: [{ name: 'Global mean (0-10)', type: 'line', data: v_chart_life_satisfaction_values, smooth: true, lineStyle: { width: 2.5 }, symbol: 'circle', symbolSize: 5 }]
+    });
+    renderTable('life-satisfaction-table', ["Year", "Global Mean (0-10)", "Countries"], [["2011", "5.392", "156"], ["2012", "5.419", "156"], ["2014", "5.376", "158"], ["2015", "5.382", "157"], ["2016", "5.354", "155"], ["2017", "5.376", "156"], ["2018", "5.407", "156"], ["2019", "5.473", "153"], ["2020", "5.533", "149"], ["2021", "5.554", "146"], ["2022", "5.54", "137"], ["2023", "5.528", "143"], ["2024", "5.578", "147"], ["2025", "5.65", "147"]]);
+
+    // ==== SYNC: prompt-literacy-ai-era ====
+    var v_chart_chatgpt_weekly_years = ["Nov 2023", "Aug 2024", "Aug 2025", "Oct 2025"];
+    var v_chart_chatgpt_weekly_values = [100, 200, 700, 800];
+    setOption('chart-chatgpt-weekly', {
+        tooltip: lineTooltip(),
+        legend: { data: ['Weekly active users (millions)'], top: 0, textStyle: { color: muted } },
+        grid: { left: 56, right: 24, top: 44, bottom: 40 },
+        xAxis: catAxis(v_chart_chatgpt_weekly_years),
+        yAxis: valAxis('Users (millions)'),
+        color: [accent2],
+        series: [{ name: 'Weekly active users (millions)', type: 'line', data: v_chart_chatgpt_weekly_values, smooth: true, lineStyle: { width: 2.5 }, symbol: 'circle', symbolSize: 5 }]
+    });
+    renderTable('chatgpt-weekly-table', ["Date", "Weekly Active Users (M)", "Note"], [["2023-11-06", "100", "Announced at OpenAI DevDay"], ["2024-08-29", "200", "Reported via Axios"], ["2025-08-04", "700", "On track to 700 million"], ["2025-10-06", "800", "Announced at DevDay"]]);
 });

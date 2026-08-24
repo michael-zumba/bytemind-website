@@ -70,7 +70,43 @@ Research reports are deep analytical briefs (HTML format, with interactive chart
 *   **Supply & Demographics:** Update `data/nz_supply_demographics.csv` (building consents, net migration).
 *   **International Comparison:** Update `data/international_comparison.csv`.
 
-### 4. Modifying Design
+### 4. Automated Sync from the Personal Website
+
+Research briefs published on the personal website
+(`~/Python Projects/Personal/Personal website/public/reports/<slug>/`) can be
+synced here automatically. The sync script converts each report into the
+ByteMind format, registers it in the manifests, generates an Insights summary
+post, and updates the Indices page panels and sitemap.
+
+```bash
+python3 scripts/sync_from_personal.py            # sync new/updated reports
+python3 scripts/sync_from_personal.py --dry-run  # preview without changes
+```
+
+How it decides what to sync:
+*   A report is new if `reports/<slug>/index.html` does not exist yet.
+*   A report is updated if the fingerprint of the personal report folder
+    (all files, sizes, and mtimes) differs from `reports/.sync-state.json`.
+*   Reports already published on ByteMind are baselined on first run and only
+    re-converted when the personal source changes.
+
+What the script touches:
+*   `reports/<slug>/` — converted `index.html` (ByteMind design system,
+    self-hosted fonts/echarts, Key Terms callout, footer navigation),
+    copied `charts/`, `data/`, `scripts/`, `summary.html`, and `_shared/`.
+*   `reports/manifest.json` — Reports page entry.
+*   `posts/<date>-<slug>.md` + `posts/manifest.json` — Insights page entry.
+*   `indices.html` + `assets/js/indices.js` — research-indicator panels,
+    metric tiles, and "Read the full reports" cards, driven by
+    `reports/.sync-indices.json`.
+*   `sitemap.xml` — new report URLs.
+
+Curated metadata (titles, summaries, topics, Key Terms, and Indices panel
+config) lives in `reports/.sync-meta.json` and `reports/.sync-indices.json`.
+Add an entry there when a report needs a custom summary or indicator panels;
+otherwise the script derives defaults from the report HTML.
+
+### 5. Modifying Design
 *   Edit `assets/style.css`. The site uses a variable-based design system (`:root`) for colors, spacing, and shadows.
 *   Common variables: `--primary`, `--accent`, `--bg-body`.
 

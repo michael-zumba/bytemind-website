@@ -26,6 +26,8 @@ unmodified reports are skipped on subsequent runs.
 
 Usage:
     python3 scripts/sync_from_personal.py [--dry-run]
+    python3 scripts/sync_from_personal.py --force <slug>   # re-convert one report
+    python3 scripts/sync_from_personal.py --force          # re-convert everything
 
 Optional env overrides:
     BYTEMIND_ROOT, PERSONAL_WEBSITE_ROOT
@@ -67,6 +69,10 @@ CHART_DOWNLOAD_CSS = os.path.join(SRC_REPORTS, "chart-download.css")
 INDICES_HTML = os.path.join(BYTEMIND_ROOT, "indices.html")
 INDICES_JS = os.path.join(BYTEMIND_ROOT, "assets", "js", "indices.js")
 SITEMAP_XML = os.path.join(BYTEMIND_ROOT, "sitemap.xml")
+
+# Bump whenever the ByteMind conversion changes so already-synced reports are
+# re-converted once (e.g. when the footer/chrome is improved).
+CONVERTER_VERSION = 2
 
 MONTHS = {
     "january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6,
@@ -246,6 +252,12 @@ def convert_index(src_path, dst_path, slug, meta, css):
     # internal absolute links -> relative links that work inside reports/<slug>/
     content = re.sub(r'href="/%s/' % re.escape(slug), 'href="', content)
     content = content.replace('href="/"', 'href="../../reports.html"')
+    # Personal-site citations should point at the ByteMind live URL.
+    content = content.replace(
+        "https://zhangyuqian.com/%s/" % slug,
+        "https://www.bytemind.co.nz/reports/%s/" % slug,
+    )
+    content = content.replace("zhangyuqian.com", "www.bytemind.co.nz")
 
     # --- Key Terms callout after the executive summary ----------------------------
     key_terms_html = build_key_terms_html(meta.get("key_terms", []))
@@ -552,6 +564,10 @@ def apply_indices(slug, spec):
 
 def main():
     dry_run = "--dry-run" in sys.argv
+    force = None
+    if "--force" in sys.argv:
+        idx = sys.argv.index("--force")
+        force = sys.argv[idx + 1] if idx + 1 < len(sys.argv) else "all"
     reports = discover_reports()
     if not reports:
         log("No reports discovered under %s" % SRC_REPORTS)
@@ -568,19 +584,25 @@ def main():
         dst_dir = os.path.join(DST_REPORTS, slug)
         dst_index = os.path.join(dst_dir, "index.html")
         prev = state.get(slug, {})
-        if prev.get("fingerprint") == fp and os.path.exists(dst_index):
-            log("UP-TO-DATE  %s" % slug)
-            continue
-        if os.path.exists(dst_index) and not state.get(slug):
-            # Report already published on ByteMind but never tracked: baseline it so
-            # only genuinely new/updated reports are re-converted in future runs.
-            state[slug] = {
-                "fingerprint": fp,
-                "synced_at": _dt.datetime.now(_dt.timezone.utc).isoformat(),
-                "baseline": True,
-            }
-            log("BASELINE    %s" % slug)
-            continue
+        if os.path.exists(dst_index):
+            fp_unchanged = prev.get("fingerprint") == fp
+            version_ok = prev.get("converter_version") == CONVERTER_VERSION
+            if fp_unchanged and version_ok:
+                log("UP-TO-DATE  %s" % slug)
+                continue
+            if fp_unchanged and (not state.get(slug) or prev.get("baseline")):
+                if force not in ("all", slug):
+                    # Already published on ByteMind and source unchanged: record the
+                    # current converter version and skip re-conversion. Only new or
+                    # genuinely updated reports (or --force) get re-converted.
+                    state[slug] = {
+                        "fingerprint": fp,
+                        "synced_at": _dt.datetime.now(_dt.timezone.utc).isoformat(),
+                        "converter_version": CONVERTER_VERSION,
+                        "baseline": True,
+                    }
+                    log("BASELINE    %s (converter v%d)" % (slug, CONVERTER_VERSION))
+                    continue
 
         meta = meta_all.get(slug, {})
         log("SYNCING     %s" % slug)
@@ -644,6 +666,7 @@ def main():
         state[slug] = {
             "fingerprint": fp,
             "synced_at": _dt.datetime.now(_dt.timezone.utc).isoformat(),
+            "converter_version": CONVERTER_VERSION,
         }
         synced.append(slug)
 

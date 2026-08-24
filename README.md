@@ -81,6 +81,7 @@ post, and updates the Indices page panels and sitemap.
 ```bash
 python3 scripts/sync_from_personal.py            # sync new/updated reports
 python3 scripts/sync_from_personal.py --dry-run  # preview without changes
+python3 scripts/sync_from_personal.py --force <slug>  # re-convert one report
 ```
 
 How it decides what to sync:

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" class="light">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/logo/favicon-32.png?v=2026">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteTax | ByteMind 出品的免费新西兰税务学习游戏</title>
+    <meta name="description" content="一款免费的新西兰税务学习游戏。七种练习方式，每个答案都能追溯到新西兰税务局，并由机器核对。">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ByteMind Ltd">
+    <meta property="og:title" content="ByteTax | Free New Zealand tax learning game by ByteMind">
+    <meta property="og:description" content="A free learning game for New Zealand tax. Seven ways to practise, every answer traced to Inland Revenue and checked by machine.">
+    <meta property="og:url" content="https://www.bytemind.co.nz/bytetax/">
+    <link rel="canonical" href="https://www.bytemind.co.nz/bytetax/">
+    <link rel="stylesheet" href="../../../colors_and_type.css">
+    <style>
+      /* A few additions only. Everything else comes from colors_and_type.css. */
+      .bt-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 28px; }
+      .bt-format { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 8px; }
+      .bt-format span { border: 1px solid var(--color-border); border-radius: 999px; padding: 7px 16px; font-size: .92rem; }
+      .bt-note { margin-top: 28px; font-size: .95rem; color: var(--color-muted-foreground); }
+      .bt-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+      .bt-card p { margin: 0; color: var(--color-muted-foreground); }
+      .bt-card { border-top: 3px solid var(--color-accent, #1f6f5c); }
+      /* Screenshots of the game, shown at a size that stays readable on a
+         laptop without dominating the page. */
+      .bt-gallery {
+        display: grid; gap: var(--space-8); grid-template-columns: 1fr;
+      }
+      @media (min-width: 760px) { .bt-gallery { grid-template-columns: repeat(2, 1fr); } }
+      .bt-shot { margin: 0; }
+      .bt-shot img {
+        width: 100%; height: auto; display: block; border-radius: var(--radius-lg);
+        border: 1px solid var(--color-border); box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
+        background: #0d1726;
+      }
+      .bt-shot figcaption {
+        margin-top: 10px; font-size: .92rem; color: var(--color-muted-foreground);
+        line-height: 1.5;
+      }
+      .bt-shot figcaption strong {
+        display: block; color: var(--color-foreground, #1a1a1a); font-weight: 600;
+        margin-bottom: 2px;
+      }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">跳到正文</a>
+    <header id="shell-header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="../../index.html" class="logo-link">ByteMind</a>
+                <div class="nav-links" id="nav-links">
+                    <a href="../../index.html">首页</a>
+                    <a href="../../services.html">服务</a>
+                    <a href="../../indices.html">指数</a>
+                    <a href="../../insights.html">观点</a>
+                    <a href="../../reports.html">报告</a>
+                    <a href="../../about.html">关于</a>
+                    <a href="../../contact.html">联系我们</a>
+                </div>
+                <a href="../zh/bytetax/index.html" class="lang-switch" data-dom-id="lang-switch" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+                <button type="button" class="mobile-menu-btn" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+
+    <main id="main-content">
+        <section class="page-hero animate-fade-in-up">
+            <div class="eyebrow">免费 · ByteMind Ltd</div>
+            <div class="accent-bar"></div>
+            <h1>一次一个问题，学会新西兰税务</h1>
+            <p class="hero-intro">ByteTax 是一个简短的学习游戏。选一个主题，回答几道题，再读一读每个答案为什么对。每个答案都链接到它出自的页面。</p>
+            <div class="bt-ctas">
+                <a class="btn btn-primary" href="../play/">玩 ByteTax →</a>
+                <a class="btn btn-secondary" href="#how">怎么用</a>
+            </div>
+            <p class="bt-note">无需账号。离线可用。200 道题，覆盖
+            13 个主题。</p>
+        </section>
+
+        <section class="section" id="how">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">在你信任它之前</div>
+                    <h2>每个答案都标明出处</h2>
+                    <p>税务规则会变。一个悄悄教旧规则的游戏，还不如没有游戏。所以这里把准确性放在第一位。</p>
+                </div>
+                <div class="grid-3">
+                    <div class="card bt-card">
+                        <h3>每个答案都有依据</h3>
+                        <p>每道题都至少对应一个新西兰税务局的页面。证明答案的原话
+                        和题目一起存下来。</p>
+                    </div>
+                    <div class="card bt-card">
+                        <h3>由计算机检查文字</h3>
+                        <p>如果页面变了、措辞挪了位置，这道题就不通过，先搁置，等人工再看一遍。</p>
+                    </div>
+                    <div class="card bt-card">
+                        <h3>每个数字都带日期</h3>
+                        <p>税率从不单独存储。它保留适用的年份，所以 2024 年的税率不会被当作今天的税率使用。</p>
+                    </div>
+                    <div class="card bt-card">
+                        <h3>有法律依据</h3>
+                        <p>关键规则还引用 2007 年所得税法、1985 年商品及服务税法或
+                        1994 年税务管理法。</p>
+                    </div>
+                    <div class="card bt-card">
+                        <h3>说清楚它是什么</h3>
+                        <p>这是一般性信息，不是税务建议。每个页面都会这样说明，
+                        新西兰税务局仍是最终依据。</p>
+                    </div>
+                    <div class="card bt-card">
+                        <h3>数据不离开你的设备</h3>
+                        <p>你的进度保存在你自己的浏览器里。不用账号，不做追踪，
+                        数据不发送到任何地方。</p>
+                    </div>
+                </div>
+                <p class="bt-note">2026 年 9 月 21 日对照新西兰税务局核查。
+                200 道题背后有
+                60 个来源的 120 条事实。</p>
+            </div>
+        </section>
+
+        <section class="section" style="background: var(--color-muted, #f6f5ef);" id="formats">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">七种练习方式</div>
+                    <h2>不是满屏的选择题</h2>
+                    <p>一轮练习会混合多种题型，同一个主题不会以同样的形式出现两次。下面是其中四种的样子。</p>
+                </div>
+                <div class="bt-gallery">
+                    <figure class="bt-shot">
+                        <img src="../../../assets/bytetax/format-quiz.png" alt="="快速测验：选一个答案。你会得到一句理由和来源链接。" loading="lazy" width="880" height="820">
+                        <figcaption><strong>快速测验</strong>选一个答案。你会得到一句理由和一条来源链接。</figcaption>
+                    </figure>
+                    <figure class="bt-shot">
+                        <img src="../../../assets/bytetax/format-card.png" alt="="翻卡：点一下卡片翻面，然后说出你刚才会不会。" loading="lazy" width="880" height="820">
+                        <figcaption><strong>翻转卡片</strong>点一下卡片翻面，然后说出你刚才有没有想起来。</figcaption>
+                    </figure>
+                    <figure class="bt-shot">
+                        <img src="../../../assets/bytetax/format-match.png" alt="="配对：把卡片拖到对应的位置。每张卡片都有编号，你能看到哪张放到了哪里。" loading="lazy" width="880" height="820">
+                        <figcaption><strong>配对</strong>把卡片拖进对应的槽位。每张卡片都有编号，所以你能看到什么放到了哪里。</figcaption>
+                    </figure>
+                    <figure class="bt-shot">
+                        <img src="../../../assets/bytetax/format-sort.png" alt="="分类：把每张卡片拖到它所属的组里。" loading="lazy" width="880" height="820">
+                        <figcaption><strong>分类</strong>把每张卡片拖到它所属的分组里。</figcaption>
+                    </figure>
+                </div>
+                <div class="bt-format">
+                    <span>快速测验</span>
+                    <span>判断对错</span>
+                    <span>场景</span>
+                    <span>翻转卡片</span>
+                    <span>配对</span>
+                    <span>分类</span>
+                    <span>排序</span>
+                </div>
+                <p class="bt-note">13 个主题按 ACCT 862 的进度安排，从税制和税务居民身份，一直到国际税和今年的变化。</p>
+                <div class="bt-ctas" style="justify-content: flex-start;">
+                    <a class="btn btn-primary" href="../play/">开始一轮 →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="who">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">适合谁</div>
+                    <h2>学生，以及任何想复习的人</h2>
+                    <p>为学习新西兰税务课程的会计和税务专业学生做的。想在关键时刻到来之前检验自己掌握程度的人，都能用得上。</p>
+                </div>
+                <p class="bt-note">ByteTax 是关于新西兰税务的一般性信息。它不是
+                税务建议，也不会算出任何人的税单。它涵盖的每条规则都以新西兰税务局为
+                权威依据。由 ByteMind Ltd 开发。版本 0.1.0。</p>
+            </div>
+        </section>
+    </main>
+
+
+    <footer id="shell-footer" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <p class="footer-brand-name">ByteMind Ltd</p>
+                    <p class="footer-brand-desc">为亚太地区的专业服务提供商业分析、数字化转型和战略咨询。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>页面</h4>
+                    <a href="../../services.html">服务</a>
+                    <a href="../../indices.html">指数</a>
+                    <a href="../../insights.html">观点</a>
+                    <a href="../../reports.html">报告</a>
+                    <a href="../../about.html">关于</a>
+                    <a href="../../contact.html">联系我们</a>
+                </div>
+                <div class="footer-col">
+                    <h4>产品</h4>
+                    <a href="../../bytetax/">ByteTax</a>
+                </div>
+                <div class="footer-col">
+                    <h4>连接</h4>
+                    <a href="mailto:bytemind.nz@gmail.com">邮箱</a>
+                    <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/michael-zumba/bytemind-website" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 ByteMind Ltd. 保留所有权利。</div>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+      var button = document.querySelector('.mobile-menu-btn');
+      var links = document.querySelector('.nav-links');
+      if (button && links) {
+        button.addEventListener('click', function () {
+          var open = links.classList.toggle('active');
+          button.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+    })();
+    </script>
+</body>
+</html>

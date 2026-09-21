@@ -199,7 +199,7 @@
             }
 
             if (postsGrid) {
-                fetch('posts/manifest.json')
+                fetch('../posts/manifest.json')
                     .then(response => {
                         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                         return response.json();

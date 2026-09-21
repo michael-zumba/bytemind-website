@@ -117,6 +117,26 @@
     if (grew && levelUpMessage) { pet.setMood("happy", "I grew a ring. " + masteredCount() + " items known."); }
   }
 
+  /** A true, short sentence for Pip to mention while the player works.
+
+      Facts from the module being played come first, so the commentary is
+      relevant rather than random. Every one of these has been sourced and
+      checked; the companion never reads anything else. */
+  function factForPip() {
+    if (!bundle || !bundle.facts) { return ""; }
+    var usable = bundle.facts.filter(function (fact) {
+      var text = fact.statement || "";
+      return text.length > 24 && text.length < 130;
+    });
+    if (!usable.length) { return ""; }
+    var moduleId = state.round && state.round.moduleId;
+    var scoped = moduleId
+      ? usable.filter(function (fact) { return fact.module === moduleId; })
+      : [];
+    var pool = scoped.length ? scoped : usable;
+    return pool[Math.floor(Math.random() * pool.length)].statement;
+  }
+
   /* ------------------------------------------------------------ round logic */
 
   function itemsFor(moduleId) {
@@ -363,6 +383,7 @@
   function renderHome() {
     state.screen = "home";
     state.round = null;
+    if (pet) { pet.stopAmbient(); }
     if (pet) { pet.setMood("idle", ""); }
     screens.pips.hidden = true;
     screens.quit.hidden = true;
@@ -415,6 +436,7 @@
     state.round = { moduleId: moduleId, items: items, index: 0, answers: [], marked: false };
     registerSession();
     bumpStreak();
+    if (pet && !screens.petStage.hidden) { pet.startAmbient(); }
     screens.quit.hidden = false;
     screens.streakChip.hidden = false;
     screens.streak.textContent = progress.streak_days;
@@ -864,6 +886,7 @@
   /* ----------------------------------------------------------------- summary */
 
   function renderAbout() {
+    if (pet) { pet.stopAmbient(); }
     if (pet) { pet.setMood("idle", "Hello."); }
     screens.pips.hidden = true;
     screens.quit.hidden = true;
@@ -879,7 +902,6 @@
       ["Items", String(bundle.items.length)],
       ["Facts behind them", String(bundle.facts.length)],
       ["Inland Revenue sources", String(bundle.sources.length)],
-      ["Modules", bundle.modules.length + ", mapped to the ACCT 862 schedule"],
       ["Content checked against Inland Revenue", bundle.content_checked || bundle.checked_on],
       ["Built", (bundle.built_at || "").slice(0, 10)]
     ];
@@ -923,6 +945,7 @@
 
   function renderSummary() {
     var round = state.round;
+    if (pet) { pet.stopAmbient(); }
     var scored = round.answers.filter(function (answer) { return answer && answer.format !== "card"; });
     var correct = scored.filter(function (answer) { return answer.correct; });
     var panel = el("div", { class: "panel" });
@@ -1016,6 +1039,7 @@
 
   if (pet) {
     pet.mount(screens.petStage);
+    pet.setFactSource(factForPip);
     pet.setLevel(petLevel());
     pet.setMood("idle", "");
     showPet(petWanted());

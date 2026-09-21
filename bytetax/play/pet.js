@@ -1,10 +1,15 @@
 /* Pip, the ByteTax companion.
 
    Drawn as inline SVG rather than a picture so the character stays sharp at any
-   size, adds no download, and can be animated from CSS. Pip has a mood for each
-   moment in a round and grows a ring as the player masters items.
+   size, adds no download, and can be animated from CSS.
 
-   Poses are driven by a class on the wrapper: idle, thinking, happy, encourage,
+   Pip talks. A reaction for every moment in a round, dry asides underneath, a
+   running commentary while you work, and — the useful part — real facts read
+   out of the knowledge base. Every fact Pip mentions is one that has been
+   sourced and checked, so the companion can be chatty without being a
+   liability.
+
+   Poses come from a class on the wrapper: idle, thinking, happy, encourage,
    celebrate. Everything here is switched off under prefers-reduced-motion by
    the stylesheet. */
 
@@ -12,18 +17,92 @@
   "use strict";
 
   var LINES = {
-    thinking: ["Take your time.", "No clock running.", "Read it twice if you like."],
-    happy: ["Nice one.", "That's it.", "Got it.", "Well spotted."],
-    encourage: ["Not yet. Here's why.", "Close. Have a look.", "Worth remembering."],
-    celebrate: ["Round done. Good work.", "That's a solid round."],
-    levelup: ["I grew a ring. Keep going."]
+    idle: [
+      "Ready when you are.",
+      "Pick a topic. Any topic.",
+      "No rush. It's only tax.",
+      "I've been reading the Act. Again.",
+      "Take your time. I'm not going anywhere.",
+      "Eight questions a round. That's the deal."
+    ],
+    thinking: [
+      "Take your time.",
+      "No clock running.",
+      "Read it twice if you like.",
+      "Two of these look right. Only one is.",
+      "Worth a second read.",
+      "This one makes people hesitate.",
+      "Your call. I'm just here for the commentary."
+    ],
+    happy: [
+      "Nice one.",
+      "That's it.",
+      "Got it.",
+      "Clean.",
+      "Yes. Straight to the point.",
+      "Textbook.",
+      "You've done this before.",
+      "Banked."
+    ],
+    encourage: [
+      "Not yet. Here's why.",
+      "Close. Have a look.",
+      "Worth remembering.",
+      "That one catches people.",
+      "No harm done. It comes back tomorrow.",
+      "Wrong today, known tomorrow. That's the job.",
+      "The reason matters more than the guess."
+    ],
+    celebrate: [
+      "Round done. Good work.",
+      "That's a solid round.",
+      "Finished. Go and get a coffee.",
+      "Another round banked.",
+      "Good session. Same time tomorrow?"
+    ]
   };
 
-  var HELLO = [
+  /* Short second lines. They run underneath the main line, so Pip can react and
+     mutter at the same time. */
+  var ASIDES = {
+    idle: ["No pressure.", "Whenever you're ready.", "I'll be here."],
+    thinking: ["(I checked. Twice.)", "Just saying.", "Back to it.", "No pressure."],
+    happy: ["(That never gets old.)", "On to the next.", "Keep going."],
+    encourage: [
+      "(That's from Inland Revenue, not from me.)",
+      "You'll get it next time.",
+      "That's why we practise."
+    ],
+    celebrate: ["(I'm not tired. You might be.)", "Same time tomorrow?"]
+  };
+
+  /* Things Pip says on its own while you work. Dry, short, and never pretending
+     to know more than the material does. */
+  var COMMENTARY = [
+    "Still here. Still not giving hints.",
+    "This is the bit where people guess. Don't guess.",
+    "Some of these rules are older than me.",
+    "No marks for speed.",
+    "Every answer here has a source. I like that about this place.",
+    "If it feels obvious, check it anyway.",
+    "The wrong answers are the ones people actually give.",
+    "I once read the whole Income Tax Act. It is long.",
+    "Being wrong is cheap here. That is the point.",
+    "You are allowed to think.",
+    "Quieter than a lecture theatre, this.",
+    "Nothing you do here is sent anywhere. Relax."
+  ];
+
+  var POKES = [
     "Hello.",
-    "Ready when you are.",
-    "No rush. It's only practice.",
-    "Ask me anything. Well, the questions do the talking."
+    "That tickles.",
+    "I'm a bird of few words. Mostly.",
+    "Careful, I'm load-bearing.",
+    "Still here.",
+    "You found the poke button.",
+    "I don't do tax advice. I do morale.",
+    "Someone's avoiding question four.",
+    "Poke received. Morale unchanged, but appreciated."
   ];
 
   var MARKUP = [
@@ -56,12 +135,25 @@
     ? window.matchMedia("(prefers-reduced-motion: reduce)")
     : { matches: false };
 
+  function pick(list, avoid) {
+    if (!list.length) { return ""; }
+    var fresh = list.filter(function (item) { return item !== avoid; });
+    var pool = fresh.length ? fresh : list;
+    return pool[Math.floor(Math.random() * pool.length)];
+  }
+
   var Pet = {
     root: null,
     bubble: null,
     mood: "idle",
     level: 1,
     timer: null,
+    ambient: null,
+    lastLine: "",
+    recentFacts: [],
+    factSource: null,
+    /** How often Pip speaks unprompted, in milliseconds. */
+    ambientEvery: 26000,
 
     mount: function (container) {
       var wrapper = document.createElement("button");
@@ -83,17 +175,28 @@
       return wrapper;
     },
 
-    /** A small reaction when the player clicks the companion directly. */
-    poke: function () {
-      if (!this.root) { return; }
-      this.setMood("happy", HELLO[Math.floor(Math.random() * HELLO.length)]);
-      this.burst(6);
+    /** Give Pip something true to say: a function returning a short sentence. */
+    setFactSource: function (source) {
+      this.factSource = source;
     },
 
-    say: function (text) {
+    /** The bubble: a main line, and optionally a second line under it. */
+    say: function (text, aside) {
       if (!this.bubble) { return; }
-      this.bubble.textContent = text || "";
-      this.bubble.classList.toggle("is-on", Boolean(text));
+      this.bubble.textContent = "";
+      if (text) {
+        var line = document.createElement("span");
+        line.className = "pet-line";
+        line.textContent = text;
+        this.bubble.appendChild(line);
+      }
+      if (aside) {
+        var second = document.createElement("span");
+        second.className = "pet-aside";
+        second.textContent = aside;
+        this.bubble.appendChild(second);
+      }
+      this.bubble.classList.toggle("is-on", Boolean(text || aside));
     },
 
     /** One of idle, thinking, happy, encourage, celebrate. */
@@ -102,12 +205,13 @@
       this.root.className = "pet pet-" + mood;
       this.mood = mood;
       if (line === false) { return; }
-      var pool = LINES[mood] || [];
-      this.say(line || pool[Math.floor(Math.random() * pool.length)] || "");
+      var says = line || pick(LINES[mood] || [], this.lastLine);
+      this.lastLine = says;
+      this.say(says, pick(ASIDES[mood] || [], ""));
       if (this.timer) { window.clearTimeout(this.timer); }
-      if (mood === "happy" || mood === "encourage" || mood === "levelup") {
+      if (mood === "happy" || mood === "encourage") {
         var self = this;
-        this.timer = window.setTimeout(function () { self.setMood("idle", ""); }, 2200);
+        this.timer = window.setTimeout(function () { self.setMood("idle", ""); }, 2400);
       }
     },
 
@@ -116,7 +220,50 @@
       var grew = level > this.level;
       this.level = level;
       this.root.setAttribute("data-level", String(level));
-      if (grew) { this.setMood("happy", LINES.levelup[0]); }
+      if (grew) { this.setMood("happy", "I grew a ring. That is you, not me."); }
+    },
+
+    /** A short reaction when the player clicks the companion. */
+    poke: function () {
+      if (!this.root) { return; }
+      this.setMood("happy", pick(POKES, this.lastLine));
+      this.burst(6);
+    },
+
+    /** A true sentence from the knowledge base, never the same one twice running. */
+    factLine: function () {
+      if (!this.factSource) { return ""; }
+      var line = "";
+      for (var attempt = 0; attempt < 6; attempt += 1) {
+        line = this.factSource() || "";
+        if (line && this.recentFacts.indexOf(line) === -1) { break; }
+      }
+      if (!line) { return ""; }
+      this.recentFacts.push(line);
+      if (this.recentFacts.length > 8) { this.recentFacts.shift(); }
+      return line;
+    },
+
+    /** Pip's running commentary. It stays quiet unless the bubble is free. */
+    startAmbient: function (every) {
+      var self = this;
+      this.stopAmbient();
+      this.ambient = window.setInterval(function () {
+        if (self.mood !== "idle") { return; }
+        if (Math.random() < 0.34) {
+          var fact = self.factLine();
+          if (fact) { self.say(fact, "Did you know?"); return; }
+        }
+        self.say(pick(COMMENTARY, self.lastLine), "");
+      }, every || this.ambientEvery);
+      return this.ambient;
+    },
+
+    stopAmbient: function () {
+      if (this.ambient) {
+        window.clearInterval(this.ambient);
+        this.ambient = null;
+      }
     },
 
     /** A small burst of sparks, for a right answer. */

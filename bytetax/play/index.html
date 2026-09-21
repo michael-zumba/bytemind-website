@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en-NZ">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ByteTax</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="app">
+  <header class="top">
+    <div class="brand">Byte<b>Tax</b></div>
+    <div class="top-right">
+      <span class="chip" id="streak-chip" hidden>Streak <b id="streak">0</b></span>
+      <button class="ghost" id="toggle-pet" aria-pressed="true">Pip</button>
+      <button class="ghost" id="quit" hidden>End round</button>
+    </div>
+  </header>
+
+  <div class="pips" id="pips" hidden></div>
+
+  <section id="screen" aria-live="polite"></section>
+
+  <div class="pet-stage" id="pet-stage"></div>
+
+  <footer class="foot">
+    General information about New Zealand tax, not tax advice. Inland Revenue is the authority.
+    <span id="checked"></span>
+    <button class="ghost link" id="about">About</button>
+  </footer>
+</main>
+
+<script src="bundle.js"></script>
+<script src="pet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

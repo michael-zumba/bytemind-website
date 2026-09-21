@@ -60,7 +60,7 @@
 </head>
 <body>
 
-    <a href="#main-content" class="skip-link">跳到正文</a>
+    <a href="#main-content" class="skip-link">跳到主要内容</a>
   <!-- Shell Header -->
   <header id="shell-header">
     <nav class="navbar">
@@ -71,11 +71,11 @@
           <a href="index.html" data-dom-id="nav-home">首页</a>
           <a href="services.html" data-dom-id="nav-services">服务</a>
           <a href="indices.html" class="active" aria-current="page" data-dom-id="nav-indices">指数</a>
-          <a href="insights.html" data-dom-id="nav-insights">观点</a>
+          <a href="insights.html" data-dom-id="nav-insights">洞察</a>
           <a href="reports.html" data-dom-id="nav-reports">报告</a>
           <a href="about.html" data-dom-id="nav-about">关于</a>                    <a href="../index.html#products" data-dom-id="nav-products">产品</a>
 
-          <a href="contact.html" data-dom-id="nav-contact">联系我们</a>
+          <a href="contact.html" data-dom-id="nav-contact">联系方式</a>
         </div>
 
         <a href="zh/indices.html" class="lang-switch" data-dom-id="lang-switch" hreflang="zh-Hans" lang="zh-Hans">中文</a>
@@ -102,7 +102,7 @@
     <div class="tabs" id="family-tabs" role="tablist" aria-label="Indicator families">
       <button class="tab-btn active" role="tab" id="fam-housing" aria-selected="true" aria-controls="panel-housing" onclick="openFamily(event, 'housing')">住房市场</button>
       <button class="tab-btn" role="tab" id="fam-tefi" aria-selected="false" aria-controls="panel-tefi" onclick="openFamily(event, 'tefi')">税务效率（TEFI）</button>
-      <button class="tab-btn" role="tab" id="fam-sme" aria-selected="false" aria-controls="panel-sme" onclick="openFamily(event, 'sme')">新西兰中小企业抗压能力</button>
+      <button class="tab-btn" role="tab" id="fam-sme" aria-selected="false" aria-controls="panel-sme" onclick="openFamily(event, 'sme')">新西兰中小企业韧性</button>
       <button class="tab-btn" role="tab" id="fam-research" aria-selected="false" aria-controls="panel-research" onclick="openFamily(event, 'research')">研究指标</button>
     </div>
 
@@ -113,11 +113,11 @@
     <section class="metric-strip" aria-label="Latest housing indicators">
       <div class="metric-item">
         <div class="metric-value">159</div>
-        <span class="metric-label">新西兰实际房价指数 2025（2010=100）</span>
+        <span class="metric-label">新西兰实际房价指数 2025（2010 年 = 100）</span>
       </div>
       <div class="metric-item">
         <div class="metric-value">105.8</div>
-        <span class="metric-label">收入房价比 2025（2015=100）</span>
+        <span class="metric-label">房价收入比 2025（2015=100）</span>
       </div>
       <div class="metric-item">
         <div class="metric-value">+8%</div>
@@ -156,15 +156,15 @@
       </button>
       <div id="accordion-about" class="accordion-content">
         <h4>实际房价指数</h4>
-        <p>来自国际清算银行（BIS）的可比长期序列，基准年为 2010=100，已按通胀调整。新西兰和澳大利亚的数据都从 1970 年开始。</p>
+        <p>国际清算银行（BIS）的可比长期序列，基准年 2010=100，已按通胀调整。新西兰和澳大利亚的数据都从 1970 年开始。</p>
         <p><strong>来源：</strong> 国际清算银行（BIS）住宅物业价格统计，2025 年第三季度发布。</p>
 
         <h4 class="data-subhead">房价收入比</h4>
-        <p>OECD 指标，经季节调整，2015=100。它衡量房价相对于人均可支配收入的水平。长期中位数（1986-2025）是 88.9。</p>
+        <p>OECD 指标，经季节调整，2015=100。它衡量房价相对于人均可支配收入的水平。长期中位数（1986-2025）为 88.9。</p>
         <p><strong>来源：</strong> OECD 可负担住房数据库，指标 HM1.2。</p>
 
-        <h4 class="data-subhead">实际 HPI 与趋势的差距</h4>
-        <p>实际房价偏离长期趋势的程度。正值表示房价高于趋势。</p>
+        <h4 class="data-subhead">实际 HPI 与趋势的偏离</h4>
+        <p>实际房价高于或低于长期趋势的程度。正值表示房价高于趋势。</p>
 
         <h4 class="data-subhead">房贷利率与家庭 DTI</h4>
         <p>1 年期固定房贷利率来自新西兰储备银行（RBNZ）B20 系列。家庭债务与可支配收入的比值来自 RBNZ 关键统计数据。</p>
@@ -186,7 +186,7 @@
 
     <!-- Tab 1: Real House Prices -->
     <div id="hpi" class="tab-content active" role="tabpanel" aria-labelledby="tab-hpi">
-      <h3 class="chart-heading">新西兰与澳大利亚实际房价指数（BIS，2010=100）</h3>
+      <h3 class="chart-heading">新西兰与澳大利亚实际房价指数（BIS，2010 年=100）</h3>
       <p class="caption">实际价格，已按通胀调整。两国在 2000 年前后都出现明显转折。</p>
       <div id="chart-hpi" class="chart-box chart-lg" role="img" aria-label="Line chart of New Zealand and Australia real house price indices from 1970 to 2025"></div>
 
@@ -208,7 +208,7 @@
       <p class="caption">虚线是长期中位数（88.9）。2025 年为 105.8，这一比率偏高，但比 2021 年 142.9 的峰值下降了 26%。</p>
       <div id="chart-pti" class="chart-box chart-md" role="img" aria-label="Chart of New Zealand price-to-income ratio, 2015 equals 100"></div>
 
-      <h3 class="chart-heading chart-heading--spaced">实际 HPI 与长期趋势的差距</h3>
+      <h3 class="chart-heading chart-heading--spaced">实际 HPI 与长期趋势的偏离</h3>
       <p class="caption">高于零，说明价格高于趋势。这个差距已从 2021 年峰值的 +38% 降到约 +8%。</p>
       <div id="chart-deviation" class="chart-box chart-md" role="img" aria-label="Chart of real house price index deviation from its long-run trend"></div>
 
@@ -230,7 +230,7 @@
 
     <!-- Tab 3: Supply & Demographics -->
     <div id="supply" class="tab-content" role="tabpanel" aria-labelledby="tab-supply">
-      <h3 class="chart-heading">建筑许可与净移民（1995-2025）</h3>
+      <h3 class="chart-heading">建筑许可与净移民（1995–2025）</h3>
       <p class="caption">建筑许可（柱状图，单位：千套住宅）与净国际移民（折线，单位：千人）。来源：Stats NZ。</p>
       <div id="chart-supply" class="chart-box chart-lg" role="img" aria-label="Chart of building consents and net migration from 1995 to 2025"></div>
 
@@ -303,7 +303,7 @@
     <!-- 5. NZ SME Resilience Index -->
     <div id="panel-sme" class="family-panel" role="tabpanel" aria-labelledby="fam-sme">
       <h2>新西兰中小企业韧性指数</h2>
-      <p class="panel-intro">用通俗语言为新西兰小企业做健康检查，数据来自新西兰统计局最新的官方数据。指数为抗风险能力打分，从 0（弱）到 100（强）。</p>
+      <p class="panel-intro">用通俗语言为新西兰小企业做健康检查，数据来自新西兰统计局的最新官方数据。指数为抗风险能力打分，从 0（弱）到 100（强）。</p>
 
       <section class="metric-strip" aria-label="SME resilience indicators">
         <div class="metric-item">
@@ -335,8 +335,8 @@
         <div id="accordion-sme-method" class="accordion-content">
           <h4>它衡量什么</h4>
           <p>用最新官方数据，看新西兰中小企业的经济健康状况。</p>
-          <h4 class="data-subhead">构成部分</h4>
-          <p>零售支出趋势（电子卡交易的月度变化，已做季节调整）、企业增长（同比）和就业增长（同比）。</p>
+          <h4 class="data-subhead">组成部分</h4>
+          <p>零售支出趋势（电子卡交易的月度变化，经季节调整）、企业增长（同比）和就业增长（同比）。</p>
           <h4 class="data-subhead">来源</h4>
           <p>新西兰统计局发布的电子卡交易数据（2026 年 1 月）和企业人口统计（2025 年 2 月）。</p>
         </div>
@@ -380,7 +380,7 @@
       <p class="metric-note">来源：OECD；CoinMarketCap/CoinGecko；IBM Cost of a Data Breach；Stats NZ International Travel。完整方法见各报告。</p>
 
       <h3 class="chart-heading">AI 采用率：OECD 企业与麦肯锡调查对比</h3>
-      <p class="caption">OECD 对员工 10 人以上的公司采用严格的采用率定义；麦肯锡的全球调查把任何实际使用都算进去。这个差距说明，怎么测量会影响结论。</p>
+      <p class="caption">OECD 对员工 10 人以上的公司采用严格的采用率定义；麦肯锡的全球调查把任何实际使用都算作采用。这个差距说明，怎么测量会影响结论。</p>
       <div id="chart-ai-adoption" class="chart-box chart-md" role="img" aria-label="Line chart of AI adoption rates from OECD firms and the McKinsey global survey from 2020 to 2025"></div>
 
       <div class="accordion">
@@ -411,7 +411,7 @@
       </div>
 
       <h3 class="chart-heading chart-heading--spaced">全球数据泄露平均成本</h3>
-      <p class="caption">数据泄露的平均总成本，全球和美国，单位：百万美元。来源：IBM《数据泄露成本报告》（2015-2025）。</p>
+      <p class="caption">数据泄露的平均总成本，全球和美国，单位：百万美元。来源：IBM《数据泄露成本报告》（2015—2025）。</p>
       <div id="chart-breach-cost" class="chart-box chart-md" role="img" aria-label="Chart of global and US average data breach costs from 2015 to 2025"></div>
 
       <div class="accordion">
@@ -426,7 +426,7 @@
       </div>
 
       <h3 class="chart-heading chart-heading--spaced">新西兰国际旅客入境人数</h3>
-      <p class="caption">海外访客年度入境人数，来自 Stats NZ。2026 年只有部分月份的数据（仅 1 月至 4 月）。</p>
+      <p class="caption">海外访客年度入境人数，来自 Stats NZ。2026 年数据不完整（仅 1 月至 4 月）。</p>
       <div id="chart-tourism-arrivals" class="chart-box chart-md" role="img" aria-label="Bar chart of annual New Zealand visitor arrivals from 2017 to 2026"></div>
 
       <div class="accordion">
@@ -492,7 +492,7 @@
             </div>
             <div class="card">
               <h4>新西兰中小企业的税务优化</h4>
-              <p>选择哪种实体形式、费用扣除、预缴税，以及议会特意给出的各项激励。</p>
+              <p>选择实体形式、费用扣除、预缴税，以及议会特意给出的各项激励。</p>
               <a href="reports/nz-tax-optimisation/" class="inline-link">阅读报告 →</a>
             </div>
           <!-- SYNC-CARD:ai-era-daily-life -->
@@ -503,7 +503,7 @@
             </div>
 <!-- SYNC-CARD:prompt-literacy-ai-era -->
             <div class="card">
-              <h4>AI 时代的提示词能力</h4>
+              <h4>AI 时代的提示词素养</h4>
               <p>有效的人机对话在价值、衡量方式和会计处理上的影响，含 12 张图表和 13 个可下载数据集。</p>
               <a href="reports/prompt-literacy-ai-era/" class="inline-link">阅读报告 →</a>
             </div>
@@ -528,10 +528,10 @@
           <h4>页面</h4>
           <a href="services.html">服务</a>
           <a href="indices.html">指数</a>
-          <a href="insights.html">观点</a>
+          <a href="insights.html">洞察</a>
           <a href="reports.html">报告</a>
           <a href="about.html">关于</a>
-          <a href="contact.html">联系我们</a>
+          <a href="contact.html">联系方式</a>
         </div>
                 <div class="footer-col">
                     <h4>产品</h4>

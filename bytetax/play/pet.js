@@ -183,17 +183,18 @@
     /** The bubble: a main line, and optionally a second line under it. */
     say: function (text, aside) {
       if (!this.bubble) { return; }
+      var translate = window.bytetaxT || function (value) { return value; };
       this.bubble.textContent = "";
       if (text) {
         var line = document.createElement("span");
         line.className = "pet-line";
-        line.textContent = text;
+        line.textContent = translate(text);
         this.bubble.appendChild(line);
       }
       if (aside) {
         var second = document.createElement("span");
         second.className = "pet-aside";
-        second.textContent = aside;
+        second.textContent = translate(aside);
         this.bubble.appendChild(second);
       }
       this.bubble.classList.toggle("is-on", Boolean(text || aside));

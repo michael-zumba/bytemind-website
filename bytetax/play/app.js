@@ -25,12 +25,37 @@
     checked: document.getElementById("checked"),
     petStage: document.getElementById("pet-stage"),
     togglePet: document.getElementById("toggle-pet"),
+    toggleLang: document.getElementById("toggle-lang"),
     about: document.getElementById("about")
   };
 
   var state = { screen: "home", round: null, moduleId: null };
   var progress = loadProgress();
   var pet = window.ByteTaxPet || null;
+
+  /* ---------------------------------------------------------------- language */
+
+  var LANG_KEY = "bytetax.lang";
+  var ZH = window.BYTETAX_ZH || {};
+  var lang = (function () {
+    // A link can ask for Chinese directly, which is how the Chinese product
+    // page hands over to the game.
+    var asked = /[?&]lang=zh/.test(window.location.search);
+    if (asked) { return "zh"; }
+    try { return window.localStorage.getItem(LANG_KEY) || "en"; } catch (error) { return "en"; }
+  })();
+
+  /** Chinese for a string the app shows, or the string itself.
+
+      Keyed by the English, so if English wording changes the lookup misses and
+      the reader sees English rather than a translation of something that is no
+      longer on screen. */
+  function t(text) {
+    if (lang !== "zh" || typeof text !== "string") { return text; }
+    return ZH[text] || text;
+  }
+
+  window.bytetaxT = t;
 
   /* ---------------------------------------------------------------- storage */
 
@@ -245,7 +270,7 @@
     var node = document.createElement(tag);
     Object.keys(props || {}).forEach(function (key) {
       if (key === "class") { node.className = props[key]; }
-      else if (key === "text") { node.textContent = props[key]; }
+      else if (key === "text") { node.textContent = t(props[key]); }
       else if (key === "html") { node.innerHTML = props[key]; }
       else if (key.indexOf("on") === 0) { node.addEventListener(key.slice(2), props[key]); }
       else if (props[key] === true) { node.setAttribute(key, ""); }
@@ -1054,6 +1079,29 @@
   });
 
   screens.about.addEventListener("click", renderAbout);
+
+  /* The language switch: flip, remember, and redraw whatever is on screen. */
+  function applyLanguage() {
+    document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en-NZ";
+    if (screens.toggleLang) {
+      screens.toggleLang.textContent = lang === "zh" ? "EN" : "中文";
+      screens.toggleLang.setAttribute("lang", lang === "zh" ? "en" : "zh-Hans");
+    }
+    if (screens.checked) {
+      screens.checked.textContent = " " + t("Content checked") + " " + bundle.checked_on + ".";
+    }
+  }
+
+  screens.toggleLang.addEventListener("click", function () {
+    lang = lang === "zh" ? "en" : "zh";
+    try { window.localStorage.setItem(LANG_KEY, lang); } catch (error) { /* fine */ }
+    applyLanguage();
+    if (state.screen === "round" && state.round) { renderRound(); }
+    else if (state.screen === "about") { renderAbout(); }
+    else { renderHome(); }
+  });
+
+  applyLanguage();
 
   if (!bundle || !bundle.items || !bundle.items.length) {
     screens.screen.appendChild(el("div", { class: "panel" }, [

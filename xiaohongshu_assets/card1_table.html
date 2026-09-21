@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1440px; }
+  body {
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #14251D;
+    background: #EDE9DF;
+  }
+  .card {
+    width: 1080px; height: 1440px;
+    padding: 44px 50px 40px;
+    display: flex; flex-direction: column;
+    background:
+      radial-gradient(1200px 600px at 85% -10%, rgba(78,154,112,0.14), transparent 60%),
+      linear-gradient(180deg, #F8F6F0 0%, #EFECE3 100%);
+  }
+  .hero {
+    background: linear-gradient(135deg, #153526 0%, #1F5335 100%);
+    border-radius: 30px;
+    padding: 34px 40px 32px;
+    color: #FFFFFF;
+    box-shadow: 0 22px 44px rgba(20,37,29,0.22);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: ""; position: absolute; right: -60px; top: -80px;
+    width: 240px; height: 240px; border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+  }
+  .hero-top { display: flex; align-items: center; gap: 16px; }
+  .logo-chip {
+    width: 62px; height: 62px; border-radius: 16px;
+    background: #FFFFFF; padding: 7px; flex: 0 0 62px;
+  }
+  .logo-chip img { width: 100%; height: 100%; }
+  .brand-name { font-size: 34px; font-weight: 800; letter-spacing: 0.5px; }
+  .brand-tag { font-size: 22px; color: #CFE6D7; margin-top: 2px; letter-spacing: 2px; }
+  .pill-lifetime {
+    margin-left: auto;
+    background: #FFFFFF; color: #1F5335;
+    font-size: 22px; font-weight: 700;
+    border-radius: 999px; padding: 8px 20px;
+    letter-spacing: 1px;
+  }
+  .hero-title { margin-top: 28px; font-size: 66px; font-weight: 900; line-height: 1.12; letter-spacing: 2px; }
+  .hero-sub { margin-top: 12px; font-size: 26px; color: #BFD9C8; letter-spacing: 1px; }
+  .panel {
+    margin-top: 26px;
+    background: #FFFFFF; border-radius: 26px;
+    overflow: hidden; box-shadow: 0 18px 40px rgba(20,37,29,0.10);
+  }
+  .p-head, .p-row { display: grid; grid-template-columns: 240px 185px 330px 225px; align-items: center; }
+  .p-head { background: #1A3A2A; color: #FFFFFF; font-size: 27px; font-weight: 700; height: 62px; }
+  .p-head div { padding: 0 20px; }
+  .p-row { height: 132px; border-top: 2px solid #F0ECE3; font-size: 30px; background: #FFFFFF; }
+  .p-row:nth-child(even) { background: #FBF9F4; }
+  .p-row div { padding: 0 20px; min-width: 0; }
+  .tool { font-weight: 700; }
+  .mode { font-size: 27px; color: #46564E; }
+  .cost { font-size: 33px; font-weight: 800; }
+  .cost small { display: block; font-size: 22px; font-weight: 400; color: #96A29B; margin-top: 3px; }
+  .cloud { font-size: 26px; color: #96A29B; }
+  .p-row.bp {
+    background: linear-gradient(135deg, #2F6B4A 0%, #3E8A60 100%);
+    box-shadow: inset 6px 0 0 #C9A227;
+    color: #FFFFFF;
+  }
+  .p-row.bp .tool { color: #FFFFFF; }
+  .p-row.bp .cost { color: #FFFFFF; }
+  .p-row.bp .cost small { color: #D7E9DA; }
+  .p-row.bp .cloud { color: #E4F0E5; font-size: 23px; }
+  .p-row.bp .mode { color: #E4F0E5; font-weight: 700; }
+  .bp-tool { display: flex; align-items: center; gap: 12px; min-width: 0; }
+  .bp-logo { width: 42px; height: 42px; border-radius: 11px; background: #fff; padding: 3px; flex: 0 0 42px; overflow: hidden; }
+  .bp-logo img { width: 100%; height: 100%; object-fit: contain; }
+  .bp-text { min-width: 0; }
+  .bp-text .bp-name { font-size: 28px; font-weight: 800; white-space: nowrap; }
+  .badge {
+    display: inline-block; background: #C9A227; color: #22301F;
+    font-size: 20px; font-weight: 800; border-radius: 999px; padding: 3px 12px;
+  }
+  .foot { margin-top: auto; font-size: 21px; line-height: 1.7; color: #939B92; }
+  .foot b { color: #7A877F; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="hero">
+      <div class="hero-top">
+        <div class="logo-chip"><img src="../assets/byteproof/byteproof-icon.png" alt="ByteProof logo"></div>
+        <div>
+          <div class="brand-name">ByteProof</div>
+          <div class="brand-tag">论文 · 英文写作效率工具</div>
+        </div>
+        <div class="pill-lifetime">一次买断</div>
+      </div>
+      <div class="hero-title">费用大对比</div>
+      <div class="hero-sub">主流效率工具 · 官方公开价折算人民币 · 2026年8月</div>
+    </div>
+
+    <div class="panel">
+      <div class="p-head"><div>工具</div><div>收费模式</div><div>一年成本</div><div>文档处理</div></div>
+      <div class="p-row"><div class="tool">某G牌 · 语法/改写</div><div class="mode">订阅制</div><div class="cost">≈¥968/年<small>$12/月 · 年付$144</small></div><div class="cloud">云端上传</div></div>
+      <div class="p-row"><div class="tool">某P牌 · 写作分析</div><div class="mode">订阅制</div><div class="cost">≈¥806/年<small>$10/月 · 年付$120</small></div><div class="cloud">云端上传</div></div>
+      <div class="p-row"><div class="tool">某Q牌 · 改写</div><div class="mode">订阅制</div><div class="cost">≈¥672/年<small>$8.33/月 · 年付$99.95</small></div><div class="cloud">云端上传</div></div>
+      <div class="p-row"><div class="tool">某W牌 · 英文改写</div><div class="mode">订阅制</div><div class="cost">≈¥564/年<small>$6.99/月 · 年付$84</small></div><div class="cloud">云端上传</div></div>
+      <div class="p-row"><div class="tool">某C牌 · 国内写作工具</div><div class="mode">订阅制</div><div class="cost">¥288/年<small>约¥24/月</small></div><div class="cloud">云端上传</div></div>
+      <div class="p-row bp">
+        <div class="tool bp-tool"><div class="bp-logo"><img src="../assets/byteproof/byteproof-icon.png" alt=""></div><div class="bp-text"><div class="badge">一次买断</div><div class="bp-name">ByteProof</div></div></div>
+        <div class="mode">无订阅</div>
+        <div class="cost">≈¥200 一次性<small>NZ$49 · 永久使用</small></div>
+        <div class="cloud">本地AI离线<br>也能自带Token接大模型</div>
+      </div>
+    </div>
+
+    <div class="foot">
+      价格为各家官方公开定价（2026.08），仅供参考，具体以官方为准；竞品名称已模糊化处理。<br>
+      <b>汇率：</b>按 1 USD≈6.72、1 NZD≈4.03 估算，促销价可能更低。
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1440px; }
+  body {
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #14251D;
+    background: #EDE9DF;
+  }
+  .card {
+    width: 1080px; height: 1440px;
+    padding: 44px 50px 40px;
+    display: flex; flex-direction: column;
+    background:
+      radial-gradient(1200px 600px at 85% -10%, rgba(78,154,112,0.14), transparent 60%),
+      linear-gradient(180deg, #F8F6F0 0%, #EFECE3 100%);
+  }
+  .hero {
+    background: linear-gradient(135deg, #153526 0%, #1F5335 100%);
+    border-radius: 30px;
+    padding: 34px 40px 32px;
+    color: #FFFFFF;
+    box-shadow: 0 22px 44px rgba(20,37,29,0.22);
+    position: relative; overflow: hidden;
+  }
+  .hero::after { content: ""; position: absolute; right: -60px; top: -80px; width: 240px; height: 240px; border-radius: 50%; background: rgba(255,255,255,0.06); }
+  .hero-top { display: flex; align-items: center; gap: 16px; }
+  .logo-chip { width: 62px; height: 62px; border-radius: 16px; background: #FFFFFF; padding: 7px; flex: 0 0 62px; }
+  .logo-chip img { width: 100%; height: 100%; }
+  .brand-name { font-size: 34px; font-weight: 800; letter-spacing: 0.5px; }
+  .brand-tag { font-size: 22px; color: #CFE6D7; margin-top: 2px; letter-spacing: 2px; }
+  .pill-lifetime { margin-left: auto; background: #FFFFFF; color: #1F5335; font-size: 22px; font-weight: 700; border-radius: 999px; padding: 8px 20px; letter-spacing: 1px; }
+  .hero-title { margin-top: 28px; font-size: 60px; font-weight: 900; line-height: 1.14; letter-spacing: 2px; }
+  .hero-sub { margin-top: 12px; font-size: 26px; color: #BFD9C8; letter-spacing: 1px; }
+  .panel {
+    margin-top: 26px;
+    background: #FFFFFF; border-radius: 26px;
+    padding: 30px 34px 22px;
+    box-shadow: 0 18px 40px rgba(20,37,29,0.10);
+  }
+  .bar-row { display: flex; align-items: center; height: 92px; }
+  .bar-label { width: 250px; flex: 0 0 250px; font-size: 29px; font-weight: 700; color: #3D4E46; }
+  .bar-track { flex: 1; }
+  .bar {
+    height: 44px; border-radius: 12px;
+    background: linear-gradient(90deg, #D6DED7, #C3CCC4);
+    display: flex; align-items: center; justify-content: flex-end; padding-right: 16px;
+  }
+  .bar.green { background: linear-gradient(90deg, #2F6B4A, #52A879); box-shadow: 0 8px 20px rgba(47,107,74,0.35); }
+  .bar .val { font-size: 27px; font-weight: 900; color: #FFFFFF; }
+  .bar.gray .val { color: #FFFFFF; }
+  .bar-divider { height: 2px; background: #EEEAE1; margin: 6px 0; }
+  .note-tag { font-size: 21px; color: #96A29B; margin-top: 8px; padding-left: 4px; }
+  .punch {
+    margin-top: 24px;
+    background: linear-gradient(135deg, #EAF4EC, #F6FBF6);
+    border-radius: 24px; padding: 28px 32px;
+    font-size: 27px; font-weight: 700; line-height: 1.7; color: #1E5136;
+    box-shadow: inset 6px 0 0 #2F6B4A;
+  }
+  .punch .hl { color: #C9A227; }
+  .foot { margin-top: auto; font-size: 21px; line-height: 1.7; color: #939B92; }
+  .foot b { color: #7A877F; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="hero">
+      <div class="hero-top">
+        <div class="logo-chip"><img src="../assets/byteproof/byteproof-icon.png" alt="ByteProof logo"></div>
+        <div>
+          <div class="brand-name">ByteProof</div>
+          <div class="brand-tag">论文 · 英文写作效率工具</div>
+        </div>
+        <div class="pill-lifetime">一次买断</div>
+      </div>
+      <div class="hero-title">一年到底<br>花多少钱？</div>
+      <div class="hero-sub">主流写作效率工具 · 年成本对比（人民币）</div>
+    </div>
+
+    <div class="panel">
+      <div class="bar-row"><div class="bar-label">某G牌</div><div class="bar-track"><div class="bar gray" style="width:560px;"><span class="val">≈¥968/年</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">某P牌</div><div class="bar-track"><div class="bar gray" style="width:467px;"><span class="val">≈¥806/年</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">某Q牌</div><div class="bar-track"><div class="bar gray" style="width:389px;"><span class="val">≈¥672/年</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">某W牌</div><div class="bar-track"><div class="bar gray" style="width:326px;"><span class="val">≈¥564/年</span></div></div></div>
+      <div class="bar-row"><div class="bar-label">某C牌 · 国内写作工具</div><div class="bar-track"><div class="bar gray" style="width:167px;"><span class="val">¥288/年</span></div></div></div>
+      <div class="bar-divider"></div>
+      <div class="bar-row"><div class="bar-label" style="color:#1F5335;">ByteProof</div><div class="bar-track"><div class="bar green" style="width:150px;"><span class="val">≈¥200</span></div></div></div>
+      <div class="note-tag">ByteProof 为一次买断价，其他工具为每年续费价格。</div>
+    </div>
+
+    <div class="punch">
+      别人一年 <span class="hl">¥968</span> 起步，ByteProof 一次 <span class="hl">¥200</span> 用到老。<br>
+      本地AI离线就能用，也能自备 Token 接主流大模型，<br>
+      单次润色只用一小撮 Token，成本几乎可忽略。
+    </div>
+
+    <div class="foot">
+      价格为各家官方公开定价（2026.08），仅供参考，具体以官方为准；竞品名称已模糊化处理。<br>
+      <b>汇率：</b>按 1 USD≈6.72、1 NZD≈4.03 估算，促销价可能更低。
+    </div>
+  </div>
+</body>
+</html>

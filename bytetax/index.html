@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png?v=2026">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByteTax | A New Zealand tax learning game by ByteMind Ltd</title>
-    <meta name="description" content="A free short-session learning game for New Zealand tax, with every answer traced to Inland Revenue and checked by machine.">
+    <title>ByteTax | Free New Zealand tax learning game by ByteMind</title>
+    <meta name="description" content="A free learning game for New Zealand tax. Seven ways to practise, every answer traced to Inland Revenue and checked by machine.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ByteMind Ltd">
-    <meta property="og:title" content="ByteTax | A New Zealand tax learning game by ByteMind Ltd">
-    <meta property="og:description" content="A free short-session learning game for New Zealand tax, with every answer traced to Inland Revenue and checked by machine.">
+    <meta property="og:title" content="ByteTax | Free New Zealand tax learning game by ByteMind">
+    <meta property="og:description" content="A free learning game for New Zealand tax. Seven ways to practise, every answer traced to Inland Revenue and checked by machine.">
     <meta property="og:url" content="https://www.bytemind.co.nz/bytetax/">
     <link rel="canonical" href="https://www.bytemind.co.nz/bytetax/">
     <link rel="stylesheet" href="../colors_and_type.css">
@@ -22,6 +22,26 @@
       .bt-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
       .bt-card p { margin: 0; color: var(--color-muted-foreground); }
       .bt-card { border-top: 3px solid var(--color-accent, #1f6f5c); }
+      /* Screenshots of the game, shown at a size that stays readable on a
+         laptop without dominating the page. */
+      .bt-gallery {
+        display: grid; gap: var(--space-8); grid-template-columns: 1fr;
+      }
+      @media (min-width: 760px) { .bt-gallery { grid-template-columns: repeat(2, 1fr); } }
+      .bt-shot { margin: 0; }
+      .bt-shot img {
+        width: 100%; height: auto; display: block; border-radius: var(--radius-lg);
+        border: 1px solid var(--color-border); box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
+        background: #0d1726;
+      }
+      .bt-shot figcaption {
+        margin-top: 10px; font-size: .92rem; color: var(--color-muted-foreground);
+        line-height: 1.5;
+      }
+      .bt-shot figcaption strong {
+        display: block; color: var(--color-foreground, #1a1a1a); font-weight: 600;
+        margin-bottom: 2px;
+      }
     </style>
 </head>
 <body>
@@ -49,77 +69,91 @@
 
     <main id="main-content">
         <section class="page-hero animate-fade-in-up">
-            <div class="eyebrow">Free to play &middot; ByteMind Ltd</div>
+            <div class="eyebrow">Free &middot; ByteMind Ltd</div>
             <div class="accent-bar"></div>
-            <h1>Learn New Zealand tax one question at a time</h1>
-            <p class="hero-intro">ByteTax is a short-session learning game for New
-            Zealand tax. Seven ways to practise, from quick questions to flip cards and
-            drag-and-drop sorting. Every answer comes with a one-sentence reason and a
-            link to the Inland Revenue page it came from.</p>
+            <h1>Learn New Zealand tax, one question at a time</h1>
+            <p class="hero-intro">ByteTax is a short learning game. Pick a topic, answer a few
+            questions, and read why each answer is right. Every answer links to the page it came
+            from.</p>
             <div class="bt-ctas">
                 <a class="btn btn-primary" href="play/">Play ByteTax &rarr;</a>
                 <a class="btn btn-secondary" href="#how">How it works</a>
             </div>
-            <p class="bt-note">No account needed. Works offline. 200 questions
-            across 13 modules.</p>
+            <p class="bt-note">No account. Works offline. 200 questions across
+            13 topics.</p>
         </section>
 
         <section class="section" id="how">
             <div class="container">
                 <div class="section-header">
                     <div class="eyebrow">Before you trust it</div>
-                    <h2>Every answer shows its working</h2>
-                    <p>Tax changes. A learning tool that quietly teaches last year's rule
-                    is worse than no tool at all, so accuracy is the first design decision
-                    here, not a feature added later.</p>
+                    <h2>Every answer shows where it came from</h2>
+                    <p>Tax rules change. A game that quietly teaches an old rule is worse than no
+                    game at all. So accuracy came first here.</p>
                 </div>
                 <div class="grid-3">
                     <div class="card bt-card">
-                        <h3>Traced to the source</h3>
-                        <p>Each question rests on at least one Inland Revenue page, and
-                        the exact words that prove it are stored with it.</p>
+                        <h3>Every answer has a source</h3>
+                        <p>Each question rests on at least one Inland Revenue page. The exact
+                        words that prove it are stored with it.</p>
                     </div>
                     <div class="card bt-card">
-                        <h3>Checked by machine</h3>
-                        <p>A validator looks for those words in the page it cites. If the
-                        wording moves, the question fails and is held back until someone
-                        re-reads it.</p>
+                        <h3>A computer checks the words</h3>
+                        <p>If the page changes and the wording moves, the question fails and is
+                        held back until a person reads it again.</p>
                     </div>
                     <div class="card bt-card">
-                        <h3>Rates carry dates</h3>
-                        <p>A number is never stored bare. Rates keep the period they apply
-                        to, so a 2024 rate cannot be served as today's.</p>
+                        <h3>Numbers carry a date</h3>
+                        <p>A rate is never stored on its own. It keeps the years it applied to,
+                        so a 2024 rate cannot be served as today's.</p>
                     </div>
                     <div class="card bt-card">
-                        <h3>Backed by the statute</h3>
-                        <p>Key rules cite the Income Tax Act 2007, the GST Act 1985 or the
-                        Tax Administration Act 1994 alongside the Inland Revenue
-                        explanation.</p>
+                        <h3>Backed by the law</h3>
+                        <p>Key rules also cite the Income Tax Act 2007, the GST Act 1985 or the
+                        Tax Administration Act 1994.</p>
                     </div>
                     <div class="card bt-card">
-                        <h3>Plain about what it is</h3>
-                        <p>General information, not tax advice, and it says so on every
-                        screen. Inland Revenue remains the authority.</p>
+                        <h3>Clear about what it is</h3>
+                        <p>General information, not tax advice. It says so on every screen, and
+                        Inland Revenue stays the authority.</p>
                     </div>
                     <div class="card bt-card">
                         <h3>Nothing leaves your device</h3>
-                        <p>Progress is kept in your own browser, or on your own machine in
-                        the desktop app. No account, no tracking.</p>
+                        <p>Your progress is kept in your own browser. No account, no tracking,
+                        nothing sent anywhere.</p>
                     </div>
                 </div>
-                <p class="bt-note">Content checked against Inland Revenue on
-                21 September 2026. 120 facts from 60
-                sources behind 200 questions.</p>
+                <p class="bt-note">Checked against Inland Revenue on 21 September 2026.
+                120 facts from 60 sources behind
+                200 questions.</p>
             </div>
         </section>
 
-        <section class="section" style="background: var(--color-muted, #f6f5ef);" id="play">
+        <section class="section" style="background: var(--color-muted, #f6f5ef);" id="formats">
             <div class="container">
                 <div class="section-header">
                     <div class="eyebrow">Seven ways to practise</div>
                     <h2>Not a wall of multiple choice</h2>
-                    <p>A round deliberately mixes the formats, so a topic does not arrive
-                    in the same clothes twice.</p>
+                    <p>A round mixes the formats, so a topic does not come back looking the same
+                    twice. Here is what four of them look like.</p>
+                </div>
+                <div class="bt-gallery">
+                    <figure class="bt-shot">
+                        <img src="../assets/bytetax/format-quiz.png" alt="Quick quiz: Pick an answer. You get a one-line reason and a link to the source." loading="lazy" width="880" height="820">
+                        <figcaption><strong>Quick quiz</strong>Pick an answer. You get a one-line reason and a link to the source.</figcaption>
+                    </figure>
+                    <figure class="bt-shot">
+                        <img src="../assets/bytetax/format-card.png" alt="Flip cards: Tap the card to turn it over, then say whether you knew it." loading="lazy" width="880" height="820">
+                        <figcaption><strong>Flip cards</strong>Tap the card to turn it over, then say whether you knew it.</figcaption>
+                    </figure>
+                    <figure class="bt-shot">
+                        <img src="../assets/bytetax/format-match.png" alt="Matching: Drag a card into its slot. Each one is numbered, so you can see what went where." loading="lazy" width="880" height="820">
+                        <figcaption><strong>Matching</strong>Drag a card into its slot. Each one is numbered, so you can see what went where.</figcaption>
+                    </figure>
+                    <figure class="bt-shot">
+                        <img src="../assets/bytetax/format-sort.png" alt="Sorting: Drag each card into the group it belongs to." loading="lazy" width="880" height="820">
+                        <figcaption><strong>Sorting</strong>Drag each card into the group it belongs to.</figcaption>
+                    </figure>
                 </div>
                 <div class="bt-format">
                     <span>Quick quiz</span>
@@ -130,9 +164,9 @@
                     <span>Sorting</span>
                     <span>Ordering</span>
                 </div>
-                <p class="bt-note">Thirteen modules follow the ACCT 862 schedule, from the
-                tax system and residency through to international tax and what changed
-                this year.</p>
+                <p class="bt-note">13 topics follow the ACCT 862 schedule, from
+                the tax system and residency through to international tax and what changed this
+                year.</p>
                 <div class="bt-ctas" style="justify-content: flex-start;">
                     <a class="btn btn-primary" href="play/">Start a round &rarr;</a>
                 </div>
@@ -143,15 +177,14 @@
             <div class="container">
                 <div class="section-header">
                     <div class="eyebrow">Who it is for</div>
-                    <h2>Students, and anyone who needs a refresher</h2>
-                    <p>Written for accountancy and taxation students working through the
-                    New Zealand tax curriculum, and useful to anyone who wants to check
-                    what they actually know before it matters.</p>
+                    <h2>Students, and anyone who wants a refresher</h2>
+                    <p>Made for accountancy and taxation students working through the New Zealand
+                    tax curriculum. Useful to anyone who wants to check what they know before it
+                    matters.</p>
                 </div>
-                <p class="bt-note">ByteTax is general information about New Zealand tax.
-                It is not tax advice, and it does not calculate anyone's liability.
-                Inland Revenue is the authority for every rule it covers. Built by
-                ByteMind Ltd. Version 0.1.0.</p>
+                <p class="bt-note">ByteTax is general information about New Zealand tax. It is
+                not tax advice, and it does not work out anyone's tax bill. Inland Revenue is the
+                authority for every rule it covers. Built by ByteMind Ltd. Version 0.1.0.</p>
             </div>
         </section>
     </main>

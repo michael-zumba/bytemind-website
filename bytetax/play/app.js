@@ -571,87 +571,111 @@
     panel.appendChild(el("h1", { text: item.stem }));
     panel.appendChild(el("p", {
       class: "hint",
-      text: "Drag a card onto its partner, or tap one and then the other."
+      text: "Drag a card into a slot, or tap a card and then a slot. Each one you place is numbered, so you can see what went where."
     }));
-    var pickedLeft = null;
-    var pairs = {};
-    var leftButtons = [];
-    var rightButtons = [];
+    var placed = {};        // left card -> slot it sits in
+    var picked = null;      // a card waiting to be placed
+    var order = [];         // the order cards were placed in, for the badges
+    var slots = shuffle(item.pairs.map(function (pair) { return pair.right; }));
 
     var leftColumn = el("div", { class: "pair-col" });
     var rightColumn = el("div", { class: "pair-col" });
-
-    item.pairs.forEach(function (pair) {
-      var button = el("button", {
-        class: "tile", text: pair.left, "data-side": "left",
-        onclick: function () { if (!wasDragged(button)) { pickLeft(pair.left); } }
-      });
-      dragify(button, {
-        targetSelector: '[data-side="right"]',
-        disabled: function () { return state.round.marked; },
-        onDrop: function (target) { connect(pair.left, target.textContent); }
-      });
-      leftButtons.push(button);
-    });
-    shuffle(item.pairs.map(function (pair) { return pair.right; })).forEach(function (right) {
-      var button = el("button", {
-        class: "tile", text: right, "data-side": "right",
-        onclick: function () { if (!wasDragged(button)) { pickRight(right); } }
-      });
-      dragify(button, {
-        targetSelector: '[data-side="left"]',
-        disabled: function () { return state.round.marked; },
-        onDrop: function (target) { connect(target.textContent, right); }
-      });
-      rightButtons.push(button);
-    });
-    leftButtons.forEach(function (button) { leftColumn.appendChild(button); });
-    rightButtons.forEach(function (button) { rightColumn.appendChild(button); });
-
+    var tally = el("p", { class: "match-tally" });
     var check = el("button", { class: "primary", text: "Check", disabled: true, onclick: check_ });
-    var actions = el("div", { class: "actions" }, [check]);
 
-    function refresh() {
-      leftButtons.forEach(function (button) {
-        button.className = "tile" + (pairs[button.textContent] ? " paired" : "");
-      });
-      rightButtons.forEach(function (button) {
-        var used = Object.keys(pairs).some(function (left) { return pairs[left] === button.textContent; });
-        button.className = "tile" + (used ? " paired" : "");
-      });
-      check.disabled = Object.keys(pairs).length !== item.pairs.length;
+    function slotOf(left) { return placed[left] || null; }
+    function cardIn(slot) {
+      return Object.keys(placed).find(function (left) { return placed[left] === slot; });
     }
 
-    function pickLeft(left) {
+    /* Redraw both columns from the state, so what is on screen always matches
+       what has actually been placed. */
+    function render() {
+      clear(leftColumn);
+      clear(rightColumn);
+
+      item.pairs
+        .map(function (pair) { return pair.left; })
+        .filter(function (left) { return !slotOf(left); })
+        .forEach(function (left) {
+          var button = el("button", {
+            class: "tile" + (picked === left ? " picked" : ""), text: left, "data-card": left,
+            onclick: function () { if (!wasDragged(button)) { pick(left); } }
+          });
+          dragify(button, {
+            targetSelector: "[data-slot]",
+            disabled: function () { return state.round.marked; },
+            onDrop: function (target) { place(left, target.dataset.slot); }
+          });
+          leftColumn.appendChild(button);
+        });
+
+      if (!leftColumn.childNodes.length) {
+        leftColumn.appendChild(el("p", { class: "pair-empty", text: "All placed" }));
+      }
+
+      slots.forEach(function (slot) {
+        var owner = cardIn(slot);
+        var box = el("div", {
+          class: "slot" + (owner ? " filled" : "") + (owner && owner === picked ? "" : ""),
+          "data-slot": slot,
+          onclick: function () {
+            if (state.round.marked) { return; }
+            if (owner) { release(owner); }
+            else if (picked) { place(picked, slot); }
+          }
+        });
+        box.appendChild(el("span", { class: "slot-label", text: slot }));
+        if (owner) {
+          box.appendChild(el("span", { class: "chip" }, [
+            el("span", { class: "chip-n", text: String(order.indexOf(owner) + 1) }),
+            el("span", { text: owner })
+          ]));
+        } else {
+          box.appendChild(el("span", { class: "slot-empty", text: "drop here" }));
+        }
+        rightColumn.appendChild(box);
+      });
+
+      var done = Object.keys(placed).length;
+      tally.textContent = done + " of " + item.pairs.length + " matched";
+      tally.className = "match-tally" + (done === item.pairs.length ? " done" : "");
+      check.disabled = done !== item.pairs.length || state.round.marked;
+    }
+
+    function pick(left) {
       if (state.round.marked) { return; }
-      pickedLeft = left;
-      leftButtons.forEach(function (button) {
-        if (button.textContent === left) { button.className = "tile picked"; }
-      });
+      picked = picked === left ? null : left;
+      render();
     }
 
-    function pickRight(right) {
-      if (!pickedLeft) { return; }
-      connect(pickedLeft, right);
+    function place(left, slot) {
+      if (state.round.marked || !left || !slot) { return; }
+      // A slot holds one card, so placing into a taken slot swaps them over.
+      var sitting = cardIn(slot);
+      if (sitting && sitting !== left) { delete placed[sitting]; }
+      if (!order.includes(left)) { order.push(left); }
+      placed[left] = slot;
+      picked = null;
+      render();
     }
 
-    /** Record a pairing, whether it came from a drag or from two taps. */
-    function connect(left, right) {
+    function release(left) {
       if (state.round.marked) { return; }
-      pairs[left] = right;
-      pickedLeft = null;
-      refresh();
+      delete placed[left];
+      order = order.filter(function (name) { return name !== left; });
+      picked = null;
+      render();
     }
 
     function check_() {
       var expected = {};
       item.pairs.forEach(function (pair) { expected[pair.left] = pair.right; });
-      var correct = item.pairs.every(function (pair) { return pairs[pair.left] === pair.right; });
-      item.pairs.forEach(function (pair) {
-        var button = leftButtons.find(function (entry) { return entry.textContent === pair.left; });
-        if (button) {
-          button.className = "tile " + (pairs[pair.left] === pair.right ? "paired" : "wrong");
-        }
+      var correct = item.pairs.every(function (pair) { return placed[pair.left] === pair.right; });
+      Array.prototype.forEach.call(rightColumn.childNodes, function (box) {
+        var owner = cardIn(box.dataset.slot);
+        if (!owner) { return; }
+        box.classList.add(expected[owner] === box.dataset.slot ? "right" : "wrong");
       });
       check.disabled = true;
       completeItem(correct);
@@ -659,8 +683,9 @@
     }
 
     panel.appendChild(el("div", { class: "pairs" }, [leftColumn, rightColumn]));
-    panel.appendChild(actions);
-    refresh();
+    panel.appendChild(tally);
+    panel.appendChild(el("div", { class: "actions" }, [check]));
+    render();
   }
 
   function renderSort(panel, item) {

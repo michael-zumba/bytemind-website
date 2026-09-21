@@ -137,6 +137,41 @@ p { margin: 0 0 14px; }
 
 .pairs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .pair-col { display: grid; gap: 10px; align-content: start; }
+
+/* Matching: the right-hand side is a set of slots, and a card that has been
+   placed sits inside its slot with a number, so it is obvious what went where
+   and any pairing can be undone by tapping it. */
+.slot {
+  display: grid; gap: 8px; align-content: start; min-height: 62px;
+  border: 1px dashed var(--line); border-radius: 12px; padding: 12px 14px;
+  background: rgba(13, 23, 38, .45); cursor: pointer;
+  transition: border-color 240ms ease, background-color 240ms ease;
+}
+.slot:hover { border-color: var(--muted); }
+.slot.filled { border-style: solid; border-color: #3a5573; background: rgba(24, 42, 63, .6); }
+.slot.drop-active { border-color: var(--amber); background: rgba(244, 183, 64, .09); }
+.slot.right { border-color: var(--green); background: #123a2e; }
+.slot.wrong { border-color: var(--red); background: #3a1c1c; }
+.slot-label { color: var(--text); }
+.slot-empty { color: var(--muted); font-size: 13px; }
+
+.chip {
+  display: inline-flex; align-items: center; gap: 9px;
+  background: #24374f; border-radius: 999px; padding: 7px 13px; font-size: 14.5px;
+  animation: chip-drop 320ms cubic-bezier(.2, .9, .3, 1);
+}
+.chip-n {
+  display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%;
+  background: var(--amber); color: #2a1c00; font-size: 12px; font-weight: 700;
+}
+.pair-empty { color: var(--muted); font-size: 14px; margin: 0; }
+.match-tally { color: var(--muted); font-size: 14px; margin: 16px 0 0; }
+.match-tally.done { color: var(--green); }
+
+@keyframes chip-drop {
+  0% { transform: translateY(-6px) scale(.94); opacity: 0; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
 .tile {
   background: rgba(18, 32, 49, .5); border: 1px solid var(--line); color: inherit;
   border-radius: 12px; padding: 13px 16px; font: inherit; text-align: left; cursor: pointer;

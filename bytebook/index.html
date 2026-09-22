@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png?v=2026">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteBook | Bookkeeping for New Zealand businesses, and a training environment for accounting and audit teams</title>
+    <meta name="description" content="ByteBook keeps a New Zealand business's books on the computer it runs on. For firms, it is a training environment: twelve simulated businesses, a record that shows every correction, and fourteen assurance procedures your team can run on the real entries.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ByteMind Ltd">
+    <meta property="og:title" content="ByteBook | Train your accounting and audit team on a business that cannot be hurt">
+    <meta property="og:description" content="Twelve simulated New Zealand businesses, fourteen assurance procedures, and a training handbook with every standard reference cited.">
+    <meta property="og:url" content="https://www.bytemind.co.nz/bytebook/">
+    <meta property="og:image" content="https://www.bytemind.co.nz/assets/bytebook/bytebook-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ByteBook | Bookkeeping, and a training environment for accounting and audit teams">
+    <meta name="twitter:description" content="Twelve simulated New Zealand businesses, fourteen assurance procedures, and a training handbook with every standard reference cited.">
+    <meta name="twitter:image" content="https://www.bytemind.co.nz/assets/bytebook/bytebook-og.png">
+    <link rel="canonical" href="https://www.bytemind.co.nz/bytebook/">
+    <link rel="alternate" hreflang="en" href="https://www.bytemind.co.nz/bytebook/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://www.bytemind.co.nz/zh/bytebook/">
+    <link rel="alternate" hreflang="x-default" href="https://www.bytemind.co.nz/bytebook/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ByteBook",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "macOS",
+      "description": "Bookkeeping software for New Zealand businesses that keeps the books on the computer it runs on, with an audit trail that detects any change. Used by accounting and audit firms as a training environment, with twelve simulated New Zealand businesses and fourteen assurance procedures.",
+      "url": "https://www.bytemind.co.nz/bytebook/",
+      "image": "https://www.bytemind.co.nz/assets/bytebook/bytebook-og.png",
+      "publisher": { "@type": "Organization", "name": "ByteMind Ltd", "url": "https://www.bytemind.co.nz/" },
+      "featureList": [
+        "Invoicing and payments",
+        "GST return from the ledger",
+        "Bank statement import and coding",
+        "Reports: profit and loss, balance sheet, cash flow",
+        "Hash-chained audit trail",
+        "Fourteen assurance procedures with working papers",
+        "Sealed period packs",
+        "Twelve simulated New Zealand businesses for training"
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../colors_and_type.css">
+    <style>
+      /* Page-specific additions only. Everything else comes from colors_and_type.css. */
+      .bb-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 30px; }
+      .bb-note { margin-top: 26px; font-size: .95rem; color: var(--color-muted-foreground); }
+
+      .bb-shot {
+        margin: 0;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 18px 44px -22px rgba(14, 36, 25, .34);
+      }
+      .bb-shot img { display: block; width: 100%; height: auto; }
+      .bb-shot figcaption {
+        padding: 12px 18px 14px; font-size: .9rem; line-height: 1.5;
+        color: var(--color-muted-foreground);
+        border-top: 1px solid var(--color-border);
+        background: var(--color-card);
+      }
+      .bb-shot figcaption strong { color: var(--color-foreground); font-weight: 600; }
+      .bb-hero-shot { max-width: 1080px; margin: 46px auto 0; }
+
+      .bb-reasons { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--color-border); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; }
+      .bb-reason { background: var(--color-card); padding: 28px 26px 30px; }
+      .bb-reason h3 { font-family: var(--font-serif); font-size: 1.28rem; margin: 0 0 10px; color: var(--color-primary); }
+      .bb-reason p { margin: 0; font-size: .97rem; }
+      .bb-reason-num { display: block; font-family: var(--font-mono); font-size: .78rem; letter-spacing: .08em; color: var(--color-muted-foreground); margin-bottom: 14px; }
+
+      /* The twelve businesses, as a matrix rather than a claim. */
+      .bb-matrix { width: 100%; border-collapse: collapse; font-size: .94rem; }
+      .bb-matrix caption { text-align: left; font-size: .88rem; color: var(--color-muted-foreground); padding-bottom: 14px; }
+      .bb-matrix th { text-align: left; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--color-muted-foreground); font-weight: 600; padding: 0 14px 10px 0; border-bottom: 1px solid var(--color-border); }
+      .bb-matrix td { padding: 13px 14px 13px 0; border-bottom: 1px solid var(--color-border-light, #eae5d9); vertical-align: top; }
+      .bb-matrix tr:last-child td { border-bottom: none; }
+      .bb-matrix .bb-name { font-weight: 600; color: var(--color-foreground); }
+      .bb-matrix .bb-trade { color: var(--color-muted-foreground); font-size: .88rem; }
+      .bb-pill { display: inline-block; font-size: .78rem; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--color-border); white-space: nowrap; }
+      .bb-pill-on { background: var(--color-primary-50); border-color: var(--color-primary-200); color: var(--color-primary-700); }
+      .bb-pill-off { background: var(--color-muted); color: var(--color-muted-foreground); }
+      .bb-practise { color: var(--color-text-secondary); }
+
+      .bb-procedures { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1px; background: var(--color-border); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; margin-top: var(--space-8); }
+      .bb-procedure { background: var(--color-card); padding: 18px 20px; }
+      .bb-procedure code { font-family: var(--font-mono); font-size: .78rem; color: var(--color-primary-500); display: block; margin-bottom: 6px; }
+      .bb-procedure strong { display: block; font-size: .97rem; color: var(--color-foreground); margin-bottom: 4px; }
+      .bb-procedure span { font-size: .88rem; color: var(--color-muted-foreground); }
+
+      .bb-two { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); align-items: center; }
+      @media (max-width: 860px) { .bb-two { grid-template-columns: 1fr; } }
+      .bb-two h3 { font-family: var(--font-serif); font-size: 1.6rem; margin: 0 0 12px; color: var(--color-primary); }
+      .bb-two p { margin: 0 0 14px; }
+      .bb-list { list-style: none; padding: 0; margin: 18px 0 0; }
+      .bb-list li { position: relative; padding-left: 22px; margin-bottom: 10px; font-size: .97rem; }
+      .bb-list li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary-400); }
+
+      .bb-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--space-8); padding: var(--space-8) 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); margin: var(--space-8) 0; }
+      .bb-fact-value { display: block; font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-primary); line-height: 1.1; }
+      .bb-fact-label { display: block; font-size: .85rem; color: var(--color-muted-foreground); margin-top: 6px; }
+
+      .bb-handbook { display: grid; grid-template-columns: 1.05fr .95fr; gap: var(--space-12); align-items: center; }
+      @media (max-width: 860px) { .bb-handbook { grid-template-columns: 1fr; } }
+      .bb-handbook-list { list-style: none; padding: 0; margin: 20px 0 26px; }
+      .bb-handbook-list li { padding: 11px 0; border-bottom: 1px solid var(--color-border-light, #eae5d9); font-size: .97rem; }
+      .bb-handbook-list li:last-child { border-bottom: none; }
+      .bb-handbook-list strong { color: var(--color-foreground); }
+
+      .bb-limits { border-left: 3px solid var(--color-primary-400); padding-left: 20px; margin-top: var(--space-6); }
+      .bb-limits p { margin: 0 0 12px; font-size: .96rem; }
+      .bb-limits p:last-child { margin-bottom: 0; }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header id="shell-header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="../index.html" class="logo-link">ByteMind</a>
+                <div class="nav-links" id="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../services.html">Services</a>
+                    <a href="../indices.html">Indices</a>
+                    <a href="../insights.html">Insights</a>
+                    <a href="../reports.html">Reports</a>
+                    <a href="../about.html">About</a>
+                    <a href="../index.html#products">Products</a>
+                    <a href="../contact.html">Contact</a>
+                </div>
+                <a href="../zh/bytebook/index.html" class="lang-switch" data-dom-id="lang-switch" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+                <button type="button" class="mobile-menu-btn" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <!-- 1. Hero -->
+        <section class="page-hero animate-fade-in-up">
+            <div class="eyebrow">Products &middot; ByteBook</div>
+            <div class="accent-bar"></div>
+            <h1>Train your team on a business that cannot be hurt</h1>
+            <p class="hero-intro">ByteBook keeps a New Zealand business's books: invoices,
+            GST, expenses, bank import and reports, in one app, on one computer. For an
+            accounting or audit practice that makes it a training environment. There are
+            twelve businesses to run, a record that shows every correction, and fourteen
+            assurance procedures your staff can run against the real entries.</p>
+            <div class="bb-ctas">
+                <a class="btn btn-primary" href="manual/">Read the training handbook &rarr;</a>
+                <a class="btn btn-secondary" href="#businesses">See the twelve businesses</a>
+            </div>
+            <p class="bb-note">Desktop app for macOS &middot; Runs offline &middot;
+            No account, no cloud, nothing sent anywhere</p>
+        </section>
+
+        <figure class="bb-shot bb-hero-shot">
+            <img src="../assets/bytebook/bytebook-dashboard.png" width="1440" height="960"
+                 alt="ByteBook showing a simulated business: bank balance, money owed, profit for the month, an income and expenses chart, and a list of everything that needs attention">
+            <figcaption><strong>A simulated business, a day into trading.</strong>
+            Everything on this screen is computed from the entries underneath it.</figcaption>
+        </figure>
+
+        <!-- 2. Why it works as training -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">Why firms use it this way</div>
+                    <h2>A learner cannot break a client's books, because there is no client</h2>
+                    <p>Every training exercise runs against a simulated business in its own
+                    set of books. Nothing carries over, and one session cannot damage the
+                    next.</p>
+                </div>
+                <div class="bb-reasons">
+                    <div class="bb-reason">
+                        <span class="bb-reason-num">01</span>
+                        <h3>A business to run, not a spreadsheet to read</h3>
+                        <p>The learner sends real invoices, codes a real bank statement,
+                        files a GST period and reads reports that were computed from the
+                        entries they posted. The awkward cases are in the data on purpose:
+                        a late payer, a duplicated payment, a manual journal.</p>
+                    </div>
+                    <div class="bb-reason">
+                        <span class="bb-reason-num">02</span>
+                        <h3>Every mistake is visible, and none of it is destructive</h3>
+                        <p>Nothing is deleted or edited. A correction is a void: the
+                        original and its mirror image both stay, and the reports stop
+                        counting them. A learner sees what a proper correction looks like,
+                        because the program will not let them do it any other way.</p>
+                    </div>
+                    <div class="bb-reason">
+                        <span class="bb-reason-num">03</span>
+                        <h3>The reasoning is checked against the standards</h3>
+                        <p>The training handbook names the accounting or auditing standard
+                        behind every step, by paragraph, and every reference can be followed
+                        to the publisher's own document. 71 references, each one verified
+                        against the text it cites.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. The twelve businesses -->
+        <section class="section" id="businesses" style="background: var(--color-muted);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">Twelve businesses</div>
+                    <h2>Different trades, different tax settings, different problems</h2>
+                    <p>A business that is not registered for GST teaches something a
+                    registered one cannot. So does a six-monthly return, or exempt rent
+                    beside taxable sales.</p>
+                </div>
+                <table class="bb-matrix">
+                    <caption>Each simulation sets itself up, trades, banks its money, files
+                    a GST period, then has its books recomputed from the raw rows.</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Business</th>
+                            <th scope="col">GST</th>
+                            <th scope="col">Return</th>
+                            <th scope="col">What it makes you practise</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="bb-name">Bright Cuts</span><br><span class="bb-trade">hairdressing</span></td>
+                            <td><span class="bb-pill bb-pill-off">Not registered</span></td>
+                            <td>&mdash;</td>
+                            <td class="bb-practise">Invoicing and reporting with no GST anywhere in the books</td>
+                        </tr>
+                        <tr>
+                            <td><span class="bb-name">Kōwhai Advisory</span><br><span class="bb-trade">consulting</span></td>
+                            <td><span class="bb-pill bb-pill-on">Registered</span></td>
+                            <td>Monthly, payments basis</td>
+                            <td class="bb-practise">A late payer, and GST that follows the money rather than the invoice</td>
+                        </tr>
+                        <tr>
+                            <td><span class="bb-name">Tasman Builders Ltd</span><br><span class="bb-trade">construction</span></td>
+                            <td><span class="bb-pill bb-pill-on">Registered</span></td>
+                            <td>Two-monthly, invoice basis</td>
+                            <td class="bb-practise">Stage payments: one contract, several invoices, revenue recognised as the work is done</td>
+                        </tr>
+                        <tr>
+                            <td><span class="bb-name">Harbour Cafe &amp; Co</span><br><span class="bb-trade">hospitality</span></td>
+                            <td><span class="bb-pill bb-pill-on">Registered</span></td>
+                            <td>Monthly</td>
+                            <td class="bb-practise">High volume of small sales, and a vehicle available for private use</td>
+                        </tr>
+                        <tr>
+                            <td><span class="bb-name">Loom &amp; Light</span><br><span class="bb-trade">online retail</span></td>
+                            <td><span class="bb-pill bb-pill-on">Registered</span></td>
+                            <td>Two-monthly</td>
+                            <td class="bb-practise">Refunds and returns that reverse revenue after the fact, and a void to correct</td>
+                        </tr>
+                        <tr>
+                            <td><span class="bb-name">Marine Parade Rentals</span><br><span class="bb-trade">property</span></td>
+                            <td><span class="bb-pill bb-pill-on">Registered</span></td>
+                            <td>Two-monthly</td>
+                            <td class="bb-practise">Exempt rent beside taxable supplies, where the return needs care</td>
+                        </tr>
+                        <tr>
+                            <td><span class="bb-name">Whirinaki Contracting</span><br><span class="bb-trade">horticulture</span></td>
+                            <td><span class="bb-pill bb-pill-on">Registered</span></td>
+                            <td>Six-monthly</td>
+                            <td class="bb-practise">A long return period, seasonal costs, and a work vehicle with private use</td>
+                        </tr>
+                        <tr>
+                            <td><span class="bb-name">Foundry Labs</span><br><span class="bb-trade">software</span></td>
+                            <td><span class="bb-pill bb-pill-off">Not registered</span></td>
+                            <td>&mdash;</td>
+                            <td class="bb-practise">A pre-revenue business: costs only, and a balance sheet that shows who is funding it</td>
+                        </tr>
+                        <tr>
+                            <td><span class="bb-name">Marine Parade Dental</span><br><span class="bb-trade">health</span></td>
+                            <td><span class="bb-pill bb-pill-on">Registered</span></td>
+                            <td>Monthly</td>
+                            <td class="bb-practise">Security switched on: four roles, passwords, and a wrong password to handle</td>
+                        </tr>
+                        <tr>
+                            <td><span class="bb-name">Ngata Plumbing Ltd</span><br><span class="bb-trade">trades</span></td>
+                            <td><span class="bb-pill bb-pill-on">Registered</span></td>
+                            <td>Two-monthly</td>
+                            <td class="bb-practise">A busy bank statement with many lines to code, and a short payment term</td>
+                        </tr>
+                        <tr>
+                            <td><span class="bb-name">Pacific Trading Ltd</span><br><span class="bb-trade">wholesale</span></td>
+                            <td><span class="bb-pill bb-pill-on">Registered</span></td>
+                            <td>Six-monthly</td>
+                            <td class="bb-practise">Stock bought and sold, a large import, and a June balance date</td>
+                        </tr>
+                        <tr>
+                            <td><span class="bb-name">Precision Engineering Ltd</span><br><span class="bb-trade">engineering</span></td>
+                            <td><span class="bb-pill bb-pill-on">Registered</span></td>
+                            <td>Two-monthly</td>
+                            <td class="bb-practise">Amounts chosen to break the arithmetic that rounds the wrong way</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="bb-note">Every simulation runs the real application rather than
+                writing to the database directly, so a learner and a simulation travel
+                through exactly the same pages.</p>
+            </div>
+        </section>
+
+        <!-- 4. The daily work -->
+        <section class="section" id="work">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">The daily work</div>
+                    <h2>What a learner actually does</h2>
+                    <p>The same sequence a month follows in a real practice.</p>
+                </div>
+
+                <div class="bb-two" style="margin-bottom: var(--space-16);">
+                    <figure class="bb-shot">
+                        <img src="../assets/bytebook/bytebook-bank.png" width="1440" height="960" loading="lazy"
+                             alt="ByteBook's Bank and coding screen: five lines waiting to be coded, a place to import a CSV from internet banking, and a panel that compares ByteBook's bank balance with the statement">
+                        <figcaption><strong>Import the statement, then code each line.</strong>
+                        Five lines are waiting. Until they are coded, they are not in any report.</figcaption>
+                    </figure>
+                    <div>
+                        <h3>Coding is where the judgement lives</h3>
+                        <p>Most small-business bookkeeping errors are made on this screen, at
+                        speed, hundreds of times. The learner has to decide what each line
+                        was for, and the program tells them how many decisions are still
+                        outstanding.</p>
+                        <p>Then the second half of the screen turns coding into a test: the
+                        learner enters the closing balance and date from the bank statement,
+                        and ByteBook says whether its own balance agrees.</p>
+                        <ul class="bb-list">
+                            <li>A reconciliation is not arithmetic housekeeping. It is the check that ties the books to something outside them.</li>
+                            <li>A balance can agree while twenty lines sit uncoded, which is not a reconciliation.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bb-two">
+                    <div>
+                        <h3>The return is built from the ledger, not typed in twice</h3>
+                        <p>Choose a period and ByteBook fills the Inland Revenue boxes from
+                        the transactions in the books. Each figure can be traced back to the
+                        entries that produced it, and the page states whether the period is
+                        on the invoice basis or the payments basis.</p>
+                        <p>Before filing, the learner saves a snapshot of what was filed. That
+                        snapshot is what the GST reconciliation procedure compares the ledger
+                        against later.</p>
+                        <ul class="bb-list">
+                            <li>Box 5 is total sales and income including GST. Box 9 is the GST itself.</li>
+                            <li>GST collected is never income. It is money held for Inland Revenue.</li>
+                            <li>Income tax is a different question entirely, and has its own working papers.</li>
+                        </ul>
+                    </div>
+                    <figure class="bb-shot">
+                        <img src="../assets/bytebook/bytebook-gst.png" width="1440" height="960" loading="lazy"
+                             alt="ByteBook's GST screen showing boxes 5, 6, 9, 11, 13 and 20 for a chosen period, with the basis stated as two-monthly on the invoice basis">
+                        <figcaption><strong>GST worked out for 1 August to 30 September.</strong>
+                        Every box is a sum of coded entries, and the basis is stated on the page.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. The audit side -->
+        <section class="section" id="assurance" style="background: var(--color-muted);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">The audit side</div>
+                    <h2>Fourteen procedures that run themselves, and report what they found</h2>
+                    <p>Each one runs on every visit, against the actual entries, and offers a
+                    working paper your staff can hand to somebody else.</p>
+                </div>
+                <div class="bb-procedures">
+                    <div class="bb-procedure"><code>A01</code><strong>Ledger integrity</strong><span>Every entry still matches the fingerprint it was sealed with</span></div>
+                    <div class="bb-procedure"><code>A02</code><strong>Double entry</strong><span>The two sides of every entry are equal</span></div>
+                    <div class="bb-procedure"><code>A03</code><strong>Bank reconciliation</strong><span>The ledger agrees with the statement, and every line is dealt with</span></div>
+                    <div class="bb-procedure"><code>A04</code><strong>Debtors</strong><span>Money owed is real, correctly aged, and not overpaid</span></div>
+                    <div class="bb-procedure"><code>A05</code><strong>Creditors</strong><span>What the business owes is recorded, and no bill is paid twice</span></div>
+                    <div class="bb-procedure"><code>A06</code><strong>GST reconciliation</strong><span>The return agrees with the ledger, and with what was filed</span></div>
+                    <div class="bb-procedure"><code>A07</code><strong>Journal entries</strong><span>Manual entries, listed with who posted them and when</span></div>
+                    <div class="bb-procedure"><code>A08</code><strong>Duplicate payments</strong><span>The same amount to the same supplier inside a week</span></div>
+                    <div class="bb-procedure"><code>A09</code><strong>Cut-off</strong><span>Entries dated in the future, or inside a closed period</span></div>
+                    <div class="bb-procedure"><code>A10</code><strong>Documents and compliance</strong><span>Tax invoices over $50, and documents missing their details</span></div>
+                    <div class="bb-procedure"><code>A11</code><strong>Expenses</strong><span>Round numbers, large one-off costs, and costs that look personal</span></div>
+                    <div class="bb-procedure"><code>A12</code><strong>Sealed packages</strong><span>Every closed period still matches the ledger as it stands now</span></div>
+                    <div class="bb-procedure"><code>A13</code><strong>Access and housekeeping</strong><span>Who can sign in, when the last backup was taken</span></div>
+                    <div class="bb-procedure"><code>A14</code><strong>Reproduce the numbers</strong><span>The reports recalculated from the raw rows</span></div>
+                </div>
+                <p class="bb-note" style="text-align:center;">The procedures report what they
+                found and leave the conclusion to the person. That is the difference between
+                a procedure and an opinion, and it is the habit the handbook teaches.</p>
+
+                <div class="bb-two" style="margin-top: var(--space-16);">
+                    <div>
+                        <h3>A record that shows when it has been changed</h3>
+                        <p>Every entry carries a SHA-256 fingerprint that includes the
+                        fingerprint of the entry before it. Change an old number and the chain
+                        says so, because every fingerprint after it stops matching. A closed
+                        period is sealed the same way, one level up.</p>
+                        <p>An auditor in training gets to see both sides of that: what an
+                        intact record looks like, and what it looks like when somebody edits
+                        the database outside the application.</p>
+                        <ul class="bb-list">
+                            <li>Voiding a mistake does not break the chain. Editing the original would.</li>
+                            <li>The chain proves integrity, not accuracy. Both are needed, and the handbook keeps them apart.</li>
+                        </ul>
+                    </div>
+                    <figure class="bb-shot">
+                        <img src="../assets/bytebook/bytebook-chain.png" width="1440" height="960" loading="lazy"
+                             alt="ByteBook's chain view: every ledger entry drawn as a block, with fingerprints as the lines between them, a filter, and a button that verifies the chain">
+                        <figcaption><strong>The chain, drawn from the database.</strong>
+                        Click a block to read the entry, a link to see the two fingerprints it joins.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Accuracy -->
+        <section class="section" id="accuracy">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">Accuracy you can check</div>
+                    <h2>A handbook that cites its sources, and a library that proves them</h2>
+                    <p>Anyone can say a rule is right. The useful question is whether a
+                    reader can check it.</p>
+                </div>
+                <div class="bb-facts">
+                    <div><span class="bb-fact-value">117</span><span class="bb-fact-label">standards held, each with a document fingerprint</span></div>
+                    <div><span class="bb-fact-value">71</span><span class="bb-fact-label">references in the handbook, every one checked against the publisher's text</span></div>
+                    <div><span class="bb-fact-value">3</span><span class="bb-fact-label">IAASB Handbook volumes, 2025 edition</span></div>
+                    <div><span class="bb-fact-value">23</span><span class="bb-fact-label">chapters, about four hours of reading and exercises</span></div>
+                </div>
+                <div class="bb-two">
+                    <div>
+                        <h3>Where the references come from</h3>
+                        <p>New Zealand's accounting and auditing standards are published
+                        free by the External Reporting Board: NZ IFRS, which carry the IASB's
+                        text, and the ISAs (NZ) and PES standards, which carry the IAASB's. The
+                        IAASB Handbook itself is published free by IFAC.</p>
+                        <p>ByteBook's library downloads those documents, stores them, and
+                        records a fingerprint for each. A reference in the handbook names the
+                        standard, the paragraph, the publisher, the address of the document and
+                        the fingerprint of the copy that was read.</p>
+                    </div>
+                    <div class="bb-limits">
+                        <p><strong>What we publish, and what we do not.</strong> The standards
+                        belong to their publishers, and we do not reproduce them. The handbook
+                        quotes short passages with attribution and links to the source.</p>
+                        <p><strong>Three checks run before publication.</strong> Every
+                        reference must name a standard in the library. Every quoted paragraph
+                        must be found at that number in the publisher's own text. Every document
+                        must still match the fingerprint recorded when it was downloaded.</p>
+                        <p><strong>That last one is the useful one.</strong> If a publisher
+                        issues a new version, the fingerprint stops matching, and the handbook
+                        is re-checked before anything is republished.</p>
+                        <p><a href="manual/citations.html">See all 71 references and their sources &rarr;</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. The handbook -->
+        <section class="section" id="handbook" style="background: var(--color-muted);">
+            <div class="container">
+                <div class="bb-handbook">
+                    <div>
+                        <div class="eyebrow">The training handbook</div>
+                        <h2 style="text-align:left; margin-bottom: var(--space-5);">A course that goes with the software</h2>
+                        <p>Twenty-three chapters, written to be read. Part 1 sets up a
+                        training business. Part 2 is the daily work: invoices, payments, bills,
+                        the bank statement, GST, the reports, and closing a period. Part 3 is
+                        the audit side. Part 4 maps every screen to the standard behind it, and
+                        Part 5 is twelve sessions, one per business, with a marking note for
+                        each.</p>
+                        <ul class="bb-handbook-list">
+                            <li><strong>Reads like a book.</strong> Contents, search, a reading position that comes back, and a whole-book page for printing.</li>
+                            <li><strong>References you can follow.</strong> Click a citation and you land on the publisher, the paragraph and the document it was checked against.</li>
+                            <li><strong>Plain language first.</strong> The rule, then what it means, then the paragraph that says so.</li>
+                            <li><strong>Honest about limits.</strong> Where a question is a judgement rather than arithmetic, it says so.</li>
+                        </ul>
+                        <div class="product-actions">
+                            <a class="btn btn-primary" href="manual/">Start reading &rarr;</a>
+                            <a class="inline-link" href="manual/all.html">The whole book on one page</a>
+                        </div>
+                    </div>
+                    <figure class="bb-shot">
+                        <img src="../assets/bytebook/bytebook-handbook.png" width="1440" height="1000" loading="lazy"
+                             alt="The ByteBook Training Handbook on screen: a contents list down the left, the title, a summary and the first chapters">
+                        <figcaption><strong>Free to read, in the browser.</strong>
+                        No account, no download, and it prints to a clean PDF.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Who it is for -->
+        <section class="section" id="who">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">Who it is for</div>
+                    <h2>Firms training accounting and audit staff</h2>
+                    <p>And small businesses that want their own books on their own computer.</p>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>New accounting staff</h3>
+                        <p style="color: var(--color-muted-foreground);">A month of real work in a
+                        business that behaves like one: a payment arrives late, a bill is paid
+                        twice, and the bank does not agree at the first try.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Audit staff in training</h3>
+                        <p style="color: var(--color-muted-foreground);">Fourteen procedures, what
+                        each one is for, and what an exception looks like when the books are
+                        wrong. Then a period they can seal and deliberately break.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Small businesses</h3>
+                        <p style="color: var(--color-muted-foreground);">Invoicing, GST, expenses
+                        and reports, with the books on the owner's own computer. One file, no
+                        account, and an audit trail that cannot be quietly edited.</p>
+                    </div>
+                </div>
+                <div class="bb-limits" style="margin-top: var(--space-10);">
+                    <p><strong>What ByteBook is not.</strong> It works out GST figures from the
+                    transactions you code; whether a particular supply is taxable is a question
+                    about that supply, and Inland Revenue is the authority for it. It prepares
+                    the tax working papers; it does not file them. It reports what the books
+                    contain; it does not conclude.</p>
+                    <p><strong>About the app itself.</strong> ByteBook runs on macOS as a
+                    desktop application, on <code>127.0.0.1</code>, with the books in one
+                    SQLite file and API keys in the macOS Keychain. It is signed ad-hoc, so
+                    the first time it opens on a Mac that has not seen it, macOS may ask you to
+                    confirm. The optional assistant is off by default, never changes a number,
+                    and can run with no internet connection at all.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-banner">
+            <h2>Put it in front of your team</h2>
+            <p>Start with the handbook, then run a simulation in the app.</p>
+            <a href="mailto:bytemind.nz@gmail.com?subject=ByteBook%20training" class="btn btn-outline">Talk to us about training</a>
+        </div>
+
+    </main>
+
+    <footer id="shell-footer" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <p class="footer-brand-name">ByteMind Ltd</p>
+                    <p class="footer-brand-desc">Business analytics, digital transformation, and strategic advisory for professional services across the Asia-Pacific region.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <a href="../services.html">Services</a>
+                    <a href="../indices.html">Indices</a>
+                    <a href="../insights.html">Insights</a>
+                    <a href="../reports.html">Reports</a>
+                    <a href="../about.html">About</a>
+                    <a href="../contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <a href="../bytebook/">ByteBook</a>
+                    <a href="../bytetax/">ByteTax</a>
+                    <a href="../byteproof.html">ByteProof</a>
+                </div>
+                <div class="footer-col">
+                    <h4>ByteBook</h4>
+                    <a href="manual/">Training handbook</a>
+                    <a href="manual/citations.html">Standards referenced</a>
+                    <a href="#businesses">The twelve businesses</a>
+                    <a href="#assurance">Assurance procedures</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="mailto:bytemind.nz@gmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/michael-zumba/bytemind-website" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 ByteMind Ltd. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+      var button = document.querySelector('.mobile-menu-btn');
+      var links = document.querySelector('.nav-links');
+      if (button && links) {
+        button.addEventListener('click', function () {
+          var open = links.classList.toggle('active');
+          button.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+      var nav = document.querySelector('.navbar');
+      function onScroll() { if (nav) nav.classList.toggle('scrolled', window.scrollY > 8); }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+    </script>
+</body>
+</html>

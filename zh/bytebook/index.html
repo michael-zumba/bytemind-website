@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" class="light">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/logo/favicon-32.png?v=2026">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteBook | 为新西兰企业记账，也是会计与审计团队的训练环境</title>
+    <meta name="description" content="ByteBook 把一套新西兰企业的账目保存在它自己运行的那台电脑上。对会计师事务所而言，它是一个训练环境：十二家模拟企业、一份会把每处更正都留下来的记录，以及十四项可以在真实分录上运行的审计程序。">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ByteMind Ltd">
+    <meta property="og:title" content="ByteBook | 在不伤到任何客户的模拟账目上训练团队">
+    <meta property="og:description" content="十二家模拟的新西兰企业，十四项审计程序，以及一本每处引用都注明出处的训练手册。">
+    <meta property="og:url" content="https://www.bytemind.co.nz/zh/bytebook/">
+    <meta property="og:image" content="https://www.bytemind.co.nz/assets/bytebook/bytebook-og.png">
+    <link rel="canonical" href="https://www.bytemind.co.nz/zh/bytebook/">
+    <link rel="alternate" hreflang="en" href="https://www.bytemind.co.nz/bytebook/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://www.bytemind.co.nz/zh/bytebook/">
+    <link rel="alternate" hreflang="x-default" href="https://www.bytemind.co.nz/bytebook/">
+    <link rel="stylesheet" href="../../colors_and_type.css">
+    <style>
+      .bb-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 30px; }
+      .bb-note { margin-top: 26px; font-size: .95rem; color: var(--color-muted-foreground); }
+      .bb-shot { margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; background: #fff; box-shadow: 0 18px 44px -22px rgba(14, 36, 25, .34); }
+      .bb-shot img { display: block; width: 100%; height: auto; }
+      .bb-shot figcaption { padding: 12px 18px 14px; font-size: .9rem; line-height: 1.5; color: var(--color-muted-foreground); border-top: 1px solid var(--color-border); background: var(--color-card); }
+      .bb-shot figcaption strong { color: var(--color-foreground); font-weight: 600; }
+      .bb-hero-shot { max-width: 1080px; margin: 46px auto 0; }
+      .bb-reasons { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: var(--color-border); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; }
+      .bb-reason { background: var(--color-card); padding: 28px 26px 30px; }
+      .bb-reason h3 { font-family: var(--font-serif); font-size: 1.28rem; margin: 0 0 10px; color: var(--color-primary); }
+      .bb-reason p { margin: 0; font-size: .97rem; }
+      .bb-reason-num { display: block; font-family: var(--font-mono); font-size: .78rem; letter-spacing: .08em; color: var(--color-muted-foreground); margin-bottom: 14px; }
+      .bb-matrix { width: 100%; border-collapse: collapse; font-size: .94rem; }
+      .bb-matrix caption { text-align: left; font-size: .88rem; color: var(--color-muted-foreground); padding-bottom: 14px; }
+      .bb-matrix th { text-align: left; font-size: .72rem; letter-spacing: .1em; color: var(--color-muted-foreground); font-weight: 600; padding: 0 14px 10px 0; border-bottom: 1px solid var(--color-border); }
+      .bb-matrix td { padding: 13px 14px 13px 0; border-bottom: 1px solid var(--color-border-light, #eae5d9); vertical-align: top; }
+      .bb-matrix tr:last-child td { border-bottom: none; }
+      .bb-matrix .bb-name { font-weight: 600; color: var(--color-foreground); }
+      .bb-matrix .bb-trade { color: var(--color-muted-foreground); font-size: .88rem; }
+      .bb-pill { display: inline-block; font-size: .78rem; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--color-border); white-space: nowrap; }
+      .bb-pill-on { background: var(--color-primary-50); border-color: var(--color-primary-200); color: var(--color-primary-700); }
+      .bb-pill-off { background: var(--color-muted); color: var(--color-muted-foreground); }
+      .bb-procedures { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1px; background: var(--color-border); border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; margin-top: var(--space-8); }
+      .bb-procedure { background: var(--color-card); padding: 18px 20px; }
+      .bb-procedure code { font-family: var(--font-mono); font-size: .78rem; color: var(--color-primary-500); display: block; margin-bottom: 6px; }
+      .bb-procedure strong { display: block; font-size: .97rem; color: var(--color-foreground); margin-bottom: 4px; }
+      .bb-procedure span { font-size: .88rem; color: var(--color-muted-foreground); }
+      .bb-two { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); align-items: center; }
+      @media (max-width: 860px) { .bb-two { grid-template-columns: 1fr; } }
+      .bb-two h3 { font-family: var(--font-serif); font-size: 1.6rem; margin: 0 0 12px; color: var(--color-primary); }
+      .bb-two p { margin: 0 0 14px; }
+      .bb-list { list-style: none; padding: 0; margin: 18px 0 0; }
+      .bb-list li { position: relative; padding-left: 22px; margin-bottom: 10px; font-size: .97rem; }
+      .bb-list li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary-400); }
+      .bb-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--space-8); padding: var(--space-8) 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); margin: var(--space-8) 0; }
+      .bb-fact-value { display: block; font-family: var(--font-serif); font-size: 2.2rem; color: var(--color-primary); line-height: 1.1; }
+      .bb-fact-label { display: block; font-size: .85rem; color: var(--color-muted-foreground); margin-top: 6px; }
+      .bb-limits { border-left: 3px solid var(--color-primary-400); padding-left: 20px; margin-top: var(--space-6); }
+      .bb-limits p { margin: 0 0 12px; font-size: .96rem; }
+      .bb-limits p:last-child { margin-bottom: 0; }
+      .bb-manual { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-8); margin-top: var(--space-8); }
+      .bb-manual h3 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-primary); margin: 0 0 12px; }
+      .bb-manual p { margin: 0 0 12px; font-size: .97rem; }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">跳到正文</a>
+
+    <header id="shell-header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="../index.html" class="logo-link">ByteMind</a>
+                <div class="nav-links" id="nav-links">
+                    <a href="../index.html">首页</a>
+                    <a href="../services.html">服务</a>
+                    <a href="../indices.html">指数</a>
+                    <a href="../insights.html">洞察</a>
+                    <a href="../reports.html">报告</a>
+                    <a href="../about.html">关于</a>
+                    <a href="../index.html#products">产品</a>
+                    <a href="../contact.html">联系方式</a>
+                </div>
+                <a href="../../bytebook/index.html" class="lang-switch" data-dom-id="lang-switch" hreflang="en">EN</a>
+                <button type="button" class="mobile-menu-btn" aria-label="切换菜单" aria-controls="nav-links" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section class="page-hero animate-fade-in-up">
+            <div class="eyebrow">产品 · ByteBook</div>
+            <div class="accent-bar"></div>
+            <h1>在一套不会伤到任何客户的账目上训练团队</h1>
+            <p class="hero-intro">ByteBook 管理一家新西兰企业的账目：开发票、商品及服务税、费用报销、银行对账单导入和各类报表，都在同一个应用里，都在这台电脑上。对会计师事务所来说，这就成了一个训练环境。十二家企业可以运行，一份会把每处更正都留下来的记录，以及十四项可以让员工在真实分录上运行的审计程序。</p>
+            <div class="bb-ctas">
+                <a class="btn btn-primary" href="../../bytebook/manual/">阅读训练手册（英文）→</a>
+                <a class="btn btn-secondary" href="#businesses">看看这十二家企业</a>
+            </div>
+            <p class="bb-note">macOS 桌面应用 · 完全离线运行 · 无需账号，不接入云端，数据不外传</p>
+        </section>
+
+        <figure class="bb-shot bb-hero-shot">
+            <img src="../../assets/bytebook/bytebook-dashboard.png" width="1440" height="960"
+                 alt="ByteBook 显示一家模拟企业的概览：银行余额、客户欠款、本月利润、收支图表，以及一份需要处理的清单">
+            <figcaption><strong>一家模拟企业，开业一天之后的账目。</strong>这个页面上的每个数字，都是从它下面那些分录算出来的。</figcaption>
+        </figure>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">事务所为什么这样用它</div>
+                    <h2>学员弄不坏客户的账，因为根本没有客户</h2>
+                    <p>每一次练习都在自己那套账目里运行。不会带到下一次，也不会影响下一个练习。</p>
+                </div>
+                <div class="bb-reasons">
+                    <div class="bb-reason">
+                        <span class="bb-reason-num">01</span>
+                        <h3>要经营的是企业，不是读一张表格</h3>
+                        <p>学员开出发票、给银行流水逐个科目归类、申报一期商品及服务税，再读那些由他们自己过账的分录算出来的报表。难处理的业务是特意放进去的：迟付的客户、重复的付款、手工凭证。</p>
+                    </div>
+                    <div class="bb-reason">
+                        <span class="bb-reason-num">02</span>
+                        <h3>每个错误都看得见，而且都伤不到账</h3>
+                        <p>任何记录都不会被删除或直接改掉。更正是作废：原始分录和它的对冲分录都留着，报表不再计入它们。学员会看到规范的做法是什么样子，因为程序不给他们别的做法。</p>
+                    </div>
+                    <div class="bb-reason">
+                        <span class="bb-reason-num">03</span>
+                        <h3>每一步都对照准则核对</h3>
+                        <p>训练手册为每一步注明背后的会计准则或审计准则，具体到条款号；每一处引用都能追到发布机构的原始文件。全书 71 处引用，每一处都对照它所引用的原文核对过。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="businesses" style="background: var(--color-muted);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">十二家企业</div>
+                    <h2>不同的行业，不同的税务设置，不同的问题</h2>
+                    <p>一家没有做商品及服务税登记的企业，能教的东西是登记过的企业教不了的。半年一申报也是这样，免税租金与应税销售并存也是一样。</p>
+                </div>
+                <table class="bb-matrix">
+                    <caption>每一次模拟都会自行建账、经营、收款、申报一期商品及服务税，然后从最原始的记录重新核算一遍账目。</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">企业</th>
+                            <th scope="col">商品及服务税</th>
+                            <th scope="col">申报</th>
+                            <th scope="col">练的是什么</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="bb-name">Bright Cuts</span><br><span class="bb-trade">理发</span></td><td><span class="bb-pill bb-pill-off">未登记</span></td><td>—</td><td>整套账目里完全没有商品及服务税的开发票与报表</td></tr>
+                        <tr><td><span class="bb-name">Kōwhai Advisory</span><br><span class="bb-trade">咨询</span></td><td><span class="bb-pill bb-pill-on">已登记</span></td><td>每月，收付实现制</td><td>迟付的客户，以及跟着钱走而不是跟着发票走的商品及服务税</td></tr>
+                        <tr><td><span class="bb-name">Tasman Builders Ltd</span><br><span class="bb-trade">建筑</span></td><td><span class="bb-pill bb-pill-on">已登记</span></td><td>每两个月，权责发生制</td><td>分期付款：一份合同、几张发票，按完工进度确认收入</td></tr>
+                        <tr><td><span class="bb-name">Harbour Cafe &amp; Co</span><br><span class="bb-trade">餐饮</span></td><td><span class="bb-pill bb-pill-on">已登记</span></td><td>每月</td><td>大量小额销售，以及一辆可供私人使用的车辆</td></tr>
+                        <tr><td><span class="bb-name">Loom &amp; Light</span><br><span class="bb-trade">网络零售</span></td><td><span class="bb-pill bb-pill-on">已登记</span></td><td>每两个月</td><td>事后冲减收入的退款与退货，以及用一笔作废来更正</td></tr>
+                        <tr><td><span class="bb-name">Marine Parade Rentals</span><br><span class="bb-trade">物业出租</span></td><td><span class="bb-pill bb-pill-on">已登记</span></td><td>每两个月</td><td>免税租金与应税销售并存，申报表需要格外当心</td></tr>
+                        <tr><td><span class="bb-name">Whirinaki Contracting</span><br><span class="bb-trade">园艺承包</span></td><td><span class="bb-pill bb-pill-on">已登记</span></td><td>每六个月</td><td>很长的申报期、季节性的成本，以及有私人用途的工作用车</td></tr>
+                        <tr><td><span class="bb-name">Foundry Labs</span><br><span class="bb-trade">软件</span></td><td><span class="bb-pill bb-pill-off">未登记</span></td><td>—</td><td>还没有收入的企业：只有成本，以及一张能看出谁在出钱的资产负债表</td></tr>
+                        <tr><td><span class="bb-name">Marine Parade Dental</span><br><span class="bb-trade">牙科</span></td><td><span class="bb-pill bb-pill-on">已登记</span></td><td>每月</td><td>开启安全设置：四种角色、密码，以及处理一次输错的密码</td></tr>
+                        <tr><td><span class="bb-name">Ngata Plumbing Ltd</span><br><span class="bb-trade">水暖</span></td><td><span class="bb-pill bb-pill-on">已登记</span></td><td>每两个月</td><td>一份有很多笔要归类的银行流水，以及很短的付款期限</td></tr>
+                        <tr><td><span class="bb-name">Pacific Trading Ltd</span><br><span class="bb-trade">批发</span></td><td><span class="bb-pill bb-pill-on">已登记</span></td><td>每六个月</td><td>买进卖出的存货、一笔大额进口，以及 6 月结账日</td></tr>
+                        <tr><td><span class="bb-name">Precision Engineering Ltd</span><br><span class="bb-trade">工程</span></td><td><span class="bb-pill bb-pill-on">已登记</span></td><td>每两个月</td><td>专门挑出来让错误四舍五入方式露馅的一批金额</td></tr>
+                    </tbody>
+                </table>
+                <p class="bb-note">每一次模拟都是驱动真实的应用，而不是直接写数据库。所以学员和模拟走的是完全相同的页面。</p>
+            </div>
+        </section>
+
+        <section class="section" id="work">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">日常工作</div>
+                    <h2>学员实际在做什么</h2>
+                    <p>就是真实事务所里一个月走下来的顺序。</p>
+                </div>
+                <div class="bb-two">
+                    <figure class="bb-shot">
+                        <img src="../../assets/bytebook/bytebook-bank.png" width="1440" height="960" loading="lazy"
+                             alt="ByteBook 的银行与归类页面：五行等待归类，一个从网上银行导入 CSV 的位置，以及一块把 ByteBook 的银行余额与对账单比较的面板">
+                        <figcaption><strong>导入对账单，再逐笔归类。</strong>还有五行没处理。没归类之前，它们不在任何报表里。</figcaption>
+                    </figure>
+                    <div>
+                        <h3>归类才是判断力的地方</h3>
+                        <p>小型企业账目上多数错误都发生在这个页面：速度快，一次要做几百笔。学员必须判断每一笔是什么业务，而程序会告诉他们还有多少个判断没做。</p>
+                        <p>页面的下半部分把归类变成一个检验：学员填入银行对账单的期末余额和日期，ByteBook 会回答它自己记的银行余额是否对得上。</p>
+                        <ul class="bb-list">
+                            <li>余额调节不是打杂的算术，它是把账目与账外的凭证绑在一起的那道检验。</li>
+                            <li>余额可以对上，同时还有二十行没归类——那不叫余额调节。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="assurance" style="background: var(--color-muted);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">审计这一侧</div>
+                    <h2>十四项自己会跑的程序，并且报告它们查到了什么</h2>
+                    <p>每次打开都会在真实分录上重新运行，每一项都能导出成可以让别人接手看的审计工作底稿。</p>
+                </div>
+                <div class="bb-procedures">
+                    <div class="bb-procedure"><code>A01</code><strong>账簿完整性</strong><span>每笔分录仍与它被封存的指纹一致</span></div>
+                    <div class="bb-procedure"><code>A02</code><strong>复式记账</strong><span>每笔分录的两边都相等</span></div>
+                    <div class="bb-procedure"><code>A03</code><strong>银行余额调节</strong><span>账簿与对账单一致，且每一行都已处理</span></div>
+                    <div class="bb-procedure"><code>A04</code><strong>应收账款</strong><span>别人欠的钱真实存在、账龄正确、不会多记</span></div>
+                    <div class="bb-procedure"><code>A05</code><strong>应付账款</strong><span>欠别人的都记了，没有一笔账单被付两次</span></div>
+                    <div class="bb-procedure"><code>A06</code><strong>商品及服务税核对</strong><span>申报表与账簿一致，也与已申报的数据一致</span></div>
+                    <div class="bb-procedure"><code>A07</code><strong>手工凭证</strong><span>列出所有手工分录，以及是谁、什么时候过账的</span></div>
+                    <div class="bb-procedure"><code>A08</code><strong>重复付款</strong><span>一周之内向同一供应商付出相同金额</span></div>
+                    <div class="bb-procedure"><code>A09</code><strong>截止性</strong><span>日期在未来，或在已封存期间内的分录</span></div>
+                    <div class="bb-procedure"><code>A10</code><strong>凭证与合规</strong><span>超过 50 元的税务发票，以及缺少必要信息的凭证</span></div>
+                    <div class="bb-procedure"><code>A11</code><strong>费用</strong><span>整数金额、大额一次性支出，以及看起来像私人开支的费用</span></div>
+                    <div class="bb-procedure"><code>A12</code><strong>封存包</strong><span>每个已封存的期间，仍与现在的账簿一致</span></div>
+                    <div class="bb-procedure"><code>A13</code><strong>权限与日常维护</strong><span>谁能登录，上一次备份是什么时候</span></div>
+                    <div class="bb-procedure"><code>A14</code><strong>复算数字</strong><span>用最原始的记录把报表重算一遍</span></div>
+                </div>
+                <p class="bb-note" style="text-align:center;">这些程序只报告查到了什么，结论留给人。这正是程序和意见的区别，也是手册要养成的习惯。</p>
+
+                <div class="bb-two" style="margin-top: var(--space-16);">
+                    <div>
+                        <h3>一份能看出自己被改过的记录</h3>
+                        <p>每笔分录都带一个 SHA-256 指纹，而这个指纹包含上一笔分录的指纹。改动一个旧数字，整条链就会说出来：它后面每一个指纹都不再对得上。已封存的期间用同样的方式再封一层。</p>
+                        <p>受训的审计人员会看到这件事的两面：完整记录长什么样，以及有人绕过应用直接改数据库时，它长什么样。</p>
+                        <ul class="bb-list">
+                            <li>用一笔作废来更正，不会断开链条。直接改原始分录才会。</li>
+                            <li>链条证明的是完整性，不是准确性。两者都需要，手册也一直把它们分开讲。</li>
+                        </ul>
+                    </div>
+                    <figure class="bb-shot">
+                        <img src="../../assets/bytebook/bytebook-chain.png" width="1440" height="960" loading="lazy"
+                             alt="ByteBook 的链条视图：每笔账簿分录画成一个方块，指纹画成方块之间的线，还有筛选器和一键验证整条链的按钮">
+                        <figcaption><strong>链条，从数据库里画出来。</strong>点方块看背后的分录，点连线看它连接的两个指纹。</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="accuracy">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">可以自己核对的准确性</div>
+                    <h2>一本注明出处的手册，和一座能证明这些出处的资料库</h2>
+                    <p>谁都可以说某条规则是对的。真正有用的问题是：读者能不能自己核对。</p>
+                </div>
+                <div class="bb-facts">
+                    <div><span class="bb-fact-value">117</span><span class="bb-fact-label">份准则文件，每份都有文件指纹</span></div>
+                    <div><span class="bb-fact-value">71</span><span class="bb-fact-label">处引用，每处都对照发布机构的原文核对过</span></div>
+                    <div><span class="bb-fact-value">3</span><span class="bb-fact-label">册 IAASB 手册（2025 年版）</span></div>
+                    <div><span class="bb-fact-value">23</span><span class="bb-fact-label">章，约四小时的阅读与练习</span></div>
+                </div>
+                <div class="bb-two">
+                    <div>
+                        <h3>这些引用从哪里来</h3>
+                        <p>新西兰的会计准则与审计准则由外部报告委员会（XRB）免费发布：NZ IFRS 包含国际会计准则理事会（IASB）的原文，ISA (NZ) 与 PES 系列准则包含国际审计与鉴证准则理事会（IAASB）的原文。IAASB 手册本身由 IFAC 免费发布。</p>
+                        <p>ByteBook 的资料库下载这些文件、保存下来，并为每份文件记录指纹。手册里的每一处引用都会写明准则、条款号、发布机构、文件地址，以及所核对那一份的指纹。</p>
+                    </div>
+                    <div class="bb-limits">
+                        <p><strong>我们公开什么，不公开什么。</strong>准则属于各自的发布机构，我们不复制它们。手册只做带署名的短引用，并链接到原文出处。</p>
+                        <p><strong>发布前跑三道检查。</strong>每处引用必须指向资料库里真实存在的准则；引用的段落必须能在发布机构自己的原文里按条款号找到；每份文件必须仍与下载时记录的指纹一致。</p>
+                        <p><strong>最后一道最有用。</strong>如果发布机构出了新版本，指纹就不再一致，手册会先对照新版重检，然后才重新发布。</p>
+                        <p><a href="../../bytebook/manual/citations.html">查看全部 71 处引用及其出处 →</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="handbook" style="background: var(--color-muted);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">训练手册</div>
+                    <h2>与软件配套的一门课程</h2>
+                    <p>二十三章，按阅读来写。第一部分建立一家练习企业；第二部分是日常工作：开发票、收款、账单、银行流水、商品及服务税、报表，以及期末结账；第三部分是审计这一侧；第四部分把每个页面映射到它背后的准则；第五部分是十二次练习，一次一家企业，每次都有评分要点。</p>
+                </div>
+                <div class="bb-manual">
+                    <h3>目前以英文撰写</h3>
+                    <p>手册的正文、引用与练习都是英文，可以直接在浏览器里阅读：有目录、全文搜索、会自动记住读到哪里，也有整本一页的版本方便打印成 PDF。</p>
+                    <p>每一处引用都可以点开，看到发布机构、条款号和所核对的文件。如果你希望某几章先出中文版，告诉我们哪几章，我们按需要翻译。</p>
+                    <div class="product-actions">
+                        <a class="btn btn-primary" href="../../bytebook/manual/">开始阅读（英文）→</a>
+                        <a class="inline-link" href="../../bytebook/manual/all.html">整本一页</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="who">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">适合谁</div>
+                    <h2>要训练会计与审计人员的事务所</h2>
+                    <p>以及希望把账目放在自己电脑上的小型企业。</p>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <h3>新入职的会计人员</h3>
+                        <p style="color: var(--color-muted-foreground);">在一家行为像真企业的公司里做一个月：客户迟付款、账单被付了两次、第一次对账总是对不上。</p>
+                    </div>
+                    <div class="card">
+                        <h3>受训的审计人员</h3>
+                        <p style="color: var(--color-muted-foreground);">十四项程序分别是为了什么，以及账目出错时“例外”长什么样。还可以自己封存一个期间，再故意把它改坏。</p>
+                    </div>
+                    <div class="card">
+                        <h3>小型企业</h3>
+                        <p style="color: var(--color-muted-foreground);">开发票、商品及服务税、费用和报表，账目放在企业主自己的电脑上。一个文件，不用账号，审计线索无法被悄悄改动。</p>
+                    </div>
+                </div>
+                <div class="bb-limits" style="margin-top: var(--space-10);">
+                    <p><strong>ByteBook 不做什么。</strong>它根据你归类的交易算出商品及服务税的数字；某一笔供应是否应税，是关于那笔供应本身的问题，新西兰税务局才是最终依据。它准备税务工作底稿，但不代为申报。它报告账目里有什么，不下结论。</p>
+                    <p><strong>关于应用本身。</strong>ByteBook 是 macOS 桌面应用，只监听 <code>127.0.0.1</code>，账目保存在一个 SQLite 文件里，密钥保存在 macOS 钥匙串中。它是临时签名的，所以在还没见过它的电脑上第一次打开时，macOS 可能会让你确认一次。可选的智能助手默认关闭，永远不会改动任何数字，也可以完全断网运行。</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-banner">
+            <h2>把它放到团队面前</h2>
+            <p>先读手册，再在应用里跑一家模拟企业。</p>
+            <a href="mailto:bytemind.nz@gmail.com?subject=ByteBook%20training" class="btn btn-outline">聊聊训练方案</a>
+        </div>
+
+    </main>
+
+    <footer id="shell-footer" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <p class="footer-brand-name">ByteMind Ltd</p>
+                    <p class="footer-brand-desc">为亚太地区的专业服务公司提供商业分析、数字化转型和战略咨询。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>页面</h4>
+                    <a href="../services.html">服务</a>
+                    <a href="../indices.html">指数</a>
+                    <a href="../insights.html">洞察</a>
+                    <a href="../reports.html">报告</a>
+                    <a href="../about.html">关于</a>
+                    <a href="../contact.html">联系方式</a>
+                </div>
+                <div class="footer-col">
+                    <h4>产品</h4>
+                    <a href="../bytebook/">ByteBook</a>
+                    <a href="../bytetax/">ByteTax</a>
+                    <a href="../byteproof.html">ByteProof</a>
+                </div>
+                <div class="footer-col">
+                    <h4>ByteBook</h4>
+                    <a href="../../bytebook/manual/">训练手册</a>
+                    <a href="../../bytebook/manual/citations.html">引用与出处</a>
+                    <a href="#businesses">十二家企业</a>
+                    <a href="#assurance">审计程序</a>
+                </div>
+                <div class="footer-col">
+                    <h4>连接</h4>
+                    <a href="mailto:bytemind.nz@gmail.com">邮箱</a>
+                    <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/michael-zumba/bytemind-website" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 ByteMind Ltd. 保留所有权利。</div>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+      var button = document.querySelector('.mobile-menu-btn');
+      var links = document.querySelector('.nav-links');
+      if (button && links) {
+        button.addEventListener('click', function () {
+          var open = links.classList.toggle('active');
+          button.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+      var nav = document.querySelector('.navbar');
+      function onScroll() { if (nav) nav.classList.toggle('scrolled', window.scrollY > 8); }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+    </script>
+</body>
+</html>

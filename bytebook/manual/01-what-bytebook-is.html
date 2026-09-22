@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Inter:wght@400;450;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
-<link rel="stylesheet" href="book.css?v=46213658b5">
+<link rel="stylesheet" href="book.css?v=0767b26cd7">
 </head>
 <body class="book">
 <a class="skip-link" href="#book-main">Skip to content</a>
@@ -75,11 +75,15 @@
   </nav>
   <main class="book-main" id="book-main">
 <article class="book-chapter">
-  <p class="book-part">Start here</p>
-  <h1>What ByteBook is, and what this handbook is for</h1>
-  <p class="book-meta"><span class="book-meta-item">Chapter 1</span><span class="book-meta-item">6 min read</span></p>
-  <p class="book-summary">A bookkeeping program that keeps your books on your own computer, and a way to learn on a business that cannot be hurt.</p>
-  <div class="book-body">
+  <div class="book-pages" id="book-pages" tabindex="-1">
+    <div class="book-pages-inner" id="book-pages-inner">
+      <header class="book-head">
+        <p class="book-part">Start here</p>
+        <h1>What ByteBook is, and what this handbook is for</h1>
+        <p class="book-meta"><span class="book-meta-item">Chapter 1</span><span class="book-meta-item">6 min read</span></p>
+        <p class="book-summary">A bookkeeping program that keeps your books on your own computer, and a way to learn on a business that cannot be hurt.</p>
+      </header>
+      <div class="book-body">
 <p>ByteBook is a bookkeeping program for New Zealand businesses. It keeps the whole set of books in one file on the computer it runs on. It sends invoices, records bills and expenses, imports a bank statement and codes every line, works out the GST return, and produces the reports an accountant or an auditor asks for.</p>
 <p>It also does something most bookkeeping programs do not. Every entry is sealed with a fingerprint when it is written, and the record can never be quietly changed: a mistake is <em>voided</em>, which posts the mirror image of the entry and leaves both in the books. Anyone can then re-run the checks and see for themselves that the books still add up. That is what makes ByteBook useful for training auditors as well as bookkeepers.</p>
 <h2 id="why-there-is-a-handbook">Why there is a handbook</h2>
@@ -112,6 +116,14 @@
 <li>Name three things a spreadsheet cannot teach that a set of books can.</li>
 <li>Which two standard-setters' documents does this handbook refer to?</li>
 </ol></aside>
+      </div>
+    </div>
+  </div>
+  <div class="book-turn">
+    <button type="button" class="book-turn-btn" data-turn="-1" aria-label="Previous page">&#8249;</button>
+    <span class="book-turn-count" id="book-turn-count" aria-live="polite"></span>
+    <button type="button" class="book-turn-btn" data-turn="1" aria-label="Next page">&#8250;</button>
+    <span class="book-turn-hint">Arrow keys, or the buttons</span>
   </div>
 </article>
 <nav class="book-pager" aria-label="Chapter navigation"><span></span><a class="book-pager-link book-pager-next" href="02-set-up-a-training-business.html"><span class="book-pager-label">Next</span><span class="book-pager-title">Set up a training business</span></a></nav>
@@ -124,6 +136,6 @@
     <div class="book-search-results" id="search-results"></div>
   </div>
 </div>
-<script src="book.js?v=46213658b5" defer></script>
+<script src="book.js?v=0767b26cd7" defer></script>
 </body>
 </html>

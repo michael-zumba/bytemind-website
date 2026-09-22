@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Inter:wght@400;450;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
-<link rel="stylesheet" href="book.css?v=46213658b5">
+<link rel="stylesheet" href="book.css?v=0767b26cd7">
 </head>
 <body class="book">
 <a class="skip-link" href="#book-main">Skip to content</a>
@@ -75,11 +75,15 @@
   </nav>
   <main class="book-main" id="book-main">
 <article class="book-chapter">
-  <p class="book-part">The standards behind the work</p>
-  <h1>How to read a standard reference</h1>
-  <p class="book-meta"><span class="book-meta-item">Chapter 16</span><span class="book-meta-item">8 min read</span></p>
-  <p class="book-summary">What the letters and numbers mean, where each document comes from, and how to follow one to its source.</p>
-  <div class="book-body">
+  <div class="book-pages" id="book-pages" tabindex="-1">
+    <div class="book-pages-inner" id="book-pages-inner">
+      <header class="book-head">
+        <p class="book-part">The standards behind the work</p>
+        <h1>How to read a standard reference</h1>
+        <p class="book-meta"><span class="book-meta-item">Chapter 16</span><span class="book-meta-item">8 min read</span></p>
+        <p class="book-summary">What the letters and numbers mean, where each document comes from, and how to follow one to its source.</p>
+      </header>
+      <div class="book-body">
 <h2 id="two-families-of-document">Two families of document</h2>
 <p>Everything this handbook refers to comes from one of two families.</p>
 <p><strong>Accounting standards</strong> say how a transaction is recognised, measured and disclosed, and what the financial statements must show. In New Zealand they are the <strong>NZ IFRS</strong> standards, issued by the External Reporting Board. Each one carries an international standard from the International Accounting Standards Board with New Zealand additions, which is why they are called NZ IAS 1, NZ IFRS 15, and so on.</p>
@@ -130,6 +134,14 @@
 <li>Why is <code>ISA (NZ) 315.28</code> a better working paper reference than "the risk assessment standard"?</li>
 <li>What does a changed SHA-256 for a standard tell you, and what should you do about it?</li>
 </ol></aside>
+      </div>
+    </div>
+  </div>
+  <div class="book-turn">
+    <button type="button" class="book-turn-btn" data-turn="-1" aria-label="Previous page">&#8249;</button>
+    <span class="book-turn-count" id="book-turn-count" aria-live="polite"></span>
+    <button type="button" class="book-turn-btn" data-turn="1" aria-label="Next page">&#8250;</button>
+    <span class="book-turn-hint">Arrow keys, or the buttons</span>
   </div>
 </article>
 <nav class="book-pager" aria-label="Chapter navigation"><a class="book-pager-link" href="15-roles-and-access.html"><span class="book-pager-label">Previous</span><span class="book-pager-title">Roles: who may do what</span></a><a class="book-pager-link book-pager-next" href="17-accounting-standards.html"><span class="book-pager-label">Next</span><span class="book-pager-title">Accounting standards you will meet in these books</span></a></nav>
@@ -142,6 +154,6 @@
     <div class="book-search-results" id="search-results"></div>
   </div>
 </div>
-<script src="book.js?v=46213658b5" defer></script>
+<script src="book.js?v=0767b26cd7" defer></script>
 </body>
 </html>

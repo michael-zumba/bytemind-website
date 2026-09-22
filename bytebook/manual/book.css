@@ -22,6 +22,8 @@
   --mono: ui-monospace, "SF Mono", "IBM Plex Mono", Menlo, monospace;
   --measure: 70ch;
   --nav-width: 268px;
+  --page-height: min(72vh, 720px);
+  --page-gap: 64px;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -135,10 +137,12 @@ a:hover { color: var(--green); text-decoration-color: currentColor; }
   font-family: var(--serif); font-weight: 500; font-size: 27px; line-height: 1.24;
   color: var(--green); margin: 52px 0 14px; letter-spacing: -0.01em;
   scroll-margin-top: 80px;
+  break-after: avoid;
 }
 .book-body h3 {
   font-family: var(--sans); font-weight: 600; font-size: 17px;
   color: var(--ink); margin: 34px 0 10px; scroll-margin-top: 80px;
+  break-after: avoid;
 }
 .book-body p { margin: 0 0 18px; }
 .book-body strong { color: var(--ink); font-weight: 600; }
@@ -163,6 +167,75 @@ a:hover { color: var(--green); text-decoration-color: currentColor; }
   font-family: var(--serif); font-size: 20px; line-height: 1.5; color: var(--ink);
 }
 .book-body blockquote p { margin: 0; }
+
+/* ── The page: one screenful of the book at a time ─────────────────────── */
+.book-pages {
+  position: relative;
+  height: var(--page-height);
+  overflow: hidden;
+  perspective: 2200px;
+  perspective-origin: 50% 50%;
+}
+.book-pages-inner {
+  height: 100%;
+  column-fill: auto;
+  column-gap: var(--page-gap);
+  transform: translateX(0);
+  transition: transform 460ms cubic-bezier(.22, .61, .36, 1);
+  will-change: transform;
+}
+/* A whole idea stays on one page. */
+.book-body .callout,
+.book-body pre,
+.book-body blockquote,
+.book-head { break-inside: avoid; }
+/* A long table may run on to the next page, but never through the middle of
+   a row. */
+.book-body table { break-inside: auto; }
+.book-body thead { break-after: avoid; }
+.book-body tr { break-inside: avoid; }
+.book-head { padding-bottom: 4px; }
+
+/* The turning leaf: a copy of the page, swinging about the spine. */
+.book-leaf {
+  position: absolute; inset: 0; z-index: 4;
+  overflow: hidden;
+  background: var(--paper);
+  transform-origin: left center;
+  backface-visibility: hidden;
+  pointer-events: none;
+}
+.book-leaf::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(14, 36, 25, 0) 62%, rgba(14, 36, 25, .10) 100%);
+}
+.book-leaf .book-pages-inner { transition: none !important; }
+.book-leaf.running.leaf-out { animation: leaf-out 560ms ease-in-out forwards; }
+.book-leaf.running.leaf-in { animation: leaf-in 560ms ease-in-out forwards; }
+@keyframes leaf-out {
+  0% { transform: rotateY(0deg); box-shadow: 0 0 0 rgba(14, 36, 25, 0); }
+  100% { transform: rotateY(-104deg); box-shadow: 30px 0 50px -24px rgba(14, 36, 25, .34); }
+}
+@keyframes leaf-in {
+  0% { transform: rotateY(-104deg); box-shadow: 30px 0 50px -24px rgba(14, 36, 25, .34); }
+  100% { transform: rotateY(0deg); box-shadow: 0 0 0 rgba(14, 36, 25, 0); }
+}
+
+.book-turn {
+  display: flex; align-items: center; gap: 14px;
+  max-width: var(--measure); margin: 18px 0 0;
+}
+.book-turn-btn {
+  font: inherit; font-size: 22px; line-height: 1;
+  width: 40px; height: 40px; border-radius: 50%;
+  border: 1px solid var(--border); background: var(--surface); color: var(--green);
+  cursor: pointer;
+}
+.book-turn-btn:hover { border-color: var(--green-500); background: var(--green-50); }
+.book-turn-btn[disabled] { opacity: .35; cursor: default; }
+.book-turn-count { font-size: 13.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.book-turn-hint { font-size: 12.5px; color: var(--muted); margin-left: auto; }
+@media (max-width: 700px) { .book-turn-hint { display: none; } }
 
 /* Tables: hairline rules, readable without shouting. */
 .book-body table {
@@ -335,7 +408,7 @@ a:hover { color: var(--green); text-decoration-color: currentColor; }
 
 /* ── Small screens ─────────────────────────────────────────────────────── */
 @media (max-width: 900px) {
-  body.book { font-size: 16.5px; }
+  body.book { font-size: 16.5px; --page-height: min(62vh, 540px); --page-gap: 30px; }
   #contents-toggle { display: inline-block; }
   /* The bar stays above the drawer, so the button that opened it can close it
      again, and the drawer starts below the bar rather than behind it. */
@@ -377,9 +450,11 @@ body.book.embed .book-main { padding: 34px 30px 64px; max-width: 860px; margin: 
 body.book.embed .book-chapter { max-width: none; }
 body.book.embed .book-pager { max-width: none; margin-top: 46px; }
 body.book.embed .book-cover { max-width: none; }
+body.book.embed { --page-height: 540px; --page-gap: 34px; }
 
 @media (max-width: 700px) {
   body.book.embed .book-main { padding: 26px 20px 52px; }
+  body.book.embed { --page-height: 460px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -402,6 +477,10 @@ body.book.embed .book-cover { max-width: none; }
   .book-body h3 { page-break-after: avoid; }
   .book-body p, .book-body li { orphans: 3; widows: 3; }
   .book-body table, .callout, .book-body pre { page-break-inside: avoid; }
+  /* Paper is one long column, not a stack of screens. */
+  .book-pages { height: auto !important; overflow: visible !important; perspective: none; }
+  .book-pages-inner { height: auto !important; transform: none !important; column-width: auto !important; }
+  .book-turn, .book-leaf { display: none !important; }
   a { color: #000; text-decoration: none; }
   .cite { border: none; background: none; padding: 0; font-size: 9.5pt; }
   .cite::before { content: "["; }

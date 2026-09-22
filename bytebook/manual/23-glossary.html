@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Inter:wght@400;450;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
-<link rel="stylesheet" href="book.css?v=46213658b5">
+<link rel="stylesheet" href="book.css?v=0767b26cd7">
 </head>
 <body class="book">
 <a class="skip-link" href="#book-main">Skip to content</a>
@@ -75,11 +75,15 @@
   </nav>
   <main class="book-main" id="book-main">
 <article class="book-chapter">
-  <p class="book-part">Practise</p>
-  <h1>Glossary</h1>
-  <p class="book-meta"><span class="book-meta-item">Chapter 23</span><span class="book-meta-item">8 min read</span></p>
-  <p class="book-summary">The words this handbook uses, in plain language.</p>
-  <div class="book-body">
+  <div class="book-pages" id="book-pages" tabindex="-1">
+    <div class="book-pages-inner" id="book-pages-inner">
+      <header class="book-head">
+        <p class="book-part">Practise</p>
+        <h1>Glossary</h1>
+        <p class="book-meta"><span class="book-meta-item">Chapter 23</span><span class="book-meta-item">8 min read</span></p>
+        <p class="book-summary">The words this handbook uses, in plain language.</p>
+      </header>
+      <div class="book-body">
 <p><strong>Accrual basis.</strong> Recording income and expenses when they are earned or incurred, not when the money moves. A business using the accrual basis can be profitable and short of cash at the same time.</p>
 <p><strong>Adjusting event.</strong> Something that happens after balance date that provides evidence of a condition existing at balance date. The amounts in the accounts are adjusted for it.</p>
 <p><strong>Aged debtors.</strong> Money owed by customers, grouped by how long it has been owed.</p>
@@ -122,6 +126,14 @@
 <p><strong>Void.</strong> To cancel an entry by posting its mirror image, leaving both in the record.</p>
 <p><strong>XRB.</strong> The External Reporting Board, which issues New Zealand's accounting and auditing standards.</p>
 <p><strong>Zero-rated supply.</strong> A supply taxed at 0%: it carries no GST but is not exempt, so GST on related costs can usually still be claimed.</p>
+      </div>
+    </div>
+  </div>
+  <div class="book-turn">
+    <button type="button" class="book-turn-btn" data-turn="-1" aria-label="Previous page">&#8249;</button>
+    <span class="book-turn-count" id="book-turn-count" aria-live="polite"></span>
+    <button type="button" class="book-turn-btn" data-turn="1" aria-label="Next page">&#8250;</button>
+    <span class="book-turn-hint">Arrow keys, or the buttons</span>
   </div>
 </article>
 <nav class="book-pager" aria-label="Chapter navigation"><a class="book-pager-link" href="22-answers.html"><span class="book-pager-label">Previous</span><span class="book-pager-title">Answers to the check-yourself questions</span></a><span></span></nav>
@@ -134,6 +146,6 @@
     <div class="book-search-results" id="search-results"></div>
   </div>
 </div>
-<script src="book.js?v=46213658b5" defer></script>
+<script src="book.js?v=0767b26cd7" defer></script>
 </body>
 </html>

@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Inter:wght@400;450;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
-<link rel="stylesheet" href="book.css?v=46213658b5">
+<link rel="stylesheet" href="book.css?v=0767b26cd7">
 </head>
 <body class="book">
 <a class="skip-link" href="#book-main">Skip to content</a>
@@ -75,11 +75,15 @@
   </nav>
   <main class="book-main" id="book-main">
 <article class="book-chapter">
-  <p class="book-part">The standards behind the work</p>
-  <h1>How this handbook stays accurate</h1>
-  <p class="book-meta"><span class="book-meta-item">Chapter 20</span><span class="book-meta-item">7 min read</span></p>
-  <p class="book-summary">Where every reference came from, how it is checked, and what to do when a standard changes.</p>
-  <div class="book-body">
+  <div class="book-pages" id="book-pages" tabindex="-1">
+    <div class="book-pages-inner" id="book-pages-inner">
+      <header class="book-head">
+        <p class="book-part">The standards behind the work</p>
+        <h1>How this handbook stays accurate</h1>
+        <p class="book-meta"><span class="book-meta-item">Chapter 20</span><span class="book-meta-item">7 min read</span></p>
+        <p class="book-summary">Where every reference came from, how it is checked, and what to do when a standard changes.</p>
+      </header>
+      <div class="book-body">
 <h2 id="the-problem-with-a-handbook">The problem with a handbook</h2>
 <p>Any document that quotes standards is out of date the moment a standard changes, and it is most dangerous when it is confidently out of date. A handbook that teaches last year's rule with this year's certainty is worse than no handbook.</p>
 <p>So accuracy here is not a promise. It is a build step.</p>
@@ -114,6 +118,14 @@
 <li>Why does a handbook that is confidently out of date cause more harm than one that is obviously old?</li>
 <li>A standard is superseded. Why is the old version kept in the library?</li>
 </ol></aside>
+      </div>
+    </div>
+  </div>
+  <div class="book-turn">
+    <button type="button" class="book-turn-btn" data-turn="-1" aria-label="Previous page">&#8249;</button>
+    <span class="book-turn-count" id="book-turn-count" aria-live="polite"></span>
+    <button type="button" class="book-turn-btn" data-turn="1" aria-label="Next page">&#8250;</button>
+    <span class="book-turn-hint">Arrow keys, or the buttons</span>
   </div>
 </article>
 <nav class="book-pager" aria-label="Chapter navigation"><a class="book-pager-link" href="19-screen-by-screen.html"><span class="book-pager-label">Previous</span><span class="book-pager-title">Screen by screen: which standards apply where</span></a><a class="book-pager-link book-pager-next" href="21-twelve-sessions.html"><span class="book-pager-label">Next</span><span class="book-pager-title">Twelve training sessions</span></a></nav>
@@ -126,6 +138,6 @@
     <div class="book-search-results" id="search-results"></div>
   </div>
 </div>
-<script src="book.js?v=46213658b5" defer></script>
+<script src="book.js?v=0767b26cd7" defer></script>
 </body>
 </html>

@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Inter:wght@400;450;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
-<link rel="stylesheet" href="book.css?v=46213658b5">
+<link rel="stylesheet" href="book.css?v=0767b26cd7">
 </head>
 <body class="book">
 <a class="skip-link" href="#book-main">Skip to content</a>
@@ -75,11 +75,15 @@
   </nav>
   <main class="book-main" id="book-main">
 <article class="book-chapter">
-  <p class="book-part">Practise</p>
-  <h1>Twelve training sessions</h1>
-  <p class="book-meta"><span class="book-meta-item">Chapter 21</span><span class="book-meta-item">16 min read</span></p>
-  <p class="book-summary">One session per business, each with a task, the skills it builds, and a marking note.</p>
-  <div class="book-body">
+  <div class="book-pages" id="book-pages" tabindex="-1">
+    <div class="book-pages-inner" id="book-pages-inner">
+      <header class="book-head">
+        <p class="book-part">Practise</p>
+        <h1>Twelve training sessions</h1>
+        <p class="book-meta"><span class="book-meta-item">Chapter 21</span><span class="book-meta-item">16 min read</span></p>
+        <p class="book-summary">One session per business, each with a task, the skills it builds, and a marking note.</p>
+      </header>
+      <div class="book-body">
 <h2 id="how-to-run-a-session">How to run a session</h2>
 <p>Each session takes about an hour. The shape is the same every time:</p>
 <ol>
@@ -147,6 +151,14 @@
 <tr><td>The references</td><td>Every standard cited by paragraph, not by name</td></tr>
 <tr><td>The honesty</td><td>Exceptions are reported with their cause, not hidden</td></tr>
 </tbody></table>
+      </div>
+    </div>
+  </div>
+  <div class="book-turn">
+    <button type="button" class="book-turn-btn" data-turn="-1" aria-label="Previous page">&#8249;</button>
+    <span class="book-turn-count" id="book-turn-count" aria-live="polite"></span>
+    <button type="button" class="book-turn-btn" data-turn="1" aria-label="Next page">&#8250;</button>
+    <span class="book-turn-hint">Arrow keys, or the buttons</span>
   </div>
 </article>
 <nav class="book-pager" aria-label="Chapter navigation"><a class="book-pager-link" href="20-how-this-stays-accurate.html"><span class="book-pager-label">Previous</span><span class="book-pager-title">How this handbook stays accurate</span></a><a class="book-pager-link book-pager-next" href="22-answers.html"><span class="book-pager-label">Next</span><span class="book-pager-title">Answers to the check-yourself questions</span></a></nav>
@@ -159,6 +171,6 @@
     <div class="book-search-results" id="search-results"></div>
   </div>
 </div>
-<script src="book.js?v=46213658b5" defer></script>
+<script src="book.js?v=0767b26cd7" defer></script>
 </body>
 </html>

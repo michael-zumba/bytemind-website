@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Inter:wght@400;450;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
-<link rel="stylesheet" href="book.css?v=46213658b5">
+<link rel="stylesheet" href="book.css?v=0767b26cd7">
 </head>
 <body class="book">
 <a class="skip-link" href="#book-main">Skip to content</a>
@@ -75,11 +75,15 @@
   </nav>
   <main class="book-main" id="book-main">
 <article class="book-chapter">
-  <p class="book-part">The audit and assurance side</p>
-  <h1>Nothing is deleted: voiding, not editing</h1>
-  <p class="book-meta"><span class="book-meta-item">Chapter 11</span><span class="book-meta-item">8 min read</span></p>
-  <p class="book-summary">Why the correction is more valuable than the tidy-up, and how a void keeps both the mistake and the fix in the record.</p>
-  <div class="book-body">
+  <div class="book-pages" id="book-pages" tabindex="-1">
+    <div class="book-pages-inner" id="book-pages-inner">
+      <header class="book-head">
+        <p class="book-part">The audit and assurance side</p>
+        <h1>Nothing is deleted: voiding, not editing</h1>
+        <p class="book-meta"><span class="book-meta-item">Chapter 11</span><span class="book-meta-item">8 min read</span></p>
+        <p class="book-summary">Why the correction is more valuable than the tidy-up, and how a void keeps both the mistake and the fix in the record.</p>
+      </header>
+      <div class="book-body">
 <h2 id="the-temptation">The temptation</h2>
 <p>You post an invoice to the wrong customer. Or an amount is typed as $1,290 instead of $1,209. The tidy thing is to fix it: change the number, and the books look as though the mistake never happened.</p>
 <p>That is exactly the habit this chapter is here to break.</p>
@@ -112,6 +116,14 @@
 <li>Why does voiding not break the fingerprint chain?</li>
 <li>What does ISA 230.8 require the documentation to make possible?</li>
 </ol></aside>
+      </div>
+    </div>
+  </div>
+  <div class="book-turn">
+    <button type="button" class="book-turn-btn" data-turn="-1" aria-label="Previous page">&#8249;</button>
+    <span class="book-turn-count" id="book-turn-count" aria-live="polite"></span>
+    <button type="button" class="book-turn-btn" data-turn="1" aria-label="Next page">&#8250;</button>
+    <span class="book-turn-hint">Arrow keys, or the buttons</span>
   </div>
 </article>
 <nav class="book-pager" aria-label="Chapter navigation"><a class="book-pager-link" href="10-closing-a-period.html"><span class="book-pager-label">Previous</span><span class="book-pager-title">Closing a month and a year</span></a><a class="book-pager-link book-pager-next" href="12-the-audit-trail-and-the-chain.html"><span class="book-pager-label">Next</span><span class="book-pager-title">The audit trail and the chain</span></a></nav>
@@ -124,6 +136,6 @@
     <div class="book-search-results" id="search-results"></div>
   </div>
 </div>
-<script src="book.js?v=46213658b5" defer></script>
+<script src="book.js?v=0767b26cd7" defer></script>
 </body>
 </html>

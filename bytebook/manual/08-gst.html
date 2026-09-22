@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Inter:wght@400;450;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
-<link rel="stylesheet" href="book.css?v=46213658b5">
+<link rel="stylesheet" href="book.css?v=0767b26cd7">
 </head>
 <body class="book">
 <a class="skip-link" href="#book-main">Skip to content</a>
@@ -75,11 +75,15 @@
   </nav>
   <main class="book-main" id="book-main">
 <article class="book-chapter">
-  <p class="book-part">Doing the books</p>
-  <h1>GST: the return built from your own transactions</h1>
-  <p class="book-meta"><span class="book-meta-item">Chapter 8</span><span class="book-meta-item">11 min read</span></p>
-  <p class="book-summary">Work out a GST return from the ledger, check the boxes against your transactions, and save a snapshot before you file.</p>
-  <div class="book-body">
+  <div class="book-pages" id="book-pages" tabindex="-1">
+    <div class="book-pages-inner" id="book-pages-inner">
+      <header class="book-head">
+        <p class="book-part">Doing the books</p>
+        <h1>GST: the return built from your own transactions</h1>
+        <p class="book-meta"><span class="book-meta-item">Chapter 8</span><span class="book-meta-item">11 min read</span></p>
+        <p class="book-summary">Work out a GST return from the ledger, check the boxes against your transactions, and save a snapshot before you file.</p>
+      </header>
+      <div class="book-body">
 <h2 id="what-the-gst-screen-does">What the GST screen does</h2>
 <p>Open <strong>GST</strong> and ByteBook shows the return for the period you choose, built from the transactions in your books. Nothing is typed in twice and nothing is estimated: every box is a sum of coded entries, and every figure can be traced back to the transactions that produced it.</p>
 <p>The boxes you will meet:</p>
@@ -128,6 +132,14 @@
 <li>What is the difference between box 5 and box 9, and why does the distinction matter?</li>
 <li>Why does ByteBook ask you to save a snapshot before filing?</li>
 </ol></aside>
+      </div>
+    </div>
+  </div>
+  <div class="book-turn">
+    <button type="button" class="book-turn-btn" data-turn="-1" aria-label="Previous page">&#8249;</button>
+    <span class="book-turn-count" id="book-turn-count" aria-live="polite"></span>
+    <button type="button" class="book-turn-btn" data-turn="1" aria-label="Next page">&#8250;</button>
+    <span class="book-turn-hint">Arrow keys, or the buttons</span>
   </div>
 </article>
 <nav class="book-pager" aria-label="Chapter navigation"><a class="book-pager-link" href="07-the-bank-statement.html"><span class="book-pager-label">Previous</span><span class="book-pager-title">The bank statement, line by line</span></a><a class="book-pager-link book-pager-next" href="09-reading-the-reports.html"><span class="book-pager-label">Next</span><span class="book-pager-title">Reports: what each one answers</span></a></nav>
@@ -140,6 +152,6 @@
     <div class="book-search-results" id="search-results"></div>
   </div>
 </div>
-<script src="book.js?v=46213658b5" defer></script>
+<script src="book.js?v=0767b26cd7" defer></script>
 </body>
 </html>

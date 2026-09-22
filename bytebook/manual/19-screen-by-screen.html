@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Inter:wght@400;450;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
-<link rel="stylesheet" href="book.css?v=46213658b5">
+<link rel="stylesheet" href="book.css?v=0767b26cd7">
 </head>
 <body class="book">
 <a class="skip-link" href="#book-main">Skip to content</a>
@@ -75,11 +75,15 @@
   </nav>
   <main class="book-main" id="book-main">
 <article class="book-chapter">
-  <p class="book-part">The standards behind the work</p>
-  <h1>Screen by screen: which standards apply where</h1>
-  <p class="book-meta"><span class="book-meta-item">Chapter 19</span><span class="book-meta-item">8 min read</span></p>
-  <p class="book-summary">One table that takes you from the thing you are looking at to the document that governs it.</p>
-  <div class="book-body">
+  <div class="book-pages" id="book-pages" tabindex="-1">
+    <div class="book-pages-inner" id="book-pages-inner">
+      <header class="book-head">
+        <p class="book-part">The standards behind the work</p>
+        <h1>Screen by screen: which standards apply where</h1>
+        <p class="book-meta"><span class="book-meta-item">Chapter 19</span><span class="book-meta-item">8 min read</span></p>
+        <p class="book-summary">One table that takes you from the thing you are looking at to the document that governs it.</p>
+      </header>
+      <div class="book-body">
 <h2 id="the-map">The map</h2>
 <table>
 <thead><tr><th>ByteBook screen</th><th>What you are doing</th><th>Accounting standard</th><th>Auditing standard</th></tr></thead>
@@ -117,6 +121,14 @@
 <li><strong>How is it fixed?</strong> Void the bank transaction and code it against the bill. Both the wrong entry and the correction stay in the record, and <a class="cite" href="citations.html#isa-nz-230-8" title="ISA (NZ) 230 Audit Documentation — paragraph 8" data-cite="ISA 230.8"><span class="cite-mark">ISA (NZ) 230.8</span></a> explains why that matters.</li>
 </ol>
 <p>That five-step shape — what is wrong, which accounting question, which procedure, which auditing standard, how to fix it — is the shape of a working paper. It works for a mis-coded bank line and for a misstated provision alike.</p>
+      </div>
+    </div>
+  </div>
+  <div class="book-turn">
+    <button type="button" class="book-turn-btn" data-turn="-1" aria-label="Previous page">&#8249;</button>
+    <span class="book-turn-count" id="book-turn-count" aria-live="polite"></span>
+    <button type="button" class="book-turn-btn" data-turn="1" aria-label="Next page">&#8250;</button>
+    <span class="book-turn-hint">Arrow keys, or the buttons</span>
   </div>
 </article>
 <nav class="book-pager" aria-label="Chapter navigation"><a class="book-pager-link" href="18-auditing-standards.html"><span class="book-pager-label">Previous</span><span class="book-pager-title">Auditing standards you will meet in these procedures</span></a><a class="book-pager-link book-pager-next" href="20-how-this-stays-accurate.html"><span class="book-pager-label">Next</span><span class="book-pager-title">How this handbook stays accurate</span></a></nav>
@@ -129,6 +141,6 @@
     <div class="book-search-results" id="search-results"></div>
   </div>
 </div>
-<script src="book.js?v=46213658b5" defer></script>
+<script src="book.js?v=0767b26cd7" defer></script>
 </body>
 </html>

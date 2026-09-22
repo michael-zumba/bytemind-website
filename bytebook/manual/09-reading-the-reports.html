@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Inter:wght@400;450;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
-<link rel="stylesheet" href="book.css?v=46213658b5">
+<link rel="stylesheet" href="book.css?v=0767b26cd7">
 </head>
 <body class="book">
 <a class="skip-link" href="#book-main">Skip to content</a>
@@ -75,11 +75,15 @@
   </nav>
   <main class="book-main" id="book-main">
 <article class="book-chapter">
-  <p class="book-part">Doing the books</p>
-  <h1>Reports: what each one answers</h1>
-  <p class="book-meta"><span class="book-meta-item">Chapter 9</span><span class="book-meta-item">11 min read</span></p>
-  <p class="book-summary">Six reports, one question each — and how to check that a report is telling you the truth.</p>
-  <div class="book-body">
+  <div class="book-pages" id="book-pages" tabindex="-1">
+    <div class="book-pages-inner" id="book-pages-inner">
+      <header class="book-head">
+        <p class="book-part">Doing the books</p>
+        <h1>Reports: what each one answers</h1>
+        <p class="book-meta"><span class="book-meta-item">Chapter 9</span><span class="book-meta-item">11 min read</span></p>
+        <p class="book-summary">Six reports, one question each — and how to check that a report is telling you the truth.</p>
+      </header>
+      <div class="book-body">
 <h2 id="one-report-one-question">One report, one question</h2>
 <p>ByteBook's reports are deliberately narrow. Each one answers a single question, and knowing which question saves a lot of time.</p>
 <table>
@@ -115,6 +119,14 @@
 <li>ByteBook's balance sheet states the difference between assets and liabilities plus equity. Why show a figure that should always be zero?</li>
 <li>A vehicle is bought with a bank loan. What appears in the statement of cash flows, and why?</li>
 </ol></aside>
+      </div>
+    </div>
+  </div>
+  <div class="book-turn">
+    <button type="button" class="book-turn-btn" data-turn="-1" aria-label="Previous page">&#8249;</button>
+    <span class="book-turn-count" id="book-turn-count" aria-live="polite"></span>
+    <button type="button" class="book-turn-btn" data-turn="1" aria-label="Next page">&#8250;</button>
+    <span class="book-turn-hint">Arrow keys, or the buttons</span>
   </div>
 </article>
 <nav class="book-pager" aria-label="Chapter navigation"><a class="book-pager-link" href="08-gst.html"><span class="book-pager-label">Previous</span><span class="book-pager-title">GST: the return built from your own transactions</span></a><a class="book-pager-link book-pager-next" href="10-closing-a-period.html"><span class="book-pager-label">Next</span><span class="book-pager-title">Closing a month and a year</span></a></nav>
@@ -127,6 +139,6 @@
     <div class="book-search-results" id="search-results"></div>
   </div>
 </div>
-<script src="book.js?v=46213658b5" defer></script>
+<script src="book.js?v=0767b26cd7" defer></script>
 </body>
 </html>

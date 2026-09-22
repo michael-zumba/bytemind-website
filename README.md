@@ -16,7 +16,7 @@ ByteMind Ltd is a **boutique consulting firm** specialising in business analytic
 *   `reports.html`: Deep analytical reports (distinct from shorter Insights articles).
 *   `about.html`: About page.
 *   `contact.html`: Contact page.
-*   `bytebook/`: ByteBook product page, and the training handbook the site publishes (`bytebook/manual/`). The handbook is generated: chapters are written in the ByteBook project at `ByteBook/manual/content/` and built with `python manual/build_manual.py`, which checks every standard reference against the publisher's own text before writing the reader.
+*   `bytebook/`: ByteBook product page, and the training handbook the site publishes (`bytebook/manual/`). The handbook is generated: chapters are written in the ByteBook project at `ByteBook/manual/content/` and built with `python manual/build_manual.py`, which checks every standard reference against the publisher's own text before writing the reader. The product page embeds the book in an iframe and lists the chapters from `bytebook/manual/contents.json`, so the two cannot drift; `?embed=1` on any handbook page drops the reader's own bar and contents rail for use inside a frame.
 *   `bytetax/`: ByteTax product page, and the playable learning game (`bytetax/play/`).
 *   `byteproof.html`: ByteProof product page.
 *   `assets/`: CSS (modern design system), JS (interactive logic), Images, Logos.

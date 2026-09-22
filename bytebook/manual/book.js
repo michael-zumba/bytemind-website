@@ -25,6 +25,33 @@
 
   var chapterSlug = (location.pathname.split("/").pop() || "index.html").replace(".html", "");
   var lastPosition = 0;
+  var embedded = /[?&]embed=1\b/.test(location.search);
+
+  if (embedded) {
+    document.body.classList.add("embed");
+    // A reader who follows a previous/next link inside the frame must stay in
+    // reading mode, so every link that stays in the book keeps the flag.
+    var localLinks = document.querySelectorAll('a[href$=".html"]');
+    for (var i = 0; i < localLinks.length; i++) {
+      var href = localLinks[i].getAttribute("href");
+      if (!href || href.charAt(0) === "#" || href.indexOf("://") !== -1) continue;
+      if (href.indexOf("embed=1") !== -1) continue;
+      localLinks[i].setAttribute(
+        "href",
+        href + (href.indexOf("?") === -1 ? "?embed=1" : "&embed=1")
+      );
+    }
+    // Tell the host page which chapter is showing, so its own chapter list
+    // keeps up when a reader uses the previous or next link inside the frame.
+    window.addEventListener("load", function () {
+      if (window.parent !== window) {
+        window.parent.postMessage(
+          { type: "bytebook-handbook", slug: chapterSlug, title: document.title },
+          "*"
+        );
+      }
+    });
+  }
 
   function rememberPosition() {
     var main = document.getElementById("book-main");

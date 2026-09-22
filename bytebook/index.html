@@ -118,6 +118,34 @@
       .bb-limits { border-left: 3px solid var(--color-primary-400); padding-left: 20px; margin-top: var(--space-6); }
       .bb-limits p { margin: 0 0 12px; font-size: .96rem; }
       .bb-limits p:last-child { margin-bottom: 0; }
+
+      /* The handbook, read here rather than described here. */
+      .bb-reader { max-width: 1060px; margin: 0 auto; }
+      .bb-reader-bar {
+        display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+        padding: 13px 16px; background: var(--color-card);
+        border: 1px solid var(--color-border); border-bottom: none;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      }
+      .bb-reader-bar label {
+        font-size: .7rem; letter-spacing: .1em; text-transform: uppercase;
+        color: var(--color-muted-foreground); font-weight: 600;
+      }
+      .bb-reader-bar select {
+        flex: 1 1 320px; min-width: 0; font: inherit; font-size: .94rem;
+        padding: 8px 12px; border: 1px solid var(--color-border);
+        border-radius: 8px; background: var(--color-background); color: var(--color-foreground);
+      }
+      .bb-reader-bar .inline-link { margin-left: auto; font-size: .95rem; white-space: nowrap; }
+      .bb-reader-frame {
+        border: 1px solid var(--color-border);
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        overflow: hidden; background: var(--color-background);
+        box-shadow: 0 18px 44px -26px rgba(14, 36, 25, .3);
+      }
+      .bb-reader-frame iframe { display: block; width: 100%; height: 660px; border: 0; background: var(--color-background); }
+      @media (max-width: 700px) { .bb-reader-frame iframe { height: 480px; } }
+      .bb-reader-note { margin: 14px auto 0; max-width: 62ch; font-size: .9rem; line-height: 1.6; color: var(--color-muted-foreground); text-align: center; }
     </style>
 </head>
 <body>
@@ -380,6 +408,12 @@
                     <p>Each one runs on every visit, against the actual entries, and offers a
                     working paper your staff can hand to somebody else.</p>
                 </div>
+                <figure class="bb-shot bb-hero-shot" style="margin-bottom: var(--space-10);">
+                    <img src="../assets/bytebook/bytebook-assurance.png" width="1440" height="960" loading="lazy"
+                         alt="ByteBook's Assurance screen listing the fourteen procedures with their objectives and results: four bank lines not coded, three figures that do not reproduce from the ledger, and every entry verified with no breaks in the chain">
+                    <figcaption><strong>The programme, run against a simulated business's real entries.</strong>
+                    Two procedures found something to look at; the rest report what they checked.</figcaption>
+                </figure>
                 <div class="bb-procedures">
                     <div class="bb-procedure"><code>A01</code><strong>Ledger integrity</strong><span>Every entry still matches the fingerprint it was sealed with</span></div>
                     <div class="bb-procedure"><code>A02</code><strong>Double entry</strong><span>The two sides of every entry are equal</span></div>
@@ -472,33 +506,54 @@
         <!-- 7. The handbook -->
         <section class="section" id="handbook" style="background: var(--color-muted);">
             <div class="container">
-                <div class="bb-handbook">
-                    <div>
-                        <div class="eyebrow">The training handbook</div>
-                        <h2 style="text-align:left; margin-bottom: var(--space-5);">A course that goes with the software</h2>
-                        <p>Twenty-three chapters, written to be read. Part 1 sets up a
-                        training business. Part 2 is the daily work: invoices, payments, bills,
-                        the bank statement, GST, the reports, and closing a period. Part 3 is
-                        the audit side. Part 4 maps every screen to the standard behind it, and
-                        Part 5 is twelve sessions, one per business, with a marking note for
-                        each.</p>
-                        <ul class="bb-handbook-list">
-                            <li><strong>Reads like a book.</strong> Contents, search, a reading position that comes back, and a whole-book page for printing.</li>
-                            <li><strong>References you can follow.</strong> Click a citation and you land on the publisher, the paragraph and the document it was checked against.</li>
-                            <li><strong>Plain language first.</strong> The rule, then what it means, then the paragraph that says so.</li>
-                            <li><strong>Honest about limits.</strong> Where a question is a judgement rather than arithmetic, it says so.</li>
-                        </ul>
-                        <div class="product-actions">
-                            <a class="btn btn-primary" href="manual/">Start reading &rarr;</a>
-                            <a class="inline-link" href="manual/all.html">The whole book on one page</a>
-                        </div>
+                <div class="section-header">
+                    <div class="eyebrow">The training handbook</div>
+                    <h2>A course that goes with the software</h2>
+                    <p>Twenty-three chapters, written to be read. Part 1 sets up a training
+                    business. Part 2 is the daily work. Part 3 is the audit side. Part 4 maps
+                    every screen to the standard behind it, and Part 5 is twelve sessions, one
+                    per business, with a marking note for each. Start here, or open it on its
+                    own.</p>
+                </div>
+
+                <div class="bb-reader">
+                    <div class="bb-reader-bar">
+                        <label for="bb-chapter-select">Chapter</label>
+                        <select id="bb-chapter-select" aria-label="Choose a chapter of the training handbook">
+                            <option value="01-what-bytebook-is">1. What ByteBook is, and what this handbook is for</option>
+                        </select>
+                        <a class="inline-link" href="manual/">Open the full handbook &rarr;</a>
                     </div>
-                    <figure class="bb-shot">
-                        <img src="../assets/bytebook/bytebook-handbook.png" width="1440" height="1000" loading="lazy"
-                             alt="The ByteBook Training Handbook on screen: a contents list down the left, the title, a summary and the first chapters">
-                        <figcaption><strong>Free to read, in the browser.</strong>
-                        No account, no download, and it prints to a clean PDF.</figcaption>
-                    </figure>
+                    <div class="bb-reader-frame">
+                        <iframe id="bb-reader-frame"
+                                src="manual/01-what-bytebook-is.html?embed=1"
+                                title="The ByteBook Training Handbook, read here"
+                                loading="lazy"></iframe>
+                    </div>
+                    <p class="bb-reader-note">This is the handbook itself, on this page.
+                    Turn a page below and the chapter list keeps up. Every citation in the
+                    text opens the standard, the paragraph and the document it was checked
+                    against. <a href="manual/all.html">The whole book on one page</a> is there
+                    for printing.</p>
+                </div>
+
+                <div class="bb-reasons" style="margin-top: var(--space-12);">
+                    <div class="bb-reason">
+                        <h3>Reads like a book</h3>
+                        <p>Contents, full-text search, a reading position that comes back, and
+                        keyboard paging. Nothing to install and no account.</p>
+                    </div>
+                    <div class="bb-reason">
+                        <h3>References you can follow</h3>
+                        <p>A citation names the standard, the paragraph and the publisher, and
+                        quotes the words it rests on. One click and you are reading the source.</p>
+                    </div>
+                    <div class="bb-reason">
+                        <h3>Plain language first, then the rule</h3>
+                        <p>What to do, what it means for the numbers, then the paragraph that
+                        says so. Where the answer is a judgement rather than arithmetic, it says
+                        that too.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -596,6 +651,44 @@
     </footer>
 
     <script>
+    (function () {
+      // The embedded handbook: a chapter list on this page, and a frame that
+      // follows it. Both come from the published book, so they cannot drift.
+      var select = document.getElementById('bb-chapter-select');
+      var frame = document.getElementById('bb-reader-frame');
+      if (select && frame) {
+        var slugOf = function (src) {
+          return (src || '').split('?')[0].split('/').pop().replace('.html', '');
+        };
+        fetch('manual/contents.json')
+          .then(function (response) { return response.json(); })
+          .then(function (book) {
+            select.innerHTML = '';
+            book.chapters.forEach(function (chapter) {
+              var option = document.createElement('option');
+              option.value = chapter.slug;
+              option.textContent = chapter.number + '. ' + chapter.title +
+                (chapter.minutes ? ' \u00b7 ' + chapter.minutes + ' min' : '');
+              select.appendChild(option);
+            });
+            select.value = slugOf(frame.getAttribute('src'));
+          })
+          .catch(function () { select.disabled = true; });
+        select.addEventListener('change', function () {
+          frame.setAttribute('src', 'manual/' + select.value + '.html?embed=1');
+        });
+        window.addEventListener('message', function (event) {
+          if (event.origin !== location.origin) return;
+          if (!event.data || event.data.type !== 'bytebook-handbook') return;
+          for (var i = 0; i < select.options.length; i++) {
+            if (select.options[i].value === event.data.slug) {
+              select.value = event.data.slug;
+              return;
+            }
+          }
+        });
+      }
+    })();
     (function () {
       var button = document.querySelector('.mobile-menu-btn');
       var links = document.querySelector('.nav-links');

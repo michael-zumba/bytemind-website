@@ -365,6 +365,23 @@ a:hover { color: var(--green); text-decoration-color: currentColor; }
   .cite-facts dt { margin-top: 8px; }
 }
 
+/* ── Embedded: the same chapters, inside another page ──────────────────────
+   With ?embed=1 the reader drops its own bar and contents rail so the host
+   page can show a chapter in a frame. The chapter, the citations and the
+   previous/next links stay, because those are the parts being read. */
+body.book.embed .book-bar,
+body.book.embed .book-nav,
+body.book.embed .skip-link { display: none; }
+body.book.embed .book-shell { display: block; max-width: none; padding: 0; }
+body.book.embed .book-main { padding: 34px 30px 64px; max-width: 860px; margin: 0 auto; }
+body.book.embed .book-chapter { max-width: none; }
+body.book.embed .book-pager { max-width: none; margin-top: 46px; }
+body.book.embed .book-cover { max-width: none; }
+
+@media (max-width: 700px) {
+  body.book.embed .book-main { padding: 26px 20px 52px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .book-nav { transition: none; }

@@ -61,6 +61,32 @@
       .bb-manual { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-8); margin-top: var(--space-8); }
       .bb-manual h3 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--color-primary); margin: 0 0 12px; }
       .bb-manual p { margin: 0 0 12px; font-size: .97rem; }
+      /* The handbook, read on this page rather than described on it. */
+      .bb-reader { max-width: 1060px; margin: 0 auto; }
+      .bb-reader-bar {
+        display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+        padding: 13px 16px; background: var(--color-card);
+        border: 1px solid var(--color-border); border-bottom: none;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+      }
+      .bb-reader-bar label {
+        font-size: .7rem; letter-spacing: .1em; color: var(--color-muted-foreground); font-weight: 600;
+      }
+      .bb-reader-bar select {
+        flex: 1 1 320px; min-width: 0; font: inherit; font-size: .94rem;
+        padding: 8px 12px; border: 1px solid var(--color-border);
+        border-radius: 8px; background: var(--color-background); color: var(--color-foreground);
+      }
+      .bb-reader-bar .inline-link { margin-left: auto; font-size: .95rem; white-space: nowrap; }
+      .bb-reader-frame {
+        border: 1px solid var(--color-border);
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+        overflow: hidden; background: var(--color-background);
+        box-shadow: 0 18px 44px -26px rgba(14, 36, 25, .3);
+      }
+      .bb-reader-frame iframe { display: block; width: 100%; height: 660px; border: 0; background: var(--color-background); }
+      @media (max-width: 700px) { .bb-reader-frame iframe { height: 480px; } }
+      .bb-reader-note { margin: 14px auto 0; max-width: 64ch; font-size: .9rem; line-height: 1.6; color: var(--color-muted-foreground); text-align: center; }
     </style>
 </head>
 <body>
@@ -204,6 +230,11 @@
                     <h2>十四项自己会跑的程序，并且报告它们查到了什么</h2>
                     <p>每次打开都会在真实分录上重新运行，每一项都能导出成可以让别人接手看的审计工作底稿。</p>
                 </div>
+                <figure class="bb-shot bb-hero-shot" style="margin-bottom: var(--space-10);">
+                    <img src="../../assets/bytebook/bytebook-assurance.png" width="1440" height="960" loading="lazy"
+                         alt="ByteBook 的“审计程序”页面：列出十四项程序的目标与结果——四行银行流水未归类、三个数字无法从账簿复算，以及全部十九笔分录已验证、链条无断点">
+                    <figcaption><strong>这套程序，跑在一家模拟企业的真实分录上。</strong>两项发现了需要处理的情况，其余各项报告它们检查了什么。</figcaption>
+                </figure>
                 <div class="bb-procedures">
                     <div class="bb-procedure"><code>A01</code><strong>账簿完整性</strong><span>每笔分录仍与它被封存的指纹一致</span></div>
                     <div class="bb-procedure"><code>A02</code><strong>复式记账</strong><span>每笔分录的两边都相等</span></div>
@@ -275,16 +306,24 @@
                 <div class="section-header">
                     <div class="eyebrow">训练手册</div>
                     <h2>与软件配套的一门课程</h2>
-                    <p>二十三章，按阅读来写。第一部分建立一家练习企业；第二部分是日常工作：开发票、收款、账单、银行流水、商品及服务税、报表，以及期末结账；第三部分是审计这一侧；第四部分把每个页面映射到它背后的准则；第五部分是十二次练习，一次一家企业，每次都有评分要点。</p>
+                    <p>二十三章，按阅读来写。这一页上就能开始读：第一部分建立一家练习企业；第二部分是日常工作：开发票、收款、账单、银行流水、商品及服务税、报表，以及期末结账；第三部分是审计这一侧；第四部分把每个页面映射到它背后的准则；第五部分是十二次练习，一次一家企业，每次都有评分要点。</p>
                 </div>
-                <div class="bb-manual">
-                    <h3>目前以英文撰写</h3>
-                    <p>手册的正文、引用与练习都是英文，可以直接在浏览器里阅读：有目录、全文搜索、会自动记住读到哪里，也有整本一页的版本方便打印成 PDF。</p>
-                    <p>每一处引用都可以点开，看到发布机构、条款号和所核对的文件。如果你希望某几章先出中文版，告诉我们哪几章，我们按需要翻译。</p>
-                    <div class="product-actions">
-                        <a class="btn btn-primary" href="../../bytebook/manual/">开始阅读（英文）→</a>
-                        <a class="inline-link" href="../../bytebook/manual/all.html">整本一页</a>
+
+                <div class="bb-reader">
+                    <div class="bb-reader-bar">
+                        <label for="bb-chapter-select">章节</label>
+                        <select id="bb-chapter-select" aria-label="选择训练手册的章节">
+                            <option value="01-what-bytebook-is">1. What ByteBook is, and what this handbook is for</option>
+                        </select>
+                        <a class="inline-link" href="../../bytebook/manual/">打开完整手册 →</a>
                     </div>
+                    <div class="bb-reader-frame">
+                        <iframe id="bb-reader-frame"
+                                src="../../bytebook/manual/01-what-bytebook-is.html?embed=1"
+                                title="ByteBook 训练手册，可直接在此阅读"
+                                loading="lazy"></iframe>
+                    </div>
+                    <p class="bb-reader-note">这里读到的就是手册本身。往下翻页，章节列表会跟着变。正文、引用与练习目前都是英文；每一处引用都可以点开，看到发布机构、条款号和所核对的文件。如果你希望某几章先出中文版，告诉我们哪几章，我们按需要翻译。</p>
                 </div>
             </div>
         </section>
@@ -366,6 +405,43 @@
     </footer>
 
     <script>
+    (function () {
+      // 嵌入的手册：本页的章节列表与内嵌阅读器，都来自已发布的手册本身。
+      var select = document.getElementById('bb-chapter-select');
+      var frame = document.getElementById('bb-reader-frame');
+      if (select && frame) {
+        var slugOf = function (src) {
+          return (src || '').split('?')[0].split('/').pop().replace('.html', '');
+        };
+        fetch('../../bytebook/manual/contents.json')
+          .then(function (response) { return response.json(); })
+          .then(function (book) {
+            select.innerHTML = '';
+            book.chapters.forEach(function (chapter) {
+              var option = document.createElement('option');
+              option.value = chapter.slug;
+              option.textContent = chapter.number + '. ' + chapter.title +
+                (chapter.minutes ? ' · ' + chapter.minutes + ' min' : '');
+              select.appendChild(option);
+            });
+            select.value = slugOf(frame.getAttribute('src'));
+          })
+          .catch(function () { select.disabled = true; });
+        select.addEventListener('change', function () {
+          frame.setAttribute('src', '../../bytebook/manual/' + select.value + '.html?embed=1');
+        });
+        window.addEventListener('message', function (event) {
+          if (event.origin !== location.origin) return;
+          if (!event.data || event.data.type !== 'bytebook-handbook') return;
+          for (var i = 0; i < select.options.length; i++) {
+            if (select.options[i].value === event.data.slug) {
+              select.value = event.data.slug;
+              return;
+            }
+          }
+        });
+      }
+    })();
     (function () {
       var button = document.querySelector('.mobile-menu-btn');
       var links = document.querySelector('.nav-links');

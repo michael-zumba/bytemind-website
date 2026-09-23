@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ByteProof — AI Proofreading for Word &amp; Any App | ByteMind</title>
-    <meta name="description" content="ByteProof is a desktop app that proofreads your writing with AI. In Microsoft Word it returns tracked changes and comments. In any other app it edits your selected text. macOS and Windows.">
+    <meta name="description" content="ByteProof proofreads the text you select. In Microsoft Word the edits arrive as tracked changes. In any other app your selection is replaced with the polished version. macOS and Windows.">
     <meta name="robots" content="noindex, nofollow">
     <link rel="canonical" href="https://www.bytemind.co.nz/byteproof.html">
     <link rel="icon" type="image/png" href="assets/byteproof/byteproof-icon.png">
@@ -13,7 +13,7 @@
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ByteMind Ltd">
     <meta property="og:title" content="ByteProof — AI Proofreading for Word &amp; Any App">
-    <meta property="og:description" content="Professional proofreading in Microsoft Word with tracked changes, and clean writing polish in any other app. macOS and Windows. Founding price NZ$49, GST included.">
+    <meta property="og:description" content="Tracked changes in Word. Polished text in any app. macOS and Windows. Founding price NZ$49, GST included.">
     <meta property="og:url" content="https://www.bytemind.co.nz/byteproof.html">
     <meta property="og:image" content="https://www.bytemind.co.nz/assets/byteproof/byteproof-og.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -61,10 +61,11 @@
                 </span>
             </a>
             <nav class="header-nav" aria-label="Page sections">
-                <a href="#modes">How it works</a>
+                <a href="#steps">How it works</a>
+                <a href="#modes">Two modes</a>
                 <a href="#examples">Examples</a>
                 <a href="#features">Features</a>
-                <a href="#demo">Demo</a>
+                <a href="#ai">AI &amp; privacy</a>
                 <a href="#download">Download</a>
                 <a href="#pricing">Pricing</a>
                 <a href="#faq">FAQ</a>
@@ -79,13 +80,13 @@
         <!-- ===== Hero ===== -->
         <section class="hero">
             <div class="hero-inner">
-                <span class="hero-badge"><span class="dot"></span>New from ByteMind Ltd</span>
+                <span class="hero-badge"><span class="dot"></span>From ByteMind Ltd</span>
                 <h1>Proofread faster.<br>Edit with <em>confidence.</em></h1>
-                <p class="hero-sub">ByteProof is a desktop app that proofreads your writing with AI. In Microsoft Word it returns tracked changes and comments. In any other app, it replaces your selected text with a polished final version.</p>
+                <p class="hero-sub">ByteProof proofreads the text you select. In Word, edits arrive as tracked changes. In any other app, your selection is replaced with the polished version.</p>
 
                 <div class="hero-ctas">
                     <a class="btn btn-primary btn-lg" href="#download">Download ByteProof <span class="arrow">&rarr;</span></a>
-                    <a class="btn btn-secondary btn-lg" href="#examples">See the difference</a>
+                    <a class="btn btn-secondary btn-lg" href="#steps">See it working</a>
                     <a class="btn btn-ghost btn-lg" href="#demo">Watch demo</a>
                 </div>
 
@@ -111,7 +112,7 @@
         <!-- ===== Model strip ===== -->
         <section class="model-strip" aria-label="Supported AI providers">
             <div class="model-strip-inner">
-                <p>Private local AI, or the models you already use</p>
+                <p>Local AI included, or bring your own model</p>
                 <div class="model-badges">
                     <span class="local">Local AI (Qwen3)</span>
                     <span>DeepSeek</span>
@@ -126,12 +127,72 @@
             </div>
         </section>
 
-        <!-- ===== Modes ===== -->
-        <section class="section" id="modes">
+        <!-- ===== How it works ===== -->
+        <section class="section" id="steps">
             <div class="section-head reveal">
-                <div class="eyebrow">Two ways to proofread</div>
-                <h2>One hotkey. Two intelligent modes.</h2>
-                <p>ByteProof detects what you are working in and adapts automatically.</p>
+                <div class="eyebrow">How it works</div>
+                <h2>Select. Review. Apply.</h2>
+                <p>Three steps, one hotkey. Each clip below is the real app, about three seconds long.</p>
+                <div class="accent-bar"></div>
+            </div>
+
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-copy">
+                        <span class="step-badge">1</span>
+                        <h3>Select the text, press the hotkey</h3>
+                        <p>Cmd+Shift+' on a Mac, Ctrl+Shift+' on Windows. ByteProof reads the words around your selection too.</p>
+                    </div>
+                    <figure class="clip">
+                        <video data-demo muted loop playsinline preload="none" width="1152" height="704"
+                               poster="assets/byteproof/demo-hotkey.jpg"
+                               aria-label="A sentence is selected, the hotkey is pressed, and the suggestion panel appears with three changes">
+                            <source src="assets/byteproof/demo-hotkey.webm" type="video/webm">
+                        </video>
+                        <figcaption>The panel appears next to the text, then fills in the suggestions.</figcaption>
+                    </figure>
+                </div>
+
+                <div class="step flip reveal">
+                    <div class="step-copy">
+                        <span class="step-badge">2</span>
+                        <h3>Review every change</h3>
+                        <p>Each suggestion shows the original, the replacement, and a short reason. Apply the ones you want, or dismiss the rest.</p>
+                    </div>
+                    <figure class="clip">
+                        <video data-demo muted loop playsinline preload="none" width="1152" height="704"
+                               poster="assets/byteproof/demo-review.jpg"
+                               aria-label="Applying one suggestion from the panel, and the applied word changing in the document">
+                            <source src="assets/byteproof/demo-review.webm" type="video/webm">
+                        </video>
+                        <figcaption>One change applied from the list of three. The rest wait for you.</figcaption>
+                    </figure>
+                </div>
+
+                <div class="step reveal">
+                    <div class="step-copy">
+                        <span class="step-badge">3</span>
+                        <h3>Apply all — or undo</h3>
+                        <p>Apply every change in one click. If you change your mind, Undo puts the original text back.</p>
+                    </div>
+                    <figure class="clip">
+                        <video data-demo muted loop playsinline preload="none" width="1152" height="704"
+                               poster="assets/byteproof/demo-apply.jpg"
+                               aria-label="Applying every change, the confirmation appearing, and Undo restoring the original sentence">
+                            <source src="assets/byteproof/demo-apply.webm" type="video/webm">
+                        </video>
+                        <figcaption>Applied, then undone. Both are one click.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Two modes ===== -->
+        <section class="section" id="modes" style="background: var(--bg-soft);">
+            <div class="section-head reveal">
+                <div class="eyebrow">Two modes</div>
+                <h2>Word, or everywhere else.</h2>
+                <p>ByteProof detects what you are working in and adapts. The hotkey is the same either way.</p>
                 <div class="accent-bar"></div>
             </div>
 
@@ -145,11 +206,11 @@
                         </svg>
                     </div>
                     <h3>Microsoft Word — tracked changes</h3>
-                    <p>Proofread an academic paper, thesis or report without losing control of the document.</p>
+                    <p>For papers, theses and reports where every edit has to be visible.</p>
                     <ul class="mode-list">
-                        <li><span class="tick">✓</span>Every edit appears as a Word tracked change, ready for you to accept or reject.</li>
-                        <li><span class="tick">✓</span>Optional reviewer comments explain the reasoning behind a change.</li>
-                        <li><span class="tick">✓</span>Citations, equations and tables are protected from editing.</li>
+                        <li><span class="tick">✓</span>Each edit arrives as a tracked change you can accept or reject.</li>
+                        <li><span class="tick">✓</span>Optional comments explain the reasoning.</li>
+                        <li><span class="tick">✓</span>Citations, equations and tables are left alone.</li>
                     </ul>
                 </article>
 
@@ -160,23 +221,30 @@
                             <path d="M6 9h6M6 13h9M6 17h4"></path>
                         </svg>
                     </div>
-                    <h3>Any other app — clean polish</h3>
-                    <p>Email, browsers, editors and chat windows. Select, press the hotkey, and get the finished text.</p>
+                    <h3>Any other app — clean text</h3>
+                    <p>Email, browsers, editors, chat. Select, press the hotkey, and read the suggestion.</p>
+                    <figure class="clip mode-clip">
+                        <video data-demo muted loop playsinline preload="none" width="1152" height="704"
+                               poster="assets/byteproof/demo-anywhere.jpg"
+                               aria-label="Underlines appearing under wordy phrases in another app, and one suggestion being applied">
+                            <source src="assets/byteproof/demo-anywhere.webm" type="video/webm">
+                        </video>
+                    </figure>
                     <ul class="mode-list">
-                        <li><span class="tick">✓</span>ByteProof reads the surrounding context, so tone, references and meaning stay intact.</li>
-                        <li><span class="tick">✓</span>The selected text is replaced with the polished version, with no tracked changes.</li>
-                        <li><span class="tick">✓</span>Global hotkeys work everywhere on macOS and Windows.</li>
+                        <li><span class="tick">✓</span>Problem phrases are underlined as you work.</li>
+                        <li><span class="tick">✓</span>The selected text is replaced with the polished version.</li>
+                        <li><span class="tick">✓</span>Tone and meaning stay as you wrote them.</li>
                     </ul>
                 </article>
             </div>
         </section>
 
-        <!-- ===== Demo examples ===== -->
-        <section class="section" id="examples" style="background: var(--bg-soft);">
+        <!-- ===== Examples ===== -->
+        <section class="section" id="examples">
             <div class="section-head reveal">
-                <div class="eyebrow">See ByteProof work</div>
-                <h2>One app, four kinds of writing.</h2>
-                <p>Pick a context to see real proposed changes inside the ByteProof window. You always review them before applying.</p>
+                <div class="eyebrow">Before and after</div>
+                <h2>See the difference.</h2>
+                <p>Four kinds of writing. ByteProof keeps your meaning and cuts what gets in the way.</p>
                 <div class="accent-bar"></div>
             </div>
 
@@ -189,113 +257,77 @@
                 </div>
 
                 <div class="tab-panel active" id="tab-journal" role="tabpanel">
-                    <div class="demo-layout">
-                        <figure class="demo-figure">
-                            <img class="lightbox-img" src="assets/byteproof/byteproof-demo-journal.png"
-                                 data-full="assets/byteproof/byteproof-demo-journal.png"
-                                 alt="ByteProof proofreading an academic journal passage, with callouts pointing to proposed changes, copy and proofread controls"
-                                 width="2688" height="1400">
-                            <figcaption>Click the screenshot to view it at full size.</figcaption>
-                        </figure>
-                        <div class="demo-copy">
-                            <h3>Academic journal (top-tier)</h3>
-                            <p class="demo-context">For manuscripts heading to top-tier journals, ByteProof tightens grammar, punctuation and flow while preserving the argument.</p>
-                            <div class="example-panel before">
-                                <div class="example-label">Before</div>
-                                <p class="example-text">"This paper investigates the relationship between corporate governance and firm performance. We find that firms with stronger governance perform significantly better, but this effect is moderated by institutional ownership. The effect is stronger in firms with higher analyst coverage. Our results are robust to alternative specifications, including additional control variables and the exclusion of outliers."</p>
-                            </div>
-                            <div class="example-panel after">
-                                <div class="example-label">After</div>
-                                <p class="example-text">"This paper investigates the relationship between corporate governance and firm performance. We find that firms with stronger governance perform significantly better, but this effect is moderated by institutional ownership. The effect is stronger in firms with higher analyst coverage. Our results are robust to alternative specifications, including additional control variables and the exclusion of outliers."</p>
-                            </div>
-                            <p class="example-note">Wordy academic phrases flagged and removed, without changing the findings.</p>
+                    <div class="demo-copy">
+                        <h3>Academic journal</h3>
+                        <p class="demo-context">For a manuscript heading to a top-tier journal: wordy phrasing trimmed, argument untouched.</p>
+                        <div class="example-panel before">
+                            <div class="example-label">Before</div>
+                            <p class="example-text">"We utilise a range of methods in order to examine the relationship due to the fact that the data is limited."</p>
                         </div>
+                        <div class="example-panel after">
+                            <div class="example-label">After</div>
+                            <p class="example-text">"We use a range of methods to examine the relationship because the data is limited."</p>
+                        </div>
+                        <p class="example-note">Three phrases cut. The finding is unchanged.</p>
                     </div>
                 </div>
 
                 <div class="tab-panel" id="tab-email" role="tabpanel">
-                    <div class="demo-layout">
-                        <figure class="demo-figure">
-                            <img class="lightbox-img" src="assets/byteproof/byteproof-demo-email.png"
-                                 data-full="assets/byteproof/byteproof-demo-email.png"
-                                 alt="ByteProof polishing an email draft, with callouts pointing to proposed changes, copy and proofread controls"
-                                 width="2688" height="1400">
-                            <figcaption>Click the screenshot to view it at full size.</figcaption>
-                        </figure>
-                        <div class="demo-copy">
-                            <h3>General email</h3>
-                            <p class="demo-context">A routine team email: filler removed, tone friendly, message clear.</p>
-                            <div class="example-panel before">
-                                <div class="example-label">Before</div>
-                                <p class="example-text">"Hi team, the meeting has been rescheduled to Thursday at 10am instead of Wednesday. Sorry for any inconvenience. The agenda has been updated and is in the shared folder if you want to look before the meeting."</p>
-                            </div>
-                            <div class="example-panel after">
-                                <div class="example-label">After</div>
-                                <p class="example-text">"Hi team, the meeting has moved to Thursday at 10 am instead of Wednesday. Apologies for the inconvenience. The agenda has also been updated and is available in the shared folder, so you can review it before the meeting."</p>
-                            </div>
-                            <p class="example-note">A wordy email becomes clear, friendly and ready to send.</p>
+                    <div class="demo-copy">
+                        <h3>General email</h3>
+                        <p class="demo-context">A routine team email: filler removed, tone kept friendly.</p>
+                        <div class="example-panel before">
+                            <div class="example-label">Before</div>
+                            <p class="example-text">"Hi team, the meeting has been rescheduled to Thursday at 10am instead of Wednesday. Sorry for any inconvenience. The agenda has been updated and is in the shared folder if you want to look before the meeting."</p>
                         </div>
+                        <div class="example-panel after">
+                            <div class="example-label">After</div>
+                            <p class="example-text">"Hi team, the meeting has moved to Thursday at 10 am instead of Wednesday. Apologies for the inconvenience. The agenda is updated and in the shared folder, so you can review it beforehand."</p>
+                        </div>
+                        <p class="example-note">Shorter, still friendly, ready to send.</p>
                     </div>
                 </div>
 
                 <div class="tab-panel" id="tab-thesis" role="tabpanel">
-                    <div class="demo-layout">
-                        <figure class="demo-figure">
-                            <img class="lightbox-img" src="assets/byteproof/byteproof-demo-thesis.png"
-                                 data-full="assets/byteproof/byteproof-demo-thesis.png"
-                                 alt="ByteProof proofreading a PhD thesis chapter, with callouts pointing to proposed changes, copy and proofread controls"
-                                 width="2688" height="1400">
-                            <figcaption>Click the screenshot to view it at full size.</figcaption>
-                        </figure>
-                        <div class="demo-copy">
-                            <h3>PhD thesis</h3>
-                            <p class="demo-context">A chapter draft: meaning and the candidate's voice are preserved while redundant phrasing is trimmed.</p>
-                            <div class="example-panel before">
-                                <div class="example-label">Before</div>
-                                <p class="example-text">"To examine the relationship between corporate governance and firm value, this chapter draws on agency theory. The analysis focuses on the role of independent directors and how their presence affects monitoring quality. The existing literature has largely overlooked the role of director tenure in explaining monitoring effectiveness."</p>
-                            </div>
-                            <div class="example-panel after">
-                                <div class="example-label">After</div>
-                                <p class="example-text">"To examine the relationship between corporate governance and firm value, this chapter draws on agency theory. It focuses on the role of independent directors and how their presence affects monitoring quality. Existing research has largely overlooked how director tenure affects monitoring effectiveness."</p>
-                            </div>
-                            <p class="example-note">Meaning and voice kept; redundant phrases cut.</p>
+                    <div class="demo-copy">
+                        <h3>PhD thesis</h3>
+                        <p class="demo-context">A chapter draft: your voice and your argument stay, repetition goes.</p>
+                        <div class="example-panel before">
+                            <div class="example-label">Before</div>
+                            <p class="example-text">"To examine the relationship between corporate governance and firm value, this chapter draws on agency theory. The analysis focuses on the role of independent directors and how their presence affects monitoring quality."</p>
                         </div>
+                        <div class="example-panel after">
+                            <div class="example-label">After</div>
+                            <p class="example-text">"To examine the relationship between corporate governance and firm value, this chapter draws on agency theory. It focuses on independent directors and how their presence affects monitoring quality."</p>
+                        </div>
+                        <p class="example-note">Meaning and voice kept; the repeated clause removed.</p>
                     </div>
                 </div>
 
                 <div class="tab-panel" id="tab-general" role="tabpanel">
-                    <div class="demo-layout">
-                        <figure class="demo-figure">
-                            <img class="lightbox-img" src="assets/byteproof/byteproof-demo-general.png"
-                                 data-full="assets/byteproof/byteproof-demo-general.png"
-                                 alt="ByteProof editing a general professional letter, with callouts pointing to proposed changes, copy and proofread controls"
-                                 width="2688" height="1400">
-                            <figcaption>Click the screenshot to view it at full size.</figcaption>
-                        </figure>
-                        <div class="demo-copy">
-                            <h3>General language editing</h3>
-                            <p class="demo-context">A professional letter: formal but clear, with outdated filler removed and the message made direct.</p>
-                            <div class="example-panel before">
-                                <div class="example-label">Before</div>
-                                <p class="example-text">"Your account shows an outstanding balance of $450, overdue since 1 March. Please pay as soon as you can. If you have any questions, contact our accounts team."</p>
-                            </div>
-                            <div class="example-panel after">
-                                <div class="example-label">After</div>
-                                <p class="example-text">"Your account has an outstanding balance of $450, overdue since 1 March. Please arrange payment at your earliest convenience. If you have any questions, please contact our accounts team."</p>
-                            </div>
-                            <p class="example-note">Formal but direct, with filler removed.</p>
+                    <div class="demo-copy">
+                        <h3>General language editing</h3>
+                        <p class="demo-context">A professional letter: formal, and clear about what you want.</p>
+                        <div class="example-panel before">
+                            <div class="example-label">Before</div>
+                            <p class="example-text">"Your account shows an outstanding balance of $450, overdue since 1 March. Please pay as soon as you can. If you have any questions, contact our accounts team."</p>
                         </div>
+                        <div class="example-panel after">
+                            <div class="example-label">After</div>
+                            <p class="example-text">"Your account has an outstanding balance of $450, overdue since 1 March. Please arrange payment at your earliest convenience. If you have any questions, please contact our accounts team."</p>
+                        </div>
+                        <p class="example-note">Formal, direct, no filler.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ===== Features ===== -->
-        <section class="section" id="features">
+        <section class="section" id="features" style="background: var(--bg-soft);">
             <div class="section-head reveal">
-                <div class="eyebrow">Built for serious writing</div>
-                <h2>Everything a careful proofread needs.</h2>
-                <p>ByteProof is designed for academic and professional writing, where small mistakes matter.</p>
+                <div class="eyebrow">What you get</div>
+                <h2>Built for careful writing.</h2>
+                <p>Small mistakes matter in academic and professional work. ByteProof is made for that.</p>
                 <div class="accent-bar"></div>
             </div>
 
@@ -308,7 +340,7 @@
                         </svg>
                     </div>
                     <h3>Tracked changes in Word</h3>
-                    <p>Edits appear as tracked changes in Word, so you can review, accept or reject each one.</p>
+                    <p>Every edit lands as a tracked change. Accept or reject each one.</p>
                 </article>
 
                 <article class="feature-card reveal">
@@ -319,7 +351,7 @@
                         </svg>
                     </div>
                     <h3>Comments when you want them</h3>
-                    <p>Optional reviewer comments explain the reasoning behind a change, instead of silently rewriting your work.</p>
+                    <p>Short notes explain why a change was made, instead of quietly rewriting your work.</p>
                 </article>
 
                 <article class="feature-card reveal">
@@ -330,7 +362,7 @@
                         </svg>
                     </div>
                     <h3>Citations, math &amp; tables protected</h3>
-                    <p>References, equations and tables are kept intact, so a proofread never breaks your formatting.</p>
+                    <p>References, equations and tables are kept as they are.</p>
                 </article>
 
                 <article class="feature-card reveal">
@@ -341,8 +373,8 @@
                             <path d="M8 11h6M11 8v6"></path>
                         </svg>
                     </div>
-                    <h3>Context-aware editing</h3>
-                    <p>ByteProof reads the text around your selection, so tone, references and meaning stay consistent.</p>
+                    <h3>Reads around your selection</h3>
+                    <p>Tone, references and meaning stay consistent with the rest of the document.</p>
                 </article>
 
                 <article class="feature-card reveal">
@@ -351,8 +383,8 @@
                             <path d="M8 9l-3 3 3 3M16 9l3 3-3 3M13 5l-2 14"></path>
                         </svg>
                     </div>
-                    <h3>Your choice of AI provider</h3>
-                    <p>Prefer a cloud model? Connect DeepSeek, OpenAI, Anthropic, Google Gemini, xAI, Groq, Perplexity, or your own Ollama server with your keys.</p>
+                    <h3>Your choice of AI</h3>
+                    <p>Connect DeepSeek, OpenAI, Anthropic, Google Gemini, xAI, Groq, Perplexity or your own Ollama server.</p>
                 </article>
 
                 <article class="feature-card reveal">
@@ -362,112 +394,68 @@
                             <path d="m9 12 2 2 4-4"></path>
                         </svg>
                     </div>
-                    <h3>Private local AI by default</h3>
-                    <p>ByteProof downloads a small Qwen3 model and runs it on your computer. It works offline, with no account or API key required. After your 7-day trial, Local AI stays available in a limited free mode; the NZ$49 license unlocks unlimited use.</p>
+                    <h3>Private local AI included</h3>
+                    <p>ByteProof runs a small Qwen3 model on your computer. It works offline, with no account and no API key.</p>
                 </article>
             </div>
 
             <p class="feature-note reveal">
-                Also included: <strong>UK / AU / NZ or US spelling</strong>, precise or creative editing styles, adjustable creativity, per-provider models, and a <strong>Test Connection</strong> button for every provider.
-                Local AI models are downloaded once and verified before use. Proofread from any app with
-                <span class="mono">Cmd+Shift+'</span> (Mac) or <span class="mono">Ctrl+Shift+'</span> (Windows).
+                Also included: <strong>UK / AU / NZ or US spelling</strong>, precise or creative editing styles, adjustable creativity, per-provider model choice, and a <strong>Test Connection</strong> button for every provider.
             </p>
         </section>
 
-        <!-- ===== Screenshots ===== -->
-        <section class="section" id="screenshots" style="background: var(--bg-soft);">
+        <!-- ===== AI and privacy ===== -->
+        <section class="section" id="ai">
             <div class="section-head reveal">
-                <div class="eyebrow">Inside the app</div>
-                <h2>Focused, fast, easy to review.</h2>
-                <p>ByteProof stays out of your way. A small window, a clear diff, and one button to apply.</p>
+                <div class="eyebrow">AI and privacy</div>
+                <h2>Private by default. Your choice of model.</h2>
+                <p>Proofreading runs on your computer with the included local model. Nothing is sent anywhere unless you connect a cloud provider yourself.</p>
                 <div class="accent-bar"></div>
             </div>
 
-            <div class="shots">
-                <figure class="shot shot-main reveal">
-                    <img class="lightbox-img" src="assets/byteproof/byteproof-app-main.png"
-                         data-full="assets/byteproof/byteproof-app-main.png"
-                         alt="ByteProof main window showing proposed changes with insertions and deletions highlighted"
-                         loading="lazy" width="1968" height="1400">
-                    <figcaption class="shot-caption"><strong>Review before you apply.</strong> Insertions and deletions are highlighted, with Copy and Proofread at hand. Click to enlarge.</figcaption>
-                </figure>
-
-                <div class="shot-grid">
-                    <figure class="shot reveal">
-                        <img class="lightbox-img" src="assets/byteproof/byteproof-app-settings-connect.png"
-                             data-full="assets/byteproof/byteproof-app-settings-connect.png"
-                             alt="ByteProof settings showing the Connect tab with local and cloud AI providers"
-                             loading="lazy" width="1520" height="1880">
-                        <figcaption class="shot-caption"><strong>Choose your AI, or keep it private.</strong> Local AI runs offline by default. Connect your own cloud keys only if you prefer. Click to enlarge.</figcaption>
+            <div class="steps">
+                <div class="step reveal">
+                    <div class="step-copy">
+                        <h3>The local model is the default</h3>
+                        <p>Download it once, then it works offline. No account, no API key, and no text leaving your computer.</p>
+                    </div>
+                    <figure class="clip">
+                        <video data-demo muted loop playsinline preload="none" width="1060" height="740"
+                               poster="assets/byteproof/demo-local.jpg"
+                               aria-label="Downloading the local model in Settings, with the progress bar filling and the model becoming ready">
+                            <source src="assets/byteproof/demo-local.webm" type="video/webm">
+                        </video>
+                        <figcaption>One download, then every proofread runs offline.</figcaption>
                     </figure>
-                    <figure class="shot reveal">
-                        <img class="lightbox-img" src="assets/byteproof/byteproof-app-settings-local.png"
-                             data-full="assets/byteproof/byteproof-app-settings-local.png"
-                             alt="ByteProof settings showing the Local AI tab with model options and download controls"
-                             loading="lazy" width="1520" height="1880">
-                        <figcaption class="shot-caption"><strong>Private local AI.</strong> Models are downloaded once, verified, and run offline. Pick the size that fits your RAM. No account or API key needed. Click to enlarge.</figcaption>
+                </div>
+
+                <div class="step flip reveal">
+                    <div class="step-copy">
+                        <h3>Or use the model you already pay for</h3>
+                        <p>Pick a provider in Settings and paste your own key. You can switch back to local at any time.</p>
+                    </div>
+                    <figure class="clip">
+                        <video data-demo muted loop playsinline preload="none" width="1060" height="740"
+                               poster="assets/byteproof/demo-connect.jpg"
+                               aria-label="Switching the active provider to the local model on the Connect page of Settings">
+                            <source src="assets/byteproof/demo-connect.webm" type="video/webm">
+                        </video>
+                        <figcaption>One click switches provider. Keys stay on your computer.</figcaption>
                     </figure>
                 </div>
             </div>
-        </section>
 
-        <!-- ===== Demo video ===== -->
-        <section class="section" id="demo">
-            <div class="section-head reveal">
-                <div class="eyebrow">Watch it work</div>
-                <h2>See ByteProof in action.</h2>
-                <p>Watch the full walkthrough, or jump straight to the 60-second Word demo or the 2-minute setup guide.</p>
-                <div class="accent-bar"></div>
-            </div>
-
-            <div class="demo reveal">
-                <video class="demo-video" controls playsinline preload="metadata"
-                       poster="assets/byteproof/byteproof-app-main.png"
-                       aria-label="ByteProof demonstration video">
-                    <source src="assets/byteproof/byteproof-intro.mp4" type="video/mp4">
-                    Your browser does not support embedded video.
-                </video>
-                <!-- To stream via YouTube instead, replace the <video> above with:
-                     <iframe class="demo-video" src="https://www.youtube-nocookie.com/embed/YOUR_VIDEO_ID"
-                             title="ByteProof demo" frameborder="0" allowfullscreen></iframe> -->
-                <p class="demo-note">Watch tracked changes, reviewer comments, and any-app polish in under nine minutes.</p>
-
-                <div class="demo-grid">
-                    <figure class="demo-card">
-                        <video class="demo-video" controls playsinline preload="metadata"
-                               poster="assets/byteproof/byteproof-word-demo-poster.jpg"
-                               aria-label="ByteProof Word demo video">
-                            <source src="assets/byteproof/byteproof-word-demo.mp4" type="video/mp4">
-                            Your browser does not support embedded video.
-                        </video>
-                        <figcaption>
-                            <h3>Word, in 60 seconds</h3>
-                            <p>Tracked changes and reviewer comments in Microsoft Word, end to end.</p>
-                        </figcaption>
-                    </figure>
-
-                    <figure class="demo-card">
-                        <video class="demo-video" controls playsinline preload="metadata"
-                               poster="assets/byteproof/byteproof-setup-poster.jpg"
-                               aria-label="ByteProof setup walkthrough video">
-                            <source src="assets/byteproof/byteproof-setup.mp4" type="video/mp4">
-                            Your browser does not support embedded video.
-                        </video>
-                        <figcaption>
-                            <h3>Setup, in 2 minutes</h3>
-                            <p>From download to first proofread: install, permissions, and choosing your AI.</p>
-                        </figcaption>
-                    </figure>
-                </div>
-            </div>
+            <p class="feature-note reveal">
+                With local AI, your text is processed on your computer and never leaves it. If you connect a cloud provider, only the text you select is sent, using your own key.
+            </p>
         </section>
 
         <!-- ===== Download ===== -->
         <section class="section" id="download" style="background: var(--bg-soft);">
             <div class="section-head reveal">
                 <div class="eyebrow">Get ByteProof</div>
-                <h2>Start your free trial today.</h2>
-                <p>Download for macOS or Windows. The 7-day trial includes every feature, with no credit card required.</p>
+                <h2>Start your free trial.</h2>
+                <p>7 days, every feature, no credit card. macOS and Windows.</p>
                 <div class="accent-bar"></div>
             </div>
 
@@ -480,7 +468,7 @@
                         </svg>
                     </div>
                     <h3>macOS — Apple Silicon</h3>
-                    <p>For M1, M2, M3 and newer Macs. DMG installer.</p>
+                    <p>M1, M2, M3 and newer. DMG installer.</p>
                     <a class="btn btn-primary" href="https://github.com/michael-zumba/ByteProof/releases/latest/download/ByteProof_Installer_AppleSilicon.dmg" target="_blank" rel="noopener noreferrer">Download for macOS</a>
                 </article>
 
@@ -492,8 +480,8 @@
                         </svg>
                     </div>
                     <h3>macOS — Intel</h3>
-                    <p>For Intel Macs. DMG installer. 2.1.0 is the current Intel build.</p>
-                    <a class="btn btn-primary" href="https://github.com/michael-zumba/ByteProof/releases/download/v2.1.0/ByteProof_Installer_Intel.dmg" target="_blank" rel="noopener noreferrer">Download 2.1.0 for macOS</a>
+                    <p>Intel Macs. DMG installer.</p>
+                    <a class="btn btn-primary" href="https://github.com/michael-zumba/ByteProof/releases/download/v2.1.0/ByteProof_Installer_Intel.dmg" target="_blank" rel="noopener noreferrer">Download for macOS</a>
                 </article>
 
                 <article class="download-card reveal">
@@ -504,22 +492,22 @@
                         </svg>
                     </div>
                     <h3>Windows 10 / 11</h3>
-                    <p>For Windows 10 and 11. ZIP package — extract and run ByteProof.exe.</p>
+                    <p>ZIP package — extract and run ByteProof.exe.</p>
                     <a class="btn btn-primary" href="https://github.com/michael-zumba/ByteProof/releases/latest/download/ByteProof_Windows.zip" target="_blank" rel="noopener noreferrer">Download for Windows</a>
                 </article>
             </div>
 
-            <p class="download-note reveal"><strong>New to macOS?</strong> If macOS says it can't verify ByteProof, open <strong>System Settings → Privacy &amp; Security</strong>, scroll to the <strong>Security</strong> section, click <strong>Open Anyway</strong> next to ByteProof, then confirm. You only need to do this once.</p>
-            <p class="download-note reveal"><strong>New to Windows?</strong> If SmartScreen shows "Windows protected your PC", click <strong>More info</strong> <span class="arrow">&rarr;</span> <strong>Run anyway</strong>This is expected for a new app. A Microsoft Store version that installs without this warning is in preparation.</p>
-            <p class="download-note reveal">Installers are hosted on GitHub Releases and update automatically with each new version. Prefer a direct email? Write to <a href="mailto:bytemind.nz@gmail.com">bytemind.nz@gmail.com</a>.</p>
+            <p class="download-note reveal"><strong>macOS:</strong> if it says ByteProof can't be verified, open <strong>System Settings → Privacy &amp; Security</strong>, click <strong>Open Anyway</strong> next to ByteProof, then confirm. Once only.</p>
+            <p class="download-note reveal"><strong>Windows:</strong> if SmartScreen appears, click <strong>More info</strong> <span class="arrow">&rarr;</span> <strong>Run anyway</strong>. A Microsoft Store version that installs without this step is in preparation.</p>
+            <p class="download-note reveal">Installers are hosted on GitHub Releases and update themselves. Questions? <a href="mailto:bytemind.nz@gmail.com">bytemind.nz@gmail.com</a>.</p>
         </section>
 
         <!-- ===== Pricing ===== -->
         <section class="section" id="pricing">
             <div class="section-head reveal">
                 <div class="eyebrow">Founding price</div>
-                <h2>Buy once. Support an independent build.</h2>
-                <p>ByteProof is built and run by one developer, not a subscription machine. This founding price rewards the people who back it early.</p>
+                <h2>Buy once. No subscription.</h2>
+                <p>ByteProof is built by one developer. The founding price is for the people who back it early.</p>
                 <div class="accent-bar"></div>
             </div>
 
@@ -528,13 +516,12 @@
                     <div class="plan-label">Start free</div>
                     <h3>Free Trial</h3>
                     <div class="price">7 days</div>
-                    <p class="price-period">Everything included, no credit card required</p>
+                    <p class="price-period">Everything included, no credit card</p>
                     <ul class="price-list">
-                        <li><span class="tick">✓</span>All Word proofreading features</li>
-                        <li><span class="tick">✓</span>Any-app polish mode</li>
-                        <li><span class="tick">✓</span>Private Local AI, plus your choice of cloud providers</li>
+                        <li><span class="tick">✓</span>Every Word and any-app feature</li>
+                        <li><span class="tick">✓</span>Private local AI, or your own cloud key</li>
                         <li><span class="tick">✓</span>Global hotkeys on macOS and Windows</li>
-                        <li><span class="tick">✓</span>Limited free mode after the trial (Local AI, 3 proofreads/day)</li>
+                        <li><span class="tick">✓</span>Limited free mode after the trial</li>
                     </ul>
                     <a class="btn btn-secondary" href="#download">Download free trial</a>
                 </article>
@@ -543,11 +530,10 @@
                     <div class="plan-label">Founding Supporter</div>
                     <h3>ByteProof License</h3>
                     <div class="price">NZ$49</div>
-                    <p class="price-period">Once, for as long as you use it — GST incl.</p>
+                    <p class="price-period">Once. GST included.</p>
                     <ul class="price-list">
-                        <li><span class="tick">✓</span>Full feature set, no time limit</li>
-                        <li><span class="tick">✓</span>No subscription or recurring fees</li>
-                        <li><span class="tick">✓</span>2 computers, macOS and Windows</li>
+                        <li><span class="tick">✓</span>Unlimited use, no time limit</li>
+                        <li><span class="tick">✓</span>2 computers, macOS or Windows</li>
                         <li><span class="tick">✓</span>Updates delivered in the app</li>
                         <li><span class="tick">✓</span>Direct support from the developer</li>
                     </ul>
@@ -555,15 +541,76 @@
                 </article>
             </div>
 
-            <p class="price-note reveal">Secure checkout via Polar. After purchase, your license key is emailed to you automatically — open ByteProof → Settings → License → "Already Paid? Activate with License Key" and paste it in. Works on up to 2 computers. Questions? Email <a href="mailto:bytemind.nz@gmail.com">bytemind.nz@gmail.com</a>.</p>
+            <div class="step reveal" style="margin-top: 3.4rem;">
+                <div class="step-copy">
+                    <h3>Activation takes a minute</h3>
+                    <p>Polar emails your key after checkout. Open ByteProof, go to Settings → License, and paste it in. Move the licence to another computer from the same page.</p>
+                </div>
+                <figure class="clip">
+                    <video data-demo muted loop playsinline preload="none" width="1060" height="740"
+                           poster="assets/byteproof/demo-license.jpg"
+                           aria-label="Pasting a license key in Settings and the licence becoming active">
+                        <source src="assets/byteproof/demo-license.webm" type="video/webm">
+                    </video>
+                    <figcaption>Paste the key once. The app takes it from there.</figcaption>
+                </figure>
+            </div>
+
+            <p class="price-note reveal">Secure checkout via Polar. Questions? <a href="mailto:bytemind.nz@gmail.com">bytemind.nz@gmail.com</a>.</p>
+        </section>
+
+        <!-- ===== Demo video ===== -->
+        <section class="section demo" id="demo">
+            <div class="section-head reveal">
+                <div class="eyebrow">Watch it work</div>
+                <h2>The full walkthrough.</h2>
+                <p>Or jump straight to the 60-second Word demo or the 2-minute setup guide.</p>
+                <div class="accent-bar"></div>
+            </div>
+
+            <video class="demo-video" controls playsinline preload="metadata"
+                   poster="assets/byteproof/byteproof-app-main.png"
+                   aria-label="ByteProof demonstration video">
+                <source src="assets/byteproof/byteproof-intro.mp4" type="video/mp4">
+                Your browser does not support embedded video.
+            </video>
+            <p class="demo-note">Tracked changes, reviewer comments and any-app polish, end to end.</p>
+
+            <div class="demo-grid">
+                <figure class="demo-card">
+                    <video class="demo-video" controls playsinline preload="metadata"
+                           poster="assets/byteproof/byteproof-word-demo-poster.jpg"
+                           aria-label="ByteProof Word demo video">
+                        <source src="assets/byteproof/byteproof-word-demo.mp4" type="video/mp4">
+                        Your browser does not support embedded video.
+                    </video>
+                    <figcaption>
+                        <h3>Word, in 60 seconds</h3>
+                        <p>Tracked changes and comments in Microsoft Word.</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="demo-card">
+                    <video class="demo-video" controls playsinline preload="metadata"
+                           poster="assets/byteproof/byteproof-setup-poster.jpg"
+                           aria-label="ByteProof setup walkthrough video">
+                        <source src="assets/byteproof/byteproof-setup.mp4" type="video/mp4">
+                        Your browser does not support embedded video.
+                    </video>
+                    <figcaption>
+                        <h3>Setup, in 2 minutes</h3>
+                        <p>Install, permissions, and choosing your AI.</p>
+                    </figcaption>
+                </figure>
+            </div>
         </section>
 
         <!-- ===== FAQ ===== -->
         <section class="section" id="faq" style="background: var(--bg-soft);">
             <div class="section-head reveal">
                 <div class="eyebrow">Questions</div>
-                <h2>Everything you might ask.</h2>
-                <p>If your question is not here, email <a href="mailto:bytemind.nz@gmail.com" style="color: var(--green-600); font-weight: 600;">bytemind.nz@gmail.com</a>.</p>
+                <h2>Common questions.</h2>
+                <p>Anything else, email <a href="mailto:bytemind.nz@gmail.com" style="color: var(--green-600); font-weight: 600;">bytemind.nz@gmail.com</a>.</p>
                 <div class="accent-bar"></div>
             </div>
 
@@ -571,70 +618,64 @@
                 <details class="faq-item reveal">
                     <summary>How does ByteProof work? <span class="plus">+</span></summary>
                     <div class="faq-answer">
-                        <p>Select the text you want proofread, then press the hotkey (<span class="mono">Cmd+Shift+'</span> on macOS, <span class="mono">Ctrl+Shift+'</span> on Windows). ByteProof reads the selection, processes it with its private Local AI or the provider you chose, and shows the proposed changes in its window.</p>
-                        <p>In Microsoft Word, the changes are applied as tracked changes, with optional comments. In any other app, you get a clean final version to apply or copy.</p>
+                        <p>Select the text, then press the hotkey — <span class="mono">Cmd+Shift+'</span> on macOS, <span class="mono">Ctrl+Shift+'</span> on Windows. The suggestions appear in ByteProof's panel.</p>
+                        <p>In Word they become tracked changes. Anywhere else, the selected text is replaced with the polished version.</p>
                     </div>
                 </details>
 
                 <details class="faq-item reveal">
                     <summary>Which AI models can I use? <span class="plus">+</span></summary>
                     <div class="faq-answer">
-                        <p>Out of the box, ByteProof uses its private Local AI: a Qwen3 model that runs entirely on your computer. It picks the right size for your RAM — no account, no API key, no subscription.</p>
-                        <p>You can also connect DeepSeek, OpenAI, Anthropic, Google Gemini, xAI, Groq, Perplexity, or your own Ollama server with your keys.</p>
+                        <p>ByteProof's own local model by default: a Qwen3 model that runs on your computer, sized to suit your RAM. No account, no API key.</p>
+                        <p>You can also connect DeepSeek, OpenAI, Anthropic, Google Gemini, xAI, Groq, Perplexity or Ollama.</p>
                     </div>
                 </details>
 
                 <details class="faq-item reveal">
                     <summary>Is my writing private? <span class="plus">+</span></summary>
                     <div class="faq-answer">
-                        <p>With Local AI, your text is processed entirely on your computer and never leaves it. That is the default.</p>
-                        <p>If you connect a cloud provider, ByteProof only sends the text you select to that provider. API keys are stored in the app on your computer and are not shared.</p>
+                        <p>With local AI, yes. Your text is processed on your computer and never leaves it.</p>
+                        <p>If you connect a cloud provider, only the text you select is sent, using your own key.</p>
                     </div>
                 </details>
 
                 <details class="faq-item reveal">
-                    <summary>Does Word integration work on Windows too? <span class="plus">+</span></summary>
+                    <summary>Do I need Microsoft Word, and does it work on Windows? <span class="plus">+</span></summary>
                     <div class="faq-answer">
-                        <p>Yes. ByteProof supports Microsoft Word on both macOS and Windows, including tracked changes and comments. Outside Word, the any-app polish mode works on both platforms.</p>
-                    </div>
-                </details>
-
-                <details class="faq-item reveal">
-                    <summary>Do I need Microsoft Word? <span class="plus">+</span></summary>
-                    <div class="faq-answer">
-                        <p>Only for tracked-changes proofreading. Without Word, ByteProof still polishes selected text in email, browsers, editors and other applications.</p>
+                        <p>Word is only needed for tracked changes, and it works on macOS and Windows, comments included.</p>
+                        <p>Without Word, ByteProof still polishes text you select in email, browsers, editors and other applications.</p>
                     </div>
                 </details>
 
                 <details class="faq-item reveal">
                     <summary>What are the system requirements? <span class="plus">+</span></summary>
                     <div class="faq-answer">
-                        <p>macOS on Apple Silicon or Intel Macs, or Windows 10 / 11. Local AI recommends 8 GB RAM or more; the app picks the best model for your computer.</p>
-                        <p>On macOS, grant Accessibility permission when prompted so global hotkeys and Word integration can work.</p>
+                        <p>macOS on Apple Silicon or Intel, or Windows 10 / 11. Local AI recommends 8 GB RAM or more; the app picks the model for your machine.</p>
+                        <p>On macOS, grant Accessibility permission when asked, so the hotkey and Word integration can work.</p>
                     </div>
                 </details>
 
                 <details class="faq-item reveal">
                     <summary>How much does it cost? <span class="plus">+</span></summary>
                     <div class="faq-answer">
-                        <p>ByteProof includes a free 7-day trial with every feature. After the trial, you can keep using ByteProof in a limited free mode: Local AI only, up to 3 proofreads per day. A license is a one-time founding price of NZ$49 (GST included) and unlocks unlimited use of every feature. No subscription, no recurring fees.</p>
+                        <p>7 days free with every feature, then a limited free mode (local AI, 3 proofreads a day) if you do nothing.</p>
+                        <p>A licence is a one-time NZ$49, GST included, and unlocks everything. No subscription.</p>
                     </div>
                 </details>
 
                 <details class="faq-item reveal">
-                    <summary>How do I activate my license after buying? <span class="plus">+</span></summary>
+                    <summary>How do I activate my license? <span class="plus">+</span></summary>
                     <div class="faq-answer">
-                        <p>After checkout, Polar emails you your license key automatically (you can also find it on your Polar purchases page). Open ByteProof and go to Settings → License → "Already Paid? Activate with License Key", then paste the key. ByteProof activates this computer instantly.</p>
-                        <p>If ByteProof wasn't installed yet, install it first, then follow the same steps. You can activate on a second computer at any time.</p>
-                        <p>Each license works on up to 2 computers. To switch machines, open Settings → License and choose "Deactivate This Computer" on the old one to free its slot.</p>
+                        <p>Polar emails your key after checkout. Open ByteProof → Settings → License → "Already Paid? Activate with License Key", and paste it in.</p>
+                        <p>One licence covers 2 computers. To move machines, choose "Deactivate This Computer" on the old one first.</p>
                     </div>
                 </details>
 
                 <details class="faq-item reveal">
                     <summary>macOS says it can't verify ByteProof — is it safe? <span class="plus">+</span></summary>
                     <div class="faq-answer">
-                        <p>ByteProof is built and signed by ByteMind Ltd. While we complete Apple's notarization process, macOS may show "Apple could not verify that ByteProof.app is free of malware."</p>
-                        <p>To open it the first time: open <strong>System Settings → Privacy &amp; Security</strong>, scroll down to the <strong>Security</strong> section, click <strong>Open Anyway</strong> next to ByteProof, then confirm. You only need to do this once.</p>
+                        <p>Yes. ByteProof is built and signed by ByteMind Ltd; the warning appears while Apple's notarization completes.</p>
+                        <p>To open it the first time: <strong>System Settings → Privacy &amp; Security</strong>, scroll to <strong>Security</strong>, click <strong>Open Anyway</strong> next to ByteProof, then confirm.</p>
                     </div>
                 </details>
 
@@ -760,6 +801,36 @@
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && lightbox.classList.contains('open')) closeLightbox();
         });
+    </script>
+
+    <script>
+    // Play each clip while it is on screen, pause it when it is not, and let a
+    // click pause or restart one. With reduced motion nothing plays by itself
+    // and the poster frame stays.
+    (function () {
+      var clips = document.querySelectorAll('video[data-demo]');
+      if (!clips.length) return;
+      var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function start(video) {
+        var playing = video.play();
+        if (playing && playing.catch) playing.catch(function () {});
+      }
+      if ('IntersectionObserver' in window && !still) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) start(entry.target);
+            else entry.target.pause();
+          });
+        }, { threshold: 0.5 });
+        Array.prototype.forEach.call(clips, function (video) { observer.observe(video); });
+      }
+      Array.prototype.forEach.call(clips, function (video) {
+        video.addEventListener('click', function () {
+          if (video.paused) start(video);
+          else video.pause();
+        });
+      });
+    })();
     </script>
 </body>
 </html>

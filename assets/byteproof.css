@@ -324,6 +324,12 @@ a {
   color: var(--green-600);
 }
 
+/* Chinese pages: green emphasis without a synthetic italic, which CJK
+   glyphs do not wear well. */
+.hero h1 .accent {
+  color: var(--green-600);
+}
+
 .hero-sub {
   font-family: var(--font-serif);
   font-size: clamp(1.05rem, 2vw, 1.22rem);
@@ -1547,3 +1553,104 @@ a {
   font-size: 0.86rem; text-decoration: none; color: inherit; opacity: 0.85;
 }
 .lang-switch:hover { opacity: 1; }
+
+/* ---------- Clips ----------
+   One short loop per step and per feature: the real app, about three seconds
+   long, playing while it is on screen. */
+.steps {
+  display: grid;
+  gap: 3.4rem;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 2.6rem;
+  align-items: center;
+}
+
+.step.flip .step-copy {
+  order: 2;
+}
+
+.step-copy h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+}
+
+.step-copy p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--green-50);
+  border: 1px solid var(--green-100);
+  color: var(--green-600);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  margin-bottom: 1rem;
+}
+
+.clip {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--card);
+  box-shadow: var(--shadow-soft);
+}
+
+.clip video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--bg-soft);
+  cursor: pointer;
+}
+
+.clip figcaption {
+  padding: 0.7rem 1rem 0.8rem;
+  border-top: 1px solid var(--line-soft);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.clip-plain {
+  box-shadow: none;
+}
+
+.mode-clip {
+  margin: 1.3rem 0 0;
+}
+
+.mode-clip figcaption {
+  display: none;
+}
+
+@media (max-width: 880px) {
+  .steps {
+    gap: 2.6rem;
+  }
+
+  .step {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .step.flip .step-copy {
+    order: 0;
+  }
+}

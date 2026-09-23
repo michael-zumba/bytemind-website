@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" class="light">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/logo/favicon-32.png?v=2026">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteMail | 回邮件，不用从头写</title>
+    <meta name="description" content="选中要回的邮件，按一个快捷键，就能拿到一封用你自己语气写好的回复。它不知道的事会留成空格由你填。macOS 是 2.3 MB 的菜单栏小工具，Windows 也有桌面版。">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ByteMind Ltd">
+    <meta property="og:title" content="ByteMail | 回邮件，不用从头写">
+    <meta property="og:description" content="选中要回的邮件，按一个快捷键，就能拿到一封用你自己语气写好的回复。它不知道的事会留成空格由你填。">
+    <meta property="og:url" content="https://www.bytemind.co.nz/zh/bytemail/">
+    <meta property="og:image" content="https://www.bytemind.co.nz/assets/bytemail/bytemail-og.png">
+    <link rel="canonical" href="https://www.bytemind.co.nz/zh/bytemail/">
+    <link rel="alternate" hreflang="en" href="https://www.bytemind.co.nz/bytemail/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://www.bytemind.co.nz/zh/bytemail/">
+    <link rel="alternate" hreflang="x-default" href="https://www.bytemind.co.nz/bytemail/">
+    <link rel="stylesheet" href="../../colors_and_type.css">
+    <style>
+      /* 只放这一页自己的样式，其余都来自 colors_and_type.css。 */
+      .bm-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 28px; }
+      .bm-note { margin-top: 22px; font-size: .95rem; color: var(--color-muted-foreground); }
+
+      .bm-shot { margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; background: #fff; box-shadow: 0 18px 44px -22px rgba(14, 36, 25, .34); }
+      .bm-shot img { display: block; width: 100%; height: auto; }
+      .bm-shot figcaption { padding: 12px 18px 14px; font-size: .9rem; line-height: 1.5; color: var(--color-muted-foreground); border-top: 1px solid var(--color-border); background: var(--color-card); }
+      .bm-hero-shot { max-width: 1000px; margin: 44px auto 0; }
+
+      .bm-work { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr); gap: var(--space-10); align-items: center; }
+      .bm-work + .bm-work { margin-top: var(--space-16); }
+      .bm-work:nth-child(even) .bm-work-copy { order: 2; }
+      .bm-work h3 { font-family: var(--font-serif); font-size: 1.5rem; margin: 0 0 10px; color: var(--color-primary); }
+      .bm-work p { margin: 0 0 10px; }
+      .bm-work ul { list-style: none; padding: 0; margin: 0; }
+      .bm-work li { position: relative; padding-left: 18px; margin-bottom: 7px; font-size: .95rem; color: var(--color-muted-foreground); }
+      .bm-work li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary-400); }
+      .bm-demo { margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-card); box-shadow: 0 16px 40px -24px rgba(14, 36, 25, .32); }
+      .bm-demo video { display: block; width: 100%; height: auto; background: var(--color-card); cursor: pointer; }
+      .bm-demo figcaption { padding: 10px 16px 12px; font-size: .88rem; line-height: 1.5; color: var(--color-muted-foreground); border-top: 1px solid var(--color-border); }
+      @media (max-width: 860px) {
+        .bm-work { grid-template-columns: 1fr; gap: var(--space-6); }
+        .bm-work:nth-child(even) .bm-work-copy { order: 0; }
+      }
+
+      .bm-steps { width: 100%; border-collapse: collapse; font-size: .95rem; max-width: 760px; margin: 0 auto; }
+      .bm-steps th { text-align: left; font-size: .72rem; letter-spacing: .09em; color: var(--color-muted-foreground); font-weight: 600; padding: 0 14px 10px 0; border-bottom: 1px solid var(--color-border); }
+      .bm-steps td { padding: 12px 14px 12px 0; border-bottom: 1px solid var(--color-border-light, #eae5d9); vertical-align: top; }
+      .bm-steps tr:last-child td { border-bottom: none; }
+      .bm-steps .bm-step { font-weight: 600; color: var(--color-foreground); white-space: nowrap; }
+
+      .bm-matrix { width: 100%; border-collapse: collapse; font-size: .93rem; }
+      .bm-matrix th { text-align: left; font-size: .72rem; letter-spacing: .09em; color: var(--color-muted-foreground); font-weight: 600; padding: 0 14px 10px 0; border-bottom: 1px solid var(--color-border); }
+      .bm-matrix td { padding: 12px 14px 12px 0; border-bottom: 1px solid var(--color-border-light, #eae5d9); vertical-align: top; }
+      .bm-matrix tr:last-child td { border-bottom: none; }
+      .bm-matrix .bm-what { font-weight: 600; color: var(--color-foreground); }
+
+      .bm-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-8); padding: var(--space-8) 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); margin: var(--space-8) 0; }
+      .bm-fact-value { display: block; font-family: var(--font-serif); font-size: 2.1rem; color: var(--color-primary); line-height: 1.1; }
+      .bm-fact-label { display: block; font-size: .85rem; color: var(--color-muted-foreground); margin-top: 6px; }
+      .bm-points { list-style: none; padding: 0; margin: 0; }
+      .bm-points li { padding: 12px 0; border-bottom: 1px solid var(--color-border-light, #eae5d9); font-size: .97rem; }
+      .bm-points li:last-child { border-bottom: none; }
+      .bm-points strong { color: var(--color-foreground); }
+      .bm-two { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); }
+      @media (max-width: 860px) { .bm-two { grid-template-columns: 1fr; } }
+      .bm-two h3 { font-family: var(--font-serif); font-size: 1.25rem; margin: 0 0 10px; color: var(--color-primary); }
+      .bm-two p { margin: 0 0 10px; font-size: .97rem; }
+
+      .bm-downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6); max-width: 780px; margin: 0 auto; }
+      .bm-download { border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-card); padding: var(--space-8); text-align: center; box-shadow: var(--shadow-card); }
+      .bm-download h3 { font-family: var(--font-serif); font-size: 1.25rem; margin: 0 0 6px; color: var(--color-primary); }
+      .bm-download .bm-download-sub { font-size: .92rem; color: var(--color-muted-foreground); margin: 0 0 18px; }
+      .bm-download .bm-download-size { font-size: .84rem; color: var(--color-muted-foreground); margin: 12px 0 0; }
+
+      .bm-windows { margin-top: var(--space-10); }
+      .bm-windows h3 { font-family: var(--font-serif); font-size: 1.15rem; margin: 0 0 10px; color: var(--color-primary); }
+
+      .bm-footer-grid { grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr; }
+      @media (max-width: 1000px) { .bm-footer-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">跳到正文</a>
+
+    <header id="shell-header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="../index.html" class="logo-link">ByteMind</a>
+                <div class="nav-links" id="nav-links">
+                    <a href="../index.html">首页</a>
+                    <a href="../services.html">服务</a>
+                    <a href="../indices.html">指数</a>
+                    <a href="../insights.html">洞察</a>
+                    <a href="../reports.html">报告</a>
+                    <a href="../about.html">关于</a>
+                    <a href="../index.html#products">产品</a>
+                    <a href="../contact.html">联系</a>
+                </div>
+                <a href="../../bytemail/index.html" class="lang-switch" data-dom-id="lang-switch" hreflang="en" lang="en">EN</a>
+                <button type="button" class="mobile-menu-btn" aria-label="打开菜单" aria-controls="nav-links" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section class="page-hero animate-fade-in-up">
+            <div class="eyebrow">产品 &middot; ByteMail</div>
+            <div class="accent-bar"></div>
+            <h1>回邮件，不用从头写</h1>
+            <p class="hero-intro">选中要回的那封邮件，按一个快捷键，ByteMail 就写出一封你会写的回复。
+            它不知道的事会留成空格由你来填，所以不会替你编。</p>
+            <div class="bm-ctas">
+                <a class="btn btn-primary" href="#work">看看它怎么跑</a>
+                <a class="btn btn-secondary" href="#download">下载</a>
+            </div>
+            <p class="bm-note">macOS 13 及以上 &middot; Windows 10 和 11 &middot; 不用注册，也不会替你发邮件</p>
+        </section>
+
+        <figure class="bm-shot bm-hero-shot">
+            <img src="../../assets/bytemail/bytemail-panel.png" width="1440" height="900"
+                 alt="ByteMail 的面板浮在邮件上方，里面是一封写好的回复，只有一处需要用户自己知道的信息留成了空格">
+            <figcaption>草稿写好了，空缺还留着，下面就是这几个空缺对应的问题。</figcaption>
+        </figure>
+
+        <!-- 1. 三件日常的事，直接看它怎么做 -->
+        <section class="section" id="work">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">回邮件</div>
+                    <h2>它做三件事</h2>
+                    <p>下面每一段都录自应用本身，两三秒。</p>
+                </div>
+
+                <div class="bm-work">
+                    <div class="bm-work-copy">
+                        <h3>写出这封回复</h3>
+                        <p>选中邮件，按下 <code>⌥⌘R</code>，回复就一句句写出来——邮件在哪个程序里都行，浏览器里也可以。</p>
+                        <ul>
+                            <li>连选中内容前后的文字一起读，知道是谁在问、已经谈定了什么</li>
+                            <li>用你自己发过的邮件当范本，写出来就是你的语气</li>
+                            <li>可以复制走，也可以直接替换掉你选中的那段文字</li>
+                        </ul>
+                    </div>
+                    <figure class="bm-demo">
+                        <video data-demo muted loop playsinline preload="metadata" width="1000" height="626"
+                               poster="../../assets/bytemail/demo-select.jpg"
+                               aria-label="打开一封邮件，摘要和回复方向出现，接着进入回复向导">
+                            <source src="../../assets/bytemail/demo-select.webm" type="video/webm">
+                        </video>
+                        <figcaption>一封信读完，回复的路子也出来了。</figcaption>
+                    </figure>
+                </div>
+
+                <div class="bm-work">
+                    <div class="bm-work-copy">
+                        <h3>不知道的，留给你</h3>
+                        <p>日期、价格、承诺、人名——凡是它无从知道的，都在草稿里留成一个带标签的空格。</p>
+                        <ul>
+                            <li>每个空格都写明缺的是什么</li>
+                            <li>空格没填完，复制按钮就一直按不动</li>
+                        </ul>
+                    </div>
+                    <figure class="bm-demo">
+                        <video data-demo muted loop playsinline preload="metadata" width="1000" height="626"
+                               poster="../../assets/bytemail/demo-gaps.jpg"
+                               aria-label="在草稿下面填上一个空格，待填数量随之减少">
+                            <source src="../../assets/bytemail/demo-gaps.webm" type="video/webm">
+                        </video>
+                        <figcaption>填好一个，按钮就告诉你还剩几个。</figcaption>
+                    </figure>
+                </div>
+
+                <div class="bm-work">
+                    <div class="bm-work-copy">
+                        <h3>学你的语气</h3>
+                        <p>贴上几封你自己写的邮件，ByteMail 会记住你的称呼、落款、句子长短，还有那些不像你写的习惯。</p>
+                        <ul>
+                            <li>描述你文风的档案大约只有 1 KB</li>
+                            <li>你认可的回复会替换掉旧样本，不会越堆越多</li>
+                        </ul>
+                    </div>
+                    <figure class="bm-demo">
+                        <video data-demo muted loop playsinline preload="metadata" width="1000" height="626"
+                               poster="../../assets/bytemail/demo-voice.jpg"
+                               aria-label="把一段自己写的文字敲进示例框，下方列着从你文字里学到的特征">
+                            <source src="../../assets/bytemail/demo-voice.webm" type="video/webm">
+                        </video>
+                        <figcaption>上面是示例，下面是学到的特征。</figcaption>
+                    </figure>
+                </div>
+
+                <p class="bm-note" style="text-align:center; max-width: 620px; margin-left:auto; margin-right:auto;">
+                这些短片录自应用本身。macOS 版把同样的步骤收进一个快捷键，面板就浮在你的邮件上。</p>
+            </div>
+        </section>
+
+        <!-- 2. 整个流程，集中说一次 -->
+        <section class="section" id="steps" style="background: var(--color-muted);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">整个过程</div>
+                    <h2>三步，一次粘贴</h2>
+                    <p>除此之外不再问你别的。</p>
+                </div>
+                <table class="bm-steps">
+                    <thead>
+                        <tr>
+                            <th scope="col">步骤</th>
+                            <th scope="col">你要做的</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="bm-step">1. 定方向</td>
+                            <td>从两到四个真正不同的回复里挑一个——<em>两个都确认</em>、<em>约个电话</em>。</td>
+                        </tr>
+                        <tr>
+                            <td class="bm-step">2. 拿主意</td>
+                            <td>回答两三个问题，大多点一下就行。</td>
+                        </tr>
+                        <tr>
+                            <td class="bm-step">3. 出草稿</td>
+                            <td>读一遍，填上只有你知道的事，复制走。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 3. 它和聊天窗口的区别 -->
+        <section class="section" id="difference">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">不一样在哪</div>
+                    <h2>它不只是个聊天窗口</h2>
+                    <p>聊天窗口并不知道自己在回一封邮件，ByteMail 知道。</p>
+                </div>
+                <table class="bm-matrix">
+                    <thead>
+                        <tr>
+                            <th scope="col">&nbsp;</th>
+                            <th scope="col">聊天窗口</th>
+                            <th scope="col">ByteMail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="bm-what">知道这是邮件</td><td>不知道</td><td>称呼、落款、篇幅、语气都按邮件来</td></tr>
+                        <tr><td class="bm-what">按你的语气写</td><td>不会</td><td>从你自己发过的邮件里学</td></tr>
+                        <tr><td class="bm-what">知道你是谁</td><td>不知道</td><td>职位、公司、资历来自你的资料</td></tr>
+                        <tr><td class="bm-what">缺的信息</td><td>直接编</td><td>留成空格，复制按钮按不动</td></tr>
+                        <tr><td class="bm-what">读整条往来</td><td>不会</td><td>读你选中内容前后的文字</td></tr>
+                    </tbody>
+                </table>
+                <p class="bm-note" style="text-align:center;">这道关卡你自己就能验。应用自带一个不需要 API 密钥、也不联网的检查
+                <code>--contracttest</code>，一旦填了空格复制按钮没解锁，它就报错。</p>
+            </div>
+        </section>
+
+        <!-- 4. 它不做什么 -->
+        <section class="section" id="limits" style="background: var(--color-muted);">
+            <div class="container">
+                <div class="bm-two">
+                    <div>
+                        <h3>它不会做的</h3>
+                        <ul class="bm-points">
+                            <li><strong>不会替你发邮件。</strong>它把文字交给你，由你粘进平时用的邮箱。</li>
+                            <li><strong>不会猜事实。</strong>你没写进去的日期、价格、承诺，它不会自己写。</li>
+                            <li><strong>不确定就说不确定。</strong>它查不了的事，会写成一句提示，写明该去核什么。</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>在哪里用</h3>
+                        <ul class="bm-points">
+                            <li><strong>macOS 版</strong>住在菜单栏，一个快捷键，面板浮在你的邮件上。</li>
+                            <li><strong>Windows 版</strong>在自己的窗口里，结果是一样的。</li>
+                            <li><strong>只发该发的。</strong>除了发给你自己选的模型服务，其他都不出本机。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 邮件还是你的 -->
+        <section class="section" id="privacy">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">你的邮件</div>
+                    <h2>邮件不出你的电脑</h2>
+                    <p>不用注册 ByteMind 账号，中间也没有我们自己的服务器。</p>
+                </div>
+                <div class="bm-facts">
+                    <div><span class="bm-fact-value">2.3 MB</span><span class="bm-fact-label">整个 macOS 应用</span></div>
+                    <div><span class="bm-fact-value">1 KB</span><span class="bm-fact-label">用来描述你文风的那份档案</span></div>
+                    <div><span class="bm-fact-value">0</span><span class="bm-fact-label">账号，也没有行为统计</span></div>
+                    <div><span class="bm-fact-value">1</span><span class="bm-fact-label">联网只发给你选的模型服务</span></div>
+                </div>
+                <div class="bm-two">
+                    <div>
+                        <h3>东西存在哪</h3>
+                        <p>API 密钥放在 macOS 钥匙串，Windows 上放在系统自带的加密存储里。
+                        你的资料和文风存在应用自己的文件夹。不需要注册账号。</p>
+                    </div>
+                    <div>
+                        <h3>它不会读什么</h3>
+                        <p>它只读你选中的文字和周围的正文，不读屏幕上别的内容，也不碰你没让它看的邮箱。
+                        邮件里的图片会被去掉，去掉几张它也会告诉你。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. 下载 -->
+        <section class="section" id="download" style="background: var(--color-muted);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">获取 ByteMail</div>
+                    <h2>下载</h2>
+                    <p>免费，不用注册。</p>
+                </div>
+                <div class="bm-downloads">
+                    <article class="bm-download">
+                        <h3>macOS 13 及以上</h3>
+                        <p class="bm-download-sub">Apple 芯片（M 系列），就是一个菜单栏小工具。</p>
+                        <a class="btn btn-primary" href="../../assets/bytemail/ByteMail_1.1.0.zip" download>下载 macOS 版</a>
+                        <p class="bm-download-size">ByteMail 1.1.0 &middot; 下载 0.7 MB，安装后 2.3 MB</p>
+                    </article>
+                    <article class="bm-download">
+                        <h3>Windows 10 和 11</h3>
+                        <p class="bm-download-sub">ZIP 压缩包，解压后运行 ByteMail.exe。</p>
+                        <a class="btn btn-primary" href="../../assets/bytemail/ByteMail_Windows.zip" download>下载 Windows 版</a>
+                        <p class="bm-download-size">ByteMail 1.1.0 &middot; 64 位 &middot; 38 MB</p>
+                    </article>
+                </div>
+
+                <p class="bm-note" style="text-align:center; max-width:620px; margin-left:auto; margin-right:auto;">
+                想核对下载的文件，可以比对这些校验值：<br>
+                <code style="font-size:.78rem;">6cfda0a4&hellip;1a1ab471</code> macOS &middot;
+                <code style="font-size:.78rem;">065753d8&hellip;50d26955</code> Windows</p>
+
+                <div class="container bm-windows" style="max-width: 780px;">
+                    <h3>安装前先看这里</h3>
+                    <ul class="bm-points">
+                        <li><strong>macOS：</strong>如果提示无法验证 ByteMail，打开<strong>系统设置 → 隐私与安全性</strong>，在 ByteMail 旁边点<strong>仍要打开</strong>再确认。只需一次。</li>
+                        <li><strong>macOS：</strong>ByteMail 需要<strong>辅助功能</strong>权限，才能读你选中的文字、把回复放回去。设置里的「权限」会显示状态；不想授权，也可以改用剪贴板方式。</li>
+                        <li><strong>Windows：</strong>如果出现 SmartScreen 提示，点<strong>更多信息</strong>，再点<strong>仍要运行</strong>。</li>
+                        <li><strong>两个版本都一样：</strong>可以填自己的模型密钥，也可以指向本机模型，完全不用密钥。安装包放在 GitHub Releases。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-banner">
+            <h2>拿一封真邮件试试</h2>
+            <p>内置的演示收件箱可以让你把整个流程点一遍，不用账号，也不用密钥。</p>
+            <a href="mailto:bytemind.nz@gmail.com?subject=ByteMail" class="btn btn-outline">联系我们</a>
+        </div>
+
+    </main>
+
+    <footer id="shell-footer" class="footer">
+        <div class="container">
+            <div class="footer-grid bm-footer-grid">
+                <div class="footer-col">
+                    <p class="footer-brand-name">ByteMind Ltd</p>
+                    <p class="footer-brand-desc">为亚太地区的专业服务机构提供商业分析、数字化转型与战略咨询。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>页面</h4>
+                    <a href="../services.html">服务</a>
+                    <a href="../indices.html">指数</a>
+                    <a href="../insights.html">洞察</a>
+                    <a href="../reports.html">报告</a>
+                    <a href="../about.html">关于</a>
+                    <a href="../contact.html">联系</a>
+                </div>
+                <div class="footer-col">
+                    <h4>产品</h4>
+                    <a href="../bytebook/">ByteBook</a>
+                    <a href="../bytetax/">ByteTax</a>
+                    <a href="../byteproof.html">ByteProof</a>
+                    <a href="../bytemail/">ByteMail</a>
+                </div>
+                <div class="footer-col">
+                    <h4>ByteMail</h4>
+                    <a href="#work">看看它怎么跑</a>
+                    <a href="#difference">不一样在哪</a>
+                    <a href="#privacy">你的邮件</a>
+                    <a href="#download">下载</a>
+                </div>
+                <div class="footer-col">
+                    <h4>联系</h4>
+                    <a href="mailto:bytemind.nz@gmail.com">邮件</a>
+                    <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/michael-zumba/bytemind-website" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 ByteMind Ltd. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+    // 画面内的短片才播放，移出画面就暂停；点一下也能暂停或重播。
+    // 系统设置了「减少动态效果」时，短片不会自动播放。
+    (function () {
+      var clips = document.querySelectorAll('video[data-demo]');
+      if (!clips.length) return;
+      var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function start(video) {
+        var playing = video.play();
+        if (playing && playing.catch) playing.catch(function () {});
+      }
+      if (still) {
+        // Nothing plays on its own. The poster is the still frame, so it stays.
+        return;
+      }
+      Array.prototype.forEach.call(clips, function (video) {
+        if (video.preload === 'none') video.preload = 'auto';
+      });
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) start(entry.target);
+            else entry.target.pause();
+          });
+        }, { threshold: 0.5 });
+        Array.prototype.forEach.call(clips, function (video) { observer.observe(video); });
+      }
+      Array.prototype.forEach.call(clips, function (video) {
+        video.addEventListener('click', function () {
+          if (video.paused) start(video);
+          else video.pause();
+        });
+      });
+    })();
+
+    // 手机端的菜单按钮，以及页面下滑后标题栏下的那条线。
+    (function () {
+      var button = document.querySelector('.mobile-menu-btn');
+      var links = document.querySelector('.nav-links');
+      if (button && links) {
+        button.addEventListener('click', function () {
+          var open = links.classList.toggle('active');
+          button.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+      var nav = document.querySelector('.navbar');
+      function onScroll() { if (nav) nav.classList.toggle('scrolled', window.scrollY > 8); }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+    </script>
+</body>
+</html>

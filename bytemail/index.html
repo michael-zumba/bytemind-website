@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png?v=2026">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteMail | Reply to email without writing it from scratch</title>
+    <meta name="description" content="Select an email, press one key, and get the reply in your voice. Anything it cannot know is left for you to fill in. A 2.3 MB menu bar app for macOS, and a desktop app for Windows.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ByteMind Ltd">
+    <meta property="og:title" content="ByteMail | Reply to email without writing it from scratch">
+    <meta property="og:description" content="Select an email, press one key, and get the reply in your voice. Anything it cannot know is left for you to fill in.">
+    <meta property="og:url" content="https://www.bytemind.co.nz/bytemail/">
+    <meta property="og:image" content="https://www.bytemind.co.nz/assets/bytemail/bytemail-og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ByteMail | Reply to email without writing it from scratch">
+    <meta name="twitter:description" content="Select an email, press one key, get the reply in your voice.">
+    <meta name="twitter:image" content="https://www.bytemind.co.nz/assets/bytemail/bytemail-og.png">
+    <link rel="canonical" href="https://www.bytemind.co.nz/bytemail/">
+    <link rel="alternate" hreflang="en" href="https://www.bytemind.co.nz/bytemail/">
+    <link rel="alternate" hreflang="zh-Hans" href="https://www.bytemind.co.nz/zh/bytemail/">
+    <link rel="alternate" hreflang="x-default" href="https://www.bytemind.co.nz/bytemail/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ByteMail",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "macOS, Windows",
+      "description": "Select the email you need to answer, press one key, and ByteMail writes the reply in your voice. Anything it cannot know is left as a field for you to fill in. It runs on your own computer and never sends mail.",
+      "url": "https://www.bytemind.co.nz/bytemail/",
+      "image": "https://www.bytemind.co.nz/assets/bytemail/bytemail-og.png",
+      "publisher": { "@type": "Organization", "name": "ByteMind Ltd", "url": "https://www.bytemind.co.nz/" }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../colors_and_type.css">
+    <style>
+      /* Page-specific additions only. Everything else comes from colors_and_type.css. */
+      .bm-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 28px; }
+      .bm-note { margin-top: 22px; font-size: .95rem; color: var(--color-muted-foreground); }
+
+      .bm-shot { margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; background: #fff; box-shadow: 0 18px 44px -22px rgba(14, 36, 25, .34); }
+      .bm-shot img { display: block; width: 100%; height: auto; }
+      .bm-shot figcaption { padding: 12px 18px 14px; font-size: .9rem; line-height: 1.5; color: var(--color-muted-foreground); border-top: 1px solid var(--color-border); background: var(--color-card); }
+      .bm-hero-shot { max-width: 1000px; margin: 44px auto 0; }
+
+      /* One job per row: a short explanation, and the app doing it. */
+      .bm-work { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr); gap: var(--space-10); align-items: center; }
+      .bm-work + .bm-work { margin-top: var(--space-16); }
+      .bm-work:nth-child(even) .bm-work-copy { order: 2; }
+      .bm-work h3 { font-family: var(--font-serif); font-size: 1.5rem; margin: 0 0 10px; color: var(--color-primary); }
+      .bm-work p { margin: 0 0 10px; }
+      .bm-work ul { list-style: none; padding: 0; margin: 0; }
+      .bm-work li { position: relative; padding-left: 18px; margin-bottom: 7px; font-size: .95rem; color: var(--color-muted-foreground); }
+      .bm-work li::before { content: "—"; position: absolute; left: 0; color: var(--color-primary-400); }
+      .bm-demo { margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-card); box-shadow: 0 16px 40px -24px rgba(14, 36, 25, .32); }
+      .bm-demo video { display: block; width: 100%; height: auto; background: var(--color-card); cursor: pointer; }
+      .bm-demo figcaption { padding: 10px 16px 12px; font-size: .88rem; line-height: 1.5; color: var(--color-muted-foreground); border-top: 1px solid var(--color-border); }
+      @media (max-width: 860px) {
+        .bm-work { grid-template-columns: 1fr; gap: var(--space-6); }
+        .bm-work:nth-child(even) .bm-work-copy { order: 0; }
+      }
+
+      /* The three steps, once, as an ordinary table. */
+      .bm-steps { width: 100%; border-collapse: collapse; font-size: .95rem; max-width: 760px; margin: 0 auto; }
+      .bm-steps th { text-align: left; font-size: .72rem; letter-spacing: .09em; text-transform: uppercase; color: var(--color-muted-foreground); font-weight: 600; padding: 0 14px 10px 0; border-bottom: 1px solid var(--color-border); }
+      .bm-steps td { padding: 12px 14px 12px 0; border-bottom: 1px solid var(--color-border-light, #eae5d9); vertical-align: top; }
+      .bm-steps tr:last-child td { border-bottom: none; }
+      .bm-steps .bm-step { font-weight: 600; color: var(--color-foreground); white-space: nowrap; }
+
+      .bm-matrix { width: 100%; border-collapse: collapse; font-size: .93rem; }
+      .bm-matrix th { text-align: left; font-size: .72rem; letter-spacing: .09em; text-transform: uppercase; color: var(--color-muted-foreground); font-weight: 600; padding: 0 14px 10px 0; border-bottom: 1px solid var(--color-border); }
+      .bm-matrix td { padding: 12px 14px 12px 0; border-bottom: 1px solid var(--color-border-light, #eae5d9); vertical-align: top; }
+      .bm-matrix tr:last-child td { border-bottom: none; }
+      .bm-matrix .bm-what { font-weight: 600; color: var(--color-foreground); }
+
+      .bm-facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--space-8); padding: var(--space-8) 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border); margin: var(--space-8) 0; }
+      .bm-fact-value { display: block; font-family: var(--font-serif); font-size: 2.1rem; color: var(--color-primary); line-height: 1.1; }
+      .bm-fact-label { display: block; font-size: .85rem; color: var(--color-muted-foreground); margin-top: 6px; }
+      .bm-points { list-style: none; padding: 0; margin: 0; }
+      .bm-points li { padding: 12px 0; border-bottom: 1px solid var(--color-border-light, #eae5d9); font-size: .97rem; }
+      .bm-points li:last-child { border-bottom: none; }
+      .bm-points strong { color: var(--color-foreground); }
+      .bm-two { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10); }
+      @media (max-width: 860px) { .bm-two { grid-template-columns: 1fr; } }
+      .bm-two h3 { font-family: var(--font-serif); font-size: 1.25rem; margin: 0 0 10px; color: var(--color-primary); }
+      .bm-two p { margin: 0 0 10px; font-size: .97rem; }
+
+      /* Two downloads, side by side. */
+      .bm-downloads { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6); max-width: 780px; margin: 0 auto; }
+      .bm-download { border: 1px solid var(--color-border); border-radius: var(--radius-lg); background: var(--color-card); padding: var(--space-8); text-align: center; box-shadow: var(--shadow-card); }
+      .bm-download h3 { font-family: var(--font-serif); font-size: 1.25rem; margin: 0 0 6px; color: var(--color-primary); }
+      .bm-download .bm-download-sub { font-size: .92rem; color: var(--color-muted-foreground); margin: 0 0 18px; }
+      .bm-download .bm-download-size { font-size: .84rem; color: var(--color-muted-foreground); margin: 12px 0 0; }
+
+      .bm-windows { margin-top: var(--space-10); }
+      .bm-windows h3 { font-family: var(--font-serif); font-size: 1.15rem; margin: 0 0 10px; color: var(--color-primary); }
+
+      /* Five columns of footer links, collapsing on the way down the screen. */
+      .bm-footer-grid { grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr; }
+      @media (max-width: 1000px) { .bm-footer-grid { grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); } }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header id="shell-header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="../index.html" class="logo-link">ByteMind</a>
+                <div class="nav-links" id="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../services.html">Services</a>
+                    <a href="../indices.html">Indices</a>
+                    <a href="../insights.html">Insights</a>
+                    <a href="../reports.html">Reports</a>
+                    <a href="../about.html">About</a>
+                    <a href="../index.html#products">Products</a>
+                    <a href="../contact.html">Contact</a>
+                </div>
+                <a href="../zh/bytemail/index.html" class="lang-switch" data-dom-id="lang-switch" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+                <button type="button" class="mobile-menu-btn" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+
+        <section class="page-hero animate-fade-in-up">
+            <div class="eyebrow">Products &middot; ByteMail</div>
+            <div class="accent-bar"></div>
+            <h1>Reply without writing it from scratch</h1>
+            <p class="hero-intro">Select the email you need to answer and press one key.
+            ByteMail writes the reply the way you would have. Anything it cannot know
+            stays a field for you to fill in — so nothing is invented.</p>
+            <div class="bm-ctas">
+                <a class="btn btn-primary" href="#work">See it working</a>
+                <a class="btn btn-secondary" href="#download">Download</a>
+            </div>
+            <p class="bm-note">macOS 13 or later &middot; Windows 10 and 11 &middot; no account, and it never sends mail</p>
+        </section>
+
+        <figure class="bm-shot bm-hero-shot">
+            <img src="../assets/bytemail/bytemail-panel.png" width="1440" height="900"
+                 alt="ByteMail's panel open over an email, showing a drafted reply with one field left for the facts only the user knows">
+            <figcaption>The draft, with the gaps still to fill and the questions about them underneath.</figcaption>
+        </figure>
+
+        <!-- 1. The everyday jobs, each shown rather than described -->
+        <section class="section" id="work">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">Answering mail</div>
+                    <h2>Three things it does</h2>
+                    <p>Each clip below is the app, two to three seconds long.</p>
+                </div>
+
+                <div class="bm-work">
+                    <div class="bm-work-copy">
+                        <h3>Draft the reply</h3>
+                        <p>Select the email, press <code>⌥⌘R</code>, and the reply streams in — in the word processor, the browser, wherever the email is sitting.</p>
+                        <ul>
+                            <li>Reads the text around your selection, so it knows who asked what</li>
+                            <li>Writes as you, from samples of your own sent mail</li>
+                            <li>Copy it, or insert it straight over the text you selected</li>
+                        </ul>
+                    </div>
+                    <figure class="bm-demo">
+                        <video data-demo muted loop playsinline preload="metadata" width="1000" height="626"
+                               poster="../assets/bytemail/demo-select.jpg"
+                               aria-label="An email opening, its summary and reply directions appearing, and the reply wizard starting">
+                            <source src="../assets/bytemail/demo-select.webm" type="video/webm">
+                        </video>
+                        <figcaption>The email, read and answered in one pass.</figcaption>
+                    </figure>
+                </div>
+
+                <div class="bm-work">
+                    <div class="bm-work-copy">
+                        <h3>Leave the facts to you</h3>
+                        <p>A date, a price, a promise, a name — anything it cannot know becomes a labelled field inside the draft.</p>
+                        <ul>
+                            <li>Each field names exactly what is missing</li>
+                            <li>Copy stays disabled until every one is answered</li>
+                        </ul>
+                    </div>
+                    <figure class="bm-demo">
+                        <video data-demo muted loop playsinline preload="metadata" width="1000" height="626"
+                               poster="../assets/bytemail/demo-gaps.jpg"
+                               aria-label="Answering a labelled field under the draft, and the counter of what is still unanswered dropping">
+                            <source src="../assets/bytemail/demo-gaps.webm" type="video/webm">
+                        </video>
+                        <figcaption>One answer in. The button counts what is left.</figcaption>
+                    </figure>
+                </div>
+
+                <div class="bm-work">
+                    <div class="bm-work-copy">
+                        <h3>Learn your voice</h3>
+                        <p>Paste a few emails you wrote. ByteMail picks up your greeting, your sign-off, your sentence length, and the habits to leave out.</p>
+                        <ul>
+                            <li>The description of your style is about a kilobyte</li>
+                            <li>Replies you approve replace samples, they do not pile up</li>
+                        </ul>
+                    </div>
+                    <figure class="bm-demo">
+                        <video data-demo muted loop playsinline preload="metadata" width="1000" height="626"
+                               poster="../assets/bytemail/demo-voice.jpg"
+                               aria-label="Typing a writing sample into the samples box, with the traits learned from your writing listed below it">
+                            <source src="../assets/bytemail/demo-voice.webm" type="video/webm">
+                        </video>
+                        <figcaption>Your samples above, and the traits learned from them.</figcaption>
+                    </figure>
+                </div>
+
+                <p class="bm-note" style="text-align:center; max-width: 620px; margin-left:auto; margin-right:auto;">
+                These clips are recorded from the app's own screen. The macOS build puts the
+                same steps behind one shortcut and a panel over your email.</p>
+            </div>
+        </section>
+
+        <!-- 2. The three steps, in one place -->
+        <section class="section" id="steps" style="background: var(--color-muted);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">The whole flow</div>
+                    <h2>One reminder, three steps, one paste</h2>
+                    <p>Nothing else is asked of you.</p>
+                </div>
+                <table class="bm-steps">
+                    <thead>
+                        <tr>
+                            <th scope="col">Step</th>
+                            <th scope="col">What you do</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="bm-step">1. Direction</td>
+                            <td>Pick one of two to four genuinely different replies — <em>Confirm both</em>, <em>Offer a call</em>.</td>
+                        </tr>
+                        <tr>
+                            <td class="bm-step">2. Your calls</td>
+                            <td>Answer two or three questions. Most are one click each.</td>
+                        </tr>
+                        <tr>
+                            <td class="bm-step">3. Draft</td>
+                            <td>Read it, fill anything only you know, copy it.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 3. Why it is not just a chat box -->
+        <section class="section" id="difference">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">Why it is different</div>
+                    <h2>Why it is not just a chat box</h2>
+                    <p>A chat window does not know it is answering an email. ByteMail does.</p>
+                </div>
+                <table class="bm-matrix">
+                    <thead>
+                        <tr>
+                            <th scope="col">&nbsp;</th>
+                            <th scope="col">A chat panel</th>
+                            <th scope="col">ByteMail</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td class="bm-what">Knows it is email</td><td>No</td><td>Register, length, greeting, sign-off</td></tr>
+                        <tr><td class="bm-what">Writes as you</td><td>No</td><td>Learned from your own samples</td></tr>
+                        <tr><td class="bm-what">Knows who you are</td><td>No</td><td>Role, company, seniority from your profile</td></tr>
+                        <tr><td class="bm-what">Missing facts</td><td>Invents them</td><td>Labelled fields, and Copy blocked</td></tr>
+                        <tr><td class="bm-what">Reads the thread</td><td>No</td><td>The text around your selection</td></tr>
+                    </tbody>
+                </table>
+                <p class="bm-note" style="text-align:center;">You can check the gate yourself. The
+                app carries a diagnostic that needs no API key and no network —
+                <code>--contracttest</code> — and it fails if a filled field stops unlocking Copy.</p>
+            </div>
+        </section>
+
+        <!-- 4. What it does not do -->
+        <section class="section" id="limits" style="background: var(--color-muted);">
+            <div class="container">
+                <div class="bm-two">
+                    <div>
+                        <h3>What it will not do</h3>
+                        <ul class="bm-points">
+                            <li><strong>It never sends mail.</strong> It hands you text to paste into the app you already trust.</li>
+                            <li><strong>It will not guess a fact.</strong> No date, price or promise is written unless you put it there.</li>
+                            <li><strong>It says when it is unsure.</strong> Research it cannot do becomes a note naming exactly what to check.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Where it runs</h3>
+                        <ul class="bm-points">
+                            <li><strong>The macOS app</strong> lives in the menu bar. One key, a panel over your email.</li>
+                            <li><strong>The Windows app</strong> reaches the same result through its own window.</li>
+                            <li><strong>Only what you send.</strong> Nothing leaves the machine except the request to the model you chose.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Your mail stays yours -->
+        <section class="section" id="privacy">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">Your mail</div>
+                    <h2>Your mail stays yours</h2>
+                    <p>No ByteMind account. No server of ours in the path.</p>
+                </div>
+                <div class="bm-facts">
+                    <div><span class="bm-fact-value">2.3 MB</span><span class="bm-fact-label">the whole macOS app</span></div>
+                    <div><span class="bm-fact-value">1 KB</span><span class="bm-fact-label">what it keeps to describe your writing</span></div>
+                    <div><span class="bm-fact-value">0</span><span class="bm-fact-label">accounts, and no telemetry</span></div>
+                    <div><span class="bm-fact-value">1</span><span class="bm-fact-label">network call: your model provider, if you use one</span></div>
+                </div>
+                <div class="bm-two">
+                    <div>
+                        <h3>Where things are kept</h3>
+                        <p>API keys go in the macOS Keychain, or Windows' own protected store. Your
+                        profile and styles live in the app's own folder. There is no ByteMind
+                        account to make.</p>
+                    </div>
+                    <div>
+                        <h3>What it will not read</h3>
+                        <p>It reads the text you select and the text around it. Nothing else on your
+                        screen, and no mailbox it was not pointed at. Images in mail are stripped,
+                        and it tells you how many it removed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Download -->
+        <section class="section" id="download" style="background: var(--color-muted);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">Get ByteMail</div>
+                    <h2>Download</h2>
+                    <p>Free, and no account to make.</p>
+                </div>
+                <div class="bm-downloads">
+                    <article class="bm-download">
+                        <h3>macOS 13 or later</h3>
+                        <p class="bm-download-sub">Apple Silicon (M-series). One small app in your menu bar.</p>
+                        <a class="btn btn-primary" href="../assets/bytemail/ByteMail_1.1.0.zip" download>Download for macOS</a>
+                        <p class="bm-download-size">ByteMail 1.1.0 &middot; 0.7 MB to download, 2.3 MB installed</p>
+                    </article>
+                    <article class="bm-download">
+                        <h3>Windows 10 and 11</h3>
+                        <p class="bm-download-sub">ZIP package — extract it and run ByteMail.exe.</p>
+                        <a class="btn btn-primary" href="../assets/bytemail/ByteMail_Windows.zip" download>Download for Windows</a>
+                        <p class="bm-download-size">ByteMail for Windows 1.1.0 &middot; 64-bit &middot; 38 MB</p>
+                    </article>
+                </div>
+
+                <p class="bm-note" style="text-align:center; max-width:620px; margin-left:auto; margin-right:auto;">
+                The checksums, if you want to confirm what you received:<br>
+                <code style="font-size:.78rem;">6cfda0a4&hellip;1a1ab471</code> macOS &middot;
+                <code style="font-size:.78rem;">065753d8&hellip;50d26955</code> Windows</p>
+
+                <div class="container bm-windows" style="max-width: 780px;">
+                    <h3>Before you install</h3>
+                    <ul class="bm-points">
+                        <li><strong>macOS:</strong> if it says ByteMail cannot be verified, open <strong>System Settings → Privacy &amp; Security</strong>, click <strong>Open Anyway</strong> next to ByteMail, then confirm. Once only.</li>
+                        <li><strong>macOS:</strong> ByteMail needs <strong>Accessibility</strong> access to read the text you select and put the reply back. Settings shows this under Permissions, with a clipboard fallback if you would rather not grant it.</li>
+                        <li><strong>Windows:</strong> if SmartScreen appears, click <strong>More info</strong> then <strong>Run anyway</strong>.</li>
+                        <li><strong>Both:</strong> bring your own model key, or point it at a local model and use no key at all. Downloads are hosted on GitHub Releases.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="cta-banner">
+            <h2>Paste in a real email</h2>
+            <p>The demo inbox lets you click through the whole flow with no account and no key.</p>
+            <a href="mailto:bytemind.nz@gmail.com?subject=ByteMail" class="btn btn-outline">Ask a question</a>
+        </div>
+
+    </main>
+
+    <footer id="shell-footer" class="footer">
+        <div class="container">
+            <div class="footer-grid bm-footer-grid">
+                <div class="footer-col">
+                    <p class="footer-brand-name">ByteMind Ltd</p>
+                    <p class="footer-brand-desc">Business analytics, digital transformation, and strategic advisory for professional services across the Asia-Pacific region.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <a href="../services.html">Services</a>
+                    <a href="../indices.html">Indices</a>
+                    <a href="../insights.html">Insights</a>
+                    <a href="../reports.html">Reports</a>
+                    <a href="../about.html">About</a>
+                    <a href="../contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <a href="../bytebook/">ByteBook</a>
+                    <a href="../bytetax/">ByteTax</a>
+                    <a href="../byteproof.html">ByteProof</a>
+                    <a href="../bytemail/">ByteMail</a>
+                </div>
+                <div class="footer-col">
+                    <h4>ByteMail</h4>
+                    <a href="#work">See it working</a>
+                    <a href="#difference">Why it is different</a>
+                    <a href="#privacy">Your mail</a>
+                    <a href="#download">Download</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="mailto:bytemind.nz@gmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/michael-zumba/bytemind-website" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 ByteMind Ltd. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+    // Play each clip while it is on screen, pause it when it is not, and let a
+    // click pause or restart it. With reduced motion, nothing plays on its own.
+    (function () {
+      var clips = document.querySelectorAll('video[data-demo]');
+      if (!clips.length) return;
+      var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function start(video) {
+        var playing = video.play();
+        if (playing && playing.catch) playing.catch(function () {});
+      }
+      if (still) {
+        // Nothing plays on its own. The poster is the still frame, so it stays.
+        return;
+      }
+      Array.prototype.forEach.call(clips, function (video) {
+        if (video.preload === 'none') video.preload = 'auto';
+      });
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) start(entry.target);
+            else entry.target.pause();
+          });
+        }, { threshold: 0.5 });
+        Array.prototype.forEach.call(clips, function (video) { observer.observe(video); });
+      }
+      Array.prototype.forEach.call(clips, function (video) {
+        video.addEventListener('click', function () {
+          if (video.paused) start(video);
+          else video.pause();
+        });
+      });
+    })();
+
+    // The menu button, and the line under the header once the page has moved.
+    (function () {
+      var button = document.querySelector('.mobile-menu-btn');
+      var links = document.querySelector('.nav-links');
+      if (button && links) {
+        button.addEventListener('click', function () {
+          var open = links.classList.toggle('active');
+          button.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+      var nav = document.querySelector('.navbar');
+      function onScroll() { if (nav) nav.classList.toggle('scrolled', window.scrollY > 8); }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+    </script>
+</body>
+</html>

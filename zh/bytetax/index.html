@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" sizes="32x32" href="../../assets/logo/favicon-32.png?v=2026">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ByteTax | ByteMind 出品的免费新西兰税务学习游戏</title>
-    <meta name="description" content="一款免费的新西兰税务学习游戏。七种练习方式，每个答案都能追溯到新西兰税务局，并由机器核对。">
+    <title>ByteTax｜ByteMind 出品的免费新西兰税务学习游戏</title>
+    <meta name="description" content="免费的新西兰税务答题游戏。七种题型，每轮八道题，每个答案都能追溯到新西兰税务局。">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ByteMind Ltd">
     <meta property="og:title" content="ByteTax | Free New Zealand tax learning game by ByteMind">
-    <meta property="og:description" content="A free learning game for New Zealand tax. Seven ways to practise, every answer traced to Inland Revenue and checked by machine.">
+    <meta property="og:description" content="A free quiz game for New Zealand tax. Seven formats, eight questions a round, and every answer traced to Inland Revenue.">
     <meta property="og:url" content="https://www.bytemind.co.nz/bytetax/">
     <link rel="canonical" href="https://www.bytemind.co.nz/bytetax/">
     <link rel="stylesheet" href="../../colors_and_type.css">
@@ -22,25 +22,33 @@
       .bt-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
       .bt-card p { margin: 0; color: var(--color-muted-foreground); }
       .bt-card { border-top: 3px solid var(--color-accent, #1f6f5c); }
-      /* Screenshots of the game, shown at a size that stays readable on a
-         laptop without dominating the page. */
-      .bt-gallery {
-        display: grid; gap: var(--space-8); grid-template-columns: 1fr;
+
+      /* One thing the game does per row: a short line about it, and a clip of
+         it happening. The clips play while they are on screen. */
+      .bt-work {
+        display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+        gap: var(--space-10); align-items: center;
       }
-      @media (min-width: 760px) { .bt-gallery { grid-template-columns: repeat(2, 1fr); } }
-      .bt-shot { margin: 0; }
-      .bt-shot img {
-        width: 100%; height: auto; display: block; border-radius: var(--radius-lg);
-        border: 1px solid var(--color-border); box-shadow: 0 12px 30px rgba(0, 0, 0, .10);
-        background: #0d1726;
+      .bt-work + .bt-work { margin-top: var(--space-16); }
+      .bt-work h3 {
+        font-family: var(--font-serif); font-size: 1.4rem; margin: 0 0 8px;
+        color: var(--color-primary);
       }
-      .bt-shot figcaption {
-        margin-top: 10px; font-size: .92rem; color: var(--color-muted-foreground);
-        line-height: 1.5;
+      .bt-work p { margin: 0; }
+      .bt-flip .bt-work-copy { order: 2; }
+      .bt-demo {
+        margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+        overflow: hidden; background: #0d1726;
+        box-shadow: 0 16px 40px -24px rgba(14, 36, 25, .32);
       }
-      .bt-shot figcaption strong {
-        display: block; color: var(--color-foreground, #1a1a1a); font-weight: 600;
-        margin-bottom: 2px;
+      .bt-demo video { display: block; width: 100%; height: auto; background: #0d1726; cursor: pointer; }
+      .bt-demo figcaption {
+        padding: 10px 16px 12px; font-size: .88rem; line-height: 1.5;
+        color: var(--color-muted-foreground); border-top: 1px solid var(--color-border);
+      }
+      @media (max-width: 860px) {
+        .bt-work { grid-template-columns: 1fr; gap: var(--space-6); }
+        .bt-flip .bt-work-copy { order: 0; }
       }
     </style>
 </head>
@@ -49,18 +57,18 @@
     <header id="shell-header">
         <nav class="navbar">
             <div class="container nav-container">
-                <a href="../../index.html" class="logo-link">ByteMind</a>
+                <a href="../index.html" class="logo-link">ByteMind</a>
                 <div class="nav-links" id="nav-links">
-                    <a href="../../index.html">首页</a>
-                    <a href="../../services.html">服务</a>
-                    <a href="../../indices.html">指数</a>
-                    <a href="../../insights.html">洞察</a>
-                    <a href="../../reports.html">报告</a>
-                    <a href="../../about.html">关于</a>
-                    <a href="../../contact.html">联系方式</a>
+                    <a href="../index.html">首页</a>
+                    <a href="../services.html">服务</a>
+                    <a href="../indices.html">指数</a>
+                    <a href="../insights.html">洞察</a>
+                    <a href="../reports.html">报告</a>
+                    <a href="../about.html">关于</a>
+                    <a href="../contact.html">联系方式</a>
                 </div>
                 <a href="../../bytetax/index.html" class="lang-switch" data-dom-id="lang-switch" hreflang="en">EN</a>
-                <button type="button" class="mobile-menu-btn" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">
+                <button type="button" class="mobile-menu-btn" aria-label="打开或关闭菜单" aria-controls="nav-links" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
             </div>
@@ -72,78 +80,116 @@
         <section class="page-hero animate-fade-in-up">
             <div class="eyebrow">免费 · ByteMind Ltd</div>
             <div class="accent-bar"></div>
-            <h1>一次一个问题，学懂新西兰税务</h1>
-            <p class="hero-intro">ByteTax 是一个简短的学习游戏。选一个主题，回答几道题，再读一读每个答案为什么对。每个答案都链接到它出自的页面。</p>
+            <h1>一道题一道题，学懂新西兰税务</h1>
+            <p class="hero-intro">一款简短的新西兰税务答题游戏。每个答案都能追溯到它出自的页面。</p>
             <div class="bt-ctas">
-                <a class="btn btn-primary" href="../../bytetax/play/?lang=zh">玩 ByteTax →</a>
-                <a class="btn btn-secondary" href="#how">运作方式</a>
+                <a class="btn btn-primary" href="../../bytetax/play/?lang=zh">开始玩 ByteTax →</a>
+                <a class="btn btn-secondary" href="#how">看看怎么玩</a>
             </div>
-            <p class="bt-note">无需账号，离线可用，200 道题覆盖 13 个主题</p>
+            <p class="bt-note">不用账号，离线可用。200 道题，覆盖 13 个主题。</p>
         </section>
 
         <section class="section" id="how">
             <div class="container">
                 <div class="section-header">
-                    <div class="eyebrow">用之前，先看这些</div>
-                    <h2>每个答案都标明出处</h2>
-                    <p>税务规则会变。一个悄悄教旧规则的游戏，还不如没有游戏。所以这里把准确性放在第一位。</p>
+                    <div class="eyebrow">一轮怎么玩</div>
+                    <h2>点三下就能开始玩</h2>
+                    <p>每段短片都是真实游戏画面，大约三秒。</p>
                 </div>
-                <div class="grid-3">
-                    <div class="card bt-card">
-                        <h3>每个答案都有依据</h3>
-                        <p>每道题都至少对应一个新西兰税务局页面。证明答案的原话和题目一起存下来。</p>
+                
+                <div class="bt-work">
+                    <div class="bt-work-copy">
+                        <h3>选一个主题</h3>
+                        <p>十三个主题，按课程顺序。选一个就开始。</p>
                     </div>
-                    <div class="card bt-card">
-                        <h3>电脑检查用词</h3>
-                        <p>如果页面变了、措辞位置变了，这道题就不通过，先搁置，等人工再看一遍。</p>
-                    </div>
-                    <div class="card bt-card">
-                        <h3>每个数字都带日期</h3>
-                        <p>税率从不单独存储。它保留适用的年份，所以 2024 年的税率不会被当作今天的税率使用。</p>
-                    </div>
-                    <div class="card bt-card">
-                        <h3>有法律依据</h3>
-                        <p>关键规则还引用 2007 年所得税法、1985 年商品及服务税法或 1994 年税务管理法。</p>
-                    </div>
-                    <div class="card bt-card">
-                        <h3>说清楚它是什么</h3>
-                        <p>这是一般性信息，不是税务建议。每个页面都会这样说明，新西兰税务局仍是最终依据。</p>
-                    </div>
-                    <div class="card bt-card">
-                        <h3>数据不离开你的设备</h3>
-                        <p>你的进度保存在你自己的浏览器里。不用账号，不做追踪，
-                        数据不发送到任何地方。</p>
-                    </div>
+                    <figure class="bt-demo">
+                        <video data-demo muted loop playsinline preload="none"
+                               width="1000" height="768"
+                               poster="../../assets/bytetax/demo-pick.jpg"
+                               aria-label="从主题列表里选择商品及服务税，接着出现第一道题">
+                            <source src="../../assets/bytetax/demo-pick.webm" type="video/webm">
+                        </video>
+                    </figure>
                 </div>
-                <p class="bt-note">2026 年 9 月 21 日对照新西兰税务局核查。
-                200 道题背后有
-                60 个来源的 120 条事实。</p>
+                <div class="bt-work bt-flip">
+                    <div class="bt-work-copy">
+                        <h3>答题</h3>
+                        <p>每个答案都配一句话的理由，以及对应的新西兰税务局页面。</p>
+                    </div>
+                    <figure class="bt-demo">
+                        <video data-demo muted loop playsinline preload="none"
+                               width="1000" height="768"
+                               poster="../../assets/bytetax/demo-answer.jpg"
+                               aria-label="答对一道题，下面出现理由和新西兰税务局出处">
+                            <source src="../../assets/bytetax/demo-answer.webm" type="video/webm">
+                        </video>
+                    </figure>
+                </div>
+                <div class="bt-work">
+                    <div class="bt-work-copy">
+                        <h3>查看得分</h3>
+                        <p>每轮八道题，然后给出得分和要复习的内容。</p>
+                    </div>
+                    <figure class="bt-demo">
+                        <video data-demo muted loop playsinline preload="none"
+                               width="1000" height="768"
+                               poster="../../assets/bytetax/demo-summary.jpg"
+                               aria-label="答完一轮的最后一道题，随后出现得分和各主题结果">
+                            <source src="../../assets/bytetax/demo-summary.webm" type="video/webm">
+                        </video>
+                    </figure>
+                </div>
             </div>
         </section>
 
         <section class="section" style="background: var(--color-muted, #f6f5ef);" id="formats">
             <div class="container">
                 <div class="section-header">
-                    <div class="eyebrow">七种练习方式</div>
-                    <h2>不是满屏的选择题</h2>
-                    <p>每轮练习混合不同题型，同一个主题不会两次以相同形式出现。下面是其中四种题型。</p>
+                    <div class="eyebrow">七种题型</div>
+                    <h2>七种练习方式</h2>
+                    <p>每轮把它们混着用，同一个主题不会两次都一个样。</p>
                 </div>
-                <div class="bt-gallery">
-                    <figure class="bt-shot">
-                        <img src="../../assets/bytetax/format-quiz.png" alt="="快速测验：选一个答案，会看到一句理由和来源链接。" loading="lazy" width="880" height="820">
-                        <figcaption><strong>快速测验</strong>选一个答案。你会得到一句理由和一条来源链接。</figcaption>
+                
+                <div class="bt-work">
+                    <div class="bt-work-copy">
+                        <h3>翻卡</h3>
+                        <p>翻开卡片，再选你刚才有没有想起来。</p>
+                    </div>
+                    <figure class="bt-demo">
+                        <video data-demo muted loop playsinline preload="none"
+                               width="1000" height="768"
+                               poster="../../assets/bytetax/demo-card.jpg"
+                               aria-label="翻开一张卡片，标记为已经记住">
+                            <source src="../../assets/bytetax/demo-card.webm" type="video/webm">
+                        </video>
                     </figure>
-                    <figure class="bt-shot">
-                        <img src="../../assets/bytetax/format-card.png" alt="="翻卡：点一下卡片翻面，然后说出你刚才会不会。" loading="lazy" width="880" height="820">
-                        <figcaption><strong>翻卡</strong>点一下卡片翻面，然后选择你刚才有没有想起来。</figcaption>
+                </div>
+                <div class="bt-work bt-flip">
+                    <div class="bt-work-copy">
+                        <h3>配对</h3>
+                        <p>把卡片拖到它的配对上，每放好一张都会编号。</p>
+                    </div>
+                    <figure class="bt-demo">
+                        <video data-demo muted loop playsinline preload="none"
+                               width="1000" height="768"
+                               poster="../../assets/bytetax/demo-match.jpg"
+                               aria-label="把卡片拖到对应的配对上，卡片落位并显示编号">
+                            <source src="../../assets/bytetax/demo-match.webm" type="video/webm">
+                        </video>
                     </figure>
-                    <figure class="bt-shot">
-                        <img src="../../assets/bytetax/format-match.png" alt="="配对：把卡片拖到对应的位置。每张卡片都有编号，你能看到哪张放到了哪里。" loading="lazy" width="880" height="820">
-                        <figcaption><strong>配对</strong>把卡片拖进对应的槽位。每张卡片都有编号，放没放对一看就知道。</figcaption>
-                    </figure>
-                    <figure class="bt-shot">
-                        <img src="../../assets/bytetax/format-sort.png" alt="="分类：把每张卡片拖到它所属的组里。" loading="lazy" width="880" height="820">
-                        <figcaption><strong>分类</strong>把每张卡片拖到它所属的分组里。</figcaption>
+                </div>
+                <div class="bt-work">
+                    <div class="bt-work-copy">
+                        <h3>分类</h3>
+                        <p>把每张卡片拖进对应的分组。点一下也可以。</p>
+                    </div>
+                    <figure class="bt-demo">
+                        <video data-demo muted loop playsinline preload="none"
+                               width="1000" height="768"
+                               poster="../../assets/bytetax/demo-sort.jpg"
+                               aria-label="把卡片拖进它所属的分组">
+                            <source src="../../assets/bytetax/demo-sort.webm" type="video/webm">
+                        </video>
                     </figure>
                 </div>
                 <div class="bt-format">
@@ -155,10 +201,31 @@
                     <span>分类</span>
                     <span>排序</span>
                 </div>
-                <p class="bt-note">13 个主题按 ACCT 862 的课程安排展开，从税制和税务居民身份，一直讲到国际税和今年的变化。</p>
-                <div class="bt-ctas" style="justify-content: flex-start;">
-                    <a class="btn btn-primary" href="../../bytetax/play/?lang=zh">开始答题 →</a>
+            </div>
+        </section>
+
+        <section class="section" id="accuracy">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">准确性</div>
+                    <h2>每个答案都标明出处</h2>
+                    <p>税务规则会变，旧规则不该留在题里。</p>
                 </div>
+                <div class="grid-3">
+                    <div class="card bt-card">
+                        <h3>每道题都有出处</h3>
+                        <p>至少一个新西兰税务局页面，并附上能证明它的原话。</p>
+                    </div>
+                    <div class="card bt-card">
+                        <h3>机器复核措辞</h3>
+                        <p>原话一旦有改动，这道题就先撤下，等人工再看一遍。</p>
+                    </div>
+                    <div class="card bt-card">
+                        <h3>税率都带年份</h3>
+                        <p>每个税率都记着适用的年份，2024 年的税率不会被当成今天的。</p>
+                    </div>
+                </div>
+                <p class="bt-note">2026 年 9 月 21 日对照新西兰税务局核查：120 条事实、60 个来源、200 道题。</p>
             </div>
         </section>
 
@@ -167,9 +234,12 @@
                 <div class="section-header">
                     <div class="eyebrow">适合谁</div>
                     <h2>学生，以及任何想复习的人</h2>
-                    <p>为学习新西兰税务课程的会计和税务专业学生做的。想在事情变得重要之前检验自己掌握程度的人，都能用得上。</p>
+                    <p>为会计和税务专业学生而做，也适合任何想检验自己掌握程度的人。</p>
                 </div>
-                <p class="bt-note">ByteTax 提供的是关于新西兰税务的一般性信息。它不是税务建议，也不会算出任何人的税单。它涵盖的每条规则，都以新西兰税务局为权威依据。由 ByteMind Ltd 开发。版本 0.1.0。</p>
+                <p class="bt-note">ByteTax 提供新西兰税务的一般性信息，不是税务建议，也不会替任何人算出应纳税额。每条规则都以新西兰税务局为准。不用账号，不做跟踪：进度只保存在你自己的浏览器里。由 ByteMind Ltd 开发，版本 0.1.0。</p>
+                <div class="bt-ctas" style="justify-content: flex-start;">
+                    <a class="btn btn-primary" href="../../bytetax/play/?lang=zh">开始一轮 →</a>
+                </div>
             </div>
         </section>
     </main>
@@ -184,19 +254,21 @@
                 </div>
                 <div class="footer-col">
                     <h4>页面</h4>
-                    <a href="../../services.html">服务</a>
-                    <a href="../../indices.html">指数</a>
-                    <a href="../../insights.html">洞察</a>
-                    <a href="../../reports.html">报告</a>
-                    <a href="../../about.html">关于</a>
-                    <a href="../../contact.html">联系方式</a>
+                    <a href="../services.html">服务</a>
+                    <a href="../indices.html">指数</a>
+                    <a href="../insights.html">洞察</a>
+                    <a href="../reports.html">报告</a>
+                    <a href="../about.html">关于</a>
+                    <a href="../contact.html">联系方式</a>
                 </div>
                 <div class="footer-col">
                     <h4>产品</h4>
-                    <a href="../../bytetax/">ByteTax</a>
+                    <a href="../bytebook/">ByteBook</a>
+                    <a href="../bytetax/">ByteTax</a>
+                    <a href="../byteproof.html">ByteProof</a>
                 </div>
                 <div class="footer-col">
-                    <h4>连接</h4>
+                    <h4>联系我们</h4>
                     <a href="mailto:bytemind.nz@gmail.com">邮箱</a>
                     <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     <a href="https://github.com/michael-zumba/bytemind-website" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -216,6 +288,36 @@
           button.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
       }
+    })();
+    </script>
+
+    <script>
+    // Play each clip while it is on screen, pause it when it is not, and let a
+    // click pause or restart one. With reduced motion, nothing plays by itself
+    // and the poster frame stays.
+    (function () {
+      var clips = document.querySelectorAll('video[data-demo]');
+      if (!clips.length) return;
+      var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function start(video) {
+        var playing = video.play();
+        if (playing && playing.catch) playing.catch(function () {});
+      }
+      if ('IntersectionObserver' in window && !still) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) start(entry.target);
+            else entry.target.pause();
+          });
+        }, { threshold: 0.5 });
+        Array.prototype.forEach.call(clips, function (video) { observer.observe(video); });
+      }
+      Array.prototype.forEach.call(clips, function (video) {
+        video.addEventListener('click', function () {
+          if (video.paused) start(video);
+          else video.pause();
+        });
+      });
     })();
     </script>
 </body>

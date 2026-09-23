@@ -80,7 +80,7 @@
 
         <a href="../indices.html" class="lang-switch" data-dom-id="lang-switch" hreflang="en">EN</a>
 
-        <button type="button" class="mobile-menu-btn" data-dom-id="mobile-menu-btn" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">
+        <button type="button" class="mobile-menu-btn" data-dom-id="mobile-menu-btn" aria-label="打开或关闭菜单" aria-controls="nav-links" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
@@ -99,7 +99,7 @@
     </section>
 
     <!-- 2. Indicator families -->
-    <div class="tabs" id="family-tabs" role="tablist" aria-label="Indicator families">
+    <div class="tabs" id="family-tabs" role="tablist" aria-label="指标类别">
       <button class="tab-btn active" role="tab" id="fam-housing" aria-selected="true" aria-controls="panel-housing" onclick="openFamily(event, 'housing')">住房市场</button>
       <button class="tab-btn" role="tab" id="fam-tefi" aria-selected="false" aria-controls="panel-tefi" onclick="openFamily(event, 'tefi')">税务效率（TEFI）</button>
       <button class="tab-btn" role="tab" id="fam-sme" aria-selected="false" aria-controls="panel-sme" onclick="openFamily(event, 'sme')">新西兰中小企业韧性</button>
@@ -110,7 +110,7 @@
     <div id="panel-housing" class="family-panel active" role="tabpanel" aria-labelledby="fam-housing">
 
     <!-- KPI snapshot (2025) -->
-    <section class="metric-strip" aria-label="Latest housing indicators">
+    <section class="metric-strip" aria-label="最新住房指标">
       <div class="metric-item">
         <div class="metric-value">159</div>
         <span class="metric-label">新西兰实际房价指数 2025（2010 年 = 100）</span>
@@ -177,7 +177,7 @@
     </div>
 
     <!-- Housing sub-tabs -->
-    <div class="tabs" role="tablist" aria-label="Chart categories">
+    <div class="tabs" role="tablist" aria-label="图表分类">
       <button class="tab-btn active" role="tab" id="tab-hpi" aria-selected="true" aria-controls="hpi" onclick="openTab(event, 'hpi')">实际房价</button>
       <button class="tab-btn" role="tab" id="tab-valuation" aria-selected="false" aria-controls="valuation" onclick="openTab(event, 'valuation')">估值指标</button>
       <button class="tab-btn" role="tab" id="tab-supply" aria-selected="false" aria-controls="supply" onclick="openTab(event, 'supply')">供给与人口</button>
@@ -188,7 +188,7 @@
     <div id="hpi" class="tab-content active" role="tabpanel" aria-labelledby="tab-hpi">
       <h3 class="chart-heading">新西兰与澳大利亚实际房价指数（BIS，2010 年=100）</h3>
       <p class="caption">实际价格，已按通胀调整。两国在 2000 年前后都出现明显转折。</p>
-      <div id="chart-hpi" class="chart-box chart-lg" role="img" aria-label="Line chart of New Zealand and Australia real house price indices from 1970 to 2025"></div>
+      <div id="chart-hpi" class="chart-box chart-lg" role="img" aria-label="1970 年至 2025 年新西兰与澳大利亚实际房价指数折线图"></div>
 
       <div class="accordion">
         <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-hpi">
@@ -206,15 +206,15 @@
     <div id="valuation" class="tab-content" role="tabpanel" aria-labelledby="tab-valuation">
       <h3 class="chart-heading">新西兰房价收入比（OECD，2015=100）</h3>
       <p class="caption">虚线是长期中位数（88.9）。2025 年为 105.8，这一比率偏高，但比 2021 年 142.9 的峰值下降了 26%。</p>
-      <div id="chart-pti" class="chart-box chart-md" role="img" aria-label="Chart of New Zealand price-to-income ratio, 2015 equals 100"></div>
+      <div id="chart-pti" class="chart-box chart-md" role="img" aria-label="新西兰房价收入比走势图，2015 年等于 100"></div>
 
       <h3 class="chart-heading chart-heading--spaced">实际 HPI 相对长期趋势的偏离</h3>
       <p class="caption">高于零，说明价格高于趋势。这个差距已从 2021 年峰值的 +38% 降到约 +8%。</p>
-      <div id="chart-deviation" class="chart-box chart-md" role="img" aria-label="Chart of real house price index deviation from its long-run trend"></div>
+      <div id="chart-deviation" class="chart-box chart-md" role="img" aria-label="实际房价指数偏离长期趋势图"></div>
 
       <h3 class="chart-heading chart-heading--spaced">房贷利率与家庭债务收入比</h3>
       <p class="caption">1 年期固定房贷利率（左轴）和家庭债务与可支配收入之比（右轴）。</p>
-      <div id="chart-rates-dti" class="chart-box chart-md" role="img" aria-label="Chart of one-year fixed mortgage rates and household debt-to-income ratio"></div>
+      <div id="chart-rates-dti" class="chart-box chart-md" role="img" aria-label="一年期固定房贷利率与家庭债务收入比走势图"></div>
 
       <div class="accordion">
         <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-valuation">
@@ -232,7 +232,7 @@
     <div id="supply" class="tab-content" role="tabpanel" aria-labelledby="tab-supply">
       <h3 class="chart-heading">建筑许可与净移民（1995–2025）</h3>
       <p class="caption">建筑许可（柱状图，单位：千套）与净国际移民（折线，单位：千人）。来源：Stats NZ。</p>
-      <div id="chart-supply" class="chart-box chart-lg" role="img" aria-label="Chart of building consents and net migration from 1995 to 2025"></div>
+      <div id="chart-supply" class="chart-box chart-lg" role="img" aria-label="1995 年至 2025 年建筑许可与净移民走势图"></div>
 
       <div class="accordion">
         <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-supply">
@@ -250,7 +250,7 @@
     <div id="international" class="tab-content" role="tabpanel" aria-labelledby="tab-international">
       <h3 class="chart-heading">实际房价跌幅：从峰值到谷底</h3>
       <p class="caption">发达经济体的部分房价回调。按历史标准衡量，新西兰和澳大利亚的幅度算温和。</p>
-      <div id="chart-intl" class="chart-box chart-md" role="img" aria-label="Chart of real house price declines from peak to trough in selected advanced economies"></div>
+      <div id="chart-intl" class="chart-box chart-md" role="img" aria-label="部分发达经济体实际房价从峰值到谷底的跌幅图"></div>
 
       <div class="accordion">
         <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-intl">
@@ -271,7 +271,7 @@
       <h2>税收效率与摩擦指数</h2>
       <p class="panel-intro">公司税率和税务合规给企业带来多大负担？评分从 0（负担最小）到 100（负担最大）。新西兰得 65.4 分，在参与比较的十个经济体中排在中游。</p>
 
-      <div id="chart-tefi" class="chart-box chart-tefi" role="img" aria-label="Horizontal bar chart of tax efficiency and friction scores across ten economies, New Zealand highlighted"></div>
+      <div id="chart-tefi" class="chart-box chart-tefi" role="img" aria-label="十个经济体的税收效率与摩擦评分横向柱状图，新西兰突出显示"></div>
 
       <div class="accordion">
         <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-tefi-method">
@@ -305,7 +305,7 @@
       <h2>新西兰中小企业韧性指数</h2>
       <p class="panel-intro">用通俗语言为新西兰小企业做健康检查，数据来自新西兰统计局的最新官方数据。指数为抗风险能力打分，从 0（弱）到 100（强）。</p>
 
-      <section class="metric-strip" aria-label="SME resilience indicators">
+      <section class="metric-strip" aria-label="中小企业韧性指标">
         <div class="metric-item">
           <div class="metric-value">37.1</div>
           <span class="metric-label">韧性得分 / 100</span>
@@ -325,7 +325,7 @@
       </section>
       <p class="metric-note">37.1 分表示小企业面临中等压力：支出下降，就业减少，企业数量仍在小幅增长。</p>
 
-      <div id="chart-sme" class="chart-box chart-sme" role="img" aria-label="Bar chart of SME resilience components: retail spending, enterprise growth, and employment growth"></div>
+      <div id="chart-sme" class="chart-box chart-sme" role="img" aria-label="中小企业韧性构成柱状图：零售支出、企业增长和就业增长"></div>
 
       <div class="accordion">
         <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-sme-method">
@@ -359,7 +359,7 @@
       <h2>研究指标</h2>
       <p class="panel-intro">指标选自 ByteMind 的分析报告。完整方法、来源和可下载数据都附在各份报告里。</p>
 
-      <section class="metric-strip" aria-label="Research indicator snapshot">
+      <section class="metric-strip" aria-label="研究指标快照">
         <div class="metric-item">
           <div class="metric-value">20.2%</div>
           <span class="metric-label">OECD 企业 AI 应用情况（2025）</span>
@@ -381,7 +381,7 @@
 
       <h3 class="chart-heading">AI 采用率：OECD 企业与麦肯锡调查对比</h3>
       <p class="caption">OECD 对 10 人以上企业采用严格的采用定义；麦肯锡的全球调查只要实际用上就算。口径不同，结论自然不同。</p>
-      <div id="chart-ai-adoption" class="chart-box chart-md" role="img" aria-label="Line chart of AI adoption rates from OECD firms and the McKinsey global survey from 2020 to 2025"></div>
+      <div id="chart-ai-adoption" class="chart-box chart-md" role="img" aria-label="2020 至 2025 年 OECD 企业与麦肯锡全球调查的 AI 采用率折线图"></div>
 
       <div class="accordion">
         <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-ai-adoption-table">
@@ -396,7 +396,7 @@
 
       <h3 class="chart-heading chart-heading--spaced">数字资产市值</h3>
       <p class="caption">加密货币总市值（柱状）与 AI 代币板块（折线，右轴）。加密货币数据取每年年末；AI 代币数据取 2020 至 2025 年第四季度快照，以及 2026 年第二季度快照。</p>
-      <div id="chart-digital-assets" class="chart-box chart-md" role="img" aria-label="Combined chart of cryptocurrency market capitalisation and AI token market capitalisation from 2013 to 2026"></div>
+      <div id="chart-digital-assets" class="chart-box chart-md" role="img" aria-label="2013 年至 2026 年加密货币市值与 AI 代币市值合并走势图"></div>
 
       <div class="accordion">
         <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-digital-table">
@@ -412,7 +412,7 @@
 
       <h3 class="chart-heading chart-heading--spaced">全球数据泄露平均成本</h3>
       <p class="caption">数据泄露的平均总成本，全球和美国，单位：百万美元。来源：IBM《数据泄露成本报告》（2015—2025 年）。</p>
-      <div id="chart-breach-cost" class="chart-box chart-md" role="img" aria-label="Chart of global and US average data breach costs from 2015 to 2025"></div>
+      <div id="chart-breach-cost" class="chart-box chart-md" role="img" aria-label="2015 年至 2025 年全球与美国数据泄露平均成本走势图"></div>
 
       <div class="accordion">
         <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-breach-table">
@@ -427,7 +427,7 @@
 
       <h3 class="chart-heading chart-heading--spaced">新西兰国际旅客入境人数</h3>
       <p class="caption">Stats NZ 公布的海外访客年度入境人数。2026 年数据不完整，只含 1 月至 4 月。</p>
-      <div id="chart-tourism-arrivals" class="chart-box chart-md" role="img" aria-label="Bar chart of annual New Zealand visitor arrivals from 2017 to 2026"></div>
+      <div id="chart-tourism-arrivals" class="chart-box chart-md" role="img" aria-label="2017 年至 2026 年新西兰年度入境游客人数柱状图"></div>
 
       <div class="accordion">
         <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-tourism-table">
@@ -442,7 +442,7 @@
     <!-- SYNC-PANEL:ai-era-daily-life -->
       <h3 class="chart-heading chart-heading--spaced">ChatGPT 发布前后的全球生活满意度</h3>
       <p class="caption">坎特里尔阶梯生活评价，未加权全球均值（0-10）。来源：2026 年《世界幸福报告》（盖洛普世界民意调查数据）。上升集中在 2020-2021 年，即 ChatGPT 出现之前；2022 年之后的走势大致持平。</p>
-      <div id="chart-life-satisfaction" class="chart-box chart-md" role="img" aria-label="Line chart of global life satisfaction from 2011 to 2025"></div>
+      <div id="chart-life-satisfaction" class="chart-box chart-md" role="img" aria-label="2011 年至 2025 年全球生活满意度折线图"></div>
       <div class="accordion">
         <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-life-satisfaction-table">
           <span class="accordion-title accordion-title--sm">查看数据表</span>
@@ -457,7 +457,7 @@
 <!-- SYNC-PANEL:prompt-literacy-ai-era -->
       <h3 class="chart-heading chart-heading--spaced">ChatGPT 周活跃用户数</h3>
       <p class="caption">周活跃用户数（百万），数据来自 OpenAI 的公告和公开报道，2023 年 11 月至 2025 年 10 月。</p>
-      <div id="chart-chatgpt-weekly" class="chart-box chart-md" role="img" aria-label="Line chart of ChatGPT weekly active users from November 2023 to October 2025"></div>
+      <div id="chart-chatgpt-weekly" class="chart-box chart-md" role="img" aria-label="2023 年 11 月至 2025 年 10 月 ChatGPT 周活跃用户折线图"></div>
       <div class="accordion">
         <button type="button" class="accordion-header" aria-expanded="false" aria-controls="accordion-chatgpt-weekly-table">
           <span class="accordion-title accordion-title--sm">查看数据表</span>
@@ -541,7 +541,7 @@
                 </div>
 
         <div class="footer-col">
-          <h4>连接</h4>
+          <h4>联系我们</h4>
           <a href="mailto:bytemind.nz@gmail.com">邮箱</a>
           <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           <a href="https://github.com/michael-zumba/bytemind-website" target="_blank" rel="noopener noreferrer">GitHub</a>

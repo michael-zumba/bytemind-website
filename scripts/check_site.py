@@ -20,6 +20,7 @@ Pages that are meant to be private or hidden are listed in SKIP.
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import sys
 from pathlib import Path
@@ -49,6 +50,39 @@ ALLOW_MULTIPLE_H1 = {"bytebook/manual/all.html"}
 NO_H1_NEEDED = {"bytetax/play/index.html"}
 
 HREF = re.compile(r'(?:href|src)="([^"]+)"', re.I)
+
+# The ByteBook page names its version in the download button, in the closing
+# call to action, and in the structured data a search engine reads. The feed at
+# the site root names the version an installed copy will be offered.
+DOWNLOAD = re.compile(r"bytebook/downloads/ByteBook-([0-9][0-9.]*)\.dmg")
+SOFTWARE_VERSION = re.compile(r'"softwareVersion"\s*:\s*"([0-9][0-9.]*)"')
+
+
+def version_problems() -> list[str]:
+    """Does every download link offer the version the feed publishes?
+
+    Checked because this is how a release quietly fails to reach anybody: the
+    disk image is published and the feed is written, the page keeps pointing at
+    the previous build, and the only symptom is that people download the old
+    one. A link to a file that exists is not the same as a link to the right
+    file, which is why the file-existence check in ``resolves`` cannot catch
+    it.
+    """
+    try:
+        published = json.loads((ROOT / "bytebook-version.json").read_text(encoding="utf-8"))["version"]
+    except (OSError, json.JSONDecodeError, KeyError):
+        return []
+    problems = []
+    for page in pages():
+        html = page.read_text(encoding="utf-8", errors="replace")
+        offered = set(DOWNLOAD.findall(html)) | set(SOFTWARE_VERSION.findall(html))
+        for found in sorted(offered):
+            if found != published:
+                problems.append(
+                    f"{page.relative_to(ROOT)}: offers ByteBook {found} "
+                    f"while the feed publishes {published}"
+                )
+    return problems
 
 
 def pages() -> list[Path]:
@@ -128,6 +162,7 @@ def main() -> int:
 
     found = pages()
     problems, notes = check()
+    problems.extend(version_problems())
     if not args.quiet:
         print(f"checked {len(found)} pages")
         if notes:

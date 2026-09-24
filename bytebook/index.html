@@ -5,11 +5,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png?v=2026">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ByteBook | Bookkeeping for New Zealand businesses</title>
-    <meta name="description" content="Invoices, GST, expenses, bank import and reports, on your own computer. Twelve practice businesses and fourteen assurance checks included.">
+    <meta name="description" content="Invoices, GST, expenses, bank import and reports, on your own computer. Twelve practice businesses already trading, and sixteen assurance checks.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ByteMind Ltd">
     <meta property="og:title" content="ByteBook | Bookkeeping for New Zealand businesses">
-    <meta property="og:description" content="Invoices, GST, expenses, bank import and reports, on your own computer. Twelve practice businesses and fourteen assurance checks included.">
+    <meta property="og:description" content="Invoices, GST, expenses, bank import and reports, on your own computer. Twelve practice businesses already trading, and sixteen assurance checks.">
     <meta property="og:url" content="https://www.bytemind.co.nz/bytebook/">
     <meta property="og:image" content="https://www.bytemind.co.nz/assets/bytebook/bytebook-og.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -28,7 +28,7 @@
       "name": "ByteBook",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "macOS",
-      "description": "Bookkeeping for New Zealand businesses. Invoices, GST, expenses, bank import and reports, kept on the computer it runs on, with an audit trail that shows any change. Twelve practice businesses and fourteen assurance checks are included for training staff.",
+      "description": "Bookkeeping for New Zealand businesses. Invoices, GST, expenses, bank import and reports, kept on the computer it runs on, with an audit trail that shows any change. Twelve practice businesses ship with the application, already trading, and sixteen assurance checks run on every visit.",
       "url": "https://www.bytemind.co.nz/bytebook/",
       "image": "https://www.bytemind.co.nz/assets/bytebook/bytebook-og.png",
       "publisher": { "@type": "Organization", "name": "ByteMind Ltd", "url": "https://www.bytemind.co.nz/" }
@@ -131,7 +131,7 @@
             <div class="accent-bar"></div>
             <h1>Bookkeeping for New Zealand businesses</h1>
             <p class="hero-intro">Invoices, GST, expenses, bank import and reports. On your own
-            computer. Twelve practice businesses included, for training staff.</p>
+            computer. Twelve practice businesses come with it, already trading.</p>
             <div class="bb-ctas">
                 <a class="btn btn-primary" href="#work">See it working</a>
                 <a class="btn btn-secondary" href="manual/">Read the handbook</a>
@@ -218,18 +218,19 @@
             <div class="container">
                 <div class="section-header">
                     <div class="eyebrow">Proving the books</div>
-                    <h2>Three checks a spreadsheet cannot do</h2>
+                    <h2>Four things a spreadsheet cannot do</h2>
                 </div>
 
                 <div class="bb-work">
                     <div class="bb-work-copy">
                         <h3>Run the assurance checks</h3>
-                        <p>Fourteen procedures run on the real entries every time you open the page. Each one reports what it found and gives you a working paper.</p>
+                        <p>Sixteen procedures run on the real entries every time you open the page. Each one reports what it found and gives you a working paper.</p>
                         <ul>
                             <li>Ledger integrity, double entry</li>
                             <li>Bank, debtors, creditors, GST reconciliation</li>
                             <li>Manual journals, duplicate payments, cut-off, documents, expenses</li>
                             <li>Sealed packs, access, and a recalculation of the reports</li>
+                            <li>Whether anything is missing from the record, and who entered, voided and worked out of hours</li>
                         </ul>
                     </div>
                     <figure class="bb-demo">
@@ -279,6 +280,27 @@
                         <figcaption>Sealed, with a fingerprint you can quote.</figcaption>
                     </figure>
                 </div>
+
+                <div class="bb-work">
+                    <div class="bb-work-copy">
+                        <h3>Hand it to somebody who checks it themselves</h3>
+                        <p>Each time the record is verified, ByteBook writes down what it said: how many
+                        entries, the last fingerprint, and the root of the whole ledger. Keep the receipt.</p>
+                        <ul>
+                            <li>A receipt is two dozen lines you can email to your accountant. Paste it
+                            back in later and ByteBook says whether the books still match it</li>
+                            <li>Export the whole record with a script that recomputes it: Python 3.8,
+                            nothing else installed, no internet, no ByteBook</li>
+                            <li>A read-only key lets an auditor's own tools read the same figures, and
+                            every read is written to an access log</li>
+                        </ul>
+                    </div>
+                    <figure class="bb-shot">
+                        <img src="../assets/bytebook/bytebook-export.png" width="1200" height="940"
+                             alt="The audit bundle page: what the folder holds, the three commands an auditor runs, and the read-only API">
+                        <figcaption>The record, a script that checks it, and a key to read it with.</figcaption>
+                    </figure>
+                </div>
             </div>
         </section>
 
@@ -287,10 +309,22 @@
             <div class="container">
                 <div class="section-header">
                     <div class="eyebrow">For training</div>
-                    <h2>Twelve businesses to practise on</h2>
-                    <p>Each one sets itself up, trades, banks its money, files GST, and has its books
-                    checked from the raw entries. Nothing you do in training can touch a client's records.</p>
+                    <h2>A real business to practise on, already trading</h2>
+                    <p>Twelve of them ship with the application. Open one and the books are months
+                    old: invoices sent and chased, a bank statement coded, GST filed, one or two
+                    mistakes that somebody had to fix. Each has a paragraph on what it teaches and
+                    four things to try. Nothing you do in one can touch a client's records.</p>
                 </div>
+
+                <figure class="bb-demo" style="margin-bottom: var(--space-10);">
+                    <video data-demo muted loop playsinline preload="none" width="1200" height="900"
+                           poster="../assets/bytebook/demo-practice.jpg"
+                           aria-label="Scrolling the practice businesses: each card names the trade, what it teaches, and four things to try">
+                        <source src="../assets/bytebook/demo-practice.webm" type="video/webm">
+                    </video>
+                    <figcaption>Choosing a business, and what each one is for.</figcaption>
+                </figure>
+
                 <table class="bb-matrix">
                     <thead>
                         <tr>
@@ -304,27 +338,44 @@
                         <tr><td><span class="bb-name">Bright Cuts</span><br><span class="bb-trade">hairdressing</span></td><td><span class="bb-pill bb-pill-off">No</span></td><td>—</td><td>Books with no GST anywhere</td></tr>
                         <tr><td><span class="bb-name">Kōwhai Advisory</span><br><span class="bb-trade">consulting</span></td><td><span class="bb-pill bb-pill-on">Yes</span></td><td>Monthly, payments</td><td>A late payer, and GST that follows the money</td></tr>
                         <tr><td><span class="bb-name">Tasman Builders</span><br><span class="bb-trade">construction</span></td><td><span class="bb-pill bb-pill-on">Yes</span></td><td>2-monthly, invoice</td><td>Stage payments on one contract</td></tr>
-                        <tr><td><span class="bb-name">Harbour Cafe</span><br><span class="bb-trade">hospitality</span></td><td><span class="bb-pill bb-pill-on">Yes</span></td><td>Monthly</td><td>Many small sales, and a work vehicle</td></tr>
+                        <tr><td><span class="bb-name">Harbour Cafe</span><br><span class="bb-trade">hospitality</span></td><td><span class="bb-pill bb-pill-on">Yes</span></td><td>Monthly</td><td>Daily takings banked in a lump, and a deposit that covers more than one day</td></tr>
                         <tr><td><span class="bb-name">Loom &amp; Light</span><br><span class="bb-trade">online retail</span></td><td><span class="bb-pill bb-pill-on">Yes</span></td><td>2-monthly</td><td>Refunds that reverse a sale</td></tr>
-                        <tr><td><span class="bb-name">Marine Parade Rentals</span><br><span class="bb-trade">property</span></td><td><span class="bb-pill bb-pill-on">Yes</span></td><td>2-monthly</td><td>Exempt rent beside taxable rent</td></tr>
+                        <tr><td><span class="bb-name">Marine Parade Rentals</span><br><span class="bb-trade">property</span></td><td><span class="bb-pill bb-pill-on">Yes</span></td><td>2-monthly</td><td>Rent that carries no GST, and repairs you cannot claim it on</td></tr>
                         <tr><td><span class="bb-name">Whirinaki Contracting</span><br><span class="bb-trade">horticulture</span></td><td><span class="bb-pill bb-pill-on">Yes</span></td><td>6-monthly</td><td>A long return period</td></tr>
                         <tr><td><span class="bb-name">Foundry Labs</span><br><span class="bb-trade">software</span></td><td><span class="bb-pill bb-pill-off">No</span></td><td>—</td><td>Costs only, no revenue yet</td></tr>
                         <tr><td><span class="bb-name">Marine Parade Dental</span><br><span class="bb-trade">health</span></td><td><span class="bb-pill bb-pill-on">Yes</span></td><td>Monthly</td><td>Passwords and four roles</td></tr>
                         <tr><td><span class="bb-name">Ngata Plumbing</span><br><span class="bb-trade">trades</span></td><td><span class="bb-pill bb-pill-on">Yes</span></td><td>2-monthly</td><td>A busy bank statement</td></tr>
-                        <tr><td><span class="bb-name">Pacific Trading</span><br><span class="bb-trade">wholesale</span></td><td><span class="bb-pill bb-pill-on">Yes</span></td><td>6-monthly</td><td>Stock bought and sold</td></tr>
+                        <tr><td><span class="bb-name">Pacific Trading</span><br><span class="bb-trade">wholesale</span></td><td><span class="bb-pill bb-pill-on">Yes</span></td><td>6-monthly</td><td>Imports, and a balance date that is not 31 March</td></tr>
                         <tr><td><span class="bb-name">Precision Engineering</span><br><span class="bb-trade">engineering</span></td><td><span class="bb-pill bb-pill-on">Yes</span></td><td>2-monthly</td><td>Amounts that break careless rounding</td></tr>
                     </tbody>
                 </table>
                 <div class="bb-two" style="margin-top: var(--space-10);">
                     <div>
-                        <h3>For the person running the training</h3>
-                        <p>One command sets a business up and trades it. Another runs all twelve, ten
-                        times over, and checks every set of books from the raw rows.</p>
+                        <h3>Your books stay yours</h3>
+                        <p>A practice business is a separate set of books kept beside your own.
+                        Choosing one opens it; <em>Back to my books</em> opens yours again, and a
+                        line across the top of every page says which one you are looking at. Work
+                        you do is kept until you start over.</p>
                     </div>
+                    <div>
+                        <h3>Built by running them</h3>
+                        <p>Each practice business is produced by driving the real application
+                        through a year of that trade and then checking the books from the raw rows.
+                        One command does it for all twelve, which is also how the program is tested.</p>
+                    </div>
+                </div>
+
+                <div class="bb-two" style="margin-top: var(--space-8);">
                     <div>
                         <h3>Four roles</h3>
                         <p>Owner, general manager, accountant, auditor. The last two can read
                         everything and change nothing. Adding a role needs the owner's password.</p>
+                    </div>
+                    <div>
+                        <h3>And your own books, from a file</h3>
+                        <p>Open a <code>bytebook.db</code> — a backup from another machine, or a set
+                        of books somebody sent you — as its own business, leaving everything else
+                        where it is.</p>
                     </div>
                 </div>
             </div>

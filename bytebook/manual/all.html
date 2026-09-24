@@ -51,7 +51,7 @@
 <ul class="book-nav-list">
 <li><a href="11-nothing-is-deleted.html"><span class="book-nav-num">11</span><span>Nothing is deleted: voiding, not editing</span></a></li>
 <li><a href="12-the-audit-trail-and-the-chain.html"><span class="book-nav-num">12</span><span>The audit trail and the chain</span></a></li>
-<li><a href="13-the-assurance-procedures.html"><span class="book-nav-num">13</span><span>The fourteen assurance procedures</span></a></li>
+<li><a href="13-the-assurance-procedures.html"><span class="book-nav-num">13</span><span>The sixteen assurance procedures</span></a></li>
 <li><a href="14-sealed-packs-and-working-papers.html"><span class="book-nav-num">14</span><span>Sealed packs and working papers</span></a></li>
 <li><a href="15-roles-and-access.html"><span class="book-nav-num">15</span><span>Roles: who may do what</span></a></li>
 </ul>
@@ -94,7 +94,7 @@
 <h2 id="who-it-is-for">Who it is for</h2>
 <ul>
 <li><strong>New accounting staff.</strong> You will do the work in a business that behaves like a real one, where a payment arrives late, a bill is paid twice, and the bank statement does not agree at the first try.</li>
-<li><strong>Audit staff in training.</strong> You will meet the fourteen procedures an auditor runs, learn what each one is for, and see what the exception looks like when the books are wrong.</li>
+<li><strong>Audit staff in training.</strong> You will meet the sixteen procedures an auditor runs, learn what each one is for, and see what the exception looks like when the books are wrong.</li>
 <li><strong>Students.</strong> Every topic here is a topic in a New Zealand accounting or taxation paper, seen from the inside rather than from a textbook.</li>
 <li><strong>The person running the training.</strong> Every exercise has a marking note, and the twelve sessions in Part 5 can be handed out as they are.</li>
 </ul>
@@ -139,7 +139,7 @@
       <div class="book-body">
 <h2 id="install-it">Install it</h2>
 <p>On a Mac, open the ByteBook disk image and drag ByteBook into Applications. That is the whole install. The program carries everything it needs, so it works on a computer with nothing else on it and with the internet switched off.</p>
-<p>The first time you open it on a Mac that has not seen it before, macOS may say the developer cannot be verified. Right-click the application, choose <strong>Open</strong>, and confirm once. It will start normally from then on.</p>
+<p>The application is signed with ByteMind's Apple Developer ID and notarized by Apple, so there is nothing to click through: it opens on a Mac that has never seen it, with the internet switched off.</p>
 <p>If you would rather run ByteBook from its source, the project's own readme explains that route. Everything in this handbook works the same way in either.</p>
 <h2 id="answer-four-questions">Answer four questions</h2>
 <p>ByteBook asks for four things the first time it opens, and then leaves you alone:</p>
@@ -150,6 +150,28 @@
 <li><strong>How do you invoice?</strong> Your business details, which print on every document.</li>
 </ol>
 <p>Nothing here is permanent. Every answer can be changed later under <strong>Settings</strong>. Learning to find and correct a setting is part of the exercise.</p>
+<h2 id="practice-on-a-business-that-already-exists">Practice on a business that already exists</h2>
+<p>Setting up a business from nothing teaches you the setting up. It does not teach you what it is like to open somebody's books in the middle of a year, which is the situation most of this handbook is really about.</p>
+<p><strong>Practice businesses</strong> — in the sidebar under <em>Set up</em> — are twelve New Zealand businesses with months of trading already in them. Each one is a different trade, and each trade produces its own kind of mess:</p>
+<table>
+<thead><tr><th>Business</th><th>What it is there to teach</th></tr></thead>
+<tbody>
+<tr><td>Hairdressing</td><td>A business under the GST threshold, with no tax on anything</td></tr>
+<tr><td>Consulting</td><td>GST on the payments basis, where the tax follows the money</td></tr>
+<tr><td>Construction</td><td>Stage payments and 20-day terms, where ageing matters more than the total</td></tr>
+<tr><td>Hospitality</td><td>Daily takings banked in a lump, and the difference somebody has to explain</td></tr>
+<tr><td>Online retail</td><td>Refunds and credit notes, which are not negative sales</td></tr>
+<tr><td>Residential property</td><td>Exempt rent, and repairs you cannot claim GST on</td></tr>
+<tr><td>Horticulture</td><td>Seasonal work on a six-monthly GST period</td></tr>
+<tr><td>Health</td><td>Staff, an accountant who may look but not touch, and an access log</td></tr>
+<tr><td>Trades</td><td>A busy bank statement, coded to eight accounts</td></tr>
+<tr><td>Wholesale</td><td>Imports, and a balance date that is not 31 March</td></tr>
+<tr><td>Software</td><td>A year of costs and no income, funded by somebody else</td></tr>
+<tr><td>Engineering</td><td>Amounts that break careless rounding, to the cent</td></tr>
+</tbody></table>
+<p>Choosing one opens it. Choosing <strong>Back to my books</strong> opens yours again. The practice business is a copy kept beside your own books, so nothing you do in it can touch them, and work you do there is kept until you press <strong>Start over</strong>.</p>
+<p>They live in a folder called <code>training</code> beside your own books — on a Mac, <code>~/Library/Application Support/ByteBook/training/<business></code>. Each one is an ordinary SQLite file, so copying that folder is a complete backup of it.</p>
+<p>Every one of these businesses is complete and internally consistent: open the audit trail on any of them and the chain verifies, and the assurance programme reports nothing wrong. They were built by running the real application and then checking the result, which is also how the program is tested. What is waiting in them is the ordinary work of a business — invoices past their due date, an unpaid bill, a document missing its supplier's GST number — and the list under <strong>What to try</strong> on each one is a place to start.</p>
 <h2 id="give-yourself-a-role">Give yourself a role</h2>
 <p>By default ByteBook opens without a password, which is right for a computer only one person uses. For training it is better to switch security on, because the roles are part of what you are here to learn:</p>
 <table>
@@ -765,27 +787,63 @@
 </ul>
 <p>If a link is broken, the page says so, and the meaning is specific: something wrote to the database outside ByteBook. That is not a bookkeeping error. It is a statement about the record itself, and it is worth more than a page of clean ticks.</p>
 <h2 id="the-chain-drawn">The chain, drawn</h2>
-<p><strong>The chain</strong> page draws the same thing. Every entry is a block; every fingerprint is a line between two. You can drag to move, scroll to zoom, click a block to read the entry behind it, and click a link to see the two hashes it joins. There is a filter and a search box, and a button that verifies the whole chain link by link.</p>
+<p><strong>The chain</strong> page shows the same thing at three scales, because one picture cannot answer both "is this intact?" and "what exactly is in this entry?".</p>
+<p><strong>The ribbon</strong> is the whole record on a time axis. Each mark is one day, and how tall it is tells you how many entries that day holds. Under the marks runs the chain itself — a line that is solid where the links hold and broken where they do not. Under that, each sealed period is drawn as a span across the days it covers, linked to the period before it. Everything the record has ever held is in that ribbon: it is not sampled and it is not paginated.</p>
+<p><strong>The chain below</strong> is the entries in order, each one a block and each fingerprint a line between two. The window starts at the most recent two dozen entries; click a day on the ribbon to open it, or press <strong>Everything</strong> to see the lot. Click a block to read the entry behind it, click a link to see the two hashes it joins. A correction is a block too: a voided entry stays in the picture, because it is part of the history.</p>
+<p><strong>The panel beside them</strong> takes one entry apart. It shows what was hashed — the date, the reference, the description, the type, the accounts and the amounts — and the fingerprint that came out, and which entry before it points at it. Then it offers the thing a chain cannot offer on its own: <strong>Fetch the proof</strong>. That returns the handful of sibling hashes that carry this one entry up to the Merkle root of the whole ledger, and whether they arrive there.</p>
 <p>Two details are worth noticing, because they are the difference between a picture and evidence:</p>
 <ul>
-<li>The page draws only what the server recomputed from the database when you asked for it. It is not a stored image.</li>
-<li>A voided entry still appears as a block. Corrections are part of the history, so they are part of the picture.</li>
+<li>The page draws only what the server recomputed from the database when you asked for it, and it does no arithmetic of its own. Even the proof is checked by the server and reported on the page.</li>
+<li>The ribbon can be read in one glance, which matters when the answer is "no": a break is a break in the line, not a block you have to hunt for.</li>
 </ul>
+<h2 id="proving-one-entry-without-the-whole-ledger">Proving one entry without the whole ledger</h2>
+<p>The chain and the tree answer two different questions, and it is worth keeping them apart.</p>
+<p>The <strong>chain</strong> asks <em>has anything moved?</em> To answer it you have to read every entry from the beginning, because each one is built on the one before. That is the right question for the owner of the books and the wrong one for somebody checking a single invoice.</p>
+<p>The <strong>Merkle tree</strong> asks <em>was this entry in the ledger?</em> The fingerprints of all the entries are folded together in pairs until one value is left, and that value is the Merkle root. To prove that one entry belongs, you need its fingerprint and one sibling hash per level: about ten hashes for a thousand entries, not a thousand.</p>
+<p>That is what <strong>Fetch the proof</strong> gives you, and what <a href="14-sealed-packs-and-working-papers.html">chapter 14</a> puts in the file an external auditor can check on their own computer.</p>
 <h2 id="where-this-fits-in-an-audit">Where this fits in an audit</h2>
 <p>The chain is not a replacement for an auditor's procedures, and ByteBook does not claim it is. It answers one narrow question extremely well: has the record changed since it was written?</p>
 <p>That question sits underneath several others. When an auditor relies on the books, they are relying on the information in them being relevant and reliable <a class="cite" href="citations.html#isa-nz-500-7" title="ISA (NZ) 500 Audit Evidence — paragraph 7" data-cite="ISA 500.7"><span class="cite-mark">ISA (NZ) 500.7</span></a>. A chain of fingerprints is evidence about reliability that is produced by the system itself, on every entry, rather than sampled.</p>
 <p>Procedure A01 in <a href="13-the-assurance-procedures.html">chapter 13</a> reports it as part of the routine: entries verified, broken links, and the fingerprint of the whole ledger. Procedure A12 then asks the next question: does a period that was sealed still match the ledger as it stands now?</p>
 <aside class="callout callout-aside"><p class="callout-title">What the chain does not prove</p><p>It does not prove that the entries are correct. A perfectly intact chain of entries posted to the wrong account is still a set of books with the wrong numbers in it. The chain proves integrity, not accuracy, and the two are different claims. An auditor needs both.</p></aside>
+<h2 id="what-catches-what">What catches what</h2>
+<p>Five things can happen to a record, and they are not caught by the same thing. Knowing which is which is most of what makes the rest of this part useful.</p>
+<table>
+<thead><tr><th>If somebody…</th><th>What catches it</th></tr></thead>
+<tbody>
+<tr><td>changes a figure in an old entry</td><td>the entry's own fingerprint: the block turns red</td></tr>
+<tr><td>deletes an entry from the middle</td><td>the link the next entry carries</td></tr>
+<tr><td>posts into a period that was already sealed</td><td>procedure A09, and the pack itself</td></tr>
+<tr><td>rewrites the whole record, end to end</td><td>a receipt held outside the file</td></tr>
+<tr><td>enters a figure that is simply wrong</td><td>a person</td></tr>
+</tbody></table>
+<p>The fourth line is the one people find surprising, and it is worth being exact about. Somebody with the file, the algorithm and the patience can recompute every fingerprint and leave a chain that verifies perfectly. Nothing inside the file can detect that, because there is nothing inside the file that disagrees. A copy of the fingerprints held somewhere else can, which is what a checkpoint receipt is for. See <a href="14-sealed-packs-and-working-papers.html">chapter 14</a>.</p>
 <h2 id="what-to-do-when-a-link-breaks">What to do when a link breaks</h2>
 <ol>
 <li><strong>Stop and find out what wrote to the file.</strong> Restore, tooling, a script, a copy edited by hand — a broken chain always has a cause, and the cause is the finding.</li>
 <li><strong>Do not re-seal anything.</strong> Recomputing fingerprints to make a broken chain look intact destroys the only evidence you have.</li>
 <li><strong>Record what you found.</strong> In a training exercise, that note is the answer.</li>
 </ol>
+<h2 id="what-gets-hashed-exactly">What gets hashed, exactly</h2>
+<p>It is worth reading once, because it is where a chain either holds or leaks. The fingerprint of an entry is computed from this text and nothing else:</p>
+<pre><code>id | date | reference | description | type | fingerprint of the entry before
+   | account:amount:amount | account:amount:amount | …</code></pre>
+<p>Voiding an entry afterwards does not change its fingerprint. That is deliberate: voiding is a legitimate correction, and a correction that broke the chain it sits in would make the chain useless. The reversal is posted beside the original, and both stay in the chain.</p>
+<p>Two consequences follow, and both are worth knowing before somebody asks.</p>
+<p><strong>What the fingerprint covers:</strong> the money, and the words that identify the entry. A change to any of those is caught, on that entry and on every entry after it.</p>
+<p><strong>What it does not cover:</strong> the tax code on a line, the contact, and the line description. Those can change without breaking the chain. A chain that verifies is therefore proof that the amounts and the entry itself are as they were written, and not proof that the GST treatment is the one somebody typed.</p>
+<p>That gap is why the tree exists. Its leaf for an entry is a fingerprint of <strong>every</strong> field the entry holds — the tax codes, the contacts and the line descriptions included — written as JSON with sorted keys so it cannot be rearranged into a different entry. The leaf is not stored and not chained: it is recomputed from the row whenever it is needed, which is what lets it afford to be that greedy.</p>
+<p>So there are two fingerprints, and it is worth keeping them apart:</p>
+<ul>
+<li>the <strong>chain fingerprint</strong> covers the money, and holds the chain together;</li>
+<li>the <strong>print in the tree</strong> covers everything, and is what an entry is proved against and what a receipt witnesses.</li>
+</ul>
+<p>Together they mean a change to a tax code leaves the chain intact and still cannot survive a receipt you kept.</p>
 <aside class="callout callout-check"><p class="callout-title">Check yourself</p><ol>
 <li>Why is a chain of fingerprints stronger than the same entries each fingerprinted on their own?</li>
 <li>A chain verifies from end to end and the profit figure is wrong. What has been proven, and what has not?</li>
 <li>Why does a voided entry stay in the chain rather than disappearing?</li>
+<li>An auditor is given one entry, ten hashes and a Merkle root. What can they prove, and what can they not?</li>
 </ol></aside>
       </div>
     </div>
@@ -802,13 +860,13 @@
     <div class="book-pages-inner" id="book-pages-inner">
       <header class="book-head">
         <p class="book-part">The audit and assurance side</p>
-        <h1>The fourteen assurance procedures</h1>
+        <h1>The sixteen assurance procedures</h1>
         <p class="book-meta"><span class="book-meta-item">Chapter 13</span><span class="book-meta-item">14 min read</span></p>
         <p class="book-summary">An audit programme you can run on the real rows — what each procedure asks, and what its exceptions mean.</p>
       </header>
       <div class="book-body">
 <h2 id="what-this-screen-is">What this screen is</h2>
-<p>Open <strong>Assurance</strong>. Fourteen procedures run on every visit, against the actual entries in the books. Each one has a reference, a title, an objective, and a result. Each one offers a working paper you can download as a CSV.</p>
+<p>Open <strong>Assurance</strong>. Sixteen procedures run on every visit, against the actual entries in the books. Each one has a reference, a title, an objective, and a result. Each one offers a working paper you can download as a CSV.</p>
 <p>The page says something important about itself. These procedures report what they found and leave the conclusion to you. It does not say "the records are wrong". It says "three documents are missing a GST number". The difference between those two statements is the difference between a procedure and a conclusion, and it is the thing this chapter is really about.</p>
 <h2 id="the-programme">The programme</h2>
 <table>
@@ -828,6 +886,8 @@
 <tr><td>A12</td><td>Sealed packages</td><td>Every pack that has been sealed still matches the ledger as it stands now</td></tr>
 <tr><td>A13</td><td>Access and housekeeping</td><td>Who can sign in, when the books were last backed up, and whether anything failed quietly</td></tr>
 <tr><td>A14</td><td>Reproduce the numbers</td><td>The reports are recalculated from the raw rows and compared with what the report says</td></tr>
+<tr><td>A15</td><td>The record is complete</td><td>Nothing has been taken out of the ledger: no gaps in the numbering, no two entries sharing a fingerprint, and the record still holds everything a checkpoint witnessed</td></tr>
+<tr><td>A16</td><td>Who did what</td><td>How the entries are distributed between the people who made them: who posts journals, who voids, who works outside the office week, and whether one person did both halves of the same transaction</td></tr>
 </tbody></table>
 <h2 id="reading-a-result">Reading a result</h2>
 <p>Each procedure ends in one of three states, and the distinction is deliberate.</p>
@@ -837,13 +897,16 @@
 <li><strong>For information.</strong> Nothing is wrong; the procedure is telling you something you should know. Three manual entries exist. Nothing has been sealed yet.</li>
 </ul>
 <p>The page sorts exceptions to the top, then information, then clean results, so the first thing you read is the thing that needs a decision.</p>
-<h2 id="four-procedures-worth-understanding-properly">Four procedures worth understanding properly</h2>
+<h2 id="six-procedures-worth-understanding-properly">Six procedures worth understanding properly</h2>
 <p><strong>A07, journal entries.</strong> A journal is an entry that came from nowhere: not an invoice, not a bill, not the bank. Most journals are perfectly ordinary — depreciation, an accrual, a correction. But because they are not tied to a document, they are also the natural place to put a figure that has no support. An auditor's response is not suspicion, it is a question: what is the paperwork behind this one, and who posted it? The procedure lists every manual entry with who posted it and when, so the question can be asked precisely.</p>
 <p><strong>A08, duplicate payments.</strong> The same amount to the same supplier twice inside a week is usually a mistake and occasionally a fraud. Either way it is worth the two minutes it takes to check against the supplier's statement.</p>
 <p><strong>A09, cut-off.</strong> Two patterns, and both matter. An entry dated in the future has been posted into a period that has not happened. An entry dated inside a period that was already sealed and closed has changed a figure after the fact. Neither is automatically wrong; both need an explanation before anyone relies on the period.</p>
 <p><strong>A14, reproduce the numbers.</strong> This is the check that catches a reporting bug rather than a bookkeeping error. The reports are recalculated from the raw rows and compared with what the page says. If they disagree, the report is wrong even though the ledger is right, and the two possibilities lead to completely different work.</p>
+<p><strong>A15, the record is complete.</strong> A15 asks a different kind of question from every procedure above it. Those ask whether the numbers are right; this one asks whether anything is missing. Three things are checked. The entry numbers should run without a gap — a missing number is usually a draft that was thrown away, which is entirely normal, and occasionally it is an entry that was deleted, which is not. No two entries should carry the same fingerprint, which the numbering makes impossible by accident. And the record should still contain everything a checkpoint witnessed: if a checkpoint counted nineteen entries and the ledger now holds eighteen, something has been taken off the end.</p>
+<p>That last check is the one worth understanding. The chain catches an edit, and it catches a deletion from the middle, because the next entry's link points at a fingerprint that is no longer there. It cannot catch the <em>end</em> being replaced, because there is nothing after the end to disagree with. A copy of the fingerprints held somewhere the books cannot reach — a receipt — is what does.</p>
+<p><strong>A16, who did what.</strong> This procedure reports and never judges, which is why it always comes back <em>for information</em> and never <em>exceptions</em>. It counts who posted what, who voided, which entries were entered outside the office week, and whether one person both entered a transaction and reversed it. None of that is an error. All of it is the material an internal auditor asks for first, because the person who can put an entry in and take it out again is the person a fraud needs, and the rest of the controls may never see it.</p>
 <h2 id="why-fraud-gets-its-own-thinking">Why fraud gets its own thinking</h2>
-<p>Two of the fourteen procedures are aimed at fraud rather than error, and the reason is in the auditing standards. When the auditor identifies and assesses the risks of material misstatement due to fraud, there is a presumption that there are risks of fraud in revenue recognition, and the auditor has to evaluate which types of revenue, revenue transactions or assertions give rise to those risks <a class="cite" href="citations.html#isa-nz-240-27" title="ISA (NZ) 240 The Auditor&#x27;s Responsibilities Relating to Fraud in an Audit of Financial Statements — paragraph 27" data-cite="ISA 240.27"><span class="cite-mark">ISA (NZ) 240.27</span></a>.</p>
+<p>Four of the sixteen procedures are aimed at fraud rather than error, and the reason is in the auditing standards. When the auditor identifies and assesses the risks of material misstatement due to fraud, there is a presumption that there are risks of fraud in revenue recognition, and the auditor has to evaluate which types of revenue, revenue transactions or assertions give rise to those risks <a class="cite" href="citations.html#isa-nz-240-27" title="ISA (NZ) 240 The Auditor&#x27;s Responsibilities Relating to Fraud in an Audit of Financial Statements — paragraph 27" data-cite="ISA 240.27"><span class="cite-mark">ISA (NZ) 240.27</span></a>.</p>
 <p>The second is about who is best placed to do it. Management is in a unique position to perpetrate fraud, because of the ability to manipulate accounting records and override controls that otherwise appear to be working <a class="cite" href="citations.html#isa-nz-240-32" title="ISA (NZ) 240 The Auditor&#x27;s Responsibilities Relating to Fraud in an Audit of Financial Statements — paragraph 32" data-cite="ISA 240.32"><span class="cite-mark">ISA (NZ) 240.32</span></a>. That is why journal entries and unusual transactions get attention even when everything else looks well controlled.</p>
 <h2 id="professional-scepticism">Professional scepticism</h2>
 <p>The quality of every procedure on this page depends on one habit, and it has a name. When applying the conceptual framework in the ethics standard, an assurance practitioner is required to have an enquiring mind, exercise professional judgement, and apply the reasonable and informed third party test <a class="cite" href="citations.html#pes-1-r120-5" title="PES 1 International Code of Ethics for Assurance Practitioners (including International Independence Standards) (New Zealand) — paragraph R120.5" data-cite="PES 1 R120.5"><span class="cite-mark">PES 1 R120.5</span></a>.</p>
@@ -900,7 +963,54 @@
 <p>This is ISA 230.8 applied to a small business: documentation sufficient for an experienced auditor with no previous connection to the engagement to understand what was done, what the results were, and what was concluded.</p>
 <h2 id="assembling-the-file">Assembling the file</h2>
 <p>There is a finishing step, and it has a deadline. The auditor assembles the documentation into an audit file and completes the administrative process of assembling the final audit file on a timely basis after the date of the auditor's report <a class="cite" href="citations.html#isa-nz-230-14" title="ISA (NZ) 230 Audit Documentation — paragraph 14" data-cite="ISA 230.14"><span class="cite-mark">ISA (NZ) 230.14</span></a>. Where there is a legal or regulatory deadline to complete the assembly, the standard's own period applies.</p>
-<p>In ByteBook the equivalent is short: run the procedures, download the working papers, seal the period, take a backup, and put the pack's fingerprint in the file. The fingerprint is one line, and it is what lets a reader verify the period years later without re-reading everything.</p>
+<p>In ByteBook the equivalent is short: run the procedures, download the working papers, seal the period, record a checkpoint, take a backup, and put the pack's fingerprint in the file. The fingerprint is one line, and it is what lets a reader verify the period years later without re-reading everything.</p>
+<h2 id="handing-the-record-to-somebody-outside">Handing the record to somebody outside</h2>
+<p>An external auditor is usually given a PDF and a set of CSVs, and then has to take the numbers on trust. <strong>Audit trail → Hand it over</strong> produces the alternative: one folder, or one zip, containing the record itself and a script that checks it.</p>
+<table>
+<thead><tr><th>In the bundle</th><th>What it is</th></tr></thead>
+<tbody>
+<tr><td><code>entries.csv</code></td><td>one row per entry, with the fingerprint it carries</td></tr>
+<tr><td><code>lines.csv</code></td><td>one row per journal line, which is what the fingerprint covers</td></tr>
+<tr><td><code>packs.json</code></td><td>every sealed period, with the figures it sealed</td></tr>
+<tr><td><code>checkpoints.json</code></td><td>what the record looked like each time it was witnessed</td></tr>
+<tr><td><code>receipts/</code></td><td>one receipt per checkpoint, to keep or pass on</td></tr>
+<tr><td><code>manifest.json</code></td><td>what is inside, and a fingerprint of every file</td></tr>
+<tr><td><code>verify.py</code></td><td>the script that checks all of the above</td></tr>
+<tr><td><code>README.txt</code></td><td>what the folder is, in words</td></tr>
+</tbody></table>
+<p>The auditor unpacks the folder and runs:</p>
+<pre><code>python3 verify.py</code></pre>
+<p>That needs Python 3.8 or later and nothing else. No ByteBook, no internet, no account. The script recomputes every entry fingerprint from the recorded fields, walks the chain, rebuilds the Merkle root, reproduces each sealed pack, checks the chain of checkpoints, and reads the receipts back against the entries. Then it prints <strong>PASS</strong> or <strong>FAIL</strong>, with the reason for anything it could not reproduce.</p>
+<p>Three things about it are deliberate.</p>
+<p><strong>It reports, it does not judge.</strong> If the chain is broken, the bundle still exports and says so on its first page. An export that hid a broken chain would be the one failure that matters.</p>
+<p><strong>It is checkable years later.</strong> The bundle does not need this program, or this version of it, to be understood. The script is a page of plain Python that a reader can read before running.</p>
+<p><strong>A pass is narrower than it sounds.</strong> It means the files are exactly as exported and the record they describe holds together. It does not mean the entries are correct, that money moved, or that a price was agreed.</p>
+<h2 id="a-read-only-key-for-an-internal-auditor">A read-only key, for an internal auditor</h2>
+<p>An external auditor usually wants a file. An internal auditor, or the organisation's own scripts, may want to pull the figures repeatedly and test them with their own tools. That is what an <strong>audit key</strong> is for: a named, revocable, read-only credential for the audit API.</p>
+<p>The whole surface is twelve GET endpoints, all of which show what the pages show:</p>
+<pre><code>curl -H &quot;Authorization: Bearer bbk_…&quot; http://127.0.0.1:8321/api/audit/verify</code></pre>
+<ul>
+<li><code>/verify</code> — is the chain intact, and the Merkle root</li>
+<li><code>/entries</code>, <code>/lines</code> — the rows, as JSON or CSV</li>
+<li><code>/proof/{id}</code> — one entry, proved against the whole ledger</li>
+<li><code>/packs</code>, <code>/checkpoints</code> — what was sealed and what was witnessed</li>
+<li><code>/procedures</code>, <code>/working-paper/{code}</code> — the programme and its papers</li>
+<li><code>/bundle</code> — the whole folder, as a zip</li>
+<li><code>/access-log</code> — who read what, including the attempts that were refused</li>
+</ul>
+<p>Four properties make this something an organisation can actually hand out.</p>
+<ol>
+<li><strong>A key cannot write.</strong> It cannot post, edit, void, seal, or change a setting. It is refused in the language it asked in — JSON, with a reason — rather than being quietly redirected.</li>
+<li><strong>A key is shown once.</strong> Only its SHA-256 is kept, so a copy of the database does not hand anybody a working key, and a lost key is replaced rather than recovered.</li>
+<li><strong>A key can be taken away.</strong> Revoking it stops the next request, and the attempt is recorded.</li>
+<li><strong>Using a key leaves a trace.</strong> Every read is written to the access log with the key's name, the path, and how many rows were handed over. An auditor reading the books leaves a trace in the same record they came to read, which is the arrangement they would ask for if they designed it.</li>
+</ol>
+<aside class="callout callout-aside"><p class="callout-title">Internal audit is not external audit</p><p>These are different jobs with different standards behind them, and a read-only key is not a substitute for either. An internal auditor works for the organisation, can look at controls and processes a key never sees, and is usually the person best placed to notice an unusual pattern in A16 before anybody else does. An external auditor reaches an opinion. ByteBook can serve both and decides neither.</p></aside>
+<h2 id="a-checkpoint-and-why-a-receipt-matters">A checkpoint, and why a receipt matters</h2>
+<p>A <strong>checkpoint</strong> is one line of evidence. Every time somebody checks the record — or seals a period, which does the same thing by itself — ByteBook writes down how many entries there were, the fingerprint of the last one, and the Merkle root of the whole ledger. Each checkpoint includes the fingerprint of the checkpoint before it, so the log of checks is a chain of its own.</p>
+<p>On its own that is still just another table in the same file. It becomes evidence when a copy leaves the file, and that copy is a <strong>receipt</strong>: two dozen lines with the business name, the date, the entry count, the last fingerprint, the Merkle root and the checkpoint's own fingerprint.</p>
+<p>Keep a receipt the way you would keep a bank statement. Email it to your accountant at every month end, print it, drop it in the audit file. It costs nothing. What it buys is this: a record rewritten as a whole can rebuild every entry fingerprint, but it cannot reach the copy in somebody else's inbox.</p>
+<p>To check one, paste it into <strong>Audit trail → Checkpoints → Check a receipt</strong>. The printed version and the JSON version both work. ByteBook says whether the books still contain everything the receipt witnessed, and how much work has happened since — because more work after a checkpoint is normal, and a record <em>shorter</em> than one is not.</p>
 <h2 id="what-stays-outside-the-program">What stays outside the program</h2>
 <p>ByteBook can prove that a period has not changed, that the two sides of every entry are equal, that the bank agrees, and that the figures on the reports can be reproduced from the rows. Those are arithmetic and record-integrity claims, and a computer is good at them.</p>
 <p>It cannot judge whether a debt will be collected, whether a provision is adequate, whether a related party transaction was on arm's length terms, or whether a business is a going concern. Those are judgements, and they come with a person's name attached.</p>
@@ -909,6 +1019,8 @@
 <li>An entry is backdated into a period that was sealed last month. What fails, and when is it detected?</li>
 <li>Why does a void inside a sealed period fail the verification, when the void is a legitimate correction?</li>
 <li>Name two claims ByteBook can test and two it cannot.</li>
+<li>An auditor is given a bundle and runs <code>verify.py</code>. It prints PASS. Name three things that does not tell them.</li>
+<li>Why does keeping a receipt matter more than recording a checkpoint?</li>
 </ol></aside>
       </div>
     </div>
@@ -948,7 +1060,7 @@
 <p>An auditor who holds the ability to change the records they are auditing is in a position where objectivity cannot be demonstrated, however honest they are. The read-only role removes the question rather than asking anyone to be trusted about it.</p>
 <p>The same logic runs through the whole quality management system in a firm. The objective of that system is to provide the firm with reasonable assurance that the firm and its personnel fulfil their responsibilities and perform engagements in accordance with professional standards <a class="cite" href="citations.html#pes-3-14" title="PES 3 Quality Management for Firms that Perform Audits or Reviews of Financial Statements, or Other Assurance or Related Services Engagements — paragraph 14" data-cite="PES 3.14"><span class="cite-mark">PES 3.14</span></a>. Access control is a small, concrete piece of the same idea.</p>
 <h2 id="access-is-also-an-assurance-question">Access is also an assurance question</h2>
-<p>ByteBook's A13 procedure reports who can sign in, when the books were last backed up, and whether anything failed quietly while people were working. It is the least glamorous procedure of the fourteen and one of the most useful, because the questions it asks are exactly the ones an engagement team asks about any system they are relying on: who has access, is the record protected, and would anybody have noticed if something went wrong.</p>
+<p>ByteBook's A13 procedure reports who can sign in, when the books were last backed up, and whether anything failed quietly while people were working. It is the least glamorous procedure of the sixteen and one of the most useful, because the questions it asks are exactly the ones an engagement team asks about any system they are relying on: who has access, is the record protected, and would anybody have noticed if something went wrong.</p>
 <h2 id="a-practical-training-routine">A practical training routine</h2>
 <p>When you work through a simulation that is meant to be audited:</p>
 <ol>
@@ -1161,7 +1273,7 @@
         <p class="book-part">The standards behind the work</p>
         <h1>Auditing standards you will meet in these procedures</h1>
         <p class="book-meta"><span class="book-meta-item">Chapter 18</span><span class="book-meta-item">15 min read</span></p>
-        <p class="book-summary">From objectives and evidence to the opinion — the ISAs (NZ) behind the fourteen procedures.</p>
+        <p class="book-summary">From objectives and evidence to the opinion — the ISAs (NZ) behind the sixteen procedures.</p>
       </header>
       <div class="book-body">
 <h2 id="where-an-audit-starts">Where an audit starts</h2>
@@ -1252,11 +1364,18 @@
 <tr><td>Tax forms</td><td>Current tax working papers</td><td><a class="cite" href="citations.html#nz-ias-12-46" title="NZ IAS 12 Income Taxes — paragraph 46" data-cite="NZ IAS 12.46"><span class="cite-mark">NZ IAS 12.46</span></a></td><td>—</td></tr>
 <tr><td>Transactions</td><td>Reading the entry behind a document</td><td><a class="cite" href="citations.html#nz-ias-8-42" title="NZ IAS 8 Accounting Policies, Changes in Accounting Estimates and Errors — paragraph 42" data-cite="NZ IAS 8.42"><span class="cite-mark">NZ IAS 8.42</span></a></td><td><a class="cite" href="citations.html#isa-nz-230-8" title="ISA (NZ) 230 Audit Documentation — paragraph 8" data-cite="ISA 230.8"><span class="cite-mark">ISA (NZ) 230.8</span></a></td></tr>
 <tr><td>Audit trail</td><td>Proving the record has not changed</td><td>—</td><td><a class="cite" href="citations.html#isa-nz-500-7" title="ISA (NZ) 500 Audit Evidence — paragraph 7" data-cite="ISA 500.7"><span class="cite-mark">ISA (NZ) 500.7</span></a></td></tr>
+<tr><td>The chain</td><td>Reading the record at three scales</td><td>—</td><td><a class="cite" href="citations.html#isa-nz-500-7" title="ISA (NZ) 500 Audit Evidence — paragraph 7" data-cite="ISA 500.7"><span class="cite-mark">ISA (NZ) 500.7</span></a></td></tr>
+<tr><td>Checkpoints</td><td>Witnessing what the record said, and holding a receipt for it</td><td>—</td><td><a class="cite" href="citations.html#isa-nz-230-8" title="ISA (NZ) 230 Audit Documentation — paragraph 8" data-cite="ISA 230.8"><span class="cite-mark">ISA (NZ) 230.8</span></a></td></tr>
+<tr><td>How a number gets in</td><td>Testing the controls over what is recorded</td><td>—</td><td><a class="cite" href="citations.html#isa-nz-315-26" title="ISA (NZ) 315 Identifying and Assessing the Risks of Material Misstatement — paragraph 26" data-cite="ISA 315.26"><span class="cite-mark">ISA (NZ) 315.26</span></a></td></tr>
+<tr><td>Hand it over</td><td>Giving evidence to somebody outside the business</td><td>—</td><td><a class="cite" href="citations.html#isa-nz-500-10" title="ISA (NZ) 500 Audit Evidence — paragraph 10" data-cite="ISA 500.10"><span class="cite-mark">ISA (NZ) 500.10</span></a></td></tr>
 <tr><td>Assurance → A07</td><td>Manual entries</td><td>—</td><td><a class="cite" href="citations.html#isa-nz-240-32" title="ISA (NZ) 240 The Auditor&#x27;s Responsibilities Relating to Fraud in an Audit of Financial Statements — paragraph 32" data-cite="ISA 240.32"><span class="cite-mark">ISA (NZ) 240.32</span></a></td></tr>
 <tr><td>Assurance → A09</td><td>Cut-off</td><td><a class="cite" href="citations.html#nz-ias-10-8" title="NZ IAS 10 Events after the Reporting Period — paragraph 8" data-cite="NZ IAS 10.8"><span class="cite-mark">NZ IAS 10.8</span></a></td><td><a class="cite" href="citations.html#isa-nz-560-6" title="ISA (NZ) 560 Subsequent Events — paragraph 6" data-cite="ISA 560.6"><span class="cite-mark">ISA (NZ) 560.6</span></a></td></tr>
 <tr><td>Assurance → A11</td><td>Large and round expenses</td><td><a class="cite" href="citations.html#nz-ias-16-15" title="NZ IAS 16 Property, Plant and Equipment — paragraph 15" data-cite="NZ IAS 16.15"><span class="cite-mark">NZ IAS 16.15</span></a></td><td><a class="cite" href="citations.html#isa-nz-500-7" title="ISA (NZ) 500 Audit Evidence — paragraph 7" data-cite="ISA 500.7"><span class="cite-mark">ISA (NZ) 500.7</span></a></td></tr>
 <tr><td>Assurance → A14</td><td>Reproducing the reports</td><td>—</td><td><a class="cite" href="citations.html#isa-nz-500-6" title="ISA (NZ) 500 Audit Evidence — paragraph 6" data-cite="ISA 500.6"><span class="cite-mark">ISA (NZ) 500.6</span></a></td></tr>
+<tr><td>Assurance → A15</td><td>Gaps, repeated fingerprints, witnesses</td><td>—</td><td><a class="cite" href="citations.html#isa-nz-500-6" title="ISA (NZ) 500 Audit Evidence — paragraph 6" data-cite="ISA 500.6"><span class="cite-mark">ISA (NZ) 500.6</span></a></td></tr>
+<tr><td>Assurance → A16</td><td>Who entered, voided and worked out of hours</td><td>—</td><td><a class="cite" href="citations.html#isa-nz-240-32" title="ISA (NZ) 240 The Auditor&#x27;s Responsibilities Relating to Fraud in an Audit of Financial Statements — paragraph 32" data-cite="ISA 240.32"><span class="cite-mark">ISA (NZ) 240.32</span></a></td></tr>
 <tr><td>Sealed packs</td><td>Closing and protecting a period</td><td>—</td><td><a class="cite" href="citations.html#isa-nz-230-14" title="ISA (NZ) 230 Audit Documentation — paragraph 14" data-cite="ISA 230.14"><span class="cite-mark">ISA (NZ) 230.14</span></a></td></tr>
+<tr><td>Practice businesses</td><td>Learning on books that already exist</td><td>—</td><td><a class="cite" href="citations.html#isa-nz-230-8" title="ISA (NZ) 230 Audit Documentation — paragraph 8" data-cite="ISA 230.8"><span class="cite-mark">ISA (NZ) 230.8</span></a></td></tr>
 <tr><td>Setting up roles</td><td>Who may change the books</td><td>—</td><td><a class="cite" href="citations.html#pes-1-r112-1" title="PES 1 International Code of Ethics for Assurance Practitioners (including International Independence Standards) (New Zealand) — paragraph R112.1" data-cite="PES 1 R112.1"><span class="cite-mark">PES 1 R112.1</span></a></td></tr>
 </tbody></table>
 <h2 id="how-to-use-it">How to use it</h2>
@@ -1507,7 +1626,7 @@
 <li>That the record has not been altered since it was written. It does not prove that the entries are correct, or that they were posted to the right accounts.</li>
 <li>Because the correction is part of the history. Removing it would break the chain and destroy the record an accountant expects to see.</li>
 </ol>
-<h2 id="13-the-fourteen-procedures">13. The fourteen procedures</h2>
+<h2 id="13-the-sixteen-procedures">13. The sixteen procedures</h2>
 <ol>
 <li>Because they call for different actions. An exception needs somebody to look at it and decide something; information is something you should know. Collapsing the two would either hide real findings or manufacture work.</li>
 <li>A09, cut-off, which reports entries dated inside a period that has already been packed and closed.</li>
@@ -1564,10 +1683,12 @@
 <p><strong>Audit trail.</strong> The record of what was entered, when, by whom, and what was done about it. In ByteBook it is a chain of fingerprints.</p>
 <p><strong>Balance sheet.</strong> A statement of what a business owns and owes at a date. Also called the statement of financial position.</p>
 <p><strong>Bill.</strong> A supplier's invoice that you will pay later. Until it is paid it sits in creditors.</p>
-<p><strong>Chain (the).</strong> ByteBook's page showing every entry as a block and every fingerprint as a link between two blocks.</p>
+<p><strong>Audit key.</strong> A named, revocable, read-only key that lets an auditor's own tools read the audit data through the API. It cannot post, change or delete anything, and every use is written to the access log.</p>
+<p><strong>Chain (the).</strong> ByteBook's page showing the record at three scales: a ribbon of every day on a time axis, the entries in order under it, and one entry taken apart beside them.</p>
+<p><strong>Checkpoint.</strong> A written-down record of what the ledger said when somebody checked it: how many entries, the fingerprint of the last one, and the Merkle root. Each checkpoint includes the fingerprint of the one before it.</p>
 <p><strong>Closing balance.</strong> The balance on a bank statement at its date.</p>
 <p><strong>Creditors.</strong> People and businesses the business owes money to.</p>
-<p><strong>Cut-off.</strong> The question of whether a transaction has been recorded in the right period. One of the fourteen procedures.</p>
+<p><strong>Cut-off.</strong> The question of whether a transaction has been recorded in the right period. One of the sixteen procedures.</p>
 <p><strong>Debtors.</strong> People and businesses that owe the business money.</p>
 <p><strong>Depreciation.</strong> Spreading the cost of an asset over the periods it is used in.</p>
 <p><strong>Drawings.</strong> Money or goods an owner takes out of a business for personal use.</p>
@@ -1584,7 +1705,7 @@
 <p><strong>ISQM 1.</strong> The international standard on quality management for firms. In New Zealand its requirements appear in PES 3.</p>
 <p><strong>Ledger.</strong> The accounting record of a business's transactions. In ByteBook the general ledger is the detail and the trial balance is the summary.</p>
 <p><strong>Material.</strong> Large enough to matter to the person reading the financial statements. There is no fixed number; the standard defines it by whether omitting or misstating an item could influence decisions.</p>
-<p><strong>Merkle root.</strong> A single fingerprint computed from all the fingerprints in a record, so the whole record can be checked with one value.</p>
+<p><strong>Merkle root.</strong> A single fingerprint computed from all the fingerprints in a record, so the whole record can be checked with one value — and so a single entry can be proved against it with a handful of hashes instead of the whole record.</p>
 <p><strong>NZ IFRS.</strong> New Zealand equivalents to international financial reporting standards: the IASB's text with New Zealand additions.</p>
 <p><strong>PES.</strong> Professional and ethical standards issued by the XRB, including the code of ethics (PES 1), quality management for firms (PES 3) and engagement quality reviews (PES 4).</p>
 <p><strong>Performance materiality.</strong> A lower figure than materiality, used in planning so that the chance of undetected misstatements exceeding materiality is kept low.</p>
@@ -1592,6 +1713,8 @@
 <p><strong>Posting.</strong> Recording an entry in the ledger. Until an invoice is posted it is only a document.</p>
 <p><strong>Provision.</strong> A liability of uncertain timing or amount, recognised where there is a present obligation from a past event, a probable outflow, and a reliable estimate.</p>
 <p><strong>Reconciliation.</strong> Comparing two records that should agree — the ledger and the bank — and explaining the difference.</p>
+<p><strong>Practice business.</strong> A complete set of books for a simulated New Zealand business, kept beside your own and opened from <strong>Practice businesses</strong> in the sidebar. Ten of them ship with ByteBook, one for each trade.</p>
+<p><strong>Receipt (integrity).</strong> A short printed record of a checkpoint, small enough to email. A copy held outside the books is what detects a record rewritten as a whole, because a rewrite inside the file cannot reach your copy.</p>
 <p><strong>Sealed pack.</strong> A period's entries, figures and fingerprints hashed together into a single value, so it can be verified later.</p>
 <p><strong>Trial balance.</strong> Every account with its balance, used to check that total debits equal total credits.</p>
 <p><strong>Turnover.</strong> Total sales, usually excluding GST.</p>

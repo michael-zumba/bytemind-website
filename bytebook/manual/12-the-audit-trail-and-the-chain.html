@@ -51,7 +51,7 @@
 <ul class="book-nav-list">
 <li><a href="11-nothing-is-deleted.html"><span class="book-nav-num">11</span><span>Nothing is deleted: voiding, not editing</span></a></li>
 <li><a href="12-the-audit-trail-and-the-chain.html" aria-current="page"><span class="book-nav-num">12</span><span>The audit trail and the chain</span></a></li>
-<li><a href="13-the-assurance-procedures.html"><span class="book-nav-num">13</span><span>The fourteen assurance procedures</span></a></li>
+<li><a href="13-the-assurance-procedures.html"><span class="book-nav-num">13</span><span>The sixteen assurance procedures</span></a></li>
 <li><a href="14-sealed-packs-and-working-papers.html"><span class="book-nav-num">14</span><span>Sealed packs and working papers</span></a></li>
 <li><a href="15-roles-and-access.html"><span class="book-nav-num">15</span><span>Roles: who may do what</span></a></li>
 </ul>
@@ -98,27 +98,63 @@
 </ul>
 <p>If a link is broken, the page says so, and the meaning is specific: something wrote to the database outside ByteBook. That is not a bookkeeping error. It is a statement about the record itself, and it is worth more than a page of clean ticks.</p>
 <h2 id="the-chain-drawn">The chain, drawn</h2>
-<p><strong>The chain</strong> page draws the same thing. Every entry is a block; every fingerprint is a line between two. You can drag to move, scroll to zoom, click a block to read the entry behind it, and click a link to see the two hashes it joins. There is a filter and a search box, and a button that verifies the whole chain link by link.</p>
+<p><strong>The chain</strong> page shows the same thing at three scales, because one picture cannot answer both "is this intact?" and "what exactly is in this entry?".</p>
+<p><strong>The ribbon</strong> is the whole record on a time axis. Each mark is one day, and how tall it is tells you how many entries that day holds. Under the marks runs the chain itself — a line that is solid where the links hold and broken where they do not. Under that, each sealed period is drawn as a span across the days it covers, linked to the period before it. Everything the record has ever held is in that ribbon: it is not sampled and it is not paginated.</p>
+<p><strong>The chain below</strong> is the entries in order, each one a block and each fingerprint a line between two. The window starts at the most recent two dozen entries; click a day on the ribbon to open it, or press <strong>Everything</strong> to see the lot. Click a block to read the entry behind it, click a link to see the two hashes it joins. A correction is a block too: a voided entry stays in the picture, because it is part of the history.</p>
+<p><strong>The panel beside them</strong> takes one entry apart. It shows what was hashed — the date, the reference, the description, the type, the accounts and the amounts — and the fingerprint that came out, and which entry before it points at it. Then it offers the thing a chain cannot offer on its own: <strong>Fetch the proof</strong>. That returns the handful of sibling hashes that carry this one entry up to the Merkle root of the whole ledger, and whether they arrive there.</p>
 <p>Two details are worth noticing, because they are the difference between a picture and evidence:</p>
 <ul>
-<li>The page draws only what the server recomputed from the database when you asked for it. It is not a stored image.</li>
-<li>A voided entry still appears as a block. Corrections are part of the history, so they are part of the picture.</li>
+<li>The page draws only what the server recomputed from the database when you asked for it, and it does no arithmetic of its own. Even the proof is checked by the server and reported on the page.</li>
+<li>The ribbon can be read in one glance, which matters when the answer is "no": a break is a break in the line, not a block you have to hunt for.</li>
 </ul>
+<h2 id="proving-one-entry-without-the-whole-ledger">Proving one entry without the whole ledger</h2>
+<p>The chain and the tree answer two different questions, and it is worth keeping them apart.</p>
+<p>The <strong>chain</strong> asks <em>has anything moved?</em> To answer it you have to read every entry from the beginning, because each one is built on the one before. That is the right question for the owner of the books and the wrong one for somebody checking a single invoice.</p>
+<p>The <strong>Merkle tree</strong> asks <em>was this entry in the ledger?</em> The fingerprints of all the entries are folded together in pairs until one value is left, and that value is the Merkle root. To prove that one entry belongs, you need its fingerprint and one sibling hash per level: about ten hashes for a thousand entries, not a thousand.</p>
+<p>That is what <strong>Fetch the proof</strong> gives you, and what <a href="14-sealed-packs-and-working-papers.html">chapter 14</a> puts in the file an external auditor can check on their own computer.</p>
 <h2 id="where-this-fits-in-an-audit">Where this fits in an audit</h2>
 <p>The chain is not a replacement for an auditor's procedures, and ByteBook does not claim it is. It answers one narrow question extremely well: has the record changed since it was written?</p>
 <p>That question sits underneath several others. When an auditor relies on the books, they are relying on the information in them being relevant and reliable <a class="cite" href="citations.html#isa-nz-500-7" title="ISA (NZ) 500 Audit Evidence — paragraph 7" data-cite="ISA 500.7"><span class="cite-mark">ISA (NZ) 500.7</span></a>. A chain of fingerprints is evidence about reliability that is produced by the system itself, on every entry, rather than sampled.</p>
 <p>Procedure A01 in <a href="13-the-assurance-procedures.html">chapter 13</a> reports it as part of the routine: entries verified, broken links, and the fingerprint of the whole ledger. Procedure A12 then asks the next question: does a period that was sealed still match the ledger as it stands now?</p>
 <aside class="callout callout-aside"><p class="callout-title">What the chain does not prove</p><p>It does not prove that the entries are correct. A perfectly intact chain of entries posted to the wrong account is still a set of books with the wrong numbers in it. The chain proves integrity, not accuracy, and the two are different claims. An auditor needs both.</p></aside>
+<h2 id="what-catches-what">What catches what</h2>
+<p>Five things can happen to a record, and they are not caught by the same thing. Knowing which is which is most of what makes the rest of this part useful.</p>
+<table>
+<thead><tr><th>If somebody…</th><th>What catches it</th></tr></thead>
+<tbody>
+<tr><td>changes a figure in an old entry</td><td>the entry's own fingerprint: the block turns red</td></tr>
+<tr><td>deletes an entry from the middle</td><td>the link the next entry carries</td></tr>
+<tr><td>posts into a period that was already sealed</td><td>procedure A09, and the pack itself</td></tr>
+<tr><td>rewrites the whole record, end to end</td><td>a receipt held outside the file</td></tr>
+<tr><td>enters a figure that is simply wrong</td><td>a person</td></tr>
+</tbody></table>
+<p>The fourth line is the one people find surprising, and it is worth being exact about. Somebody with the file, the algorithm and the patience can recompute every fingerprint and leave a chain that verifies perfectly. Nothing inside the file can detect that, because there is nothing inside the file that disagrees. A copy of the fingerprints held somewhere else can, which is what a checkpoint receipt is for. See <a href="14-sealed-packs-and-working-papers.html">chapter 14</a>.</p>
 <h2 id="what-to-do-when-a-link-breaks">What to do when a link breaks</h2>
 <ol>
 <li><strong>Stop and find out what wrote to the file.</strong> Restore, tooling, a script, a copy edited by hand — a broken chain always has a cause, and the cause is the finding.</li>
 <li><strong>Do not re-seal anything.</strong> Recomputing fingerprints to make a broken chain look intact destroys the only evidence you have.</li>
 <li><strong>Record what you found.</strong> In a training exercise, that note is the answer.</li>
 </ol>
+<h2 id="what-gets-hashed-exactly">What gets hashed, exactly</h2>
+<p>It is worth reading once, because it is where a chain either holds or leaks. The fingerprint of an entry is computed from this text and nothing else:</p>
+<pre><code>id | date | reference | description | type | fingerprint of the entry before
+   | account:amount:amount | account:amount:amount | …</code></pre>
+<p>Voiding an entry afterwards does not change its fingerprint. That is deliberate: voiding is a legitimate correction, and a correction that broke the chain it sits in would make the chain useless. The reversal is posted beside the original, and both stay in the chain.</p>
+<p>Two consequences follow, and both are worth knowing before somebody asks.</p>
+<p><strong>What the fingerprint covers:</strong> the money, and the words that identify the entry. A change to any of those is caught, on that entry and on every entry after it.</p>
+<p><strong>What it does not cover:</strong> the tax code on a line, the contact, and the line description. Those can change without breaking the chain. A chain that verifies is therefore proof that the amounts and the entry itself are as they were written, and not proof that the GST treatment is the one somebody typed.</p>
+<p>That gap is why the tree exists. Its leaf for an entry is a fingerprint of <strong>every</strong> field the entry holds — the tax codes, the contacts and the line descriptions included — written as JSON with sorted keys so it cannot be rearranged into a different entry. The leaf is not stored and not chained: it is recomputed from the row whenever it is needed, which is what lets it afford to be that greedy.</p>
+<p>So there are two fingerprints, and it is worth keeping them apart:</p>
+<ul>
+<li>the <strong>chain fingerprint</strong> covers the money, and holds the chain together;</li>
+<li>the <strong>print in the tree</strong> covers everything, and is what an entry is proved against and what a receipt witnesses.</li>
+</ul>
+<p>Together they mean a change to a tax code leaves the chain intact and still cannot survive a receipt you kept.</p>
 <aside class="callout callout-check"><p class="callout-title">Check yourself</p><ol>
 <li>Why is a chain of fingerprints stronger than the same entries each fingerprinted on their own?</li>
 <li>A chain verifies from end to end and the profit figure is wrong. What has been proven, and what has not?</li>
 <li>Why does a voided entry stay in the chain rather than disappearing?</li>
+<li>An auditor is given one entry, ten hashes and a Merkle root. What can they prove, and what can they not?</li>
 </ol></aside>
       </div>
     </div>
@@ -130,7 +166,7 @@
     <span class="book-turn-hint">Arrow keys, or the buttons</span>
   </div>
 </article>
-<nav class="book-pager" aria-label="Chapter navigation"><a class="book-pager-link" href="11-nothing-is-deleted.html"><span class="book-pager-label">Previous</span><span class="book-pager-title">Nothing is deleted: voiding, not editing</span></a><a class="book-pager-link book-pager-next" href="13-the-assurance-procedures.html"><span class="book-pager-label">Next</span><span class="book-pager-title">The fourteen assurance procedures</span></a></nav>
+<nav class="book-pager" aria-label="Chapter navigation"><a class="book-pager-link" href="11-nothing-is-deleted.html"><span class="book-pager-label">Previous</span><span class="book-pager-title">Nothing is deleted: voiding, not editing</span></a><a class="book-pager-link book-pager-next" href="13-the-assurance-procedures.html"><span class="book-pager-label">Next</span><span class="book-pager-title">The sixteen assurance procedures</span></a></nav>
   </main>
 </div>
 <div class="book-search" id="book-search" hidden>

@@ -51,7 +51,7 @@
 <ul class="book-nav-list">
 <li><a href="11-nothing-is-deleted.html"><span class="book-nav-num">11</span><span>Nothing is deleted: voiding, not editing</span></a></li>
 <li><a href="12-the-audit-trail-and-the-chain.html"><span class="book-nav-num">12</span><span>The audit trail and the chain</span></a></li>
-<li><a href="13-the-assurance-procedures.html"><span class="book-nav-num">13</span><span>The fourteen assurance procedures</span></a></li>
+<li><a href="13-the-assurance-procedures.html"><span class="book-nav-num">13</span><span>The sixteen assurance procedures</span></a></li>
 <li><a href="14-sealed-packs-and-working-papers.html"><span class="book-nav-num">14</span><span>Sealed packs and working papers</span></a></li>
 <li><a href="15-roles-and-access.html"><span class="book-nav-num">15</span><span>Roles: who may do what</span></a></li>
 </ul>
@@ -91,10 +91,12 @@
 <p><strong>Audit trail.</strong> The record of what was entered, when, by whom, and what was done about it. In ByteBook it is a chain of fingerprints.</p>
 <p><strong>Balance sheet.</strong> A statement of what a business owns and owes at a date. Also called the statement of financial position.</p>
 <p><strong>Bill.</strong> A supplier's invoice that you will pay later. Until it is paid it sits in creditors.</p>
-<p><strong>Chain (the).</strong> ByteBook's page showing every entry as a block and every fingerprint as a link between two blocks.</p>
+<p><strong>Audit key.</strong> A named, revocable, read-only key that lets an auditor's own tools read the audit data through the API. It cannot post, change or delete anything, and every use is written to the access log.</p>
+<p><strong>Chain (the).</strong> ByteBook's page showing the record at three scales: a ribbon of every day on a time axis, the entries in order under it, and one entry taken apart beside them.</p>
+<p><strong>Checkpoint.</strong> A written-down record of what the ledger said when somebody checked it: how many entries, the fingerprint of the last one, and the Merkle root. Each checkpoint includes the fingerprint of the one before it.</p>
 <p><strong>Closing balance.</strong> The balance on a bank statement at its date.</p>
 <p><strong>Creditors.</strong> People and businesses the business owes money to.</p>
-<p><strong>Cut-off.</strong> The question of whether a transaction has been recorded in the right period. One of the fourteen procedures.</p>
+<p><strong>Cut-off.</strong> The question of whether a transaction has been recorded in the right period. One of the sixteen procedures.</p>
 <p><strong>Debtors.</strong> People and businesses that owe the business money.</p>
 <p><strong>Depreciation.</strong> Spreading the cost of an asset over the periods it is used in.</p>
 <p><strong>Drawings.</strong> Money or goods an owner takes out of a business for personal use.</p>
@@ -111,7 +113,7 @@
 <p><strong>ISQM 1.</strong> The international standard on quality management for firms. In New Zealand its requirements appear in PES 3.</p>
 <p><strong>Ledger.</strong> The accounting record of a business's transactions. In ByteBook the general ledger is the detail and the trial balance is the summary.</p>
 <p><strong>Material.</strong> Large enough to matter to the person reading the financial statements. There is no fixed number; the standard defines it by whether omitting or misstating an item could influence decisions.</p>
-<p><strong>Merkle root.</strong> A single fingerprint computed from all the fingerprints in a record, so the whole record can be checked with one value.</p>
+<p><strong>Merkle root.</strong> A single fingerprint computed from all the fingerprints in a record, so the whole record can be checked with one value — and so a single entry can be proved against it with a handful of hashes instead of the whole record.</p>
 <p><strong>NZ IFRS.</strong> New Zealand equivalents to international financial reporting standards: the IASB's text with New Zealand additions.</p>
 <p><strong>PES.</strong> Professional and ethical standards issued by the XRB, including the code of ethics (PES 1), quality management for firms (PES 3) and engagement quality reviews (PES 4).</p>
 <p><strong>Performance materiality.</strong> A lower figure than materiality, used in planning so that the chance of undetected misstatements exceeding materiality is kept low.</p>
@@ -119,6 +121,8 @@
 <p><strong>Posting.</strong> Recording an entry in the ledger. Until an invoice is posted it is only a document.</p>
 <p><strong>Provision.</strong> A liability of uncertain timing or amount, recognised where there is a present obligation from a past event, a probable outflow, and a reliable estimate.</p>
 <p><strong>Reconciliation.</strong> Comparing two records that should agree — the ledger and the bank — and explaining the difference.</p>
+<p><strong>Practice business.</strong> A complete set of books for a simulated New Zealand business, kept beside your own and opened from <strong>Practice businesses</strong> in the sidebar. Ten of them ship with ByteBook, one for each trade.</p>
+<p><strong>Receipt (integrity).</strong> A short printed record of a checkpoint, small enough to email. A copy held outside the books is what detects a record rewritten as a whole, because a rewrite inside the file cannot reach your copy.</p>
 <p><strong>Sealed pack.</strong> A period's entries, figures and fingerprints hashed together into a single value, so it can be verified later.</p>
 <p><strong>Trial balance.</strong> Every account with its balance, used to check that total debits equal total credits.</p>
 <p><strong>Turnover.</strong> Total sales, usually excluding GST.</p>

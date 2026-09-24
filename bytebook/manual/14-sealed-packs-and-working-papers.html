@@ -51,7 +51,7 @@
 <ul class="book-nav-list">
 <li><a href="11-nothing-is-deleted.html"><span class="book-nav-num">11</span><span>Nothing is deleted: voiding, not editing</span></a></li>
 <li><a href="12-the-audit-trail-and-the-chain.html"><span class="book-nav-num">12</span><span>The audit trail and the chain</span></a></li>
-<li><a href="13-the-assurance-procedures.html"><span class="book-nav-num">13</span><span>The fourteen assurance procedures</span></a></li>
+<li><a href="13-the-assurance-procedures.html"><span class="book-nav-num">13</span><span>The sixteen assurance procedures</span></a></li>
 <li><a href="14-sealed-packs-and-working-papers.html" aria-current="page"><span class="book-nav-num">14</span><span>Sealed packs and working papers</span></a></li>
 <li><a href="15-roles-and-access.html"><span class="book-nav-num">15</span><span>Roles: who may do what</span></a></li>
 </ul>
@@ -111,7 +111,54 @@
 <p>This is ISA 230.8 applied to a small business: documentation sufficient for an experienced auditor with no previous connection to the engagement to understand what was done, what the results were, and what was concluded.</p>
 <h2 id="assembling-the-file">Assembling the file</h2>
 <p>There is a finishing step, and it has a deadline. The auditor assembles the documentation into an audit file and completes the administrative process of assembling the final audit file on a timely basis after the date of the auditor's report <a class="cite" href="citations.html#isa-nz-230-14" title="ISA (NZ) 230 Audit Documentation — paragraph 14" data-cite="ISA 230.14"><span class="cite-mark">ISA (NZ) 230.14</span></a>. Where there is a legal or regulatory deadline to complete the assembly, the standard's own period applies.</p>
-<p>In ByteBook the equivalent is short: run the procedures, download the working papers, seal the period, take a backup, and put the pack's fingerprint in the file. The fingerprint is one line, and it is what lets a reader verify the period years later without re-reading everything.</p>
+<p>In ByteBook the equivalent is short: run the procedures, download the working papers, seal the period, record a checkpoint, take a backup, and put the pack's fingerprint in the file. The fingerprint is one line, and it is what lets a reader verify the period years later without re-reading everything.</p>
+<h2 id="handing-the-record-to-somebody-outside">Handing the record to somebody outside</h2>
+<p>An external auditor is usually given a PDF and a set of CSVs, and then has to take the numbers on trust. <strong>Audit trail → Hand it over</strong> produces the alternative: one folder, or one zip, containing the record itself and a script that checks it.</p>
+<table>
+<thead><tr><th>In the bundle</th><th>What it is</th></tr></thead>
+<tbody>
+<tr><td><code>entries.csv</code></td><td>one row per entry, with the fingerprint it carries</td></tr>
+<tr><td><code>lines.csv</code></td><td>one row per journal line, which is what the fingerprint covers</td></tr>
+<tr><td><code>packs.json</code></td><td>every sealed period, with the figures it sealed</td></tr>
+<tr><td><code>checkpoints.json</code></td><td>what the record looked like each time it was witnessed</td></tr>
+<tr><td><code>receipts/</code></td><td>one receipt per checkpoint, to keep or pass on</td></tr>
+<tr><td><code>manifest.json</code></td><td>what is inside, and a fingerprint of every file</td></tr>
+<tr><td><code>verify.py</code></td><td>the script that checks all of the above</td></tr>
+<tr><td><code>README.txt</code></td><td>what the folder is, in words</td></tr>
+</tbody></table>
+<p>The auditor unpacks the folder and runs:</p>
+<pre><code>python3 verify.py</code></pre>
+<p>That needs Python 3.8 or later and nothing else. No ByteBook, no internet, no account. The script recomputes every entry fingerprint from the recorded fields, walks the chain, rebuilds the Merkle root, reproduces each sealed pack, checks the chain of checkpoints, and reads the receipts back against the entries. Then it prints <strong>PASS</strong> or <strong>FAIL</strong>, with the reason for anything it could not reproduce.</p>
+<p>Three things about it are deliberate.</p>
+<p><strong>It reports, it does not judge.</strong> If the chain is broken, the bundle still exports and says so on its first page. An export that hid a broken chain would be the one failure that matters.</p>
+<p><strong>It is checkable years later.</strong> The bundle does not need this program, or this version of it, to be understood. The script is a page of plain Python that a reader can read before running.</p>
+<p><strong>A pass is narrower than it sounds.</strong> It means the files are exactly as exported and the record they describe holds together. It does not mean the entries are correct, that money moved, or that a price was agreed.</p>
+<h2 id="a-read-only-key-for-an-internal-auditor">A read-only key, for an internal auditor</h2>
+<p>An external auditor usually wants a file. An internal auditor, or the organisation's own scripts, may want to pull the figures repeatedly and test them with their own tools. That is what an <strong>audit key</strong> is for: a named, revocable, read-only credential for the audit API.</p>
+<p>The whole surface is twelve GET endpoints, all of which show what the pages show:</p>
+<pre><code>curl -H &quot;Authorization: Bearer bbk_…&quot; http://127.0.0.1:8321/api/audit/verify</code></pre>
+<ul>
+<li><code>/verify</code> — is the chain intact, and the Merkle root</li>
+<li><code>/entries</code>, <code>/lines</code> — the rows, as JSON or CSV</li>
+<li><code>/proof/{id}</code> — one entry, proved against the whole ledger</li>
+<li><code>/packs</code>, <code>/checkpoints</code> — what was sealed and what was witnessed</li>
+<li><code>/procedures</code>, <code>/working-paper/{code}</code> — the programme and its papers</li>
+<li><code>/bundle</code> — the whole folder, as a zip</li>
+<li><code>/access-log</code> — who read what, including the attempts that were refused</li>
+</ul>
+<p>Four properties make this something an organisation can actually hand out.</p>
+<ol>
+<li><strong>A key cannot write.</strong> It cannot post, edit, void, seal, or change a setting. It is refused in the language it asked in — JSON, with a reason — rather than being quietly redirected.</li>
+<li><strong>A key is shown once.</strong> Only its SHA-256 is kept, so a copy of the database does not hand anybody a working key, and a lost key is replaced rather than recovered.</li>
+<li><strong>A key can be taken away.</strong> Revoking it stops the next request, and the attempt is recorded.</li>
+<li><strong>Using a key leaves a trace.</strong> Every read is written to the access log with the key's name, the path, and how many rows were handed over. An auditor reading the books leaves a trace in the same record they came to read, which is the arrangement they would ask for if they designed it.</li>
+</ol>
+<aside class="callout callout-aside"><p class="callout-title">Internal audit is not external audit</p><p>These are different jobs with different standards behind them, and a read-only key is not a substitute for either. An internal auditor works for the organisation, can look at controls and processes a key never sees, and is usually the person best placed to notice an unusual pattern in A16 before anybody else does. An external auditor reaches an opinion. ByteBook can serve both and decides neither.</p></aside>
+<h2 id="a-checkpoint-and-why-a-receipt-matters">A checkpoint, and why a receipt matters</h2>
+<p>A <strong>checkpoint</strong> is one line of evidence. Every time somebody checks the record — or seals a period, which does the same thing by itself — ByteBook writes down how many entries there were, the fingerprint of the last one, and the Merkle root of the whole ledger. Each checkpoint includes the fingerprint of the checkpoint before it, so the log of checks is a chain of its own.</p>
+<p>On its own that is still just another table in the same file. It becomes evidence when a copy leaves the file, and that copy is a <strong>receipt</strong>: two dozen lines with the business name, the date, the entry count, the last fingerprint, the Merkle root and the checkpoint's own fingerprint.</p>
+<p>Keep a receipt the way you would keep a bank statement. Email it to your accountant at every month end, print it, drop it in the audit file. It costs nothing. What it buys is this: a record rewritten as a whole can rebuild every entry fingerprint, but it cannot reach the copy in somebody else's inbox.</p>
+<p>To check one, paste it into <strong>Audit trail → Checkpoints → Check a receipt</strong>. The printed version and the JSON version both work. ByteBook says whether the books still contain everything the receipt witnessed, and how much work has happened since — because more work after a checkpoint is normal, and a record <em>shorter</em> than one is not.</p>
 <h2 id="what-stays-outside-the-program">What stays outside the program</h2>
 <p>ByteBook can prove that a period has not changed, that the two sides of every entry are equal, that the bank agrees, and that the figures on the reports can be reproduced from the rows. Those are arithmetic and record-integrity claims, and a computer is good at them.</p>
 <p>It cannot judge whether a debt will be collected, whether a provision is adequate, whether a related party transaction was on arm's length terms, or whether a business is a going concern. Those are judgements, and they come with a person's name attached.</p>
@@ -120,6 +167,8 @@
 <li>An entry is backdated into a period that was sealed last month. What fails, and when is it detected?</li>
 <li>Why does a void inside a sealed period fail the verification, when the void is a legitimate correction?</li>
 <li>Name two claims ByteBook can test and two it cannot.</li>
+<li>An auditor is given a bundle and runs <code>verify.py</code>. It prints PASS. Name three things that does not tell them.</li>
+<li>Why does keeping a receipt matter more than recording a checkpoint?</li>
 </ol></aside>
       </div>
     </div>
@@ -131,7 +180,7 @@
     <span class="book-turn-hint">Arrow keys, or the buttons</span>
   </div>
 </article>
-<nav class="book-pager" aria-label="Chapter navigation"><a class="book-pager-link" href="13-the-assurance-procedures.html"><span class="book-pager-label">Previous</span><span class="book-pager-title">The fourteen assurance procedures</span></a><a class="book-pager-link book-pager-next" href="15-roles-and-access.html"><span class="book-pager-label">Next</span><span class="book-pager-title">Roles: who may do what</span></a></nav>
+<nav class="book-pager" aria-label="Chapter navigation"><a class="book-pager-link" href="13-the-assurance-procedures.html"><span class="book-pager-label">Previous</span><span class="book-pager-title">The sixteen assurance procedures</span></a><a class="book-pager-link book-pager-next" href="15-roles-and-access.html"><span class="book-pager-label">Next</span><span class="book-pager-title">Roles: who may do what</span></a></nav>
   </main>
 </div>
 <div class="book-search" id="book-search" hidden>

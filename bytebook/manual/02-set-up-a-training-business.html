@@ -51,7 +51,7 @@
 <ul class="book-nav-list">
 <li><a href="11-nothing-is-deleted.html"><span class="book-nav-num">11</span><span>Nothing is deleted: voiding, not editing</span></a></li>
 <li><a href="12-the-audit-trail-and-the-chain.html"><span class="book-nav-num">12</span><span>The audit trail and the chain</span></a></li>
-<li><a href="13-the-assurance-procedures.html"><span class="book-nav-num">13</span><span>The fourteen assurance procedures</span></a></li>
+<li><a href="13-the-assurance-procedures.html"><span class="book-nav-num">13</span><span>The sixteen assurance procedures</span></a></li>
 <li><a href="14-sealed-packs-and-working-papers.html"><span class="book-nav-num">14</span><span>Sealed packs and working papers</span></a></li>
 <li><a href="15-roles-and-access.html"><span class="book-nav-num">15</span><span>Roles: who may do what</span></a></li>
 </ul>
@@ -86,7 +86,7 @@
       <div class="book-body">
 <h2 id="install-it">Install it</h2>
 <p>On a Mac, open the ByteBook disk image and drag ByteBook into Applications. That is the whole install. The program carries everything it needs, so it works on a computer with nothing else on it and with the internet switched off.</p>
-<p>The first time you open it on a Mac that has not seen it before, macOS may say the developer cannot be verified. Right-click the application, choose <strong>Open</strong>, and confirm once. It will start normally from then on.</p>
+<p>The application is signed with ByteMind's Apple Developer ID and notarized by Apple, so there is nothing to click through: it opens on a Mac that has never seen it, with the internet switched off.</p>
 <p>If you would rather run ByteBook from its source, the project's own readme explains that route. Everything in this handbook works the same way in either.</p>
 <h2 id="answer-four-questions">Answer four questions</h2>
 <p>ByteBook asks for four things the first time it opens, and then leaves you alone:</p>
@@ -97,6 +97,28 @@
 <li><strong>How do you invoice?</strong> Your business details, which print on every document.</li>
 </ol>
 <p>Nothing here is permanent. Every answer can be changed later under <strong>Settings</strong>. Learning to find and correct a setting is part of the exercise.</p>
+<h2 id="practice-on-a-business-that-already-exists">Practice on a business that already exists</h2>
+<p>Setting up a business from nothing teaches you the setting up. It does not teach you what it is like to open somebody's books in the middle of a year, which is the situation most of this handbook is really about.</p>
+<p><strong>Practice businesses</strong> — in the sidebar under <em>Set up</em> — are twelve New Zealand businesses with months of trading already in them. Each one is a different trade, and each trade produces its own kind of mess:</p>
+<table>
+<thead><tr><th>Business</th><th>What it is there to teach</th></tr></thead>
+<tbody>
+<tr><td>Hairdressing</td><td>A business under the GST threshold, with no tax on anything</td></tr>
+<tr><td>Consulting</td><td>GST on the payments basis, where the tax follows the money</td></tr>
+<tr><td>Construction</td><td>Stage payments and 20-day terms, where ageing matters more than the total</td></tr>
+<tr><td>Hospitality</td><td>Daily takings banked in a lump, and the difference somebody has to explain</td></tr>
+<tr><td>Online retail</td><td>Refunds and credit notes, which are not negative sales</td></tr>
+<tr><td>Residential property</td><td>Exempt rent, and repairs you cannot claim GST on</td></tr>
+<tr><td>Horticulture</td><td>Seasonal work on a six-monthly GST period</td></tr>
+<tr><td>Health</td><td>Staff, an accountant who may look but not touch, and an access log</td></tr>
+<tr><td>Trades</td><td>A busy bank statement, coded to eight accounts</td></tr>
+<tr><td>Wholesale</td><td>Imports, and a balance date that is not 31 March</td></tr>
+<tr><td>Software</td><td>A year of costs and no income, funded by somebody else</td></tr>
+<tr><td>Engineering</td><td>Amounts that break careless rounding, to the cent</td></tr>
+</tbody></table>
+<p>Choosing one opens it. Choosing <strong>Back to my books</strong> opens yours again. The practice business is a copy kept beside your own books, so nothing you do in it can touch them, and work you do there is kept until you press <strong>Start over</strong>.</p>
+<p>They live in a folder called <code>training</code> beside your own books — on a Mac, <code>~/Library/Application Support/ByteBook/training/<business></code>. Each one is an ordinary SQLite file, so copying that folder is a complete backup of it.</p>
+<p>Every one of these businesses is complete and internally consistent: open the audit trail on any of them and the chain verifies, and the assurance programme reports nothing wrong. They were built by running the real application and then checking the result, which is also how the program is tested. What is waiting in them is the ordinary work of a business — invoices past their due date, an unpaid bill, a document missing its supplier's GST number — and the list under <strong>What to try</strong> on each one is a place to start.</p>
 <h2 id="give-yourself-a-role">Give yourself a role</h2>
 <p>By default ByteBook opens without a password, which is right for a computer only one person uses. For training it is better to switch security on, because the roles are part of what you are here to learn:</p>
 <table>

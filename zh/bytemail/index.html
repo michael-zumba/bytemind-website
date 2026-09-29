@@ -162,6 +162,7 @@
                         <ul>
                             <li>每个空格都写明缺的是什么</li>
                             <li>空格没填完，复制按钮就一直按不动</li>
+                            <li>会变的数字——税率、门槛、截止日期——可以当场查，连同出处一起给你</li>
                         </ul>
                     </div>
                     <figure class="bm-demo">
@@ -269,7 +270,7 @@
                         <ul class="bm-points">
                             <li><strong>不会替你发邮件。</strong>它把文字交给你，由你粘进平时用的邮箱。</li>
                             <li><strong>不会猜事实。</strong>你没写进去的日期、价格、承诺，它不会自己写。</li>
-                            <li><strong>不确定就说不确定。</strong>它查不了的事，会写成一句提示，写明该去核什么。</li>
+                            <li><strong>不确定就说不确定。</strong>需要核实的，会写成一句提示，写明要查的东西、地点和时间范围，旁边的 <em>Search the web</em> 按钮会把答案和出处一起带回来；你不点 <em>Use this answer</em>，它一个字也不会写进草稿。</li>
                         </ul>
                     </div>
                     <div>
@@ -293,10 +294,10 @@
                     <p>不用注册 ByteMind 账号，中间也没有我们自己的服务器。</p>
                 </div>
                 <div class="bm-facts">
-                    <div><span class="bm-fact-value">2.3 MB</span><span class="bm-fact-label">整个 macOS 应用</span></div>
+                    <div><span class="bm-fact-value">5.4 MB</span><span class="bm-fact-label">整个 macOS 应用</span></div>
                     <div><span class="bm-fact-value">1 KB</span><span class="bm-fact-label">用来描述你文风的那份档案</span></div>
                     <div><span class="bm-fact-value">0</span><span class="bm-fact-label">账号，也没有行为统计</span></div>
-                    <div><span class="bm-fact-value">1</span><span class="bm-fact-label">联网只发给你选的模型服务</span></div>
+                    <div><span class="bm-fact-value">1</span><span class="bm-fact-label">联网只发给你选的模型服务；查资料时才多一次</span></div>
                 </div>
                 <div class="bm-two">
                     <div>
@@ -325,21 +326,21 @@
                     <article class="bm-download">
                         <h3>macOS 13 及以上</h3>
                         <p class="bm-download-sub">Apple 芯片和 Intel 都可以。磁盘映像：打开后把 ByteMail 拖进「应用程序」。</p>
-                        <a class="btn btn-primary" href="../../assets/bytemail/ByteMail_1.2.0-beta.1.dmg" download>下载 macOS 版</a>
-                        <p class="bm-download-size">ByteMail 1.2.0-beta.1 &middot; 1.5 MB &middot; 已用 ByteMind Ltd 签名，公证待完成</p>
+                        <a class="btn btn-primary" href="../../assets/bytemail/ByteMail_1.2.0.dmg" download>下载 macOS 版</a>
+                        <p class="bm-download-size">ByteMail 1.2.0 &middot; 1.6 MB &middot; 已用 ByteMind Ltd 签名，并通过 Apple 公证</p>
                     </article>
                     <article class="bm-download">
                         <h3>Windows 10 和 11</h3>
                         <p class="bm-download-sub">ZIP 压缩包，解压后运行 ByteMail.exe。</p>
                         <a class="btn btn-primary" href="../../assets/bytemail/ByteMail_Windows.zip" download>下载 Windows 版</a>
-                        <p class="bm-download-size">ByteMail 1.1.0 &middot; 64 位 &middot; 38 MB</p>
+                        <p class="bm-download-size">ByteMail 1.2.0 &middot; 64 位 &middot; 38 MB</p>
                     </article>
                 </div>
 
                 <p class="bm-note" style="text-align:center; max-width:620px; margin-left:auto; margin-right:auto;">
                 想核对下载的文件，可以比对这些校验值：<br>
-                <code style="font-size:.78rem;">9a2be8df&hellip;25cad45</code> macOS &middot;
-                <code style="font-size:.78rem;">065753d8&hellip;50d26955</code> Windows</p>
+                <code style="font-size:.78rem;">3e4001c2&hellip;da7a321c</code> macOS &middot;
+                <code style="font-size:.78rem;">2d1cf245&hellip;794da502</code> Windows</p>
 
                 <div class="container bm-windows" style="max-width: 780px;">
                     <h3>更新会自动装好</h3>
@@ -353,10 +354,10 @@
                 <div class="container bm-windows" style="max-width: 780px;">
                     <h3>安装前先看这里</h3>
                     <ul class="bm-points">
-                        <li><strong>macOS：</strong>ByteMail 已用 ByteMind Ltd 的开发者证书签名，但公证还没完成，所以第一次打开会提示 Apple 无法检查。打开<strong>系统设置 → 隐私与安全性</strong>，在 ByteMail 旁边点<strong>仍要打开</strong>再确认。只需一次。</li>
+                        <li><strong>macOS：</strong>ByteMail 已用 ByteMind Ltd 的开发者证书签名，并通过 Apple 公证，打开时不会再有任何拦截。从 1.1.0 升级过来的话，<strong>辅助功能</strong>权限会再问一次——这是第一个用开发者证书签名的版本——之后的每次更新都会自动保留。</li>
                         <li><strong>macOS：</strong>ByteMail 需要<strong>辅助功能</strong>权限，才能读你选中的文字、把回复放回去。设置里的「权限」会显示状态；不想授权，也可以改用剪贴板方式。</li>
                         <li><strong>Windows：</strong>如果出现 SmartScreen 提示，点<strong>更多信息</strong>，再点<strong>仍要运行</strong>。</li>
-                        <li><strong>两个版本都一样：</strong>可以填自己的模型密钥，也可以指向本机模型，完全不用密钥。安装包放在 GitHub Releases。</li>
+                        <li><strong>两个版本都一样：</strong>可以填自己的模型密钥，也可以指向本机模型，完全不用密钥。查资料是可选的：没有搜索密钥，这个问题就还是留给你自己回答。</li>
                     </ul>
                 </div>
             </div>

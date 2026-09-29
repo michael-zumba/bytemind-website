@@ -188,6 +188,7 @@
                         <ul>
                             <li>Each field names exactly what is missing</li>
                             <li>Copy stays disabled until every one is answered</li>
+                            <li>A fact that changes — a rate, a threshold, a deadline — can be looked up on the spot, with the pages it came from</li>
                         </ul>
                     </div>
                     <figure class="bm-demo">
@@ -297,7 +298,7 @@
                         <ul class="bm-points">
                             <li><strong>It never sends mail.</strong> It hands you text to paste into the app you already trust.</li>
                             <li><strong>It will not guess a fact.</strong> No date, price or promise is written unless you put it there.</li>
-                            <li><strong>It says when it is unsure.</strong> Research it cannot do becomes a note naming exactly what to check.</li>
+                            <li><strong>It says when it is unsure.</strong> Anything that needs checking becomes a note naming the fact, the place and the period — and a <em>Search the web</em> button that returns the answer with its sources. Nothing is written in until you press <em>Use this answer</em>.</li>
                         </ul>
                     </div>
                     <div>
@@ -321,10 +322,10 @@
                     <p>No ByteMind account. No server of ours in the path.</p>
                 </div>
                 <div class="bm-facts">
-                    <div><span class="bm-fact-value">2.3 MB</span><span class="bm-fact-label">the whole macOS app</span></div>
+                    <div><span class="bm-fact-value">5.4 MB</span><span class="bm-fact-label">the whole macOS app</span></div>
                     <div><span class="bm-fact-value">1 KB</span><span class="bm-fact-label">what it keeps to describe your writing</span></div>
                     <div><span class="bm-fact-value">0</span><span class="bm-fact-label">accounts, and no telemetry</span></div>
-                    <div><span class="bm-fact-value">1</span><span class="bm-fact-label">network call: your model provider, if you use one</span></div>
+                    <div><span class="bm-fact-value">1</span><span class="bm-fact-label">network call: your model provider — and a search only when you ask for one</span></div>
                 </div>
                 <div class="bm-two">
                     <div>
@@ -355,21 +356,21 @@
                     <article class="bm-download">
                         <h3>macOS 13 or later</h3>
                         <p class="bm-download-sub">Apple Silicon and Intel. Disk image — open it and drag ByteMail to Applications.</p>
-                        <a class="btn btn-primary" href="../assets/bytemail/ByteMail_1.2.0-beta.1.dmg" download>Download for macOS</a>
-                        <p class="bm-download-size">ByteMail 1.2.0-beta.1 &middot; 1.5 MB &middot; signed as ByteMind Ltd, notarisation pending</p>
+                        <a class="btn btn-primary" href="../assets/bytemail/ByteMail_1.2.0.dmg" download>Download for macOS</a>
+                        <p class="bm-download-size">ByteMail 1.2.0 &middot; 1.6 MB &middot; signed as ByteMind Ltd and notarized by Apple</p>
                     </article>
                     <article class="bm-download">
                         <h3>Windows 10 and 11</h3>
                         <p class="bm-download-sub">ZIP package — extract it and run ByteMail.exe.</p>
                         <a class="btn btn-primary" href="../assets/bytemail/ByteMail_Windows.zip" download>Download for Windows</a>
-                        <p class="bm-download-size">ByteMail for Windows 1.1.0 &middot; 64-bit &middot; 38 MB</p>
+                        <p class="bm-download-size">ByteMail for Windows 1.2.0 &middot; 64-bit &middot; 38 MB</p>
                     </article>
                 </div>
 
                 <p class="bm-note" style="text-align:center; max-width:620px; margin-left:auto; margin-right:auto;">
                 The checksums, if you want to confirm what you received:<br>
-                <code style="font-size:.78rem;">9a2be8df&hellip;25cad45</code> macOS &middot;
-                <code style="font-size:.78rem;">065753d8&hellip;50d26955</code> Windows</p>
+                <code style="font-size:.78rem;">3e4001c2&hellip;da7a321c</code> macOS &middot;
+                <code style="font-size:.78rem;">2d1cf245&hellip;794da502</code> Windows</p>
 
                 <div class="container bm-windows" style="max-width: 780px;">
                     <h3>Updates install themselves</h3>
@@ -383,10 +384,10 @@
                 <div class="container bm-windows" style="max-width: 780px;">
                     <h3>Before you install</h3>
                     <ul class="bm-points">
-                        <li><strong>macOS:</strong> ByteMail is signed under ByteMind Ltd but is not notarised yet, so the first launch says Apple cannot check it. Open <strong>System Settings → Privacy &amp; Security</strong>, click <strong>Open Anyway</strong> next to ByteMail, then confirm. Once only.</li>
+                        <li><strong>macOS:</strong> ByteMail is signed as ByteMind Ltd and notarized by Apple, so it opens without any detour. Coming from 1.1.0, the Accessibility grant is asked for once more — this build is the first signed by the Developer ID — and every update after it keeps the grant.</li>
                         <li><strong>macOS:</strong> ByteMail needs <strong>Accessibility</strong> access to read the text you select and put the reply back. Settings shows this under Permissions, with a clipboard fallback if you would rather not grant it.</li>
                         <li><strong>Windows:</strong> if SmartScreen appears, click <strong>More info</strong> then <strong>Run anyway</strong>.</li>
-                        <li><strong>Both:</strong> bring your own model key, or point it at a local model and use no key at all. Downloads are hosted on GitHub Releases.</li>
+                        <li><strong>Both:</strong> bring your own model key, or point it at a local model and use no key at all. Look-ups are optional: without a search key, the question simply stays yours to answer.</li>
                     </ul>
                 </div>
             </div>

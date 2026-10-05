@@ -23,6 +23,20 @@
       .bt-card p { margin: 0; color: var(--color-muted-foreground); }
       .bt-card { border-top: 3px solid var(--color-accent, #1f6f5c); }
 
+      /* What it is, and what it is not. Two short columns, centred. */
+      .bt-two {
+        display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-10);
+        max-width: 880px; margin: var(--space-10) auto 0; text-align: left;
+      }
+      .bt-two h3 {
+        font-family: var(--font-serif); font-size: 1.2rem;
+        margin: 0 0 8px; color: var(--color-foreground);
+      }
+      .bt-two p { margin: 0; color: var(--color-muted-foreground); }
+      @media (max-width: 760px) {
+        .bt-two { grid-template-columns: 1fr; gap: var(--space-6); }
+      }
+
       /* One thing the game does per row: a short line about it, and a clip of
          it happening. The clips play while they are on screen. */
       .bt-work {
@@ -50,6 +64,43 @@
         .bt-work { grid-template-columns: 1fr; gap: var(--space-6); }
         .bt-flip .bt-work-copy { order: 0; }
       }
+
+      /* The films: a still to start with, and the film itself once pressed. */
+      .bt-films { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                  gap: var(--space-6); margin-top: var(--space-8); }
+      .bt-film { margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+                 overflow: hidden; background: var(--color-background); }
+      .bt-film-play { display: block; position: relative; width: 100%; padding: 0; border: 0;
+                      background: #0d1726; cursor: pointer; line-height: 0; }
+      .bt-film-play img { display: block; width: 100%; height: auto; }
+      .bt-film-play::after { content: ""; position: absolute; inset: 0;
+                             background: linear-gradient(180deg, rgba(13,23,38,0) 55%, rgba(13,23,38,.55)); }
+      .bt-film-play::before { content: ""; position: absolute; z-index: 1; left: 50%; top: 50%;
+                              width: 62px; height: 62px; margin: -31px 0 0 -31px; border-radius: 50%;
+                              background: rgba(13,23,38,.72) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f4b740'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/30px 30px no-repeat;
+                              border: 1px solid rgba(244,183,64,.75); }
+      .bt-film video { display: block; width: 100%; height: auto; background: #0d1726; }
+      .bt-film figcaption { padding: 12px 16px 14px; }
+      .bt-film figcaption b { display: block; font-size: .98rem; color: var(--color-primary); }
+      .bt-film figcaption span { display: block; margin-top: 4px; font-size: .88rem;
+                                 line-height: 1.5; color: var(--color-muted-foreground); }
+      .bt-film-time { position: absolute; z-index: 1; right: 10px; bottom: 10px; padding: 3px 9px;
+                      border-radius: 999px; background: rgba(13,23,38,.82); color: #eef3f9;
+                      font-size: .76rem; letter-spacing: .04em; line-height: 1.6; }
+      .bt-films + .bt-note { margin-top: var(--space-6); }
+      .bt-film-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                       gap: var(--space-6); margin-top: var(--space-8); }
+      .bt-film-still { display: block; position: relative; border: 1px solid var(--color-border);
+                       border-radius: var(--radius-lg); overflow: hidden; background: #0d1726;
+                       line-height: 0; }
+      .bt-film-still img { display: block; width: 100%; height: auto; }
+      .bt-film-still::after { content: ""; position: absolute; inset: 0;
+                              background: linear-gradient(180deg, rgba(13,23,38,0) 60%, rgba(13,23,38,.45)); }
+      .bt-film-still::before { content: ""; position: absolute; z-index: 1; left: 50%; top: 50%;
+                               width: 54px; height: 54px; margin: -27px 0 0 -27px; border-radius: 50%;
+                               background: rgba(13,23,38,.72) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f4b740'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/26px 26px no-repeat;
+                               border: 1px solid rgba(244,183,64,.75); }
+
     </style>
 </head>
 <body>
@@ -65,6 +116,7 @@
                     <a href="../insights.html">Insights</a>
                     <a href="../reports.html">Reports</a>
                     <a href="../about.html">About</a>
+                    <a href="../index.html#products">Products</a>
                     <a href="../contact.html">Contact</a>
                 </div>
                 <a href="../zh/bytetax/index.html" class="lang-switch" data-dom-id="lang-switch" hreflang="zh-Hans" lang="zh-Hans">中文</a>
@@ -248,6 +300,37 @@
             </div>
         </section>
 
+        
+        <section class="section" id="films">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">Walkthroughs</div>
+                    <h2>Watch the films</h2>
+                </div>
+                <div class="bt-film-strip">
+                    <a class="bt-film-still" href="videos.html#film-01-a-round-start-to-finish"
+                       aria-label="Watch the film: A round, start to finish">
+                        <img src="../assets/bytetax/demos/01-a-round-start-to-finish.jpg" alt=""
+                             width="1280" height="720" loading="lazy" decoding="async">
+                    </a>
+                    <a class="bt-film-still" href="videos.html#film-09-matching-pairs"
+                       aria-label="Watch the film: Matching pairs">
+                        <img src="../assets/bytetax/demos/09-matching-pairs.jpg" alt=""
+                             width="1280" height="720" loading="lazy" decoding="async">
+                    </a>
+                    <a class="bt-film-still" href="videos.html#film-15-where-the-answers-come-from"
+                       aria-label="Watch the film: Where the answers come from">
+                        <img src="../assets/bytetax/demos/15-where-the-answers-come-from.jpg" alt=""
+                             width="1280" height="720" loading="lazy" decoding="async">
+                    </a>
+                </div>
+                <div class="bt-ctas" style="justify-content: flex-start;">
+                    <a class="btn btn-secondary" href="videos.html">All thirty films &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+
         <section class="section" id="who">
             <div class="container">
                 <div class="section-header">
@@ -256,11 +339,23 @@
                     <p>Made for accountancy and taxation students, and useful to anyone checking
                     what they know.</p>
                 </div>
-                <p class="bt-note">ByteTax gives general information about New Zealand tax, not
-                tax advice, and it does not work out anyone's tax bill. Inland Revenue is the
-                authority for every rule it covers. No account, no tracking: your progress stays in
-                your own browser. Built by ByteMind Ltd. Version 0.1.0.</p>
-                <div class="bt-ctas" style="justify-content: flex-start;">
+                <div class="bt-two">
+                    <div>
+                        <h3>What it is</h3>
+                        <p>A short-session game for New Zealand tax. 200 questions across 13
+                        topics, seven ways to practise, and a one-line reason behind every
+                        answer.</p>
+                    </div>
+                    <div>
+                        <h3>What it is not</h3>
+                        <p>General information about New Zealand tax, not tax advice. It does not
+                        work out anyone's tax bill, and Inland Revenue is the authority for every
+                        rule it covers.</p>
+                    </div>
+                </div>
+                <p class="bt-note" style="text-align: center;">No account, no tracking: your
+                progress stays in your own browser. Built by ByteMind Ltd. Version 0.1.0.</p>
+                <div class="bt-ctas">
                     <a class="btn btn-primary" href="play/">Start a round &rarr;</a>
                 </div>
             </div>
@@ -289,7 +384,7 @@
                     <a href="../bytebook/">ByteBook</a>
                     <a href="../bytetax/">ByteTax</a>
                     <a href="../byteproof.html">ByteProof</a>
-<a href="../bytemail/">ByteMail</a>
+                    <a href="../bytemail/">ByteMail</a>
                 </div>
                 <div class="footer-col">
                     <h4>Connect</h4>

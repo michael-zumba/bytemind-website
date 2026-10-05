@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="zh-Hans" class="light">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/logo/favicon-32.png?v=2026">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteTax 操作演示 | ByteMind</title>
+    <meta name="description" content="30 段 ByteTax 实际使用短片，每段都有讲解和字幕，每段只讲一件事：一轮练习、一种题型、答案的出处，或课程中的某一周。">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ByteMind Ltd">
+    <meta property="og:title" content="ByteTax walkthroughs | ByteMind">
+    <meta property="og:description" content="30 short films of ByteTax in use, each narrated and captioned, and each showing one thing: a round, a question format, where an answer came from, or one week of the course.">
+    <meta property="og:url" content="https://www.bytemind.co.nz/bytetax/">
+    <link rel="canonical" href="https://www.bytemind.co.nz/bytetax/">
+    <link rel="stylesheet" href="../../colors_and_type.css">
+    <style>
+      /* A few additions only. Everything else comes from colors_and_type.css. */
+      .bt-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 28px; }
+      .bt-format { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 8px; }
+      .bt-format span { border: 1px solid var(--color-border); border-radius: 999px; padding: 7px 16px; font-size: .92rem; }
+      .bt-note { margin-top: 28px; font-size: .95rem; color: var(--color-muted-foreground); }
+      .bt-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+      .bt-card p { margin: 0; color: var(--color-muted-foreground); }
+      .bt-card { border-top: 3px solid var(--color-accent, #1f6f5c); }
+
+      /* One thing the game does per row: a short line about it, and a clip of
+         it happening. The clips play while they are on screen. */
+      .bt-work {
+        display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+        gap: var(--space-10); align-items: center;
+      }
+      .bt-work + .bt-work { margin-top: var(--space-16); }
+      .bt-work h3 {
+        font-family: var(--font-serif); font-size: 1.4rem; margin: 0 0 8px;
+        color: var(--color-primary);
+      }
+      .bt-work p { margin: 0; }
+      .bt-flip .bt-work-copy { order: 2; }
+      .bt-demo {
+        margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+        overflow: hidden; background: #0d1726;
+        box-shadow: 0 16px 40px -24px rgba(14, 36, 25, .32);
+      }
+      .bt-demo video { display: block; width: 100%; height: auto; background: #0d1726; cursor: pointer; }
+      .bt-demo figcaption {
+        padding: 10px 16px 12px; font-size: .88rem; line-height: 1.5;
+        color: var(--color-muted-foreground); border-top: 1px solid var(--color-border);
+      }
+      @media (max-width: 860px) {
+        .bt-work { grid-template-columns: 1fr; gap: var(--space-6); }
+        .bt-flip .bt-work-copy { order: 0; }
+      }
+
+      /* The films: a still to start with, and the film itself once pressed. */
+      .bt-films { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                  gap: var(--space-6); margin-top: var(--space-8); }
+      .bt-film { margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+                 overflow: hidden; background: var(--color-background); }
+      .bt-film-play { display: block; position: relative; width: 100%; padding: 0; border: 0;
+                      background: #0d1726; cursor: pointer; line-height: 0; }
+      .bt-film-play img { display: block; width: 100%; height: auto; }
+      .bt-film-play::after { content: ""; position: absolute; inset: 0;
+                             background: linear-gradient(180deg, rgba(13,23,38,0) 55%, rgba(13,23,38,.55)); }
+      .bt-film-play::before { content: ""; position: absolute; z-index: 1; left: 50%; top: 50%;
+                              width: 62px; height: 62px; margin: -31px 0 0 -31px; border-radius: 50%;
+                              background: rgba(13,23,38,.72) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f4b740'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/30px 30px no-repeat;
+                              border: 1px solid rgba(244,183,64,.75); }
+      .bt-film video { display: block; width: 100%; height: auto; background: #0d1726; }
+      .bt-film figcaption { padding: 12px 16px 14px; }
+      .bt-film figcaption b { display: block; font-size: .98rem; color: var(--color-primary); }
+      .bt-film figcaption span { display: block; margin-top: 4px; font-size: .88rem;
+                                 line-height: 1.5; color: var(--color-muted-foreground); }
+      .bt-film-time { position: absolute; z-index: 1; right: 10px; bottom: 10px; padding: 3px 9px;
+                      border-radius: 999px; background: rgba(13,23,38,.82); color: #eef3f9;
+                      font-size: .76rem; letter-spacing: .04em; line-height: 1.6; }
+      .bt-films + .bt-note { margin-top: var(--space-6); }
+      .bt-film-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                       gap: var(--space-6); margin-top: var(--space-8); }
+      .bt-film-still { display: block; position: relative; border: 1px solid var(--color-border);
+                       border-radius: var(--radius-lg); overflow: hidden; background: #0d1726;
+                       line-height: 0; }
+      .bt-film-still img { display: block; width: 100%; height: auto; }
+      .bt-film-still::after { content: ""; position: absolute; inset: 0;
+                              background: linear-gradient(180deg, rgba(13,23,38,0) 60%, rgba(13,23,38,.45)); }
+      .bt-film-still::before { content: ""; position: absolute; z-index: 1; left: 50%; top: 50%;
+                               width: 54px; height: 54px; margin: -27px 0 0 -27px; border-radius: 50%;
+                               background: rgba(13,23,38,.72) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f4b740'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/26px 26px no-repeat;
+                               border: 1px solid rgba(244,183,64,.75); }
+
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">跳到主要内容</a>
+    <header id="shell-header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="../index.html" class="logo-link">ByteMind</a>
+                <div class="nav-links" id="nav-links">
+                    <a href="../index.html">首页</a>
+                    <a href="../services.html">服务</a>
+                    <a href="../indices.html">指数</a>
+                    <a href="../insights.html">洞察</a>
+                    <a href="../reports.html">报告</a>
+                    <a href="../about.html">关于</a>
+                    <a href="../contact.html">联系方式</a>
+                </div>
+                <a href="../../bytetax/videos.html" class="lang-switch" data-dom-id="lang-switch" hreflang="en">EN</a>
+                <button type="button" class="mobile-menu-btn" aria-label="打开或关闭菜单" aria-controls="nav-links" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+
+    <main id="main-content">
+        <section class="page-hero animate-fade-in-up">
+            <div class="eyebrow">视频讲解</div>
+            <div class="accent-bar"></div>
+            <h1>游戏的 30 个短片，每个只讲一件事</h1>
+            <p class="hero-intro">每段视频都是真实操作，在软件运行时录制，配有解说和字幕。整套视频共 19 分钟。</p>
+            <div class="bt-ctas">
+                <a class="btn btn-primary" href="../../bytetax/play/?lang=zh">开始玩 ByteTax →</a>
+                <a class="btn btn-secondary" href="./">返回产品页面</a>
+            </div>
+            <p class="bt-note">关于新西兰税务的一般性信息，不构成税务建议。
+            其中每一条规则，都以新西兰税务局为准。</p>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">4 部影片</div>
+                    <h2>入门</h2>
+                    <p>完整的一局、主屏幕、Pip，以及中文版。</p>
+                </div>
+                <div class="bt-films">
+                    <figure class="bt-film" id="film-01-a-round-start-to-finish">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/01-a-round-start-to-finish.mp4"
+                                data-poster="../../assets/bytetax/demos/01-a-round-start-to-finish.jpg"
+                                aria-label="玩法：一局从头到尾">
+                            <img src="../../assets/bytetax/demos/01-a-round-start-to-finish.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:42</span>
+                        </button>
+                        <figcaption>
+                            <b>一轮练习的完整过程</b>
+                            <span>八道题，覆盖整个课程，每道题都附有答案的理由。</span>
+                        <a href="https://youtu.be/h2BKf15UgGY" target="_blank" rel="noopener noreferrer">在 YouTube 上观看</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-02-the-home-screen">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/02-the-home-screen.mp4"
+                                data-poster="../../assets/bytetax/demos/02-the-home-screen.jpg"
+                                aria-label="试玩：主屏幕">
+                            <img src="../../assets/bytetax/demos/02-the-home-screen.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:52</span>
+                        </button>
+                        <figcaption>
+                            <b>首页</b>
+                            <span>游戏知道的关于你所在位置的一切，都在这一页上。</span>
+                        <a href="https://youtu.be/8tlCm3NqdG4" target="_blank" rel="noopener noreferrer">在 YouTube 上观看</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-03-meet-pip">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/03-meet-pip.mp4"
+                                data-poster="../../assets/bytetax/demos/03-meet-pip.jpg"
+                                aria-label="玩法：认识 Pip">
+                            <img src="../../assets/bytetax/demos/03-meet-pip.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:38</span>
+                        </button>
+                        <figcaption>
+                            <b>认识 Pip</b>
+                            <span>一个伙伴，会根据本轮情况做出反应，台词从知识库里取。</span>
+                        <a href="https://youtu.be/eqGcrb0npAo" target="_blank" rel="noopener noreferrer">在 YouTube 上观看</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-04-in-chinese">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/04-in-chinese.mp4"
+                                data-poster="../../assets/bytetax/demos/04-in-chinese.jpg"
+                                aria-label="玩法：用中文玩">
+                            <img src="../../assets/bytetax/demos/04-in-chinese.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:46</span>
+                        </button>
+                        <figcaption>
+                            <b>用中文试玩</b>
+                            <span>同样的题目，同样的来源，用简体中文阅读。</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">7 段视频</div>
+                    <h2>题目形式</h2>
+                    <p>一轮有七种题型，每种配一段视频。</p>
+                </div>
+                <div class="bt-films">
+                    <figure class="bt-film" id="film-05-quick-quiz">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/05-quick-quiz.mp4"
+                                data-poster="../../assets/bytetax/demos/05-quick-quiz.jpg"
+                                aria-label="开始：快速测验">
+                            <img src="../../assets/bytetax/demos/05-quick-quiz.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:32</span>
+                        </button>
+                        <figcaption>
+                            <b>快速测验</b>
+                            <span>一个问题，几个答案，只有一个是对的。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-06-true-or-false">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/06-true-or-false.mp4"
+                                data-poster="../../assets/bytetax/demos/06-true-or-false.jpg"
+                                aria-label="玩法：判断对错">
+                            <img src="../../assets/bytetax/demos/06-true-or-false.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:40</span>
+                        </button>
+                        <figcaption>
+                            <b>判断对错</b>
+                            <span>一个陈述，判断它是否成立。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-07-scenarios">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/07-scenarios.mp4"
+                                data-poster="../../assets/bytetax/demos/07-scenarios.jpg"
+                                aria-label="播放：情景题">
+                            <img src="../../assets/bytetax/demos/07-scenarios.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:40</span>
+                        </button>
+                        <figcaption>
+                            <b>情景</b>
+                            <span>一个带姓名和日期的情况，以及适用的规则。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-08-flip-cards">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/08-flip-cards.mp4"
+                                data-poster="../../assets/bytetax/demos/08-flip-cards.jpg"
+                                aria-label="开始：翻牌">
+                            <img src="../../assets/bytetax/demos/08-flip-cards.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:37</span>
+                        </button>
+                        <figcaption>
+                            <b>翻卡</b>
+                            <span>需要认识的术语，背面写释义。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-09-matching-pairs">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/09-matching-pairs.mp4"
+                                data-poster="../../assets/bytetax/demos/09-matching-pairs.jpg"
+                                aria-label="演示：配对">
+                            <img src="../../assets/bytetax/demos/09-matching-pairs.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:44</span>
+                        </button>
+                        <figcaption>
+                            <b>配对</b>
+                            <span>三种供应、三种处理方式，以及它们怎么对应。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-10-sorting">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/10-sorting.mp4"
+                                data-poster="../../assets/bytetax/demos/10-sorting.jpg"
+                                aria-label="开始：分类">
+                            <img src="../../assets/bytetax/demos/10-sorting.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:42</span>
+                        </button>
+                        <figcaption>
+                            <b>分类</b>
+                            <span>四条陈述，分成两组，以及两组之间的界线。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-11-ordering">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/11-ordering.mp4"
+                                data-poster="../../assets/bytetax/demos/11-ordering.jpg"
+                                aria-label="播放：出题顺序">
+                            <img src="../../assets/bytetax/demos/11-ordering.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:41</span>
+                        </button>
+                        <figcaption>
+                            <b>排序</b>
+                            <span>五个税率档，从最低档开始。</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">3 部影片</div>
+                    <h2>进度、连续打卡和复习</h2>
+                    <p>圆点、进度条、连续记录和结果页面分别有什么用。</p>
+                </div>
+                <div class="bt-films">
+                    <figure class="bt-film" id="film-12-the-streak">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/12-the-streak.mp4"
+                                data-poster="../../assets/bytetax/demos/12-the-streak.jpg"
+                                aria-label="播放：连续打卡">
+                            <img src="../../assets/bytetax/demos/12-the-streak.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:40</span>
+                        </button>
+                        <figcaption>
+                            <b>连续天数</b>
+                            <span>按天数，不按题数。一轮就够。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-13-the-results-screen">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/13-the-results-screen.mp4"
+                                data-poster="../../assets/bytetax/demos/13-the-results-screen.jpg"
+                                aria-label="播放：结果页面">
+                            <img src="../../assets/bytetax/demos/13-the-results-screen.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:41</span>
+                        </button>
+                        <figcaption>
+                            <b>结果页面</b>
+                            <span>你答对了什么，哪些还会再出现，接下来会发生什么。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-14-pips-and-progress">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/14-pips-and-progress.mp4"
+                                data-poster="../../assets/bytetax/demos/14-pips-and-progress.jpg"
+                                aria-label="试玩：Pip 与进度">
+                            <img src="../../assets/bytetax/demos/14-pips-and-progress.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:46</span>
+                        </button>
+                        <figcaption>
+                            <b>Pip 与进度</b>
+                            <span>一行显示本轮进度，另一行显示整个课程进度。</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">3 部影片</div>
+                    <h2>资料来源，以及它不是什么</h2>
+                    <p>答案从哪来，这个应用是什么、不是什么，还有一局离线对战。</p>
+                </div>
+                <div class="bt-films">
+                    <figure class="bt-film" id="film-15-where-the-answers-come-from">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/15-where-the-answers-come-from.mp4"
+                                data-poster="../../assets/bytetax/demos/15-where-the-answers-come-from.jpg"
+                                aria-label="开始：答案从哪里来">
+                            <img src="../../assets/bytetax/demos/15-where-the-answers-come-from.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:38</span>
+                        </button>
+                        <figcaption>
+                            <b>答案从哪来</b>
+                            <span>每一项都附有对应的新西兰税务局页面。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-16-about-byte-tax">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/16-about-byte-tax.mp4"
+                                data-poster="../../assets/bytetax/demos/16-about-byte-tax.jpg"
+                                aria-label="演示：关于 ByteTax">
+                            <img src="../../assets/bytetax/demos/16-about-byte-tax.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:44</span>
+                        </button>
+                        <figcaption>
+                            <b>关于 ByteTax</b>
+                            <span>它是什么、不是什么，内容来自哪里。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-17-with-no-network">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/17-with-no-network.mp4"
+                                data-poster="../../assets/bytetax/demos/17-with-no-network.jpg"
+                                aria-label="开始：无网络游玩">
+                            <img src="../../assets/bytetax/demos/17-with-no-network.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:51</span>
+                        </button>
+                        <figcaption>
+                            <b>无网络试玩</b>
+                            <span>玩一局，只需要这个应用本身。</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">13 部影片</div>
+                    <h2>课程，逐周安排</h2>
+                    <p>课程每周一部影片，每部都拿当周的一个真实项目来录。</p>
+                </div>
+                <div class="bt-films">
+                    <figure class="bt-film" id="film-18-week-1-the-tax-system">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/18-week-1-the-tax-system.mp4"
+                                data-poster="../../assets/bytetax/demos/18-week-1-the-tax-system.jpg"
+                                aria-label="播放：新西兰税制">
+                            <img src="../../assets/bytetax/demos/18-week-1-the-tax-system.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:35</span>
+                        </button>
+                        <figcaption>
+                            <b>新西兰税务体系</b>
+                            <span>税收怎么管理，争议怎么处理，避税规则在哪里起作用。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-19-week-2-tax-residency">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/19-week-2-tax-residency.mp4"
+                                data-poster="../../assets/bytetax/demos/19-week-2-tax-residency.jpg"
+                                aria-label="开始：框架与税务居民身份">
+                            <img src="../../assets/bytetax/demos/19-week-2-tax-residency.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:37</span>
+                        </button>
+                        <figcaption>
+                            <b>框架与税务居民身份</b>
+                            <span>征税条款、税务年度，以及谁算新西兰税务居民。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-20-week-3-income">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/20-week-3-income.mp4"
+                                data-poster="../../assets/bytetax/demos/20-week-3-income.jpg"
+                                aria-label="开始：收入：是什么，什么时候到手">
+                            <img src="../../assets/bytetax/demos/20-week-3-income.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:37</span>
+                        </button>
+                        <figcaption>
+                            <b>收入：什么是收入，什么时候算收入</b>
+                            <span>普通收入、资本利得，以及收入何时算作已取得的规则。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-21-week-4-property-and-land">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/21-week-4-property-and-land.mp4"
+                                data-poster="../../assets/bytetax/demos/21-week-4-property-and-land.jpg"
+                                aria-label="玩法：房产与土地">
+                            <img src="../../assets/bytetax/demos/21-week-4-property-and-land.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:36</span>
+                        </button>
+                        <figcaption>
+                            <b>房产与土地</b>
+                            <span>租金收入、明线测试和土地出售规则。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-22-week-5-employment-income">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/22-week-5-employment-income.mp4"
+                                data-poster="../../assets/bytetax/demos/22-week-5-employment-income.jpg"
+                                aria-label="播放：工资所得">
+                            <img src="../../assets/bytetax/demos/22-week-5-employment-income.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:30</span>
+                        </button>
+                        <figcaption>
+                            <b>受雇所得</b>
+                            <span>PAYE（工资预扣税）、税码、津贴、报销和假期工资。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-23-week-6-fringe-benefit-tax">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/23-week-6-fringe-benefit-tax.mp4"
+                                data-poster="../../assets/bytetax/demos/23-week-6-fringe-benefit-tax.jpg"
+                                aria-label="播放：附加福利税">
+                            <img src="../../assets/bytetax/demos/23-week-6-fringe-benefit-tax.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:32</span>
+                        </button>
+                        <figcaption>
+                            <b>附加福利税</b>
+                            <span>雇主提供的福利，包括 2025 年和 2026 年的变化。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-24-week-7-deductions">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/24-week-7-deductions.mp4"
+                                data-poster="../../assets/bytetax/demos/24-week-7-deductions.jpg"
+                                aria-label="演示：费用扣除">
+                            <img src="../../assets/bytetax/demos/24-week-7-deductions.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:32</span>
+                        </button>
+                        <figcaption>
+                            <b>费用扣除</b>
+                            <span>一般性许可、具体限制，以及资本这条界线。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-25-week-8-stock-and-depreciation">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/25-week-8-stock-and-depreciation.mp4"
+                                data-poster="../../assets/bytetax/demos/25-week-8-stock-and-depreciation.jpg"
+                                aria-label="开始：存货与折旧">
+                            <img src="../../assets/bytetax/demos/25-week-8-stock-and-depreciation.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:33</span>
+                        </button>
+                        <figcaption>
+                            <b>存货和折旧</b>
+                            <span>年末对存货估值，并在资产使用年限内计提折旧。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-26-week-9-companies-and-imputation">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/26-week-9-companies-and-imputation.mp4"
+                                data-poster="../../assets/bytetax/demos/26-week-9-companies-and-imputation.jpg"
+                                aria-label="试玩：公司与归集抵免">
+                            <img src="../../assets/bytetax/demos/26-week-9-companies-and-imputation.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:28</span>
+                        </button>
+                        <figcaption>
+                            <b>公司与归集抵免</b>
+                            <span>公司税、股息，以及归集抵免怎么运作。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-27-week-10-flow-through-entities">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/27-week-10-flow-through-entities.mp4"
+                                data-poster="../../assets/bytetax/demos/27-week-10-flow-through-entities.jpg"
+                                aria-label="玩法：合伙企业、穿透公司和信托">
+                            <img src="../../assets/bytetax/demos/27-week-10-flow-through-entities.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:38</span>
+                        </button>
+                        <figcaption>
+                            <b>合伙企业、穿透公司和信托</b>
+                            <span>把收入穿透给背后个人的实体。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-28-week-11-gst">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/28-week-11-gst.mp4"
+                                data-poster="../../assets/bytetax/demos/28-week-11-gst.jpg"
+                                aria-label="开始：商品及服务税">
+                            <img src="../../assets/bytetax/demos/28-week-11-gst.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:34</span>
+                        </button>
+                        <figcaption>
+                            <b>商品及服务税</b>
+                            <span>登记、收取商品及服务税、免税和零税率供应。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-29-week-12-international-tax">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/29-week-12-international-tax.mp4"
+                                data-poster="../../assets/bytetax/demos/29-week-12-international-tax.jpg"
+                                aria-label="开始：国际税">
+                            <img src="../../assets/bytetax/demos/29-week-12-international-tax.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:33</span>
+                        </button>
+                        <figcaption>
+                            <b>国际税收</b>
+                            <span>来源规则、避免双重征税协定、海外基金和税收抵免。</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-30-week-13-what-changed-recently">
+                        <button type="button" class="bt-film-play"
+                                data-src="../../assets/bytetax/demos/30-week-13-what-changed-recently.mp4"
+                                data-poster="../../assets/bytetax/demos/30-week-13-what-changed-recently.jpg"
+                                aria-label="播放：最近改了什么">
+                            <img src="../../assets/bytetax/demos/30-week-13-what-changed-recently.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:38</span>
+                        </button>
+                        <figcaption>
+                            <b>最近有哪些变化</b>
+                            <span>2025 年和 2026 年最容易让人踩坑的变化。</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+    // A still until it is pressed, then the film. Nothing is fetched from the
+    // network before somebody asks for it, so the page stays quick on a phone.
+    (function () {
+      var buttons = document.querySelectorAll('.bt-film-play');
+      Array.prototype.forEach.call(buttons, function (button) {
+        button.addEventListener('click', function () {
+          var figure = button.closest('.bt-film');
+          var video = document.createElement('video');
+          video.controls = true;
+          video.autoplay = true;
+          video.playsInline = true;
+          video.preload = 'metadata';
+          video.poster = button.getAttribute('data-poster');
+          video.src = button.getAttribute('data-src');
+          figure.replaceChild(video, button);
+          var started = video.play();
+          if (started && started.catch) started.catch(function () {});
+        });
+      });
+    })();
+    </script>
+
+
+    <footer id="shell-footer" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <p class="footer-brand-name">ByteMind Ltd</p>
+                    <p class="footer-brand-desc">为亚太地区的专业服务公司提供商业分析、数字化转型和战略咨询。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>页面</h4>
+                    <a href="../services.html">服务</a>
+                    <a href="../indices.html">指数</a>
+                    <a href="../insights.html">洞察</a>
+                    <a href="../reports.html">报告</a>
+                    <a href="../about.html">关于</a>
+                    <a href="../contact.html">联系方式</a>
+                </div>
+                <div class="footer-col">
+                    <h4>产品</h4>
+                    <a href="../../bytebook/">ByteBook</a>
+                    <a href="../bytetax/">ByteTax</a>
+                    <a href="../byteproof.html">ByteProof</a>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <a href="mailto:bytemind.nz@gmail.com">邮箱</a>
+                    <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/michael-zumba/bytemind-website" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 ByteMind Ltd. 保留所有权利。</div>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+      var button = document.querySelector('.mobile-menu-btn');
+      var links = document.querySelector('.nav-links');
+      if (button && links) {
+        button.addEventListener('click', function () {
+          var open = links.classList.toggle('active');
+          button.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+    })();
+    </script>
+
+    <script>
+    // Play each clip while it is on screen, pause it when it is not, and let a
+    // click pause or restart one. With reduced motion, nothing plays by itself
+    // and the poster frame stays.
+    (function () {
+      var clips = document.querySelectorAll('video[data-demo]');
+      if (!clips.length) return;
+      var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function start(video) {
+        var playing = video.play();
+        if (playing && playing.catch) playing.catch(function () {});
+      }
+      if ('IntersectionObserver' in window && !still) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) start(entry.target);
+            else entry.target.pause();
+          });
+        }, { threshold: 0.5 });
+        Array.prototype.forEach.call(clips, function (video) { observer.observe(video); });
+      }
+      Array.prototype.forEach.call(clips, function (video) {
+        video.addEventListener('click', function () {
+          if (video.paused) start(video);
+          else video.pause();
+        });
+      });
+    })();
+    </script>
+</body>
+</html>

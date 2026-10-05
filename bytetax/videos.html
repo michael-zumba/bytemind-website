@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png?v=2026">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ByteTax walkthroughs | ByteMind</title>
+    <meta name="description" content="30 short films of ByteTax in use, each narrated and captioned, and each showing one thing: a round, a question format, where an answer came from, or one week of the course.">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ByteMind Ltd">
+    <meta property="og:title" content="ByteTax walkthroughs | ByteMind">
+    <meta property="og:description" content="30 short films of ByteTax in use, each narrated and captioned, and each showing one thing: a round, a question format, where an answer came from, or one week of the course.">
+    <meta property="og:url" content="https://www.bytemind.co.nz/bytetax/">
+    <link rel="canonical" href="https://www.bytemind.co.nz/bytetax/">
+    <link rel="stylesheet" href="../colors_and_type.css">
+    <style>
+      /* A few additions only. Everything else comes from colors_and_type.css. */
+      .bt-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 28px; }
+      .bt-format { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-top: 8px; }
+      .bt-format span { border: 1px solid var(--color-border); border-radius: 999px; padding: 7px 16px; font-size: .92rem; }
+      .bt-note { margin-top: 28px; font-size: .95rem; color: var(--color-muted-foreground); }
+      .bt-card h3 { margin: 0 0 8px; font-size: 1.05rem; }
+      .bt-card p { margin: 0; color: var(--color-muted-foreground); }
+      .bt-card { border-top: 3px solid var(--color-accent, #1f6f5c); }
+
+      /* One thing the game does per row: a short line about it, and a clip of
+         it happening. The clips play while they are on screen. */
+      .bt-work {
+        display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+        gap: var(--space-10); align-items: center;
+      }
+      .bt-work + .bt-work { margin-top: var(--space-16); }
+      .bt-work h3 {
+        font-family: var(--font-serif); font-size: 1.4rem; margin: 0 0 8px;
+        color: var(--color-primary);
+      }
+      .bt-work p { margin: 0; }
+      .bt-flip .bt-work-copy { order: 2; }
+      .bt-demo {
+        margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+        overflow: hidden; background: #0d1726;
+        box-shadow: 0 16px 40px -24px rgba(14, 36, 25, .32);
+      }
+      .bt-demo video { display: block; width: 100%; height: auto; background: #0d1726; cursor: pointer; }
+      .bt-demo figcaption {
+        padding: 10px 16px 12px; font-size: .88rem; line-height: 1.5;
+        color: var(--color-muted-foreground); border-top: 1px solid var(--color-border);
+      }
+      @media (max-width: 860px) {
+        .bt-work { grid-template-columns: 1fr; gap: var(--space-6); }
+        .bt-flip .bt-work-copy { order: 0; }
+      }
+
+      /* The films: a still to start with, and the film itself once pressed. */
+      .bt-films { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                  gap: var(--space-6); margin-top: var(--space-8); }
+      .bt-film { margin: 0; border: 1px solid var(--color-border); border-radius: var(--radius-lg);
+                 overflow: hidden; background: var(--color-background); }
+      .bt-film-play { display: block; position: relative; width: 100%; padding: 0; border: 0;
+                      background: #0d1726; cursor: pointer; line-height: 0; }
+      .bt-film-play img { display: block; width: 100%; height: auto; }
+      .bt-film-play::after { content: ""; position: absolute; inset: 0;
+                             background: linear-gradient(180deg, rgba(13,23,38,0) 55%, rgba(13,23,38,.55)); }
+      .bt-film-play::before { content: ""; position: absolute; z-index: 1; left: 50%; top: 50%;
+                              width: 62px; height: 62px; margin: -31px 0 0 -31px; border-radius: 50%;
+                              background: rgba(13,23,38,.72) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f4b740'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/30px 30px no-repeat;
+                              border: 1px solid rgba(244,183,64,.75); }
+      .bt-film video { display: block; width: 100%; height: auto; background: #0d1726; }
+      .bt-film figcaption { padding: 12px 16px 14px; }
+      .bt-film figcaption b { display: block; font-size: .98rem; color: var(--color-primary); }
+      .bt-film figcaption span { display: block; margin-top: 4px; font-size: .88rem;
+                                 line-height: 1.5; color: var(--color-muted-foreground); }
+      .bt-film-time { position: absolute; z-index: 1; right: 10px; bottom: 10px; padding: 3px 9px;
+                      border-radius: 999px; background: rgba(13,23,38,.82); color: #eef3f9;
+                      font-size: .76rem; letter-spacing: .04em; line-height: 1.6; }
+      .bt-films + .bt-note { margin-top: var(--space-6); }
+      .bt-film-strip { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+                       gap: var(--space-6); margin-top: var(--space-8); }
+      .bt-film-still { display: block; position: relative; border: 1px solid var(--color-border);
+                       border-radius: var(--radius-lg); overflow: hidden; background: #0d1726;
+                       line-height: 0; }
+      .bt-film-still img { display: block; width: 100%; height: auto; }
+      .bt-film-still::after { content: ""; position: absolute; inset: 0;
+                              background: linear-gradient(180deg, rgba(13,23,38,0) 60%, rgba(13,23,38,.45)); }
+      .bt-film-still::before { content: ""; position: absolute; z-index: 1; left: 50%; top: 50%;
+                               width: 54px; height: 54px; margin: -27px 0 0 -27px; border-radius: 50%;
+                               background: rgba(13,23,38,.72) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23f4b740'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E") center/26px 26px no-repeat;
+                               border: 1px solid rgba(244,183,64,.75); }
+
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header id="shell-header">
+        <nav class="navbar">
+            <div class="container nav-container">
+                <a href="../index.html" class="logo-link">ByteMind</a>
+                <div class="nav-links" id="nav-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../services.html">Services</a>
+                    <a href="../indices.html">Indices</a>
+                    <a href="../insights.html">Insights</a>
+                    <a href="../reports.html">Reports</a>
+                    <a href="../about.html">About</a>
+                    <a href="../contact.html">Contact</a>
+                </div>
+                <a href="../zh/bytetax/videos.html" class="lang-switch" data-dom-id="lang-switch" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+                <button type="button" class="mobile-menu-btn" aria-label="Toggle menu" aria-controls="nav-links" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+
+    <main id="main-content">
+        <section class="page-hero animate-fade-in-up">
+            <div class="eyebrow">Video walkthroughs</div>
+            <div class="accent-bar"></div>
+            <h1>30 films of the game, one thing each</h1>
+            <p class="hero-intro">Every film is the real game, recorded while it works, with a
+            narration and captions. The whole set runs 19 minutes.</p>
+            <div class="bt-ctas">
+                <a class="btn btn-primary" href="play/">Play ByteTax &rarr;</a>
+                <a class="btn btn-secondary" href="./">Back to the product page</a>
+            </div>
+            <p class="bt-note">General information about New Zealand tax, not tax advice.
+            Inland Revenue is the authority for every rule in them.</p>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">4 films</div>
+                    <h2>Getting started</h2>
+                    <p>A round from start to finish, the home screen, Pip, and the Chinese edition.</p>
+                </div>
+                <div class="bt-films">
+                    <figure class="bt-film" id="film-01-a-round-start-to-finish">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/01-a-round-start-to-finish.mp4"
+                                data-poster="../assets/bytetax/demos/01-a-round-start-to-finish.jpg"
+                                aria-label="Play: A round, start to finish">
+                            <img src="../assets/bytetax/demos/01-a-round-start-to-finish.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:42</span>
+                        </button>
+                        <figcaption>
+                            <b>A round, start to finish</b>
+                            <span>Eight questions from across the course, and the reason behind every answer.</span>
+                        <a href="https://youtu.be/h2BKf15UgGY" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-02-the-home-screen">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/02-the-home-screen.mp4"
+                                data-poster="../assets/bytetax/demos/02-the-home-screen.jpg"
+                                aria-label="Play: The home screen">
+                            <img src="../assets/bytetax/demos/02-the-home-screen.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:52</span>
+                        </button>
+                        <figcaption>
+                            <b>The home screen</b>
+                            <span>Everything the game knows about where you are, on one page.</span>
+                        <a href="https://youtu.be/8tlCm3NqdG4" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-03-meet-pip">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/03-meet-pip.mp4"
+                                data-poster="../assets/bytetax/demos/03-meet-pip.jpg"
+                                aria-label="Play: Meet Pip">
+                            <img src="../assets/bytetax/demos/03-meet-pip.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:38</span>
+                        </button>
+                        <figcaption>
+                            <b>Meet Pip</b>
+                            <span>A companion that reacts to the round and reads its lines out of the knowledge base.</span>
+                        <a href="https://youtu.be/eqGcrb0npAo" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-04-in-chinese">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/04-in-chinese.mp4"
+                                data-poster="../assets/bytetax/demos/04-in-chinese.jpg"
+                                aria-label="Play: Playing in Chinese">
+                            <img src="../assets/bytetax/demos/04-in-chinese.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:46</span>
+                        </button>
+                        <figcaption>
+                            <b>Playing in Chinese</b>
+                            <span>The same items and the same sources, read in Simplified Chinese.</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">7 films</div>
+                    <h2>The question formats</h2>
+                    <p>One film for each of the seven formats a round is made of.</p>
+                </div>
+                <div class="bt-films">
+                    <figure class="bt-film" id="film-05-quick-quiz">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/05-quick-quiz.mp4"
+                                data-poster="../assets/bytetax/demos/05-quick-quiz.jpg"
+                                aria-label="Play: Quick quiz">
+                            <img src="../assets/bytetax/demos/05-quick-quiz.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:32</span>
+                        </button>
+                        <figcaption>
+                            <b>Quick quiz</b>
+                            <span>One question, a few answers, and one of them is right.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-06-true-or-false">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/06-true-or-false.mp4"
+                                data-poster="../assets/bytetax/demos/06-true-or-false.jpg"
+                                aria-label="Play: True or false">
+                            <img src="../assets/bytetax/demos/06-true-or-false.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:40</span>
+                        </button>
+                        <figcaption>
+                            <b>True or false</b>
+                            <span>One statement, and a decision about whether it holds.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-07-scenarios">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/07-scenarios.mp4"
+                                data-poster="../assets/bytetax/demos/07-scenarios.jpg"
+                                aria-label="Play: Scenarios">
+                            <img src="../assets/bytetax/demos/07-scenarios.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:40</span>
+                        </button>
+                        <figcaption>
+                            <b>Scenarios</b>
+                            <span>A situation with names and dates in it, and the rule that applies.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-08-flip-cards">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/08-flip-cards.mp4"
+                                data-poster="../assets/bytetax/demos/08-flip-cards.jpg"
+                                aria-label="Play: Flip cards">
+                            <img src="../assets/bytetax/demos/08-flip-cards.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:37</span>
+                        </button>
+                        <figcaption>
+                            <b>Flip cards</b>
+                            <span>Terms you need to recognise, with the meaning on the back.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-09-matching-pairs">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/09-matching-pairs.mp4"
+                                data-poster="../assets/bytetax/demos/09-matching-pairs.jpg"
+                                aria-label="Play: Matching pairs">
+                            <img src="../assets/bytetax/demos/09-matching-pairs.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:44</span>
+                        </button>
+                        <figcaption>
+                            <b>Matching pairs</b>
+                            <span>Three supplies, three treatments, and the pairings between them.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-10-sorting">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/10-sorting.mp4"
+                                data-poster="../assets/bytetax/demos/10-sorting.jpg"
+                                aria-label="Play: Sorting">
+                            <img src="../assets/bytetax/demos/10-sorting.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:42</span>
+                        </button>
+                        <figcaption>
+                            <b>Sorting</b>
+                            <span>Four statements, two groups, and the line between them.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-11-ordering">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/11-ordering.mp4"
+                                data-poster="../assets/bytetax/demos/11-ordering.jpg"
+                                aria-label="Play: Ordering">
+                            <img src="../assets/bytetax/demos/11-ordering.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:41</span>
+                        </button>
+                        <figcaption>
+                            <b>Ordering</b>
+                            <span>Five tax brackets, lowest rate first.</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">3 films</div>
+                    <h2>Progress, streaks and review</h2>
+                    <p>What the pips, the bars, the streak and the results screen are for.</p>
+                </div>
+                <div class="bt-films">
+                    <figure class="bt-film" id="film-12-the-streak">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/12-the-streak.mp4"
+                                data-poster="../assets/bytetax/demos/12-the-streak.jpg"
+                                aria-label="Play: The streak">
+                            <img src="../assets/bytetax/demos/12-the-streak.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:40</span>
+                        </button>
+                        <figcaption>
+                            <b>The streak</b>
+                            <span>Days, not questions. One round is enough.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-13-the-results-screen">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/13-the-results-screen.mp4"
+                                data-poster="../assets/bytetax/demos/13-the-results-screen.jpg"
+                                aria-label="Play: The results screen">
+                            <img src="../assets/bytetax/demos/13-the-results-screen.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:41</span>
+                        </button>
+                        <figcaption>
+                            <b>The results screen</b>
+                            <span>What you got right, what is coming back, and what happens next.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-14-pips-and-progress">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/14-pips-and-progress.mp4"
+                                data-poster="../assets/bytetax/demos/14-pips-and-progress.jpg"
+                                aria-label="Play: Pips and progress">
+                            <img src="../assets/bytetax/demos/14-pips-and-progress.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:46</span>
+                        </button>
+                        <figcaption>
+                            <b>Pips and progress</b>
+                            <span>One row keeps the round in view, the other keeps the course in view.</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">3 films</div>
+                    <h2>Sources, and what it is not</h2>
+                    <p>Where the answers come from, what the app is and is not, and a round played offline.</p>
+                </div>
+                <div class="bt-films">
+                    <figure class="bt-film" id="film-15-where-the-answers-come-from">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/15-where-the-answers-come-from.mp4"
+                                data-poster="../assets/bytetax/demos/15-where-the-answers-come-from.jpg"
+                                aria-label="Play: Where the answers come from">
+                            <img src="../assets/bytetax/demos/15-where-the-answers-come-from.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:38</span>
+                        </button>
+                        <figcaption>
+                            <b>Where the answers come from</b>
+                            <span>Every item carries the Inland Revenue page behind it.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-16-about-byte-tax">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/16-about-byte-tax.mp4"
+                                data-poster="../assets/bytetax/demos/16-about-byte-tax.jpg"
+                                aria-label="Play: About ByteTax">
+                            <img src="../assets/bytetax/demos/16-about-byte-tax.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:44</span>
+                        </button>
+                        <figcaption>
+                            <b>About ByteTax</b>
+                            <span>What it is, what it is not, and where the content comes from.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-17-with-no-network">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/17-with-no-network.mp4"
+                                data-poster="../assets/bytetax/demos/17-with-no-network.jpg"
+                                aria-label="Play: Playing with no network">
+                            <img src="../assets/bytetax/demos/17-with-no-network.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:51</span>
+                        </button>
+                        <figcaption>
+                            <b>Playing with no network</b>
+                            <span>A round needs nothing but the app itself.</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">13 films</div>
+                    <h2>The course, week by week</h2>
+                    <p>One film for each week of the course, each recorded on a real item from that week.</p>
+                </div>
+                <div class="bt-films">
+                    <figure class="bt-film" id="film-18-week-1-the-tax-system">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/18-week-1-the-tax-system.mp4"
+                                data-poster="../assets/bytetax/demos/18-week-1-the-tax-system.jpg"
+                                aria-label="Play: The New Zealand tax system">
+                            <img src="../assets/bytetax/demos/18-week-1-the-tax-system.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:35</span>
+                        </button>
+                        <figcaption>
+                            <b>The New Zealand tax system</b>
+                            <span>How tax is administered, how disputes work, and where avoidance rules bite.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-19-week-2-tax-residency">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/19-week-2-tax-residency.mp4"
+                                data-poster="../assets/bytetax/demos/19-week-2-tax-residency.jpg"
+                                aria-label="Play: Framework and tax residency">
+                            <img src="../assets/bytetax/demos/19-week-2-tax-residency.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:37</span>
+                        </button>
+                        <figcaption>
+                            <b>Framework and tax residency</b>
+                            <span>The charging provisions, tax years, and who counts as a New Zealand tax resident.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-20-week-3-income">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/20-week-3-income.mp4"
+                                data-poster="../assets/bytetax/demos/20-week-3-income.jpg"
+                                aria-label="Play: Income: what it is and when it lands">
+                            <img src="../assets/bytetax/demos/20-week-3-income.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:37</span>
+                        </button>
+                        <figcaption>
+                            <b>Income: what it is and when it lands</b>
+                            <span>Ordinary income, capital gains, and the rules on when income is derived.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-21-week-4-property-and-land">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/21-week-4-property-and-land.mp4"
+                                data-poster="../assets/bytetax/demos/21-week-4-property-and-land.jpg"
+                                aria-label="Play: Property and land">
+                            <img src="../assets/bytetax/demos/21-week-4-property-and-land.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:36</span>
+                        </button>
+                        <figcaption>
+                            <b>Property and land</b>
+                            <span>Rental income, the bright-line test, and the land sale rules.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-22-week-5-employment-income">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/22-week-5-employment-income.mp4"
+                                data-poster="../assets/bytetax/demos/22-week-5-employment-income.jpg"
+                                aria-label="Play: Income from employment">
+                            <img src="../assets/bytetax/demos/22-week-5-employment-income.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:30</span>
+                        </button>
+                        <figcaption>
+                            <b>Income from employment</b>
+                            <span>PAYE, tax codes, allowances, reimbursements and holiday pay.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-23-week-6-fringe-benefit-tax">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/23-week-6-fringe-benefit-tax.mp4"
+                                data-poster="../assets/bytetax/demos/23-week-6-fringe-benefit-tax.jpg"
+                                aria-label="Play: Fringe benefit tax">
+                            <img src="../assets/bytetax/demos/23-week-6-fringe-benefit-tax.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:32</span>
+                        </button>
+                        <figcaption>
+                            <b>Fringe benefit tax</b>
+                            <span>Benefits an employer provides, including the 2025 and 2026 changes.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-24-week-7-deductions">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/24-week-7-deductions.mp4"
+                                data-poster="../assets/bytetax/demos/24-week-7-deductions.jpg"
+                                aria-label="Play: Deductions">
+                            <img src="../assets/bytetax/demos/24-week-7-deductions.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:32</span>
+                        </button>
+                        <figcaption>
+                            <b>Deductions</b>
+                            <span>The general permission, the specific limits, and the capital line.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-25-week-8-stock-and-depreciation">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/25-week-8-stock-and-depreciation.mp4"
+                                data-poster="../assets/bytetax/demos/25-week-8-stock-and-depreciation.jpg"
+                                aria-label="Play: Trading stock and depreciation">
+                            <img src="../assets/bytetax/demos/25-week-8-stock-and-depreciation.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:33</span>
+                        </button>
+                        <figcaption>
+                            <b>Trading stock and depreciation</b>
+                            <span>Valuing stock at year end, and claiming depreciation over an asset's life.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-26-week-9-companies-and-imputation">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/26-week-9-companies-and-imputation.mp4"
+                                data-poster="../assets/bytetax/demos/26-week-9-companies-and-imputation.jpg"
+                                aria-label="Play: Companies and imputation">
+                            <img src="../assets/bytetax/demos/26-week-9-companies-and-imputation.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:28</span>
+                        </button>
+                        <figcaption>
+                            <b>Companies and imputation</b>
+                            <span>Company tax, dividends, and how imputation credits work.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-27-week-10-flow-through-entities">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/27-week-10-flow-through-entities.mp4"
+                                data-poster="../assets/bytetax/demos/27-week-10-flow-through-entities.jpg"
+                                aria-label="Play: Partnerships, look-through companies and trusts">
+                            <img src="../assets/bytetax/demos/27-week-10-flow-through-entities.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:38</span>
+                        </button>
+                        <figcaption>
+                            <b>Partnerships, look-through companies and trusts</b>
+                            <span>Entities that pass income through to the people behind them.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-28-week-11-gst">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/28-week-11-gst.mp4"
+                                data-poster="../assets/bytetax/demos/28-week-11-gst.jpg"
+                                aria-label="Play: Goods and services tax">
+                            <img src="../assets/bytetax/demos/28-week-11-gst.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:34</span>
+                        </button>
+                        <figcaption>
+                            <b>Goods and services tax</b>
+                            <span>Registration, charging GST, exempt and zero-rated supplies.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-29-week-12-international-tax">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/29-week-12-international-tax.mp4"
+                                data-poster="../assets/bytetax/demos/29-week-12-international-tax.jpg"
+                                aria-label="Play: International tax">
+                            <img src="../assets/bytetax/demos/29-week-12-international-tax.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:33</span>
+                        </button>
+                        <figcaption>
+                            <b>International tax</b>
+                            <span>Source rules, double tax agreements, foreign funds and tax credits.</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="bt-film" id="film-30-week-13-what-changed-recently">
+                        <button type="button" class="bt-film-play"
+                                data-src="../assets/bytetax/demos/30-week-13-what-changed-recently.mp4"
+                                data-poster="../assets/bytetax/demos/30-week-13-what-changed-recently.jpg"
+                                aria-label="Play: What changed recently">
+                            <img src="../assets/bytetax/demos/30-week-13-what-changed-recently.jpg" alt="" width="1280" height="720"
+                                 loading="lazy" decoding="async">
+                            <span class="bt-film-time">0:38</span>
+                        </button>
+                        <figcaption>
+                            <b>What changed recently</b>
+                            <span>The 2025 and 2026 changes most likely to catch someone out.</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+    // A still until it is pressed, then the film. Nothing is fetched from the
+    // network before somebody asks for it, so the page stays quick on a phone.
+    (function () {
+      var buttons = document.querySelectorAll('.bt-film-play');
+      Array.prototype.forEach.call(buttons, function (button) {
+        button.addEventListener('click', function () {
+          var figure = button.closest('.bt-film');
+          var video = document.createElement('video');
+          video.controls = true;
+          video.autoplay = true;
+          video.playsInline = true;
+          video.preload = 'metadata';
+          video.poster = button.getAttribute('data-poster');
+          video.src = button.getAttribute('data-src');
+          figure.replaceChild(video, button);
+          var started = video.play();
+          if (started && started.catch) started.catch(function () {});
+        });
+      });
+    })();
+    </script>
+
+
+    <footer id="shell-footer" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <p class="footer-brand-name">ByteMind Ltd</p>
+                    <p class="footer-brand-desc">Business analytics, digital transformation, and strategic advisory for professional services across the Asia-Pacific region.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Pages</h4>
+                    <a href="../services.html">Services</a>
+                    <a href="../indices.html">Indices</a>
+                    <a href="../insights.html">Insights</a>
+                    <a href="../reports.html">Reports</a>
+                    <a href="../about.html">About</a>
+                    <a href="../contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Products</h4>
+                    <a href="../bytebook/">ByteBook</a>
+                    <a href="../bytetax/">ByteTax</a>
+                    <a href="../byteproof.html">ByteProof</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="mailto:bytemind.nz@gmail.com">Email</a>
+                    <a href="https://www.linkedin.com/in/yuqian-michael-zhang-744530142/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/michael-zumba/bytemind-website" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 ByteMind Ltd. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+      var button = document.querySelector('.mobile-menu-btn');
+      var links = document.querySelector('.nav-links');
+      if (button && links) {
+        button.addEventListener('click', function () {
+          var open = links.classList.toggle('active');
+          button.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+      }
+    })();
+    </script>
+
+    <script>
+    // Play each clip while it is on screen, pause it when it is not, and let a
+    // click pause or restart one. With reduced motion, nothing plays by itself
+    // and the poster frame stays.
+    (function () {
+      var clips = document.querySelectorAll('video[data-demo]');
+      if (!clips.length) return;
+      var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function start(video) {
+        var playing = video.play();
+        if (playing && playing.catch) playing.catch(function () {});
+      }
+      if ('IntersectionObserver' in window && !still) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) start(entry.target);
+            else entry.target.pause();
+          });
+        }, { threshold: 0.5 });
+        Array.prototype.forEach.call(clips, function (video) { observer.observe(video); });
+      }
+      Array.prototype.forEach.call(clips, function (video) {
+        video.addEventListener('click', function () {
+          if (video.paused) start(video);
+          else video.pause();
+        });
+      });
+    })();
+    </script>
+</body>
+</html>

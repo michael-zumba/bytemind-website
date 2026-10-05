@@ -5,11 +5,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png?v=2026">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ByteBook | Bookkeeping for New Zealand businesses</title>
-    <meta name="description" content="Invoices, GST, expenses, bank import and reports, on your own computer. Twelve practice businesses already trading, and sixteen assurance checks.">
+    <meta name="description" content="Invoices, GST, expenses, bank import and reports, on your own computer. Twelve practice businesses already trading, a 23-chapter handbook, and sixteen assurance checks. Open to universities and educators for teaching.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ByteMind Ltd">
     <meta property="og:title" content="ByteBook | Bookkeeping for New Zealand businesses">
-    <meta property="og:description" content="Invoices, GST, expenses, bank import and reports, on your own computer. Twelve practice businesses already trading, and sixteen assurance checks.">
+    <meta property="og:description" content="Invoices, GST, expenses, bank import and reports, on your own computer. Twelve practice businesses already trading, a 23-chapter handbook, and sixteen assurance checks. Open to universities and educators for teaching.">
     <meta property="og:url" content="https://www.bytemind.co.nz/bytebook/">
     <meta property="og:image" content="https://www.bytemind.co.nz/assets/bytebook/bytebook-og.png">
     <meta name="twitter:card" content="summary_large_image">
@@ -89,6 +89,20 @@
       .bb-two h3 { font-family: var(--font-serif); font-size: 1.25rem; margin: 0 0 10px; color: var(--color-primary); }
       .bb-two p { margin: 0 0 10px; font-size: .97rem; }
 
+      /* Teaching: three things a course gets, then an invitation. */
+      .bb-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-10); }
+      .bb-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6); }
+      .bb-card h3 { font-family: var(--font-serif); font-size: 1.2rem; margin: 0 0 8px; color: var(--color-primary); }
+      .bb-card p { margin: 0; font-size: .95rem; color: var(--color-muted-foreground); }
+      @media (max-width: 860px) { .bb-cards { grid-template-columns: 1fr; } }
+
+      .bb-invite { margin-top: var(--space-10); padding: var(--space-12) var(--space-8); background: var(--color-primary); border-radius: var(--radius-xl); text-align: center; }
+      .bb-invite h3 { font-family: var(--font-serif); font-size: clamp(1.35rem, 2.4vw, 1.8rem); margin: 0 0 14px; color: var(--color-primary-foreground); }
+      .bb-invite p { margin: 0 auto 10px; max-width: 68ch; font-size: 1rem; color: rgba(250, 249, 243, .82); }
+      .bb-invite .bb-ctas { margin-top: var(--space-6); }
+      .bb-invite .btn-light { background: var(--color-background); color: var(--color-primary); }
+      .bb-invite .btn-light:hover { background: #fff; }
+
       /* The handbook, read here rather than described here. */
       .bb-reader { max-width: 1060px; margin: 0 auto; }
       .bb-reader-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; padding: 13px 16px; background: var(--color-card); border: 1px solid var(--color-border); border-bottom: none; border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
@@ -140,6 +154,8 @@
                 <a class="btn btn-secondary" href="manual/">Read the handbook</a>
             </div>
             <p class="bb-note">Apple Silicon, macOS 12 or newer &middot; 35 MB &middot; works offline &middot; no account, no cloud</p>
+            <p class="bb-note">Teaching accounting information systems or the software
+            process? <a class="inline-link" href="#teaching">See how ByteBook is used in courses</a>.</p>
         </section>
 
         <figure class="bb-shot bb-hero-shot">
@@ -384,8 +400,51 @@
             </div>
         </section>
 
-        <!-- 4. Accuracy -->
-        <section class="section" id="accuracy" style="background: var(--color-muted);">
+        <!-- 4. Teaching -->
+        <section class="section" id="teaching" style="background: var(--color-muted);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">Teaching</div>
+                    <h2>Built to be taught.</h2>
+                    <p>ByteBook is a teaching tool as much as a bookkeeping app. The books are
+                    real, the mistakes are real, and every rule behind the work is named.</p>
+                </div>
+
+                <div class="bb-cards">
+                    <article class="bb-card">
+                        <h3>A year of books to start from</h3>
+                        <p>Twelve New Zealand businesses, each months into trading. Students open
+                        one and start where the work already is.</p>
+                    </article>
+                    <article class="bb-card">
+                        <h3>A handbook that shows its sources</h3>
+                        <p>Twenty-three chapters, from invoices and GST to assurance and working
+                        papers. Every citation is checked against the standard it came from.</p>
+                    </article>
+                    <article class="bb-card">
+                        <h3>The software process, on screen</h3>
+                        <p>Invoices, bank statements, GST returns, reports, roles and the audit
+                        trail: the same screens a bookkeeper works in.</p>
+                    </article>
+                </div>
+
+                <div class="bb-invite">
+                    <h3>Open to New Zealand universities, educators and small businesses</h3>
+                    <p>We welcome universities and small businesses that want to use ByteBook
+                    for teaching and training. If you teach accounting information systems, or
+                    the accounting software process, we are open to licensing ByteBook for your
+                    course.</p>
+                    <p>Tell us what you want to teach and we will help you get started.</p>
+                    <div class="bb-ctas">
+                        <a class="btn btn-light" href="mailto:bytemind.nz@gmail.com?subject=ByteBook%20teaching">Get in touch about teaching</a>
+                        <a class="btn btn-outline" href="#handbook">Read the handbook</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Accuracy -->
+        <section class="section" id="accuracy">
             <div class="container">
                 <div class="section-header">
                     <div class="eyebrow">Standards</div>
@@ -414,7 +473,7 @@
             </div>
         </section>
 
-        <!-- 5. The handbook -->
+        <!-- 6. The handbook -->
         <section class="section" id="handbook">
             <div class="container">
                 <div class="section-header">
@@ -444,7 +503,7 @@
             </div>
         </section>
 
-        <!-- 6. Who it is for, and what it is not -->
+        <!-- 7. Who it is for, and what it is not -->
         <section class="section" id="who" style="background: var(--color-muted);">
             <div class="container">
                 <div class="bb-two">
@@ -453,6 +512,7 @@
                         <ul class="bb-points">
                             <li><strong>Accounting and audit firms</strong> training staff on a business that behaves like a real one.</li>
                             <li><strong>Small businesses</strong> that want their books on their own computer.</li>
+                            <li><strong>Universities and educators</strong> teaching accounting information systems or the accounting software process. <a class="inline-link" href="#teaching">Teaching with ByteBook</a>.</li>
                         </ul>
                     </div>
                     <div>
@@ -472,7 +532,8 @@
 
         <div class="cta-banner">
             <h2>Try it on a practice business</h2>
-            <p>Download it, open one of the twelve, and do a year of books.</p>
+            <p>Download it, open one of the twelve, and do a year of books. Teaching with
+            it? <a href="#teaching" style="text-decoration:underline; text-underline-offset:3px;">See teaching and licensing</a>.</p>
             <a class="btn btn-primary" href="downloads/ByteBook-2.6.2.dmg" download>Download for macOS</a>
             <a href="mailto:bytemind.nz@gmail.com?subject=ByteBook" class="btn btn-outline">Get in touch</a>
         </div>
@@ -507,6 +568,7 @@
                     <a href="manual/">Training handbook</a>
                     <a href="manual/citations.html">Standards referenced</a>
                     <a href="#businesses">Practice businesses</a>
+                    <a href="#teaching">Teaching and licensing</a>
                     <a href="#proof">Assurance checks</a>
                 </div>
                 <div class="footer-col">

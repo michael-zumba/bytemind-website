@@ -5,11 +5,11 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../../assets/logo/favicon-32.png?v=2026">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ByteBook | 新西兰企业的记账软件</title>
-    <meta name="description" content="开发票、报 GST、记费用、导入银行流水、出报表，账目都保存在你自己的电脑上。内置十二家已经有账在里面的练习企业，以及十六项审计检查。">
+    <meta name="description" content="开发票、报 GST、记费用、导入银行流水、出报表，账目都保存在你自己的电脑上。内置十二家已经有账在里面的练习企业、二十三个章节的手册，以及十六项审计检查。欢迎大学与教育机构用于教学。">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ByteMind Ltd">
     <meta property="og:title" content="ByteBook | 新西兰企业的记账软件">
-    <meta property="og:description" content="开发票、报 GST、记费用、导入银行流水、出报表，账目都保存在你自己的电脑上。内置十二家练习企业，打开就有几个月的账。">
+    <meta property="og:description" content="开发票、报 GST、记费用、导入银行流水、出报表，账目都保存在你自己的电脑上。内置十二家练习企业，打开就有几个月的账。欢迎大学与教育机构用于教学。">
     <meta property="og:url" content="https://www.bytemind.co.nz/zh/bytebook/">
     <meta property="og:image" content="https://www.bytemind.co.nz/assets/bytebook/bytebook-og.png">
     <link rel="canonical" href="https://www.bytemind.co.nz/zh/bytebook/">
@@ -63,6 +63,20 @@
       .bb-two h3 { font-family: var(--font-serif); font-size: 1.25rem; margin: 0 0 10px; color: var(--color-primary); }
       .bb-two p { margin: 0 0 10px; font-size: .97rem; }
 
+      /* 教学：课程能拿到的三样东西，然后是一段邀请。 */
+      .bb-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-10); }
+      .bb-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6); }
+      .bb-card h3 { font-family: var(--font-serif); font-size: 1.2rem; margin: 0 0 8px; color: var(--color-primary); }
+      .bb-card p { margin: 0; font-size: .95rem; color: var(--color-muted-foreground); }
+      @media (max-width: 860px) { .bb-cards { grid-template-columns: 1fr; } }
+
+      .bb-invite { margin-top: var(--space-10); padding: var(--space-12) var(--space-8); background: var(--color-primary); border-radius: var(--radius-xl); text-align: center; }
+      .bb-invite h3 { font-family: var(--font-serif); font-size: clamp(1.35rem, 2.4vw, 1.8rem); margin: 0 0 14px; color: var(--color-primary-foreground); }
+      .bb-invite p { margin: 0 auto 10px; max-width: 68ch; font-size: 1rem; color: rgba(250, 249, 243, .82); }
+      .bb-invite .bb-ctas { margin-top: var(--space-6); }
+      .bb-invite .btn-light { background: var(--color-background); color: var(--color-primary); }
+      .bb-invite .btn-light:hover { background: #fff; }
+
       .bb-reader { max-width: 1060px; margin: 0 auto; }
       .bb-reader-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; padding: 13px 16px; background: var(--color-card); border: 1px solid var(--color-border); border-bottom: none; border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
       .bb-reader-bar label { font-size: .7rem; letter-spacing: .1em; color: var(--color-muted-foreground); font-weight: 600; }
@@ -112,6 +126,7 @@
                 <a class="btn btn-secondary" href="../../bytebook/manual/">阅读手册</a>
             </div>
             <p class="bb-note">Apple 芯片，macOS 12 及以上 · 35 MB · 可离线使用 · 无需账号，不接入云端</p>
+            <p class="bb-note">在教会计信息系统或会计软件流程？<a class="inline-link" href="#teaching">看看怎么用在课程里</a>。</p>
         </section>
 
         <figure class="bb-shot bb-hero-shot">
@@ -338,7 +353,43 @@
             </div>
         </section>
 
-        <section class="section" id="accuracy" style="background: var(--color-muted);">
+        <!-- 教学 -->
+        <section class="section" id="teaching" style="background: var(--color-muted);">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">教学</div>
+                    <h2>可以拿来上课</h2>
+                    <p>ByteBook 既是记账软件，也是教学工具。账目是真的，错误是真的，工作背后的每一条规则都写明出处。</p>
+                </div>
+
+                <div class="bb-cards">
+                    <article class="bb-card">
+                        <h3>一整年的账，直接开做</h3>
+                        <p>十二家新西兰企业，每家都已经营几个月。学生打开一家，就从眼前的账开始。</p>
+                    </article>
+                    <article class="bb-card">
+                        <h3>手册写明每一条出处</h3>
+                        <p>二十三个章节，从发票、GST 到审计与工作底稿。每条引用都对照标准原文核对过。</p>
+                    </article>
+                    <article class="bb-card">
+                        <h3>软件流程，屏幕同步</h3>
+                        <p>发票、银行流水、GST 申报、报表、角色和审计线索：都是记账人员每天在用的界面。</p>
+                    </article>
+                </div>
+
+                <div class="bb-invite">
+                    <h3>欢迎新西兰的大学、教育机构和小企业</h3>
+                    <p>欢迎大学和小企业使用 ByteBook 教学或培训。如果你在讲授会计信息系统，或会计软件流程，我们愿意以授权方式支持你的课程。</p>
+                    <p>告诉我们你想教什么，我们来帮你开始。</p>
+                    <div class="bb-ctas">
+                        <a class="btn btn-light" href="mailto:bytemind.nz@gmail.com?subject=ByteBook%20teaching">联系我们讨论教学授权</a>
+                        <a class="btn btn-outline" href="#handbook">阅读手册</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="accuracy">
             <div class="container">
                 <div class="section-header">
                     <div class="eyebrow">准则</div>
@@ -400,6 +451,7 @@
                         <ul class="bb-points">
                             <li><strong>会计与审计事务所</strong>：用一家像真企业的公司培训员工。</li>
                             <li><strong>小型企业</strong>：希望账目留在自己电脑上。</li>
+                            <li><strong>大学与教育机构</strong>：讲授会计信息系统或会计软件流程。<a class="inline-link" href="#teaching">教学与授权</a>。</li>
                         </ul>
                     </div>
                     <div>
@@ -418,7 +470,7 @@
 
         <div class="cta-banner">
             <h2>拿一家练习企业试试</h2>
-            <p>下载之后打开其中一家，做一整年的账。</p>
+            <p>下载之后打开其中一家，做一整年的账。用于教学？<a href="#teaching" style="text-decoration:underline; text-underline-offset:3px;">了解教学与授权</a>。</p>
             <a class="btn btn-primary" href="../../bytebook/downloads/ByteBook-2.6.2.dmg" download>下载 macOS 版</a>
             <a href="mailto:bytemind.nz@gmail.com?subject=ByteBook" class="btn btn-outline">联系我们</a>
         </div>
@@ -453,6 +505,7 @@
                     <a href="../../bytebook/manual/">训练手册</a>
                     <a href="../../bytebook/manual/citations.html">引用与出处</a>
                     <a href="#businesses">练习企业</a>
+                    <a href="#teaching">教学与授权</a>
                     <a href="#proof">审计检查</a>
                 </div>
                 <div class="footer-col">

@@ -5,16 +5,16 @@
     <link rel="icon" type="image/png" sizes="32x32" href="../assets/logo/favicon-32.png?v=2026">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ByteBook | Bookkeeping for New Zealand businesses</title>
-    <meta name="description" content="Invoices, GST, expenses, bank import and reports, on your own computer. Twelve practice businesses already trading, a 23-chapter handbook, and sixteen assurance checks. Open to universities and educators for teaching.">
+    <meta name="description" content="Invoices, GST, expenses, bank import and reports, on your own computer. macOS and a Windows beta. Twelve practice businesses already trading, a 23-chapter handbook, and sixteen assurance checks.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="ByteMind Ltd">
     <meta property="og:title" content="ByteBook | Bookkeeping for New Zealand businesses">
-    <meta property="og:description" content="Invoices, GST, expenses, bank import and reports, on your own computer. Twelve practice businesses already trading, a 23-chapter handbook, and sixteen assurance checks. Open to universities and educators for teaching.">
+    <meta property="og:description" content="Invoices, GST, expenses, bank import and reports, on your own computer. macOS and a Windows beta. Twelve practice businesses already trading, a 23-chapter handbook, and sixteen assurance checks.">
     <meta property="og:url" content="https://www.bytemind.co.nz/bytebook/">
     <meta property="og:image" content="https://www.bytemind.co.nz/assets/bytebook/bytebook-og.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ByteBook | Bookkeeping for New Zealand businesses">
-    <meta name="twitter:description" content="Invoices, GST, expenses, bank import and reports, on your own computer.">
+    <meta name="twitter:description" content="Invoices, GST, expenses, bank import and reports, on your own computer. macOS and a Windows beta.">
     <meta name="twitter:image" content="https://www.bytemind.co.nz/assets/bytebook/bytebook-og.png">
     <link rel="canonical" href="https://www.bytemind.co.nz/bytebook/">
     <link rel="alternate" hreflang="en" href="https://www.bytemind.co.nz/bytebook/">
@@ -27,7 +27,7 @@
       "@type": "SoftwareApplication",
       "name": "ByteBook",
       "applicationCategory": "BusinessApplication",
-      "operatingSystem": "macOS",
+      "operatingSystem": "macOS 12 or newer; Windows 10 or 11, 64-bit",
       "description": "Bookkeeping for New Zealand businesses. Invoices, GST, expenses, bank import and reports, kept on the computer it runs on, with an audit trail that shows any change. Twelve practice businesses ship with the application, already trading, and sixteen assurance checks run on every visit.",
       "url": "https://www.bytemind.co.nz/bytebook/",
       "downloadUrl": "https://www.bytemind.co.nz/bytebook/downloads/ByteBook-2.6.2.dmg",
@@ -113,6 +113,17 @@
       .bb-reader-frame iframe { display: block; width: 100%; height: 660px; border: 0; background: var(--color-background); }
       @media (max-width: 700px) { .bb-reader-frame iframe { height: 520px; } }
       .bb-reader-note { margin: 14px auto 0; max-width: 62ch; font-size: .9rem; line-height: 1.6; color: var(--color-muted-foreground); text-align: center; }
+
+      /* Downloads: one card per computer, with the unsigned beta stated plainly. */
+      .bb-downloads { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); margin-top: var(--space-10); }
+      .bb-download { display: flex; flex-direction: column; align-items: flex-start; padding: var(--space-8); background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); }
+      .bb-download h3 { font-family: var(--font-serif); font-size: 1.35rem; margin: 0 0 8px; color: var(--color-primary); }
+      .bb-download p { margin: 0 0 14px; font-size: .95rem; color: var(--color-muted-foreground); }
+      .bb-download .btn { margin-top: auto; }
+      .bb-download-meta { margin-top: 12px; font-size: .82rem; color: var(--color-muted-foreground); }
+      .bb-beta { display: inline-block; margin-left: 6px; padding: 2px 8px; border-radius: 999px; background: var(--color-muted); color: var(--color-primary); font: 600 .68rem/1.5 var(--font-sans, sans-serif); letter-spacing: .06em; text-transform: uppercase; vertical-align: middle; }
+      .bb-warning { margin-top: var(--space-6); padding: var(--space-5) var(--space-6); border-left: 3px solid var(--color-primary-400); background: var(--color-primary-50); font-size: .9rem; line-height: 1.6; }
+      @media (max-width: 760px) { .bb-downloads { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -150,10 +161,11 @@
             computer. Twelve practice businesses come with it, already trading.</p>
             <div class="bb-ctas">
                 <a class="btn btn-primary" href="downloads/ByteBook-2.6.2.dmg" download>Download for macOS</a>
+                <a class="btn btn-secondary" href="#download">Windows beta</a>
                 <a class="btn btn-secondary" href="#work">See it working</a>
                 <a class="btn btn-secondary" href="manual/">Read the handbook</a>
             </div>
-            <p class="bb-note">Apple Silicon, macOS 12 or newer &middot; 35 MB &middot; works offline &middot; no account, no cloud</p>
+            <p class="bb-note">Apple Silicon or Windows 10/11 &middot; works offline &middot; no account, no cloud</p>
             <p class="bb-note">Teaching accounting information systems or the software
             process? <a class="inline-link" href="#teaching">See how ByteBook is used in courses</a>.</p>
         </section>
@@ -503,6 +515,43 @@
             </div>
         </section>
 
+        <!-- 7. Download for the computer in front of you -->
+        <section class="section" id="download">
+            <div class="container">
+                <div class="section-header">
+                    <div class="eyebrow">Install</div>
+                    <h2>Choose your computer</h2>
+                    <p>The same books, reports and audit trail. The macOS build is signed and
+                    notarized; the first Windows build is an unsigned beta.</p>
+                </div>
+                <div class="bb-downloads">
+                    <article class="bb-download">
+                        <h3>macOS</h3>
+                        <p>Apple Silicon, macOS 12 or newer. Drag ByteBook into Applications.
+                        Signed with ByteMind's Apple Developer ID and notarized by Apple.</p>
+                        <a class="btn btn-primary" href="downloads/ByteBook-2.6.2.dmg" download>Download for macOS</a>
+                        <span class="bb-download-meta">35 MB &middot; no administrator password</span>
+                    </article>
+                    <article class="bb-download">
+                        <h3>Windows <span class="bb-beta">Beta</span></h3>
+                        <p>Windows 10 version 1903 or newer, or Windows 11, on a 64-bit PC.
+                        Microsoft .NET Framework 4.8 is included with those versions.
+                        Per-user installer; no administrator rights, service or firewall change.</p>
+                        <a class="btn btn-primary" href="downloads/ByteBook-2.6.2-windows-x64-setup.exe" download>Download for Windows</a>
+                        <span class="bb-download-meta">Unsigned beta &middot; SmartScreen may ask you to confirm &middot;
+                        <a class="inline-link" href="downloads/SHA256SUMS.txt">Check the SHA-256</a></span>
+                    </article>
+                </div>
+                <div class="bb-warning">
+                    <strong>About the Windows beta.</strong> There is no Windows code-signing
+                    certificate yet, so Microsoft SmartScreen may show “Windows protected your
+                    PC”. Choose <strong>More info → Run anyway</strong> only if the SHA-256
+                    published with the installer matches the file you downloaded. Your books
+                    live in <code>%APPDATA%\ByteBook</code>, separately from the application.
+                </div>
+            </div>
+        </section>
+
         <!-- 7. Who it is for, and what it is not -->
         <section class="section" id="who" style="background: var(--color-muted);">
             <div class="container">
@@ -525,8 +574,8 @@
                     </div>
                 </div>
                 <p class="bb-note" style="text-align:center;">One SQLite file holds the books. The
-                app listens on <code>127.0.0.1</code> only, keys go in the macOS Keychain, and the
-                optional assistant is off by default.</p>
+                app listens on <code>127.0.0.1</code> only, keys stay in the macOS Keychain or a
+                protected local file on Windows, and the optional assistant is off by default.</p>
             </div>
         </section>
 
@@ -535,6 +584,7 @@
             <p>Download it, open one of the twelve, and do a year of books. Teaching with
             it? <a href="#teaching" style="text-decoration:underline; text-underline-offset:3px;">See teaching and licensing</a>.</p>
             <a class="btn btn-primary" href="downloads/ByteBook-2.6.2.dmg" download>Download for macOS</a>
+            <a class="btn btn-outline" href="downloads/ByteBook-2.6.2-windows-x64-setup.exe" download>Windows beta</a>
             <a href="mailto:bytemind.nz@gmail.com?subject=ByteBook" class="btn btn-outline">Get in touch</a>
         </div>
 

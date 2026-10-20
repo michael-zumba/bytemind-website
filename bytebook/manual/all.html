@@ -563,15 +563,22 @@
 <table>
 <thead><tr><th>Box</th><th>What it is</th></tr></thead>
 <tbody>
-<tr><td>5</td><td>Total sales and income, including GST</td></tr>
+<tr><td>5</td><td>Total sales and income from taxable supplies, including GST</td></tr>
 <tr><td>6</td><td>Zero-rated supplies included in box 5</td></tr>
+<tr><td>7</td><td>Sales subject to GST (box 5 minus box 6)</td></tr>
 <tr><td>8</td><td>GST on sales</td></tr>
-<tr><td>11</td><td>Total purchases and expenses, including GST</td></tr>
+<tr><td>9</td><td>Debit adjustments</td></tr>
+<tr><td>10</td><td>Total GST collected (box 8 plus box 9)</td></tr>
+<tr><td>11</td><td>Total purchases and expenses for GST, including capital purchases</td></tr>
 <tr><td>12</td><td>GST on purchases</td></tr>
-<tr><td>15</td><td>GST to pay, or refund due</td></tr>
+<tr><td>13</td><td>Credit adjustments</td></tr>
+<tr><td>14</td><td>Total GST credit (box 12 plus box 13)</td></tr>
+<tr><td>15</td><td>GST to pay, or refund due (box 10 minus box 14)</td></tr>
 </tbody></table>
-<p>The numbers are those on the GST101A return you file in myIR, and ByteBook labels its figures with the same numbers.</p>
-<p>Box 5 includes income that carries no GST, such as interest, because the return asks for total sales and income. Box 8 is the GST itself. Keeping those two apart is the point of the box structure, and mixing them up is the most common GST error in small-business records.</p>
+<p>If you registered part-way through a year, enter the date in <strong>Settings → Tax → Registered from</strong>. Transactions before that date are outside the GST return, and a period that ends before it is not a filing period.</p>
+<p>Selling a business asset is a taxable supply when the asset was used in the taxable activity: the proceeds go in Box 5, the sale is part of Box 7, and the GST is Box 8. It is not an "adjustment".</p>
+<p>The numbers are those on the GST101A return you file in myIR, and ByteBook shows the same boxes. Box 11 is the standard-rated side of purchases and expenses, including capital purchases; exempt, imported and settlement transactions are outside it. Boxes 9 and 13 are for adjustments, and are zero unless something like a bad debt adjustment has been entered.</p>
+<p>Box 5 covers sales and income from your taxable activity: standard-rated sales with their GST, and zero-rated sales. Exempt supplies - residential rent, interest, bank fees - are not part of the GST return at all, so they do not appear in Box 5 or Box 8. Keeping sales and the GST on them apart is the point of the box structure, and mixing them up is the most common GST error in small-business records.</p>
 <h2 id="work-out-a-period">Work out a period</h2>
 <ol>
 <li>Choose the period. ByteBook offers the cycles that match your filing frequency, and you can set any start and end date.</li>
@@ -590,7 +597,7 @@
 <p>Most small businesses can use the payments basis; larger ones cannot. The choice changes the figures in every period, and it is the reason two businesses with identical invoices can have different returns.</p>
 <p>ByteBook works the return out on the basis in your settings, and the basis is shown beside the figures. Read it before you read the numbers: a figure without its basis is a figure you cannot check, and changing the basis can move the same transactions to a different period.</p>
 <h2 id="when-a-sale-carries-no-gst">When a sale carries no GST</h2>
-<p>Not every sale is taxable. The Marine Parade Rentals practice business earns exempt rent beside taxable supplies. Exempt income appears in box 5 as income, contributes nothing to box 8, and does not entitle the business to claim GST on costs that relate to it.</p>
+<p>Not every sale is taxable. The Marine Parade Rentals practice business earns exempt rent beside taxable supplies. Exempt supplies are outside the GST return: they do not appear in box 5 or box 8, and the business cannot claim GST on costs that relate to them. Zero-rated supplies are different: they are taxable supplies at 0%, so they do appear in box 5 (and box 6) with no GST.</p>
 <p>This is where a bookkeeping exercise becomes a tax question, and it is worth being plain about the limit: ByteBook adds up what you coded. Whether rent, a particular financial service or a going concern is taxable, zero-rated or exempt is a question about the specific supply, and Inland Revenue's own guidance is the authority for it. Getting the treatment wrong is easy to do and expensive to fix.</p>
 <h2 id="a-note-on-income-tax">A note on income tax</h2>
 <p>GST is not income tax, and the two should never be mixed in your thinking. GST is a tax on the supply of goods and services, collected by the business on Inland Revenue's behalf. Income tax is a tax on profit. A GST return says nothing about whether the business made money.</p>
@@ -1521,8 +1528,8 @@
 <p><strong>Marking note:</strong> The reversal corrects the sale it belongs to. Revenue and GST both come back down, and the period it lands in is the period it happens. A candidate who treats the reversal as a new negative sale in a later period has the arithmetic right and the period wrong — and the GST reconciliation procedure will show it. The draft invoice is there to test whether "post" and "pay" are still understood as two separate events.</p>
 <h2 id="session-6-marine-parade-rentals-residential-property-exempt-income">Session 6 — Marine Parade Rentals (residential property, exempt income)</h2>
 <p><strong>In the app:</strong> Practice businesses → <strong>Residential property</strong> (the books of Marine Parade Rentals) → Start this business.</p>
-<p><strong>Task:</strong> Read the GST return for the period and explain why box 5 is larger than the taxable supplies suggest.</p>
-<p><strong>Marking note:</strong> Exempt rent is income and is not taxable. Box 5 includes it; box 8 does not. The strongest answers note that GST on costs relating to exempt supplies is not claimable in the same way, which is the trap in this exercise and the reason the business is in the set.</p>
+<p><strong>Task:</strong> Read the GST return for the period and explain where the exempt rent has gone, and what the return says about GST on the costs of the residential property.</p>
+<p><strong>Marking note:</strong> Exempt rent is income but it is outside the GST return: it is not in box 5 or box 8, and GST on costs relating to it is not claimable. The strongest answers notice that box 5 therefore holds only the commercial rent and any other taxable supplies, and that the return's purchases and credits should contain only the taxable side of the property costs. That apportionment is the trap in this exercise and the reason the business is in the set.</p>
 <h2 id="session-7-whirinaki-contracting-horticulture-six-monthly">Session 7 — Whirinaki Contracting (horticulture, six-monthly)</h2>
 <p><strong>In the app:</strong> Practice businesses → <strong>Horticulture</strong> (the books of Whirinaki Contracting) → Start this business.</p>
 <p><strong>Task:</strong> Save the six-monthly return as a snapshot and reconcile it to the ledger.</p>
@@ -1622,7 +1629,7 @@
 <h2 id="8-gst">8. GST</h2>
 <ol>
 <li>Invoice basis: the March return, because the invoice was issued in March. Payments basis: the May period, because that is when the money moved.</li>
-<li>Box 5 is total sales and income including GST; box 8 is the GST itself. Confusing them overstates the tax owed, and they are different questions.</li>
+<li>Box 5 is total sales and income from taxable supplies, including GST (standard-rated and zero-rated, but not exempt supplies); box 8 is the GST itself. Confusing them overstates the tax owed, and they are different questions.</li>
 <li>So that there is a record of what was filed, at the date it was worked out. If the ledger changes later, ByteBook can warn that the filed return no longer matches the books, and without a snapshot there is nothing to compare against.</li>
 </ol>
 <h2 id="9-reading-the-reports">9. Reading the reports</h2>

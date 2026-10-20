@@ -88,7 +88,7 @@
 <p>When money arrives, open the invoice and use the payment box. ByteBook applies the amount against the invoice, marks it paid or part-paid, and posts an entry that moves money from <em>owed to you</em> into the bank.</p>
 <p>Part payments work the same way. Record what actually arrived. If a customer short-pays because of a dispute, the balance stays on the invoice, and the debtors report keeps showing it, which is how the question gets asked.</p>
 <h2 id="what-the-aged-debtors-list-is-for">What the aged debtors list is for</h2>
-<p><strong>Reports → Outstanding</strong> lists what customers owe, grouped by how long it has been owed. It is not a statement about whether the money will arrive. It is a statement about what has been invoiced and not yet paid, and it is the starting point for two different jobs:</p>
+<p><strong>Reports → Who owes what</strong> lists what customers owe, grouped by how long it has been owed. It is not a statement about whether the money will arrive. It is a statement about what has been invoiced and not yet paid, and it is the starting point for two different jobs:</p>
 <ul>
 <li><strong>Chasing the money.</strong> ByteBook can draft a reminder letter for any unpaid invoice. The text is a starting point; the relationship is yours.</li>
 <li><strong>Judging whether the money is real.</strong> A debt that is not going to be paid is not an asset worth its face value.</li>
@@ -107,12 +107,12 @@
 </tbody></table>
 <p>Two things make this a professional judgement rather than arithmetic. The percentages have to come from somewhere — the business's own history, or industry experience — and a specific debt known to be bad is written off in full whatever the age table says.</p>
 <h2 id="what-the-auditor-asks-next">What the auditor asks next</h2>
-<p>An auditor does not take the debtors list at face value. The main procedure is <strong>external confirmation</strong>: asking the customer, directly, whether they agree that they owe the amount <a class="cite" href="citations.html#isa-nz-505-10" title="ISA (NZ) 505 External Confirmations — paragraph 10" data-cite="ISA 505.10"><span class="cite-mark">ISA (NZ) 505.10</span></a>. Where the answer raises doubt about its reliability, the auditor has to obtain further evidence to resolve it.</p>
-<p>In the simulation, the debtors procedure reports:</p>
+<p>An auditor does not take the debtors list at face value. The main procedure is <strong>external confirmation</strong>: asking the customer, directly, whether they agree that they owe the amount. Where the answer raises doubt about its reliability, the auditor has to obtain further evidence to resolve it <a class="cite" href="citations.html#isa-nz-505-10" title="ISA (NZ) 505 External Confirmations — paragraph 10" data-cite="ISA 505.10"><span class="cite-mark">ISA (NZ) 505.10</span></a>.</p>
+<p>In the practice businesses, the debtors procedure reports:</p>
 <ul>
 <li>how much is owed and how much of it is late;</li>
-<li>anyone holding a credit balance, which usually means a payment was recorded against the wrong invoice, or was recorded twice;</li>
-<li>whether the ageing is consistent with the invoice dates.</li>
+<li>any document that looks overpaid, which usually means a payment went to the wrong invoice or was recorded twice;</li>
+<li>the invoices that have been owed for more than 90 days.</li>
 </ul>
 <p>The procedure reports what it found. Whether a 90-day debt will be paid is a question for a person, and ByteBook does not pretend otherwise.</p>
 <aside class="callout callout-aside"><p class="callout-title">What the standard says</p><p>For trade receivables, the loss allowance is always measured at an amount equal to lifetime expected credit losses <a class="cite" href="citations.html#nz-ifrs-9-5-5-15" title="NZ IFRS 9 Financial Instruments — paragraph 5.5.15" data-cite="NZ IFRS 9 5.5.15"><span class="cite-mark">NZ IFRS 9.5.5.15</span></a>. The judgement is in the estimate, not in whether to make one.</p></aside>
@@ -122,6 +122,7 @@
 <li><strong>Treating a part payment as full settlement.</strong> ByteBook keeps the balance open, and that is correct.</li>
 <li><strong>Writing off a debt by deleting the invoice.</strong> ByteBook will not let you delete it, and that is also correct: the record of the sale and the record of the loss are both part of the history. Void the invoice, or post the write-off as an expense, and the trail stays readable.</li>
 <li><strong>Leaving the allowance at last year's percentage without looking.</strong> The estimate is meant to describe this year's debts.</li>
+<li><strong>Leaving a payment against the wrong invoice.</strong> Open the invoice, choose <strong>Reverse the payment</strong>, and record it against the right one. The correction stays in the record beside the mistake, and the invoice can then be voided if it should never have been raised.</li>
 </ul>
 <aside class="callout callout-check"><p class="callout-title">Check yourself</p><ol>
 <li>A customer pays $500 against a $1,200 invoice. What does the aged debtors list show, and why is that right?</li>

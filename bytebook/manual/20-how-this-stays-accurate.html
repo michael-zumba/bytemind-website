@@ -86,7 +86,7 @@
       <div class="book-body">
 <h2 id="the-problem-with-a-handbook">The problem with a handbook</h2>
 <p>Any document that quotes standards is out of date the moment a standard changes, and it is most dangerous when it is confidently out of date. A handbook that teaches last year's rule with this year's certainty is worse than no handbook.</p>
-<p>So accuracy here is not a promise. It is a build step.</p>
+<p>So accuracy here is not a promise. It is a set of checks that run every time the handbook is published.</p>
 <h2 id="where-the-documents-come-from">Where the documents come from</h2>
 <p>Every reference in this handbook points to a document that was downloaded from its publisher, stored, and fingerprinted:</p>
 <table>
@@ -98,12 +98,12 @@
 <p>Both publishers make these documents available free of charge. Neither permits their standards to be republished in full, which is why this handbook quotes short passages with attribution and links to the source rather than reproducing the text.</p>
 <h2 id="what-is-checked-and-how">What is checked, and how</h2>
 <p>Three checks run over the handbook before it is published.</p>
-<p><strong>Every reference must exist.</strong> A citation naming a standard that is not in the library stops the build. There is no path where a typo becomes a published reference to a standard that does not exist.</p>
-<p><strong>Every quoted paragraph must be found in the publisher's own text.</strong> The build reads the extracted text of the document, finds the paragraph by its number, and compares it with the words quoted here. Where the text cannot be matched, the build fails and the reference is corrected or removed rather than published.</p>
-<p><strong>Every document must still have the fingerprint we recorded.</strong> Running the library's verification fetches each document again and compares its SHA-256 with the one in the manifest. A difference means the publisher has issued a new version, and the handbook is re-checked against it before anything is republished.</p>
+<p><strong>Every reference must exist.</strong> A citation naming a standard that is not in the stored list stops publication. There is no path where a typo becomes a published reference to a standard that does not exist.</p>
+<p><strong>Every cited paragraph must exist in the publisher's own text.</strong> The check reads the extracted text of the document, finds the paragraph by the number the citation gives, and shows the opening words of that paragraph. Where the paragraph cannot be found, publication fails: a reference cannot be published pointing at something that is not there.</p>
+<p><strong>Every document must still have the fingerprint we recorded.</strong> Checking the stored documents fetches each one again and compares its SHA-256 (a unique fingerprint of the file's contents) with the one recorded when it was first downloaded. A difference means the publisher has issued a new version, and the handbook is re-checked against it before anything is republished.</p>
 <p>That third check is the one that keeps this honest over time. It cannot be argued with: either the bytes match or they do not.</p>
 <h2 id="what-you-can-check-yourself">What you can check yourself</h2>
-<p>Every citation in this handbook shows the identifier, the publisher, the address of the source document, and the fingerprint of the copy that was read. Follow the link, find the paragraph, and read it. If this handbook has misread a standard, that is how it will be found, and finding it is the point of the design.</p>
+<p>Every citation in this handbook shows the identifier, the publisher, the address of the source document, and the fingerprint of the copy that was read. You do not need to check any of it to use the handbook; it is there so that a claim can be traced if somebody wants to. Follow the link, find the paragraph, and read it. If this handbook has misread a standard, that is how it will be found, and finding it is the point of the design.</p>
 <h2 id="when-a-standard-changes">When a standard changes</h2>
 <p>Standards change in three ways, and each is handled differently.</p>
 <ul>

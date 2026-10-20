@@ -88,7 +88,7 @@
 <p>The bank statement is where the books meet the outside world. It is also where most small-business bookkeeping errors live, because coding a bank line is a judgement made quickly, hundreds of times.</p>
 <p>Get this screen right and the rest follows: the GST return falls out of the coded transactions, the reports are sums of real rows, and the reconciliation tells you whether you are finished. Get it wrong and every later figure is wrong in a way that is hard to see.</p>
 <h2 id="import">Import</h2>
-<p>Download a CSV from your internet banking, then drag it onto <strong>Bank & coding</strong> and say which account it came from. ByteBook reads the columns, works out which is the date, the description and the amount, and skips anything that has already been imported, so importing the same file twice does not double the books.</p>
+<p>Download a CSV from your internet banking, then open <strong>Bank & coding</strong>, choose <strong>Import a bank statement</strong>, pick the file and say which account it came from. ByteBook reads the columns, works out which is the date, the description and the amount, and skips anything that has already been imported, so importing the same file twice does not double the books. Two identical lines in one statement are kept as two lines: two coffees on the same day are two coffees. Only a re-import is skipped.</p>
 <p>If your bank's export looks unusual, the page offers a CSV template showing the shape ByteBook expects.</p>
 <h2 id="code-each-line">Code each line</h2>
 <p>Every imported line is a question: <em>what was this for?</em> You answer by choosing an account. ByteBook guesses from the description, and you confirm or correct it.</p>
@@ -102,8 +102,8 @@
 <h2 id="does-it-agree-with-your-bank">Does it agree with your bank?</h2>
 <p>There is a second half to the screen, and it is the one that turns coding into assurance. Enter the closing balance and the date from your bank statement, and ByteBook compares its own bank balance with the bank's figure.</p>
 <p>Two agreements matter.</p>
-<p><strong>The bank agrees.</strong> The balance ByteBook holds for the bank account equals the balance on the statement at the statement's date. If it does not, either something has not been recorded, or something has been recorded twice, or the date is wrong. This is bank reconciliation, and it is procedure A03 in <a href="13-the-assurance-procedures.html">chapter 13</a>.</p>
-<p><strong>Every line has been dealt with.</strong> The number waiting to be coded is zero, and nothing has been left in a half-finished state. A reconciliation that matches on the balance but has twenty unceded lines is not a reconciliation.</p>
+<p><strong>The bank agrees.</strong> The balance ByteBook holds for the bank account equals the balance on the statement at the statement's date. ByteBook remembers the last balance and date you entered, so check they are current: an old closing balance produces a difference that is a stale note, not a bookkeeping error. If it does not, either something has not been recorded, or something has been recorded twice, or the date is wrong. This is bank reconciliation, and it is procedure A03 in <a href="13-the-assurance-procedures.html">chapter 13</a>.</p>
+<p><strong>Every line has been dealt with.</strong> The number waiting to be coded is zero, and nothing has been left in a half-finished state. A reconciliation that matches on the balance but has twenty uncoded lines is not a reconciliation.</p>
 <h2 id="why-the-reconciliation-is-evidence">Why the reconciliation is evidence</h2>
 <p>An auditor treats a bank confirmation as strong evidence, because the answer comes from outside the business. The auditing standard on external confirmations deals with the auditor's use of a confirmation request, and requires further evidence where the reliability of a response is in doubt <a class="cite" href="citations.html#isa-nz-505-10" title="ISA (NZ) 505 External Confirmations — paragraph 10" data-cite="ISA 505.10"><span class="cite-mark">ISA (NZ) 505.10</span></a>. The statement you import is the same kind of evidence: it was produced by the bank, not by the business.</p>
 <p>That is why the reconciliation is worth doing even when the balance already looks right. It is not arithmetic housekeeping. It is the test that ties the books to something outside them.</p>
@@ -111,14 +111,14 @@
 <h2 id="common-mistakes">Common mistakes</h2>
 <ul>
 <li><strong>Coding a line to the wrong side.</strong> A payment received coded as an expense cancels the error in the total while leaving the GST and the customer balance wrong.</li>
-<li><strong>Coding GST-inclusive bank amounts as exclusive.</strong> The bank line is what left the account, GST included. ByteBook needs to know whether that figure includes GST so it can split it.</li>
+<li><strong>Choosing the wrong GST treatment for the account.</strong> The bank line is what left the account, GST included, and ByteBook always takes the GST out of that amount. What it needs from you is the account the money was really for, because that decides whether the payment carries GST at all.</li>
 <li><strong>Reconciling to the wrong date.</strong> Agree the balance at the statement's date, not at today's date.</li>
 <li><strong>Marking a business line as not business to clear the list.</strong> The waiting count goes down and the books get worse. If you are unsure, leave it waiting and find out.</li>
 </ul>
 <aside class="callout callout-check"><p class="callout-title">Check yourself</p><ol>
 <li>The reconciliation balances but eleven lines are still waiting to be coded. Is the reconciliation finished? Explain.</li>
 <li>Why is the bank statement stronger evidence than a note in the business's own diary?</li>
-<li>A bank line of $1,150 is a payment to a supplier. What else does ByteBook need to know before it can record the GST?</li>
+<li>A bank line of $1,150 is a payment to a supplier. What does ByteBook need to know before it can decide whether the payment carries GST?</li>
 </ol></aside>
       </div>
     </div>

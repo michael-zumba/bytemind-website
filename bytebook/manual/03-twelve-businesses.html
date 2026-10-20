@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The twelve businesses you can practise on | ByteBook Training Handbook | ByteMind</title>
-<meta name="description" content="Each simulation sets up a different New Zealand business, trades it, banks it and files it — then checks the books from the raw rows.">
+<meta name="description" content="Twelve New Zealand businesses, already trading, that you can open, work in and put back as they were.">
 <link rel="icon" type="image/png" sizes="32x32" href="../../assets/logo/favicon-32.png?v=2026">
 <link rel="canonical" href="https://www.bytemind.co.nz/bytebook/manual/03-twelve-businesses.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="ByteMind Ltd">
 <meta property="og:title" content="The twelve businesses you can practise on | ByteBook Training Handbook">
-<meta property="og:description" content="Each simulation sets up a different New Zealand business, trades it, banks it and files it — then checks the books from the raw rows.">
+<meta property="og:description" content="Twelve New Zealand businesses, already trading, that you can open, work in and put back as they were.">
 <meta property="og:url" content="https://www.bytemind.co.nz/bytebook/manual/03-twelve-businesses.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -81,31 +81,42 @@
         <p class="book-part">Start here</p>
         <h1>The twelve businesses you can practise on</h1>
         <p class="book-meta"><span class="book-meta-item">Chapter 3</span><span class="book-meta-item">7 min read</span></p>
-        <p class="book-summary">Each simulation sets up a different New Zealand business, trades it, banks it and files it — then checks the books from the raw rows.</p>
+        <p class="book-summary">Twelve New Zealand businesses, already trading, that you can open, work in and put back as they were.</p>
       </header>
       <div class="book-body">
-<p>The exercises in this handbook run on simulated businesses. Each one is a real shape of New Zealand business, with the tax settings and the awkward transactions that go with it.</p>
+<p>ByteBook ships with twelve practice businesses. Each one is a real shape of New Zealand business, and each one already has months of trading in its books: invoices sent and partly paid, bills to pay, a bank statement coded line by line, GST returns worked out, and reports ready to read.</p>
 <table>
-<thead><tr><th>Simulation</th><th>Business</th><th>What makes it worth practising</th></tr></thead>
+<thead><tr><th>Business</th><th>Trade</th><th>What it is there to teach</th></tr></thead>
 <tbody>
-<tr><td><code>hairdresser</code></td><td>Bright Cuts</td><td>Not registered for GST, so no GST appears anywhere on the documents</td></tr>
-<tr><td><code>consultant</code></td><td>Kōwhai Advisory</td><td>Payments-basis GST, monthly filing, one invoice paid late</td></tr>
-<tr><td><code>builder</code></td><td>Tasman Builders Ltd</td><td>Stage payments against a single contract, so one job produces several invoices</td></tr>
-<tr><td><code>cafe</code></td><td>Harbour Cafe & Co</td><td>High volume of small sales and a large daily banking pattern</td></tr>
-<tr><td><code>onlinestore</code></td><td>Loom & Light</td><td>Refunds and returns, which reverse revenue after the fact</td></tr>
-<tr><td><code>landlord</code></td><td>Marine Parade Rentals</td><td>Exempt rent beside taxable supplies, so the GST return needs care</td></tr>
-<tr><td><code>horticulture</code></td><td>Whirinaki Contracting</td><td>Six-monthly GST, so a period spans a lot of trading</td></tr>
-<tr><td><code>startup</code></td><td>Foundry Labs</td><td>No GST registration and no revenue, so the books are mostly costs</td></tr>
-<tr><td><code>dental</code></td><td>Marine Parade Dental</td><td>Security switched on, so you work with roles and passwords</td></tr>
-<tr><td><code>plumber</code></td><td>Ngata Plumbing Ltd</td><td>A busy bank statement with many lines to code</td></tr>
-<tr><td><code>wholesaler</code></td><td>Pacific Trading Ltd</td><td>Inventory bought and sold, with a six-monthly return</td></tr>
-<tr><td><code>rounding</code></td><td>Precision Engineering Ltd</td><td>Amounts chosen to break the arithmetic that rounds the wrong way</td></tr>
+<tr><td>Bright Cuts</td><td>Hairdressing</td><td>Not registered for GST, so no GST appears on any document and none is claimed back</td></tr>
+<tr><td>Kōwhai Advisory</td><td>Consulting</td><td>GST on the payments basis: the same invoice changes periods depending on when the money arrives</td></tr>
+<tr><td>Tasman Builders Ltd</td><td>Construction</td><td>Stage payments against one contract, so one job produces several invoices over months</td></tr>
+<tr><td>Harbour Cafe & Co</td><td>Hospitality</td><td>Daily takings banked in a lump, so the money in the bank is not the money rung up</td></tr>
+<tr><td>Loom & Light</td><td>Online retail</td><td>Refunds and reversals: a credit is not a deleted sale, and the record shows both</td></tr>
+<tr><td>Marine Parade Rentals</td><td>Residential property</td><td>Rent is exempt, so there is income with no GST and costs whose GST cannot be claimed</td></tr>
+<tr><td>Whirinaki Contracting</td><td>Horticulture</td><td>A six-monthly GST period, so one return covers a lot of trading</td></tr>
+<tr><td>Foundry Labs</td><td>Software</td><td>A year of costs and no income: the loss and its funding are the story</td></tr>
+<tr><td>Marine Parade Dental</td><td>Health</td><td>Roles, an accountant who may look but not touch, and an access log</td></tr>
+<tr><td>Ngata Plumbing Ltd</td><td>Trades</td><td>A busy bank statement: ten lines across eight accounts, with two payments to the same supplier</td></tr>
+<tr><td>Pacific Trading Ltd</td><td>Wholesale</td><td>Importing stock, selling it here, and a balance date that is not 31 March</td></tr>
+<tr><td>Precision Engineering Ltd</td><td>Engineering</td><td>Amounts built to break careless rounding: odd quantities, long prices, a cent that will not sit still</td></tr>
 </tbody></table>
-<p>Ask for the list at any time:</p>
-<pre><code>python scripts/simulate.py --list</code></pre>
-<h2 id="what-a-simulation-actually-does">What a simulation actually does</h2>
-<p>Running one is not a script that types transactions into the screen. It drives the real application. It sets the business up, sends its invoices, records its bills, imports a bank statement, codes the lines, files a GST period and takes a backup — through the same pages you will use.</p>
-<p>Then it goes back over what it did, reading the database directly, and checks:</p>
+<h2 id="open-one">Open one</h2>
+<ol>
+<li>In the sidebar, under <strong>Set up</strong>, choose <strong>Practice businesses</strong>.</li>
+<li>Read what each business is there to teach. Under <strong>What to try</strong> there are four things worth doing in that business.</li>
+<li>Press <strong>Start this business</strong>. ByteBook closes and opens again on that business's books, and a line at the top of every page says which business you are in.</li>
+</ol>
+<p>Your own books are never touched. A practice business is a copy kept beside them, and the line at the top of the page is how you always know which set you are looking at.</p>
+<h2 id="come-back-or-start-again">Come back, or start again</h2>
+<ul>
+<li><strong>Back to my books.</strong> The line at the top of every page has this button. It closes the practice business and opens your own books again.</li>
+<li><strong>Continue.</strong> If you have already worked in a business, the button says <strong>Continue</strong> and it picks up where you left off. Work you do in a practice business is kept.</li>
+<li><strong>Start over.</strong> This puts the business back exactly as it was, ready for the next person. You cannot start over the business you are currently in — open another one, or your own books, first.</li>
+<li><strong>Save a copy of these books.</strong> Downloads the practice business as an ordinary ByteBook file, which you can open from **Practice businesses → Open your own books from a file**.</li>
+</ul>
+<h2 id="what-is-already-true-of-all-twelve">What is already true of all twelve</h2>
+<p>Every one of these businesses is complete and internally consistent. Before they shipped, each was traded through the real application and then checked from the raw rows:</p>
 <ul>
 <li>every entry balances, so money in equals money out;</li>
 <li>every invoice's lines add up to its total;</li>
@@ -113,29 +124,27 @@
 <li>the balance sheet balances;</li>
 <li>nothing is stored off the cent;</li>
 <li>a voided entry cancels itself out;</li>
-<li>the fingerprint chain has no breaks.</li>
+<li>the fingerprint chain has no breaks;</li>
+<li>the assurance programme reports no exceptions (it may still carry notes for information).</li>
 </ul>
-<p>Every round draws different prices, dates, GST bases and filing frequencies from that round's seed, so two runs are never quite the same. Run one business in detail:</p>
-<pre><code>python scripts/simulate.py consultant</code></pre>
-<p>Or run all twelve, ten times over:</p>
-<pre><code>python scripts/simulate.py --rounds 10</code></pre>
+<p>That last point can sound odd in a training business. It is deliberate. What is waiting in these books is the ordinary work of a business — invoices past their due date, a bill still to pay, a draft invoice to finish, a bank reconciliation to check — not a planted mistake. Your job is to do the work and read the evidence, not to hunt for something the program has hidden.</p>
 <h2 id="why-this-matters-more-than-it-sounds">Why this matters more than it sounds</h2>
 <p>A rule that is easy to state is often hard to apply. <em>Inventory is measured at the lower of cost and net realisable value</em> <a class="cite" href="citations.html#nz-ias-2-9" title="NZ IAS 2 Inventories — paragraph 9" data-cite="NZ IAS 2.9"><span class="cite-mark">NZ IAS 2.9</span></a> is one sentence. Knowing when a selling price has fallen far enough that the book value has to come down is a judgement, and judgement needs practice on something that behaves like a real business.</p>
-<p>The simulations give you a business where the awkward cases are present on purpose:</p>
+<p>The awkward cases are in these books on purpose:</p>
 <ul>
 <li>a customer who pays late, so the aged debtors report has something in it;</li>
-<li>a payment made twice, which the duplicate-payment procedure should catch;</li>
+<li>two identical-looking payments to the same supplier, which you have to check are genuinely two payments (A03 lists identical lines for you to check, and A08 looks for the same amount described the same way twice in a week);</li>
 <li>a manual journal, which an auditor will ask about;</li>
-<li>a bank statement that has to be reconciled, and can be made not to agree;</li>
-<li>a period that can be closed, and then quietly tested by backdating an entry into it.</li>
+<li>a bank statement that has to be reconciled, with a closing balance that has to come from the statement rather than from the ledger;</li>
+<li>a period that can be sealed, and then checked again later.</li>
 </ul>
 <h2 id="choosing-where-to-start">Choosing where to start</h2>
-<p>If you are new to bookkeeping, start with the <code>consultant</code>. It is a small business with ordinary transactions and one late payment.</p>
-<p>If you are here for the audit side, start with the <code>plumber</code>. A busy bank statement produces more coding decisions, more opportunities to make a mistake, and a more interesting reconciliation.</p>
-<p>If you are teaching, use the <code>rounding</code> business last. It is built from the amounts that break naive rounding, and it is the one that shows why money has to be handled as decimal cents rather than as a floating-point number.</p>
+<p>If you are new to bookkeeping, start with <strong>Kōwhai Advisory</strong> (consulting). It is a small business with ordinary transactions and one late payment.</p>
+<p>If you are here for the audit side, start with <strong>Ngata Plumbing Ltd</strong> (trades). A busy bank statement produces more coding decisions, more places to make a mistake, and a more interesting reconciliation.</p>
+<p>If you are teaching, use <strong>Precision Engineering Ltd</strong> last. It is built from the amounts that break careless rounding, and it shows why money has to be kept in whole cents: a cent cannot go missing when amounts are added.</p>
 <aside class="callout callout-check"><p class="callout-title">Check yourself</p><ol>
-<li>Which simulation has no GST at all, and which one has exempt income beside taxable income?</li>
-<li>What does a simulation check after it has finished trading?</li>
+<li>Which business has no GST at all, and which one has exempt rent beside its other income?</li>
+<li>Name three things that are already consistent in every practice business.</li>
 <li>Why does a six-monthly GST cycle make for a harder exercise than a monthly one?</li>
 </ol></aside>
       </div>

@@ -89,14 +89,14 @@
 <p>ByteBook seals every entry with a <strong>SHA-256 fingerprint</strong>: a short string of characters computed from the entry's own contents — its date, its accounts, its amounts, its description. Change any of that and the fingerprint changes. There is no way to adjust an entry and keep the same fingerprint.</p>
 <p>Then it does the second, more useful thing. Each entry's fingerprint is computed <em>including the fingerprint of the entry before it</em>. This is a chain, and it has a property that a list of separate fingerprints does not: altering an entry anywhere in the middle breaks every fingerprint after it. To alter an old entry and leave no trace, you would have to recompute every entry that follows, in order, in secret. The books are a file on a disk, so that is not impossible — but it is no longer a quiet edit.</p>
 <h2 id="what-the-audit-trail-page-shows">What the Audit trail page shows</h2>
-<p>Open <strong>Audit trail</strong>. ByteBook recomputes the whole chain from the database, including the voided entries whose fingerprints do not change when they are voided, and reports:</p>
+<p>Open <strong>Audit trail</strong>. ByteBook recomputes the whole chain from the recorded entries, including the voided entries whose fingerprints do not change when they are voided, and reports:</p>
 <ul>
 <li>how many entries there are;</li>
 <li>how many verify;</li>
 <li>how many links are broken, if any;</li>
 <li>a fingerprint of the whole ledger.</li>
 </ul>
-<p>If a link is broken, the page says so, and the meaning is specific: something wrote to the database outside ByteBook. That is not a bookkeeping error. It is a statement about the record itself, and it is worth more than a page of clean ticks.</p>
+<p>If a link is broken, the page says so, and the meaning is specific: something wrote to the books outside ByteBook. That is not a bookkeeping error. It is a statement about the record itself, and it is worth more than a page of clean ticks.</p>
 <h2 id="the-chain-drawn">The chain, drawn</h2>
 <p><strong>The chain</strong> page shows the same thing at three scales, because one picture cannot answer both "is this intact?" and "what exactly is in this entry?".</p>
 <p><strong>The ribbon</strong> is the whole record on a time axis. Each mark is one day, and how tall it is tells you how many entries that day holds. Under the marks runs the chain itself — a line that is solid where the links hold and broken where they do not. Under that, each sealed period is drawn as a span across the days it covers, linked to the period before it. Everything the record has ever held is in that ribbon: it is not sampled and it is not paginated.</p>
@@ -104,7 +104,7 @@
 <p><strong>The panel beside them</strong> takes one entry apart. It shows what was hashed — the date, the reference, the description, the type, the accounts and the amounts — and the fingerprint that came out, and which entry before it points at it. Then it offers the thing a chain cannot offer on its own: <strong>Fetch the proof</strong>. That returns the handful of sibling hashes that carry this one entry up to the Merkle root of the whole ledger, and whether they arrive there.</p>
 <p>Two details are worth noticing, because they are the difference between a picture and evidence:</p>
 <ul>
-<li>The page draws only what the server recomputed from the database when you asked for it, and it does no arithmetic of its own. Even the proof is checked by the server and reported on the page.</li>
+<li>The page draws only what ByteBook recomputed from the entries when you asked for it, and it does no arithmetic of its own. Even the proof is checked by the server and reported on the page.</li>
 <li>The ribbon can be read in one glance, which matters when the answer is "no": a break is a break in the line, not a block you have to hunt for.</li>
 </ul>
 <h2 id="proving-one-entry-without-the-whole-ledger">Proving one entry without the whole ledger</h2>

@@ -91,20 +91,22 @@
 <thead><tr><th>Box</th><th>What it is</th></tr></thead>
 <tbody>
 <tr><td>5</td><td>Total sales and income, including GST</td></tr>
-<tr><td>6</td><td>Zero-rated supplies</td></tr>
-<tr><td>9</td><td>GST collected on sales</td></tr>
+<tr><td>6</td><td>Zero-rated supplies included in box 5</td></tr>
+<tr><td>8</td><td>GST on sales</td></tr>
 <tr><td>11</td><td>Total purchases and expenses, including GST</td></tr>
-<tr><td>13</td><td>GST credit on purchases</td></tr>
-<tr><td>20</td><td>GST to pay</td></tr>
+<tr><td>12</td><td>GST on purchases</td></tr>
+<tr><td>15</td><td>GST to pay, or refund due</td></tr>
 </tbody></table>
-<p>Box 5 includes income that carries no GST, such as interest, because the return asks for total sales and income. Box 9 is the GST itself. Keeping those two apart is the point of the box structure, and mixing them up is the most common GST error in small-business records.</p>
+<p>The numbers are those on the GST101A return you file in myIR, and ByteBook labels its figures with the same numbers.</p>
+<p>Box 5 includes income that carries no GST, such as interest, because the return asks for total sales and income. Box 8 is the GST itself. Keeping those two apart is the point of the box structure, and mixing them up is the most common GST error in small-business records.</p>
 <h2 id="work-out-a-period">Work out a period</h2>
 <ol>
 <li>Choose the period. ByteBook offers the cycles that match your filing frequency, and you can set any start and end date.</li>
 <li>Press <strong>Recalculate</strong>. The boxes fill in from the ledger.</li>
-<li>Read the <strong>Result</strong>: GST collected on sales less GST credits on purchases, which is box 20, the amount to pay.</li>
-<li>Reconcile the period against the ledger before you go further. The GST reconciliation procedure checks that the GST in the return is the GST in the ledger, and that the control accounts agree with what has been filed.</li>
+<li>Read the <strong>Result</strong>: GST on sales less GST on purchases, which is box 15, the amount to pay or the refund due.</li>
+<li>Check the period against the ledger before you go further. The GST reconciliation procedure (A06) checks that the GST in the return is the GST in the ledger, transaction by transaction.</li>
 <li><strong>Save this as a snapshot.</strong> The snapshot is a record of what you filed, at the date you worked it out, and it stays after the transactions move on.</li>
+<li><strong>Mark as filed</strong> once you have entered the figures in myIR. If the ledger is changed later, ByteBook warns that the filed period no longer matches what was filed.</li>
 </ol>
 <h2 id="invoice-basis-and-payments-basis">Invoice basis and payments basis</h2>
 <p>The basis you chose when you set the business up decides which transactions fall inside a period:</p>
@@ -113,23 +115,24 @@
 <li><strong>Payments basis.</strong> GST is accounted for when money actually moves. The same March invoice belongs in the period the payment arrived.</li>
 </ul>
 <p>Most small businesses can use the payments basis; larger ones cannot. The choice changes the figures in every period, and it is the reason two businesses with identical invoices can have different returns.</p>
-<p>ByteBook's footer on the GST page states which basis the return was worked out on. Read it before you read the numbers; a figure without its basis is a figure you cannot check.</p>
+<p>ByteBook works the return out on the basis in your settings, and the basis is shown beside the figures. Read it before you read the numbers: a figure without its basis is a figure you cannot check, and changing the basis can move the same transactions to a different period.</p>
 <h2 id="when-a-sale-carries-no-gst">When a sale carries no GST</h2>
-<p>Not every sale is taxable. The landlord simulation earns exempt rent beside taxable supplies. Exempt income appears in box 5 as income, contributes nothing to box 9, and does not entitle the business to claim GST on costs that relate to it.</p>
+<p>Not every sale is taxable. The Marine Parade Rentals practice business earns exempt rent beside taxable supplies. Exempt income appears in box 5 as income, contributes nothing to box 8, and does not entitle the business to claim GST on costs that relate to it.</p>
 <p>This is where a bookkeeping exercise becomes a tax question, and it is worth being plain about the limit: ByteBook adds up what you coded. Whether rent, a particular financial service or a going concern is taxable, zero-rated or exempt is a question about the specific supply, and Inland Revenue's own guidance is the authority for it. Getting the treatment wrong is easy to do and expensive to fix.</p>
 <h2 id="a-note-on-income-tax">A note on income tax</h2>
 <p>GST is not income tax, and the two should never be mixed in your thinking. GST is a tax on the supply of goods and services, collected by the business on Inland Revenue's behalf. Income tax is a tax on profit. A GST return says nothing about whether the business made money.</p>
-<p>For income tax, ByteBook prepares the working papers: <strong>Tax forms</strong> builds the IR3, IR10 and IR4 figures from the same ledger. Current tax is measured at the amount expected to be paid to the taxation authorities, using the tax rates and laws that have been enacted or substantively enacted by the reporting date <a class="cite" href="citations.html#nz-ias-12-46" title="NZ IAS 12 Income Taxes — paragraph 46" data-cite="NZ IAS 12.46"><span class="cite-mark">NZ IAS 12.46</span></a>.</p>
+<p>For income tax, ByteBook prepares the working papers: <strong>Reports → IRD working papers</strong> builds the IR3, IR10 and IR4 figures from the same ledger. Current tax is measured at the amount expected to be paid to the taxation authorities, using the tax rates and laws that have been enacted or substantively enacted by the reporting date <a class="cite" href="citations.html#nz-ias-12-46" title="NZ IAS 12 Income Taxes — paragraph 46" data-cite="NZ IAS 12.46"><span class="cite-mark">NZ IAS 12.46</span></a>.</p>
 <h2 id="common-mistakes">Common mistakes</h2>
 <ul>
 <li><strong>Filing before every bank line is coded.</strong> The return is built from transactions. A line still waiting is a transaction the return has not seen.</li>
-<li><strong>Recording a GST-inclusive figure as the GST amount.</strong> Box 9 is one-ninth of a GST-inclusive sale at 15%, and ByteBook works that split for you. Reading box 5 as though it were box 9 is the mistake to avoid.</li>
-<li><strong>Filing without saving a snapshot.</strong> Then there is no record of what was filed, and the reconciliation has nothing to compare against.</li>
+<li><strong>Recording a GST-inclusive figure as the GST amount.</strong> At 15%, the GST inside a GST-inclusive amount is three twenty-thirds of it: $15 in $115. ByteBook works that split for you. Reading box 5 as though it were box 8 is the mistake to avoid.</li>
+<li><strong>Filing without saving a snapshot.</strong> Then there is no record of what was filed, and the reconciliation has nothing to compare against. If the ledger is changed later, ByteBook warns that a filed period no longer matches its snapshot — read that warning, because the return you filed and the books you now hold disagree.</li>
+<li><strong>Filing on the wrong basis.</strong> The basis is a setting, not a rule of bookkeeping. Check the word beside the figures before signing the return.</li>
 <li><strong>Treating a refund as negative sales in the wrong period.</strong> A credit note or a refund reverses the sale it corrects, and the period it lands in matters.</li>
 </ul>
 <aside class="callout callout-check"><p class="callout-title">Check yourself</p><ol>
 <li>A sale is invoiced in March and paid in May. On the invoice basis, which return does it appear in? On the payments basis?</li>
-<li>What is the difference between box 5 and box 9, and why does the distinction matter?</li>
+<li>What is the difference between box 5 and box 8, and why does the distinction matter?</li>
 <li>Why does ByteBook ask you to save a snapshot before filing?</li>
 </ol></aside>
       </div>

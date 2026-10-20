@@ -85,7 +85,7 @@
       </header>
       <div class="book-body">
 <h2 id="one-report-one-question">One report, one question</h2>
-<p>ByteBook's reports are deliberately narrow. Each one answers a single question, and knowing which question saves a lot of time.</p>
+<p>ByteBook's main reports are deliberately narrow. Each one answers a single question, and knowing which question saves a lot of time.</p>
 <table>
 <thead><tr><th>Report</th><th>The question it answers</th></tr></thead>
 <tbody>
@@ -93,8 +93,8 @@
 <tr><td>Balance sheet</td><td>What does it own and owe, as at this date?</td></tr>
 <tr><td>Trial balance</td><td>Do the accounts add up, and does the ledger balance?</td></tr>
 <tr><td>General ledger</td><td>What happened in this account, entry by entry?</td></tr>
-<tr><td>Cash flow</td><td>Where did the money come from and go?</td></tr>
-<tr><td>Outstanding</td><td>Who owes us, and who do we owe?</td></tr>
+<tr><td>Money in and out</td><td>Where did the money come from and go?</td></tr>
+<tr><td>Who owes what</td><td>Who owes us, and who do we owe?</td></tr>
 </tbody></table>
 <h2 id="profit-and-loss">Profit and loss</h2>
 <p>Income less expenses for a period. Income is recorded excluding GST, because GST collected was never the business's money.</p>
@@ -107,17 +107,18 @@
 <h2 id="trial-balance-and-general-ledger">Trial balance and general ledger</h2>
 <p>The trial balance is every account with its balance, and the check that total debits equal total credits. It is the fastest way to find that something is wrong.</p>
 <p>The general ledger is the detail. Pick an account and see every entry that touched it, in order. When a report figure looks wrong, this is where the answer is: not in the report, which is a sum, but in the rows that were summed.</p>
-<h2 id="cash-flow">Cash flow</h2>
-<p>Profit and cash are different things, and the statement of cash flows is where the difference shows. It reports cash flows for the period classified as operating, investing and financing activities <a class="cite" href="citations.html#nz-ias-7-10" title="NZ IAS 7 Statement of Cash Flows — paragraph 10" data-cite="NZ IAS 7.10"><span class="cite-mark">NZ IAS 7.10</span></a>, and it is normally prepared using either the direct method, showing gross cash receipts and payments, or the indirect method, which starts from profit and adjusts for the movements that were not cash <a class="cite" href="citations.html#nz-ias-7-18" title="NZ IAS 7 Statement of Cash Flows — paragraph 18" data-cite="NZ IAS 7.18"><span class="cite-mark">NZ IAS 7.18</span></a>.</p>
-<p>Transactions that do not involve cash at all are excluded from the statement and disclosed separately <a class="cite" href="citations.html#nz-ias-7-43" title="NZ IAS 7 Statement of Cash Flows — paragraph 43" data-cite="NZ IAS 7.43"><span class="cite-mark">NZ IAS 7.43</span></a>. Buying a vehicle with a loan is a real transaction and no cash changes hands, which is why the statement has to say so rather than show nothing.</p>
+<h2 id="money-in-and-out">Money in and out</h2>
+<p>Profit and cash are different things, and <strong>Money in and out</strong> is where the difference starts to show. ByteBook's report lists the money that actually arrived and left each month, and the balance it leaves in the bank. That is the raw material of a cash flow statement, not the finished statement.</p>
+<p>A full statement of cash flows classifies every movement as operating, investing or financing <a class="cite" href="citations.html#nz-ias-7-10" title="NZ IAS 7 Statement of Cash Flows — paragraph 10" data-cite="NZ IAS 7.10"><span class="cite-mark">NZ IAS 7.10</span></a>, and is prepared using either the direct method or the indirect method <a class="cite" href="citations.html#nz-ias-7-18" title="NZ IAS 7 Statement of Cash Flows — paragraph 18" data-cite="NZ IAS 7.18"><span class="cite-mark">NZ IAS 7.18</span></a>. Transactions that involve no cash are left out of it and disclosed separately <a class="cite" href="citations.html#nz-ias-7-43" title="NZ IAS 7 Statement of Cash Flows — paragraph 43" data-cite="NZ IAS 7.43"><span class="cite-mark">NZ IAS 7.43</span></a>. A vehicle bought with a loan is the classic example: a real transaction, no cash, so it has to be disclosed rather than shown as a payment.</p>
+<p>ByteBook does not build that classified statement. For a small business, the "money in and out" list plus the profit and loss and balance sheet is usually enough to answer the question. Where a full statement is needed — a lender, a sale, a formal set of financial statements — the classification is done from these reports.</p>
 <h2 id="checking-a-report-rather-than-trusting-it">Checking a report rather than trusting it</h2>
-<p>Every report in ByteBook is a sum of the entries in the ledger. The final assurance procedure, A14, goes further: it recalculates the reports from the raw rows and compares the answer with what the page says.</p>
+<p>Every report in ByteBook is a sum of the entries in the ledger. The final assurance procedure, A14, goes further: it rebuilds the trial balance from the raw rows, checks debits equal credits, and recomputes the balance-sheet difference that the page reports.</p>
 <p>This check exists because there are two different ways for a number to be wrong. The books can be wrong — a transaction coded to the wrong account — and the report can be wrong, through a defect in the program that builds it. The first is a bookkeeping problem; the second is a reporting problem, and no amount of careful coding will fix it.</p>
 <blockquote><p>A figure you cannot reproduce from the rows underneath it is not yet evidence.</p></blockquote>
 <aside class="callout callout-check"><p class="callout-title">Check yourself</p><ol>
 <li>Why is income in the profit and loss report shown excluding GST?</li>
 <li>ByteBook's balance sheet states the difference between assets and liabilities plus equity. Why show a figure that should always be zero?</li>
-<li>A vehicle is bought with a bank loan. What appears in the statement of cash flows, and why?</li>
+<li>A vehicle is bought with a bank loan. What appears in <strong>Money in and out</strong>, and why?</li>
 </ol></aside>
       </div>
     </div>

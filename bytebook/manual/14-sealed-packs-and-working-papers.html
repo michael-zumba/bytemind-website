@@ -97,8 +97,8 @@
 <ol>
 <li><strong>Work the period.</strong> Invoice, code the bank, file GST.</li>
 <li><strong>Check it.</strong> Run the assurance procedures; deal with what they found.</li>
-<li><strong>Seal it.</strong> ByteBook records the pack and its fingerprint.</li>
-<li><strong>Later, verify it.</strong> The fingerprint is recomputed from the ledger as it is now. Match or no match, with no discretion in between.</li>
+<li><strong>Seal it.</strong> Open <strong>Audit trail → Sealed packs</strong>, choose the period and press <strong>Seal this period</strong>. ByteBook records the pack and its fingerprint.</li>
+<li><strong>Later, verify it.</strong> Reopen the pack and check it. The fingerprint is recomputed from the entries as they are now. Match or no match, with no discretion in between.</li>
 <li><strong>If it fails, find out why.</strong> In a training exercise the cause is usually a backdated entry, and finding it is the exercise.</li>
 </ol>
 <h2 id="working-papers">Working papers</h2>
@@ -111,9 +111,9 @@
 <p>This is ISA 230.8 applied to a small business: documentation sufficient for an experienced auditor with no previous connection to the engagement to understand what was done, what the results were, and what was concluded.</p>
 <h2 id="assembling-the-file">Assembling the file</h2>
 <p>There is a finishing step, and it has a deadline. The auditor assembles the documentation into an audit file and completes the administrative process of assembling the final audit file on a timely basis after the date of the auditor's report <a class="cite" href="citations.html#isa-nz-230-14" title="ISA (NZ) 230 Audit Documentation — paragraph 14" data-cite="ISA 230.14"><span class="cite-mark">ISA (NZ) 230.14</span></a>. Where there is a legal or regulatory deadline to complete the assembly, the standard's own period applies.</p>
-<p>In ByteBook the equivalent is short: run the procedures, download the working papers, seal the period, record a checkpoint, take a backup, and put the pack's fingerprint in the file. The fingerprint is one line, and it is what lets a reader verify the period years later without re-reading everything.</p>
+<p>In ByteBook the equivalent is short: run the procedures, download the working papers (the CSV button on each procedure), seal the period, record a checkpoint (<strong>Audit trail → Checkpoints → Check the record now</strong>), take a backup, and put the pack's fingerprint in the file. The fingerprint is one line, and it is what lets a reader verify the period years later without re-reading everything.</p>
 <h2 id="handing-the-record-to-somebody-outside">Handing the record to somebody outside</h2>
-<p>An external auditor is usually given a PDF and a set of CSVs, and then has to take the numbers on trust. <strong>Audit trail → Hand it over</strong> produces the alternative: one folder, or one zip, containing the record itself and a script that checks it.</p>
+<p>An external auditor is usually given a PDF and a set of CSVs, and then has to take the numbers on trust. <strong>Audit trail → Hand it over</strong> produces the alternative: one folder, or one zip, containing the record itself and a small checker that tests it. In the training exercises, the same checks are on the <strong>Audit trail</strong> and <strong>The chain</strong> pages; running <code>verify.py</code> is the receiving auditor's job, not the learner's.</p>
 <table>
 <thead><tr><th>In the bundle</th><th>What it is</th></tr></thead>
 <tbody>
@@ -126,9 +126,9 @@
 <tr><td><code>verify.py</code></td><td>the script that checks all of the above</td></tr>
 <tr><td><code>README.txt</code></td><td>what the folder is, in words</td></tr>
 </tbody></table>
-<p>The auditor unpacks the folder and runs:</p>
+<p>The auditor unpacks the folder and runs one small checker, <code>verify.py</code> (a reader who wants to repeat the checks inside ByteBook can use <strong>Audit trail → The chain → Fetch the proof</strong> instead):</p>
 <pre><code>python3 verify.py</code></pre>
-<p>That needs Python 3.8 or later and nothing else. No ByteBook, no internet, no account. The script recomputes every entry fingerprint from the recorded fields, walks the chain, rebuilds the Merkle root, reproduces each sealed pack, checks the chain of checkpoints, and reads the receipts back against the entries. Then it prints <strong>PASS</strong> or <strong>FAIL</strong>, with the reason for anything it could not reproduce.</p>
+<p>Python is a free program; if it is installed, that is all the checker needs. No ByteBook, no internet, no account. The script recomputes every entry fingerprint from the recorded fields, walks the chain, rebuilds the Merkle root, reproduces each sealed pack, checks the chain of checkpoints, and reads the receipts back against the entries. Then it prints <strong>PASS</strong> or <strong>FAIL</strong>, with the reason for anything it could not reproduce.</p>
 <p>Three things about it are deliberate.</p>
 <p><strong>It reports, it does not judge.</strong> If the chain is broken, the bundle still exports and says so on its first page. An export that hid a broken chain would be the one failure that matters.</p>
 <p><strong>It is checkable years later.</strong> The bundle does not need this program, or this version of it, to be understood. The script is a page of plain Python that a reader can read before running.</p>
@@ -144,7 +144,8 @@
 <li><code>/packs</code>, <code>/checkpoints</code> — what was sealed and what was witnessed</li>
 <li><code>/procedures</code>, <code>/working-paper/{code}</code> — the programme and its papers</li>
 <li><code>/bundle</code> — the whole folder, as a zip</li>
-<li><code>/access-log</code> — who read what, including the attempts that were refused</li>
+<li><code>/tokens</code>, <code>/access-log</code> — which keys exist, and who read what, including the attempts that were refused</li>
+<li><code>/help</code> — the list itself, for a tool that wants to discover it</li>
 </ul>
 <p>Four properties make this something an organisation can actually hand out.</p>
 <ol>
@@ -167,7 +168,7 @@
 <li>An entry is backdated into a period that was sealed last month. What fails, and when is it detected?</li>
 <li>Why does a void inside a sealed period fail the verification, when the void is a legitimate correction?</li>
 <li>Name two claims ByteBook can test and two it cannot.</li>
-<li>An auditor is given a bundle and runs <code>verify.py</code>. It prints PASS. Name three things that does not tell them.</li>
+<li>An auditor is given a bundle and the checker prints PASS. Name three things that does not tell them.</li>
 <li>Why does keeping a receipt matter more than recording a checkpoint?</li>
 </ol></aside>
       </div>

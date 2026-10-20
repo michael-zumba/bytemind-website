@@ -86,20 +86,20 @@
       <div class="book-body">
 <h2 id="1-what-bytebook-is">1. What ByteBook is</h2>
 <ol>
-<li>In one SQLite file on the computer it runs on — `~/Library/Application Support/ByteBook/` for the desktop application. A mistake is voided, not deleted: the original and its mirror image both stay in the record.</li>
+<li>In one database file on the computer it runs on — <code>~/Library/Application Support/ByteBook/</code> on a Mac, <code>%APPDATA%\ByteBook\</code> on Windows. A mistake is voided, not deleted: the original and its mirror image both stay in the record.</li>
 <li>Any three of: a GST return built from the transactions; a bank reconciliation against an outside document; an audit trail that detects a changed entry; an invoice and its ledger entry staying in step; ledger integrity that can be re-verified.</li>
 <li>The External Reporting Board (XRB), and the IAASB published by IFAC.</li>
 </ol>
 <h2 id="2-set-up-a-training-business">2. Set up a training business</h2>
 <ol>
-<li>So that nobody can hand out a login and lock the owner out of their own books. Every role that exists was created by someone with the highest level of access.</li>
-<li>In <code>~/Library/Application Support/ByteBook/</code> on the desktop application, beside a <code>backups</code> folder holding the last thirty copies.</li>
-<li><em>Everyday</em> and <em>Understand</em>.</li>
+<li>So that nobody can hand out a login and lock the owner out of their own books. ByteBook requires the owner to have set a password before another sign-in can be switched on, and only the owner can open the security settings.</li>
+<li>In <code>~/Library/Application Support/ByteBook/</code> on a Mac, or <code>%APPDATA%\ByteBook\</code> on Windows, beside a <code>backups</code> folder holding the last thirty copies.</li>
+<li><em>Understand</em> is for reading what the business did; <em>Set up</em> is for changing how it is configured.</li>
 </ol>
 <h2 id="3-the-twelve-businesses">3. The twelve businesses</h2>
 <ol>
-<li><code>hairdresser</code> has no GST. <code>landlord</code> has exempt rent beside taxable supplies.</li>
-<li>Every entry balances, every invoice adds up, the GST in the return equals the GST in the ledger, the balance sheet balances, nothing is off the cent, a void cancels itself out, and the fingerprint chain has no breaks.</li>
+<li>Bright Cuts has no GST. Marine Parade Rentals has exempt rent beside taxable supplies.</li>
+<li>Any three of: every entry balances; every invoice's lines add up to its total; the GST in the return equals the GST in the ledger; the balance sheet balances; nothing is stored off the cent; a void cancels itself out; the fingerprint chain has no breaks; the assurance programme reports no exceptions (it may still carry notes for information).</li>
 <li>More transactions fall inside one return, so a single misfiled or miscoded transaction distorts the whole period, and the reconciliation has more to prove.</li>
 </ol>
 <h2 id="4-invoices">4. Invoices</h2>
@@ -118,25 +118,25 @@
 <ol>
 <li>February, because that is when the service was consumed. The date the money left the bank does not decide when the expense belongs.</li>
 <li>A change in estimate is recognised prospectively, in this period and future ones. A material prior period error is corrected retrospectively.</li>
-<li>Whether it was an expense at all, or an asset. Above about $1,000, and with a round number and a vague description, all three flags are up.</li>
+<li>Whether it was an expense at all, or an asset. Above about $1,000 the procedure lists it and marks the round number; whether the description is vague, or the cost looks personal, is for you to notice when you read the entry.</li>
 </ol>
 <h2 id="7-the-bank-statement">7. The bank statement</h2>
 <ol>
 <li>No. The balance may agree while part of the period is unrecorded, so the reconciliation is incomplete even though the arithmetic works.</li>
 <li>It was produced by the bank rather than by the business, so it is independent of the records it is being used to check.</li>
-<li>Whether the $1,150 includes GST, so the GST can be split correctly. The bank line is the cash that moved, GST included.</li>
+<li>Which account the payment was for. The bank line is the cash that moved, GST included, and ByteBook takes any GST out of that amount; the account's own GST treatment decides whether there is any GST in it to take out.</li>
 </ol>
 <h2 id="8-gst">8. GST</h2>
 <ol>
 <li>Invoice basis: the March return, because the invoice was issued in March. Payments basis: the May period, because that is when the money moved.</li>
-<li>Box 5 is total sales and income including GST; box 9 is the GST itself. Confusing them overstates the tax owed, and they are different questions.</li>
-<li>So that there is a record of what was filed, at the date it was worked out. The GST reconciliation procedure compares the filed figures with the ledger, and without a snapshot there is nothing to compare against.</li>
+<li>Box 5 is total sales and income including GST; box 8 is the GST itself. Confusing them overstates the tax owed, and they are different questions.</li>
+<li>So that there is a record of what was filed, at the date it was worked out. If the ledger changes later, ByteBook can warn that the filed return no longer matches the books, and without a snapshot there is nothing to compare against.</li>
 </ol>
 <h2 id="9-reading-the-reports">9. Reading the reports</h2>
 <ol>
 <li>Because GST collected was never the business's income; it is held on behalf of Inland Revenue until the return is filed.</li>
 <li>Because a figure that should be zero is the fastest way to see that something is wrong. Stating a difference rather than hiding it turns a silent failure into a visible one.</li>
-<li>Nothing appears in the cash flow statement for the purchase, because no cash moved. The transaction is disclosed separately, which is what the standard requires for non-cash investing and financing transactions.</li>
+<li>Nothing appears in <strong>Money in and out</strong> for the purchase, because no cash moved. In a full statement of cash flows the purchase would be disclosed separately as a non-cash investing and financing transaction.</li>
 </ol>
 <h2 id="10-closing-a-period">10. Closing a period</h2>
 <ol>

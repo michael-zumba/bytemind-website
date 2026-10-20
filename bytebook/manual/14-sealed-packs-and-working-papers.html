@@ -126,7 +126,7 @@
 <tr><td><code>verify.py</code></td><td>the script that checks all of the above</td></tr>
 <tr><td><code>README.txt</code></td><td>what the folder is, in words</td></tr>
 </tbody></table>
-<p>The auditor unpacks the folder and runs one small checker, <code>verify.py</code> (a reader who wants to repeat the checks inside ByteBook can use <strong>Audit trail → The chain → Fetch the proof</strong> instead):</p>
+<p>The auditor unpacks the folder and runs one small checker, <code>verify.py</code> (a reader who wants to repeat the checks inside ByteBook can use <strong>The chain → Check the record</strong> instead):</p>
 <pre><code>python3 verify.py</code></pre>
 <p>Python is a free program; if it is installed, that is all the checker needs. No ByteBook, no internet, no account. The script recomputes every entry fingerprint from the recorded fields, walks the chain, rebuilds the Merkle root, reproduces each sealed pack, checks the chain of checkpoints, and reads the receipts back against the entries. Then it prints <strong>PASS</strong> or <strong>FAIL</strong>, with the reason for anything it could not reproduce.</p>
 <p>Three things about it are deliberate.</p>

@@ -1,13 +1,13 @@
 {
   "app": "ByteBook",
   "channel": "official",
-  "version": "2.6.5",
-  "release_date": "2026-10-20",
-  "release_notes": "What four full financial years found. Four mock companies were run through the application for a complete year each: a café, a builder, an online retailer and a rental business, covering invoice and payments basis GST, monthly, two-monthly and six-monthly filing, exports, exempt rents, capital purchases, loans, refunds, bad debts and year-end reporting. The books were then audited independently - once by an external auditor, once as an Inland Revenue GST review - and the application was attacked with hostile inputs. The fixes below are what those exercises found. The GST working papers now match the GST101A return. …",
+  "version": "2.6.6",
+  "release_date": "2026-10-22",
+  "release_notes": "A technical-review round, not a feature release. An architecture review, an accounting review and an application-security review were run against 2.6.5, and the faults they could reproduce were fixed. This is the beta build of that round. Double clicks no longer corrupt the books. Posting, paying, voiding, reversing, bank coding, bank matching and recording a checkpoint are serialised in one server process. The database also refuses a second ledger entry for the same invoice or bill and a second reversal of the same entry. A second ByteBook process cannot open the same data directory (the packaged entrypoint and the application lifespan both hold the lock). …",
   "sha256": {
-    "macos_apple_silicon_url": "8dfa113192d29d95647da82e35af54be59895ca9b45ab81eabb344e09f6d4515"
+    "macos_apple_silicon_url": "181e84df92de8d0260740baf580eb89b579cd5f449cdb5aed81070065ef9bf60"
   },
   "minimum_system": "12.0",
-  "macos_apple_silicon_url": "https://www.bytemind.co.nz/bytebook/downloads/ByteBook-2.6.5.dmg",
-  "size_bytes": 35893670
+  "macos_apple_silicon_url": "https://www.bytemind.co.nz/bytebook/downloads/ByteBook-2.6.6.dmg",
+  "size_bytes": 35905048
 }

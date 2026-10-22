@@ -1,13 +1,13 @@
 {
   "app": "ByteBook",
   "channel": "official",
-  "version": "2.6.6",
+  "version": "2.6.7",
   "release_date": "2026-10-22",
-  "release_notes": "A technical-review round, not a feature release. An architecture review, an accounting review and an application-security review were run against 2.6.5, and the faults they could reproduce were fixed. This is the beta build of that round. Double clicks no longer corrupt the books. Posting, paying, voiding, reversing, bank coding, bank matching and recording a checkpoint are serialised in one server process. The database also refuses a second ledger entry for the same invoice or bill and a second reversal of the same entry. A second ByteBook process cannot open the same data directory (the packaged entrypoint and the application lifespan both hold the lock). …",
+  "release_notes": "Windows hotfix. The 2.6.6 Windows window tried to show its loading page before the WebView2 control had been initialised, which produced \"The instance of CoreWebView2 is uninitialized\" and then wrongly suggested the runtime was missing. The window now initialises first; the installer also installs Microsoft's Edge WebView2 Runtime when a PC does not have it, and if neither the runtime nor the installer can run, ByteBook opens the same books in the default browser instead of a dead window. The macOS build is 2.6.6 plus this version number; no macOS code changed.",
   "sha256": {
-    "macos_apple_silicon_url": "181e84df92de8d0260740baf580eb89b579cd5f449cdb5aed81070065ef9bf60"
+    "macos_apple_silicon_url": "1e635fbc629b5b35f053c405f8a588cda4a1f4a7a30e2db8f53ccbd585054c87"
   },
   "minimum_system": "12.0",
-  "macos_apple_silicon_url": "https://www.bytemind.co.nz/bytebook/downloads/ByteBook-2.6.6.dmg",
-  "size_bytes": 35905048
+  "macos_apple_silicon_url": "https://www.bytemind.co.nz/bytebook/downloads/ByteBook-2.6.7.dmg",
+  "size_bytes": 35904421
 }

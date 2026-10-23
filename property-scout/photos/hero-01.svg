@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="skyGrad-dawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DFE5DA"/><stop offset="1" stop-color="#F6E5C7"/>
+    </linearGradient>
+    <linearGradient id="seaGrad-dawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9DB5AE"/><stop offset="1" stop-color="#7FA09B"/>
+    </linearGradient>
+    <linearGradient id="wallGrad-dawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F3ECDD"/><stop offset="1" stop-color="#E2D6BE"/>
+    </linearGradient>
+    <linearGradient id="shade-dawn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#34413C" stop-opacity="0.32"/><stop offset="1" stop-color="#34413C" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glass-dawn" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4EFE0" stop-opacity="0.22"/><stop offset="0.5" stop-color="#2B3B38" stop-opacity="0"/><stop offset="1" stop-color="#0F1917" stop-opacity="0.28"/>
+    </linearGradient>
+    <linearGradient id="haze-dawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F2E7D3" stop-opacity="0"/><stop offset="0.5" stop-color="#F2E7D3" stop-opacity="0.85"/><stop offset="1" stop-color="#F2E7D3" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hazeBottom-dawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F2E7D3" stop-opacity="0"/><stop offset="0.75" stop-color="#F2E7D3" stop-opacity="0.05"/><stop offset="1" stop-color="#34413C" stop-opacity="0.2"/>
+    </linearGradient>
+    
+    <filter id="grain-0" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="0" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.055"/></feComponentTransfer>
+    </filter>
+    <radialGradient id="vignette-0" cx="0.5" cy="0.45" r="0.75">
+      <stop offset="0.55" stop-color="#101614" stop-opacity="0"/><stop offset="1" stop-color="#101614" stop-opacity="0.22"/>
+    </radialGradient>
+  </defs>
+  
+      <rect x="0" y="0" width="1200" height="800" fill="url(#skyGrad-dawn)"/>
+      <circle cx="399" cy="178" r="150" fill="#F4D9A7" opacity="0.35"/>
+      <circle cx="399" cy="178" r="58" fill="#E7B96F" opacity="0.9"/>
+      
+    <path d="M0 348 C 90 316 190 322 268 336 C 330 347 380 352 420 352 L420 372 L0 372 Z" fill="#7B8B6E" opacity="0.55"/>
+    <path d="M820 352 C 890 328 995 314 1090 322 C 1145 326 1180 334 1200 340 L1200 372 L820 372 Z" fill="#7B8B6E" opacity="0.62"/>
+    <rect x="0" y="330" width="1200" height="34" fill="url(#haze-dawn)"/>
+      
+    <rect x="0" y="352" width="1200" height="448" fill="url(#seaGrad-dawn)"/>
+    <rect x="60" y="364" width="90" height="1.6" fill="#F6EEDC" opacity="0.1"/><rect x="197" y="379" width="161" height="1.6" fill="#F6EEDC" opacity="0.14500000000000002"/><rect x="334" y="394" width="232" height="1.6" fill="#F6EEDC" opacity="0.19"/><rect x="471" y="400" width="303" height="1.6" fill="#F6EEDC" opacity="0.23500000000000001"/><rect x="608" y="415" width="154" height="1.6" fill="#F6EEDC" opacity="0.1"/><rect x="745" y="430" width="225" height="1.6" fill="#F6EEDC" opacity="0.14500000000000002"/><rect x="882" y="436" width="296" height="1.6" fill="#F6EEDC" opacity="0.19"/><rect x="119" y="451" width="147" height="1.6" fill="#F6EEDC" opacity="0.23500000000000001"/><rect x="256" y="466" width="218" height="1.6" fill="#F6EEDC" opacity="0.1"/><rect x="393" y="472" width="289" height="1.6" fill="#F6EEDC" opacity="0.14500000000000002"/><rect x="530" y="487" width="140" height="1.6" fill="#F6EEDC" opacity="0.19"/><rect x="667" y="502" width="211" height="1.6" fill="#F6EEDC" opacity="0.23500000000000001"/><rect x="804" y="508" width="282" height="1.6" fill="#F6EEDC" opacity="0.1"/><rect x="941" y="523" width="133" height="1.6" fill="#F6EEDC" opacity="0.14500000000000002"/>
+    <path d="M0 372 Q 220 360 420 374 T 1200 366 L1200 392 L0 392 Z" fill="#9DB5AE" opacity="0.35"/>
+      <rect x="0" y="560" width="1200" height="240" fill="#7B8B6E"/>
+      <rect x="0" y="556" width="1200" height="26" fill="#DCCCA9" opacity="0.9"/>
+      <path d="M0 600 C 200 580 340 606 520 596 T 900 604 T 1200 590 L1200 800 L0 800 Z" fill="#7B8B6E" opacity="0.75"/>
+      
+    <rect x="117.3" y="580.0" width="7.5" height="42.5" fill="#4A4136"/>
+    <circle cx="116.7" cy="563.5" r="18.0" fill="#4C6353"/><circle cx="132.5" cy="574.6" r="19.2" fill="#4C6353"/><circle cx="121.0" cy="571.9" r="17.0" fill="#6E8268"/><circle cx="111.1" cy="572.2" r="29.5" fill="#6E8268"/><circle cx="112.8" cy="580.0" r="21.2" fill="#6E8268"/>
+      
+    <rect x="984.6" y="577.6" width="8.7" height="49.3" fill="#4A4136"/>
+    <circle cx="968.4" cy="577.8" r="34.9" fill="#4C6353"/><circle cx="986.4" cy="583.6" r="26.6" fill="#4C6353"/><circle cx="1004.8" cy="552.2" r="25.5" fill="#4C6353"/><circle cx="980.6" cy="555.2" r="19.4" fill="#6E8268"/><circle cx="1001.8" cy="573.7" r="34.0" fill="#4C6353"/>
+      
+    <g transform="translate(560 572) scale(1.0244728990411387)">
+      <rect x="-190" y="0" width="380" height="14" fill="#E2D6BE"/>
+      <rect x="-170" y="-120" width="210" height="120" fill="#F3ECDD"/>
+      <rect x="-170" y="-120" width="210" height="120" fill="url(#shade-dawn)" opacity="0.25"/>
+      <path d="M-186 -118 L-65 -196 L56 -118 Z" fill="#34413C"/>
+      <path d="M-186 -118 L-65 -196 L-48 -196 L-160 -118 Z" fill="#1F2A27" opacity="0.25"/>
+      <rect x="-135" y="-78" width="46" height="52" fill="#2E3E3A"/>
+      <rect x="-135" y="-78" width="46" height="52" fill="url(#glass-dawn)"/>
+      <rect x="-78" y="-78" width="46" height="52" fill="#2E3E3A"/>
+      <rect x="-78" y="-78" width="46" height="52" fill="url(#glass-dawn)"/>
+      <rect x="-32" y="-96" width="58" height="96" fill="#E2D6BE"/>
+      <rect x="-26" y="-88" width="46" height="88" fill="#2E3E3A"/>
+      <rect x="-26" y="-88" width="46" height="88" fill="url(#glass-dawn)"/>
+      <rect x="60" y="-96" width="130" height="96" fill="#F3ECDD"/>
+      <path d="M46 -96 L116 -150 L188 -96 Z" fill="#34413C"/>
+      <rect x="76" y="-70" width="40" height="44" fill="#2E3E3A"/>
+      <rect x="76" y="-70" width="40" height="44" fill="url(#glass-dawn)"/>
+      <rect x="130" y="-70" width="40" height="44" fill="#2E3E3A"/>
+      <rect x="130" y="-70" width="40" height="44" fill="url(#glass-dawn)"/>
+      <rect x="-200" y="-14" width="400" height="8" fill="#34413C" opacity="0.65"/>
+      <rect x="-196" y="6" width="392" height="10" fill="#DCCCA9"/>
+      <rect x="-210" y="16" width="420" height="6" fill="#7B8B6E" opacity="0.35"/>
+    </g>
+      <rect x="0" y="0" width="1200" height="800" fill="url(#hazeBottom-dawn)"/>
+      <path d="M0 690 C 280 672 520 700 780 686 T 1200 692 L1200 800 L0 800 Z" fill="#4C6353" opacity="0.22"/>
+  <rect x="0" y="0" width="1200" height="800" fill="url(#vignette-0)"/>
+  <rect x="0" y="0" width="1200" height="800" filter="url(#grain-0)" opacity="0.5"/>
+</svg>

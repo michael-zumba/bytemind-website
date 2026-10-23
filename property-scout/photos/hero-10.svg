@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">
+  <defs>
+    <linearGradient id="skyGrad-morning" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D5E5E0"/><stop offset="1" stop-color="#F5F0E3"/>
+    </linearGradient>
+    <linearGradient id="seaGrad-morning" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8FB2AC"/><stop offset="1" stop-color="#6D948F"/>
+    </linearGradient>
+    <linearGradient id="wallGrad-morning" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F6F1E5"/><stop offset="1" stop-color="#E4DBC8"/>
+    </linearGradient>
+    <linearGradient id="shade-morning" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2E3A36" stop-opacity="0.32"/><stop offset="1" stop-color="#2E3A36" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glass-morning" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F4EFE0" stop-opacity="0.22"/><stop offset="0.5" stop-color="#2B3B38" stop-opacity="0"/><stop offset="1" stop-color="#0F1917" stop-opacity="0.28"/>
+    </linearGradient>
+    <linearGradient id="haze-morning" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EFEDE0" stop-opacity="0"/><stop offset="0.5" stop-color="#EFEDE0" stop-opacity="0.85"/><stop offset="1" stop-color="#EFEDE0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hazeBottom-morning" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EFEDE0" stop-opacity="0"/><stop offset="0.75" stop-color="#EFEDE0" stop-opacity="0.05"/><stop offset="1" stop-color="#2E3A36" stop-opacity="0.2"/>
+    </linearGradient>
+    
+    <filter id="grain-9" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="9" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.055"/></feComponentTransfer>
+    </filter>
+    <radialGradient id="vignette-9" cx="0.5" cy="0.45" r="0.75">
+      <stop offset="0.55" stop-color="#101614" stop-opacity="0"/><stop offset="1" stop-color="#101614" stop-opacity="0.22"/>
+    </radialGradient>
+  </defs>
+  
+      <rect x="0" y="0" width="1200" height="800" fill="url(#skyGrad-morning)"/>
+      <circle cx="416" cy="185" r="150" fill="#F6E8C9" opacity="0.35"/>
+      <circle cx="416" cy="185" r="58" fill="#EDCB8C" opacity="0.9"/>
+      
+    <path d="M0 348 C 90 316 190 322 268 336 C 330 347 380 352 420 352 L420 372 L0 372 Z" fill="#6E836C" opacity="0.55"/>
+    <path d="M820 352 C 890 328 995 314 1090 322 C 1145 326 1180 334 1200 340 L1200 372 L820 372 Z" fill="#6E836C" opacity="0.62"/>
+    <rect x="0" y="330" width="1200" height="34" fill="url(#haze-morning)"/>
+      
+    <rect x="0" y="352" width="1200" height="448" fill="url(#seaGrad-morning)"/>
+    <rect x="60" y="364" width="90" height="1.6" fill="#F6EEDC" opacity="0.1"/><rect x="197" y="379" width="161" height="1.6" fill="#F6EEDC" opacity="0.14500000000000002"/><rect x="334" y="394" width="232" height="1.6" fill="#F6EEDC" opacity="0.19"/><rect x="471" y="400" width="303" height="1.6" fill="#F6EEDC" opacity="0.23500000000000001"/><rect x="608" y="415" width="154" height="1.6" fill="#F6EEDC" opacity="0.1"/><rect x="745" y="430" width="225" height="1.6" fill="#F6EEDC" opacity="0.14500000000000002"/><rect x="882" y="436" width="296" height="1.6" fill="#F6EEDC" opacity="0.19"/><rect x="119" y="451" width="147" height="1.6" fill="#F6EEDC" opacity="0.23500000000000001"/><rect x="256" y="466" width="218" height="1.6" fill="#F6EEDC" opacity="0.1"/><rect x="393" y="472" width="289" height="1.6" fill="#F6EEDC" opacity="0.14500000000000002"/><rect x="530" y="487" width="140" height="1.6" fill="#F6EEDC" opacity="0.19"/><rect x="667" y="502" width="211" height="1.6" fill="#F6EEDC" opacity="0.23500000000000001"/><rect x="804" y="508" width="282" height="1.6" fill="#F6EEDC" opacity="0.1"/><rect x="941" y="523" width="133" height="1.6" fill="#F6EEDC" opacity="0.14500000000000002"/>
+    <path d="M0 372 Q 220 360 420 374 T 1200 366 L1200 392 L0 392 Z" fill="#8FB2AC" opacity="0.35"/>
+      <rect x="0" y="560" width="1200" height="240" fill="#6E836C"/>
+      <rect x="0" y="556" width="1200" height="26" fill="#D8C9A6" opacity="0.9"/>
+      <path d="M0 600 C 200 580 340 606 520 596 T 900 604 T 1200 590 L1200 800 L0 800 Z" fill="#6E836C" opacity="0.75"/>
+      
+    <rect x="122.3" y="580.0" width="7.5" height="42.5" fill="#4A4136"/>
+    <circle cx="149.8" cy="557.9" r="21.4" fill="#667C62"/><circle cx="99.5" cy="560.8" r="16.4" fill="#435B4B"/><circle cx="120.8" cy="584.1" r="21.4" fill="#667C62"/><circle cx="141.5" cy="576.3" r="30.7" fill="#435B4B"/><circle cx="97.4" cy="561.5" r="17.5" fill="#667C62"/>
+      
+    <rect x="978.6" y="577.6" width="8.7" height="49.3" fill="#4A4136"/>
+    <circle cx="1009.9" cy="580.2" r="37.2" fill="#667C62"/><circle cx="1003.2" cy="567.0" r="25.2" fill="#667C62"/><circle cx="1006.5" cy="553.4" r="28.2" fill="#435B4B"/><circle cx="1015.2" cy="558.4" r="33.0" fill="#667C62"/><circle cx="1011.3" cy="551.0" r="20.7" fill="#667C62"/>
+      
+    <g transform="translate(520 566) scale(1.0562396847596391)">
+      <rect x="-230" y="-210" width="460" height="210" fill="#F6F1E5"/>
+      <rect x="-230" y="-210" width="460" height="210" fill="url(#shade-morning)" opacity="0.18"/>
+      <rect x="-238" y="-218" width="476" height="10" fill="#2E3A36"/>
+      <rect x="-197.8" y="-179.8" width="52.2" height="31.7" fill="#D9A85B" opacity="0.82"/><rect x="-129.1" y="-179.8" width="52.2" height="31.7" fill="#2B3B38" opacity="0.92"/><rect x="-60.4" y="-179.8" width="52.2" height="31.7" fill="#2B3B38" opacity="0.92"/><rect x="8.2" y="-179.8" width="52.2" height="31.7" fill="#D9A85B" opacity="0.82"/><rect x="76.9" y="-179.8" width="52.2" height="31.7" fill="#2B3B38" opacity="0.92"/><rect x="145.6" y="-179.8" width="52.2" height="31.7" fill="#2B3B38" opacity="0.92"/><rect x="-197.8" y="-115.8" width="52.2" height="31.7" fill="#D9A85B" opacity="0.82"/><rect x="-129.1" y="-115.8" width="52.2" height="31.7" fill="#2B3B38" opacity="0.92"/><rect x="-60.4" y="-115.8" width="52.2" height="31.7" fill="#2B3B38" opacity="0.92"/><rect x="8.2" y="-115.8" width="52.2" height="31.7" fill="#D9A85B" opacity="0.82"/><rect x="76.9" y="-115.8" width="52.2" height="31.7" fill="#2B3B38" opacity="0.92"/><rect x="145.6" y="-115.8" width="52.2" height="31.7" fill="#2B3B38" opacity="0.92"/><rect x="-197.8" y="-51.8" width="52.2" height="31.7" fill="#D9A85B" opacity="0.82"/><rect x="-129.1" y="-51.8" width="52.2" height="31.7" fill="#2B3B38" opacity="0.92"/><rect x="-60.4" y="-51.8" width="52.2" height="31.7" fill="#2B3B38" opacity="0.92"/><rect x="8.2" y="-51.8" width="52.2" height="31.7" fill="#D9A85B" opacity="0.82"/><rect x="76.9" y="-51.8" width="52.2" height="31.7" fill="#2B3B38" opacity="0.92"/><rect x="145.6" y="-51.8" width="52.2" height="31.7" fill="#2B3B38" opacity="0.92"/>
+      <rect x="-206" y="-56" width="412" height="8" fill="#2E3A36" opacity="0.4"/>
+      <rect x="-240" y="4" width="480" height="12" fill="#D8C9A6"/>
+    </g>
+      <rect x="0" y="0" width="1200" height="800" fill="url(#hazeBottom-morning)"/>
+      <path d="M0 690 C 280 672 520 700 780 686 T 1200 692 L1200 800 L0 800 Z" fill="#435B4B" opacity="0.22"/>
+  <rect x="0" y="0" width="1200" height="800" fill="url(#vignette-9)"/>
+  <rect x="0" y="0" width="1200" height="800" filter="url(#grain-9)" opacity="0.5"/>
+</svg>

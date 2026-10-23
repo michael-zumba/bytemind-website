@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 720" role="img" aria-label="Illustration of the Auckland Property Scout map view across North Shore and Eastern Bays suburbs">
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef3ef"/>
+      <stop offset="1" stop-color="#dfeae2"/>
+    </linearGradient>
+    <linearGradient id="land" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdfcf8"/>
+      <stop offset="1" stop-color="#f4f1e7"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#e2ddd1" stroke-width="1" opacity="0.55"/>
+    </pattern>
+  </defs>
+
+  <rect width="1100" height="720" fill="#faf9f3"/>
+  <rect width="1100" height="720" fill="url(#grid)"/>
+
+  <!-- Hauraki Gulf / harbour -->
+  <path d="M0 520 C 150 470, 260 540, 390 500 C 520 460, 610 540, 760 505 C 880 478, 980 520, 1100 470 L1100 720 L0 720 Z" fill="url(#sea)"/>
+  <path d="M0 520 C 150 470, 260 540, 390 500 C 520 460, 610 540, 760 505 C 880 478, 980 520, 1100 470" fill="none" stroke="#c9d8cd" stroke-width="2"/>
+
+  <!-- Landmass (stylised North Shore / Eastern Bays) -->
+  <path d="M70 70 L420 40 L620 90 L840 60 L1010 130 L960 300 L1030 430 L900 470 L700 430 L520 470 L330 430 L120 460 L40 330 Z"
+        fill="url(#land)" stroke="#d8d2c4" stroke-width="2"/>
+  <path d="M200 150 C 300 120, 420 170, 520 140 C 640 105, 760 160, 860 140" fill="none" stroke="#eae5d9" stroke-width="3"/>
+  <path d="M240 240 C 360 210, 470 260, 600 230 C 720 205, 800 250, 880 235" fill="none" stroke="#eae5d9" stroke-width="2"/>
+
+  <!-- Suburb markers -->
+  <g fill="#1a3a2a">
+    <circle cx="250" cy="180" r="6"/><circle cx="330" cy="150" r="5"/><circle cx="415" cy="205" r="5"/>
+    <circle cx="500" cy="160" r="6"/><circle cx="575" cy="225" r="5"/><circle cx="640" cy="170" r="5"/>
+    <circle cx="705" cy="240" r="6"/><circle cx="760" cy="180" r="5"/><circle cx="820" cy="260" r="5"/>
+    <circle cx="870" cy="320" r="5"/><circle cx="790" cy="345" r="6"/><circle cx="700" cy="360" r="5"/>
+    <circle cx="610" cy="345" r="5"/><circle cx="520" cy="370" r="5"/><circle cx="420" cy="340" r="5"/>
+    <circle cx="320" cy="360" r="5"/><circle cx="230" cy="330" r="5"/>
+  </g>
+  <g fill="#306d49" opacity="0.9">
+    <circle cx="250" cy="180" r="2.2"/><circle cx="500" cy="160" r="2.2"/><circle cx="790" cy="345" r="2.2"/>
+  </g>
+
+  <!-- Price bubbles -->
+  <g font-family="IBM Plex Mono, monospace" font-size="16" text-anchor="middle">
+    <g>
+      <rect x="228" y="150" width="44" height="24" rx="12" fill="#1a3a2a"/>
+      <text x="250" y="167" fill="#faf9f3">1.8</text>
+    </g>
+    <g>
+      <rect x="478" y="130" width="44" height="24" rx="12" fill="#1a3a2a"/>
+      <text x="500" y="147" fill="#faf9f3">2.1</text>
+    </g>
+    <g>
+      <rect x="768" y="315" width="44" height="24" rx="12" fill="#1a3a2a"/>
+      <text x="790" y="332" fill="#faf9f3">1.4</text>
+    </g>
+  </g>
+
+  <!-- Place labels -->
+  <g fill="#6a6760" font-family="Inter, system-ui, sans-serif" font-size="15">
+    <text x="268" y="180">Takapuna</text>
+    <text x="518" y="160">Milford</text>
+    <text x="808" y="345">Devonport</text>
+    <text x="640" y="395">St Heliers</text>
+    <text x="380" y="315">Torbay</text>
+    <text x="120" y="90" fill="#9a968c" font-size="13" letter-spacing="1.5">NORTH SHORE</text>
+    <text x="880" y="90" fill="#9a968c" font-size="13" letter-spacing="1.5">EASTERN BAYS</text>
+  </g>
+
+  <!-- Chart card -->
+  <g>
+    <rect x="60" y="520" width="330" height="150" rx="12" fill="#fdfcf8" stroke="#e2ddd1"/>
+    <text x="84" y="552" fill="#6a6760" font-family="IBM Plex Mono, monospace" font-size="12" letter-spacing="1.5">12-WEEK MEDIAN</text>
+    <polyline points="84,630 122,624 160,628 198,612 236,616 274,600 312,596 350,584"
+              fill="none" stroke="#306d49" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="350" cy="584" r="4" fill="#1a3a2a"/>
+    <text x="84" y="652" fill="#9a968c" font-family="Inter, system-ui, sans-serif" font-size="12">Source-attributed · ranges, not prices</text>
+  </g>
+
+  <!-- Badge -->
+  <g>
+    <rect x="838" y="620" width="202" height="40" rx="20" fill="#edf3ef" stroke="#d6e4db"/>
+    <text x="939" y="645" fill="#1a3a2a" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="middle">Auckland Property Scout</text>
+  </g>
+</svg>

@@ -70,6 +70,7 @@
         <div class="nav-links" id="nav-links">
           <a href="index.html" data-dom-id="nav-home">首页</a>
           <a href="services.html" data-dom-id="nav-services">服务</a>
+          <a href="property-intelligence.html" data-dom-id="nav-property">地产智能</a>
           <a href="indices.html" class="active" aria-current="page" data-dom-id="nav-indices">指数</a>
           <a href="insights.html" data-dom-id="nav-insights">洞察</a>
           <a href="reports.html" data-dom-id="nav-reports">报告</a>
@@ -104,6 +105,7 @@
       <button class="tab-btn" role="tab" id="fam-tefi" aria-selected="false" aria-controls="panel-tefi" onclick="openFamily(event, 'tefi')">税务效率（TEFI）</button>
       <button class="tab-btn" role="tab" id="fam-sme" aria-selected="false" aria-controls="panel-sme" onclick="openFamily(event, 'sme')">新西兰中小企业韧性</button>
       <button class="tab-btn" role="tab" id="fam-research" aria-selected="false" aria-controls="panel-research" onclick="openFamily(event, 'research')">研究指标</button>
+      <button class="tab-btn" role="tab" id="fam-property" aria-selected="false" aria-controls="panel-property" onclick="openFamily(event, 'property')">地产智能</button>
     </div>
 
     <!-- 3. Housing Market -->
@@ -471,6 +473,54 @@
 
 </div>
 
+    <!-- 7. 地产智能（ByteMind Property Scout） -->
+    <div id="panel-property" class="family-panel" role="tabpanel" aria-labelledby="fam-property">
+      <h2>地产智能</h2>
+      <p class="panel-intro">以区间为核心的奥克兰住宅市场视图：覆盖 17 个北岸与东湾区郊区，每个估值都标注来源、公开校准误差，并每日刷新。以下数字由已发布的地产快照自动填入；完整产品页给出方法、市场明细、合作方式与局限说明。</p>
+
+      <section class="metric-strip" aria-label="地产智能快照">
+        <div class="metric-item">
+          <div class="metric-value" data-snap="counts.listings" data-format="int">&mdash;</div>
+          <span class="metric-label">追踪的在售房源</span>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value" data-snap="counts.suburbs" data-format="int">&mdash;</div>
+          <span class="metric-label">北岸与东湾区郊区数</span>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value" data-snap="market.median_value_mid" data-format="currency">&mdash;</div>
+          <span class="metric-label">估值中位数（NZD）</span>
+        </div>
+        <div class="metric-item">
+          <div class="metric-value" data-snap="coverage.homes_avm_pct" data-format="percent">&mdash;</div>
+          <span class="metric-label">Homes.co.nz AVM 覆盖率</span>
+        </div>
+      </section>
+      <p class="metric-note">数据快照 <span data-snap="snapshot_date">&mdash;</span>。数值为区间制方法的模型输出，并非要价。 <a href="property-intelligence.html" class="inline-link">查看方法、市场表格与合作方式 &rarr;</a></p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h4>可交互地图</h4>
+          <p>按郊区、价格、卧室、产权、出售方式与模型置信度筛选；打开房源即可查看其来源与可比成交。</p>
+          <a href="../property-scout/#/" class="inline-link">打开地图 &rarr;</a>
+        </div>
+        <div class="card">
+          <h4>市场视图</h4>
+          <p>郊区中位数、估值与 CV 比率、在市天数以及滚动 12 周走势，随每日快照一同刷新。</p>
+          <a href="../property-scout/#/market" class="inline-link">打开市场视图 &rarr;</a>
+        </div>
+        <div class="card">
+          <h4>研究实验室</h4>
+          <p>模型卡、覆盖率、出售方式阶梯与描述文本分析，局限与数字一并公开。</p>
+          <a href="../property-scout/#/research" class="inline-link">打开研究实验室 &rarr;</a>
+        </div>
+      </div>
+
+      <div class="section-link-row">
+        <a href="property-intelligence.html" class="btn btn-primary" data-dom-id="cta-property-intelligence">了解 ByteMind 地产智能 &rarr;</a>
+      </div>
+    </div>
+
         <!-- Related Research -->
         <section class="section" style="padding-top:var(--space-16);">
           <div class="section-header">
@@ -527,6 +577,7 @@
         <div class="footer-col">
           <h4>页面</h4>
           <a href="services.html">服务</a>
+                    <a href="property-intelligence.html">地产智能</a>
           <a href="indices.html">指数</a>
           <a href="insights.html">洞察</a>
           <a href="reports.html">报告</a>
@@ -631,6 +682,7 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
   <script src="../assets/js/indices.js"></script>
+  <script src="../assets/js/property-snapshot.js" data-snapshot="../property-scout/data/snapshot.json" data-app="../property-scout/" defer></script>
 
     <style>
     /* ---- Page-specific components (tokens only, no inline styles) ---- */

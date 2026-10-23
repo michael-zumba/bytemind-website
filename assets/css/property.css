@@ -683,3 +683,21 @@
   .pi-map-loading::before { animation: none; }
   .pi-bar-fill { transition: none; }
 }
+
+/* ── Story section ──────────────────────────────────────────────── */
+.pi-story {
+  max-width: 720px;
+  margin: 0 auto;
+}
+.pi-story p {
+  margin: 0 0 var(--space-5);
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 1.2vw, 1.13rem);
+  line-height: 1.72;
+  color: var(--color-text-secondary);
+}
+.pi-story p:last-child { margin-bottom: 0; }
+
+@media (max-width: 600px) {
+  .pi-story p { font-size: 1rem; }
+}

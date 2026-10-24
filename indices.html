@@ -70,7 +70,6 @@
         <div class="nav-links" id="nav-links">
           <a href="index.html" data-dom-id="nav-home">Home</a>
           <a href="services.html" data-dom-id="nav-services">Services</a>
-          <a href="property-intelligence.html" data-dom-id="nav-property">Property</a>
           <a href="indices.html" class="active" aria-current="page" data-dom-id="nav-indices">Indices</a>
           <a href="insights.html" data-dom-id="nav-insights">Insights</a>
           <a href="reports.html" data-dom-id="nav-reports">Reports</a>
@@ -476,7 +475,7 @@
     <!-- 7. Property Intelligence (ByteMind Property Scout) -->
     <div id="panel-property" class="family-panel" role="tabpanel" aria-labelledby="fam-property">
       <h2>Property Intelligence</h2>
-      <p class="panel-intro">A range-first view of the Auckland residential market: 17 North Shore and Eastern Bays suburbs, every estimate source-attributed, calibrated error stated, refreshed daily. The figures below hydrate from the published property snapshot; the full product page sets out the method, the market detail, the engagement offers and the limitations.</p>
+      <p class="panel-intro">A range-first view of the Auckland residential market: 17 North Shore and Eastern Bays suburbs, every estimate source-attributed, error stated, refreshed daily. The figures hydrate from the published snapshot; the project page sets out the method, the market detail and the limits.</p>
 
       <section class="metric-strip" aria-label="Property intelligence snapshot">
         <div class="metric-item">
@@ -496,28 +495,27 @@
           <span class="metric-label">Homes.co.nz AVM Coverage</span>
         </div>
       </section>
-      <p class="metric-note">Data snapshot <span data-snap="snapshot_date">&mdash;</span>. Values are model output from a range-based method, not asking prices. <a href="property-intelligence.html" class="inline-link">Read the method, market table and engagements &rarr;</a></p>
+      <p class="metric-note">Data snapshot <span data-snap="snapshot_date">&mdash;</span>. Values are model output from a range-based method, not asking prices. <a href="reports/property-intelligence/" class="inline-link">Read the method, market detail and limits &rarr;</a></p>
 
       <div class="grid-3">
         <div class="card">
           <h4>Interactive map</h4>
           <p>Filter by suburb, price, beds, tenure, sale method and model confidence; open a property to see its sources and comparables.</p>
-          <a href="property-scout/#/" class="inline-link">Open the map &rarr;</a>
+          <a href="reports/property-intelligence/app/#/" class="inline-link">Open the map &rarr;</a>
         </div>
         <div class="card">
           <h4>Market view</h4>
           <p>Suburb medians, value-to-CV ratios, days on market and the rolling 12-week trend, refreshed with the daily snapshot.</p>
-          <a href="property-scout/#/market" class="inline-link">Open the market view &rarr;</a>
+          <a href="reports/property-intelligence/app/#/market" class="inline-link">Open the market view &rarr;</a>
         </div>
         <div class="card">
           <h4>Research lab</h4>
           <p>The model card, coverage, sale-method ladder and description analysis, with the caveats published alongside the numbers.</p>
-          <a href="property-scout/#/research" class="inline-link">Open the research lab &rarr;</a>
+          <a href="reports/property-intelligence/app/#/research" class="inline-link">Open the research lab &rarr;</a>
         </div>
       </div>
 
       <div class="section-link-row">
-        <a href="property-intelligence.html" class="btn btn-primary" data-dom-id="cta-property-intelligence">Explore ByteMind Property Intelligence &rarr;</a>
       </div>
     </div>
 
@@ -577,7 +575,6 @@
         <div class="footer-col">
           <h4>Pages</h4>
           <a href="services.html">Services</a>
-                    <a href="property-intelligence.html">Property</a>
           <a href="indices.html">Indices</a>
           <a href="insights.html">Insights</a>
           <a href="reports.html">Reports</a>
@@ -682,7 +679,7 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
   <script src="assets/js/indices.js"></script>
-  <script src="assets/js/property-snapshot.js" data-snapshot="property-scout/data/snapshot.json" data-app="property-scout/" defer></script>
+  <script src="assets/js/property-snapshot.js" data-snapshot="reports/property-intelligence/app/data/snapshot.json" data-app="reports/property-intelligence/app/" defer></script>
 
     <style>
     /* ---- Page-specific components (tokens only, no inline styles) ---- */

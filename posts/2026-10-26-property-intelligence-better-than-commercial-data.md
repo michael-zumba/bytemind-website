@@ -8,7 +8,7 @@ summary: "Most automated property estimates give one number and no error. A rang
 
 Automated property estimates have become part of how New Zealand property is discussed, priced and marketed. Most of them share a design choice: return one confident-looking number. That is easy to consume and easy to sell, but it is a poor input to a decision, because it hides the two things a decision needs - how wrong the number might be, and where it came from.
 
-This brief sets out what a range-first, source-attributed property model can support commercially, and the claims it deliberately does not make. It is the argument behind [ByteMind Property Intelligence](/property-intelligence.html).
+This brief sets out what a range-first, source-attributed property model can support commercially, and the claims it deliberately does not make. It is the argument behind [ByteMind Property Intelligence](/reports/property-intelligence/).
 
 ## The problem with a single number
 
@@ -53,8 +53,8 @@ That is a different product from a single price. It is also a more honest one: t
 
 The live interface, the market view and the research lab are public, and every figure on the product page hydrates from a published snapshot rather than from copy written by hand:
 
-- [ByteMind Property Intelligence](/property-intelligence.html) - product, method, market snapshot and engagements
-- [Open the property app](/property-scout/) - map, market view and research lab
+- [ByteMind Property Intelligence](/reports/property-intelligence/) - product, method, market snapshot and engagements
+- [Open the property app](/reports/property-intelligence/app/) - map, market view and research lab
 - [Long-run property market research](/reports/property-market-analysis/) - the macro backdrop this work sits inside
 
 If you would like a specific decision stress-tested, [talk to us](/contact.html).

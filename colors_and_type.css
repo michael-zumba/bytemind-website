@@ -571,12 +571,3 @@ p { margin-bottom: 1.25rem; color: var(--color-text-secondary); line-height: 1.6
   .lang-switch { margin-left: 0; align-self: flex-start; }
 }
 
-/* ── Narrow-desktop navigation ────────────────────────────────────
-   The nav gained a ninth item (Property). Between the mobile menu
-   breakpoint and ~1080px the full row would otherwise push the
-   language switch past the container edge, so tighten the row. */
-@media (max-width: 1080px) {
-  .nav-links { gap: 0.95rem; }
-  .nav-links a { font-size: 0.72rem; letter-spacing: 0.02em; }
-  .lang-switch { margin-left: var(--space-2); }
-}

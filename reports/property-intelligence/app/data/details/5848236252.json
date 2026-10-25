@@ -11,13 +11,13 @@
   "parking": 4,
   "land_area": 711.0,
   "floor_area": 373.0,
-  "price_display": "Price by negotiation",
-  "asking_price": null,
-  "asking_kind": null,
-  "sale_method": "Price by negotiation",
+  "price_display": "Asking price $2,275,000",
+  "asking_price": 2275000,
+  "asking_kind": "asking",
+  "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-03-24T00:42:21.743000+00:00",
-  "days_on_market": 213,
+  "days_on_market": 214,
   "lat": -36.7502202,
   "lon": 174.7554331,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2295863474.jpg",
@@ -45,25 +45,25 @@
   "cv_updated_at": "2024-04-30T12:00:00+00:00",
   "build_decade": "1990",
   "cv_ratio": 1.085,
-  "ask_gap": null,
-  "ask_gap_pct": null,
-  "deal_gap": null,
-  "view_count": 9398,
-  "watchers": 179,
+  "ask_gap": -329056,
+  "ask_gap_pct": -0.1264,
+  "deal_gap": 0.1264,
+  "view_count": 9545,
+  "watchers": 180,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
-  "sale_method_stage": 3,
-  "sale_pressure": 60.0,
-  "sale_pressure_label": "medium",
-  "model_low": 2387844,
-  "model_mid": 2672240,
-  "model_high": 2965489,
+  "sale_method_stage": 5,
+  "sale_pressure": 90.0,
+  "sale_pressure_label": "high",
+  "model_low": 2387835,
+  "model_mid": 2654902,
+  "model_high": 2927497,
   "model_confidence": "high",
-  "text_signal_pct": -3.9566,
-  "description_index": -0.169532,
-  "events_count": 0,
-  "last_event": null,
+  "text_signal_pct": -1.9148,
+  "description_index": -0.081047,
+  "events_count": 2,
+  "last_event": "price_change",
   "schools": [
     {
       "id": 1242,
@@ -89,7 +89,7 @@
       "id": 28,
       "name": "RANGITOTO COLLEGE",
       "type": "Secondary (Year 9-13)",
-      "roll": 4189,
+      "roll": 4188,
       "authority": "State",
       "gender": "Co-Educational",
       "decile": null,
@@ -298,11 +298,11 @@
   ],
   "model": {
     "listing_id": 5848236252,
-    "low": 2387844,
-    "mid": 2672240,
-    "high": 2965489,
+    "low": 2387835,
+    "mid": 2654902,
+    "high": 2927497,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1125, 0.1041], \"rel_width\": 0.2162, \"selected\": \"structural_plus_text\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.106, 0.0977], \"rel_width\": 0.2033, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5848236252,
@@ -316,15 +316,15 @@
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.2629,
-    "description_premium_pct": -3.9566,
-    "description_index": -0.169532,
+    "description_premium_pct": -1.9148,
+    "description_index": -0.081047,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 1, \"views_waterfront\": 3, \"family_school\": 19, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-23T18:06:36.192260+00:00",
+    "updated_at": "2026-10-25T01:14:52.449488+00:00",
     "top_topics": [
       {
         "topic_id": 2,
-        "weight": 0.333468,
+        "weight": 0.331506,
         "label": "Rangitoto & Northcross school zones",
         "top_terms": [
           "rangitoto college",
@@ -332,18 +332,18 @@
           "intermediate",
           "rangitoto",
           "sea views",
-          "sea",
           "suburb intermediate",
+          "sea",
           "parking",
           "northcross",
-          "zoned",
           "northcross intermediate",
-          "views"
+          "zoned",
+          "street parking"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.256658,
+        "weight": 0.258847,
         "label": "Family living & entertaining",
         "top_terms": [
           "friends",
@@ -362,7 +362,7 @@
       },
       {
         "topic_id": 11,
-        "weight": 0.147156,
+        "weight": 0.146537,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "pool",
@@ -381,7 +381,7 @@
       },
       {
         "topic_id": 1,
-        "weight": 0.129688,
+        "weight": 0.130058,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -400,7 +400,22 @@
       }
     ]
   },
-  "sale_events": [],
+  "sale_events": [
+    {
+      "event_type": "method_change",
+      "event_at": "2026-10-25T00:01:15.524103+00:00",
+      "old_value": "negotiation/",
+      "new_value": "asking/asking",
+      "detail_json": "{\"old\": [\"negotiation\", null], \"new\": [\"asking\", \"asking\"]}"
+    },
+    {
+      "event_type": "price_change",
+      "event_at": "2026-10-25T00:01:15.524103+00:00",
+      "old_value": "",
+      "new_value": "2275000",
+      "detail_json": "{\"direction\": \"increase\", \"old_display\": \"Price by negotiation\", \"new_display\": \"Asking price $2,275,000\"}"
+    }
+  ],
   "body": "Vendor Moving Off-Shore\r\n\r\nFeatures and Benefits\r\n* Freehold 711m2 site more or less\r\n* 5 bedrooms, 3 bathrooms\r\n* Multiple living areas, indoor and out\r\n* Double garaging plus off-street parking\r\n* Swimming pool\r\n* Opportunity to enhance to reap rewards\r\n* Proximity to Campbells Bay beach, Mairangi Bay Village, Centennial Park, Pupuke Golf Course, cafes, restaurants, public transport and motor way access\r\n* Zoned for double Westlake, Rangitoto College, Murrays Bay & Wairau Intermediate and Campbells Bay School\r\n\r\nBig on space, big on lifestyle and brilliantly positioned in one of Campbells Bay's most tightly held cul-de-sacs, 13 Centennial Place is the kind of family opportunity that rarely comes to market.\r\n\r\nSet on a full 711sqm freehold site, this substantial elevated residence delivers the scale, flexibility and effortless functionality growing families are searching for. Designed for family life, the home offers five generous bedrooms, three bathrooms and multiple living zones that allows everyone to spread out, while the open-plan living/dining and kitchen forms the social hub and heart of the home.  Whether accommodating teenagers, extended family, guests or working from home, this is a layout that is functional.\r\n\r\nExpansive outdoor entertaining areas create the perfect setting for long summer afternoons, weekend BBQs and celebrations with family and friends. The swimming pool brings a resort-style feel to everyday living, while the outdoor fire creates a wonderful space to come together and enjoy fun conversations and laughter well into the night. Fully fenced, and wonderfully usable, the grounds are ideal for children and pets to play safely.\r\n\r\nComfort and practicality have been thoughtfully covered with ducted ventilation, a closed fireplace, heat pump system, separate laundry, and generous storage while the opportunity to modernise and add further value, is another appealing aspect of this home. \r\n\r\nZoned for the mighty double Westlake alongside Rangitoto College, Murrays Bay Intermediate and Campbells Bay School, this is education gold on the North Shore. You are also just moments from the cafes, restaurants and local charm of Mairangi Bay Village, with beautiful beaches, public transport and motorway access all within easy reach.\r\n\r\nSubstantial homes on full sites in this location are becoming increasingly difficult to secure. When space, schooling, lifestyle and position all matter, this is one opportunity that deserves your immediate attention.  \r\n\r\n*  Some images have been virtually staged for marketing purposes",
   "photos": [
     "https://trademe.tmcdn.co.nz/photoserver/tq/2295863474.jpg",
@@ -796,14 +811,14 @@
         "low": 2208000,
         "mid": 2434667,
         "high": 2657778,
-        "updated_at": "2026-10-23T18:06:36.003664+00:00",
+        "updated_at": "2026-10-25T01:14:52.273988+00:00",
         "confidence": "high",
         "n": 74,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 74,
-          "n_eff": 12.06,
+          "n_eff": 11.99,
           "radius_km": 3.0,
           "median_ratio": 1.0144,
           "iqr_ratio": 0.1847,

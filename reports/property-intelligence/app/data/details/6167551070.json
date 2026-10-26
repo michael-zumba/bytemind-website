@@ -11,13 +11,13 @@
   "parking": 1,
   "land_area": 77.0,
   "floor_area": null,
-  "price_display": "Price by negotiation",
-  "asking_price": null,
-  "asking_kind": null,
-  "sale_method": "Price by negotiation",
+  "price_display": "Asking price $815,000",
+  "asking_price": 815000,
+  "asking_kind": "asking",
+  "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-07T01:28:18.323000+00:00",
-  "days_on_market": 17,
+  "days_on_market": 19,
   "lat": -36.6976051,
   "lon": 174.751709,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333774058.jpg",
@@ -45,25 +45,25 @@
   "cv_updated_at": "2024-04-30T12:00:00+00:00",
   "build_decade": "2020",
   "cv_ratio": 0.8947,
-  "ask_gap": null,
-  "ask_gap_pct": null,
-  "deal_gap": null,
-  "view_count": 1570,
+  "ask_gap": 9804,
+  "ask_gap_pct": 0.0122,
+  "deal_gap": -0.0122,
+  "view_count": 1619,
   "watchers": 18,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
-  "sale_method_stage": 3,
-  "sale_pressure": 32.8,
-  "sale_pressure_label": "low",
-  "model_low": 770677,
-  "model_mid": 856873,
-  "model_high": 944854,
+  "sale_method_stage": 5,
+  "sale_pressure": 63.2,
+  "sale_pressure_label": "medium",
+  "model_low": 756114,
+  "model_mid": 840299,
+  "model_high": 925323,
   "model_confidence": "high",
-  "text_signal_pct": -1.2936,
-  "description_index": -0.054584,
-  "events_count": 0,
-  "last_event": null,
+  "text_signal_pct": -0.5739,
+  "description_index": -0.024277,
+  "events_count": 2,
+  "last_event": "price_change",
   "schools": [
     {
       "id": 27,
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6167551070,
-    "low": 770677,
-    "mid": 856873,
-    "high": 944854,
+    "low": 756114,
+    "mid": 840299,
+    "high": 925323,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.106, 0.0977], \"rel_width\": 0.2033, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1056, 0.0964], \"rel_width\": 0.2014, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6167551070,
@@ -286,15 +286,15 @@
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.6063,
-    "description_premium_pct": -1.2936,
-    "description_index": -0.054584,
+    "description_premium_pct": -0.5739,
+    "description_index": -0.024277,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-25T01:14:52.449488+00:00",
+    "updated_at": "2026-10-26T02:33:14.377354+00:00",
     "top_topics": [
       {
         "topic_id": 9,
-        "weight": 0.660032,
+        "weight": 0.67647,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
@@ -304,8 +304,8 @@
           "walking",
           "suburb village",
           "suburb regional",
-          "suburb college",
           "centre",
+          "suburb college",
           "community",
           "distance",
           "walking distance"
@@ -313,7 +313,7 @@
       },
       {
         "topic_id": 0,
-        "weight": 0.286289,
+        "weight": 0.281966,
         "label": "Family living & entertaining",
         "top_terms": [
           "friends",
@@ -332,7 +332,7 @@
       },
       {
         "topic_id": 5,
-        "weight": 0.043569,
+        "weight": 0.041564,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -350,27 +350,42 @@
         ]
       },
       {
-        "topic_id": 4,
-        "weight": 0.01011,
-        "label": "Apartment / lock-up-and-leave",
+        "topic_id": 1,
+        "weight": 0.0,
+        "label": "Development & land potential",
         "top_terms": [
-          "apartment",
-          "lock",
-          "leave",
-          "lock leave",
-          "car",
-          "restaurants",
-          "balcony",
-          "bedroom apartment",
-          "light",
-          "open plan",
-          "bedroom",
-          "plan living"
+          "potential",
+          "site",
+          "future",
+          "land",
+          "development",
+          "sqm",
+          "subject",
+          "property",
+          "housing",
+          "existing",
+          "mixed",
+          "council"
         ]
       }
     ]
   },
-  "sale_events": [],
+  "sale_events": [
+    {
+      "event_type": "method_change",
+      "event_at": "2026-10-26T02:30:39.518190+00:00",
+      "old_value": "negotiation/",
+      "new_value": "asking/asking",
+      "detail_json": "{\"old\": [\"negotiation\", null], \"new\": [\"asking\", \"asking\"]}"
+    },
+    {
+      "event_type": "price_change",
+      "event_at": "2026-10-26T02:30:39.518190+00:00",
+      "old_value": "",
+      "new_value": "815000",
+      "detail_json": "{\"direction\": \"increase\", \"old_display\": \"Price by negotiation\", \"new_display\": \"Asking price $815,000\"}"
+    }
+  ],
   "body": "There’s something rather lovely about finding a home that makes life feel easy.\r\n\r\nTucked away on Deep Creek Road, this beautifully maintained home is the kind of place that instantly feels like somewhere you could settle into. Everything has been thoughtfully looked after, leaving you free to simply move in and enjoy it.\r\n\r\nAnd then there’s the location.\r\n\r\nTorbay Kindy and the local primary school are both within walking distance, while Torbay Village is close enough for those spontaneous coffee runs and easy errands. When the weekend arrives, you’re spoilt for choice with Winstones Cove, Waiake Beach and Long Bay Beach all close by, with Long Bay Regional Park there for walks and long, lazy days outdoors. Browns Bay town centre provides an even bigger choice of cafés, restaurants, shopping and essentials.\r\n\r\nIt’s a wonderfully connected little pocket of the North Shore, where the things you need are close and the things you want to do are even closer.\r\n\r\nBack home, there’s a lovely sense of privacy and calm. The interiors are inviting and beautifully cared for, with spaces that feel comfortable, practical and easy to make your own.\r\n\r\nThis is less about ticking boxes and more about the way life could feel here. Morning coffee in the village, school runs without the daily battle, beach afternoons on a whim and everything you need within easy reach.\r\n\r\nIf that sounds like your kind of everyday, come and see why this one feels a little different.",
   "photos": [
     "https://trademe.tmcdn.co.nz/photoserver/tq/2333774058.jpg",
@@ -759,14 +774,14 @@
         "low": 825366,
         "mid": 861207,
         "high": 920930,
-        "updated_at": "2026-10-25T01:14:52.273988+00:00",
+        "updated_at": "2026-10-26T02:33:14.192199+00:00",
         "confidence": "high",
         "n": 64,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 64,
-          "n_eff": 9.67,
+          "n_eff": 9.64,
           "radius_km": 3.0,
           "median_ratio": 0.9569,
           "iqr_ratio": 0.111,

@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import gzip
 import json
 import logging
 import random
@@ -62,13 +63,20 @@ def load_catalogue() -> dict[int, dict[str, Any]]:
 
 def load_existing() -> dict[int, dict[str, Any]]:
     existing: dict[int, dict[str, Any]] = {}
-    for path in (config.RAW_DIR / "listings").glob("*.json"):
+    paths = sorted((config.RAW_DIR / "listings").glob("*.json")) + sorted(
+        (config.RAW_DIR / "listings").glob("*.json.gz")
+    )
+    for path in paths:
         try:
-            data = json.loads(path.read_text(encoding="utf-8"))
+            if path.name.endswith(".gz"):
+                with gzip.open(path, "rt", encoding="utf-8") as fh:
+                    data = json.load(fh)
+            else:
+                data = json.loads(path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             continue
         if data.get("listing_id"):
-            existing[int(data["listing_id"])] = data
+            existing.setdefault(int(data["listing_id"]), data)
     return existing
 
 

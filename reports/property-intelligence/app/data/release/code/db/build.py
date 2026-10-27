@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import hashlib
 import json
 import os
@@ -62,17 +63,25 @@ def utc_now() -> str:
 
 
 def load_listing_files(raw_dir: Path) -> list[dict[str, Any]]:
-    files = sorted((raw_dir / "listings").glob("*.json"))
-    listings: list[dict[str, Any]] = []
+    # Current cache files are .json; old/delisted files are archived as .json.gz.
+    # Prefer an uncompressed file if both exist, and de-duplicate by listing id.
+    files = sorted((raw_dir / "listings").glob("*.json")) + sorted(
+        (raw_dir / "listings").glob("*.json.gz")
+    )
+    listings: dict[int, dict[str, Any]] = {}
     for path in files:
         try:
-            with path.open(encoding="utf-8") as fh:
-                data = json.load(fh)
+            if path.name.endswith(".json.gz"):
+                with gzip.open(path, "rt", encoding="utf-8") as fh:
+                    data = json.load(fh)
+            else:
+                with path.open(encoding="utf-8") as fh:
+                    data = json.load(fh)
         except (OSError, json.JSONDecodeError):
             continue
         if isinstance(data, dict) and data.get("listing_id"):
-            listings.append(data)
-    return listings
+            listings.setdefault(int(data["listing_id"]), data)
+    return list(listings.values())
 
 
 def previous_state(

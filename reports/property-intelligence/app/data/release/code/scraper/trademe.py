@@ -267,13 +267,20 @@ class TradeMeClient:
     def cached_listing(self, listing_id: int, max_age_hours: float = config.LISTING_CACHE_HOURS) -> dict[str, Any] | None:
         path = self.listing_dir / f"{listing_id}.json"
         if not path.exists():
+            archived = self.listing_dir / f"{listing_id}.json.gz"
+            path = archived if archived.exists() else path
+        if not path.exists():
             return None
         age_hours = (utc_now().timestamp() - path.stat().st_mtime) / 3600
         if age_hours > max_age_hours:
             return None
         try:
-            with path.open(encoding="utf-8") as fh:
-                data = json.load(fh)
+            if path.name.endswith(".gz"):
+                with gzip.open(path, "rt", encoding="utf-8") as fh:
+                    data = json.load(fh)
+            else:
+                with path.open(encoding="utf-8") as fh:
+                    data = json.load(fh)
         except (OSError, json.JSONDecodeError):
             return None
         if not isinstance(data, dict) or not data.get("listing_id"):
@@ -282,6 +289,12 @@ class TradeMeClient:
 
     def save_listing(self, listing_id: int, payload: dict[str, Any]) -> Path:
         path = self.listing_dir / f"{listing_id}.json"
+        archived = self.listing_dir / f"{listing_id}.json.gz"
+        if archived.exists():
+            try:
+                archived.unlink()
+            except OSError:
+                pass
         tmp = path.with_suffix(".json.tmp")
         with tmp.open("w", encoding="utf-8") as fh:
             json.dump(payload, fh, ensure_ascii=False, indent=1)

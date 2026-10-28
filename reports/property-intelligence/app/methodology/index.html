@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auckland Property Scout — Methodology</title>
+<meta name="description" content="Plain-language methodology for Auckland Property Scout: how listings, value ranges, price changes, sale pressure and text signals are collected and tested.">
+<link rel="canonical" href="https://zhangyuqian.com/research/property-scout/app/methodology/">
+<style>
+  :root {
+    --paper: #f7f4ec;
+    --paper-2: #fffdf8;
+    --ink: #23241f;
+    --ink-2: #55564d;
+    --muted: #6a685e;
+    --line: #ded8ca;
+    --teal: #1f4d3f;
+    --teal-light: #e7efeb;
+    --amber: #a8792b;
+    --max: 860px;
+    --serif: Georgia, 'Times New Roman', serif;
+    --sans: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --mono: 'SFMono-Regular', ui-monospace, Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--paper); }
+  body {
+    margin: 0;
+    color: var(--ink);
+    background: var(--paper);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--teal); text-underline-offset: 3px; }
+  .page { max-width: var(--max); margin: 0 auto; padding: 32px 24px 80px; }
+  .topbar {
+    display: flex; justify-content: space-between; align-items: center; gap: 16px;
+    padding: 14px 0 26px; border-bottom: 1px solid var(--line);
+    font-size: 13px; color: var(--muted);
+  }
+  .topbar a { text-decoration: none; font-weight: 600; }
+  .topbar-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+    padding: 9px 14px; border-radius: 5px; border: 1px solid var(--teal);
+    font: 600 13px/1.2 var(--sans); text-decoration: none; color: var(--teal);
+    background: transparent;
+  }
+  .btn-primary { background: var(--teal); color: #fffdf8; }
+  header.doc-head { padding: 48px 0 28px; border-bottom: 1px solid var(--line); }
+  .eyebrow {
+    display: flex; align-items: center; gap: 9px;
+    font: 650 10.5px/1.4 var(--sans); letter-spacing: .13em; text-transform: uppercase;
+    color: var(--teal);
+  }
+  .eyebrow::before { content: ''; width: 26px; height: 1px; background: var(--teal); }
+  h1 {
+    margin: 16px 0 12px; font-family: var(--serif); font-weight: 500;
+    font-size: clamp(38px, 6vw, 58px); line-height: 1.04; letter-spacing: -.025em;
+  }
+  .standfirst {
+    max-width: 720px; margin: 0; font-family: var(--serif);
+    font-size: clamp(19px, 2.4vw, 24px); line-height: 1.38; color: var(--ink-2);
+  }
+  .meta {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px;
+    margin-top: 26px; padding: 14px 0; border-top: 1px solid var(--line);
+    font-size: 12px; color: var(--muted);
+  }
+  .meta strong { display: block; color: var(--ink); font-size: 13px; }
+  .intro { margin-top: 32px; padding: 20px 22px; background: var(--teal-light); border-left: 3px solid var(--teal); }
+  .intro p { margin: 0; }
+  .intro p + p { margin-top: 10px; }
+  .download-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 22px; }
+  nav.toc { margin: 38px 0 0; padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  nav.toc h2 { margin: 0 0 8px; font: 650 10px/1.4 var(--sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  nav.toc ol { margin: 0; padding-left: 20px; columns: 2; column-gap: 28px; font-size: 13.5px; }
+  nav.toc li { margin: 2px 0; break-inside: avoid; }
+  section { padding: 34px 0 8px; border-bottom: 1px solid var(--line); }
+  section:last-of-type { border-bottom: 0; }
+  h2 { margin: 0 0 14px; font-family: var(--serif); font-weight: 500; font-size: clamp(27px, 3.4vw, 35px); line-height: 1.15; letter-spacing: -.01em; }
+  h3 { margin: 26px 0 8px; font-family: var(--serif); font-weight: 500; font-size: 22px; line-height: 1.25; }
+  h4 { margin: 20px 0 6px; font: 700 14px/1.35 var(--sans); }
+  p { margin: 0 0 15px; }
+  ul, ol { margin: 0 0 17px; padding-left: 22px; }
+  li { margin: 5px 0; }
+  strong { font-weight: 650; }
+  .eq {
+    margin: 18px 0; padding: 15px 17px; border: 1px solid var(--line);
+    background: var(--paper-2); border-radius: 5px;
+    font: 15px/1.7 var(--mono); overflow-x: auto;
+  }
+  .eq-label { display: block; margin-bottom: 4px; font: 650 9.5px/1.4 var(--sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .explain { margin: -5px 0 18px; font-size: 14px; color: var(--ink-2); }
+  .callout { margin: 20px 0; padding: 16px 18px; border: 1px solid var(--line); border-left: 3px solid var(--amber); background: #fbf8ee; }
+  .callout strong { color: #7f5c17; }
+  table { width: 100%; border-collapse: collapse; margin: 18px 0 22px; font-size: 13.5px; line-height: 1.5; }
+  th, td { padding: 8px 9px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+  th { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); background: var(--paper-2); }
+  .num { font-family: var(--mono); white-space: nowrap; }
+  .glossary dt { margin-top: 13px; font-weight: 650; }
+  .glossary dd { margin: 2px 0 0; color: var(--ink-2); }
+  .footer { margin-top: 42px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); }
+  .footer p { margin: 6px 0; }
+  @media (max-width: 650px) {
+    .page { padding: 20px 16px 56px; }
+    .meta { grid-template-columns: 1fr; gap: 8px; }
+    nav.toc ol { columns: 1; }
+    .topbar { align-items: flex-start; }
+    .eq { font-size: 13px; }
+  }
+  @media print {
+    html, body { background: #fff; }
+    .page { max-width: none; padding: 0; }
+    .topbar, .download-row, nav.toc { display: none; }
+    header.doc-head { padding-top: 0; }
+    section { break-inside: auto; }
+    h2, h3 { break-after: avoid; }
+    .eq, .callout, table, .intro { break-inside: avoid; }
+    a { color: var(--ink); text-decoration: none; }
+    @page { size: A4; margin: 17mm 16mm 17mm; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="topbar">
+    <a href="../">Auckland Property Scout</a>
+    <div class="topbar-actions">
+      <a class="btn" href="../#/research">Research Lab</a>
+      <a class="btn btn-primary" href="auckland-property-methodology.pdf" download>Download PDF</a>
+    </div>
+  </div>
+
+  <header class="doc-head">
+    <div class="eyebrow">Research project · Methodology</div>
+    <h1>Auckland Property Scout</h1>
+    <p class="standfirst">How the data is collected, how each estimate is built, how the models are tested, and what the numbers can and cannot tell you.</p>
+    <div class="meta">
+      <div><strong>Version 1.0</strong>28 October 2026</div>
+      <div><strong>Coverage</strong>17 North Shore and Eastern Bays suburbs</div>
+      <div><strong>Access</strong>Free to read and download · independent research</div>
+    </div>
+  </header>
+
+  <div class="intro">
+    <p><strong>Short version.</strong> The project turns public Auckland listing information into a range with a stated source, date and error. It is a research tool, not a registered valuation and not financial advice.</p>
+    <p>Every number in the live app is generated from the database described here. The <a href="../#/research">Research Lab</a> shows the current measured values; this document explains the machinery behind them and why some claims are deliberately limited.</p>
+    <div class="download-row">
+      <a class="btn btn-primary" href="auckland-property-methodology.pdf" download>Download this document (PDF)</a>
+      <a class="btn" href="../data/release/manifest.json">Public data release</a>
+    </div>
+  </div>
+
+  <nav class="toc" aria-label="Contents">
+    <h2>Contents</h2>
+    <ol>
+      <li><a href="#scope">What this project is — and what it is not</a></li>
+      <li><a href="#data">The data: what is collected and when</a></li>
+      <li><a href="#prices">The price shown on the map and in the listings</a></li>
+      <li><a href="#range">How a value range is built</a></li>
+      <li><a href="#error">Error, confidence and validation</a></li>
+      <li><a href="#pressure">Sale method and motivation pressure</a></li>
+      <li><a href="#text">Description, topics and text signals</a></li>
+      <li><a href="#history">Dated price changes and vendor behaviour</a></li>
+      <li><a href="#reproduce">Reproducibility and downloads</a></li>
+      <li><a href="#limits">Limitations and honest claims</a></li>
+      <li><a href="#glossary">Glossary</a></li>
+    </ol>
+  </nav>
+
+  <section id="scope">
+    <h2>1. What this project is — and what it is not</h2>
+    <p>Auckland Property Scout is an independent, non-commercial research project covering 17 suburbs on Auckland's North Shore and Eastern Bays: Browns Bay, Murrays Bay, Mairangi Bay, Rothesay Bay, Campbells Bay, Castor Bay, Milford, Long Bay, Waiake, Torbay, Takapuna, Devonport, Mission Bay, Kohimarama, St Heliers, Glendowie and Ōrākei.</p>
+    <p>It has one main job: make the evidence behind a property estimate visible. Instead of a single confident-looking price, it shows a reasonable range, where that range came from, when it was observed, and how wrong the model has been on comparable cases.</p>
+    <h3>What it is</h3>
+    <ul>
+      <li>A dated snapshot of public listing information and derived research signals.</li>
+      <li>A set of ranges and indicators that can be inspected, tested and reproduced.</li>
+      <li>A record of what changed over time: asking prices, sale method, listing copy, and whether a listing left the market.</li>
+      <li>A public release of derived data, schema and code so another person can audit or rebuild the work.</li>
+    </ul>
+    <h3>What it is not</h3>
+    <ul>
+      <li><strong>Not a valuation.</strong> It is not a valuation under professional standards and cannot replace a registered valuer.</li>
+      <li><strong>Not a sale-price prediction.</strong> The main model target is a third-party automated valuation, not a future sale price.</li>
+      <li><strong>Not financial, legal or tax advice.</strong> Decisions about a property need title checks, a builder's report, legal advice and, where required, a registered valuation.</li>
+      <li><strong>Not a live market feed.</strong> It refreshes daily, but every figure is a snapshot with a timestamp. Listing pages can change between captures.</li>
+    </ul>
+    <div class="callout"><strong>The shortest accurate description:</strong> a transparent, error-aware property research instrument. It helps a reader ask better questions. It does not answer “what will this sell for?” with certainty.</div>
+  </section>
+
+  <section id="data">
+    <h2>2. The data: what is collected and when</h2>
+    <p>The daily collector reads public Trade Me residential sale search results and listing pages for the 17 target suburbs. It stores the listing facts needed for research, plus a timestamp for every capture.</p>
+    <h3>What is captured</h3>
+    <table>
+      <thead><tr><th>Group</th><th>Examples</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td>Identity and location</td><td>Listing ID, address, suburb, latitude/longitude, property type</td><td>De-duplication, mapping and spatial comparison.</td></tr>
+        <tr><td>Physical facts</td><td>Bedrooms, bathrooms, parking, land area, floor area, build decade</td><td>Size and type adjustment.</td></tr>
+        <tr><td>Price and campaign</td><td>Asking price, guide/auction/tender display, sale method, deadline, listing date</td><td>The advertised signal and how the vendor is asking buyers to respond.</td></tr>
+        <tr><td>Third-party estimates</td><td>Homes.co.nz AVM range, its date, council capital value (CV), land/improvement split</td><td>External reference points and a fallback feature set.</td></tr>
+        <tr><td>Nearby sales</td><td>Sold price, date, distance, property type, size, CV</td><td>Comparable-sales evidence.</td></tr>
+        <tr><td>Text</td><td>Cleaned public description wording</td><td>Exploratory topic and marketing-language research.</td></tr>
+        <tr><td>History</td><td>Repeated captures, asking-price states, method changes, description digest</td><td>Change and vendor-behaviour analysis.</td></tr>
+      </tbody>
+    </table>
+    <h3>Refresh and retention</h3>
+    <ul>
+      <li>The automation runs daily at <strong>03:15</strong> local time, with a slower browser fallback if the public site blocks a request.</li>
+      <li>Every capture is timestamped. Recent snapshot history is kept in full; older snapshots are compacted to the first and last capture per listing per month to keep the database bounded.</li>
+      <li>Listings that disappear from a complete 17-suburb search are kept and marked <strong>delisted</strong> with a date. If they return, they are marked <strong>relisted</strong>. Their descriptions, prices and model outputs remain in the record.</li>
+      <li>Raw source descriptions are retained privately for reproducibility. They are <strong>not</strong> redistributed in the public release because they are third-party page content.</li>
+    </ul>
+    <h3>Listing universe and cleaning</h3>
+    <p>The public counts and medians use <strong>standard residential listings that are currently active</strong>. Non-standard entries such as relocatable homes, tiny homes, rentals and other unusual listings are excluded by default but can be revealed with a toggle. Leasehold properties are kept but flagged, because comparing a leasehold price with a freehold estimate would be misleading. Tenure is inferred from listing text, not from the title record.</p>
+    <p>At the 28 October 2026 snapshot the database contains just over 1,000 captured listings, of which about 1,000 are active and standard. Those counts change every day; the app displays the current figures.</p>
+  </section>
+
+  <section id="prices">
+    <h2>3. The price shown on the map and in the listings</h2>
+    <p>There are two different ideas in property data that are easy to confuse:</p>
+    <ul>
+      <li><strong>Asking price</strong> — what the vendor or agent currently advertises.</li>
+      <li><strong>Value estimate</strong> — a model's or valuer's opinion of what the property may be worth.</li>
+    </ul>
+    <p>The map and the listing cards now use the same rule so they cannot disagree:</p>
+    <div class="eq"><span class="eq-label">Displayed price rule</span>effective price = asking price, if it exists<br>otherwise: estimate midpoint → comparable midpoint → value-guide midpoint</div>
+    <p class="explain">“Otherwise” is shown with a tilde, for example <span class="num">~$1.40m</span>. The tilde means “this is a value guide, because there is no asking price.” A plain <span class="num">$1.02m</span> means the listing itself is asking that amount. The same rule is applied to the map bubble, the listing card, the price filter and the price sort.</p>
+    <p><strong>Worked example.</strong> A property is advertised at $1,023,000. The map used to show a $1.4m AVM in the bubble; that was a different quantity. Under the current rule the bubble and card both show <span class="num">$1.02m</span> (money is rounded for the map). If the same property were offered by auction with no asking price, the bubble would show <span class="num">~$1.40m</span> and the legend would identify it as a guide.</p>
+    <div class="callout"><strong>Why both prices are still useful:</strong> the asking price tells you what the vendor is trying to achieve. The value guide tells you what the evidence suggests. The app shows the asking price on the map and keeps the estimate range in the listing detail, so neither is hidden.</div>
+  </section>
+
+  <section id="range">
+    <h2>4. How a value range is built</h2>
+    <p>The project uses a hierarchy. It does not blend every signal into one black box. Each signal is presented with its source and confidence, and the next method is used only when the earlier one is unavailable or unreliable.</p>
+    <h3>Step 1 — Find the advertised signal</h3>
+    <p>The listing page is read for an asking price, a guide (“enquiries over”), an auction date or a deadline. This tells the model how the vendor is asking buyers to respond. It is not treated as a valuation.</p>
+    <h3>Step 2 — Use the Homes.co.nz AVM when it exists</h3>
+    <p>Homes.co.nz publishes an automated valuation model (AVM) range for many properties. The project uses its low, middle and high estimate, plus the date it was updated, as the primary published range when it is available. The AVM is an independent estimate — a useful one — but it is still a model output, not a sale price.</p>
+    <h3>Step 3 — Build a range from nearby sold comparables</h3>
+    <p>When there is no AVM, the project looks for recent nearby sales of a similar property type. It converts each sale into a ratio to that property's council CV, then applies the subject property's CV. This puts a small unit and a large house on a more comparable footing.</p>
+    <div class="eq"><span class="eq-label">Comparable-sales calculation</span>
+weightᵢ = exp(−distanceᵢ / 1.4) × exp(−ageᵢ / 11) × type_weightᵢ × same_suburb_factorᵢ<br>
+ratioᵢ = sale_priceᵢ / CVᵢ<br>
+range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_subject]</div>
+    <p class="explain"><strong>In plain language:</strong> a sale 0.5 km away and a few months old counts more than a sale 2 km away and two years old. The 1.4 km and 11-month numbers are the decay scales used by the model; they are not a claim that distance or time stop mattering at exactly those points. The type weight gives more influence to the same property type and less to a very different one. A same-suburb sale gets a small extra weight. Q25, Q50 and Q75 are weighted quartiles: the low, middle and high points of the comparable evidence.</p>
+    <p><strong>Worked example.</strong> Suppose the subject property has a CV of $1,200,000. The weighted comparables produce ratios whose 25th, 50th and 75th percentiles are 0.82, 0.90 and 1.01. The displayed range is roughly:</p>
+    <div class="eq"><span class="eq-label">Worked example</span>low  = 0.82 × $1,200,000 = $984,000<br>mid  = 0.90 × $1,200,000 = $1,080,000<br>high = 1.01 × $1,200,000 = $1,212,000</div>
+    <p class="explain">The range is not a confidence interval in the statistical sense. It is a summary of the spread of the comparable evidence. If there are only two or three usable sales, the range is labelled lower confidence and should be treated more cautiously.</p>
+    <h3>Step 4 — Use a calibrated hedonic fallback when needed</h3>
+    <p>A hedonic model estimates a property from its characteristics. The project trains one on listings that have a Homes AVM, then uses it only when neither an AVM nor usable comparables are available and the confidence is acceptable.</p>
+    <div class="eq"><span class="eq-label">Hedonic model (simplified)</span>log(estimate_mid) = β₀ + β₁·log(CV) + β₂·beds + β₃·baths + β₄·parking<br>                    + β₅·log(land) + β₆·log(floor) + … + suburb + type + tenure + error</div>
+    <p class="explain"><strong>In plain language:</strong> the model learns how much each characteristic is associated with a higher or lower AVM, after allowing for the others. Taking logs makes percentage differences easier to model and keeps predictions positive. The model is trained and tested on different folds of the data so its error is measured on cases it did not see.</p>
+    <h3>Step 5 — Keep the council CV as a cross-check, never as market value</h3>
+    <p>The council capital value is an official rating value. It is usually updated on a multi-year cycle, so it lags the market. It is used as a feature, a denominator for comparable ratios and a sanity check — not as a current market estimate.</p>
+    <h3>Which range wins?</h3>
+    <ol>
+      <li>Homes AVM, when available.</li>
+      <li>Comparable-sales range, when usable sales exist.</li>
+      <li>Calibrated hedonic range, only when confidence is medium/high.</li>
+      <li>Active-suburb guide as a last resort, clearly labelled as the weakest signal.</li>
+    </ol>
+    <p>The detail payload also carries every available signal and a methodology note, so a reader can see what was used rather than only the final range.</p>
+  </section>
+
+  <section id="error">
+    <h2>5. Error, confidence and validation</h2>
+    <p>A range is only useful if its error is measured. The project reports three standard quantities.</p>
+    <div class="eq"><span class="eq-label">Error measures</span>MAE  = average(|prediction − reference|)<br>MAPE = average(|prediction − reference| ÷ reference) × 100%<br>R²   = share of variation in the reference explained by the model</div>
+    <p class="explain"><strong>MAE</strong> is the average dollar miss. <strong>MAPE</strong> turns that miss into a percentage, which is easier to compare across cheap and expensive properties. <strong>R²</strong> runs from 0 to 1; higher means the model tracks the reference more closely, but it says nothing about whether the reference itself is right.</p>
+    <p><strong>Worked example.</strong> If a model predicts $1.08m and the reference is $1.00m, the absolute error is $80,000 and the absolute percentage error is 8%. A model with a 7% MAPE is therefore typically about $70,000 off on a $1.0m property — useful for research, not precise enough to treat as a valuation.</p>
+    <p>The 80% interval is built from the model's out-of-fold errors. It means that, on the validation sample, about 80% of actual values fell inside the stated interval. It is a calibration check, not a guarantee for a particular property.</p>
+    <table>
+      <thead><tr><th>Signal (28 Oct 2026 snapshot)</th><th>Reference / test</th><th>Typical error</th><th>How to read it</th></tr></thead>
+      <tbody>
+        <tr><td>Hedonic fallback with CV</td><td>5-fold cross-validation against Homes AVM; 497 training cases</td><td class="num">MAE $265k · MAPE 7.0% · R² 0.973</td><td>The most accurate fallback, but the target is an AVM, not a sale price.</td></tr>
+        <tr><td>Hedonic fallback without CV</td><td>Same test with CV removed</td><td class="num">MAE $756k · MAPE 24.6% · R² 0.784</td><td>A deliberately harder stress test; much weaker and labelled low confidence.</td></tr>
+        <tr><td>Comparable-sales model</td><td>Compared with Homes AVM on the same listings</td><td class="num">MAE $275k · MAPE 7.2% · R² 0.969</td><td>A useful independent check when an AVM exists; smaller samples make it fragile.</td></tr>
+        <tr><td>Sale-price model</td><td>316 recorded sold prices</td><td class="num">MAE $195k · MAPE 13.4% · R² 0.830</td><td>A different target: actual sale prices. It is a cross-check, not the primary range.</td></tr>
+        <tr><td>Old suburb-guide baseline</td><td>Same validation sample</td><td class="num">MAE $1.22m · MAPE 47.5%</td><td>Shows how much the calibrated fallback improves on a crude suburb median.</td></tr>
+      </tbody>
+    </table>
+    <p>Two cautions matter. First, the with-CV model is accurate partly because both the AVM and the CV are closely related. Second, the validation is random 5-fold cross-validation, not a time-based backtest. Daily snapshots will make a genuine temporal test possible later; until then the error figures should be read as internal validation, not an external audit.</p>
+  </section>
+
+  <section id="pressure">
+    <h2>6. Sale method and motivation pressure</h2>
+    <p>Sale method is stored on a rough six-step ladder:</p>
+    <table>
+      <thead><tr><th>Stage</th><th>Method</th><th>Interpretation</th></tr></thead>
+      <tbody>
+        <tr><td class="num">0</td><td>Auction</td><td>Vendor is testing the market and may accept a pre-auction offer.</td></tr>
+        <tr><td class="num">1</td><td>Tender</td><td>Buyers submit offers by a deadline.</td></tr>
+        <tr><td class="num">2</td><td>Deadline sale</td><td>Similar to tender, with a stated deadline.</td></tr>
+        <tr><td class="num">3</td><td>Price by negotiation</td><td>No public number; a range may be discussed.</td></tr>
+        <tr><td class="num">4</td><td>Price guide / enquiries over</td><td>A public expectation, often expressed as a floor.</td></tr>
+        <tr><td class="num">5</td><td>Asking price</td><td>An explicit advertised number.</td></tr>
+      </tbody>
+    </table>
+    <p>The 0–100 <strong>sale-pressure score</strong> is a bounded motivation proxy, not a prediction:</p>
+    <div class="eq"><span class="eq-label">Sale-pressure score</span>score = 50 × (stage / 5)<br>      + 30 × min(days_on_market, 180) / 180<br>      + min(20, 8 × price_drops + 10 × method_changes)</div>
+    <p class="explain"><strong>In plain language:</strong> half the score reflects how explicit the vendor's price signal is, 30% reflects how long the property has been listed, and up to 20 points reflect observed price reductions or method changes in the last 180 days. A score of 40–64 is labelled medium and 65+ high. The weights are a transparent heuristic, not estimated from outcomes.</p>
+    <p>A cross-sectional test found no statistically significant stage coefficient after controlling for suburb, type, size and other factors. That is why the app calls this a <strong>motivation or urgency proxy</strong>, not a price predictor. With enough daily price and method changes, it will be possible to test within-listing transitions rather than only differences between listings.</p>
+  </section>
+
+  <section id="text">
+    <h2>7. Description, topics and text signals</h2>
+    <p>Listing descriptions are public marketing copy. The project tests whether the way an agent writes carries information about price after controlling for the property and the location. It does not treat adjectives as facts.</p>
+    <h3>Cleaning</h3>
+    <p>Descriptions are normalised, stripped of HTML and contact details, and cleaned of cross-listing boilerplate such as agency names, viewing logistics, tender dates and repeated developer copy. Target suburb names are redacted before topic modelling so that “Milford” or “St Heliers” cannot become a topic that simply duplicates location.</p>
+    <h3>Topics</h3>
+    <p>TF-IDF converts words and two-word phrases into weighted counts; NMF (non-negative matrix factorisation) groups co-occurring terms into 12 topics. Each listing receives a topic share that sums to one. A listing can be partly about family living, partly about renovation, and so on.</p>
+    <div class="eq"><span class="eq-label">Topic shares</span>W = topic weights from NMF (non-negative)<br>shareᵢ = Wᵢ / ΣW</div>
+    <p class="explain">NMF is a way of finding recurring mixtures of words without being told the topics in advance. The labels are editorial summaries; the top terms in the Research Lab are the authoritative description of each topic.</p>
+    <h3>Lexicon signals</h3>
+    <p>A small set of pre-specified word groups scores urgency, luxury, renovation/condition, views/waterfront, family/schools and investment language. These scores are descriptive. They are not added to the primary value range.</p>
+    <h3>What the tests found</h3>
+    <ul>
+      <li>Adding text features improved a no-CV structural model in cross-validation, but adding text to the full model with CV made it slightly worse.</li>
+      <li>After Benjamini–Hochberg false-discovery-rate correction across the tested features, <strong>no individual topic or lexicon survived at 5%</strong> for the AVM/CV premium or the advertised-price gap.</li>
+      <li>The honest conclusion is a null result for individual text effects in this snapshot. Topic shares remain an exploratory signal and a way to compare copy over time, not a valuation input.</li>
+    </ul>
+    <div class="callout"><strong>Why report a null result?</strong> Because a research project is more useful when it says what did not work. Marketing language is correlated with price in raw comparisons, but after location, size, type and method are controlled for, it does not reliably explain the premium in this sample.</div>
+  </section>
+
+  <section id="history">
+    <h2>8. Dated price changes and vendor behaviour</h2>
+    <p>From the 28 October 2026 build, every listing has a dated asking-price history. The unit is a <strong>distinct observed price state</strong>, not a row for every day.</p>
+    <h3>What is recorded</h3>
+    <ul>
+      <li><strong>first_observed</strong> — the first price state seen for that listing.</li>
+      <li><strong>price_change</strong> — a genuine movement from one number to another.</li>
+      <li><strong>price_set</strong> — a listing moves from no asking price (auction, tender, POA) to a number.</li>
+      <li><strong>price_removed</strong> — a number is withdrawn in favour of a no-price campaign.</li>
+      <li><strong>price_display_change</strong> — the wording changes without a numeric move, such as “enquiries over” to “asking”.</li>
+      <li><strong>description_change</strong> — the marketing copy changes between captures; the event stores a digest and character counts, not the private full text.</li>
+    </ul>
+    <p>For each row the project stores the observed date, price, display text, sale method, previous price, dollar change, percentage change and days since the previous observation.</p>
+    <div class="eq"><span class="eq-label">Change calculations</span>change = new_price − old_price<br>change_percent = change / old_price × 100%<br>days_between = date(new observation) − date(previous observation)</div>
+    <p><strong>Worked example.</strong> A St Heliers listing was first observed at $1,690,000 on 23 October 2026. On 28 October it was $1,550,000. The change is −$140,000, or −8.3%, over 4.34 days. That is a fact about what was observed. It is not yet evidence that the property will sell at $1.55m.</p>
+    <p>The per-listing summary adds the useful aggregates: number of price changes, days to first change, average days between changes, cumulative change, largest drop and last direction. This is the raw material for later questions such as whether reductions cluster at particular listing ages, whether a description edit precedes a price cut, and how quickly vendors respond to a slow campaign.</p>
+    <div class="callout"><strong>Early sample warning:</strong> the current snapshot has only a few days of daily price-change history. The observed counts and medians are real, but they are far too small for a reliable general estimate of how fast Auckland vendors move. The document marks this as a growing panel, not a completed study.</div>
+  </section>
+
+  <section id="reproduce">
+    <h2>9. Reproducibility and downloads</h2>
+    <p>The project is designed so that another person can check the work rather than trust the interface.</p>
+    <ul>
+      <li>The SQLite schema is public, including price history, events, model predictions and text tables.</li>
+      <li>The public release contains the compact database, schema, selected CSV extracts, analysis code, the release manifest and SHA-256 checksums.</li>
+      <li>A verification command checks the manifest, file hashes, SQLite integrity and row counts.</li>
+      <li>Raw third-party listing descriptions and photos are kept out of the public release. Derived features, metrics and code remain available, and the scraper is included so the source data can be collected independently.</li>
+    </ul>
+    <div class="eq"><span class="eq-label">Rebuild locally</span>python3 -m db.build<br>python3 -m analysis.research_digest<br>python3 -m release.build --out release/out --keep 12</div>
+    <p>The latest public release is linked from the project page and from the app's <a href="../data/release/manifest.json">release manifest</a>. Derived data is published under CC BY 4.0; code is under MIT. The source listing content remains subject to Trade Me's terms and is not redistributed.</p>
+  </section>
+
+  <section id="limits">
+    <h2>10. Limitations and honest claims</h2>
+    <ul>
+      <li><strong>The main target is an AVM, not a sale price.</strong> A model can track Homes.co.nz well without being a good predictor of what a property will sell for.</li>
+      <li><strong>The sample is selected.</strong> Homes AVM matches ordinary houses more often than new builds, units and unusual titles. The fallback is therefore trained on a non-random subset and applied elsewhere; confidence labels reflect that.</li>
+      <li><strong>Validation is not a temporal backtest.</strong> Random folds test internal generalisation. A true time-based test needs a longer daily panel.</li>
+      <li><strong>Comparable ranges can be thin.</strong> Nearby sales are a limited public sample, not a complete sales register. Two or three sales can produce a range that looks more precise than the evidence supports.</li>
+      <li><strong>CV is a lagging anchor.</strong> Council values are updated periodically and are not a current market price.</li>
+      <li><strong>Tenure is inferred from words.</strong> Leasehold and cross-lease flags come from listing text; the title and ground rent must be checked directly.</li>
+      <li><strong>Price history is young.</strong> The first reliable changes were captured in late October 2026. Early medians will move as the panel grows.</li>
+      <li><strong>Text effects are null after correction.</strong> Topics and lexicon scores are exploratory, not causal price premiums.</li>
+      <li><strong>No causation, no forecast.</strong> The project reports associations and observed behaviour. It does not claim that a particular feature causes a price, or that a price will move in a particular direction.</li>
+    </ul>
+    <p>Where a number is uncertain, the interface should say so through a range, a confidence label, a source date or a caveat. If it does not, treat that as a defect to report, not as a stronger claim.</p>
+  </section>
+
+  <section id="glossary">
+    <h2>11. Glossary</h2>
+    <dl class="glossary">
+      <dt>Asking price</dt><dd>The number a vendor or agent currently advertises. It is a negotiating position, not a sale price.</dd>
+      <dt>AVM</dt><dd>Automated valuation model. A statistical estimate produced by a data provider, in this project primarily Homes.co.nz.</dd>
+      <dt>CV</dt><dd>Council capital value. An official rating value, updated periodically and used here as a cross-check and for comparable normalisation.</dd>
+      <dt>Comparable sale</dt><dd>A nearby sold property used as evidence for a subject property. In this project it is weighted by distance, recency, type and same-suburb match.</dd>
+      <dt>Hedonic model</dt><dd>A model that estimates a value from property characteristics such as size, bedrooms, location and CV.</dd>
+      <dt>MAE</dt><dd>Mean absolute error: the average dollar miss between predictions and reference values.</dd>
+      <dt>MAPE</dt><dd>Mean absolute percentage error: the average miss as a percentage of the reference value.</dd>
+      <dt>R²</dt><dd>The share of variation in the reference that a model explains. It is not a measure of whether the reference is correct.</dd>
+      <dt>80% interval</dt><dd>A range intended to contain about 80% of validation outcomes. Its coverage is checked empirically.</dd>
+      <dt>NMF</dt><dd>Non-negative matrix factorisation. A method for finding recurring mixtures of words in a document collection.</dd>
+      <dt>BH-FDR</dt><dd>Benjamini–Hochberg false discovery rate. A correction for testing many hypotheses at once; it makes it harder for a lucky result to look significant.</dd>
+      <dt>DOM</dt><dd>Days on market: how long a listing has been publicly advertised.</dd>
+      <dt>Price state</dt><dd>A distinct observed combination of asking price/display and sale method. Repeated daily captures of the same state do not create duplicate rows.</dd>
+      <dt>Delisted</dt><dd>A listing absent from a complete 17-suburb search. It is retained in the database with a date rather than deleted.</dd>
+    </dl>
+  </section>
+
+  <div class="footer">
+    <p><strong>Auckland Property Scout</strong> · independent research project by Yuqian Zhang · version 1.0 · 28 October 2026.</p>
+    <p>This document is explanatory, not a valuation, not financial or legal advice, and not a substitute for professional due diligence. Current metrics and the live interface: <a href="../#/research">Research Lab</a>. Download: <a href="auckland-property-methodology.pdf">PDF</a>.</p>
+  </div>
+</div>
+</body>
+</html>

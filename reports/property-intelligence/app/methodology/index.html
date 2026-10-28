@@ -159,6 +159,7 @@
     <ol>
       <li><a href="#scope">What this project is — and what it is not</a></li>
       <li><a href="#data">The data: what is collected and when</a></li>
+      <li><a href="#profiles">Tenure, build year and sale history</a></li>
       <li><a href="#prices">The price shown on the map and in the listings</a></li>
       <li><a href="#range">How a value range is built</a></li>
       <li><a href="#error">Error, confidence and validation</a></li>
@@ -220,6 +221,27 @@
     <p>At the 28 October 2026 snapshot the database contains just over 1,000 captured listings, of which about 1,000 are active and standard. Those counts change every day; the app displays the current figures.</p>
   </section>
 
+  <section id="profiles">
+    <h2>3. Tenure, build year and sale history</h2>
+    <p>Three property-level variables are needed for research even though Trade Me often omits them: <strong>tenure</strong>, <strong>when the property was built</strong>, and its <strong>previous sale history</strong>. They are collected from Homes.co.nz property records when a property match exists.</p>
+    <h3>Tenure</h3>
+    <p>The canonical values are <strong>freehold</strong>, <strong>cross-lease</strong>, <strong>leasehold</strong>, <strong>unit title</strong> and <strong>unknown</strong>. Freehold usually means the owner holds the land and improvements (subject to title conditions); cross-lease and unit title are different shared-ownership arrangements; leasehold means the land is leased and ground rent may apply. Trade Me listing text is used as a fallback only when a Homes record is unavailable.</p>
+    <div class="callout"><strong>Important:</strong> “unknown” is not treated as freehold. A missing tenure is left missing. The Research Lab reports the coverage rate so the reader can see how much of the sample has a source-backed record.</div>
+    <h3>Build year</h3>
+    <p>Homes publishes a build decade and, for many properties, a build event in the property timeline. The project stores an approximate build year and its source. It is shown as <span class="num">c. 1960</span>, not as an exact construction date. Age can support a valuation discussion — older homes may have different maintenance, renovation and character assumptions — but it is not used as a standalone price predictor.</p>
+    <h3>Sale history</h3>
+    <p>The Homes property timeline contains previous transaction records: sale date, price where disclosed, record type and council-confirmation status. These are stored in <code>property_sales</code> and displayed as a separate table in the listing drawer. A previous sale is historical evidence; it is not the current asking price and does not imply that the same price will apply now.</p>
+    <table>
+      <thead><tr><th>Profile field</th><th>Source</th><th>At the 28 Oct 2026 snapshot</th></tr></thead>
+      <tbody>
+        <tr><td>Tenure</td><td>Homes.co.nz ownership record; listing text fallback; otherwise unknown</td><td class="num">69% of standard active listings known</td></tr>
+        <tr><td>Approximate build year</td><td>Homes built event/decade</td><td class="num">49% known</td></tr>
+        <tr><td>Previous sale records</td><td>Homes property timeline</td><td class="num">1,466 records across 458 listings</td></tr>
+      </tbody>
+    </table>
+    <p>Coverage is reported rather than filled with guesses. The daily refresh adds new matches and refreshes stale profiles; a random source-to-database audit is part of the quality checks.</p>
+  </section>
+
   <section id="prices">
     <h2>3. The price shown on the map and in the listings</h2>
     <p>There are two different ideas in property data that are easy to confuse:</p>
@@ -235,7 +257,7 @@
   </section>
 
   <section id="range">
-    <h2>4. How a value range is built</h2>
+    <h2>5. How a value range is built</h2>
     <p>The project uses a hierarchy. It does not blend every signal into one black box. Each signal is presented with its source and confidence, and the next method is used only when the earlier one is unavailable or unreliable.</p>
     <h3>Step 1 — Find the advertised signal</h3>
     <p>The listing page is read for an asking price, a guide (“enquiries over”), an auction date or a deadline. This tells the model how the vendor is asking buyers to respond. It is not treated as a valuation.</p>
@@ -268,7 +290,7 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
   </section>
 
   <section id="error">
-    <h2>5. Error, confidence and validation</h2>
+    <h2>6. Error, confidence and validation</h2>
     <p>A range is only useful if its error is measured. The project reports three standard quantities.</p>
     <div class="eq"><span class="eq-label">Error measures</span>MAE  = average(|prediction − reference|)<br>MAPE = average(|prediction − reference| ÷ reference) × 100%<br>R²   = share of variation in the reference explained by the model</div>
     <p class="explain"><strong>MAE</strong> is the average dollar miss. <strong>MAPE</strong> turns that miss into a percentage, which is easier to compare across cheap and expensive properties. <strong>R²</strong> runs from 0 to 1; higher means the model tracks the reference more closely, but it says nothing about whether the reference itself is right.</p>
@@ -288,7 +310,7 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
   </section>
 
   <section id="pressure">
-    <h2>6. Sale method and motivation pressure</h2>
+    <h2>7. Sale method and motivation pressure</h2>
     <p>Sale method is stored on a rough six-step ladder:</p>
     <table>
       <thead><tr><th>Stage</th><th>Method</th><th>Interpretation</th></tr></thead>
@@ -308,7 +330,7 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
   </section>
 
   <section id="text">
-    <h2>7. Description, topics and text signals</h2>
+    <h2>8. Description, topics and text signals</h2>
     <p>Listing descriptions are public marketing copy. The project tests whether the way an agent writes carries information about price after controlling for the property and the location. It does not treat adjectives as facts.</p>
     <h3>Cleaning</h3>
     <p>Descriptions are normalised, stripped of HTML and contact details, and cleaned of cross-listing boilerplate such as agency names, viewing logistics, tender dates and repeated developer copy. Target suburb names are redacted before topic modelling so that “Milford” or “St Heliers” cannot become a topic that simply duplicates location.</p>
@@ -328,7 +350,7 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
   </section>
 
   <section id="history">
-    <h2>8. Dated price changes and vendor behaviour</h2>
+    <h2>9. Dated price changes and vendor behaviour</h2>
     <p>From the 28 October 2026 build, every listing has a dated asking-price history. The unit is a <strong>distinct observed price state</strong>, not a row for every day.</p>
     <h3>What is recorded</h3>
     <ul>
@@ -347,7 +369,7 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
   </section>
 
   <section id="reproduce">
-    <h2>9. Reproducibility and downloads</h2>
+    <h2>10. Reproducibility and downloads</h2>
     <p>The project is designed so that another person can check the work rather than trust the interface.</p>
     <ul>
       <li>The SQLite schema is public, including price history, events, model predictions and text tables.</li>
@@ -360,7 +382,7 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
   </section>
 
   <section id="limits">
-    <h2>10. Limitations and honest claims</h2>
+    <h2>11. Limitations and honest claims</h2>
     <ul>
       <li><strong>The main target is an AVM, not a sale price.</strong> A model can track Homes.co.nz well without being a good predictor of what a property will sell for.</li>
       <li><strong>The sample is selected.</strong> Homes AVM matches ordinary houses more often than new builds, units and unusual titles. The fallback is therefore trained on a non-random subset and applied elsewhere; confidence labels reflect that.</li>
@@ -368,6 +390,8 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
       <li><strong>Comparable ranges can be thin.</strong> Nearby sales are a limited public sample, not a complete sales register. Two or three sales can produce a range that looks more precise than the evidence supports.</li>
       <li><strong>CV is a lagging anchor.</strong> Council values are updated periodically and are not a current market price.</li>
       <li><strong>Tenure is inferred from words.</strong> Leasehold and cross-lease flags come from listing text; the title and ground rent must be checked directly.</li>
+      <li><strong>Tenure and build-year coverage are incomplete.</strong> About 69% of standard active listings have a source-backed tenure record and about 49% have a build year in this snapshot. Unknown stays unknown; it is not assumed to be freehold.</li>
+      <li><strong>Previous sale prices may be withheld.</strong> A transfer event can exist without a disclosed price; it is retained with a null price rather than fabricated.</li>
       <li><strong>Price history is young.</strong> The first reliable changes were captured in late October 2026. Early medians will move as the panel grows.</li>
       <li><strong>Text effects are null after correction.</strong> Topics and lexicon scores are exploratory, not causal price premiums.</li>
       <li><strong>No causation, no forecast.</strong> The project reports associations and observed behaviour. It does not claim that a particular feature causes a price, or that a price will move in a particular direction.</li>
@@ -376,7 +400,7 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
   </section>
 
   <section id="glossary">
-    <h2>11. Glossary</h2>
+    <h2>12. Glossary</h2>
     <dl class="glossary">
       <dt>Asking price</dt><dd>The number a vendor or agent currently advertises. It is a negotiating position, not a sale price.</dd>
       <dt>AVM</dt><dd>Automated valuation model. A statistical estimate produced by a data provider, in this project primarily Homes.co.nz.</dd>

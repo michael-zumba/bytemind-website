@@ -11,13 +11,13 @@
   "parking": 2,
   "land_area": null,
   "floor_area": null,
-  "price_display": "Price by negotiation",
-  "asking_price": null,
-  "asking_kind": null,
-  "sale_method": "Price by negotiation",
+  "price_display": "Asking price $1,750,000",
+  "asking_price": 1750000,
+  "asking_kind": "asking",
+  "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-12T22:08:26.133000+00:00",
-  "days_on_market": 14,
+  "days_on_market": 15,
   "lat": -36.8537991,
   "lon": 174.8629675,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2334789887.jpg",
@@ -31,12 +31,12 @@
   "estimate_updated_at": null,
   "comp_low": 1325000,
   "comp_mid": 1900000,
-  "comp_high": 2711000,
+  "comp_high": 2750000,
   "comp_confidence": "low",
-  "comp_n": 60,
+  "comp_n": 63,
   "value_low": 1325000,
   "value_mid": 1900000,
-  "value_high": 2711000,
+  "value_high": 2750000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,24 +51,24 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1871,
+  "view_count": 1943,
   "watchers": 86,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
   "status": "active",
   "delisted_at": null,
-  "sale_method_stage": 3,
-  "sale_pressure": 32.3,
-  "sale_pressure_label": "low",
-  "model_low": 1066834,
-  "model_mid": 1558303,
-  "model_high": 2206156,
+  "sale_method_stage": 5,
+  "sale_pressure": 62.5,
+  "sale_pressure_label": "medium",
+  "model_low": 949393,
+  "model_mid": 1360469,
+  "model_high": 1918198,
   "model_confidence": "low",
-  "text_signal_pct": -17.3439,
-  "description_index": -0.872383,
-  "events_count": 0,
-  "last_event": null,
+  "text_signal_pct": -19.4498,
+  "description_index": -0.980223,
+  "events_count": 2,
+  "last_event": "price_change",
   "schools": [
     {
       "id": 61,
@@ -253,11 +253,11 @@
   ],
   "model": {
     "listing_id": 6176751508,
-    "low": 1066834,
-    "mid": 1558303,
-    "high": 2206156,
+    "low": 949393,
+    "mid": 1360469,
+    "high": 1918198,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3789, 0.3477], \"rel_width\": 0.7311, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6176751508,
@@ -265,99 +265,114 @@
     "exclamations": 1,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.5917,
+    "condition_renovation": 0.5932,
     "views_waterfront": 0.0,
-    "family_school": 0.6783,
+    "family_school": 0.6807,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4384,
-    "description_premium_pct": -17.3439,
-    "description_index": -0.872383,
+    "description_premium_pct": -19.4498,
+    "description_index": -0.980223,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 5, \"views_waterfront\": 0, \"family_school\": 14, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T08:23:32.650906+00:00",
+    "updated_at": "2026-10-28T15:40:38.863757+00:00",
     "top_topics": [
       {
         "topic_id": 7,
-        "weight": 0.336545,
+        "weight": 0.366103,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "single",
           "brick",
+          "single",
           "unit",
           "sunny",
+          "street",
+          "ready",
           "maintenance",
           "low",
-          "street",
-          "low maintenance",
+          "garden",
           "renovated",
           "parking",
-          "fully",
-          "garden"
+          "low maintenance"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.228389,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "modern",
+          "quality",
+          "brand",
+          "brand new",
+          "new",
+          "comfort",
+          "stylish",
+          "convenience",
+          "outdoor flow",
+          "light filled",
+          "contemporary",
+          "internal access"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.190303,
+        "weight": 0.200333,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "ensuite",
           "wardrobe",
           "walk wardrobe",
           "bathroom",
+          "separate",
           "lounge",
           "suite",
-          "separate",
-          "level",
-          "upstairs",
-          "master",
           "walk",
-          "dining"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.154944,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "indoor outdoor",
-          "indoor",
-          "outdoor flow",
-          "flow",
-          "outdoor",
-          "seamless indoor",
-          "seamless",
-          "quality",
-          "modern",
-          "comfort",
-          "light filled",
-          "excellent"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.111746,
-        "label": "New build / brand-new quality II",
-        "top_terms": [
-          "brand new",
-          "brand",
-          "new",
-          "lot",
-          "standalone",
-          "floor area",
-          "sqm floor",
-          "bedrooms bathrooms",
-          "homes",
-          "sqm",
+          "upstairs",
+          "level",
           "floor",
-          "modern"
+          "master"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.101772,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "friends",
+          "relaxed",
+          "room",
+          "setting",
+          "entertaining",
+          "life",
+          "children",
+          "summer",
+          "outdoor",
+          "peaceful",
+          "sense",
+          "spaces"
         ]
       }
     ]
   },
   "sales_history": [],
   "sale_outcome": null,
-  "sale_events": [],
+  "sale_events": [
+    {
+      "event_type": "method_change",
+      "event_at": "2026-10-28T15:28:35.191513+00:00",
+      "old_value": "negotiation/",
+      "new_value": "asking/asking",
+      "detail_json": "{\"old\": [\"negotiation\", null], \"new\": [\"asking\", \"asking\"]}"
+    },
+    {
+      "event_type": "price_change",
+      "event_at": "2026-10-28T15:28:35.191513+00:00",
+      "old_value": "",
+      "new_value": "1750000",
+      "detail_json": "{\"direction\": \"set\", \"old_display\": \"Price by negotiation\", \"new_display\": \"Asking price $1,750,000\"}"
+    }
+  ],
   "price_history": [
     {
       "observed_at": "2026-10-23T06:56:08.308726+00:00",
@@ -370,28 +385,40 @@
       "change_pct": null,
       "days_since_previous": null,
       "source": "snapshot"
+    },
+    {
+      "observed_at": "2026-10-28T15:28:35.191513+00:00",
+      "price": 1750000,
+      "price_display": "Asking price $1,750,000",
+      "sale_method": null,
+      "event_type": "price_set",
+      "previous_price": null,
+      "change_amount": null,
+      "change_pct": null,
+      "days_since_previous": 5.36,
+      "source": "event"
     }
   ],
   "price_dynamics": {
     "listing_id": 6176751508,
-    "first_price": null,
-    "current_price": null,
-    "n_observations": 1,
-    "n_price_changes": 0,
+    "first_price": 1750000,
+    "current_price": 1750000,
+    "n_observations": 2,
+    "n_price_changes": 1,
     "n_description_changes": 0,
-    "first_change_at": null,
-    "last_change_at": null,
+    "first_change_at": "2026-10-28T15:28:35.191513+00:00",
+    "last_change_at": "2026-10-28T15:28:35.191513+00:00",
     "first_description_change_at": null,
     "last_description_change_at": null,
-    "days_to_first_change": null,
-    "days_since_last_change": null,
+    "days_to_first_change": 5.36,
+    "days_since_last_change": 0.01,
     "avg_days_between_changes": null,
-    "cumulative_change": null,
-    "cumulative_change_pct": null,
+    "cumulative_change": 0,
+    "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
-    "last_direction": null,
-    "updated_at": "2026-10-28T08:23:32.373758+00:00"
+    "last_direction": "set",
+    "updated_at": "2026-10-28T15:40:38.621404+00:00"
   },
   "body": "Tucked away in a quiet cul-de-sac, 6/21 McArthur Avenue offers a great combination of modern living, space and convenience in the heart of St Heliers.\r\n\r\nRecently renovated to a high standard with quality finishes throughout, this beautifully presented 3-bedroom, 3-bathroom home is ready to move into and enjoy. At approx. 177sqm, the home has been thoughtfully laid out to make the most of every part of the property. Upstairs, you’ll find three generous bedrooms and two bathrooms, including an ensuite, along with open-plan living and dining that opens out to a fully fenced deck and low-maintenance garden.\r\n\r\nWith its generous proportions, flexible living spaces and easy-care outdoor areas, it will appeal to families, professionals and those looking for a low-maintenance lifestyle without compromising on space.\r\n\r\nThe separate living area downstairs gives you the flexibility to use the space however it best suits your needs a second lounge, home office, guest space or somewhere for the kids to hang out. There is also a third bathroom on the lower level, adding extra convenience for guests and everyday family living.\r\n\r\nThe practical details have been well considered, with an internal-access garage, fully fenced outdoor areas and plenty of privacy.\r\n\r\nProperty highlights:\r\n\r\nApprox 177sqm of well-planned living\r\nRecently renovated to a high standard\r\nQuality finishes throughout\r\n3 generous bedrooms\r\n3 bathrooms, including ensuite\r\nTwo separate living areas\r\nOpen-plan living and dining\r\nFully fenced deck and easy-care garden\r\nInternal-access garage\r\nPrivate position in a quiet cul-de-sac\r\nWalking distance to St Heliers Village\r\nZoned for St Heliers Bay Primary School and Glendowie College\r\n\r\nThere’s plenty of room here for a family to grow and enjoy everything this location has to offer, from the village atmosphere and local amenities to the excellent schooling options close by.\r\n\r\nFor those looking to downsize, it also offers the space and flexibility that can be hard to find, while remaining easy to lock up and leave — ideal for those who travel or spend time away.\r\n\r\nWith the renovation already taken care of, this is a home where you can simply move in, settle in and enjoy.\r\n\r\nOur motivated vendor is ready to move forward, so we encourage you to get in touch and arrange a viewing.\r\n\r\nCall today to arrange your private viewing!",
   "photos": [
@@ -427,7 +454,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1600000,
-      "estimate_mid": 1330000
+      "estimate_mid": 1300000
     },
     {
       "property_id": "41afaf59-d58c-49c2-be42-6ee7d2a1f50d",
@@ -455,21 +482,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2925000,
-      "estimate_mid": 3100000
-    },
-    {
-      "property_id": "b00d0e9f-5399-48ef-aac1-8c7b554cb85d",
-      "address": "65 Maskell Street, St Heliers, Auckland",
-      "sale_price": 2410500,
-      "sale_date": "2026-07-30T00:00:00+00:00",
-      "distance_km": 0.41,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1975000,
-      "estimate_mid": 2520000
+      "estimate_mid": 3090000
     },
     {
       "property_id": "807207e8-19f2-494a-9f78-79ac855c9a1b",
@@ -483,7 +496,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2250000,
-      "estimate_mid": 2490000
+      "estimate_mid": 2480000
     },
     {
       "property_id": "db056d2b-da1d-4639-afaa-5a2ef3730247",
@@ -511,7 +524,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1775000,
-      "estimate_mid": 1690000
+      "estimate_mid": 1680000
     },
     {
       "property_id": "c25886d2-340b-415f-b04b-02ff5dcbbf5c",
@@ -525,7 +538,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2650000,
-      "estimate_mid": 3190000
+      "estimate_mid": 3180000
     },
     {
       "property_id": "8add2387-222d-4aa4-b887-1e6cf5dd9d91",
@@ -539,7 +552,21 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1725000,
-      "estimate_mid": 1720000
+      "estimate_mid": 1710000
+    },
+    {
+      "property_id": "13629bfd-0821-4b4e-af6c-65c1e7a91fd5",
+      "address": "34A Goldie Street, St Heliers, Auckland",
+      "sale_price": 3000000,
+      "sale_date": "2026-08-30T00:00:00+00:00",
+      "distance_km": 0.61,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 3175000,
+      "estimate_mid": 3020000
     },
     {
       "property_id": "9d13664a-9e97-41af-94f8-e6971cf340ef",
@@ -553,7 +580,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2575000,
-      "estimate_mid": 3110000
+      "estimate_mid": 3130000
     },
     {
       "property_id": "354dd593-dd84-4f73-952d-2d11c1cdc218",
@@ -567,7 +594,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 3075000,
-      "estimate_mid": 3050000
+      "estimate_mid": 3040000
     },
     {
       "property_id": "465d8f3d-f557-41da-a452-676324fda3fa",
@@ -587,26 +614,26 @@
   "valuation": {
     "value_low": 1325000,
     "value_mid": 1900000,
-    "value_high": 2711000,
+    "value_high": 2750000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.32M – $2.71M",
+        "range": "$1.32M – $2.75M",
         "low": 1325000,
         "mid": 1900000,
-        "high": 2711000,
-        "updated_at": "2026-10-28T08:23:32.373758+00:00",
+        "high": 2750000,
+        "updated_at": "2026-10-28T15:40:38.621404+00:00",
         "confidence": "low",
-        "n": 60,
+        "n": 63,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 60,
-          "n_eff": 20.67,
+          "n": 63,
+          "n_eff": 21.21,
           "radius_km": 3.0,
-          "iqr_ratio": 0.7295,
+          "iqr_ratio": 0.75,
           "same_suburb": 22,
           "model_version": "comp-cv-v1"
         }

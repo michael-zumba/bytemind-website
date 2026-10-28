@@ -11,13 +11,13 @@
   "parking": 2,
   "land_area": null,
   "floor_area": 165.0,
-  "price_display": "Enquiries over $1,200,000",
-  "asking_price": 1200000,
-  "asking_kind": "enquiries_over",
-  "sale_method": "Asking price",
+  "price_display": "Price by negotiation",
+  "asking_price": null,
+  "asking_kind": null,
+  "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-05-19T21:11:29.157000+00:00",
-  "days_on_market": 160,
+  "days_on_market": 161,
   "lat": -36.8633345,
   "lon": 174.8334233,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2328668707.jpg",
@@ -29,13 +29,13 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1275000,
-  "comp_mid": 1810000,
+  "comp_low": 1208000,
+  "comp_mid": 1780000,
   "comp_high": 2580000,
   "comp_confidence": "low",
-  "comp_n": 60,
-  "value_low": 1275000,
-  "value_mid": 1810000,
+  "comp_n": 64,
+  "value_low": 1208000,
+  "value_mid": 1780000,
   "value_high": 2580000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
@@ -51,24 +51,24 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 8714,
-  "watchers": 142,
+  "view_count": 8774,
+  "watchers": 143,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
   "status": "active",
   "delisted_at": null,
-  "sale_method_stage": 4,
-  "sale_pressure": 66.7,
+  "sale_method_stage": 3,
+  "sale_pressure": 66.8,
   "sale_pressure_label": "high",
-  "model_low": 953970,
-  "model_mid": 1393444,
-  "model_high": 1972758,
+  "model_low": 1098730,
+  "model_mid": 1574466,
+  "model_high": 2219925,
   "model_confidence": "low",
-  "text_signal_pct": -31.7015,
-  "description_index": -1.746228,
-  "events_count": 0,
-  "last_event": null,
+  "text_signal_pct": -25.1304,
+  "description_index": -1.311659,
+  "events_count": 2,
+  "last_event": "price_change",
   "schools": [
     {
       "id": 61,
@@ -273,11 +273,11 @@
   ],
   "model": {
     "listing_id": 5944201937,
-    "low": 953970,
-    "mid": 1393444,
-    "high": 1972758,
+    "low": 1098730,
+    "mid": 1574466,
+    "high": 2219925,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3789, 0.3477], \"rel_width\": 0.7311, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5944201937,
@@ -286,98 +286,113 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.1201,
-    "family_school": 0.1409,
+    "views_waterfront": 0.1204,
+    "family_school": 0.1414,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4736,
-    "description_premium_pct": -31.7015,
-    "description_index": -1.746228,
+    "description_premium_pct": -25.1304,
+    "description_index": -1.311659,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 1, \"family_school\": 2, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T08:23:32.650906+00:00",
+    "updated_at": "2026-10-28T15:40:38.863757+00:00",
     "top_topics": [
       {
         "topic_id": 10,
-        "weight": 0.607059,
-        "label": "New build / brand-new quality II",
+        "weight": 0.455314,
+        "label": "Development & land potential II",
         "top_terms": [
-          "brand new",
-          "brand",
-          "new",
           "lot",
-          "standalone",
+          "sqm",
           "floor area",
           "sqm floor",
-          "bedrooms bathrooms",
-          "homes",
-          "sqm",
+          "area sqm",
           "floor",
-          "modern"
+          "bedrooms bathrooms",
+          "sqm land",
+          "land",
+          "homes",
+          "brand new",
+          "brand"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.182899,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "modern",
+          "quality",
+          "brand",
+          "brand new",
+          "new",
+          "comfort",
+          "stylish",
+          "convenience",
+          "outdoor flow",
+          "light filled",
+          "contemporary",
+          "internal access"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.138543,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "brick",
+          "single",
+          "unit",
+          "sunny",
+          "street",
+          "ready",
+          "maintenance",
+          "low",
+          "garden",
+          "renovated",
+          "parking",
+          "low maintenance"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.132542,
+        "weight": 0.122538,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "ensuite",
           "wardrobe",
           "walk wardrobe",
           "bathroom",
+          "separate",
           "lounge",
           "suite",
-          "separate",
-          "level",
-          "upstairs",
-          "master",
           "walk",
-          "dining"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.117726,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "single",
-          "brick",
-          "unit",
-          "sunny",
-          "maintenance",
-          "low",
-          "street",
-          "low maintenance",
-          "renovated",
-          "parking",
-          "fully",
-          "garden"
-        ]
-      },
-      {
-        "topic_id": 4,
-        "weight": 0.081211,
-        "label": "Apartment / lock-up-and-leave",
-        "top_terms": [
-          "apartment",
-          "lock",
-          "leave",
-          "lock leave",
-          "car",
-          "bedroom apartment",
-          "restaurants",
-          "complex",
-          "car park",
-          "bedroom",
-          "balcony",
-          "apartments"
+          "upstairs",
+          "level",
+          "floor",
+          "master"
         ]
       }
     ]
   },
   "sales_history": [],
   "sale_outcome": null,
-  "sale_events": [],
+  "sale_events": [
+    {
+      "event_type": "method_change",
+      "event_at": "2026-10-28T15:25:32.909046+00:00",
+      "old_value": "asking/enquiries_over",
+      "new_value": "negotiation/",
+      "detail_json": "{\"old\": [\"asking\", \"enquiries_over\"], \"new\": [\"negotiation\", null]}"
+    },
+    {
+      "event_type": "price_change",
+      "event_at": "2026-10-28T15:25:32.909046+00:00",
+      "old_value": "1200000",
+      "new_value": "",
+      "detail_json": "{\"direction\": \"removed\", \"old_display\": \"Enquiries over $1,200,000\", \"new_display\": \"Price by negotiation\"}"
+    }
+  ],
   "price_history": [
     {
       "observed_at": "2026-10-23T06:53:05.402095+00:00",
@@ -390,28 +405,40 @@
       "change_pct": null,
       "days_since_previous": null,
       "source": "snapshot"
+    },
+    {
+      "observed_at": "2026-10-28T15:25:32.909046+00:00",
+      "price": null,
+      "price_display": "Price by negotiation",
+      "sale_method": null,
+      "event_type": "price_removed",
+      "previous_price": 1200000,
+      "change_amount": null,
+      "change_pct": null,
+      "days_since_previous": 5.36,
+      "source": "event"
     }
   ],
   "price_dynamics": {
     "listing_id": 5944201937,
     "first_price": 1200000,
     "current_price": 1200000,
-    "n_observations": 1,
-    "n_price_changes": 0,
+    "n_observations": 2,
+    "n_price_changes": 1,
     "n_description_changes": 0,
-    "first_change_at": null,
-    "last_change_at": null,
+    "first_change_at": "2026-10-28T15:25:32.909046+00:00",
+    "last_change_at": "2026-10-28T15:25:32.909046+00:00",
     "first_description_change_at": null,
     "last_description_change_at": null,
-    "days_to_first_change": null,
-    "days_since_last_change": null,
+    "days_to_first_change": 5.36,
+    "days_since_last_change": 0.01,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
-    "last_direction": null,
-    "updated_at": "2026-10-28T08:23:32.373758+00:00"
+    "last_direction": "removed",
+    "updated_at": "2026-10-28T15:40:38.621404+00:00"
   },
   "body": "More space. Two-car garaging. No body corporate fees.\r\n\r\nIf you have been searching for a new home in Mission Bay but do not want to compromise on space or parking, 2/36 Thatcher Street deserves a closer look.\r\n\r\nOffering approximately 165m² of floor area, this brand-new three-bedroom home delivers considerably more room than many modern townhouses, together with the rare convenience of a tandem internal-access garage for two vehicles.\r\n\r\nAt the heart of the home, the open-plan kitchen, dining and living area connects directly to approximately 30m² of private outdoor space - an easy setting for entertaining, children, pets or simply enjoying the afternoon sun.\r\n\r\nProperty highlights:\r\n\r\n* Approx. 165m² floor area\r\n* Three generous double bedrooms\r\n* 2.5 bathrooms, including master ensuite\r\n* Open-plan kitchen, dining and living\r\n* Approx. 30m² private outdoor area\r\n* Internal-access tandem garage for two vehicles\r\n* Brand-new and ready for immediate possession\r\n* CCC issued and title available\r\n* No body corporate or owners' association fees\r\n* Balance of the Stamford building warranty\r\n\r\nPositioned in sought-after Mission Bay, the home is within easy reach of Eastridge Shopping Centre, Mission Bay waterfront, cafés, restaurants, parks and Auckland CBD. \r\n\r\nThe price has been repositioned and the vendor is ready to meet the market.\r\n\r\nIf space, parking and low ongoing costs matter to you, this is one you should inspect before making a decision elsewhere.\r\n\r\nContact Annie Fan to arrange your viewing.\r\nAnnie Fan | 021 400 903\r\nannie.fan@raywhite.com\r\n\r\nPlease note: Some images include AI-generated enhancements and virtual staging for illustrative purposes only. Actual property presentation may vary.",
   "photos": [
@@ -459,7 +486,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2050000,
-      "estimate_mid": 1830000
+      "estimate_mid": 1820000
     },
     {
       "property_id": "2c9177a6-2f17-4247-9717-706631d43f3a",
@@ -476,6 +503,34 @@
       "estimate_mid": 1290000
     },
     {
+      "property_id": "73ef5da0-7c03-4e19-857b-53984bc54046",
+      "address": "261 Kepa Road, Mission Bay, Auckland",
+      "sale_price": 1450000,
+      "sale_date": "2026-09-14T00:00:00+00:00",
+      "distance_km": 0.31,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1300000,
+      "estimate_mid": 1460000
+    },
+    {
+      "property_id": "3a05a62c-ee59-403a-b3ff-c63e449b4884",
+      "address": "10 Palmer Crescent, Mission Bay, Auckland",
+      "sale_price": 4431000,
+      "sale_date": "2026-08-19T00:00:00+00:00",
+      "distance_km": 0.67,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 3850000,
+      "estimate_mid": 4400000
+    },
+    {
       "property_id": "3a05a62c-ee59-403a-b3ff-c63e449b4884",
       "address": "10 Palmer Crescent, Mission Bay, Auckland",
       "sale_price": 4431000,
@@ -488,6 +543,20 @@
       "property_type": null,
       "cv": 3850000,
       "estimate_mid": 4430000
+    },
+    {
+      "property_id": "430df567-dece-42cb-af00-0c85d3290600",
+      "address": "14A Godden Crescent, Orakei, Auckland",
+      "sale_price": 1275000,
+      "sale_date": "2026-09-01T00:00:00+00:00",
+      "distance_km": 0.69,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1250000,
+      "estimate_mid": 1260000
     },
     {
       "property_id": "6db4c5ec-496d-4c2d-bb7d-a3a9cbc35899",
@@ -504,20 +573,6 @@
       "estimate_mid": 2580000
     },
     {
-      "property_id": "b8231b7d-cee4-4d15-ab56-d5e47924aaba",
-      "address": "19 Kurahaupo Street, Orakei, Auckland",
-      "sale_price": 1525000,
-      "sale_date": "2026-08-17T00:00:00+00:00",
-      "distance_km": 0.79,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2425000,
-      "estimate_mid": 2210000
-    },
-    {
       "property_id": "aa1e8f11-d420-47a5-8843-424ddaedf4fd",
       "address": "25A Hawera Road, Kohimarama, Auckland",
       "sale_price": 1810000,
@@ -529,7 +584,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1800000,
-      "estimate_mid": 1890000
+      "estimate_mid": 1830000
     },
     {
       "property_id": "aef3d6c9-f3db-4bef-97b9-64099d7c4731",
@@ -586,60 +641,32 @@
       "property_type": null,
       "cv": 2550000,
       "estimate_mid": 2520000
-    },
-    {
-      "property_id": "758c2076-6af7-4f62-8167-e31327638139",
-      "address": "2A Edison Place, St Heliers, Auckland",
-      "sale_price": 801550,
-      "sale_date": "2026-09-03T00:00:00+00:00",
-      "distance_km": 1.0,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 790000,
-      "estimate_mid": 795000
-    },
-    {
-      "property_id": "3d67d898-1ce1-498d-a119-5da23450a8de",
-      "address": "1/68 Atkin Avenue, Mission Bay, Auckland",
-      "sale_price": 930000,
-      "sale_date": "2026-07-21T00:00:00+00:00",
-      "distance_km": 1.08,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1175000,
-      "estimate_mid": 950000
     }
   ],
   "valuation": {
-    "value_low": 1275000,
-    "value_mid": 1810000,
+    "value_low": 1208000,
+    "value_mid": 1780000,
     "value_high": 2580000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.27M – $2.58M",
-        "low": 1275000,
-        "mid": 1810000,
+        "range": "$1.21M – $2.58M",
+        "low": 1208000,
+        "mid": 1780000,
         "high": 2580000,
-        "updated_at": "2026-10-28T08:23:32.373758+00:00",
+        "updated_at": "2026-10-28T15:40:38.621404+00:00",
         "confidence": "low",
-        "n": 60,
+        "n": 64,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 60,
-          "n_eff": 18.38,
+          "n": 64,
+          "n_eff": 20.51,
           "radius_km": 3.0,
-          "iqr_ratio": 0.721,
-          "same_suburb": 10,
+          "iqr_ratio": 0.7708,
+          "same_suburb": 13,
           "model_version": "comp-cv-v1"
         }
       }

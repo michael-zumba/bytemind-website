@@ -11,16 +11,16 @@
   "parking": 2,
   "land_area": null,
   "floor_area": 280.0,
-  "price_display": "Price by negotiation",
-  "asking_price": null,
-  "asking_kind": null,
-  "sale_method": "Price by negotiation",
+  "price_display": "Asking price $4,300,000",
+  "asking_price": 4300000,
+  "asking_kind": "asking",
+  "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2025-11-06T01:45:42.147000+00:00",
-  "days_on_market": 355,
+  "days_on_market": 356,
   "lat": -36.8311081,
   "lon": 174.7935791,
-  "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2261496107.jpg",
+  "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2261496105.jpg",
   "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/north-shore-city/devonport/listing/5613220374",
   "agent_name": "Barfoot & Thompson Devonport",
   "agency_name": "Barfoot & Thompson Devonport, (Licensed: REAA 2008)",
@@ -51,24 +51,24 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 7573,
-  "watchers": 70,
+  "view_count": 7605,
+  "watchers": 68,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
   "status": "active",
   "delisted_at": null,
-  "sale_method_stage": 3,
-  "sale_pressure": 60.0,
-  "sale_pressure_label": "medium",
-  "model_low": 1757966,
-  "model_mid": 2567824,
-  "model_high": 3635379,
+  "sale_method_stage": 5,
+  "sale_pressure": 90.0,
+  "sale_pressure_label": "high",
+  "model_low": 1550295,
+  "model_mid": 2221553,
+  "model_high": 3132288,
   "model_confidence": "low",
-  "text_signal_pct": 10.2159,
-  "description_index": 0.445489,
-  "events_count": 0,
-  "last_event": null,
+  "text_signal_pct": 5.9787,
+  "description_index": 0.263162,
+  "events_count": 2,
+  "last_event": "price_change",
   "schools": [
     {
       "id": 1225,
@@ -303,11 +303,11 @@
   ],
   "model": {
     "listing_id": 5613220374,
-    "low": 1757966,
-    "mid": 2567824,
-    "high": 3635379,
+    "low": 1550295,
+    "mid": 2221553,
+    "high": 3132288,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3789, 0.3477], \"rel_width\": 0.7311, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5613220374,
@@ -315,21 +315,21 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.2194,
-    "condition_renovation": 0.1758,
-    "views_waterfront": 0.2452,
-    "family_school": 0.2159,
+    "condition_renovation": 0.1762,
+    "views_waterfront": 0.2458,
+    "family_school": 0.2166,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.5111,
-    "description_premium_pct": 10.2159,
-    "description_index": 0.445489,
+    "description_premium_pct": 5.9787,
+    "description_index": 0.263162,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 3, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T08:23:32.650906+00:00",
+    "updated_at": "2026-10-28T15:40:38.863757+00:00",
     "top_topics": [
       {
         "topic_id": 4,
-        "weight": 0.296563,
+        "weight": 0.299528,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -343,71 +343,86 @@
           "car park",
           "bedroom",
           "balcony",
-          "apartments"
+          "residents"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.281974,
+        "weight": 0.28614,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "ensuite",
           "wardrobe",
           "walk wardrobe",
           "bathroom",
+          "separate",
           "lounge",
           "suite",
-          "separate",
-          "level",
-          "upstairs",
-          "master",
           "walk",
-          "dining"
+          "upstairs",
+          "level",
+          "floor",
+          "master"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.238161,
+        "weight": 0.217495,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "single",
           "brick",
+          "single",
           "unit",
           "sunny",
+          "street",
+          "ready",
           "maintenance",
           "low",
-          "street",
-          "low maintenance",
+          "garden",
           "renovated",
           "parking",
-          "fully",
-          "garden"
+          "low maintenance"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.13055,
+        "weight": 0.125519,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
-          "views",
           "harbour",
+          "views",
           "residence",
           "scale",
-          "pool",
-          "gulf",
-          "expansive",
           "waterfront",
-          "spectacular",
-          "hauraki",
-          "hauraki gulf",
-          "aucklands"
+          "pool",
+          "expansive",
+          "aucklands",
+          "gulf",
+          "city",
+          "architectural",
+          "position"
         ]
       }
     ]
   },
   "sales_history": [],
   "sale_outcome": null,
-  "sale_events": [],
+  "sale_events": [
+    {
+      "event_type": "method_change",
+      "event_at": "2026-10-28T15:25:25.414903+00:00",
+      "old_value": "negotiation/",
+      "new_value": "asking/asking",
+      "detail_json": "{\"old\": [\"negotiation\", null], \"new\": [\"asking\", \"asking\"]}"
+    },
+    {
+      "event_type": "price_change",
+      "event_at": "2026-10-28T15:25:25.414903+00:00",
+      "old_value": "",
+      "new_value": "4300000",
+      "detail_json": "{\"direction\": \"set\", \"old_display\": \"Price by negotiation\", \"new_display\": \"Asking price $4,300,000\"}"
+    }
+  ],
   "price_history": [
     {
       "observed_at": "2026-10-23T06:51:01.249253+00:00",
@@ -420,38 +435,50 @@
       "change_pct": null,
       "days_since_previous": null,
       "source": "snapshot"
+    },
+    {
+      "observed_at": "2026-10-28T15:25:25.414903+00:00",
+      "price": 4300000,
+      "price_display": "Asking price $4,300,000",
+      "sale_method": null,
+      "event_type": "price_set",
+      "previous_price": null,
+      "change_amount": null,
+      "change_pct": null,
+      "days_since_previous": 5.36,
+      "source": "event"
     }
   ],
   "price_dynamics": {
     "listing_id": 5613220374,
-    "first_price": null,
-    "current_price": null,
-    "n_observations": 1,
-    "n_price_changes": 0,
+    "first_price": 4300000,
+    "current_price": 4300000,
+    "n_observations": 2,
+    "n_price_changes": 1,
     "n_description_changes": 0,
-    "first_change_at": null,
-    "last_change_at": null,
+    "first_change_at": "2026-10-28T15:25:25.414903+00:00",
+    "last_change_at": "2026-10-28T15:25:25.414903+00:00",
     "first_description_change_at": null,
     "last_description_change_at": null,
-    "days_to_first_change": null,
-    "days_since_last_change": null,
+    "days_to_first_change": 5.36,
+    "days_since_last_change": 0.01,
     "avg_days_between_changes": null,
-    "cumulative_change": null,
-    "cumulative_change_pct": null,
+    "cumulative_change": 0,
+    "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
-    "last_direction": null,
-    "updated_at": "2026-10-28T08:23:32.373758+00:00"
+    "last_direction": "set",
+    "updated_at": "2026-10-28T15:40:38.621404+00:00"
   },
   "body": "This luxury apartment offers a rare union of lifestyle and surroundings with outstanding views and waterfront living in this Devonport suburb where community matters and thrives,  while you are  reaping the rewards of not having to join a costly body corp. \r\n\r\nWhether you prefer to walk, run, swim or just relax on the balcony  -  watching the truly interesting activity occurring in front of you - this is a great  sunny apartment of space and style and  wellness.\r\n\r\nCurrently presented as a separate lounge showcasing expansive views through large double glazed sliding doors and decking along the entire front of the home. There is a large open plan family room and kitchen, four large double bedrooms, including the spacious Master. All these rooms are large and can be inter-changeable according to your requirements and exercise regime.  A spacious sunny deck expands at the back of the home and there is also a separate laundry and two bathrooms.\r\n  \r\nTravel down in your private lift to your own double garage with storage and the rear garden. You may prefer to walk the few  minutes to the Village, the Beach, the Ferry to the Central City or just meander across the road and sit on the waterfront seats and chat. \r\n\r\nA rarity is this property. No body corporate, only one of two residences and in a location seldom available with all that is required while living in this special community suburb.\r\n\r\nCall me to view or discuss how you can make this your home.",
   "photos": [
-    "https://trademe.tmcdn.co.nz/photoserver/tq/2261496107.jpg",
     "https://trademe.tmcdn.co.nz/photoserver/tq/2261496105.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2261496107.jpg",
     "https://trademe.tmcdn.co.nz/photoserver/tq/2261496117.jpg",
-    "https://trademe.tmcdn.co.nz/photoserver/tq/2261496129.jpg",
     "https://trademe.tmcdn.co.nz/photoserver/tq/2261496113.jpg",
     "https://trademe.tmcdn.co.nz/photoserver/tq/2261496112.jpg",
     "https://trademe.tmcdn.co.nz/photoserver/tq/2261496109.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2261496129.jpg",
     "https://trademe.tmcdn.co.nz/photoserver/tq/2261496119.jpg",
     "https://trademe.tmcdn.co.nz/photoserver/tq/2261496122.jpg",
     "https://trademe.tmcdn.co.nz/photoserver/tq/2261496124.jpg",
@@ -493,7 +520,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1500000,
-      "estimate_mid": 1430000
+      "estimate_mid": 1290000
     },
     {
       "property_id": "7db31181-7569-42ba-b355-118db8eaa989",
@@ -521,7 +548,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 920000,
-      "estimate_mid": 840000
+      "estimate_mid": 775000
     },
     {
       "property_id": "d787ae39-71b0-48c9-bb3f-2f60eac3ef75",
@@ -549,7 +576,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1450000,
-      "estimate_mid": 1350000
+      "estimate_mid": 1300000
     },
     {
       "property_id": "f423eafc-d727-460a-a08f-e8f266e60d3b",
@@ -605,7 +632,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1375000,
-      "estimate_mid": 1560000
+      "estimate_mid": 1550000
     },
     {
       "property_id": "7b8633ee-8e87-4d93-8f0e-fb5110680de2",
@@ -633,7 +660,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1200000,
-      "estimate_mid": 1070000
+      "estimate_mid": 1060000
     }
   ],
   "valuation": {
@@ -649,7 +676,7 @@
         "low": 1100000,
         "mid": 1280000,
         "high": 1810000,
-        "updated_at": "2026-10-28T08:23:32.373758+00:00",
+        "updated_at": "2026-10-28T15:40:38.621404+00:00",
         "confidence": "low",
         "n": 36,
         "basis": {

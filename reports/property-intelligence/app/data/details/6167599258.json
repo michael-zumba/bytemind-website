@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-10-28T21:00:00+00:00",
   "listed_at": "2026-10-07T02:09:40.707000+00:00",
-  "days_on_market": 20,
+  "days_on_market": 21,
   "lat": -36.7300263,
   "lon": 174.7507477,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333784133.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1033899,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-14T11:00:00+00:00",
-  "comp_low": 862680,
-  "comp_mid": 924416,
+  "comp_low": 848875,
+  "comp_mid": 924219,
   "comp_high": 1020500,
   "comp_confidence": "high",
-  "comp_n": 88,
+  "comp_n": 89,
   "value_low": 917891,
   "value_mid": 975895,
   "value_high": 1033899,
@@ -59,14 +59,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 3.3,
+  "sale_pressure": 3.5,
   "sale_pressure_label": "low",
-  "model_low": 838346,
-  "model_mid": 928434,
-  "model_high": 1015095,
+  "model_low": 841840,
+  "model_mid": 930610,
+  "model_high": 1024306,
   "model_confidence": "medium",
-  "text_signal_pct": 5.8382,
-  "description_index": 0.259867,
+  "text_signal_pct": 7.1046,
+  "description_index": 0.311057,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -273,71 +273,52 @@
   ],
   "model": {
     "listing_id": 6167599258,
-    "low": 838346,
-    "mid": 928434,
-    "high": 1015095,
+    "low": 841840,
+    "mid": 930610,
+    "high": 1024306,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1021, 0.0892], \"rel_width\": 0.1904, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1003, 0.0959], \"rel_width\": 0.1961, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6167599258,
     "word_count": 223,
     "exclamations": 1,
-    "urgency": 0.3256,
+    "urgency": 0.3304,
     "luxury": 0.0,
-    "condition_renovation": 0.7472,
-    "views_waterfront": 0.2606,
-    "family_school": 0.5353,
-    "investment": 0.2731,
+    "condition_renovation": 0.7491,
+    "views_waterfront": 0.2612,
+    "family_school": 0.5372,
+    "investment": 0.2736,
     "risk": 0.0,
     "readability": 0.6544,
-    "description_premium_pct": 5.8382,
-    "description_index": 0.259867,
+    "description_premium_pct": 7.1046,
+    "description_index": 0.311057,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 4, \"views_waterfront\": 2, \"family_school\": 7, \"investment\": 2, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T08:23:32.650906+00:00",
+    "updated_at": "2026-10-28T15:40:38.863757+00:00",
     "top_topics": [
       {
         "topic_id": 7,
-        "weight": 0.591802,
+        "weight": 0.679555,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "single",
           "brick",
+          "single",
           "unit",
           "sunny",
+          "street",
+          "ready",
           "maintenance",
           "low",
-          "street",
-          "low maintenance",
+          "garden",
           "renovated",
           "parking",
-          "fully",
-          "garden"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.172617,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "sea",
-          "sea views",
-          "views",
-          "rangitoto college",
-          "rangitoto",
-          "college",
-          "elevated",
-          "intermediate",
-          "suburb intermediate",
-          "areas",
-          "living areas",
-          "family home"
+          "low maintenance"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.145825,
+        "weight": 0.136338,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -346,29 +327,48 @@
           "land",
           "development",
           "subject",
-          "sqm",
           "property",
-          "housing",
           "existing",
+          "housing",
+          "sqm",
           "mixed",
           "council"
         ]
       },
       {
+        "topic_id": 8,
+        "weight": 0.096581,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "sea views",
+          "views",
+          "rangitoto",
+          "elevated",
+          "rangitoto college",
+          "living areas",
+          "areas",
+          "gulf",
+          "college",
+          "family home",
+          "intermediate"
+        ]
+      },
+      {
         "topic_id": 5,
-        "weight": 0.042107,
+        "weight": 0.050795,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
           "girls",
           "girls high",
-          "high school",
           "high",
+          "high school",
           "westlake girls",
           "boys",
           "westlake boys",
-          "suburb normal",
           "normal",
+          "suburb normal",
           "normal intermediate",
           "intermediate"
         ]
@@ -411,7 +411,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T08:23:32.373758+00:00"
+    "updated_at": "2026-10-28T15:40:38.621404+00:00"
   },
   "body": "Auction: 8-12 The Promenade, Takapuna on Thursday 29 October 2026 at 10:00AM  (unless sold prior)\r\n\r\nIf you know the Shore, you know how hard it is to crack into the Bays at this price point, especially this close to the beach.\r\n\r\nTucked quietly off the road for total privacy, this solid brick three-bedroom home is packed with potential. Previously a treasured home and then a good rental earner, it’s ready for its next chapter.\r\n\r\nWhether you're looking for a renovation project to make a profit, want an investment to hold, or just want to get a foot on the ladder in the Rangitoto College zone, the value here is obvious. Also in zone for Murrays Bay Primary and Intermediate schools.\r\n\r\nBuilt tough with classic brick & block construction, the home features excellent indoor-outdoor flow opening straight onto a large deck for entertaining.\r\n\r\nDownstairs, there's real scope to develop a rumpus area; perfect for teenagers, a home office or extra room to instantly boost the usable space and value. You'll also find a single stand-alone garage, handy for extra storage or parking. \r\n\r\nBest of all, you are just a short stroll to Murrays Bay beach, local cafes, and coastal walks.\r\n\r\nThe instructions are clear - this must be sold! Homes with this much potential around Murrays & Mairangi Bay sell fast. Bring your vision, bring your builder, and make your move before someone else pockets the gain.",
   "photos": [
@@ -621,7 +621,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1525000,
-      "estimate_mid": 1290000
+      "estimate_mid": 1280000
     },
     {
       "property_id": "eaecb305-9ceb-4975-ab49-7668cb7a3f7a",
@@ -719,7 +719,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 970000,
-      "estimate_mid": 805000
+      "estimate_mid": 810000
     },
     {
       "property_id": "b895be84-37c5-4cf7-a891-76952769fd0d",
@@ -747,7 +747,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1425000,
-      "estimate_mid": 1440000
+      "estimate_mid": 1430000
     },
     {
       "property_id": "9e7ca474-368c-4afe-b6a5-8b8d16a02d06",
@@ -797,21 +797,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$863K – $1.02M",
-        "low": 862680,
-        "mid": 924416,
+        "range": "$849K – $1.02M",
+        "low": 848875,
+        "mid": 924219,
         "high": 1020500,
-        "updated_at": "2026-10-28T08:23:32.373758+00:00",
+        "updated_at": "2026-10-28T15:40:38.621404+00:00",
         "confidence": "high",
-        "n": 88,
+        "n": 89,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 88,
-          "n_eff": 12.82,
+          "n": 89,
+          "n_eff": 12.95,
           "radius_km": 3.0,
-          "median_ratio": 1.0158,
-          "iqr_ratio": 0.1707,
+          "median_ratio": 1.0156,
+          "iqr_ratio": 0.1857,
           "same_suburb": 3,
           "model_version": "comp-cv-v1"
         }

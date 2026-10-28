@@ -11,13 +11,13 @@
   "parking": 1,
   "land_area": null,
   "floor_area": 166.0,
-  "price_display": "Price by negotiation",
-  "asking_price": null,
-  "asking_kind": null,
-  "sale_method": "Price by negotiation",
+  "price_display": "Asking price $2,580,000",
+  "asking_price": 2580000,
+  "asking_kind": "asking",
+  "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2025-09-17T21:48:36.700000+00:00",
-  "days_on_market": 404,
+  "days_on_market": 405,
   "lat": -36.8546486,
   "lon": 174.85849,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2249246875.jpg",
@@ -31,12 +31,12 @@
   "estimate_updated_at": null,
   "comp_low": 1325000,
   "comp_mid": 1900000,
-  "comp_high": 2711000,
+  "comp_high": 2750000,
   "comp_confidence": "low",
-  "comp_n": 64,
+  "comp_n": 67,
   "value_low": 1325000,
   "value_mid": 1900000,
-  "value_high": 2711000,
+  "value_high": 2750000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,24 +51,24 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 12320,
+  "view_count": 12367,
   "watchers": 111,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
   "status": "active",
   "delisted_at": null,
-  "sale_method_stage": 3,
-  "sale_pressure": 60.0,
-  "sale_pressure_label": "medium",
-  "model_low": 1798780,
-  "model_mid": 2627441,
-  "model_high": 3719780,
+  "sale_method_stage": 5,
+  "sale_pressure": 90.0,
+  "sale_pressure_label": "high",
+  "model_low": 1507653,
+  "model_mid": 2160448,
+  "model_high": 3046132,
   "model_confidence": "low",
-  "text_signal_pct": 11.975,
-  "description_index": 0.51801,
-  "events_count": 0,
-  "last_event": null,
+  "text_signal_pct": 6.8275,
+  "description_index": 0.299318,
+  "events_count": 2,
+  "last_event": "price_change",
   "schools": [
     {
       "id": 61,
@@ -253,11 +253,11 @@
   ],
   "model": {
     "listing_id": 5530901149,
-    "low": 1798780,
-    "mid": 2627441,
-    "high": 3719780,
+    "low": 1507653,
+    "mid": 2160448,
+    "high": 3046132,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3789, 0.3477], \"rel_width\": 0.7311, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5530901149,
@@ -265,99 +265,114 @@
     "exclamations": 2,
     "urgency": 0.0,
     "luxury": 0.6518,
-    "condition_renovation": 0.4641,
-    "views_waterfront": 0.1619,
-    "family_school": 0.1425,
-    "investment": 0.0848,
+    "condition_renovation": 0.4653,
+    "views_waterfront": 0.1623,
+    "family_school": 0.143,
+    "investment": 0.085,
     "risk": 0.0,
     "readability": 0.3212,
-    "description_premium_pct": 11.975,
-    "description_index": 0.51801,
+    "description_premium_pct": 6.8275,
+    "description_index": 0.299318,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 9, \"condition_renovation\": 4, \"views_waterfront\": 2, \"family_school\": 3, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T08:23:32.650906+00:00",
+    "updated_at": "2026-10-28T15:40:38.863757+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.722875,
+        "weight": 0.726657,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "luxury",
           "appliances",
           "designer",
-          "year",
           "sophisticated",
           "finishes",
+          "year",
           "designer kitchen",
+          "residence",
           "design",
-          "lighting",
           "integrated",
-          "residence"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.075504,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "friends",
-          "life",
-          "morning",
-          "room",
-          "coffee",
-          "relaxed",
-          "sense",
-          "feels",
-          "summer",
-          "setting",
-          "outside",
-          "welcoming"
+          "lighting"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.064638,
+        "weight": 0.084102,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
           "regional",
           "regional park",
           "village",
-          "suburb college",
           "walking",
-          "suburb regional",
           "suburb village",
+          "suburb regional",
+          "suburb college",
           "centre",
           "community",
-          "college",
-          "distance"
+          "distance",
+          "walking distance"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.061015,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "friends",
+          "relaxed",
+          "room",
+          "setting",
+          "entertaining",
+          "life",
+          "children",
+          "summer",
+          "outdoor",
+          "peaceful",
+          "sense",
+          "spaces"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.06445,
+        "weight": 0.050654,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "single",
           "brick",
+          "single",
           "unit",
           "sunny",
+          "street",
+          "ready",
           "maintenance",
           "low",
-          "street",
-          "low maintenance",
+          "garden",
           "renovated",
           "parking",
-          "fully",
-          "garden"
+          "low maintenance"
         ]
       }
     ]
   },
   "sales_history": [],
   "sale_outcome": null,
-  "sale_events": [],
+  "sale_events": [
+    {
+      "event_type": "method_change",
+      "event_at": "2026-10-28T15:28:25.662660+00:00",
+      "old_value": "negotiation/",
+      "new_value": "asking/asking",
+      "detail_json": "{\"old\": [\"negotiation\", null], \"new\": [\"asking\", \"asking\"]}"
+    },
+    {
+      "event_type": "price_change",
+      "event_at": "2026-10-28T15:28:25.662660+00:00",
+      "old_value": "",
+      "new_value": "2580000",
+      "detail_json": "{\"direction\": \"set\", \"old_display\": \"Price by negotiation\", \"new_display\": \"Asking price $2,580,000\"}"
+    }
+  ],
   "price_history": [
     {
       "observed_at": "2026-10-23T06:54:56.059440+00:00",
@@ -370,28 +385,40 @@
       "change_pct": null,
       "days_since_previous": null,
       "source": "snapshot"
+    },
+    {
+      "observed_at": "2026-10-28T15:28:25.662660+00:00",
+      "price": 2580000,
+      "price_display": "Asking price $2,580,000",
+      "sale_method": null,
+      "event_type": "price_set",
+      "previous_price": null,
+      "change_amount": null,
+      "change_pct": null,
+      "days_since_previous": 5.36,
+      "source": "event"
     }
   ],
   "price_dynamics": {
     "listing_id": 5530901149,
-    "first_price": null,
-    "current_price": null,
-    "n_observations": 1,
-    "n_price_changes": 0,
+    "first_price": 2580000,
+    "current_price": 2580000,
+    "n_observations": 2,
+    "n_price_changes": 1,
     "n_description_changes": 0,
-    "first_change_at": null,
-    "last_change_at": null,
+    "first_change_at": "2026-10-28T15:28:25.662660+00:00",
+    "last_change_at": "2026-10-28T15:28:25.662660+00:00",
     "first_description_change_at": null,
     "last_description_change_at": null,
-    "days_to_first_change": null,
-    "days_since_last_change": null,
+    "days_to_first_change": 5.36,
+    "days_since_last_change": 0.01,
     "avg_days_between_changes": null,
-    "cumulative_change": null,
-    "cumulative_change_pct": null,
+    "cumulative_change": 0,
+    "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
-    "last_direction": null,
-    "updated_at": "2026-10-28T08:23:32.373758+00:00"
+    "last_direction": "set",
+    "updated_at": "2026-10-28T15:40:38.621404+00:00"
   },
   "body": "45paunui.co.nz\r\n\r\n10% sold in the first two weeks! Be quick!\r\n\r\nWith its sparkling beach, leafy streets, and village charm, St Heliers is Auckland’s premium seaside community. Nestled in a sun-soaked sub-tropical setting on a sought-after street metres from the village, 45 Paunui is a boutique collection of 10 homes, individually designed for privacy, forming a sanctuary of modern urban living. \r\n\r\nCMP Living, specialists in building architectural developments of quality and design excellence, have created something special here. Outside, timeless materials- clay bricks, vertical cedar and Colorsteel form a low-maintenance organic exterior. Interior finishes that elevate daily life extend seamlessly outdoors to beautifully landscaped alfresco living areas, while modern automation enhances comfort and security, with gated entry, video access, and integrated climate control.\r\n\r\nConstruction has commenced, with completion expected in Q4 2027. Residence One, a stunning three-bedroom, 2.5-bath standalone home, is now available off-plan.\r\n\r\nHere are some of the highlights \r\n• Prime St Heliers location down a gated driveway \r\n• Marble benchtops and premium appliances \r\n• 2.7m Ceiling height with double glazing \r\n• Oak flooring and Italian Tiling \r\n• Wisers Smart Home Technology\r\n• Stamford 10-year Build Warranty \r\n• Integrated Air Conditioning \r\n• Award-winning Builders \r\n• Architect consultation is available to personalise your home \r\n\r\nIt offers 166m² of thoughtfully designed indoor living space over two spacious levels, with secure garaging. Generous glazing floods the interior with light while finishes exemplify natural, understated elegance and function. Oak flooring and wool carpet add softness and texture underfoot, brick detailing on the walls extends outdoors to a sheltered tiled courtyard where an integrated fire sets the scene for long summer evenings or quiet winter gatherings outdoors. \r\n\r\nThe kitchen is as functional as it is stunning, featuring marble benchtops, wooden cabinetry, and premium appliances. Bathrooms echo the feel of a luxury spa with Italian tiling and brushed nickel hardware.\r\n\r\nThis is the future of living in St Heliers for families drawn to the outstanding schools and vibrant community spirit, professionals to the easy city access, and discerning downsizers to the walkable amenities and relaxed coastal lifestyle.\r\n\r\n1/45 Paunui Street is more than a home, it’s a lifestyle investment in one of Auckland’s most desirable coastal communities.\r\n\r\nWe welcome you to visit the Show Suite at 45 Paunui Street, St Heliers, during the advertised Open homes or by appointment.\r\n\r\nFor further information, please contact Carl Watkins I 021 424 736 I c.watkins@barfoot.co.nz or Amelia Dalzell I 021 305 545 I a.dalzell@barfoot.co.nz\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -435,6 +462,20 @@
       "estimate_mid": 1900000
     },
     {
+      "property_id": "13629bfd-0821-4b4e-af6c-65c1e7a91fd5",
+      "address": "34A Goldie Street, St Heliers, Auckland",
+      "sale_price": 3000000,
+      "sale_date": "2026-08-30T00:00:00+00:00",
+      "distance_km": 0.26,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 3175000,
+      "estimate_mid": 3020000
+    },
+    {
       "property_id": "819c261e-17db-4a8e-822d-d5fdb7560efe",
       "address": "48 The Parade, St Heliers, Auckland",
       "sale_price": 2830000,
@@ -460,7 +501,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2925000,
-      "estimate_mid": 3100000
+      "estimate_mid": 3090000
     },
     {
       "property_id": "354dd593-dd84-4f73-952d-2d11c1cdc218",
@@ -474,21 +515,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 3075000,
-      "estimate_mid": 3050000
-    },
-    {
-      "property_id": "b00d0e9f-5399-48ef-aac1-8c7b554cb85d",
-      "address": "65 Maskell Street, St Heliers, Auckland",
-      "sale_price": 2410500,
-      "sale_date": "2026-07-30T00:00:00+00:00",
-      "distance_km": 0.54,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1975000,
-      "estimate_mid": 2520000
+      "estimate_mid": 3040000
     },
     {
       "property_id": "8232b063-ebfe-4b15-89b0-03536a5fbe1d",
@@ -502,7 +529,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1600000,
-      "estimate_mid": 1330000
+      "estimate_mid": 1300000
     },
     {
       "property_id": "7abfdbd4-cc77-429f-a46f-f9531a0dc7f4",
@@ -516,7 +543,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1375000,
-      "estimate_mid": 1580000
+      "estimate_mid": 1590000
     },
     {
       "property_id": "465d8f3d-f557-41da-a452-676324fda3fa",
@@ -544,7 +571,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2250000,
-      "estimate_mid": 2490000
+      "estimate_mid": 2480000
     },
     {
       "property_id": "8add2387-222d-4aa4-b887-1e6cf5dd9d91",
@@ -558,7 +585,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1725000,
-      "estimate_mid": 1720000
+      "estimate_mid": 1710000
     },
     {
       "property_id": "c62babad-a046-40d2-972a-3e116fd933a8",
@@ -572,7 +599,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1950000,
-      "estimate_mid": 1920000
+      "estimate_mid": 1910000
     },
     {
       "property_id": "97f51faa-3d5b-401c-9ec0-3eff53058447",
@@ -586,32 +613,32 @@
       "floor_area": null,
       "property_type": null,
       "cv": 3000000,
-      "estimate_mid": 2800000
+      "estimate_mid": 2780000
     }
   ],
   "valuation": {
     "value_low": 1325000,
     "value_mid": 1900000,
-    "value_high": 2711000,
+    "value_high": 2750000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.32M – $2.71M",
+        "range": "$1.32M – $2.75M",
         "low": 1325000,
         "mid": 1900000,
-        "high": 2711000,
-        "updated_at": "2026-10-28T08:23:32.373758+00:00",
+        "high": 2750000,
+        "updated_at": "2026-10-28T15:40:38.621404+00:00",
         "confidence": "low",
-        "n": 64,
+        "n": 67,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 64,
-          "n_eff": 22.29,
+          "n": 67,
+          "n_eff": 23.24,
           "radius_km": 3.0,
-          "iqr_ratio": 0.7295,
+          "iqr_ratio": 0.75,
           "same_suburb": 22,
           "model_version": "comp-cv-v1"
         }

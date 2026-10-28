@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-07-28T23:37:41.437000+00:00",
-  "days_on_market": 90,
+  "days_on_market": 91,
   "lat": -36.7408867,
   "lon": 174.754715,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2322617823.jpg",
@@ -29,16 +29,16 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1285000,
+  "comp_low": 1260000,
   "comp_mid": 1455000,
-  "comp_high": 1750000,
-  "comp_confidence": "medium",
-  "comp_n": 62,
-  "value_low": 1285000,
+  "comp_high": 1770000,
+  "comp_confidence": "low",
+  "comp_n": 63,
+  "value_low": 1260000,
   "value_mid": 1455000,
-  "value_high": 1750000,
+  "value_high": 1770000,
   "value_source": "sold_comps_absolute",
-  "value_confidence": "medium",
+  "value_confidence": "low",
   "cv": null,
   "land_value": null,
   "improvement_value": null,
@@ -59,14 +59,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 45.0,
+  "sale_pressure": 45.2,
   "sale_pressure_label": "medium",
-  "model_low": 1164039,
-  "model_mid": 1700288,
-  "model_high": 2407170,
+  "model_low": 1134992,
+  "model_mid": 1626429,
+  "model_high": 2293191,
   "model_confidence": "low",
-  "text_signal_pct": -8.8264,
-  "description_index": -0.423202,
+  "text_signal_pct": -8.5396,
+  "description_index": -0.404544,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -283,11 +283,11 @@
   ],
   "model": {
     "listing_id": 6056770841,
-    "low": 1164039,
-    "mid": 1700288,
-    "high": 2407170,
+    "low": 1134992,
+    "mid": 1626429,
+    "high": 2293191,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3789, 0.3477], \"rel_width\": 0.7311, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6056770841,
@@ -295,40 +295,21 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.3768,
-    "condition_renovation": 0.6037,
+    "condition_renovation": 0.6052,
     "views_waterfront": 0.0,
-    "family_school": 0.2472,
+    "family_school": 0.248,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.5048,
-    "description_premium_pct": -8.8264,
-    "description_index": -0.423202,
+    "description_premium_pct": -8.5396,
+    "description_index": -0.404544,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 1, \"views_waterfront\": 0, \"family_school\": 1, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T08:23:32.650906+00:00",
+    "updated_at": "2026-10-28T15:40:38.863757+00:00",
     "top_topics": [
       {
-        "topic_id": 3,
-        "weight": 0.305639,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "premium",
-          "luxury",
-          "appliances",
-          "designer",
-          "year",
-          "sophisticated",
-          "finishes",
-          "designer kitchen",
-          "design",
-          "lighting",
-          "integrated",
-          "residence"
-        ]
-      },
-      {
         "topic_id": 4,
-        "weight": 0.300735,
+        "weight": 0.319835,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -342,45 +323,64 @@
           "car park",
           "bedroom",
           "balcony",
-          "apartments"
+          "residents"
         ]
       },
       {
-        "topic_id": 10,
-        "weight": 0.215218,
-        "label": "New build / brand-new quality II",
+        "topic_id": 3,
+        "weight": 0.316401,
+        "label": "Luxury, architectural & prestige",
         "top_terms": [
-          "brand new",
-          "brand",
-          "new",
-          "lot",
-          "standalone",
-          "floor area",
-          "sqm floor",
-          "bedrooms bathrooms",
-          "homes",
-          "sqm",
-          "floor",
-          "modern"
+          "premium",
+          "luxury",
+          "appliances",
+          "designer",
+          "sophisticated",
+          "finishes",
+          "year",
+          "designer kitchen",
+          "residence",
+          "design",
+          "integrated",
+          "lighting"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.178408,
+        "weight": 0.163038,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "single",
           "brick",
+          "single",
           "unit",
           "sunny",
+          "street",
+          "ready",
           "maintenance",
           "low",
-          "street",
-          "low maintenance",
+          "garden",
           "renovated",
           "parking",
-          "fully",
-          "garden"
+          "low maintenance"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.114621,
+        "label": "Development & land potential II",
+        "top_terms": [
+          "lot",
+          "sqm",
+          "floor area",
+          "sqm floor",
+          "area sqm",
+          "floor",
+          "bedrooms bathrooms",
+          "sqm land",
+          "land",
+          "homes",
+          "brand new",
+          "brand"
         ]
       }
     ]
@@ -421,7 +421,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T08:23:32.373758+00:00"
+    "updated_at": "2026-10-28T15:40:38.621404+00:00"
   },
   "body": "Designed for easy, low-maintenance living close to the heart of Mairangi Bay.\r\n\r\n• Approx. 218sqm of generous living\r\n\r\n• Private lift - easy access between levels\r\n\r\n• Double internal-access garage\r\n\r\n• Quality Gaggenau kitchen appliances\r\n\r\n• Heat pumps & smart home features\r\n\r\n• Private outdoor living\r\n\r\n• Professionally managed body corporate\r\n\r\nWalk to Mairangi Bay Beach, cafés, restaurants and the village, or simply lock up and head away.\r\n\r\nMore freedom. Less maintenance. A great place to come home to.",
   "photos": [
@@ -469,7 +469,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1650000,
-      "estimate_mid": 2040000
+      "estimate_mid": 2030000
     },
     {
       "property_id": "1cbe906a-52d9-44a6-b906-d0533aa41a33",
@@ -511,7 +511,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2425000,
-      "estimate_mid": 2460000
+      "estimate_mid": 2360000
     },
     {
       "property_id": "5cd95e1d-4b3f-4182-9fb3-48df2cdfa622",
@@ -567,21 +567,21 @@
       "floor_area": null,
       "property_type": null,
       "cv": 970000,
-      "estimate_mid": 1020000
+      "estimate_mid": 1010000
     },
     {
-      "property_id": "f2576fa4-44f5-49a3-884b-2b0fe5bcbe9d",
-      "address": "32 Amante Crescent, Mairangi Bay, Auckland",
-      "sale_price": 2000000,
-      "sale_date": "2026-08-06T00:00:00+00:00",
-      "distance_km": 0.87,
-      "bedrooms": 5,
-      "bathrooms": 2,
+      "property_id": "4543af0a-f427-4acb-a52a-252e0f250a39",
+      "address": "62A Matipo Road, Mairangi Bay, Auckland",
+      "sale_price": 988888,
+      "sale_date": "2026-09-08T00:00:00+00:00",
+      "distance_km": 0.75,
+      "bedrooms": 3,
+      "bathrooms": null,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1800000,
-      "estimate_mid": 2020000
+      "cv": 1200000,
+      "estimate_mid": 1490000
     },
     {
       "property_id": "a8761978-7ebb-4857-bc12-0087851d8262",
@@ -595,7 +595,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1400000,
-      "estimate_mid": 1450000
+      "estimate_mid": 1420000
     },
     {
       "property_id": "1ac6a1ba-79f5-48b1-bc19-7bb1f75d3330",
@@ -609,7 +609,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1800000,
-      "estimate_mid": 1920000
+      "estimate_mid": 1510000
     },
     {
       "property_id": "aa99f27d-15d9-4f67-937a-6d87345ca0b5",
@@ -627,29 +627,29 @@
     }
   ],
   "valuation": {
-    "value_low": 1285000,
+    "value_low": 1260000,
     "value_mid": 1455000,
-    "value_high": 1750000,
+    "value_high": 1770000,
     "value_source": "sold_comps_absolute",
-    "value_confidence": "medium",
+    "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.28M – $1.75M",
-        "low": 1285000,
+        "range": "$1.26M – $1.77M",
+        "low": 1260000,
         "mid": 1455000,
-        "high": 1750000,
-        "updated_at": "2026-10-28T08:23:32.373758+00:00",
-        "confidence": "medium",
-        "n": 62,
+        "high": 1770000,
+        "updated_at": "2026-10-28T15:40:38.621404+00:00",
+        "confidence": "low",
+        "n": 63,
         "basis": {
-          "confidence": "medium",
+          "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 62,
-          "n_eff": 18.79,
+          "n": 63,
+          "n_eff": 19.73,
           "radius_km": 3.0,
-          "iqr_ratio": 0.3196,
-          "same_suburb": 16,
+          "iqr_ratio": 0.3505,
+          "same_suburb": 17,
           "model_version": "comp-cv-v1"
         }
       }

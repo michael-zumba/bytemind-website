@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-01T07:47:27.577000+00:00",
-  "days_on_market": 26,
+  "days_on_market": 27,
   "lat": -36.6927032,
   "lon": 174.736839,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2296552722.jpg",
@@ -30,12 +30,12 @@
   "estimate_source": null,
   "estimate_updated_at": null,
   "comp_low": 1030000,
-  "comp_mid": 1200000,
+  "comp_mid": 1170000,
   "comp_high": 1590000,
   "comp_confidence": "low",
-  "comp_n": 62,
+  "comp_n": 61,
   "value_low": 1030000,
-  "value_mid": 1200000,
+  "value_mid": 1170000,
   "value_high": 1590000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
@@ -51,22 +51,22 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1609,
-  "watchers": 25,
+  "view_count": 1638,
+  "watchers": 27,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 4,
-  "sale_pressure": 44.3,
+  "sale_pressure": 44.5,
   "sale_pressure_label": "medium",
-  "model_low": 970524,
-  "model_mid": 1417624,
-  "model_high": 2006991,
+  "model_low": 941637,
+  "model_mid": 1349354,
+  "model_high": 1902527,
   "model_confidence": "low",
-  "text_signal_pct": 21.3173,
-  "description_index": 0.88501,
+  "text_signal_pct": 24.2633,
+  "description_index": 0.984496,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -273,11 +273,11 @@
   ],
   "model": {
     "listing_id": 6158457148,
-    "low": 970524,
-    "mid": 1417624,
-    "high": 2006991,
+    "low": 941637,
+    "mid": 1349354,
+    "high": 1902527,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3789, 0.3477], \"rel_width\": 0.7311, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6158457148,
@@ -286,39 +286,58 @@
     "urgency": 0.0,
     "luxury": 0.4245,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.593,
-    "family_school": 0.4873,
-    "investment": 0.2486,
+    "views_waterfront": 0.5944,
+    "family_school": 0.489,
+    "investment": 0.249,
     "risk": 0.0,
     "readability": 0.4993,
-    "description_premium_pct": 21.3173,
-    "description_index": 0.88501,
+    "description_premium_pct": 24.2633,
+    "description_index": 0.984496,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 4, \"condition_renovation\": 0, \"views_waterfront\": 5, \"family_school\": 7, \"investment\": 2, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T08:23:32.650906+00:00",
+    "updated_at": "2026-10-28T15:40:38.863757+00:00",
     "top_topics": [
       {
         "topic_id": 9,
-        "weight": 0.528607,
+        "weight": 0.50088,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
           "regional",
           "regional park",
           "village",
-          "suburb college",
           "walking",
-          "suburb regional",
           "suburb village",
+          "suburb regional",
+          "suburb college",
           "centre",
           "community",
+          "distance",
+          "walking distance"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.243147,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "sea views",
+          "views",
+          "rangitoto",
+          "elevated",
+          "rangitoto college",
+          "living areas",
+          "areas",
+          "gulf",
           "college",
-          "distance"
+          "family home",
+          "intermediate"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.191973,
+        "weight": 0.174401,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -327,50 +346,31 @@
           "land",
           "development",
           "subject",
-          "sqm",
           "property",
-          "housing",
           "existing",
+          "housing",
+          "sqm",
           "mixed",
           "council"
         ]
       },
       {
-        "topic_id": 8,
-        "weight": 0.177901,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "sea",
-          "sea views",
-          "views",
-          "rangitoto college",
-          "rangitoto",
-          "college",
-          "elevated",
-          "intermediate",
-          "suburb intermediate",
-          "areas",
-          "living areas",
-          "family home"
-        ]
-      },
-      {
         "topic_id": 11,
-        "weight": 0.065359,
+        "weight": 0.044973,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
-          "views",
           "harbour",
+          "views",
           "residence",
           "scale",
-          "pool",
-          "gulf",
-          "expansive",
           "waterfront",
-          "spectacular",
-          "hauraki",
-          "hauraki gulf",
-          "aucklands"
+          "pool",
+          "expansive",
+          "aucklands",
+          "gulf",
+          "city",
+          "architectural",
+          "position"
         ]
       }
     ]
@@ -411,7 +411,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T08:23:32.373758+00:00"
+    "updated_at": "2026-10-28T15:40:38.621404+00:00"
   },
   "body": "Positioned to capture elevated outlooks and Sea Views. This prime Long Bay section offers a rare opportunity, to secure a 505sqm ready-to-build site in one of The North Shore’s most desirable coastal suburbs. \r\n \r\nThis section with no land caveats includes an approved Resource Consent for a three level home with architectural drawings, driveway and drainage plans, and geotechnical report. Much of the groundwork has already been done, allowing you to focus on bringing your vision to life, maximising sun, views, and outdoor living. Whether you’re planning a striking architectural build, a spacious family family home or a future-focused investment, this is a platform that supports it.\r\n\r\nLocation is where this property truly shines. Long Bay is where beachside living meets everyday convenience - enjoy a leisurely walk to Long Bay beach to long Bay beach, the stunning Long Bay-Okura coastline offers, nature walks, cycle trails, and private picnic spots . You’re 15 minutes walk to Long Bay Village and supermarket. Despite it’s relaxed coastal feel, you’re still within a 30 - 40 minute drive to Auckland’s CBD, offering the perfect balance between city access and seaside lifestyle.\r\n\r\nPremium Schools are a quick walk away. Long bay college (300m) is a 3 minute walk away, and around 7 minutes walk to Long Bay Primary (550m). A connecting bus stop to Northcross intermediate is only a 3 minute walk.\r\n\r\nSections in this location , with this level of preparation and outlook, are increasingly hard to find.",
   "photos": [
@@ -467,7 +467,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1550000,
-      "estimate_mid": 1640000
+      "estimate_mid": 1650000
     },
     {
       "property_id": "43f5ae3b-11bb-45aa-a6e4-16594ac086e3",
@@ -495,7 +495,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1575000,
-      "estimate_mid": 1580000
+      "estimate_mid": 1590000
     },
     {
       "property_id": "b057960d-5092-4ed0-a57f-a211890f9383",
@@ -523,7 +523,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1850000,
-      "estimate_mid": 1880000
+      "estimate_mid": 1890000
     },
     {
       "property_id": "58ba46bf-bdb7-48b8-9adb-ed3e7f0e7cc6",
@@ -565,7 +565,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1100000,
-      "estimate_mid": 1080000
+      "estimate_mid": 1060000
     },
     {
       "property_id": "a84ed7ab-14b1-4924-b1bc-dc0fc0591750",
@@ -582,6 +582,20 @@
       "estimate_mid": 1150000
     },
     {
+      "property_id": "7fca0dcc-b694-4af3-805c-739037edfef1",
+      "address": "20 Streamview Way, Long Bay, Auckland",
+      "sale_price": 2250000,
+      "sale_date": "2026-07-16T00:00:00+00:00",
+      "distance_km": 0.98,
+      "bedrooms": 5,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 2450000,
+      "estimate_mid": 2550000
+    },
+    {
       "property_id": "ae18400e-c794-4cfe-81ae-072d812dfa86",
       "address": "12 Streamview Way, Long Bay, Auckland",
       "sale_price": 2220000,
@@ -593,26 +607,12 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2350000,
-      "estimate_mid": 2050000
-    },
-    {
-      "property_id": "6e047262-a12a-48d7-9273-300407c2fa68",
-      "address": "78A Vaughans Road, Long Bay, Auckland",
-      "sale_price": 1250000,
-      "sale_date": "2026-09-07T00:00:00+00:00",
-      "distance_km": 1.09,
-      "bedrooms": 0,
-      "bathrooms": 0,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1225000,
-      "estimate_mid": 1140000
+      "estimate_mid": 2140000
     }
   ],
   "valuation": {
     "value_low": 1030000,
-    "value_mid": 1200000,
+    "value_mid": 1170000,
     "value_high": 1590000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
@@ -621,18 +621,18 @@
         "name": "Nearby sold comparables",
         "range": "$1.03M – $1.59M",
         "low": 1030000,
-        "mid": 1200000,
+        "mid": 1170000,
         "high": 1590000,
-        "updated_at": "2026-10-28T08:23:32.373758+00:00",
+        "updated_at": "2026-10-28T15:40:38.621404+00:00",
         "confidence": "low",
-        "n": 62,
+        "n": 61,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 62,
-          "n_eff": 19.14,
+          "n": 61,
+          "n_eff": 19.0,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4667,
+          "iqr_ratio": 0.4786,
           "same_suburb": 27,
           "model_version": "comp-cv-v1"
         }

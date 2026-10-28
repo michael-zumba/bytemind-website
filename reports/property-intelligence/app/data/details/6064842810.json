@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-08-03T02:38:20.237000+00:00",
-  "days_on_market": 85,
+  "days_on_market": 86,
   "lat": -36.8495903,
   "lon": 174.862793,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2328353239.jpg",
@@ -29,14 +29,14 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1600000,
+  "comp_low": 1555000,
   "comp_mid": 1980000,
-  "comp_high": 2830000,
+  "comp_high": 3000000,
   "comp_confidence": "low",
-  "comp_n": 53,
-  "value_low": 1600000,
+  "comp_n": 56,
+  "value_low": 1555000,
   "value_mid": 1980000,
-  "value_high": 2830000,
+  "value_high": 3000000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,22 +51,22 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 4530,
-  "watchers": 93,
+  "view_count": 4542,
+  "watchers": 92,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 44.2,
+  "sale_pressure": 44.3,
   "sale_pressure_label": "medium",
-  "model_low": 1721786,
-  "model_mid": 2514976,
-  "model_high": 3560560,
+  "model_low": 1622358,
+  "model_mid": 2324820,
+  "model_high": 3277889,
   "model_confidence": "low",
-  "text_signal_pct": 8.3284,
-  "description_index": 0.366375,
+  "text_signal_pct": 4.6006,
+  "description_index": 0.203846,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -253,11 +253,11 @@
   ],
   "model": {
     "listing_id": 6064842810,
-    "low": 1721786,
-    "mid": 2514976,
-    "high": 3560560,
+    "low": 1622358,
+    "mid": 2324820,
+    "high": 3277889,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3789, 0.3477], \"rel_width\": 0.7311, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6064842810,
@@ -266,39 +266,58 @@
     "urgency": 0.0,
     "luxury": 0.6868,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.2193,
+    "views_waterfront": 0.2198,
     "family_school": 0.0,
-    "investment": 0.2298,
-    "risk": 0.2311,
+    "investment": 0.2302,
+    "risk": 0.2047,
     "readability": 0.2753,
-    "description_premium_pct": 8.3284,
-    "description_index": 0.366375,
+    "description_premium_pct": 4.6006,
+    "description_index": 0.203846,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 7, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 0, \"investment\": 2, \"risk\": 1}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T08:23:32.650906+00:00",
+    "updated_at": "2026-10-28T15:40:38.863757+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.507942,
+        "weight": 0.489097,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "luxury",
           "appliances",
           "designer",
-          "year",
           "sophisticated",
           "finishes",
+          "year",
           "designer kitchen",
+          "residence",
           "design",
-          "lighting",
           "integrated",
-          "residence"
+          "lighting"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.195444,
+        "label": "Development & land potential II",
+        "top_terms": [
+          "lot",
+          "sqm",
+          "floor area",
+          "sqm floor",
+          "area sqm",
+          "floor",
+          "bedrooms bathrooms",
+          "sqm land",
+          "land",
+          "homes",
+          "brand new",
+          "brand"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.153653,
+        "weight": 0.149715,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -312,45 +331,26 @@
           "car park",
           "bedroom",
           "balcony",
-          "apartments"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.139643,
-        "label": "New build / brand-new quality II",
-        "top_terms": [
-          "brand new",
-          "brand",
-          "new",
-          "lot",
-          "standalone",
-          "floor area",
-          "sqm floor",
-          "bedrooms bathrooms",
-          "homes",
-          "sqm",
-          "floor",
-          "modern"
+          "residents"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.131457,
+        "weight": 0.123871,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
-          "views",
           "harbour",
+          "views",
           "residence",
           "scale",
-          "pool",
-          "gulf",
-          "expansive",
           "waterfront",
-          "spectacular",
-          "hauraki",
-          "hauraki gulf",
-          "aucklands"
+          "pool",
+          "expansive",
+          "aucklands",
+          "gulf",
+          "city",
+          "architectural",
+          "position"
         ]
       }
     ]
@@ -391,7 +391,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T08:23:32.373758+00:00"
+    "updated_at": "2026-10-28T15:40:38.621404+00:00"
   },
   "body": "Crave the ease of a lock-up-and-leave lifestyle without sacrificing space, privacy or quality? These architect-designed standalone residences offer an exceptional opportunity to enjoy effortless luxury in one of St Heliers' most coveted coastal enclaves, moments from the village, waterfront and an easy commute to the CBD.\r\n\r\nThese are not apartments or townhouses. With no shared walls, each home is generously proportioned, beautifully private and crafted to an uncompromising standard. A boutique collection of just six brand-new residences by Shape Architects ranges from 248m² to 277m², offering 4 bedrooms and either 2.5 or 3.5 bathrooms.\r\n\r\nInspired by soft, sculptural architecture, the interiors are sophisticated, calm, timeless sanctuaries. Expansive open-plan living reaches across generous north-west facing courtyards, creating superb spaces for everyday living. Refined kitchens feature sculleries, premium integrated appliances and bespoke cabinetry, while separate laundries and abundant storage add practicality.\r\n\r\nHigh ceilings and dramatic voids flood the homes with natural light, enhancing the richness of carefully selected materials. Feature fireplaces in Lots 5 and 6 create inviting living zones, while luxurious master suites boast oversized walk-in dressing rooms.\r\n\r\nEvery home enjoys a north-west aspect, capturing all-day sunshine and spectacular sunsets. For those planning ahead, Lots 3 and 4 include private internal lifts, providing future-proof convenience.\r\n\r\nRepresenting the pinnacle of C&L's residential portfolio, this exclusive boutique development combines outstanding design with meticulous craftsmanship and technical excellence. Rarely does a project of this calibre become available. Simply move in, lock up and leave, knowing every detail has been executed to perfection.\r\n\r\nDiscover the residences, architecture and individual floor plans at www.clarendon.co.nz, or contact us (Paul 021 345 887, Vanessa 021 840 700)  to arrange a private presentation and secure your place within this limited collection.",
   "photos": [
@@ -440,7 +440,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2925000,
-      "estimate_mid": 3100000
+      "estimate_mid": 3090000
     },
     {
       "property_id": "c8d5e40d-3bfb-414d-b826-1a1df5e1cf0b",
@@ -454,7 +454,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1775000,
-      "estimate_mid": 1690000
+      "estimate_mid": 1680000
     },
     {
       "property_id": "8232b063-ebfe-4b15-89b0-03536a5fbe1d",
@@ -468,7 +468,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1600000,
-      "estimate_mid": 1330000
+      "estimate_mid": 1300000
     },
     {
       "property_id": "fd9770c3-2235-4084-ae29-df29e249c6e3",
@@ -524,7 +524,21 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2650000,
-      "estimate_mid": 3190000
+      "estimate_mid": 3180000
+    },
+    {
+      "property_id": "13629bfd-0821-4b4e-af6c-65c1e7a91fd5",
+      "address": "34A Goldie Street, St Heliers, Auckland",
+      "sale_price": 3000000,
+      "sale_date": "2026-08-30T00:00:00+00:00",
+      "distance_km": 0.71,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 3175000,
+      "estimate_mid": 3020000
     },
     {
       "property_id": "9d13664a-9e97-41af-94f8-e6971cf340ef",
@@ -538,7 +552,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2575000,
-      "estimate_mid": 3110000
+      "estimate_mid": 3130000
     },
     {
       "property_id": "807207e8-19f2-494a-9f78-79ac855c9a1b",
@@ -552,21 +566,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2250000,
-      "estimate_mid": 2490000
-    },
-    {
-      "property_id": "b00d0e9f-5399-48ef-aac1-8c7b554cb85d",
-      "address": "65 Maskell Street, St Heliers, Auckland",
-      "sale_price": 2410500,
-      "sale_date": "2026-07-30T00:00:00+00:00",
-      "distance_km": 0.88,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1975000,
-      "estimate_mid": 2520000
+      "estimate_mid": 2480000
     },
     {
       "property_id": "819c261e-17db-4a8e-822d-d5fdb7560efe",
@@ -594,33 +594,33 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1725000,
-      "estimate_mid": 1720000
+      "estimate_mid": 1710000
     }
   ],
   "valuation": {
-    "value_low": 1600000,
+    "value_low": 1555000,
     "value_mid": 1980000,
-    "value_high": 2830000,
+    "value_high": 3000000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.60M – $2.83M",
-        "low": 1600000,
+        "range": "$1.55M – $3M",
+        "low": 1555000,
         "mid": 1980000,
-        "high": 2830000,
-        "updated_at": "2026-10-28T08:23:32.373758+00:00",
+        "high": 3000000,
+        "updated_at": "2026-10-28T15:40:38.621404+00:00",
         "confidence": "low",
-        "n": 53,
+        "n": 56,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 53,
-          "n_eff": 16.08,
+          "n": 56,
+          "n_eff": 16.71,
           "radius_km": 3.0,
-          "iqr_ratio": 0.6212,
-          "same_suburb": 20,
+          "iqr_ratio": 0.7298,
+          "same_suburb": 21,
           "model_version": "comp-cv-v1"
         }
       }

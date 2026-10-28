@@ -16,8 +16,8 @@
   "asking_kind": null,
   "sale_method": "Price by negotiation",
   "deadline_at": null,
-  "listed_at": "2026-08-07T01:20:54.823000+00:00",
-  "days_on_market": 81,
+  "listed_at": "2026-08-07T02:20:54.823000+00:00",
+  "days_on_market": 82,
   "lat": -36.7399402,
   "lon": 174.7524884,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2321968470.jpg",
@@ -33,7 +33,7 @@
   "comp_mid": 1360000,
   "comp_high": 1750000,
   "comp_confidence": "low",
-  "comp_n": 41,
+  "comp_n": 42,
   "value_low": 1125000,
   "value_mid": 1360000,
   "value_high": 1750000,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 4140,
+  "view_count": 4175,
   "watchers": 32,
   "is_standard": 1,
   "standard_reason": null,
@@ -59,14 +59,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 43.5,
+  "sale_pressure": 43.7,
   "sale_pressure_label": "medium",
-  "model_low": 721176,
-  "model_mid": 1053407,
-  "model_high": 1491353,
+  "model_low": 702021,
+  "model_mid": 1005987,
+  "model_high": 1418395,
   "model_confidence": "low",
-  "text_signal_pct": -6.5812,
-  "description_index": -0.311787,
+  "text_signal_pct": -7.912,
+  "description_index": -0.373552,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -273,52 +273,33 @@
   ],
   "model": {
     "listing_id": 6071402901,
-    "low": 721176,
-    "mid": 1053407,
-    "high": 1491353,
+    "low": 702021,
+    "mid": 1005987,
+    "high": 1418395,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3789, 0.3477], \"rel_width\": 0.7311, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6071402901,
     "word_count": 324,
     "exclamations": 0,
-    "urgency": 0.2241,
+    "urgency": 0.2274,
     "luxury": 0.1605,
-    "condition_renovation": 0.1286,
-    "views_waterfront": 0.1794,
-    "family_school": 0.1579,
+    "condition_renovation": 0.1289,
+    "views_waterfront": 0.1798,
+    "family_school": 0.1585,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.2934,
-    "description_premium_pct": -6.5812,
-    "description_index": -0.311787,
+    "description_premium_pct": -7.912,
+    "description_index": -0.373552,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 2, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 3, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T08:23:32.650906+00:00",
+    "updated_at": "2026-10-28T15:40:38.863757+00:00",
     "top_topics": [
       {
-        "topic_id": 2,
-        "weight": 0.340498,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "indoor outdoor",
-          "indoor",
-          "outdoor flow",
-          "flow",
-          "outdoor",
-          "seamless indoor",
-          "seamless",
-          "quality",
-          "modern",
-          "comfort",
-          "light filled",
-          "excellent"
-        ]
-      },
-      {
         "topic_id": 4,
-        "weight": 0.333312,
+        "weight": 0.384499,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -332,45 +313,64 @@
           "car park",
           "bedroom",
           "balcony",
-          "apartments"
+          "residents"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.259131,
+        "weight": 0.295045,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
           "regional",
           "regional park",
           "village",
-          "suburb college",
           "walking",
-          "suburb regional",
           "suburb village",
+          "suburb regional",
+          "suburb college",
           "centre",
           "community",
-          "college",
-          "distance"
+          "distance",
+          "walking distance"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.1854,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "modern",
+          "quality",
+          "brand",
+          "brand new",
+          "new",
+          "comfort",
+          "stylish",
+          "convenience",
+          "outdoor flow",
+          "light filled",
+          "contemporary",
+          "internal access"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.051643,
+        "weight": 0.106748,
         "label": "Family living & entertaining",
         "top_terms": [
           "friends",
-          "life",
-          "morning",
-          "room",
-          "coffee",
           "relaxed",
-          "sense",
-          "feels",
-          "summer",
+          "room",
           "setting",
-          "outside",
-          "welcoming"
+          "entertaining",
+          "life",
+          "children",
+          "summer",
+          "outdoor",
+          "peaceful",
+          "sense",
+          "spaces"
         ]
       }
     ]
@@ -411,7 +411,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T08:23:32.373758+00:00"
+    "updated_at": "2026-10-28T15:40:38.621404+00:00"
   },
   "body": "Discover the perfect balance of independence, security, and convenience at the highly sought-after Norfolk Apartments Retirement Village. Nestled amongst beautifully landscaped gardens and mature native trees, this boutique community offers a peaceful park-like setting just moments from everything that makes Mairangi Bay one of Auckland's most desirable coastal suburbs.\r\n\r\nWe have an array of spacious apartments available ranging from 1 bedroom plus study, two bedrooms and one bathroom, and two bedroom with two bathrooms. Designed for comfortable, low-maintenance living, featuring generous open-plan living and dining areas, excellent natural light, and seamless indoor-outdoor flow to your own balcony or private courtyard. Thoughtfully designed for retirement living with practical everyday functionality.\r\n\r\nLiving at Norfolk Apartments means enjoying the freedom of an independent lifestyle with the reassurance of a caring community. Residents benefit from:\r\n\r\nBeautifully maintained gardens and tranquil surroundings.\r\nDay-to-day management providing peace of mind.\r\n24-hour St John medical alarm support.\r\nSecure \"lock-up-and-leave\" living ideal for travel or visiting family.\r\nWeekly morning teas and regular resident social gatherings that foster a warm and welcoming community.\r\nLight-filled communal spaces for relaxing and connecting with neighbours.\r\nThe location is simply outstanding. Just a short stroll away you'll find:\r\n\r\nMairangi Bay Beach and the stunning coastal walkway.\r\nMairangi Bay Village with its cafes, shops and supermarket.\r\nMedical centre and everyday services.\r\nPublic transport for easy access across Auckland.\r\nThe local bowling and tennis clubs, offering excellent recreational opportunities.\r\nWith just 23 apartments in this boutique village, opportunities to secure a home here are limited. Norfolk Apartments has earned an enviable reputation for its caring management, peaceful atmosphere, and exceptional location, allowing residents to remain connected to the community they know and love while enjoying a relaxed, secure lifestyle.\r\n\r\nIf you're looking for quality independent retirement living in one of Auckland's finest beachside suburbs, this is an opportunity not to be missed. Phone Ethan Today to discuss our available apartments.\r\n\r\n7-9 Ramsgate Terrace, Mairangi Bay\r\nrwmairangibay.co.nz/MRG35588",
   "photos": [
@@ -448,7 +448,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1650000,
-      "estimate_mid": 2040000
+      "estimate_mid": 2030000
     },
     {
       "property_id": "9e68916a-bd3a-4101-b8bc-4e7aba341c28",
@@ -518,7 +518,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 970000,
-      "estimate_mid": 1020000
+      "estimate_mid": 1010000
     },
     {
       "property_id": "9fed74c5-91eb-46d6-912e-91f4791cb03e",
@@ -535,18 +535,18 @@
       "estimate_mid": 1200000
     },
     {
-      "property_id": "f2576fa4-44f5-49a3-884b-2b0fe5bcbe9d",
-      "address": "32 Amante Crescent, Mairangi Bay, Auckland",
-      "sale_price": 2000000,
-      "sale_date": "2026-08-06T00:00:00+00:00",
-      "distance_km": 0.7,
-      "bedrooms": 5,
-      "bathrooms": 2,
+      "property_id": "4543af0a-f427-4acb-a52a-252e0f250a39",
+      "address": "62A Matipo Road, Mairangi Bay, Auckland",
+      "sale_price": 988888,
+      "sale_date": "2026-09-08T00:00:00+00:00",
+      "distance_km": 0.74,
+      "bedrooms": 3,
+      "bathrooms": null,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1800000,
-      "estimate_mid": 2020000
+      "cv": 1200000,
+      "estimate_mid": 1490000
     },
     {
       "property_id": "aa99f27d-15d9-4f67-937a-6d87345ca0b5",
@@ -574,7 +574,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2425000,
-      "estimate_mid": 2460000
+      "estimate_mid": 2360000
     },
     {
       "property_id": "a8761978-7ebb-4857-bc12-0087851d8262",
@@ -588,7 +588,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1400000,
-      "estimate_mid": 1450000
+      "estimate_mid": 1420000
     },
     {
       "property_id": "1ac6a1ba-79f5-48b1-bc19-7bb1f75d3330",
@@ -602,7 +602,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1800000,
-      "estimate_mid": 1920000
+      "estimate_mid": 1510000
     }
   ],
   "valuation": {
@@ -618,17 +618,17 @@
         "low": 1125000,
         "mid": 1360000,
         "high": 1750000,
-        "updated_at": "2026-10-28T08:23:32.373758+00:00",
+        "updated_at": "2026-10-28T15:40:38.621404+00:00",
         "confidence": "low",
-        "n": 41,
+        "n": 42,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 41,
-          "n_eff": 12.69,
+          "n": 42,
+          "n_eff": 13.33,
           "radius_km": 3.0,
           "iqr_ratio": 0.4596,
-          "same_suburb": 11,
+          "same_suburb": 12,
           "model_version": "comp-cv-v1"
         }
       }

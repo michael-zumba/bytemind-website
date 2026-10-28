@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-09-30T03:08:16.917000+00:00",
-  "days_on_market": 27,
+  "days_on_market": 28,
   "lat": -36.8510041,
   "lon": 174.8684222,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2332278800.jpg",
@@ -31,12 +31,12 @@
   "estimate_updated_at": null,
   "comp_low": 1325000,
   "comp_mid": 1815750,
-  "comp_high": 2711000,
+  "comp_high": 2750000,
   "comp_confidence": "low",
-  "comp_n": 53,
+  "comp_n": 55,
   "value_low": 1325000,
   "value_mid": 1815750,
-  "value_high": 2711000,
+  "value_high": 2750000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,22 +51,22 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2004,
-  "watchers": 62,
+  "view_count": 2069,
+  "watchers": 64,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 34.5,
+  "sale_pressure": 34.7,
   "sale_pressure_label": "low",
-  "model_low": 1507479,
-  "model_mid": 2201943,
-  "model_high": 3117384,
+  "model_low": 1452048,
+  "model_mid": 2080767,
+  "model_high": 2933786,
   "model_confidence": "low",
-  "text_signal_pct": 10.6467,
-  "description_index": 0.463357,
+  "text_signal_pct": 8.1951,
+  "description_index": 0.356969,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -253,11 +253,11 @@
   ],
   "model": {
     "listing_id": 6156397075,
-    "low": 1507479,
-    "mid": 2201943,
-    "high": 3117384,
+    "low": 1452048,
+    "mid": 2080767,
+    "high": 2933786,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3789, 0.3477], \"rel_width\": 0.7311, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6156397075,
@@ -265,40 +265,59 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.6316,
-    "condition_renovation": 0.0843,
-    "views_waterfront": 0.1176,
-    "family_school": 0.3107,
-    "investment": 0.1849,
+    "condition_renovation": 0.0845,
+    "views_waterfront": 0.1179,
+    "family_school": 0.3118,
+    "investment": 0.1853,
     "risk": 0.0,
     "readability": 0.3025,
-    "description_premium_pct": 10.6467,
-    "description_index": 0.463357,
+    "description_premium_pct": 8.1951,
+    "description_index": 0.356969,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 12, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 9, \"investment\": 3, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T08:23:32.650906+00:00",
+    "updated_at": "2026-10-28T15:40:38.863757+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.504623,
+        "weight": 0.492643,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "luxury",
           "appliances",
           "designer",
-          "year",
           "sophisticated",
           "finishes",
+          "year",
           "designer kitchen",
+          "residence",
           "design",
-          "lighting",
           "integrated",
-          "residence"
+          "lighting"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.166486,
+        "label": "Coastal village & park proximity",
+        "top_terms": [
+          "park",
+          "regional",
+          "regional park",
+          "village",
+          "walking",
+          "suburb village",
+          "suburb regional",
+          "suburb college",
+          "centre",
+          "community",
+          "distance",
+          "walking distance"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.14451,
+        "weight": 0.130509,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -307,50 +326,31 @@
           "land",
           "development",
           "subject",
-          "sqm",
           "property",
-          "housing",
           "existing",
+          "housing",
+          "sqm",
           "mixed",
           "council"
         ]
       },
       {
-        "topic_id": 9,
-        "weight": 0.13634,
-        "label": "Coastal village & park proximity",
+        "topic_id": 10,
+        "weight": 0.070083,
+        "label": "Development & land potential II",
         "top_terms": [
-          "park",
-          "regional",
-          "regional park",
-          "village",
-          "suburb college",
-          "walking",
-          "suburb regional",
-          "suburb village",
-          "centre",
-          "community",
-          "college",
-          "distance"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.059039,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "friends",
-          "life",
-          "morning",
-          "room",
-          "coffee",
-          "relaxed",
-          "sense",
-          "feels",
-          "summer",
-          "setting",
-          "outside",
-          "welcoming"
+          "lot",
+          "sqm",
+          "floor area",
+          "sqm floor",
+          "area sqm",
+          "floor",
+          "bedrooms bathrooms",
+          "sqm land",
+          "land",
+          "homes",
+          "brand new",
+          "brand"
         ]
       }
     ]
@@ -391,7 +391,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T08:23:32.373758+00:00"
+    "updated_at": "2026-10-28T15:40:38.621404+00:00"
   },
   "body": "OPEN HOME LOCATION: SALES SUITE — 387 TAMAKI DRIVE, ST HELIERS\r\nAll advertised viewing times take place at the sales suite while construction is underway.\r\n\r\nARCHITECTURAL PRESTIGE MEETS TRANQUIL LUXURY\r\n\r\nEnclave is a thoughtfully curated collection of architecturally designed homes in the heart of St Heliers. Proudly developed by Clarke Group and designed by multi-award-winning architects Monk Mackenzie, Enclave presents a rare opportunity to secure a beautifully crafted new home in one of Auckland’s most sought-after coastal suburbs.\r\n\r\nEXPLORE THE COLLECTION\r\n• Two-, three- and four-bedroom residences\r\n• Architecturally designed by Monk Mackenzie\r\n• Developed by Clarke Group\r\n• Premium St Heliers location, moments from the beach and village\r\n• Zoned for Churchill Park Primary, St Ignatius School and Glendowie College\r\n• Miele appliances and premium designer finishes\r\n• Choice of light or dark interior palettes\r\n• Private outdoor living and a landscaped pocket park\r\n• Garaging available on selected residences\r\n• Construction now underway\r\n• Estimated completion: Q4 2027\r\n• Price by negotiation\r\n\r\nA COASTAL LIFESTYLE, BEAUTIFULLY CONSIDERED\r\nLife at Enclave is defined by understated sophistication and everyday convenience. Enjoy morning walks to St Heliers Village with its cafés, restaurants and boutique shopping, spend weekends at the beach, or follow Tamaki Drive into Auckland’s CBD.\r\n\r\nInspired by the quiet elegance of European terraces, Enclave has been carefully designed to respond to the natural landscape. Nine individually designed buildings cascade with the land, creating privacy, varied outlooks and a sense of individuality. At the heart of the community, a landscaped pocket park provides a peaceful space to relax and connect.\r\n\r\nREFINED INTERIORS. EVERYDAY COMFORT.\r\nEach residence brings together generous open-plan living, premium materials and timeless finishes. Wide-plank engineered timber flooring, bespoke joinery, leathered stone benchtops, Miele appliances, beautifully appointed bathrooms and integrated heat pumps create homes that are both elegant and practical.\r\n\r\nWith a choice of layouts and light or dark interior palettes, there is room to find a home that feels like your own. Whether you are looking to downsize, purchase your first home, invest or secure a low-maintenance lifestyle by the coast, explore the possibilities at Enclave.\r\n\r\nVISIT OUR SALES SUITE — OPEN SEVEN DAYS\r\nOur sales suite at 387 Tamaki Drive, St Heliers, is open this week (19–25 October 2026): Monday 12pm–5:30pm; Tuesday 9am–5pm; Wednesday 9am–5:30pm; Thursday and Friday 9am–6pm; Saturday and Sunday 9am–5:30pm. Visit us to explore the finishes, learn more about the development and discuss the residences available. Viewings take place at the sales suite while construction is underway.\r\n\r\nContact Richard at Clarke Group on 027 300 1764 for the project information pack, current availability and pricing, or to arrange your visit.\r\nRegister your interest at https://enclavestheliers.co.nz/\r\n\r\nThis listing showcases individual homes across the Enclave development. The property fields represent a three-bedroom option with one main bathroom, two ensuite bathrooms, one living area and one garage space, with no separate toilets, study or additional off-street parking, and no home and income potential. Configurations, sizes, parking and specifications vary by residence. Architectural images are artist impressions of different residences and shared spaces. The sales-suite photograph is not a residence. Completion is estimated for Q4 2027. Confirm individual plans, specifications and school enrolment eligibility before purchasing.",
   "photos": [
@@ -455,7 +455,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2650000,
-      "estimate_mid": 3190000
+      "estimate_mid": 3180000
     },
     {
       "property_id": "c8d5e40d-3bfb-414d-b826-1a1df5e1cf0b",
@@ -469,7 +469,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1775000,
-      "estimate_mid": 1690000
+      "estimate_mid": 1680000
     },
     {
       "property_id": "9d13664a-9e97-41af-94f8-e6971cf340ef",
@@ -483,7 +483,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2575000,
-      "estimate_mid": 3110000
+      "estimate_mid": 3130000
     },
     {
       "property_id": "8232b063-ebfe-4b15-89b0-03536a5fbe1d",
@@ -497,7 +497,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1600000,
-      "estimate_mid": 1330000
+      "estimate_mid": 1300000
     },
     {
       "property_id": "807207e8-19f2-494a-9f78-79ac855c9a1b",
@@ -511,7 +511,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2250000,
-      "estimate_mid": 2490000
+      "estimate_mid": 2480000
     },
     {
       "property_id": "1ea85c38-befb-450f-aea7-f8c871204f0e",
@@ -525,7 +525,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2925000,
-      "estimate_mid": 3100000
+      "estimate_mid": 3090000
     },
     {
       "property_id": "41afaf59-d58c-49c2-be42-6ee7d2a1f50d",
@@ -556,20 +556,6 @@
       "estimate_mid": 2420000
     },
     {
-      "property_id": "b00d0e9f-5399-48ef-aac1-8c7b554cb85d",
-      "address": "65 Maskell Street, St Heliers, Auckland",
-      "sale_price": 2410500,
-      "sale_date": "2026-07-30T00:00:00+00:00",
-      "distance_km": 0.85,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1975000,
-      "estimate_mid": 2520000
-    },
-    {
       "property_id": "8add2387-222d-4aa4-b887-1e6cf5dd9d91",
       "address": "12 Kesteven Avenue, Glendowie, Auckland",
       "sale_price": 1555000,
@@ -581,32 +567,46 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1725000,
-      "estimate_mid": 1720000
+      "estimate_mid": 1710000
+    },
+    {
+      "property_id": "4afb7954-8f1d-4701-8f15-75130dab7a42",
+      "address": "22 Whitehaven Road, Glendowie, Auckland",
+      "sale_price": 2005000,
+      "sale_date": "2026-07-08T00:00:00+00:00",
+      "distance_km": 0.88,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1925000,
+      "estimate_mid": 2000000
     }
   ],
   "valuation": {
     "value_low": 1325000,
     "value_mid": 1815750,
-    "value_high": 2711000,
+    "value_high": 2750000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.32M – $2.71M",
+        "range": "$1.32M – $2.75M",
         "low": 1325000,
         "mid": 1815750,
-        "high": 2711000,
-        "updated_at": "2026-10-28T08:23:32.373758+00:00",
+        "high": 2750000,
+        "updated_at": "2026-10-28T15:40:38.621404+00:00",
         "confidence": "low",
-        "n": 53,
+        "n": 55,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 53,
-          "n_eff": 16.38,
+          "n": 55,
+          "n_eff": 16.63,
           "radius_km": 3.0,
-          "iqr_ratio": 0.7633,
+          "iqr_ratio": 0.7848,
           "same_suburb": 22,
           "model_version": "comp-cv-v1"
         }

@@ -2,7 +2,7 @@
 
 Release: **20261028**  
 Database build: **2026-10-28T08:03:32.465465+00:00**  
-Code revision: **84487cbc36f130cd0b9376271f9d096ebc457a2d**
+Code revision: **6e98756405de0e8b505df2214df17061af6a749f**
 
 This bundle is a compact, reproducible snapshot of the Auckland Property Scout
 research database. It contains derived listing facts, delisted history, model
@@ -15,6 +15,7 @@ aggregate metrics.
 - `*.csv.gz` — table extracts for quick analysis
 - `schema.sql` — database schema
 - `manifest.json` — checksums, counts and provenance
+- `auckland_property_release.zip` — all of the above in one download
 - `LICENSE.md` — data/code licensing and source attribution
 
 ## Verify

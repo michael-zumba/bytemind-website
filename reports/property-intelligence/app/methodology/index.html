@@ -150,7 +150,8 @@
     <p>Every number in the live app is generated from the database described here. The <a href="../#/research">Research Lab</a> shows the current measured values; this document explains the machinery behind them and why some claims are deliberately limited.</p>
     <div class="download-row">
       <a class="btn btn-primary" href="auckland-property-methodology.pdf" download>Download this document (PDF)</a>
-      <a class="btn" href="../data/release/manifest.json">Public data release</a>
+      <a class="btn" href="../data/release/auckland_property_release.zip" download>Download data release (ZIP)</a>
+      <a class="btn" href="../data/release/auckland_property.sqlite.gz" download>Download SQLite database</a>
     </div>
   </div>
 
@@ -378,7 +379,17 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
       <li>Raw third-party listing descriptions and photos are kept out of the public release. Derived features, metrics and code remain available, and the scraper is included so the source data can be collected independently.</li>
     </ul>
     <div class="eq"><span class="eq-label">Rebuild locally</span>python3 -m db.build<br>python3 -m analysis.research_digest<br>python3 -m release.build --out release/out --keep 12</div>
-    <p>The latest public release is linked from the project page and from the app's <a href="../data/release/manifest.json">release manifest</a>. Derived data is published under CC BY 4.0; code is under MIT. The source listing content remains subject to Trade Me's terms and is not redistributed.</p>
+    <p><strong>Direct downloads:</strong>
+      <a href="../data/release/auckland_property_release.zip" download>all data (ZIP)</a> ·
+      <a href="../data/release/auckland_property.sqlite.gz" download>SQLite database</a> ·
+      <a href="../data/release/listings.csv.gz" download>listing facts CSV</a> ·
+      <a href="../data/release/listing_price_history.csv.gz" download>price-change history CSV</a> ·
+      <a href="../data/release/property_sales.csv.gz" download>previous-sales CSV</a> ·
+      <a href="../data/release/manifest.json">manifest / checksums</a>.</p>
+    <p>The downloadable release is available as a single <a href="../data/release/auckland_property_release.zip" download>ZIP bundle</a>,
+    a <a href="../data/release/auckland_property.sqlite.gz" download>compressed SQLite database</a>, or individual
+    gzipped table files. The <a href="../data/release/manifest.json">checksum manifest</a> is provenance, not the data download.
+    Derived data is published under CC BY 4.0; code is under MIT. The source listing content remains subject to Trade Me's terms and is not redistributed.</p>
   </section>
 
   <section id="limits">

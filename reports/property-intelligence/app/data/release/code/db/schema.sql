@@ -75,6 +75,9 @@ CREATE TABLE IF NOT EXISTS listings (
     improvement_value INTEGER,
     cv_updated_at TEXT,
     build_decade TEXT,
+    build_year INTEGER,
+    build_year_source TEXT,
+    tenure_source TEXT,
 
     -- Independent comparable-sales model
     comp_low INTEGER,
@@ -284,6 +287,25 @@ CREATE TABLE IF NOT EXISTS listing_price_dynamics (
 );
 CREATE INDEX IF NOT EXISTS idx_price_dynamics_change
     ON listing_price_dynamics(n_price_changes, last_change_at);
+
+-- Property-level sale history from Homes.co.nz (subject property, not nearby comps).
+CREATE TABLE IF NOT EXISTS property_sales (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    homes_property_id TEXT NOT NULL,
+    listing_id INTEGER REFERENCES listings(id) ON DELETE SET NULL,
+    address TEXT,
+    sale_date TEXT,
+    sale_price INTEGER,
+    display_price TEXT,
+    sale_type TEXT,
+    council_confirmed INTEGER,
+    source TEXT,
+    updated_at TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_property_sales_property
+    ON property_sales(homes_property_id, sale_date);
+CREATE INDEX IF NOT EXISTS idx_property_sales_listing
+    ON property_sales(listing_id, sale_date);
 
 CREATE TABLE IF NOT EXISTS model_predictions (
     listing_id INTEGER NOT NULL,

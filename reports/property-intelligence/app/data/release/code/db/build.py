@@ -55,6 +55,7 @@ CSV_COLUMNS = [
     "value_low", "value_mid", "value_high", "value_source", "value_confidence",
     "cv", "land_value", "improvement_value", "cv_ratio", "ask_gap", "deal_gap",
     "lat", "lon", "url", "agency_name", "agency_phone", "homes_url", "tenure",
+    "tenure_source", "build_decade", "build_year",
 ]
 
 
@@ -82,6 +83,20 @@ def load_listing_files(raw_dir: Path) -> list[dict[str, Any]]:
         if isinstance(data, dict) and data.get("listing_id"):
             listings.setdefault(int(data["listing_id"]), data)
     return list(listings.values())
+
+
+def load_homes_profiles(raw_dir: Path) -> dict[str, dict[str, Any]]:
+    """Load cached Homes.co.nz ownership/build/sale profiles by property ID."""
+    profiles: dict[str, dict[str, Any]] = {}
+    for path in sorted((raw_dir / "homes").glob("*.json")):
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        property_id = payload.get("property_id")
+        if property_id:
+            profiles[str(property_id)] = payload
+    return profiles
 
 
 def previous_state(
@@ -159,6 +174,25 @@ NON_STANDARD_KEYWORDS = (
 )
 
 
+def _infer_build_year(item: dict[str, Any]) -> int | None:
+    """Fallback for build year explicitly stated in the listing copy."""
+    import re
+
+    text = f"{item.get('title') or ''} {item.get('body') or ''}"
+    match = re.search(
+        r"\b(?:built|constructed|construction|year built|built in)\b[^.]{0,28}?\b((?:18|19|20)\d{2})\b",
+        text,
+        re.IGNORECASE,
+    )
+    if not match:
+        return None
+    try:
+        year = int(match.group(1))
+    except ValueError:
+        return None
+    return year if 1800 <= year <= datetime.now().year + 1 else None
+
+
 def classify_listing(item: dict[str, Any]) -> tuple[int, str | None, str]:
     """Flag non-standard listings and detect tenure.
 
@@ -192,8 +226,14 @@ def classify_listing(item: dict[str, Any]) -> tuple[int, str | None, str]:
     return 1, None, tenure
 
 
-def insert_listings(conn: sqlite3.Connection, listings: list[dict[str, Any]], first_seen: dict[int, str]) -> int:
+def insert_listings(
+    conn: sqlite3.Connection,
+    listings: list[dict[str, Any]],
+    first_seen: dict[int, str],
+    profiles: dict[str, dict[str, Any]] | None = None,
+) -> int:
     suburb_slugs = {s["slug"] for s in config.SUBURBS}
+    profiles = profiles or {}
     count = 0
     for item in listings:
         listing_id = int(item["listing_id"])
@@ -253,6 +293,41 @@ def insert_listings(conn: sqlite3.Connection, listings: list[dict[str, Any]], fi
                 is_standard, standard_reason, tenure,
             ),
         )
+        profile = profiles.get(str(homes.get("property_id") or ""))
+        profile_tenure = (profile or {}).get("tenure")
+        profile_source = (profile or {}).get("tenure_source")
+        if profile:
+            conn.execute(
+                """UPDATE listings SET
+                     tenure=COALESCE(?, tenure),
+                     tenure_source=?,
+                     build_decade=COALESCE(?, build_decade),
+                     build_year=?,
+                     build_year_source=?
+                   WHERE id=?""",
+                (
+                    profile_tenure,
+                    profile_source or "homes.co.nz",
+                    profile.get("decade_built"),
+                    _int(profile.get("build_year")),
+                    profile.get("build_year_source"),
+                    listing_id,
+                ),
+            )
+        else:
+            text_year = _infer_build_year(item)
+            conn.execute(
+                """UPDATE listings SET tenure_source=?,
+                     build_year=COALESCE(build_year, ?),
+                     build_year_source=COALESCE(build_year_source, ?)
+                   WHERE id=?""",
+                (
+                    "listing_text" if tenure != "unknown" else "unknown",
+                    text_year,
+                    "listing_text_approx" if text_year else None,
+                    listing_id,
+                ),
+            )
         conn.execute(
             """INSERT OR IGNORE INTO listing_snapshots (
                  listing_id, captured_at, price_display, asking_price, estimate_mid, cv,
@@ -405,6 +480,40 @@ def upsert_listing_properties(conn: sqlite3.Connection, listings: list[dict[str,
                 homes.get("build_decade"), homes.get("cv_updated_at"),
             ),
         )
+
+
+def insert_property_sales(
+    conn: sqlite3.Connection,
+    listings: list[dict[str, Any]],
+    profiles: dict[str, dict[str, Any]],
+    now_iso: str,
+) -> int:
+    """Materialise subject-property sale histories from cached Homes profiles."""
+    conn.execute("DELETE FROM property_sales")
+    inserted = 0
+    for item in listings:
+        homes = item.get("homes") or {}
+        property_id = str(homes.get("property_id") or "")
+        profile = profiles.get(property_id)
+        if not profile:
+            continue
+        listing_id = _int(item.get("listing_id"))
+        address = f"{item.get('address') or ''}, {item.get('suburb') or ''}".strip(", ")
+        for sale in profile.get("sales") or []:
+            conn.execute(
+                """INSERT INTO property_sales (
+                     homes_property_id, listing_id, address, sale_date, sale_price,
+                     display_price, sale_type, council_confirmed, source, updated_at
+                   ) VALUES (?,?,?,?,?,?,?,?,?,?)""",
+                (
+                    property_id, listing_id, address, sale.get("sale_date"),
+                    _int(sale.get("sale_price")), sale.get("display_price"),
+                    sale.get("sale_type"), 1 if sale.get("council_confirmed") else 0,
+                    sale.get("source") or "homes.co.nz", now_iso,
+                ),
+            )
+            inserted += 1
+    return inserted
 
 
 def _current_inventory_ids(raw_dir: Path) -> set[int] | None:
@@ -1057,6 +1166,13 @@ def validate_derived(conn: sqlite3.Connection) -> dict[str, Any]:
         "text_terms": conn.execute("SELECT COUNT(*) FROM text_term_associations").fetchone()[0],
         "sale_stages": conn.execute("SELECT COUNT(*) FROM sale_method_analysis").fetchone()[0],
         "price_dynamics": conn.execute("SELECT COUNT(*) FROM listing_price_dynamics").fetchone()[0],
+        "property_sales": conn.execute("SELECT COUNT(*) FROM property_sales").fetchone()[0],
+        "tenure_known": conn.execute(
+            "SELECT COUNT(*) FROM listings WHERE tenure IS NOT NULL AND tenure != 'unknown'"
+        ).fetchone()[0],
+        "build_year_known": conn.execute(
+            "SELECT COUNT(*) FROM listings WHERE build_year IS NOT NULL"
+        ).fetchone()[0],
         "price_history": conn.execute("SELECT COUNT(*) FROM listing_price_history").fetchone()[0],
         "price_history_missing_dates": conn.execute(
             "SELECT COUNT(*) FROM listing_price_history WHERE observed_at IS NULL OR observed_at=''"
@@ -1094,6 +1210,7 @@ def validate_derived(conn: sqlite3.Connection) -> dict[str, Any]:
 
 def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool = False) -> dict[str, Any]:
     listings = load_listing_files(raw_dir)
+    homes_profiles = load_homes_profiles(raw_dir)
     if not listings:
         raise SystemExit(f"No listing JSON files found under {raw_dir / 'listings'}")
     first_seen, old_snapshots, previous_listings, old_events = previous_state(db_path)
@@ -1116,9 +1233,10 @@ def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool
              suburb["group"], None, None, None),
         )
 
-    listings_count = insert_listings(conn, listings, first_seen)
+    listings_count = insert_listings(conn, listings, first_seen, homes_profiles)
     lifecycle_stats = reconcile_inventory(conn, raw_dir, previous_listings, utc_now())
     sales_count = insert_sales(conn, listings)
+    property_sales_count = insert_property_sales(conn, listings, homes_profiles, utc_now())
     upsert_listing_properties(conn, listings)
     now = utc_now()
     event_count = generate_events(
@@ -1226,6 +1344,13 @@ def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool
         "model_predictions": conn.execute("SELECT COUNT(*) FROM model_predictions").fetchone()[0],
         "price_history": conn.execute("SELECT COUNT(*) FROM listing_price_history").fetchone()[0],
         "price_dynamics": conn.execute("SELECT COUNT(*) FROM listing_price_dynamics").fetchone()[0],
+        "property_sales": conn.execute("SELECT COUNT(*) FROM property_sales").fetchone()[0],
+        "tenure_known": conn.execute(
+            "SELECT COUNT(*) FROM listings WHERE tenure IS NOT NULL AND tenure != 'unknown'"
+        ).fetchone()[0],
+        "build_year_known": conn.execute(
+            "SELECT COUNT(*) FROM listings WHERE build_year IS NOT NULL"
+        ).fetchone()[0],
         "description_changes": conn.execute(
             "SELECT COUNT(*) FROM listing_events WHERE event_type='description_change'"
         ).fetchone()[0],

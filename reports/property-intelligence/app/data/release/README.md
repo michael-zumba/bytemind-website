@@ -1,8 +1,8 @@
 # Auckland Property Scout — public research release
 
 Release: **20261028**  
-Database build: **2026-10-28T07:25:13.547106+00:00**  
-Code revision: **4daa42313af8211dadacb24fb0311a664dd0fa6c**
+Database build: **2026-10-28T08:03:32.465465+00:00**  
+Code revision: **84487cbc36f130cd0b9376271f9d096ebc457a2d**
 
 This bundle is a compact, reproducible snapshot of the Auckland Property Scout
 research database. It contains derived listing facts, delisted history, model
@@ -46,6 +46,7 @@ released tables.
   "listing_events": 186,
   "listing_price_history": 1066,
   "listing_price_dynamics": 1048,
+  "property_sales": 1466,
   "model_predictions": 1522,
   "text_features": 1022,
   "text_term_associations": 98,

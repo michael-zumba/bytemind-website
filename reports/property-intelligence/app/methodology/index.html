@@ -280,7 +280,7 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
         <tr><td>Hedonic fallback with CV</td><td>5-fold cross-validation against Homes AVM; 497 training cases</td><td class="num">MAE $265k · MAPE 7.0% · R² 0.973</td><td>The most accurate fallback, but the target is an AVM, not a sale price.</td></tr>
         <tr><td>Hedonic fallback without CV</td><td>Same test with CV removed</td><td class="num">MAE $756k · MAPE 24.6% · R² 0.784</td><td>A deliberately harder stress test; much weaker and labelled low confidence.</td></tr>
         <tr><td>Comparable-sales model</td><td>Compared with Homes AVM on the same listings</td><td class="num">MAE $275k · MAPE 7.2% · R² 0.969</td><td>A useful independent check when an AVM exists; smaller samples make it fragile.</td></tr>
-        <tr><td>Sale-price model</td><td>316 recorded sold prices</td><td class="num">MAE $195k · MAPE 13.4% · R² 0.830</td><td>A different target: actual sale prices. It is a cross-check, not the primary range.</td></tr>
+        <tr><td>Sale-price model</td><td>320 recorded sold prices</td><td class="num">MAE $195k · MAPE 13.4% · R² 0.830</td><td>A different target: actual sale prices. It is a cross-check, not the primary range.</td></tr>
         <tr><td>Old suburb-guide baseline</td><td>Same validation sample</td><td class="num">MAE $1.22m · MAPE 47.5%</td><td>Shows how much the calibrated fallback improves on a crude suburb median.</td></tr>
       </tbody>
     </table>

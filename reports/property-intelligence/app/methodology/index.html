@@ -139,7 +139,7 @@
     <h1>Auckland Property Scout</h1>
     <p class="standfirst">How the data is collected, how estimates are built, how the models are tested, and what the numbers can and cannot tell you.</p>
     <div class="meta">
-      <div><strong>Version 1.1</strong>28 October 2026</div>
+      <div><strong>Version 1.2</strong>29 October 2026</div>
       <div><strong>Coverage</strong>17 North Shore and Eastern Bays suburbs</div>
       <div><strong>Access</strong>Free to read and download · independent research</div>
     </div>
@@ -229,6 +229,9 @@
     <h3>Tenure</h3>
     <p>The tenure values are <strong>freehold</strong>, <strong>cross-lease</strong>, <strong>leasehold</strong>, <strong>unit title</strong> and <strong>unknown</strong>. Freehold usually means the owner holds the land and buildings, subject to the title. A cross-lease shares one title between homes, with a lease for each unit. A unit title gives ownership of a unit plus a share of shared property, often through a body corporate. Leasehold means the land is leased and ground rent may apply. Listing text is used only when there is no Homes record.</p>
     <div class="callout"><strong>Unknown is not freehold.</strong> A missing tenure stays missing. The Research Lab reports how much of the sample has a source.</div>
+    <h3>School zone</h3>
+    <p>Each listing shows the schools where it is in zone. The hedonic fallback model also includes the number of in-zone schools as a feature. This is a count, not a school-quality rating. The current Ministry directory provides an Equity Index, not the legacy decile, so we do not turn that index into a ranking.</p>
+    <p class="explain">School zones matter to many buyers, but a zone count alone is a weak quality measure. A school's reputation, enrolment scheme and actual zone boundary can all change. Check the school's current zone before relying on it.</p>
     <h3>Build year</h3>
     <p>Homes gives a build decade and, for many properties, a built date in its timeline. We store an approximate build year and its source, and show it as <span class="num">c. 1960</span>. It is not an exact construction date. Older homes may need more maintenance or have different renovation needs, but age alone is not used to predict price.</p>
     <h3>Sale history</h3>
@@ -241,6 +244,9 @@
         <tr><td>Previous sale records</td><td>Homes property timeline</td><td class="num">1,466 records across 458 listings</td></tr>
       </tbody>
     </table>
+    <h3>Sale frequency</h3>
+    <p>The same sale history can show how often a property has changed hands. We calculate the number of recorded sales, the average years between them and the years since the last sale. A frequent-trading label is shown as context, not a price penalty.</p>
+    <p class="explain">The premise that frequent sales always signal an undesirable property is too strong. Frequent trading can reflect a liquid suburb, an estate sale, an investor portfolio or a short ownership period. In the current sample, the median value-to-CV ratio is about 0.97 for frequent-trading listings and 0.98 for others. The gap is small, so the flag is a prompt to look, not a reason to discount the price.</p>
     <p>We report coverage instead of guessing. The daily refresh adds new matches, and a random audit compares the database with the source.</p>
   </section>
 
@@ -326,8 +332,8 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
       </tbody>
     </table>
     <p>The 0–100 <strong>sale-pressure score</strong> is a motivation proxy, not a prediction:</p>
-    <div class="eq"><span class="eq-label">Sale-pressure score</span>score = 50 × (stage / 5)<br>      + 30 × min(days_on_market, 180) / 180<br>      + min(20, 8 × price_drops + 10 × method_changes)</div>
-    <p class="explain">Half the score comes from how explicit the price signal is. Another 30% comes from time on market. Up to 20 points come from price cuts or method changes in the last 180 days. Scores of 40–64 are medium; 65+ is high. The weights are fixed by hand, not estimated from outcomes.</p>
+    <div class="eq"><span class="eq-label">Sale-pressure score</span>score = 50 × (stage / 5)<br>      + 30 × min(days_on_market, 180) / 180<br>      + min(20, 8 × price_drops + 10 × method_changes + 5 × description_changes)</div>
+    <p class="explain">Half the score comes from how explicit the price signal is. Another 30% comes from time on market. Up to 20 points come from price cuts, description edits or method changes in the last 180 days. Scores of 40–64 are medium; 65+ is high. The weights are fixed by hand, not estimated from outcomes.</p>
     <p>A single-snapshot test found no significant stage effect after controlling for suburb, type, size and other factors. The app therefore calls this a <strong>motivation or urgency proxy</strong>, not a price predictor. With enough price and method changes, we can test each listing over time.</p>
   </section>
 
@@ -366,7 +372,8 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
     <p>Each row stores the date, price, display text, sale method, previous price, dollar and percentage change, and days since the last observation.</p>
     <div class="eq"><span class="eq-label">Change calculations</span>change = new_price − old_price<br>change_percent = change / old_price × 100%<br>days_between = date(new observation) − date(previous observation)</div>
     <p><strong>Example.</strong> A St Heliers listing was first seen at $1,690,000 on 23 October 2026. On 28 October it was $1,550,000. That is −$140,000, or −8.3%, over 4.34 days. It is what was observed, not evidence that the property will sell at $1.55m.</p>
-    <p>The per-listing summary adds the number of changes, days to the first change, average gap between changes, cumulative change, largest drop and last direction. These measures can later show whether reductions cluster at a certain listing age, whether a description edit comes before a price cut, and how quickly vendors respond to a slow campaign.</p>
+    <p>The per-listing summary adds the number of changes, days to the first change, average gap between changes, cumulative change, largest drop and last direction. These measures can show whether reductions cluster at a certain listing age, whether a description edit comes before a price cut, and how quickly vendors respond.</p>
+    <p>A price cut, a change in price wording, a sale-method change or a description edit can all point to a vendor under pressure. The app marks these listings with a <strong>price cut</strong> or <strong>copy changed</strong> badge. The sale-pressure score also gives description edits a small weight. The flag means “look here”; it does not prove pressure.</p>
     <div class="callout"><strong>Early data.</strong> The current snapshot has only a few days of daily price-change history. The counts and medians are real, but too small to estimate how fast Auckland vendors move in general. The picture will improve as daily data builds up.</div>
   </section>
 
@@ -430,6 +437,7 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
       <li><strong>Price history is young.</strong> The first reliable changes were captured in late October 2026. Early medians will move as the panel grows.</li>
       <li><strong>Sale feedback starts from a small sample.</strong> Four disclosed same-property outcomes are currently available; the calibration factor and ridge model wait for ten and thirty pre-sale outcomes respectively.</li>
       <li><strong>Text effects are not significant here.</strong> Topics and word scores are exploratory, not proven price drivers.</li>
+      <li><strong>Alternative valuation sites are not a reliable fallback.</strong> QV's public address search did not return usable anonymous property records during this review, so no QV values were added. Missing Homes values are handled by the comparable-sales and hedonic fallbacks.</li>
       <li><strong>Association is not causation.</strong> This project reports observed links and behaviour. It does not claim that a feature causes a price, or that a price will move in a set direction.</li>
     </ul>
     <p>When a number is uncertain, the interface should show a range, a confidence label, a source date or a caveat. A missing caveat is a defect, not a stronger claim.</p>
@@ -459,7 +467,7 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
   </section>
 
   <div class="footer">
-    <p><strong>Auckland Property Scout</strong> · independent research project by Yuqian Zhang · version 1.1 · 28 October 2026.</p>
+    <p><strong>Auckland Property Scout</strong> · independent research project by Yuqian Zhang · version 1.2 · 29 October 2026.</p>
     <p>This document is explanatory, not a valuation, not financial or legal advice, and not a substitute for professional due diligence. Current metrics and the live interface: <a href="../#/research">Research Lab</a>. Download: <a href="auckland-property-methodology.pdf">PDF</a>.</p>
   </div>
 </div>

@@ -123,7 +123,7 @@ def previous_state(
         }
         delisted_expr = "delisted_at" if "delisted_at" in listing_columns else "NULL AS delisted_at"
         for row in conn.execute(
-            f"""SELECT id, address, price_display, asking_price, sale_method, asking_kind,
+            f"""SELECT id, title, address, price_display, asking_price, sale_method, asking_kind,
                        estimate_mid, cv, value_mid, status, last_seen_at, body, {delisted_expr}
                 FROM listings"""
         ):
@@ -228,6 +228,178 @@ def classify_listing(item: dict[str, Any]) -> tuple[int, str | None, str]:
     if "per week" in (item.get("price_display") or "").lower():
         return 0, "looks like a rental listing", tenure
     return 1, None, tenure
+
+
+def load_school_eqis(raw_dir: Path) -> dict[int, int]:
+    """Load Ministry Equity Index values from the school directory cache."""
+    import csv as _csv
+
+    path = raw_dir / "schools_directory.csv"
+    out: dict[int, int] = {}
+    if not path.exists():
+        return out
+    try:
+        with path.open(encoding="utf-8-sig", newline="") as fh:
+            for row in _csv.DictReader(fh):
+                try:
+                    school_id = int(row.get("School_Id") or "")
+                    value = row.get("EQi_Index")
+                    out[school_id] = int(float(value)) if value not in (None, "") else None
+                except (TypeError, ValueError):
+                    continue
+    except OSError:
+        return {}
+    return {k: v for k, v in out.items() if v is not None}
+
+
+def attach_school_eqis(conn: sqlite3.Connection, raw_dir: Path) -> int:
+    eqis = load_school_eqis(raw_dir)
+    if not eqis:
+        return 0
+    updated = 0
+    for school_id, eqi in eqis.items():
+        result = conn.execute(
+            """UPDATE schools SET eqi_index=?, decile_source=COALESCE(decile_source,'moe_directory')
+               WHERE id=?""",
+            (eqi, school_id),
+        )
+        updated += result.rowcount
+    return updated
+
+
+def compute_listing_signals(conn: sqlite3.Connection, *, now_iso: str) -> int:
+    """Build the compact school, change and sale-history signals used in the UI."""
+    conn.row_factory = sqlite3.Row
+    conn.execute("DELETE FROM listing_signals")
+    # School zone context
+    school_rows: dict[int, dict[str, Any]] = {}
+    for row in conn.execute(
+        """SELECT ls.listing_id,
+                  COUNT(s.id) AS school_count,
+                  SUM(CASE WHEN lower(s.type) LIKE '%secondary%'
+                            OR lower(s.type) LIKE '%year 9%' THEN 1 ELSE 0 END) AS secondary_count,
+                  AVG(s.eqi_index) AS eqi_mean
+           FROM listing_schools ls
+           JOIN schools s ON s.id=ls.school_id
+           WHERE ls.in_zone=1
+           GROUP BY ls.listing_id"""
+    ):
+        school_rows[int(row["listing_id"])] = dict(row)
+    # Change signals
+    change_rows: dict[int, dict[str, Any]] = {}
+    for row in conn.execute(
+        """SELECT listing_id, event_type, event_at, detail_json
+           FROM listing_events ORDER BY listing_id, event_at, id"""
+    ):
+        lid = int(row["listing_id"])
+        bucket = change_rows.setdefault(lid, {
+            "price_drop_count": 0, "price_increase_count": 0,
+            "description_change_count": 0, "display_change_count": 0,
+            "method_change_count": 0, "change_count": 0,
+            "last_change_at": None,
+        })
+        event_type = row["event_type"]
+        detail = _json_or_empty(row["detail_json"])
+        bucket["change_count"] += 1
+        bucket["last_change_at"] = row["event_at"]
+        if event_type in {"description_change", "title_change"}:
+            # Both are copy changes from the user's point of view.
+            bucket["description_change_count"] += 1
+        elif event_type == "price_change":
+            if detail.get("direction") == "drop":
+                bucket["price_drop_count"] += 1
+            else:
+                bucket["price_increase_count"] += 1
+        elif event_type == "price_display_change":
+            bucket["display_change_count"] += 1
+        elif event_type == "method_change":
+            bucket["method_change_count"] += 1
+    # Sale-history context
+    sale_rows: dict[int, list[dict[str, Any]]] = {}
+    for row in conn.execute(
+        """SELECT listing_id, sale_date, sale_price FROM property_sales
+           WHERE listing_id IS NOT NULL ORDER BY listing_id, sale_date"""
+    ):
+        sale_rows.setdefault(int(row["listing_id"]), []).append(dict(row))
+    inserted = 0
+    for row in conn.execute("SELECT id, first_seen_at FROM listings"):
+        lid = int(row["id"])
+        school = school_rows.get(lid, {})
+        zone_count = int(school.get("school_count") or 0)
+        secondary = int(school.get("secondary_count") or 0)
+        eqi_mean = school.get("eqi_mean")
+        if zone_count:
+            zone_label = f"In zone for {zone_count} school{'s' if zone_count != 1 else ''}"
+        else:
+            zone_label = "No in-zone school listed"
+        changes = change_rows.get(lid, {})
+        drop = int(changes.get("price_drop_count") or 0)
+        increase = int(changes.get("price_increase_count") or 0)
+        desc = int(changes.get("description_change_count") or 0)
+        display = int(changes.get("display_change_count") or 0)
+        method = int(changes.get("method_change_count") or 0)
+        total_changes = int(changes.get("change_count") or 0)
+        last_change = changes.get("last_change_at")
+        days_since = _days_between(now_iso, last_change) if last_change else None
+        if drop and desc:
+            change_signal = "price cut + copy changed"
+        elif drop:
+            change_signal = "price cut"
+        elif increase:
+            change_signal = "price increase"
+        elif desc:
+            change_signal = "copy changed"
+        elif display:
+            change_signal = "price wording changed"
+        elif method:
+            change_signal = "sale method changed"
+        else:
+            change_signal = None
+        sales = sale_rows.get(lid, [])
+        sale_dates = [s["sale_date"] for s in sales if s.get("sale_date")]
+        sale_dates.sort()
+        prior_sale_count = len(sale_dates)
+        first_sale = sale_dates[0] if sale_dates else None
+        last_sale = sale_dates[-1] if sale_dates else None
+        ownership_years = (
+            _days_between(last_sale, first_sale) / 365.25
+            if prior_sale_count >= 2 else None
+        )
+        avg_holding = (
+            ownership_years / (prior_sale_count - 1)
+            if ownership_years and prior_sale_count >= 2 else None
+        )
+        last_sale_price = next(
+            (s.get("sale_price") for s in reversed(sales) if s.get("sale_price")), None
+        )
+        if prior_sale_count == 0:
+            frequency_label = "No recorded sales"
+        elif prior_sale_count >= 3 and avg_holding is not None and avg_holding <= 5:
+            frequency_label = "Frequent trading"
+        elif prior_sale_count >= 2 and avg_holding is not None and avg_holding <= 8:
+            frequency_label = "Shorter holding periods"
+        else:
+            frequency_label = "Longer holding period"
+        conn.execute(
+            """INSERT INTO listing_signals (
+                 listing_id, school_zone_count, school_zone_secondary_count,
+                 school_zone_eqi_mean, school_zone_label, price_drop_count,
+                 price_increase_count, description_change_count,
+                 display_change_count, method_change_count, change_count,
+                 last_change_at, days_since_last_change, change_signal,
+                 prior_sale_count, ownership_years_mean, years_since_last_sale,
+                 last_sale_date, last_sale_price, sale_frequency_label, updated_at
+               ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+            (
+                lid, zone_count, secondary, eqi_mean, zone_label, drop, increase,
+                desc, display, method, total_changes, last_change, days_since,
+                change_signal, prior_sale_count, avg_holding,
+                _days_between(now_iso, last_sale) / 365.25 if last_sale else None,
+                last_sale, last_sale_price, frequency_label, now_iso,
+            ),
+        )
+        inserted += 1
+    return inserted
 
 
 def insert_listings(
@@ -609,6 +781,16 @@ def reconcile_inventory(
     }
 
 
+def _json_or_empty(value: Any) -> dict[str, Any]:
+    if not value:
+        return {}
+    try:
+        parsed = json.loads(value)
+        return parsed if isinstance(parsed, dict) else {}
+    except (TypeError, ValueError):
+        return {}
+
+
 def _body_digest(body: Any) -> str | None:
     """Whitespace-insensitive hash for detecting editorial description changes."""
     if not body:
@@ -647,7 +829,7 @@ def generate_events(
         )
     current_rows = [
         dict(row) for row in conn.execute(
-            """SELECT id, address, price_display, asking_price, sale_method, asking_kind,
+            """SELECT id, title, address, price_display, asking_price, sale_method, asking_kind,
                       estimate_mid, cv, value_mid, first_seen_at, last_seen_at, status, body
                FROM listings"""
         )
@@ -732,6 +914,16 @@ def generate_events(
                     "old_chars": len(str(old_body or "")),
                     "new_chars": len(str(new_body or "")),
                 },
+            )
+        old_title = prev.get("title")
+        new_title = row.get("title")
+        old_title_digest = _body_digest(old_title)
+        new_title_digest = _body_digest(new_title)
+        if old_title_digest and new_title_digest and old_title_digest != new_title_digest:
+            add(
+                listing_id, "title_change", row.get("last_seen_at"),
+                old_title_digest, new_title_digest,
+                {"old_chars": len(str(old_title or "")), "new_chars": len(str(new_title or ""))},
             )
     # Removals cannot be inferred from the raw cache (files are retained); the next
     # iteration can add a search-membership flag if required.
@@ -1172,6 +1364,7 @@ def validate_derived(conn: sqlite3.Connection) -> dict[str, Any]:
         "price_dynamics": conn.execute("SELECT COUNT(*) FROM listing_price_dynamics").fetchone()[0],
         "property_sales": conn.execute("SELECT COUNT(*) FROM property_sales").fetchone()[0],
         "sale_outcomes": conn.execute("SELECT COUNT(*) FROM listing_sale_outcomes").fetchone()[0],
+        "listing_signals": conn.execute("SELECT COUNT(*) FROM listing_signals").fetchone()[0],
         "tenure_known": conn.execute(
             "SELECT COUNT(*) FROM listings WHERE tenure IS NOT NULL AND tenure != 'unknown'"
         ).fetchone()[0],
@@ -1239,6 +1432,7 @@ def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool
         )
 
     listings_count = insert_listings(conn, listings, first_seen, homes_profiles)
+    attach_school_eqis(conn, raw_dir)
     lifecycle_stats = reconcile_inventory(conn, raw_dir, previous_listings, utc_now())
     sales_count = insert_sales(conn, listings)
     property_sales_count = insert_property_sales(conn, listings, homes_profiles, utc_now())
@@ -1301,6 +1495,7 @@ def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool
             feedback_stats = sale_feedback.run(conn, now_iso=now)
         except Exception as exc:  # noqa: BLE001 - feedback must not break the build
             feedback_stats = {"error": str(exc)[:300]}
+    compute_listing_signals(conn, now_iso=now)
     comps.compute_suburb_stats(conn, updated_at=now)
     derived_stats = validate_derived(conn)
     conn.execute(
@@ -1357,6 +1552,7 @@ def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool
         "price_dynamics": conn.execute("SELECT COUNT(*) FROM listing_price_dynamics").fetchone()[0],
         "property_sales": conn.execute("SELECT COUNT(*) FROM property_sales").fetchone()[0],
         "sale_outcomes": conn.execute("SELECT COUNT(*) FROM listing_sale_outcomes").fetchone()[0],
+        "listing_signals": conn.execute("SELECT COUNT(*) FROM listing_signals").fetchone()[0],
         "tenure_known": conn.execute(
             "SELECT COUNT(*) FROM listings WHERE tenure IS NOT NULL AND tenure != 'unknown'"
         ).fetchone()[0],
@@ -1400,6 +1596,7 @@ def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool
             "lifecycle": lifecycle_stats,
             "history_policy": history_stats,
             "sale_feedback": feedback_stats,
+            "listing_signals": conn.execute("SELECT COUNT(*) FROM listing_signals").fetchone()[0],
             "derived": derived_stats,
             "manifest": {k: manifest.get(k) for k in (
                 "started_at", "finished_at", "unique_listings", "details_ok",

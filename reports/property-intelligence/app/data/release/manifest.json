@@ -1,35 +1,36 @@
 {
   "counts": {
-    "listing_events": 186,
-    "listing_price_dynamics": 1048,
-    "listing_price_history": 1066,
+    "listing_events": 611,
+    "listing_price_dynamics": 1073,
+    "listing_price_history": 1104,
     "listing_sale_outcomes": 4,
-    "listing_snapshots": 6312,
-    "listings": 1048,
-    "model_predictions": 2531,
-    "property_sales": 1466,
+    "listing_signals": 1073,
+    "listing_snapshots": 7358,
+    "listings": 1073,
+    "model_predictions": 2579,
+    "property_sales": 1502,
     "sale_feedback_calibration": 6,
-    "sales": 320,
-    "text_features": 1022,
-    "text_term_associations": 98
+    "sales": 328,
+    "text_features": 1047,
+    "text_term_associations": 97
   },
-  "db_built_at": "2026-10-28T08:23:32.373758+00:00",
+  "db_built_at": "2026-10-28T18:48:49.881316+00:00",
   "files": {
     "LICENSE.md": {
       "bytes": 1266,
       "sha256": "b7223002f5f5527a7bc9dc0fa3038fa23d9f9064d23e5bf8d778a6bd62ca6a19"
     },
     "README.md": {
-      "bytes": 1775,
-      "sha256": "c43eafee3602c3b7c7add58f23ce682a63fe7a09c30762734d70ed3d1e2b574a"
+      "bytes": 1802,
+      "sha256": "b2933665d4e3b973a95e35529c7e033a9a591414ef2c0d48c11f7fcde8ea9b86"
     },
     "auckland_property.sqlite.gz": {
-      "bytes": 1961696,
-      "sha256": "053aea848a8a372b61ad1f6e6f3657d3c7abd683b39f3f340012a5b392db4ed7"
+      "bytes": 2130547,
+      "sha256": "06cae0098fae75aa0785402c3cc803a1a9b90693cb7ae90bfed7a1bb959cd022"
     },
     "auckland_property_release.zip": {
-      "bytes": 2557926,
-      "sha256": "f883a452616029f3e27c56ca2b8ab961bce7026b4cb2f7414dd50006b6a2d101"
+      "bytes": 2809858,
+      "sha256": "5972acdef198e86c9962273668ebb0d716621dc1a9e8d136f876a2074e3ff4cc"
     },
     "code/analysis/__init__.py": {
       "bytes": 0,
@@ -48,8 +49,8 @@
       "sha256": "47fc813c3262788ea14cc2d4572240c05518676434d72aafc29102dff6fd4fef"
     },
     "code/analysis/sale_method.py": {
-      "bytes": 8720,
-      "sha256": "8b4cfa718b1e35f52ed990fa9f9cdef490432c5bd1733bf2c23b9fa7d00c4ba5"
+      "bytes": 9075,
+      "sha256": "e051887783686c0b95e1b78186509980f2f253d78b68e3b1016195c539e22f12"
     },
     "code/analysis/text_model.py": {
       "bytes": 68979,
@@ -68,12 +69,12 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     "code/db/build.py": {
-      "bytes": 66657,
-      "sha256": "75745391eb32d589935383c45b9914f3d72ecaf5306cf24cb133efd33ea58142"
+      "bytes": 75361,
+      "sha256": "9dd1a42c889114b04508fe8068f157a366c7f33e2edbe17f7827eec8fc108577"
     },
     "code/db/schema.sql": {
-      "bytes": 12485,
-      "sha256": "b0644f17a2d810e9e8bb23f9aa6e0acf6ac1ce0f53c68e69dc6378a50933c340"
+      "bytes": 14080,
+      "sha256": "5278bac445252d1a660a68aed465af385bc6240ce81cbe352a2000e8e4b312f1"
     },
     "code/requirements.txt": {
       "bytes": 152,
@@ -107,92 +108,100 @@
       "bytes": 23148,
       "sha256": "43a0ce7478dd2a6528536af26f2812f3fdd190b7c6df169e854655e5abf5c391"
     },
+    "code/scraper/schools_enrich.py": {
+      "bytes": 3489,
+      "sha256": "31bc950d26bb0a1300ebfc2387a447b0c4c8c2b6726e0f5248e09a29b1a6ed18"
+    },
     "code/scraper/trademe.py": {
       "bytes": 12173,
       "sha256": "a12299f07c82eebddd92762939f69d739141dd916e02beb946ac55d962922780"
     },
     "listing_events.csv.gz": {
-      "bytes": 4447,
-      "sha256": "618628ef56ca03d40eefc8dddd5b90d9c58b549462c8da7b015c74949a38571c"
+      "bytes": 16889,
+      "sha256": "729da8f85aabe51c5d6bc348b7ee8f6fdd89d52c4d3eadae2e09c39e7329d555"
     },
     "listing_price_dynamics.csv.gz": {
-      "bytes": 8453,
-      "sha256": "28a870f57b2156c2223b90ba9c9d43d48f80f8eccdf3d47da796514e751105d8"
+      "bytes": 9182,
+      "sha256": "c6c76c9a9ee2c92ec58829b48bdf74c389e61772632bfdeaab308a9cae656efc"
     },
     "listing_price_history.csv.gz": {
-      "bytes": 20583,
-      "sha256": "2c903e79dfafdb95cff7e0a66ffe993c6a20cc6b2481840fb4612471c421ee14"
+      "bytes": 21338,
+      "sha256": "670e0821a423117f4c16036baad9869f0fc35ad4103b5dad381b47d89f0e61d5"
     },
     "listing_sale_outcomes.csv.gz": {
-      "bytes": 682,
-      "sha256": "9498938eef5309de814f9b2836d6acb520aa87a097fa18dc3c104fc1f1fd6be1"
+      "bytes": 681,
+      "sha256": "3483183a42d8b5a3d3162137ad424bcda6f1a1cfd73777dfc5b1c7c2ea4ded0e"
+    },
+    "listing_signals.csv.gz": {
+      "bytes": 25075,
+      "sha256": "4d98c518037d9c7d21b5886e0cb84675dc339760612dd37d2070afd1947d2ba9"
     },
     "listing_snapshots.csv.gz": {
-      "bytes": 192742,
-      "sha256": "fc774312642dac10abbfb87c50b35388d25ed43879c90f9d198491ada8820356"
+      "bytes": 224988,
+      "sha256": "7c956f0317d33d3a93dbdb1943da2bc1ee6875a66be057d4b129a5dc52002b8e"
     },
     "listing_topics.csv.gz": {
-      "bytes": 57143,
-      "sha256": "68ae6c1a51847cdbc7eee787710d200616ffea39018936c864b85b06a81fd1f4"
+      "bytes": 58530,
+      "sha256": "e970e6cc73a4d1b32e17289a96979379792a5573f2d4ac07622de4c0edcead32"
     },
     "listings.csv.gz": {
-      "bytes": 112391,
-      "sha256": "841a05a5af709f269e04e5f0889222d58a0cf6b243c5758bfdf1f56fdf3e7011"
+      "bytes": 115055,
+      "sha256": "9bce761514a5a7a0007aa116efcb05be72129142369d3bdbaa5caef06ebbc939"
     },
     "model_metrics.csv.gz": {
-      "bytes": 775,
-      "sha256": "8deef9ab9f9533597c98545d524952b9155a29e4413e83bceb61b9dfcc1ae417"
+      "bytes": 778,
+      "sha256": "dd0402320dafadc4e35ac65f7431ab9bd1ec47b14c6b459eca39eba24eaef137"
     },
     "model_predictions.csv.gz": {
-      "bytes": 47985,
-      "sha256": "366622576031165c5a3911ee22fff6cdeb4e804b12cbf189bb4408af133d6bf9"
+      "bytes": 48777,
+      "sha256": "daa347bfbbe8f6f231364182de1a0a5e2b4df0f2988462f737d802308e839d08"
     },
     "property_sales.csv.gz": {
-      "bytes": 36320,
-      "sha256": "d2de27da573cf43e8aac3fe5764b8f139e537f1d2ff1616e9212de80b442b8f8"
+      "bytes": 37200,
+      "sha256": "578323f8c36e9a62cb4d5a9d2dd591f05b18c30d9ccfcc4e4cbd6b9a603cfa7a"
     },
     "sale_feedback_calibration.csv.gz": {
-      "bytes": 297,
-      "sha256": "3bc1f18bb442794760d0fff7537fbab6969865f81dd8ee24975faa927972013b"
+      "bytes": 296,
+      "sha256": "db78bfa73dd5efb9a729e256e2c1eb470ed45fdebaef30cc64005f5c84b1b68f"
     },
     "sale_method_analysis.csv.gz": {
-      "bytes": 359,
-      "sha256": "200528780dd4433691bb369fab160a372a7a0f5e3277dbd7712fb3bf83dee853"
+      "bytes": 354,
+      "sha256": "8fe3013d231d2efd971e213f8c54bb8504e7a6d38e369e5591b81e4a09f649e1"
     },
     "sales.csv.gz": {
-      "bytes": 20027,
-      "sha256": "ee639522405552dfc0b0334e32a8c1c7bfb83329f2c973f43370afd53ac8539a"
+      "bytes": 20528,
+      "sha256": "93245636a35046cbbabaa977893d9440c1adf5023fac4b5ee870b5fe19baa34b"
     },
     "schema.sql": {
-      "bytes": 12485,
-      "sha256": "b0644f17a2d810e9e8bb23f9aa6e0acf6ac1ce0f53c68e69dc6378a50933c340"
+      "bytes": 14080,
+      "sha256": "5278bac445252d1a660a68aed465af385bc6240ce81cbe352a2000e8e4b312f1"
     },
     "schools.csv.gz": {
-      "bytes": 8766,
-      "sha256": "1ab445df8ca32d9cb28a18563b46ed29777c5ed2f54140a80c3b71b8d297d6ed"
+      "bytes": 9070,
+      "sha256": "c7f747ca9250bca021c50e47c9c1ae39161a874927ce5bd75ff95cbc77b6c966"
     },
     "suburb_stats.csv.gz": {
-      "bytes": 983,
-      "sha256": "e06d07d79c6a6110c1ae341b2ad2b48ef243e30b7f761e8a26b9701780036073"
+      "bytes": 979,
+      "sha256": "4d49f74a7a180c7aeed3cebacb1f6e168235d4a27b41871b2c020b58a8c50959"
     },
     "text_features.csv.gz": {
-      "bytes": 31775,
-      "sha256": "49ace409ca6b00cf49d568fbc65f713fa7d91806f74b7806a4fef7dae5d90165"
+      "bytes": 32518,
+      "sha256": "aa2d4bb20c2cffe6db62c57c38cb92500ab5c45f7c4d00d20e0f3148f008ff6a"
     },
     "text_term_associations.csv.gz": {
-      "bytes": 6115,
-      "sha256": "09be03d8568651e62798630a27bcb96f37d7d84a7352d32710857b71c061016e"
+      "bytes": 6075,
+      "sha256": "21855b07b5d4a0fba5796b3d4fcb1a165a9806acecdb2b33b06fe568aa23afa7"
     },
     "text_topics.csv.gz": {
-      "bytes": 1296,
-      "sha256": "80297e7686030efd5b5f8583e6d26c4005b4aaa1a2a2e89314a489f4eac5c8ce"
+      "bytes": 1284,
+      "sha256": "4d2e8196b332ca7b4dea435e9d370801f2a49248fe52dac202c52a0624359f94"
     }
   },
-  "generated_at": "2026-10-28T21:23:39+13:00",
-  "git_revision": "8dcbbdc0fcc3e06cb5ac39ca2a72f4729806ecb0",
+  "generated_at": "2026-10-29T07:49:52+13:00",
+  "git_revision": "a1a779f115cc31d9b3732ca1802e9012755832c2",
   "license": "Derived release data CC BY 4.0; code MIT; raw third-party text not redistributed.",
   "model_version": "comp-cv-v1+hedonic-avm-v1",
-  "release_id": "20261028",
+  "release_id": "20261029",
   "schema_version": 1,
   "source": "https://www.trademe.co.nz and Homes.co.nz, collected for personal research; see LICENSE.md."
 }

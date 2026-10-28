@@ -215,11 +215,41 @@ CREATE TABLE IF NOT EXISTS schools (
     roll INTEGER,
     gender TEXT,
     decile INTEGER,
+    eqi_index INTEGER,
+    decile_source TEXT,
     address TEXT,
     suburb TEXT,
     lat REAL,
     lon REAL
 );
+
+-- Compact derived signals shown in cards/drawers. Kept simple on purpose.
+CREATE TABLE IF NOT EXISTS listing_signals (
+    listing_id INTEGER PRIMARY KEY REFERENCES listings(id) ON DELETE CASCADE,
+    school_zone_count INTEGER,
+    school_zone_secondary_count INTEGER,
+    school_zone_primary_count INTEGER,
+    school_zone_eqi_mean REAL,
+    school_zone_label TEXT,
+    price_drop_count INTEGER,
+    price_increase_count INTEGER,
+    description_change_count INTEGER,
+    display_change_count INTEGER,
+    method_change_count INTEGER,
+    change_count INTEGER,
+    last_change_at TEXT,
+    days_since_last_change REAL,
+    change_signal TEXT,
+    prior_sale_count INTEGER,
+    ownership_years_mean REAL,
+    years_since_last_sale REAL,
+    last_sale_date TEXT,
+    last_sale_price INTEGER,
+    sale_frequency_label TEXT,
+    updated_at TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_listing_signals_change
+    ON listing_signals(change_signal, last_change_at);
 
 CREATE TABLE IF NOT EXISTS listing_schools (
     listing_id INTEGER NOT NULL REFERENCES listings(id) ON DELETE CASCADE,
@@ -440,6 +470,26 @@ SELECT
     l.*,
     l.suburb_name AS suburb,
     s.name AS suburb_display,
-    s.group_name AS suburb_group
+    s.group_name AS suburb_group,
+    sig.school_zone_count,
+    sig.school_zone_secondary_count,
+    sig.school_zone_eqi_mean,
+    sig.school_zone_label,
+    sig.price_drop_count,
+    sig.price_increase_count,
+    sig.description_change_count,
+    sig.display_change_count,
+    sig.method_change_count,
+    sig.change_count,
+    sig.last_change_at,
+    sig.days_since_last_change,
+    sig.change_signal,
+    sig.prior_sale_count,
+    sig.ownership_years_mean,
+    sig.years_since_last_sale,
+    sig.last_sale_date,
+    sig.last_sale_price,
+    sig.sale_frequency_label
 FROM listings l
-JOIN suburbs s ON s.slug = l.suburb_slug;
+JOIN suburbs s ON s.slug = l.suburb_slug
+LEFT JOIN listing_signals sig ON sig.listing_id = l.id;

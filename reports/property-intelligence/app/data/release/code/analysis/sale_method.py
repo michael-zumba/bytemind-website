@@ -51,7 +51,13 @@ def stage_for(sale_method: str | None, asking_kind: str | None = None) -> int:
     return 9
 
 
-def pressure_score(stage: int, days_on_market: int | None, price_drops: int = 0, method_changes: int = 0) -> float:
+def pressure_score(
+    stage: int,
+    days_on_market: int | None,
+    price_drops: int = 0,
+    method_changes: int = 0,
+    description_changes: int = 0,
+) -> float:
     """0-100 heuristic. Higher means more observable motivation to transact.
 
     The components are deliberately simple and bounded so the score cannot be
@@ -59,7 +65,10 @@ def pressure_score(stage: int, days_on_market: int | None, price_drops: int = 0,
     """
     stage_component = (min(max(stage, 0), 5) / 5.0) * 50.0
     dom_component = min(max(days_on_market or 0, 0), 180) / 180.0 * 30.0
-    event_component = min(20.0, price_drops * 8.0 + method_changes * 10.0)
+    event_component = min(
+        20.0,
+        price_drops * 8.0 + method_changes * 10.0 + description_changes * 5.0,
+    )
     return round(stage_component + dom_component + event_component, 1)
 
 
@@ -92,7 +101,9 @@ def run(conn: sqlite3.Connection, *, now_iso: str | None = None) -> dict[str, An
             """SELECT listing_id, event_type, detail_json FROM listing_events
                WHERE event_at >= datetime('now', '-180 days')"""
         ):
-            bucket = events.setdefault(event["listing_id"], {"drops": 0, "method": 0})
+            bucket = events.setdefault(
+                event["listing_id"], {"drops": 0, "method": 0, "descriptions": 0}
+            )
             if event["event_type"] == "price_change":
                 try:
                     detail = json.loads(event["detail_json"] or "{}")
@@ -102,13 +113,18 @@ def run(conn: sqlite3.Connection, *, now_iso: str | None = None) -> dict[str, An
                     bucket["drops"] += 1
             elif event["event_type"] == "method_change":
                 bucket["method"] += 1
+            elif event["event_type"] in {"description_change", "title_change"}:
+                bucket["descriptions"] += 1
     except sqlite3.Error:
         events = {}
 
     for row in rows:
         stage = stage_for(row["sale_method"], row["asking_kind"])
-        counts = events.get(row["id"], {"drops": 0, "method": 0})
-        score = pressure_score(stage, row["days_on_market"], counts["drops"], counts["method"])
+        counts = events.get(row["id"], {"drops": 0, "method": 0, "descriptions": 0})
+        score = pressure_score(
+            stage, row["days_on_market"], counts["drops"], counts["method"],
+            counts["descriptions"],
+        )
         conn.execute(
             """UPDATE listings SET sale_method_stage=?, sale_pressure=?, sale_pressure_label=?
                WHERE id=?""",

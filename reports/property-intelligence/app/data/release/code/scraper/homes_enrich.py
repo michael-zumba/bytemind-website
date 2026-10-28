@@ -15,11 +15,12 @@ Usage::
 
     python -m scraper.homes_enrich                 # missing/stale profiles only
     python -m scraper.homes_enrich --limit 20      # small check
-    python -m scraper.homes_enrich --max-age-days 30 --workers 4
+    python -m scraper.homes_enrich --max-age-days 7 --workers 4
 """
 from __future__ import annotations
 
 import argparse
+import gzip
 import json
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -130,9 +131,16 @@ def profile_for(property_id: str, details: dict[str, Any], timeline: dict[str, A
 
 def _read_listing_property_ids(raw_dir: Path) -> dict[str, list[Path]]:
     out: dict[str, list[Path]] = {}
-    for path in sorted((raw_dir / "listings").glob("*.json")):
+    paths = sorted((raw_dir / "listings").glob("*.json")) + sorted(
+        (raw_dir / "listings").glob("*.json.gz")
+    )
+    for path in paths:
         try:
-            payload = json.loads(path.read_text(encoding="utf-8"))
+            if path.name.endswith(".json.gz"):
+                with gzip.open(path, "rt", encoding="utf-8") as fh:
+                    payload = json.load(fh)
+            else:
+                payload = json.loads(path.read_text(encoding="utf-8"))
         except (OSError, json.JSONDecodeError):
             continue
         homes = payload.get("homes") or {}
@@ -169,7 +177,7 @@ def run(
     raw_dir: Path = config.RAW_DIR,
     out_dir: Path = DEFAULT_PROFILE_DIR,
     *,
-    max_age_days: float = 30,
+    max_age_days: float = 7,
     workers: int = 4,
     delay: float = 0.2,
     limit: int | None = None,
@@ -222,7 +230,7 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--raw-dir", type=Path, default=config.RAW_DIR)
     parser.add_argument("--out", type=Path, default=DEFAULT_PROFILE_DIR)
-    parser.add_argument("--max-age-days", type=float, default=30)
+    parser.add_argument("--max-age-days", type=float, default=7)
     parser.add_argument("--workers", type=int, default=4)
     parser.add_argument("--delay", type=float, default=0.2)
     parser.add_argument("--limit", type=int, default=None)

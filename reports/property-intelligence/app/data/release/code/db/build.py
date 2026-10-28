@@ -38,6 +38,10 @@ try:
     from analysis import valuation_model
 except ImportError:
     valuation_model = None
+try:
+    from analysis import sale_feedback
+except ImportError:
+    sale_feedback = None
 
 from scraper import config
 from scraper.parse import days_on_market
@@ -1167,6 +1171,7 @@ def validate_derived(conn: sqlite3.Connection) -> dict[str, Any]:
         "sale_stages": conn.execute("SELECT COUNT(*) FROM sale_method_analysis").fetchone()[0],
         "price_dynamics": conn.execute("SELECT COUNT(*) FROM listing_price_dynamics").fetchone()[0],
         "property_sales": conn.execute("SELECT COUNT(*) FROM property_sales").fetchone()[0],
+        "sale_outcomes": conn.execute("SELECT COUNT(*) FROM listing_sale_outcomes").fetchone()[0],
         "tenure_known": conn.execute(
             "SELECT COUNT(*) FROM listings WHERE tenure IS NOT NULL AND tenure != 'unknown'"
         ).fetchone()[0],
@@ -1290,6 +1295,12 @@ def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool
             hedonic_stats = valuation_model.run(conn, now_iso=now)
         except Exception as exc:  # noqa: BLE001
             hedonic_stats = {"error": str(exc)[:500]}
+    feedback_stats = None
+    if sale_feedback is not None:
+        try:
+            feedback_stats = sale_feedback.run(conn, now_iso=now)
+        except Exception as exc:  # noqa: BLE001 - feedback must not break the build
+            feedback_stats = {"error": str(exc)[:300]}
     comps.compute_suburb_stats(conn, updated_at=now)
     derived_stats = validate_derived(conn)
     conn.execute(
@@ -1345,6 +1356,7 @@ def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool
         "price_history": conn.execute("SELECT COUNT(*) FROM listing_price_history").fetchone()[0],
         "price_dynamics": conn.execute("SELECT COUNT(*) FROM listing_price_dynamics").fetchone()[0],
         "property_sales": conn.execute("SELECT COUNT(*) FROM property_sales").fetchone()[0],
+        "sale_outcomes": conn.execute("SELECT COUNT(*) FROM listing_sale_outcomes").fetchone()[0],
         "tenure_known": conn.execute(
             "SELECT COUNT(*) FROM listings WHERE tenure IS NOT NULL AND tenure != 'unknown'"
         ).fetchone()[0],
@@ -1387,6 +1399,7 @@ def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool
             "counts": counts,
             "lifecycle": lifecycle_stats,
             "history_policy": history_stats,
+            "sale_feedback": feedback_stats,
             "derived": derived_stats,
             "manifest": {k: manifest.get(k) for k in (
                 "started_at", "finished_at", "unique_listings", "details_ok",
@@ -1435,6 +1448,7 @@ def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool
         "lifecycle": lifecycle_stats,
         "history_policy": history_stats,
         "price_history": price_stats,
+        "sale_feedback": feedback_stats,
         "derived": derived_stats,
         "digest": digest_path,
         "built_at": now,

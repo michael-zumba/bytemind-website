@@ -208,6 +208,7 @@ def build_digest(conn: sqlite3.Connection, *, generated_at: str | None = None) -
     topics = _topics(conn)
     events = _events(conn)
     price_changes = _price_change_summary(conn)
+    sale_feedback = meta.get("sale_feedback") if isinstance(meta.get("sale_feedback"), dict) else {}
     tops = _top_listings(conn)
 
     hedonic = metrics.get("hedonic_avm", {})
@@ -252,6 +253,9 @@ def build_digest(conn: sqlite3.Connection, *, generated_at: str | None = None) -
         f"Price-change panel: {price_changes.get('listings_with_price_changes', 0)} listings moved; "
         f"median first change {price_changes.get('median_days_to_first_change', '—')} days; "
         f"median gap between changes {price_changes.get('median_avg_days_between_changes', '—')} days.",
+        f"Sale feedback: {sale_feedback.get('outcomes', 0)} matched realised sale outcomes; "
+        f"median absolute error {_fmt_pct(sale_feedback.get('median_abs_pct'))}; "
+        f"80% coverage {_fmt_pct(sale_feedback.get('coverage_80'))}.",
     ]
     caveats = [
         "The model target is a Homes.co.nz AVM, not a sale price; it is a fallback/cross-check.",
@@ -287,6 +291,7 @@ def build_digest(conn: sqlite3.Connection, *, generated_at: str | None = None) -
         "sale_method": {"meta": sale_meta, "stages": sale_methods},
         "events": events,
         "price_changes": price_changes,
+        "sale_feedback": sale_feedback,
         "listings": tops,
         "commentary": commentary,
         "caveats": caveats,
@@ -392,6 +397,15 @@ def render_markdown(digest: dict[str, Any]) -> str:
         lines.append(
             "These are calendar-day observations of vendor behaviour, not a forecast; "
             "description edits are counted separately in the event ledger."
+        )
+    feedback = digest.get("sale_feedback") or {}
+    if feedback.get("outcomes"):
+        lines += ["", "### Realised sale feedback", ""]
+        lines.append(
+            f"{feedback.get('outcomes')} matched sale outcomes; median absolute error "
+            f"{_fmt_pct(feedback.get('median_abs_pct'))}; 80% interval coverage "
+            f"{_fmt_pct(feedback.get('coverage_80'))}. Calibration is applied as a separate "
+            "feedback signal and requires at least 10 pre-sale outcomes."
         )
     if digest["listings"]["most_motivated"]:
         lines += ["", "## Most motivated listings", "", "| Address | Suburb | Pressure | Stage | Asking |", "|---|---|---:|---:|---:|"]

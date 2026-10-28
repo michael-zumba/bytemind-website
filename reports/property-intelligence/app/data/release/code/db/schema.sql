@@ -307,6 +307,66 @@ CREATE INDEX IF NOT EXISTS idx_property_sales_property
 CREATE INDEX IF NOT EXISTS idx_property_sales_listing
     ON property_sales(listing_id, sale_date);
 
+-- Realised sale outcomes matched to the prior listing campaign. A row exists only
+-- when the same Homes property has a disclosed sale on/after the listing start.
+CREATE TABLE IF NOT EXISTS listing_sale_outcomes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    listing_id INTEGER NOT NULL REFERENCES listings(id) ON DELETE CASCADE,
+    homes_property_id TEXT NOT NULL,
+    sale_date TEXT NOT NULL,
+    sale_price INTEGER NOT NULL,
+    sale_display TEXT,
+    listing_listed_at TEXT,
+    listing_first_seen_at TEXT,
+    asking_price INTEGER,
+    estimate_low INTEGER,
+    estimate_mid INTEGER,
+    estimate_high INTEGER,
+    value_low INTEGER,
+    value_mid INTEGER,
+    value_high INTEGER,
+    comp_mid INTEGER,
+    cv INTEGER,
+    suburb_slug TEXT,
+    suburb_name TEXT,
+    property_type TEXT,
+    bedrooms INTEGER,
+    bathrooms INTEGER,
+    land_area REAL,
+    floor_area REAL,
+    build_year INTEGER,
+    build_decade TEXT,
+    tenure TEXT,
+    sale_method TEXT,
+    days_listing_to_sale REAL,
+    prediction_error INTEGER,
+    prediction_abs_error INTEGER,
+    prediction_abs_pct REAL,
+    within_80_interval INTEGER,
+    prediction_source TEXT,
+    source TEXT,
+    matched_at TEXT,
+    UNIQUE(listing_id, homes_property_id, sale_date, sale_price)
+);
+CREATE INDEX IF NOT EXISTS idx_sale_outcomes_listing
+    ON listing_sale_outcomes(listing_id, sale_date);
+CREATE INDEX IF NOT EXISTS idx_sale_outcomes_suburb
+    ON listing_sale_outcomes(suburb_slug, sale_date);
+
+-- Rolling calibration of the prior value signal against realised sale prices.
+CREATE TABLE IF NOT EXISTS sale_feedback_calibration (
+    scope TEXT NOT NULL,
+    scope_key TEXT NOT NULL,
+    n INTEGER NOT NULL,
+    median_ratio REAL,
+    mean_ratio REAL,
+    median_abs_pct REAL,
+    mae REAL,
+    coverage_80 REAL,
+    updated_at TEXT,
+    PRIMARY KEY (scope, scope_key)
+);
+
 CREATE TABLE IF NOT EXISTS model_predictions (
     listing_id INTEGER NOT NULL,
     model_name TEXT NOT NULL,

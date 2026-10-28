@@ -167,6 +167,7 @@
       <li><a href="#pressure">Sale method and motivation pressure</a></li>
       <li><a href="#text">Description, topics and text signals</a></li>
       <li><a href="#history">Dated price changes and vendor behaviour</a></li>
+      <li><a href="#sale-feedback">Realised sales and model feedback</a></li>
       <li><a href="#reproduce">Reproducibility and downloads</a></li>
       <li><a href="#limits">Limitations and honest claims</a></li>
       <li><a href="#glossary">Glossary</a></li>
@@ -369,6 +370,32 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
     <div class="callout"><strong>Early sample warning:</strong> the current snapshot has only a few days of daily price-change history. The observed counts and medians are real, but they are far too small for a reliable general estimate of how fast Auckland vendors move. The document marks this as a growing panel, not a completed study.</div>
   </section>
 
+  <section id="sale-feedback">
+    <h2>9. Realised sales and model feedback</h2>
+    <p>A prediction only becomes testable when the property eventually sells. The feedback layer compares the disclosed sale price with the estimate that existed <strong>before the sale</strong>. It then records the error and periodically recalibrates the model.</p>
+    <h3>Matching rule</h3>
+    <p>A Homes.co.nz sale record is attributed to a listing only when the sale date is on or after the listing start (the advertised date, or first observation). A sale before the listing is history, not feedback. The pre-sale estimate is taken from the last Homes AVM point before the sale date; a pre-sale snapshot is the fallback. Today's refreshed value is never used as if it were a forecast.</p>
+    <div class="eq"><span class="eq-label">Outcome calculation</span>sale_error = actual_sale_price − prior_estimate<br>absolute_percent_error = |sale_error| ÷ prior_estimate × 100%<br>inside_interval = prior_low ≤ actual_sale_price ≤ prior_high</div>
+    <h3>Calibration</h3>
+    <p>For each scope (global, suburb, property type, tenure), the layer calculates the median ratio of actual sale price to the prior estimate:</p>
+    <div class="eq"><span class="eq-label">Calibration ratio</span>ratio = actual_sale_price / prior_estimate<br>calibrated_mid = base_value_mid × median(ratio)</div>
+    <p class="explain">A median ratio above 1 means the prior estimates were, on average, too low; below 1 means they were too high. The ratio is applied as a <strong>separate sale-feedback signal</strong>, not as a silent replacement for the Homes AVM or comparable range. At least ten pre-sale outcomes are required before a factor is applied; until then the status is explicitly “warming up”.</p>
+    <h3>Machine-learning feedback</h3>
+    <p>When at least 30 outcomes are available, a ridge regression is fitted on realised sale prices. Features include the prior value, asking price, CV, size, bedrooms, build year, days to sale, tenure, type, suburb and sale method. The target is log(sale price), so percentage errors are modelled naturally. Predictions are stored as <code>sale_feedback_ml</code> and validated against held-out outcomes; they are not presented as the primary range.</p>
+    <div class="eq"><span class="eq-label">Ridge feedback model</span>log(sale_price) = β₀ + βᵀx + ε<br>predicted_sale = exp(β₀ + βᵀx)</div>
+    <p><strong>Current snapshot.</strong> Four same-property outcomes already have a disclosed sale after the listing date. Their median absolute expectation error is about <strong>5.5%</strong> and 50% fell inside the prior 80% range. That is a useful early signal, but four cases are not enough to recalibrate every property; the layer remains in warm-up and is reported as such.</p>
+    <table>
+      <thead><tr><th>Address</th><th>Sale date</th><th>Actual</th><th>Prior estimate</th><th>Absolute error</th></tr></thead>
+      <tbody>
+        <tr><td>101 Glamorgan Drive</td><td>25 Mar 2026</td><td class="num">$1.50m</td><td class="num">$1.44m</td><td class="num">4.5%</td></tr>
+        <tr><td>1/36 Thatcher Street</td><td>30 Mar 2026</td><td class="num">$1.312m</td><td class="num">$1.205m</td><td class="num">8.9%</td></tr>
+        <tr><td>40B Waiake Street</td><td>26 Aug 2026</td><td class="num">$1.73m</td><td class="num">$1.851m</td><td class="num">6.5%</td></tr>
+        <tr><td>2A, 2B, 2E Rangitoto Terrace</td><td>4 Sep 2026</td><td class="num">$1.40m</td><td class="num">$1.419m</td><td class="num">1.4%</td></tr>
+      </tbody>
+    </table>
+    <div class="callout"><strong>What is deliberately not done:</strong> one good sale does not prove the model; one bad sale does not disprove it. The layer waits for a minimum sample, reports interval coverage and error, and keeps every outcome traceable. This is how the estimates are intended to improve over time without overfitting to a handful of transactions.</div>
+  </section>
+
   <section id="reproduce">
     <h2>10. Reproducibility and downloads</h2>
     <p>The project is designed so that another person can check the work rather than trust the interface.</p>
@@ -404,6 +431,7 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
       <li><strong>Tenure and build-year coverage are incomplete.</strong> About 69% of standard active listings have a source-backed tenure record and about 49% have a build year in this snapshot. Unknown stays unknown; it is not assumed to be freehold.</li>
       <li><strong>Previous sale prices may be withheld.</strong> A transfer event can exist without a disclosed price; it is retained with a null price rather than fabricated.</li>
       <li><strong>Price history is young.</strong> The first reliable changes were captured in late October 2026. Early medians will move as the panel grows.</li>
+      <li><strong>Sale feedback starts from a small sample.</strong> Four disclosed same-property outcomes are currently available; the calibration factor and ridge model wait for ten and thirty pre-sale outcomes respectively.</li>
       <li><strong>Text effects are null after correction.</strong> Topics and lexicon scores are exploratory, not causal price premiums.</li>
       <li><strong>No causation, no forecast.</strong> The project reports associations and observed behaviour. It does not claim that a particular feature causes a price, or that a price will move in a particular direction.</li>
     </ul>

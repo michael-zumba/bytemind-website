@@ -273,7 +273,7 @@ ratioᵢ = sale_priceᵢ / CVᵢ<br>
 range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_subject]</div>
     <p class="explain">A sale 0.5 km away and a few months old counts more than a sale 2 km away and two years old. The 1.4 km and 11-month figures are model settings, not sharp cut-offs. A sale of the same property type gets more weight than a very different one, and a same-suburb sale gets a small extra weight. Q25, Q50 and Q75 are weighted quartiles: the low, middle and high points of the evidence.</p>
     <p><strong>Example.</strong> Suppose the property has a CV of $1,200,000. The weighted sales give ratios of 0.82, 0.90 and 1.01 at the 25th, 50th and 75th percentiles. The range is roughly:</p>
-    <div class="eq"><span class="eq-label">Worked example</span>low  = 0.82 × $1,200,000 = $984,000<br>mid  = 0.90 × $1,200,000 = $1,080,000<br>high = 1.01 × $1,200,000 = $1,212,000</div>
+    <div class="eq"><span class="eq-label">Example</span>low  = 0.82 × $1,200,000 = $984,000<br>mid  = 0.90 × $1,200,000 = $1,080,000<br>high = 1.01 × $1,200,000 = $1,212,000</div>
     <p class="explain">This range is not a statistical confidence interval. It summarises the spread of the comparable sales. With only two or three usable sales, it gets a lower confidence label and should be read more cautiously.</p>
     <h3>Step 4: Use the calibrated fallback when needed</h3>
     <p>The fallback is a hedonic model: it estimates a property from its features. We train it on listings that have a Homes AVM. It is used only when there is no AVM, no usable comparable range, and its confidence is acceptable.</p>
@@ -381,7 +381,7 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
     <div class="eq"><span class="eq-label">Calibration ratio</span>ratio = actual_sale_price / prior_estimate<br>calibrated_mid = base_value_mid × median(ratio)</div>
     <p class="explain">A ratio above 1 means prior estimates were, on average, too low; below 1 means too high. It is applied as a <strong>separate sale-feedback signal</strong>, not a silent replacement for the Homes AVM or comparable range. At least ten pre-sale outcomes are needed before a factor is applied. Until then the status is “warming up”.</p>
     <h3>Machine-learning feedback</h3>
-    <p>At 30 outcomes, a ridge regression is fitted on actual sale prices. Ridge regression is a linear model that keeps coefficients from becoming too large. Inputs include the prior value, asking price, CV, size, bedrooms, build year, days to sale, tenure, type, suburb and sale method. The target is log(sale price), which models percentage errors. Predictions are stored as <code>sale_feedback_ml</code> and tested on outcomes not used to fit the model. They are not the primary range.</p>
+    <p>At 30 outcomes, a ridge regression is fitted on actual sale prices. Ridge regression is a linear model that keeps its weights from becoming too large. Inputs include the prior value, asking price, CV, size, bedrooms, build year, days to sale, tenure, type, suburb and sale method. The target is log(sale price), which models percentage errors. Predictions are stored as <code>sale_feedback_ml</code> and tested on outcomes not used to fit the model. They are not the primary range.</p>
     <div class="eq"><span class="eq-label">Ridge feedback model</span>log(sale_price) = β₀ + βᵀx + ε<br>predicted_sale = exp(β₀ + βᵀx)</div>
     <p><strong>Current snapshot.</strong> Four same-property sales are available. Their median absolute percentage error is about <strong>5.5%</strong>, and 50% fell inside the prior 80% range. Four cases are not enough to recalibrate every property, so the layer is still warming up.</p>
     <table>
@@ -445,7 +445,7 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
       <dt>Hedonic model</dt><dd>A model that estimates a value from property characteristics such as size, bedrooms, location and CV.</dd>
       <dt>Out-of-fold error</dt><dd>The error on cases kept out of model training.</dd>
       <dt>Calibration</dt><dd>Adjusting estimates using observed outcomes, such as actual sale prices.</dd>
-      <dt>Ridge regression</dt><dd>A linear model that keeps coefficients from becoming too large.</dd>
+      <dt>Ridge regression</dt><dd>A linear model that keeps its weights from becoming too large.</dd>
       <dt>MAE</dt><dd>Mean absolute error: the average dollar gap between predictions and reference values.</dd>
       <dt>MAPE</dt><dd>Mean absolute percentage error: the average gap as a percentage of the reference value.</dd>
       <dt>R²</dt><dd>The share of variation in the reference that a model explains. It is not a measure of whether the reference is correct.</dd>

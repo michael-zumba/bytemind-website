@@ -112,8 +112,7 @@
 /* The shared .card/.btn-secondary rules reference the broken
    --color-border token, so restate the border locally. */
 .pi-related .card { border: 1px solid var(--color-border-light); }
-.pi-hero-actions .btn-secondary,
-.pi-offer .btn-secondary { border: 1px solid var(--color-border-light); }
+.pi-hero-actions .btn-secondary { border: 1px solid var(--color-border-light); }
 .pi-cards-4 h3 { font-size: 1.15rem; margin: var(--space-2) 0 var(--space-3); }
 .pi-cards-4 p { font-size: 0.92rem; margin: 0; color: var(--color-muted-foreground); }
 .pi-practice {
@@ -560,49 +559,6 @@
   margin: var(--space-4) 0 0;
 }
 
-/* ── Engagements ────────────────────────────────────────────────── */
-.pi-offers {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-6);
-}
-.pi-offer {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-lg);
-  background: var(--color-card);
-  padding: var(--space-8);
-  transition: border-color 0.25s ease, box-shadow 0.25s ease;
-}
-.pi-offer:hover { border-color: var(--color-primary-200); box-shadow: var(--shadow-card); }
-.pi-offer h3 { font-size: 1.2rem; margin: var(--space-2) 0 var(--space-3); }
-.pi-offer p { font-size: 0.9rem; color: var(--color-muted-foreground); }
-.pi-offer-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 var(--space-6);
-  flex: 1;
-}
-.pi-offer-list li {
-  position: relative;
-  padding-left: 18px;
-  margin-bottom: var(--space-2);
-  font-size: 0.86rem;
-  color: var(--color-text-secondary);
-}
-.pi-offer-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-primary-400);
-}
-.pi-offer .btn { align-self: flex-start; }
-
 /* ── Compliance note ────────────────────────────────────────────── */
 .pi-compliance {
   margin-top: var(--space-12);
@@ -646,7 +602,6 @@
 @media (max-width: 1024px) {
   .pi-market-grid,
   .pi-split { grid-template-columns: minmax(0, 1fr); }
-  .pi-offers { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pi-method-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pi-split { gap: var(--space-8); }
   .pi-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -663,8 +618,7 @@
 
 @media (max-width: 700px) {
   .pi-deeplinks-row,
-  .pi-side-row,
-  .pi-offers { grid-template-columns: minmax(0, 1fr); }
+  .pi-side-row { grid-template-columns: minmax(0, 1fr); }
   .pi-method-list { grid-template-columns: minmax(0, 1fr); }
 }
 
@@ -673,8 +627,7 @@
   .pi-kpi .indicator-strip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .pi-flow li { padding-bottom: var(--space-3); }
   .pi-model-card,
-  .pi-compliance,
-  .pi-offer { padding: var(--space-6); }
+  .pi-compliance { padding: var(--space-6); }
   .pi-hero-actions .btn { width: 100%; }
   .pi-hero-tags { justify-content: flex-start; }
 }

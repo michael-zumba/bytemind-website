@@ -8,7 +8,7 @@ summary: "Most automated property estimates give one number and no error. A rang
 
 Automated property estimates have become part of how New Zealand property is discussed, priced and marketed. Most of them share a design choice: return one confident-looking number. That is easy to consume and easy to sell, but it is a poor input to a decision, because it hides the two things a decision needs - how wrong the number might be, and where it came from.
 
-This brief sets out what a range-first, source-attributed property model can support commercially, and the claims it deliberately does not make. It is the argument behind [ByteMind Property Intelligence](/reports/property-intelligence/).
+This brief sets out what a range-first, source-attributed property model can support as evidence, and the claims it deliberately does not make. It documents the independent research project at [Auckland Property Scout](/reports/property-intelligence/).
 
 ## The problem with a single number
 
@@ -43,18 +43,18 @@ A transparent model is not automatically a better model, and this one is careful
 - **Tenure is inferred, not confirmed.** Leasehold and cross-lease interests are detected from listing text, not title records. The title and any ground rent need checking before an offer.
 - **The methodology has not been independently audited.** It is documented and reproducible, which is not the same thing as externally validated.
 
-## Why the working matters commercially
+## Why the working matters
 
 For a buyer, the value is a defensible negotiation range instead of an anchor. For an adviser or professional-service firm, the value is that a number can be explained to a client and, if challenged, traced: which source produced it, what the error is, when it was published, and what the model could not see.
 
-That is a different product from a single price. It is also a more honest one: the model shows its gaps rather than smoothing over them. A range with a stated error is less satisfying than a confident number, but it is the better input to a decision.
+That is a different kind of evidence from a single price. It is also a more honest one: the model shows its gaps rather than smoothing over them. A range with a stated error is less satisfying than a confident number, but it is the better input to a decision.
 
 ## Check the working
 
 The live interface, the market view and the research lab are public, and every figure on the product page hydrates from a published snapshot rather than from copy written by hand:
 
-- [ByteMind Property Intelligence](/reports/property-intelligence/) - product, method, market snapshot and engagements
+- [Auckland Property Scout](/reports/property-intelligence/) - method, market snapshot and limits
 - [Open the property app](/reports/property-intelligence/app/) - map, market view and research lab
 - [Long-run property market research](/reports/property-market-analysis/) - the macro backdrop this work sits inside
 
-If you would like a specific decision stress-tested, [talk to us](/contact.html).
+The methodology, limits and source notes are published with the project. This is independent research, not a commercial service.

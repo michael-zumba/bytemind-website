@@ -34,23 +34,20 @@
       @media (max-width: 900px) {
         .pi-page .pi-kpi .indicator-strip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       }
-      .pi-page .pi-offers { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      @media (max-width: 1000px) { .pi-page .pi-offers { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
       @media (max-width: 640px) {
         .pi-page .pi-method-list { grid-template-columns: minmax(0, 1fr); }
-        .pi-page .pi-offers { grid-template-columns: minmax(0, 1fr); }
       }
     </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "ByteMind 地产智能",
-      "serviceType": "住宅房地产市场分析",
-      "provider": {"@type": "Organization", "name": "ByteMind Ltd", "url": "https://www.bytemind.co.nz/"},
+      "@type": "ResearchProject",
+      "name": "Auckland Property Scout（奥克兰房产研究）",
+      "author": {"@type": "Person", "name": "Yuqian Zhang", "url": "https://zhangyuqian.com/"},
+      "isAccessibleForFree": true,
       "areaServed": "新西兰奥克兰",
       "url": "https://www.bytemind.co.nz/reports/property-intelligence/zh.html",
-      "description": "面向奥克兰北岸与东湾区 17 个郊区的区间制房产研究项目。"
+      "description": "面向奥克兰北岸与东湾区 17 个郊区的独立区间制房产研究项目，本页不提供商业服务。"
     }
     </script>
 </head>
@@ -94,7 +91,7 @@
             <p class="hero-subtitle">覆盖北岸与东湾区 17 个郊区的房产模型。每个区间都标注来源、误差和日期。</p>
             <div class="pi-hero-actions">
                 <a href="app/?embed=1&amp;theme=bytemind&amp;aggregate=1" class="btn btn-primary" data-dom-id="cta-live-map">浏览聚合地图 &rarr;</a>
-                <a href="../../zh/contact.html" class="btn btn-secondary" data-dom-id="cta-talk">联系我们</a>
+                <a href="#method" class="btn btn-secondary" data-dom-id="cta-method">阅读方法 &rarr;</a>
             </div>
             <ul class="pi-hero-tags" aria-label="项目覆盖">
                 <li>17 个北岸与东湾区郊区</li>
@@ -213,38 +210,18 @@
             </p>
         </section>
 
-        <!-- 6. Engagements -->
-        <section class="section" id="engagements" style="padding-top:0;">
+        <!-- 6. Scope and limits -->
+        <section class="section" id="scope" style="padding-top:0;">
             <div class="section-header">
-                <div class="eyebrow">合作方式</div>
-                <h2>这个工具能用来做什么。</h2>
-                <p>按你要做的判断来定范围，费用在工作开始前确认。</p>
-            </div>
-            <div class="pi-offers">
-                <div class="pi-offer">
-                    <span class="report-label">市场进入</span>
-                    <h3>郊区扫描</h3>
-                    <p>每个郊区一页简报：区间中位数、估值与 CV 比率、在市天数、AVM 覆盖率和销售方式构成。</p>
-                    <a href="../../zh/contact.html" class="btn btn-secondary btn-sm">咨询郊区扫描 &rarr;</a>
-                </div>
-                <div class="pi-offer">
-                    <span class="report-label">出价前</span>
-                    <h3>尽职调查包</h3>
-                    <p>一套房源背后的来源、区间和误差，以及要向中介、估价师和律师确认的问题清单。</p>
-                    <a href="../../zh/contact.html" class="btn btn-secondary btn-sm">咨询尽职调查包 &rarr;</a>
-                </div>
-                <div class="pi-offer">
-                    <span class="report-label">组合或委托</span>
-                    <h3>持续跟踪或定制研究</h3>
-                    <p>按月的组合重估，或带完整方法说明的定制分析，可用于内部治理或对外发布。</p>
-                    <a href="../../zh/contact.html" class="btn btn-secondary btn-sm">咨询合作方式 &rarr;</a>
-                </div>
+                <div class="eyebrow">范围</div>
+                <h2>它是什么，不是什么。</h2>
+                <p>这是一个独立研究项目，不是商业服务。本页不提供费用、委托或咨询报价。</p>
             </div>
 
             <div class="pi-compliance">
                 <h3>它是什么，不是什么</h3>
                 <ul>
-                    <li><strong>本页只展示聚合数据。</strong> 本页不转载逐房源内容；逐房源界面发布在独立研究站点。</li>
+                    <li><strong>市场级视图，可按需查看摘要。</strong> 点击地图气泡可查看单套房源摘要；完整房源列表、逐房源界面和 CSV 发布在独立研究站点。</li>
                     <li><strong>决策参考，不是估值报告。</strong> 不构成专业标准下的估值，不能替代注册估价，也不是财务、法律或税务建议。</li>
                     <li><strong>快照，不是实时行情。</strong> 数字每日刷新。出价前请核对产权、地租和已批工程。</li>
                 </ul>

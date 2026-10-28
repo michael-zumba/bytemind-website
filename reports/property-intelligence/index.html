@@ -32,23 +32,20 @@
       @media (max-width: 900px) {
         .pi-page .pi-kpi .indicator-strip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       }
-      .pi-page .pi-offers { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-      @media (max-width: 1000px) { .pi-page .pi-offers { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
       @media (max-width: 640px) {
         .pi-page .pi-method-list { grid-template-columns: minmax(0, 1fr); }
-        .pi-page .pi-offers { grid-template-columns: minmax(0, 1fr); }
       }
     </style>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Service",
-      "name": "ByteMind Property Intelligence",
-      "serviceType": "Residential property market analysis",
-      "provider": {"@type": "Organization", "name": "ByteMind Ltd", "url": "https://www.bytemind.co.nz/"},
+      "@type": "ResearchProject",
+      "name": "Auckland Property Scout",
+      "author": {"@type": "Person", "name": "Yuqian Zhang", "url": "https://zhangyuqian.com/"},
+      "isAccessibleForFree": true,
       "areaServed": "Auckland, New Zealand",
       "url": "https://www.bytemind.co.nz/reports/property-intelligence/",
-      "description": "An independent, range-based property model for 17 North Shore and Eastern Bays suburbs, published as a research project."
+      "description": "An independent, range-based property research project for 17 North Shore and Eastern Bays suburbs. No commercial service is offered through this page."
     }
     </script>
 </head>
@@ -92,7 +89,7 @@
             <p class="hero-subtitle">A property model for 17 North Shore and Eastern Bays suburbs. Every range carries its source, its error and its date.</p>
             <div class="pi-hero-actions">
                 <a href="app/?embed=1&amp;theme=bytemind&amp;aggregate=1" class="btn btn-primary" data-dom-id="cta-live-map">Explore the aggregate map &rarr;</a>
-                <a href="../../contact.html" class="btn btn-secondary" data-dom-id="cta-talk">Talk to us</a>
+                <a href="#method" class="btn btn-secondary" data-dom-id="cta-method">Read the method &rarr;</a>
             </div>
             <ul class="pi-hero-tags" aria-label="What the project covers">
                 <li>17 North Shore &amp; Eastern Bays suburbs</li>
@@ -187,7 +184,7 @@
             <div class="section-header">
                 <div class="eyebrow">Interactive</div>
                 <h2>See the market-level evidence.</h2>
-                <p>The embedded view is aggregate-only: map, filters, market view and research lab. No listing cards, no CSV.</p>
+                <p>The embedded view focuses on the map, filters, market view and research lab. Click a map bubble for a single-listing summary; the results list and CSV stay on the independent research site.</p>
             </div>
 
             <div class="pi-map" data-pi-map
@@ -201,7 +198,7 @@
                     <a class="btn btn-primary btn-sm" href="app/?embed=1&amp;theme=bytemind&amp;aggregate=1">Open the market view &rarr;</a>
                 </div>
             </div>
-            <p class="pi-map-caption">Aggregate mode shows market-level indicators only. The full listing-level research interface is published separately on the independent research site.</p>
+            <p class="pi-map-caption">Map clicks open a single-listing summary without the results list or CSV. The full listing-level research interface is published separately on the independent research site.</p>
             <p class="pi-map-fallback" data-pi-map-fallback hidden>The aggregate app could not be embedded here. The screenshot above and the links below still work; you can also <a href="app/?embed=1&amp;theme=bytemind&amp;aggregate=1">open the market view directly</a>.</p>
 
             <p class="pi-map-caption" style="text-align:center;">
@@ -211,38 +208,18 @@
             </p>
         </section>
 
-        <!-- 6. Engagements -->
-        <section class="section" id="engagements" style="padding-top:0;">
+        <!-- 6. Scope and limits -->
+        <section class="section" id="scope" style="padding-top:0;">
             <div class="section-header">
-                <div class="eyebrow">Engagements</div>
-                <h2>What we do with it.</h2>
-                <p>Scoped to the decision in front of you. Fees are agreed before work begins.</p>
-            </div>
-            <div class="pi-offers">
-                <div class="pi-offer">
-                    <span class="report-label">Market entry</span>
-                    <h3>Suburb scan</h3>
-                    <p>A one-page brief per suburb: median range, value-to-CV ratio, days on market, AVM coverage and sale-method mix.</p>
-                    <a href="../../contact.html" class="btn btn-secondary btn-sm">Discuss a suburb scan &rarr;</a>
-                </div>
-                <div class="pi-offer">
-                    <span class="report-label">Pre-offer</span>
-                    <h3>Due-diligence pack</h3>
-                    <p>The sources, range and stated error behind one property, plus the questions to put to the agent, valuer and lawyer.</p>
-                    <a href="../../contact.html" class="btn btn-secondary btn-sm">Discuss a due-diligence pack &rarr;</a>
-                </div>
-                <div class="pi-offer">
-                    <span class="report-label">Portfolio or mandate</span>
-                    <h3>Ongoing or commissioned</h3>
-                    <p>A monthly mark-to-market across holdings, or a commissioned analysis with a documented method you can publish or rely on.</p>
-                    <a href="../../contact.html" class="btn btn-secondary btn-sm">Discuss an engagement &rarr;</a>
-                </div>
+                <div class="eyebrow">Scope</div>
+                <h2>What this is &mdash; and what it is not.</h2>
+                <p>An independent research project, not a commercial service. No fees, engagements or advisory offer is made through this page.</p>
             </div>
 
             <div class="pi-compliance">
                 <h3>What this is &mdash; and what it is not</h3>
                 <ul>
-                    <li><strong>Aggregate view only, on this site.</strong> This page does not re-publish listing-level content; the listing-level interface is hosted on the independent research site.</li>
+                    <li><strong>Market-level view with on-demand summaries.</strong> Click a map bubble for a single-listing summary; the full results list, listing interface and CSV live on the independent research site.</li>
                     <li><strong>Decision support, not a valuation.</strong> Not a valuation under professional standards, not a substitute for a registered valuation, and not financial, legal or tax advice.</li>
                     <li><strong>A snapshot, not a live feed.</strong> Figures refresh daily. Verify the title, any ground rent and consented works before making an offer.</li>
                 </ul>

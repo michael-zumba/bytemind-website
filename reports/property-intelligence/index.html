@@ -85,8 +85,8 @@
         <section class="page-hero animate-fade-in-up">
             <div class="eyebrow">Research project &middot; Property Intelligence</div>
             <div class="accent-bar"></div>
-            <h1>Auckland property, with the working shown.</h1>
-            <p class="hero-subtitle">A property model for 17 North Shore and Eastern Bays suburbs. Every range carries its source, its error and its date.</p>
+            <h1>Auckland property, with the evidence shown.</h1>
+            <p class="hero-subtitle">A property research model for 17 North Shore and Eastern Bays suburbs. Every range shows its source, error and date.</p>
             <div class="pi-hero-actions">
                 <a href="app/?embed=1&amp;theme=bytemind" class="btn btn-primary" data-dom-id="cta-live-map">Explore the interactive map &rarr;</a>
                 <a href="#method" class="btn btn-secondary" data-dom-id="cta-method">Read the method &rarr;</a>
@@ -147,9 +147,9 @@
                 <h2>Built like a research project.</h2>
             </div>
             <div class="pi-story">
-                <p>ByteMind is a small analytics practice. Property decisions are often made with a number nobody can inspect: no inputs, no error, no date.</p>
-                <p>We built this engine to be inspectable. Public listing data and council valuations go in. The method is one we use in research: compare like with like, hold data back, measure the error, and write down the limits. Every range names the signal it came from.</p>
-                <p>We also show where it is weak. Text analysis helped when the council valuation was missing, but no topic survived correction, so it is not used in the valuation. That is how a reader can tell a strong signal from a weak one.</p>
+                <p>Property decisions often rely on a number nobody can inspect: no inputs, no error, no date.</p>
+                <p>We built this engine so the method can be checked. Public listing data and council valuations go in. The method is simple: compare similar properties, test on data kept out of training, measure the error, and state the limits. Every range names its source.</p>
+                <p>We also show where it is weak. Text analysis helped when the council valuation was missing, but no topic survived correction, so it is not used in valuation.</p>
             </div>
         </section>
 
@@ -158,7 +158,7 @@
             <div class="section-header">
                 <div class="eyebrow">Method</div>
                 <h2>From a listing page to a value range.</h2>
-                <p>Each range chooses the best available signal, labels it, and says what it cannot support.</p>
+                <p>Each range uses the best available signal, labels it, and states its limits.</p>
             </div>
             <ol class="pi-method-list">
                 <li class="pi-method-item">
@@ -167,7 +167,7 @@
                 </li>
                 <li class="pi-method-item">
                     <h3><span class="pi-method-num">02</span> Value the tenure</h3>
-                    <p>Leasehold, cross-lease and unit title are valued differently before any number is produced.</p>
+                    <p>Tenure is checked before a value is produced, because leasehold and cross-lease homes are not directly comparable with freehold.</p>
                 </li>
                 <li class="pi-method-item">
                     <h3><span class="pi-method-num">03</span> Compare nearby sales</h3>
@@ -175,7 +175,7 @@
                 </li>
                 <li class="pi-method-item">
                     <h3><span class="pi-method-num">04</span> Calibrate a fallback</h3>
-                    <p>A hedonic model for listings without an AVM or usable comparables, with an 80% interval and its error published.</p>
+                    <p>A calibrated fallback model for listings without an AVM or usable comparables, with an 80% interval and published error.</p>
                 </li>
             </ol>
             <p class="pi-map-caption" style="text-align:center;margin-top:var(--space-6);">
@@ -189,8 +189,8 @@
         <section class="section" id="demo" style="padding-top:0;">
             <div class="section-header">
                 <div class="eyebrow">Interactive</div>
-                <h2>See the market-level evidence.</h2>
-                <p>The embedded map is the full interactive research view: map, filters, results, market view and research lab. It uses the same listing data and controls as the independent research site.</p>
+                <h2>See the evidence.</h2>
+                <p>The embedded map is the full research view: map, filters, results and research lab. It uses the same data and controls as the independent site.</p>
             </div>
 
             <div class="pi-map" data-pi-map
@@ -225,8 +225,8 @@
             <div class="pi-compliance">
                 <h3>What this is &mdash; and what it is not</h3>
                 <ul>
-                    <li><strong>Market-level view with on-demand summaries.</strong> Click a map bubble for a single-listing summary; the full results list, listing interface and CSV live on the independent research site.</li>
-                    <li><strong>Decision support, not a valuation.</strong> Not a valuation under professional standards, not a substitute for a registered valuation, and not financial, legal or tax advice.</li>
+                    <li><strong>Full map with listing summaries.</strong> Click a map bubble for the listing drawer. The results list and filters are in the embedded map.</li>
+                    <li><strong>Decision support, not a valuation.</strong> It does not meet professional valuation standards, cannot replace a registered valuer, and is not financial, legal or tax advice.</li>
                     <li><strong>A snapshot, not a live feed.</strong> Figures refresh daily. Verify the title, any ground rent and consented works before making an offer.</li>
                 </ul>
             </div>
@@ -240,7 +240,7 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <p class="footer-brand-name">ByteMind Ltd</p>
-                    <p class="footer-brand-desc">Independent property research by Yuqian Zhang, published as an open research project. Not a commercial service or advisory offer.</p>
+                    <p class="footer-brand-desc">Independent property research by Yuqian Zhang. Not a commercial service or advisory offer.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Pages</h4>

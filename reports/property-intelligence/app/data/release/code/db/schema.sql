@@ -238,6 +238,53 @@ CREATE TABLE IF NOT EXISTS listing_events (
 
 CREATE INDEX IF NOT EXISTS idx_events_listing ON listing_events(listing_id, event_at);
 
+-- Dated price observations and changes. One row per distinct observed state,
+-- not one row per daily scrape: the event ledger already preserves every
+-- observed change. "price" is the asking price; NULL means auction/POA/no price.
+CREATE TABLE IF NOT EXISTS listing_price_history (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    listing_id INTEGER NOT NULL REFERENCES listings(id) ON DELETE CASCADE,
+    observed_at TEXT NOT NULL,
+    price INTEGER,
+    price_display TEXT,
+    sale_method TEXT,
+    event_type TEXT NOT NULL,
+    previous_price INTEGER,
+    change_amount INTEGER,
+    change_pct REAL,
+    days_since_previous REAL,
+    source TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_price_history_listing
+    ON listing_price_history(listing_id, observed_at);
+CREATE INDEX IF NOT EXISTS idx_price_history_event
+    ON listing_price_history(event_type, observed_at);
+
+-- Per-listing speed/sentiment indicators derived from listing_price_history.
+CREATE TABLE IF NOT EXISTS listing_price_dynamics (
+    listing_id INTEGER PRIMARY KEY REFERENCES listings(id) ON DELETE CASCADE,
+    first_price INTEGER,
+    current_price INTEGER,
+    n_observations INTEGER NOT NULL DEFAULT 0,
+    n_price_changes INTEGER NOT NULL DEFAULT 0,
+    n_description_changes INTEGER NOT NULL DEFAULT 0,
+    first_change_at TEXT,
+    last_change_at TEXT,
+    first_description_change_at TEXT,
+    last_description_change_at TEXT,
+    days_to_first_change REAL,
+    days_since_last_change REAL,
+    avg_days_between_changes REAL,
+    cumulative_change INTEGER,
+    cumulative_change_pct REAL,
+    largest_drop INTEGER,
+    largest_drop_pct REAL,
+    last_direction TEXT,
+    updated_at TEXT
+);
+CREATE INDEX IF NOT EXISTS idx_price_dynamics_change
+    ON listing_price_dynamics(n_price_changes, last_change_at);
+
 CREATE TABLE IF NOT EXISTS model_predictions (
     listing_id INTEGER NOT NULL,
     model_name TEXT NOT NULL,

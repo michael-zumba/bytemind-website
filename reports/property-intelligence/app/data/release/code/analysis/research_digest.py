@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import json
 import sqlite3
+import statistics
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
@@ -90,6 +91,40 @@ def _events(conn: sqlite3.Connection) -> dict[str, Any]:
     except sqlite3.Error:
         counts, recent = {}, []
     return {"counts": counts, "recent": recent}
+
+
+def _price_change_summary(conn: sqlite3.Connection) -> dict[str, Any]:
+    try:
+        rows = [
+            dict(r) for r in conn.execute(
+                """SELECT n_price_changes, n_description_changes, days_to_first_change,
+                          days_since_last_change, avg_days_between_changes,
+                          cumulative_change_pct, last_direction
+                   FROM listing_price_dynamics"""
+            )
+        ]
+    except sqlite3.Error:
+        return {"available": False}
+    changed = [r for r in rows if (r["n_price_changes"] or 0) > 0]
+    described = [r for r in rows if (r["n_description_changes"] or 0) > 0]
+    first = [r["days_to_first_change"] for r in changed if r["days_to_first_change"] is not None]
+    gaps = [r["avg_days_between_changes"] for r in changed if r["avg_days_between_changes"] is not None]
+    cumulative = [r["cumulative_change_pct"] for r in changed if r["cumulative_change_pct"] is not None]
+    return {
+        "available": True,
+        "observed_listings": len(rows),
+        "listings_with_price_changes": len(changed),
+        "listings_with_description_changes": len(described),
+        "price_change_events": sum(int(r["n_price_changes"] or 0) for r in changed),
+        "description_change_events": sum(int(r["n_description_changes"] or 0) for r in described),
+        "median_days_to_first_change": round(statistics.median(first), 2) if first else None,
+        "median_avg_days_between_changes": round(statistics.median(gaps), 2) if gaps else None,
+        "median_cumulative_change_pct": round(statistics.median(cumulative), 4) if cumulative else None,
+        "directions": {
+            direction: sum(1 for r in changed if r["last_direction"] == direction)
+            for direction in ("drop", "increase", "set", "removed")
+        },
+    }
 
 
 def _sale_methods(conn: sqlite3.Connection) -> list[dict[str, Any]]:
@@ -172,6 +207,7 @@ def build_digest(conn: sqlite3.Connection, *, generated_at: str | None = None) -
         term_rows = []
     topics = _topics(conn)
     events = _events(conn)
+    price_changes = _price_change_summary(conn)
     tops = _top_listings(conn)
 
     hedonic = metrics.get("hedonic_avm", {})
@@ -213,6 +249,9 @@ def build_digest(conn: sqlite3.Connection, *, generated_at: str | None = None) -
         "stage effects are cross-sectional and not treated as causal.",
         f"Observed changes: {sum(events['counts'].values())} events ("
         + ", ".join(f"{k}={v}" for k, v in events["counts"].items()) + ").",
+        f"Price-change panel: {price_changes.get('listings_with_price_changes', 0)} listings moved; "
+        f"median first change {price_changes.get('median_days_to_first_change', '—')} days; "
+        f"median gap between changes {price_changes.get('median_avg_days_between_changes', '—')} days.",
     ]
     caveats = [
         "The model target is a Homes.co.nz AVM, not a sale price; it is a fallback/cross-check.",
@@ -247,6 +286,7 @@ def build_digest(conn: sqlite3.Connection, *, generated_at: str | None = None) -
         },
         "sale_method": {"meta": sale_meta, "stages": sale_methods},
         "events": events,
+        "price_changes": price_changes,
         "listings": tops,
         "commentary": commentary,
         "caveats": caveats,
@@ -338,6 +378,21 @@ def render_markdown(digest: dict[str, Any]) -> str:
     lines += ["", "## Observed changes", ""]
     counts = digest["events"].get("counts") or {}
     lines.append(", ".join(f"{k}: {v}" for k, v in counts.items()) if counts else "No events recorded yet.")
+    price_changes = digest.get("price_changes") or {}
+    if price_changes.get("available"):
+        lines += ["", "### Asking-price changes", ""]
+        lines.append(
+            f"{price_changes.get('listings_with_price_changes')} listings moved across "
+            f"{price_changes.get('price_change_events')} recorded price states; "
+            f"median first change {price_changes.get('median_days_to_first_change')} days; "
+            f"median gap between changes {price_changes.get('median_avg_days_between_changes')} days; "
+            f"median cumulative change {_fmt_pct(price_changes.get('median_cumulative_change_pct'))}."
+        )
+        lines.append("")
+        lines.append(
+            "These are calendar-day observations of vendor behaviour, not a forecast; "
+            "description edits are counted separately in the event ledger."
+        )
     if digest["listings"]["most_motivated"]:
         lines += ["", "## Most motivated listings", "", "| Address | Suburb | Pressure | Stage | Asking |", "|---|---|---:|---:|---:|"]
         for item in digest["listings"]["most_motivated"]:

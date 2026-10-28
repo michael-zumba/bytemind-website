@@ -105,7 +105,7 @@ def previous_state(
         delisted_expr = "delisted_at" if "delisted_at" in listing_columns else "NULL AS delisted_at"
         for row in conn.execute(
             f"""SELECT id, address, price_display, asking_price, sale_method, asking_kind,
-                       estimate_mid, cv, value_mid, status, last_seen_at, {delisted_expr}
+                       estimate_mid, cv, value_mid, status, last_seen_at, body, {delisted_expr}
                 FROM listings"""
         ):
             previous[int(row["id"])] = dict(row)
@@ -496,6 +496,16 @@ def reconcile_inventory(
     }
 
 
+def _body_digest(body: Any) -> str | None:
+    """Whitespace-insensitive hash for detecting editorial description changes."""
+    if not body:
+        return None
+    text = " ".join(str(body).split()).strip()
+    if not text:
+        return None
+    return hashlib.sha1(text.encode("utf-8")).hexdigest()[:16]
+
+
 def generate_events(
     conn: sqlite3.Connection,
     previous_listings: dict[int, dict[str, Any]],
@@ -525,7 +535,7 @@ def generate_events(
     current_rows = [
         dict(row) for row in conn.execute(
             """SELECT id, address, price_display, asking_price, sale_method, asking_kind,
-                      estimate_mid, cv, value_mid, first_seen_at, last_seen_at, status
+                      estimate_mid, cv, value_mid, first_seen_at, last_seen_at, status, body
                FROM listings"""
         )
     ]
@@ -556,13 +566,27 @@ def generate_events(
             continue
         old_price, new_price = prev.get("asking_price"), row.get("asking_price")
         if old_price != new_price:
+            if old_price is None and new_price is not None:
+                direction = "set"
+            elif old_price is not None and new_price is None:
+                direction = "removed"
+            elif (new_price or 0) < (old_price or 0):
+                direction = "drop"
+            else:
+                direction = "increase"
             add(
                 listing_id, "price_change", row.get("last_seen_at"), old_price, new_price,
                 {
-                    "direction": "drop" if (new_price or 0) < (old_price or 0) else "increase",
+                    "direction": direction,
                     "old_display": prev.get("price_display"),
                     "new_display": row.get("price_display"),
                 },
+            )
+        elif prev.get("price_display") != row.get("price_display"):
+            add(
+                listing_id, "price_display_change", row.get("last_seen_at"),
+                prev.get("price_display"), row.get("price_display"),
+                {"old_price": old_price, "new_price": new_price},
             )
         old_method = (prev.get("sale_method"), prev.get("asking_kind"))
         new_method = (row.get("sale_method"), row.get("asking_kind"))
@@ -580,6 +604,22 @@ def generate_events(
         old_cv, new_cv = prev.get("cv"), row.get("cv")
         if old_cv != new_cv:
             add(listing_id, "cv_change", row.get("last_seen_at"), old_cv, new_cv, {})
+        # Description edits are a sentiment signal: an agent may rewrite the copy
+        # before changing the price. Compare a whitespace-normalised digest so a
+        # reformat alone is not treated as a change.
+        old_body = prev.get("body")
+        new_body = row.get("body")
+        old_digest = _body_digest(old_body)
+        new_digest = _body_digest(new_body)
+        if old_digest and new_digest and old_digest != new_digest:
+            add(
+                listing_id, "description_change", row.get("last_seen_at"),
+                old_digest, new_digest,
+                {
+                    "old_chars": len(str(old_body or "")),
+                    "new_chars": len(str(new_body or "")),
+                },
+            )
     # Removals cannot be inferred from the raw cache (files are retained); the next
     # iteration can add a search-membership flag if required.
     return inserted
@@ -599,6 +639,266 @@ def restore_snapshots(conn: sqlite3.Connection, snapshots: list[dict[str, Any]])
                 snap.get("value_mid"), snap.get("sale_method"),
             ),
         )
+
+
+def _iso_moment(value: Any) -> datetime | None:
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(str(value)).astimezone(timezone.utc)
+    except (TypeError, ValueError):
+        return None
+
+
+def _days_between(later: Any, earlier: Any) -> float | None:
+    a, b = _iso_moment(later), _iso_moment(earlier)
+    if a is None or b is None:
+        return None
+    return round((a - b).total_seconds() / 86400, 2)
+
+
+def build_price_history(conn: sqlite3.Connection, *, now_iso: str) -> dict[str, int]:
+    """Materialise dated asking-price observations and change-speed indicators.
+
+    Sources are (a) retained listing snapshots, (b) the append-only
+    ``listing_events`` price-change ledger, and (c) the current listing when it
+    has never had a snapshot. One row is written per distinct observed state,
+    not per daily scrape. Auction/POA observations are retained with a NULL
+    price so a later price set can be dated.
+    """
+    conn.execute("DELETE FROM listing_price_history")
+    conn.execute("DELETE FROM listing_price_dynamics")
+
+    listings = {
+        int(row["id"]): dict(row)
+        for row in conn.execute(
+            """SELECT id, asking_price, price_display, sale_method, first_seen_at,
+                      last_seen_at, status FROM listings"""
+        )
+    }
+    snapshots: dict[int, list[dict[str, Any]]] = {}
+    for row in conn.execute(
+        """SELECT listing_id, captured_at, asking_price, price_display, sale_method
+           FROM listing_snapshots ORDER BY listing_id, captured_at"""
+    ):
+        snapshots.setdefault(int(row["listing_id"]), []).append(dict(row))
+    events: dict[int, list[dict[str, Any]]] = {}
+    for row in conn.execute(
+        """SELECT listing_id, event_type, event_at, old_value, new_value, detail_json
+           FROM listing_events
+           WHERE event_type IN ('price_change', 'delisted', 'relisted')
+           ORDER BY listing_id, event_at, id"""
+    ):
+        events.setdefault(int(row["listing_id"]), []).append(dict(row))
+
+    def point(
+        when: Any, price: Any, display: Any, method: Any, event_type: str, source: str,
+        *, previous_price: int | None = None, change_amount: int | None = None,
+        change_pct: float | None = None, days_since_previous: float | None = None,
+    ) -> dict[str, Any]:
+        value = _int(price)
+        return {
+            "observed_at": str(when), "price": value,
+            "price_display": display, "sale_method": method,
+            "event_type": event_type, "source": source,
+            "previous_price": previous_price,
+            "change_amount": change_amount, "change_pct": change_pct,
+            "days_since_previous": days_since_previous,
+        }
+
+    inserted = 0
+    for listing_id, listing in listings.items():
+        raw_points: list[dict[str, Any]] = []
+        event_times = {
+            _iso_moment(event.get("event_at"))
+            for event in events.get(listing_id, [])
+            if event.get("event_type") == "price_change"
+        }
+        event_times.discard(None)
+        for snap in snapshots.get(listing_id, []):
+            # An event row already describes the old and new states at its
+            # timestamp; keeping the same-time snapshot would duplicate the
+            # change and can even make it look like the price moved back.
+            if _iso_moment(snap.get("captured_at")) in event_times:
+                continue
+            raw_points.append(point(
+                snap.get("captured_at"), snap.get("asking_price"), snap.get("price_display"),
+                snap.get("sale_method"), "observation", "snapshot",
+            ))
+        # Reconstruct the pre-change state when the snapshot window was compacted
+        # before the first retained capture. Event timestamps are the only date we
+        # can honestly attach to these values.
+        for event in events.get(listing_id, []):
+            if event.get("event_type") != "price_change":
+                continue
+            detail: dict[str, Any] = {}
+            if event.get("detail_json"):
+                try:
+                    parsed = json.loads(event["detail_json"])
+                    if isinstance(parsed, dict):
+                        detail = parsed
+                except (TypeError, ValueError):
+                    pass
+            old_price = _int(event.get("old_value"))
+            new_price = _int(event.get("new_value"))
+            if old_price is not None:
+                raw_points.append(point(
+                    event.get("event_at"), old_price, detail.get("old_display"),
+                    None, "price_before_change", "event",
+                ))
+            raw_points.append(point(
+                event.get("event_at"), new_price, detail.get("new_display"),
+                None, "price_change", "event",
+            ))
+        # If the current listing has no captured point at all, use the current
+        # state as the first observation rather than inventing history.
+        if not raw_points:
+            raw_points.append(point(
+                listing.get("last_seen_at") or listing.get("first_seen_at"),
+                listing.get("asking_price"), listing.get("price_display"),
+                listing.get("sale_method"), "first_observed", "listing",
+            ))
+        raw_points = [p for p in raw_points if _iso_moment(p["observed_at"]) is not None]
+        raw_points.sort(key=lambda p: (_iso_moment(p["observed_at"]) or datetime.min.replace(tzinfo=timezone.utc), p["event_type"]))
+
+        previous_observed: str | None = None
+        previous_price: int | None = None
+        seen_any = False
+        for raw in raw_points:
+            # Only asking-price changes create history rows. Display/method edits
+            # are already captured in listing_events and would otherwise produce a
+            # noisy row every time a snapshot and an event describe the same state.
+            if seen_any and raw["price"] == previous_price:
+                continue
+            if not seen_any:
+                event_type = "first_observed"
+                change_amount = change_pct = days_since = None
+            else:
+                days_since = _days_between(raw["observed_at"], previous_observed)
+                change_amount = (
+                    raw["price"] - previous_price
+                    if raw["price"] is not None and previous_price is not None
+                    else None
+                )
+                change_pct = (
+                    round(change_amount / previous_price, 6)
+                    if change_amount is not None and previous_price
+                    else None
+                )
+                if previous_price is None and raw["price"] is not None:
+                    event_type = "price_set"
+                elif previous_price is not None and raw["price"] is None:
+                    event_type = "price_removed"
+                else:
+                    event_type = "price_change"
+            conn.execute(
+                """INSERT INTO listing_price_history (
+                     listing_id, observed_at, price, price_display, sale_method,
+                     event_type, previous_price, change_amount, change_pct,
+                     days_since_previous, source
+                   ) VALUES (?,?,?,?,?,?,?,?,?,?,?)""",
+                (
+                    listing_id, raw["observed_at"], raw["price"], raw["price_display"],
+                    raw["sale_method"], event_type, previous_price, change_amount,
+                    change_pct, days_since, raw["source"],
+                ),
+            )
+            inserted += 1
+            previous_observed = raw["observed_at"]
+            previous_price = raw["price"]
+            seen_any = True
+
+    # Materialised speed/sentiment indicators. These are descriptive of what was
+    # observed; they do not claim a causal price trajectory.
+    dynamics = 0
+    histories: dict[int, list[dict[str, Any]]] = {}
+    for row in conn.execute(
+        """SELECT * FROM listing_price_history ORDER BY listing_id, observed_at, id"""
+    ):
+        histories.setdefault(int(row["listing_id"]), []).append(dict(row))
+    description_events: dict[int, list[dict[str, Any]]] = {}
+    for row in conn.execute(
+        """SELECT listing_id, event_at FROM listing_events
+           WHERE event_type='description_change' ORDER BY listing_id, event_at"""
+    ):
+        description_events.setdefault(int(row["listing_id"]), []).append(dict(row))
+
+    for listing_id, listing in listings.items():
+        history = histories.get(listing_id, [])
+        priced = [row for row in history if row["price"] is not None]
+        changes = [
+            row for row in history
+            if row["event_type"] in {"price_change", "price_set", "price_removed"}
+        ]
+        first_price = priced[0]["price"] if priced else None
+        current_price = priced[-1]["price"] if priced else None
+        first_change = changes[0] if changes else None
+        last_change = changes[-1] if changes else None
+        desc = description_events.get(listing_id, [])
+        first_seen = listing.get("first_seen_at")
+        intervals = [
+            _days_between(changes[index]["observed_at"], changes[index - 1]["observed_at"])
+            for index in range(1, len(changes))
+        ]
+        intervals = [value for value in intervals if value is not None]
+        cumulative = (
+            current_price - first_price
+            if current_price is not None and first_price is not None
+            else None
+        )
+        cumulative_pct = (
+            round(cumulative / first_price, 6)
+            if cumulative is not None and first_price
+            else None
+        )
+        drops = [
+            row["change_amount"] for row in changes
+            if row.get("change_amount") is not None and row["change_amount"] < 0
+        ]
+        drop_pcts = [
+            row["change_pct"] for row in changes
+            if row.get("change_pct") is not None and row["change_pct"] < 0
+        ]
+        if last_change:
+            if last_change["event_type"] == "price_removed":
+                direction = "removed"
+            elif last_change["change_amount"] is None:
+                direction = "set"
+            elif last_change["change_amount"] < 0:
+                direction = "drop"
+            else:
+                direction = "increase"
+        else:
+            direction = None
+        conn.execute(
+            """INSERT INTO listing_price_dynamics (
+                 listing_id, first_price, current_price, n_observations,
+                 n_price_changes, n_description_changes, first_change_at,
+                 last_change_at, first_description_change_at,
+                 last_description_change_at, days_to_first_change,
+                 days_since_last_change, avg_days_between_changes,
+                 cumulative_change, cumulative_change_pct, largest_drop,
+                 largest_drop_pct, last_direction, updated_at
+               ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+            (
+                listing_id, first_price, current_price, len(history), len(changes),
+                len(desc), first_change["observed_at"] if first_change else None,
+                last_change["observed_at"] if last_change else None,
+                desc[0]["event_at"] if desc else None,
+                desc[-1]["event_at"] if desc else None,
+                _days_between(first_change["observed_at"], first_seen)
+                if first_change and first_seen else None,
+                _days_between(now_iso, last_change["observed_at"])
+                if last_change else None,
+                round(sum(intervals) / len(intervals), 2) if intervals else None,
+                cumulative, cumulative_pct,
+                min(drops) if drops else None,
+                min(drop_pcts) if drop_pcts else None,
+                direction, now_iso,
+            ),
+        )
+        dynamics += 1
+    return {"price_observations": inserted, "price_dynamics": dynamics}
 
 
 def update_suburb_centroids(conn: sqlite3.Connection) -> None:
@@ -756,6 +1056,11 @@ def validate_derived(conn: sqlite3.Connection) -> dict[str, Any]:
         "text_metrics": conn.execute("SELECT COUNT(*) FROM text_metrics").fetchone()[0],
         "text_terms": conn.execute("SELECT COUNT(*) FROM text_term_associations").fetchone()[0],
         "sale_stages": conn.execute("SELECT COUNT(*) FROM sale_method_analysis").fetchone()[0],
+        "price_dynamics": conn.execute("SELECT COUNT(*) FROM listing_price_dynamics").fetchone()[0],
+        "price_history": conn.execute("SELECT COUNT(*) FROM listing_price_history").fetchone()[0],
+        "price_history_missing_dates": conn.execute(
+            "SELECT COUNT(*) FROM listing_price_history WHERE observed_at IS NULL OR observed_at=''"
+        ).fetchone()[0],
     }
     errors = []
     if checks["hedonic_predictions"] < standard:
@@ -774,6 +1079,12 @@ def validate_derived(conn: sqlite3.Connection) -> dict[str, Any]:
         errors.append("term-level text analysis missing")
     if checks["sale_stages"] < 1:
         errors.append("sale-method analysis missing")
+    if checks["price_dynamics"] < checks["standard"]:
+        errors.append(f"price dynamics {checks['price_dynamics']}/{checks['standard']} listings")
+    if checks["price_history"] < checks["price_dynamics"]:
+        errors.append("price history missing initial observations")
+    if checks["price_history_missing_dates"]:
+        errors.append(f"{checks['price_history_missing_dates']} price observations without a date")
     if errors:
         raise RuntimeError("Derived research layers are incomplete: " + "; ".join(errors))
     checks["validated"] = True
@@ -815,6 +1126,7 @@ def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool
         had_previous=bool(previous_listings), now_iso=now,
     )
     restore_snapshots(conn, old_snapshots)
+    price_stats = build_price_history(conn, now_iso=now)
     update_suburb_centroids(conn)
 
     valuation_stats = comps.run(conn, now_iso=now)
@@ -912,6 +1224,11 @@ def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool
         "active_listings": conn.execute("SELECT COUNT(*) FROM listings WHERE status='active'").fetchone()[0],
         "delisted_listings": conn.execute("SELECT COUNT(*) FROM listings WHERE status='delisted'").fetchone()[0],
         "model_predictions": conn.execute("SELECT COUNT(*) FROM model_predictions").fetchone()[0],
+        "price_history": conn.execute("SELECT COUNT(*) FROM listing_price_history").fetchone()[0],
+        "price_dynamics": conn.execute("SELECT COUNT(*) FROM listing_price_dynamics").fetchone()[0],
+        "description_changes": conn.execute(
+            "SELECT COUNT(*) FROM listing_events WHERE event_type='description_change'"
+        ).fetchone()[0],
     }
     conn.execute(
         """INSERT INTO scrape_runs
@@ -926,6 +1243,7 @@ def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool
                 "built_at": now,
                 "model": f"{comps.MODEL_VERSION}+hedonic-avm-v1",
                 "events": event_count,
+                "price_history": price_stats,
             }),
         ),
     )
@@ -991,6 +1309,7 @@ def build(raw_dir: Path = RAW_DIR, db_path: Path = DB_PATH, *, skip_export: bool
         "valuation": valuation_stats,
         "lifecycle": lifecycle_stats,
         "history_policy": history_stats,
+        "price_history": price_stats,
         "derived": derived_stats,
         "digest": digest_path,
         "built_at": now,

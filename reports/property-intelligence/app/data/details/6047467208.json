@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-07-23T03:05:39.943000+00:00",
-  "days_on_market": 97,
+  "days_on_market": 98,
   "lat": -36.7418478,
   "lon": 174.7557541,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2319314817.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 2570391,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 2617347,
+  "comp_low": 2508000,
   "comp_mid": 2900000,
-  "comp_high": 3195455,
+  "comp_high": 3206250,
   "comp_confidence": "high",
-  "comp_n": 70,
+  "comp_n": 78,
   "value_low": 2286929,
   "value_mid": 2428660,
   "value_high": 2570391,
@@ -51,8 +51,8 @@
   "ask_gap": 131340,
   "ask_gap_pct": 0.0541,
   "deal_gap": -0.0541,
-  "view_count": 10952,
-  "watchers": 222,
+  "view_count": 11024,
+  "watchers": 224,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -60,12 +60,12 @@
   "school_zone_secondary_count": 3,
   "school_zone_eqi_mean": 384.85714285714283,
   "school_zone_label": "In zone for 7 schools",
-  "change_signal": null,
-  "change_count": 0,
-  "last_change_at": null,
-  "days_since_last_change": null,
+  "change_signal": "copy changed",
+  "change_count": 1,
+  "last_change_at": "2026-10-29T19:02:39.034831+00:00",
+  "days_since_last_change": 0.07,
   "price_drop_count": 0,
-  "description_change_count": 0,
+  "description_change_count": 1,
   "prior_sale_count": 2,
   "ownership_years_mean": 2.3764544832306638,
   "last_sale_date": "2025-12-10T00:00:00Z",
@@ -74,16 +74,16 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 66.2,
+  "sale_pressure": 71.3,
   "sale_pressure_label": "high",
-  "model_low": 2584686,
-  "model_mid": 2857234,
-  "model_high": 3144908,
+  "model_low": 2578545,
+  "model_mid": 2836392,
+  "model_high": 3119106,
   "model_confidence": "high",
-  "text_signal_pct": -9.5298,
-  "description_index": -0.453875,
-  "events_count": 0,
-  "last_event": null,
+  "text_signal_pct": -6.129,
+  "description_index": -0.268453,
+  "events_count": 1,
+  "last_event": "description_change",
   "schools": [
     {
       "id": 1242,
@@ -318,33 +318,52 @@
   ],
   "model": {
     "listing_id": 6047467208,
-    "low": 2584686,
-    "mid": 2857234,
-    "high": 3144908,
+    "low": 2578545,
+    "mid": 2836392,
+    "high": 3119106,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1003, 0.0959], \"rel_width\": 0.1961, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6047467208,
-    "word_count": 274,
+    "word_count": 275,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.1898,
-    "condition_renovation": 0.3048,
-    "views_waterfront": 0.3189,
-    "family_school": 0.5621,
+    "luxury": 0.1918,
+    "condition_renovation": 0.3034,
+    "views_waterfront": 0.3172,
+    "family_school": 0.5601,
     "investment": 0.0,
     "risk": 0.0,
-    "readability": 0.6171,
-    "description_premium_pct": -9.5298,
-    "description_index": -0.453875,
+    "readability": 0.609,
+    "description_premium_pct": -6.129,
+    "description_index": -0.268453,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 2, \"views_waterfront\": 3, \"family_school\": 9, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
+        "topic_id": 6,
+        "weight": 0.329343,
+        "label": "Family living & entertaining II",
+        "top_terms": [
+          "morning",
+          "coffee",
+          "friends",
+          "life",
+          "relaxed",
+          "morning coffee",
+          "step",
+          "feels",
+          "sense",
+          "day",
+          "away",
+          "place"
+        ]
+      },
+      {
         "topic_id": 5,
-        "weight": 0.28878,
+        "weight": 0.245952,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -355,34 +374,34 @@
           "westlake girls",
           "boys",
           "westlake boys",
-          "normal",
+          "intermediate",
           "suburb normal",
-          "normal intermediate",
-          "intermediate"
+          "normal",
+          "normal intermediate"
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.224375,
+        "topic_id": 0,
+        "weight": 0.136096,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
-          "ensuite",
           "wardrobe",
+          "ensuite",
           "walk wardrobe",
           "bathroom",
-          "separate",
-          "lounge",
           "suite",
-          "walk",
-          "upstairs",
+          "lounge",
+          "master",
           "level",
-          "floor",
-          "master"
+          "separate",
+          "master suite",
+          "upstairs",
+          "walk"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.146073,
+        "weight": 0.121004,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
@@ -392,30 +411,11 @@
           "sophisticated",
           "finishes",
           "year",
-          "designer kitchen",
-          "residence",
           "design",
-          "integrated",
+          "residence",
+          "designer kitchen",
+          "refined",
           "lighting"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.140613,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "sea",
-          "sea views",
-          "views",
-          "rangitoto",
-          "elevated",
-          "rangitoto college",
-          "living areas",
-          "areas",
-          "gulf",
-          "college",
-          "family home",
-          "intermediate"
         ]
       }
     ]
@@ -439,7 +439,15 @@
     }
   ],
   "sale_outcome": null,
-  "sale_events": [],
+  "sale_events": [
+    {
+      "event_type": "description_change",
+      "event_at": "2026-10-29T19:02:39.034831+00:00",
+      "old_value": "3cf9d412a2aef60c",
+      "new_value": "1e738c16e40e0631",
+      "detail_json": "{\"old_chars\": 1883, \"new_chars\": 1896}"
+    }
+  ],
   "price_history": [
     {
       "observed_at": "2026-10-23T06:32:28.289684+00:00",
@@ -460,11 +468,11 @@
     "current_price": 2560000,
     "n_observations": 1,
     "n_price_changes": 0,
-    "n_description_changes": 0,
+    "n_description_changes": 1,
     "first_change_at": null,
     "last_change_at": null,
-    "first_description_change_at": null,
-    "last_description_change_at": null,
+    "first_description_change_at": "2026-10-29T19:02:39.034831+00:00",
+    "last_description_change_at": "2026-10-29T19:02:39.034831+00:00",
     "days_to_first_change": null,
     "days_since_last_change": null,
     "avg_days_between_changes": null,
@@ -473,9 +481,9 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
-  "body": "There is a version of Mairangi Bay living that many people search for and few ever find. Mornings that start close to the sand, a village at the end of the street, and a home that feels genuinely yours the moment you walk in.\r\n\r\nThis four bedroom family home has been comprehensively renovated, not simply updated but thoughtfully reimagined from the inside out. Warm tones, layered textures and finishes of real quality create an interior that draws you in immediately and rewards every closer look. At its heart, a stunning kitchen anchored by marble benchtops, warm white cabinetry and a well considered walk in pantry, designed for the way families actually live, beautifully and without compromise.\r\n\r\nTwo living areas and a separate dining room mean there is room for however your family moves through a day. School mornings, long lunches, dinner parties that spill naturally out onto the expansive deck. The master suite, with its walk in wardrobe and bespoke ensuite, is a genuine retreat, the kind of space where the outside world simply falls away. A dedicated office off the double garage and a layout that simply makes sense complete a home that asks nothing of you except to live well in it.\r\n\r\nBeyond the front door, Mairangi Bay does the rest. Moments from the village and the beach, in zone for Murrays Bay Intermediate, Rangitoto College and both Westlake Boys and Westlake Girls High Schools. Elevated and private, with glimpses of sea that quietly remind you exactly where you are.\r\n\r\nFreehold title, double garaging and two additional off street parks.\r\n\r\nFound. Refined. Finished.\r\n\r\nWho lives in a home like this? You do.\r\n\r\nView the digital booklet here: https://tr.ee/Digital_Booklet_7KowhaiRoad\r\n\r\nContact Jackie Parker or Kristina Marmont from PARKER | MARMONT New Zealand Sotheby's International Realty for more information. \r\n\r\nAll conjunctionals welcome.",
+  "body": "There is a version of Mairangi Bay living that many people search for and few ever find. Mornings that start close to the sand, a village at the end of the street, and a home that feels genuinely yours the moment you walk in.\r\n\r\nThis four bedroom family home has been comprehensively renovated, not simply updated but thoughtfully reimagined from the inside out. Warm tones, layered textures and finishes of real quality create an interior that draws you in immediately and rewards every closer look. At its heart, a stunning kitchen anchored by marble benchtops, warm white cabinetry and a well considered walk in pantry, designed for the way families actually live, beautifully and without compromise.\r\n\r\nTwo living areas and a separate dining room mean there is room for however your family moves through a day. School mornings, long lunches, dinner parties that spill naturally out onto the expansive deck. The master suite, with its walk in wardrobe and bespoke ensuite, is a genuine retreat, the kind of space where the outside world simply falls away. A dedicated office off the double garage and a layout that simply makes sense complete a home that asks nothing of you except to live well in it.\r\n\r\nBeyond the front door, Mairangi Bay does the rest. Moments from the village and the beach, in zone for Murrays Bay Intermediate, Rangitoto College and both Westlake Boys and Westlake Girls High Schools. Elevated and private, with glimpses of sea that quietly remind you exactly where you are.\r\n\r\nFreehold title, double garaging and two additional off street parks.\r\n\r\nFound. Refined. Finished.\r\n\r\nWho lives in a home like this? You do.\r\n\r\nView the Property Information booklet here: https://tr.ee/Digital_Booklet_7KowhaiRoad\r\n\r\nContact Jackie Parker or Kristina Marmont from PARKER | MARMONT New Zealand Sotheby's International Realty for more information. \r\n\r\nAll conjunctionals welcome.",
   "photos": [
     "https://trademe.tmcdn.co.nz/photoserver/tq/2319314817.jpg",
     "https://trademe.tmcdn.co.nz/photoserver/tq/2319314833.jpg",
@@ -694,6 +702,20 @@
       "estimate_mid": 2030000
     },
     {
+      "property_id": "dee00419-6b2e-4e74-bd30-6c5e4624b412",
+      "address": "8/423 Beach Road, Mairangi Bay, Auckland",
+      "sale_price": 1200000,
+      "sale_date": "2026-09-18T00:00:00+00:00",
+      "distance_km": 0.41,
+      "bedrooms": 3,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1925000,
+      "estimate_mid": 1950000
+    },
+    {
       "property_id": "1406ec74-6a8a-4e33-b8d8-7a42098e6e4d",
       "address": "4A View Road, Campbells Bay, Auckland",
       "sale_price": 1750000,
@@ -736,6 +758,20 @@
       "estimate_mid": 1780000
     },
     {
+      "property_id": "213ba6ac-12f5-4675-9e6b-134f4e199df8",
+      "address": "35A Matipo Road, Mairangi Bay, Auckland",
+      "sale_price": 1088000,
+      "sale_date": "2026-09-17T00:00:00+00:00",
+      "distance_km": 0.63,
+      "bedrooms": 3,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1275000,
+      "estimate_mid": 1290000
+    },
+    {
       "property_id": "9fed74c5-91eb-46d6-912e-91f4791cb03e",
       "address": "35B Matipo Road, Mairangi Bay, Auckland",
       "sale_price": 1125000,
@@ -747,7 +783,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1225000,
-      "estimate_mid": 1200000
+      "estimate_mid": 1130000
     },
     {
       "property_id": "5cd95e1d-4b3f-4182-9fb3-48df2cdfa622",
@@ -778,20 +814,6 @@
       "estimate_mid": 1490000
     },
     {
-      "property_id": "8ac2540d-8d07-46e6-970f-8f1512b5833b",
-      "address": "1/49 Hastings Road, Mairangi Bay, Auckland",
-      "sale_price": 2237000,
-      "sale_date": "2026-08-12T00:00:00+00:00",
-      "distance_km": 0.78,
-      "bedrooms": 5,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2175000,
-      "estimate_mid": 2250000
-    },
-    {
       "property_id": "a8761978-7ebb-4857-bc12-0087851d8262",
       "address": "6 Tree Fern Trail, Campbells Bay, Auckland",
       "sale_price": 1360000,
@@ -804,20 +826,6 @@
       "property_type": null,
       "cv": 1400000,
       "estimate_mid": 1420000
-    },
-    {
-      "property_id": "fa8c4d4b-5353-410d-9a54-c5c134d7acb0",
-      "address": "2/4 Noumea Place, Mairangi Bay, Auckland",
-      "sale_price": 1017000,
-      "sale_date": "2026-08-07T00:00:00+00:00",
-      "distance_km": 0.8,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 970000,
-      "estimate_mid": 1010000
     },
     {
       "property_id": "1ac6a1ba-79f5-48b1-bc19-7bb1f75d3330",
@@ -834,18 +842,18 @@
       "estimate_mid": 1510000
     },
     {
-      "property_id": "050bd531-cdd2-4437-a3b8-939fffb4ac46",
-      "address": "14B Cloverly Crescent, Campbells Bay, Auckland",
-      "sale_price": 1320000,
-      "sale_date": "2026-08-27T00:00:00+00:00",
-      "distance_km": 0.9,
+      "property_id": "d4a7a53c-93c2-4450-b293-92baa4d3fb4e",
+      "address": "24 Jutland Street, Mairangi Bay, Auckland",
+      "sale_price": 1600000,
+      "sale_date": "2026-09-04T00:00:00+00:00",
+      "distance_km": 0.86,
       "bedrooms": 4,
       "bathrooms": 2,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1500000,
-      "estimate_mid": 1410000
+      "cv": 2000000,
+      "estimate_mid": 2080000
     }
   ],
   "valuation": {
@@ -867,22 +875,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$2.62M – $3.20M",
-        "low": 2617347,
+        "range": "$2.51M – $3.21M",
+        "low": 2508000,
         "mid": 2900000,
-        "high": 3195455,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "high": 3206250,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "high",
-        "n": 70,
+        "n": 78,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 70,
-          "n_eff": 11.86,
+          "n": 78,
+          "n_eff": 13.46,
           "radius_km": 3.0,
           "median_ratio": 1.0175,
-          "iqr_ratio": 0.1993,
-          "same_suburb": 21,
+          "iqr_ratio": 0.2408,
+          "same_suburb": 24,
           "model_version": "comp-cv-v1"
         }
       },

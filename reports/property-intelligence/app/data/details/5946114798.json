@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-05-21T01:09:13.067000+00:00",
-  "days_on_market": 160,
+  "days_on_market": 161,
   "lat": -36.7236328,
   "lon": 174.7321472,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2307489424.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1203486,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 995789,
+  "comp_low": 977738,
   "comp_mid": 1075000,
-  "comp_high": 1152733,
+  "comp_high": 1164583,
   "comp_confidence": "high",
-  "comp_n": 83,
+  "comp_n": 93,
   "value_low": 1070766,
   "value_mid": 1137126,
   "value_high": 1203486,
@@ -51,7 +51,7 @@
   "ask_gap": -158126,
   "ask_gap_pct": -0.1391,
   "deal_gap": 0.1391,
-  "view_count": 18446,
+  "view_count": 18520,
   "watchers": 379,
   "is_standard": 1,
   "standard_reason": null,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 76.7,
+  "sale_pressure": 76.8,
   "sale_pressure_label": "high",
-  "model_low": 945724,
-  "model_mid": 1045449,
-  "model_high": 1150707,
+  "model_low": 949112,
+  "model_mid": 1044021,
+  "model_high": 1148082,
   "model_confidence": "high",
-  "text_signal_pct": -1.5207,
-  "description_index": -0.069449,
+  "text_signal_pct": 4.7001,
+  "description_index": 0.194947,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,33 +288,71 @@
   ],
   "model": {
     "listing_id": 5946114798,
-    "low": 945724,
-    "mid": 1045449,
-    "high": 1150707,
+    "low": 949112,
+    "mid": 1044021,
+    "high": 1148082,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1003, 0.0959], \"rel_width\": 0.1961, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5946114798,
     "word_count": 274,
     "exclamations": 2,
-    "urgency": 0.2689,
-    "luxury": 0.0949,
-    "condition_renovation": 0.1524,
-    "views_waterfront": 0.2126,
+    "urgency": 0.2693,
+    "luxury": 0.0963,
+    "condition_renovation": 0.1522,
+    "views_waterfront": 0.2122,
     "family_school": 0.7495,
-    "investment": 0.2227,
+    "investment": 0.2228,
     "risk": 0.0,
     "readability": 0.3978,
-    "description_premium_pct": -1.5207,
-    "description_index": -0.069449,
+    "description_premium_pct": 4.7001,
+    "description_index": 0.194947,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 1, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 12, \"investment\": 2, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
+        "topic_id": 7,
+        "weight": 0.265716,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "parking",
+          "street",
+          "brick",
+          "street parking",
+          "single",
+          "fully",
+          "college",
+          "garden",
+          "sunny",
+          "room",
+          "fenced",
+          "garage"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.24656,
+        "label": "Coastal village & park proximity",
+        "top_terms": [
+          "park",
+          "regional park",
+          "regional",
+          "village",
+          "walking",
+          "suburb college",
+          "suburb village",
+          "college",
+          "distance",
+          "walking distance",
+          "suburb regional",
+          "centre"
+        ]
+      },
+      {
         "topic_id": 1,
-        "weight": 0.271186,
+        "weight": 0.224049,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -323,69 +361,31 @@
           "land",
           "development",
           "subject",
+          "sqm",
           "property",
           "existing",
           "housing",
-          "sqm",
           "mixed",
-          "council"
-        ]
-      },
-      {
-        "topic_id": 9,
-        "weight": 0.195517,
-        "label": "Coastal village & park proximity",
-        "top_terms": [
-          "park",
-          "regional",
-          "regional park",
-          "village",
-          "walking",
-          "suburb village",
-          "suburb regional",
-          "suburb college",
-          "centre",
-          "community",
-          "distance",
-          "walking distance"
+          "value"
         ]
       },
       {
         "topic_id": 2,
-        "weight": 0.153382,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "modern",
-          "quality",
-          "brand",
-          "brand new",
-          "new",
-          "comfort",
-          "stylish",
-          "convenience",
-          "outdoor flow",
-          "light filled",
-          "contemporary",
-          "internal access"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.132006,
+        "weight": 0.212181,
         "label": "Family living & entertaining",
         "top_terms": [
-          "friends",
-          "relaxed",
-          "room",
-          "setting",
+          "areas",
+          "living areas",
           "entertaining",
-          "life",
-          "children",
-          "summer",
+          "family living",
+          "multiple",
           "outdoor",
-          "peaceful",
-          "sense",
-          "spaces"
+          "flexibility",
+          "multiple living",
+          "indoor",
+          "indoor outdoor",
+          "setting",
+          "pool"
         ]
       }
     ]
@@ -435,7 +435,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "The best buy in Browns Bay, This is your chance to secure an outstanding opportunity before someone else does.\r\n\r\nThis is your chance to secure an outstanding opportunity before someone else does.\r\n\r\nFor the first time since 2000, this family home is ready for its new owners, offering the perfect blend of comfort, convenience, and exciting potential. Nestled on approximately 617sqm of freehold land in a quiet cul-de-sac, this elevated property basks in sunshine, making it a welcoming retreat for you and your loved ones.\r\n\r\nKey Features:\r\n\r\n• Family-Friendly Living: The spacious indoor and outdoor living areas provide perfect spaces for entertaining, with dual decks that extend your living area into the outdoors.\r\n\r\n• Expansive Backyard: A large backyard awaits, offering a playground for children and pets alike, making it an ideal spot for family fun.\r\n\r\n• Convenient Parking: Benefit from a garage under the house, an electric car charger and additional off-street parking, plus ample room to add value and personalize the property to your taste.\r\n\r\n• Prime Location: Enjoy the proximity to Browns Bay Shopping Centre and beautiful beaches, along with excellent schools, including Sherwood Primary, Northcross Intermediate, and Rangitoto College.\r\n\r\n• Easy Connectivity: Convenient access to motorway connections and public transport routes ensures you can effortlessly reach surrounding areas. Local parks and community walkways are just moments away, fostering a friendly neighborhood environment perfect for families.\r\n\r\nThis property is more than just a home; it’s a canvas waiting for your personal touch. Whether you are searching for a warm family haven, a land banking opportunity, or a future development prospect, this property is packed with possibilities!\r\n\r\nDon’t miss out on this exceptional opportunity!\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -639,6 +639,20 @@
   ],
   "comps": [
     {
+      "property_id": "7f0aaab9-8059-42f8-b248-569b4a5136fd",
+      "address": "31 Squirrel Lane, Browns Bay, Auckland",
+      "sale_price": 1350000,
+      "sale_date": "2026-09-09T00:00:00+00:00",
+      "distance_km": 0.1,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1225000,
+      "estimate_mid": 1260000
+    },
+    {
       "property_id": "b36dfcb3-57e0-4a6b-b26d-313ecf90e633",
       "address": "12C Palliser Lane, Browns Bay, Auckland",
       "sale_price": 1460000,
@@ -667,6 +681,20 @@
       "estimate_mid": 770000
     },
     {
+      "property_id": "4b6f9bcd-7270-40d1-86d7-0923ce460534",
+      "address": "3/589A East Coast Road, Browns Bay, Auckland",
+      "sale_price": 1020000,
+      "sale_date": "2026-09-03T00:00:00+00:00",
+      "distance_km": 0.54,
+      "bedrooms": 3,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1100000,
+      "estimate_mid": 1020000
+    },
+    {
       "property_id": "531b5962-c276-46c8-8672-c5d1ed6a36c4",
       "address": "2/589A East Coast Road, Browns Bay, Auckland",
       "sale_price": 1020000,
@@ -678,7 +706,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1100000,
-      "estimate_mid": 1110000
+      "estimate_mid": 1020000
     },
     {
       "property_id": "4c16f222-9282-45e9-8670-2036924edf56",
@@ -695,18 +723,18 @@
       "estimate_mid": 950000
     },
     {
-      "property_id": "01cc638b-306c-45bc-a21d-6e1eaf40d6d8",
-      "address": "91 Langana Avenue, Browns Bay, Auckland",
-      "sale_price": 1585000,
-      "sale_date": "2026-08-08T00:00:00+00:00",
+      "property_id": "332ff147-6297-467c-a58d-71558c0a7cf6",
+      "address": "4 Valdese Rise, Browns Bay, Auckland",
+      "sale_price": 1498000,
+      "sale_date": "2026-09-03T00:00:00+00:00",
       "distance_km": 0.64,
-      "bedrooms": 3,
+      "bedrooms": 4,
       "bathrooms": 2,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1250000,
-      "estimate_mid": 1550000
+      "cv": 1425000,
+      "estimate_mid": 1420000
     },
     {
       "property_id": "aa6f7120-1beb-4825-8fa6-6410e6f30bf3",
@@ -777,34 +805,6 @@
       "property_type": null,
       "cv": 1425000,
       "estimate_mid": 1430000
-    },
-    {
-      "property_id": "b895be84-37c5-4cf7-a891-76952769fd0d",
-      "address": "5 Knights Close, Rothesay Bay, Auckland",
-      "sale_price": 1250000,
-      "sale_date": "2026-09-03T00:00:00+00:00",
-      "distance_km": 0.89,
-      "bedrooms": null,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1250000,
-      "estimate_mid": 1260000
-    },
-    {
-      "property_id": "7b1cb497-7717-4985-a5d9-3e6cdf74c48c",
-      "address": "2B Robin Lane, Browns Bay, Auckland",
-      "sale_price": 1087000,
-      "sale_date": "2026-10-06T00:00:00+00:00",
-      "distance_km": 0.93,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1100000,
-      "estimate_mid": 1080000
     }
   ],
   "valuation": {
@@ -826,22 +826,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$996K – $1.15M",
-        "low": 995789,
+        "range": "$978K – $1.16M",
+        "low": 977738,
         "mid": 1075000,
-        "high": 1152733,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "high": 1164583,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "high",
-        "n": 83,
+        "n": 93,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 83,
-          "n_eff": 13.26,
+          "n": 93,
+          "n_eff": 14.64,
           "radius_km": 3.0,
           "median_ratio": 1.0,
-          "iqr_ratio": 0.146,
-          "same_suburb": 22,
+          "iqr_ratio": 0.1738,
+          "same_suburb": 23,
           "model_version": "comp-cv-v1"
         }
       },

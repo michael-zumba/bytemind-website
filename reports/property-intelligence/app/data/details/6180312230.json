@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-11-03T21:00:00+00:00",
   "listed_at": "2026-10-15T01:57:44.100000+00:00",
-  "days_on_market": 13,
+  "days_on_market": 14,
   "lat": -36.8538857,
   "lon": 174.8169708,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2335272439.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 2189605,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1804868,
-  "comp_mid": 2110909,
-  "comp_high": 2161944,
+  "comp_low": 1825472,
+  "comp_mid": 2125287,
+  "comp_high": 2192157,
   "comp_confidence": "medium",
-  "comp_n": 45,
+  "comp_n": 47,
   "value_low": 1948136,
   "value_mid": 2068870,
   "value_high": 2189605,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 847,
+  "view_count": 881,
   "watchers": 8,
   "is_standard": 1,
   "standard_reason": null,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 2.2,
+  "sale_pressure": 2.3,
   "sale_pressure_label": "low",
-  "model_low": 1772177,
-  "model_mid": 1959048,
-  "model_high": 2156290,
+  "model_low": 1784420,
+  "model_mid": 1962857,
+  "model_high": 2158502,
   "model_confidence": "high",
-  "text_signal_pct": 1.1076,
-  "description_index": 0.049922,
+  "text_signal_pct": 7.265,
+  "description_index": 0.297669,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,33 +288,33 @@
   ],
   "model": {
     "listing_id": 6180312230,
-    "low": 1772177,
-    "mid": 1959048,
-    "high": 2156290,
+    "low": 1784420,
+    "mid": 1962857,
+    "high": 2158502,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1003, 0.0959], \"rel_width\": 0.1961, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6180312230,
     "word_count": 216,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.6019,
-    "condition_renovation": 0.3867,
-    "views_waterfront": 0.5394,
+    "luxury": 0.6106,
+    "condition_renovation": 0.3862,
+    "views_waterfront": 0.5384,
     "family_school": 0.0792,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.255,
-    "description_premium_pct": 1.1076,
-    "description_index": 0.049922,
+    "description_premium_pct": 7.265,
+    "description_index": 0.297669,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 5, \"condition_renovation\": 2, \"views_waterfront\": 4, \"family_school\": 1, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.436389,
+        "weight": 0.46455,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
@@ -324,54 +324,35 @@
           "sophisticated",
           "finishes",
           "year",
-          "designer kitchen",
-          "residence",
           "design",
-          "integrated",
+          "residence",
+          "designer kitchen",
+          "refined",
           "lighting"
         ]
       },
       {
-        "topic_id": 2,
-        "weight": 0.230842,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "modern",
-          "quality",
-          "brand",
-          "brand new",
-          "new",
-          "comfort",
-          "stylish",
-          "convenience",
-          "outdoor flow",
-          "light filled",
-          "contemporary",
-          "internal access"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.137571,
+        "topic_id": 0,
+        "weight": 0.111703,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
-          "ensuite",
           "wardrobe",
+          "ensuite",
           "walk wardrobe",
           "bathroom",
-          "separate",
-          "lounge",
           "suite",
-          "walk",
-          "upstairs",
+          "lounge",
+          "master",
           "level",
-          "floor",
-          "master"
+          "separate",
+          "master suite",
+          "upstairs",
+          "walk"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.074523,
+        "weight": 0.106791,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -380,12 +361,31 @@
           "lock leave",
           "car",
           "bedroom apartment",
-          "restaurants",
-          "complex",
-          "car park",
           "bedroom",
+          "restaurants",
+          "car park",
+          "complex",
           "balcony",
-          "residents"
+          "car parks"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.095799,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand new",
+          "brand",
+          "new",
+          "modern",
+          "quality",
+          "lot",
+          "standalone",
+          "bedrooms bathrooms",
+          "homes",
+          "maintenance",
+          "floor area",
+          "sqm floor"
         ]
       }
     ]
@@ -435,7 +435,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "Auction: 34 Shortland Street, City on Wednesday 4 November 2026 at 10:00AM  (unless sold prior)\r\n\r\nStep into an elevated world of sophistication, style, and convenience in one of Orakei’s most exclusive addresses. Bathed in natural light, this near-new executive townhouse features a clever layout that effortlessly balances contemporary design with practical everyday living.\r\n\r\nDesigned for maximum comfort and ease, the home is equipped with a private lift providing seamless access to each floor. At the heart of the residence, open-plan dining and lounge areas open out to a private balcony framing elevated urban views—creating an inviting atmosphere perfect for both relaxing and entertaining. The designer kitchen combines warm timber cabinetry and sleek, modern finishes with premium appliances.\r\n\r\nAccommodation is spread across three generous bedrooms, including a flexible ground-floor suite ideal for guests, teenagers, or a dedicated home office. Complemented by three sleek, fully tiled bathrooms finished to the highest standard, the home offers a serene retreat for every member of the household. Additional highlights include secure internal-access garaging, double glazing, and year-round climate control.\r\n\r\nEnjoy the best of coastal and urban lifestyles—just moments from the Mission Bay waterfront, scenic Orakei Basin walkways, local cafés, and public transport, all while maintaining a quick, easy commute to Auckland’s CBD. Highly stylish, low-maintenance, and perfectly positioned, this property offers an outstanding lifestyle in a premier location.",
   "photos": [
@@ -754,6 +754,20 @@
       "estimate_mid": 1630000
     },
     {
+      "property_id": "6eb4a171-a3ad-4e7b-8aa0-6c22158a501e",
+      "address": "1/1 Tokomaru Street, Orakei, Auckland",
+      "sale_price": 1125000,
+      "sale_date": "2026-09-16T00:00:00+00:00",
+      "distance_km": 0.88,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1325000,
+      "estimate_mid": 1230000
+    },
+    {
       "property_id": "2cd90b4d-5f99-4e83-8b1e-5f81e59d36f7",
       "address": "61A Atkin Avenue, Mission Bay, Auckland",
       "sale_price": 1825000,
@@ -768,18 +782,18 @@
       "estimate_mid": 1880000
     },
     {
-      "property_id": "3d67d898-1ce1-498d-a119-5da23450a8de",
-      "address": "1/68 Atkin Avenue, Mission Bay, Auckland",
-      "sale_price": 930000,
-      "sale_date": "2026-07-21T00:00:00+00:00",
-      "distance_km": 1.06,
-      "bedrooms": 2,
+      "property_id": "342452bd-d87f-49d4-88bc-bb30a3f3cc9a",
+      "address": "4A Godden Crescent, Orakei, Auckland",
+      "sale_price": 1300000,
+      "sale_date": "2026-09-02T00:00:00+00:00",
+      "distance_km": 1.05,
+      "bedrooms": 3,
       "bathrooms": 1,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1175000,
-      "estimate_mid": 950000
+      "cv": 1275000,
+      "estimate_mid": 1310000
     },
     {
       "property_id": "430df567-dece-42cb-af00-0c85d3290600",
@@ -793,21 +807,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1250000,
-      "estimate_mid": 1260000
-    },
-    {
-      "property_id": "3a05a62c-ee59-403a-b3ff-c63e449b4884",
-      "address": "10 Palmer Crescent, Mission Bay, Auckland",
-      "sale_price": 4431000,
-      "sale_date": "2026-08-19T00:00:00+00:00",
-      "distance_km": 1.35,
-      "bedrooms": 4,
-      "bathrooms": 4,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 3850000,
-      "estimate_mid": 4400000
+      "estimate_mid": 1170000
     }
   ],
   "valuation": {
@@ -829,22 +829,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.80M – $2.16M",
-        "low": 1804868,
-        "mid": 2110909,
-        "high": 2161944,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "range": "$1.83M – $2.19M",
+        "low": 1825472,
+        "mid": 2125287,
+        "high": 2192157,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "medium",
-        "n": 45,
+        "n": 47,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
-          "n": 45,
-          "n_eff": 7.23,
+          "n": 47,
+          "n_eff": 7.68,
           "radius_km": 3.0,
-          "median_ratio": 0.9818,
-          "iqr_ratio": 0.1692,
-          "same_suburb": 11,
+          "median_ratio": 0.9885,
+          "iqr_ratio": 0.1725,
+          "same_suburb": 12,
           "model_version": "comp-cv-v1"
         }
       },

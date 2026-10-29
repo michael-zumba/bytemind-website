@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-10-29T23:00:00+00:00",
   "listed_at": "2026-10-06T22:50:25.570000+00:00",
-  "days_on_market": 21,
+  "days_on_market": 22,
   "lat": -36.8502411,
   "lon": 174.8417577,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333732534.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1288123,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1035429,
-  "comp_mid": 1147500,
-  "comp_high": 1217544,
+  "comp_low": 1018868,
+  "comp_mid": 1159245,
+  "comp_high": 1224000,
   "comp_confidence": "high",
-  "comp_n": 79,
+  "comp_n": 81,
   "value_low": 1146070,
   "value_mid": 1217097,
   "value_high": 1288123,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 3461,
-  "watchers": 81,
+  "view_count": 3622,
+  "watchers": 82,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "crosslease",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:26:21.446214+00:00",
-  "days_since_last_change": 0.14,
+  "days_since_last_change": 1.23,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 1,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 3.5,
+  "sale_pressure": 3.7,
   "sale_pressure_label": "low",
-  "model_low": 1029213,
-  "model_mid": 1137741,
-  "model_high": 1252291,
+  "model_low": 1035475,
+  "model_mid": 1139019,
+  "model_high": 1252549,
   "model_confidence": "high",
-  "text_signal_pct": 21.7958,
-  "description_index": 0.8936,
+  "text_signal_pct": 17.0243,
+  "description_index": 0.667272,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -278,52 +278,33 @@
   ],
   "model": {
     "listing_id": 6167380938,
-    "low": 1029213,
-    "mid": 1137741,
-    "high": 1252291,
+    "low": 1035475,
+    "mid": 1139019,
+    "high": 1252549,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1003, 0.0959], \"rel_width\": 0.1961, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6167380938,
     "word_count": 243,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.107,
-    "condition_renovation": 0.6874,
-    "views_waterfront": 0.5993,
+    "luxury": 0.1086,
+    "condition_renovation": 0.6867,
+    "views_waterfront": 0.5982,
     "family_school": 0.2817,
-    "investment": 0.1255,
+    "investment": 0.1256,
     "risk": 0.0,
     "readability": 0.4686,
-    "description_premium_pct": 21.7958,
-    "description_index": 0.8936,
+    "description_premium_pct": 17.0243,
+    "description_index": 0.667272,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 4, \"views_waterfront\": 5, \"family_school\": 4, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
-        "topic_id": 7,
-        "weight": 0.539082,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "brick",
-          "single",
-          "unit",
-          "sunny",
-          "street",
-          "ready",
-          "maintenance",
-          "low",
-          "garden",
-          "renovated",
-          "parking",
-          "low maintenance"
-        ]
-      },
-      {
         "topic_id": 4,
-        "weight": 0.266908,
+        "weight": 0.323491,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -332,50 +313,69 @@
           "lock leave",
           "car",
           "bedroom apartment",
-          "restaurants",
-          "complex",
-          "car park",
           "bedroom",
+          "restaurants",
+          "car park",
+          "complex",
           "balcony",
-          "residents"
+          "car parks"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.258346,
+        "label": "Family living & entertaining II",
+        "top_terms": [
+          "morning",
+          "coffee",
+          "friends",
+          "life",
+          "relaxed",
+          "morning coffee",
+          "step",
+          "feels",
+          "sense",
+          "day",
+          "away",
+          "place"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.242406,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "parking",
+          "street",
+          "brick",
+          "street parking",
+          "single",
+          "fully",
+          "college",
+          "garden",
+          "sunny",
+          "room",
+          "fenced",
+          "garage"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.15972,
+        "weight": 0.131848,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "harbour",
           "views",
           "residence",
-          "scale",
           "waterfront",
-          "pool",
-          "expansive",
+          "scale",
+          "city",
           "aucklands",
           "gulf",
-          "city",
-          "architectural",
-          "position"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.019538,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "sea",
-          "sea views",
-          "views",
-          "rangitoto",
-          "elevated",
-          "rangitoto college",
-          "living areas",
-          "areas",
-          "gulf",
-          "college",
-          "family home",
-          "intermediate"
+          "pool",
+          "expansive",
+          "extraordinary",
+          "island"
         ]
       }
     ]
@@ -433,7 +433,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "Beach lovers must view this immaculately renovated two-bedroom sanctuary, just one hundred metres from Kohimarama Beach and the ever-popular Kohi Café. This is lock-up-and-leave living at its finest — a rare combination of low-maintenance ease, city-fringe convenience, and genuine seaside lifestyle.\r\n\r\nPositioned on the upper level of the boutique four-unit brick and tile building, the home enjoys a north-facing aspect with a coveted view shaft across Tamaki Drive to the sparkling waters of Kohimarama Beach. Wake to sea peeps and sunshine streaming into your living areas, then wander down to the beach, the café, or straight onto Tamaki Drive for that scenic walk, cycle, or drive into the city.\r\n\r\nEvery detail has been considered in this beautifully presented home. Fresh paint and new carpet flow throughout, complemented by a luxurious new bathroom and stylish shutters at the windows. The north-facing deck is drenched in sunshine and framed by the waterfront outlook — the perfect spot for morning coffee or evening drinks. Downstairs, an enclosed single garage has an adjoining laundry.\r\n\r\nOutside, the manicured private gardens and lawns — shared amongst just four owners — offer a sunny, peaceful retreat to relax or walk the dog, all beautifully maintained and immaculately kept.\r\n\r\nThis is a home for those who want it all without the upkeep: professionals, downsizers, investors, or anyone craving that easy, breezy Eastern Bays lifestyle within minutes of the city.\r\n\r\nView at our Open Homes or call Greg now to arrange a private viewing.\r\n\r\nAuction: On-Site 12:00p.m. Friday 30th October 2026 (unless sold prior).",
   "photos": [
@@ -673,7 +673,7 @@
       "sale_price": 2050000,
       "sale_date": "2026-07-27T00:00:00+00:00",
       "distance_km": 0.18,
-      "bedrooms": null,
+      "bedrooms": 3,
       "bathrooms": null,
       "land_area": null,
       "floor_area": null,
@@ -707,7 +707,21 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1275000,
-      "estimate_mid": 1200000
+      "estimate_mid": 1170000
+    },
+    {
+      "property_id": "dedbd2c6-879a-4352-9cea-4918e6713889",
+      "address": "128A Kohimarama Road, Kohimarama, Auckland",
+      "sale_price": 1605000,
+      "sale_date": "2026-08-09T00:00:00+00:00",
+      "distance_km": 0.76,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1925000,
+      "estimate_mid": 1730000
     },
     {
       "property_id": "c62babad-a046-40d2-972a-3e116fd933a8",
@@ -749,7 +763,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1450000,
-      "estimate_mid": 1580000
+      "estimate_mid": 1200000
     },
     {
       "property_id": "aa1e8f11-d420-47a5-8843-424ddaedf4fd",
@@ -792,20 +806,6 @@
       "property_type": null,
       "cv": 1375000,
       "estimate_mid": 1590000
-    },
-    {
-      "property_id": "3d67d898-1ce1-498d-a119-5da23450a8de",
-      "address": "1/68 Atkin Avenue, Mission Bay, Auckland",
-      "sale_price": 930000,
-      "sale_date": "2026-07-21T00:00:00+00:00",
-      "distance_km": 1.23,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1175000,
-      "estimate_mid": 950000
     }
   ],
   "valuation": {
@@ -827,21 +827,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.04M – $1.22M",
-        "low": 1035429,
-        "mid": 1147500,
-        "high": 1217544,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "range": "$1.02M – $1.22M",
+        "low": 1018868,
+        "mid": 1159245,
+        "high": 1224000,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "high",
-        "n": 79,
+        "n": 81,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 79,
-          "n_eff": 12.57,
+          "n": 81,
+          "n_eff": 12.74,
           "radius_km": 3.0,
-          "median_ratio": 0.9563,
-          "iqr_ratio": 0.1587,
+          "median_ratio": 0.966,
+          "iqr_ratio": 0.177,
           "same_suburb": 15,
           "model_version": "comp-cv-v1"
         }

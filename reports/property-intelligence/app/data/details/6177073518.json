@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-13T02:39:14.357000+00:00",
-  "days_on_market": 15,
+  "days_on_market": 16,
   "lat": -36.7905502,
   "lon": 174.767395,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2334853389.jpg",
@@ -30,12 +30,12 @@
   "estimate_source": null,
   "estimate_updated_at": null,
   "comp_low": 1240000,
-  "comp_mid": 1360000,
+  "comp_mid": 1350000,
   "comp_high": 1935000,
   "comp_confidence": "low",
-  "comp_n": 34,
+  "comp_n": 24,
   "value_low": 1240000,
-  "value_mid": 1360000,
+  "value_mid": 1350000,
   "value_high": 1935000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1195,
+  "view_count": 1217,
   "watchers": 13,
   "is_standard": 1,
   "standard_reason": null,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 32.5,
+  "sale_pressure": 32.7,
   "sale_pressure_label": "low",
-  "model_low": 2103257,
-  "model_mid": 3013942,
-  "model_high": 4249519,
+  "model_low": 2083032,
+  "model_mid": 2966259,
+  "model_high": 4218142,
   "model_confidence": "low",
-  "text_signal_pct": 22.0672,
-  "description_index": 0.903686,
+  "text_signal_pct": 18.8714,
+  "description_index": 0.733743,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -278,33 +278,33 @@
   ],
   "model": {
     "listing_id": 6177073518,
-    "low": 2103257,
-    "mid": 3013942,
-    "high": 4249519,
+    "low": 2083032,
+    "mid": 2966259,
+    "high": 4218142,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3535, 0.3521], \"rel_width\": 0.7198, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6177073518,
     "word_count": 281,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.3701,
+    "luxury": 0.3755,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.311,
+    "views_waterfront": 0.3104,
     "family_school": 0.1218,
-    "investment": 0.6514,
+    "investment": 0.6517,
     "risk": 0.0,
     "readability": 0.1961,
-    "description_premium_pct": 22.0672,
-    "description_index": 0.903686,
+    "description_premium_pct": 18.8714,
+    "description_index": 0.733743,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 4, \"condition_renovation\": 0, \"views_waterfront\": 3, \"family_school\": 2, \"investment\": 6, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
         "topic_id": 1,
-        "weight": 0.874384,
+        "weight": 0.876934,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -313,17 +313,17 @@
           "land",
           "development",
           "subject",
+          "sqm",
           "property",
           "existing",
           "housing",
-          "sqm",
           "mixed",
-          "council"
+          "value"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.111038,
+        "weight": 0.108371,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -332,17 +332,36 @@
           "lock leave",
           "car",
           "bedroom apartment",
-          "restaurants",
-          "complex",
-          "car park",
           "bedroom",
+          "restaurants",
+          "car park",
+          "complex",
           "balcony",
-          "residents"
+          "car parks"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.011421,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "areas",
+          "living areas",
+          "entertaining",
+          "family living",
+          "multiple",
+          "outdoor",
+          "flexibility",
+          "multiple living",
+          "indoor",
+          "indoor outdoor",
+          "setting",
+          "pool"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.008977,
+        "weight": 0.003275,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
@@ -352,30 +371,11 @@
           "sophisticated",
           "finishes",
           "year",
-          "designer kitchen",
-          "residence",
           "design",
-          "integrated",
+          "residence",
+          "designer kitchen",
+          "refined",
           "lighting"
-        ]
-      },
-      {
-        "topic_id": 5,
-        "weight": 0.004792,
-        "label": "Westlake school zone",
-        "top_terms": [
-          "westlake",
-          "girls",
-          "girls high",
-          "high",
-          "high school",
-          "westlake girls",
-          "boys",
-          "westlake boys",
-          "normal",
-          "suburb normal",
-          "normal intermediate",
-          "intermediate"
         ]
       }
     ]
@@ -416,7 +416,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "1,098m² FREEHOLD SITE | EXCEPTIONAL LOCATION | OUTSTANDING POTENTIAL\r\n\r\nA rare opportunity to secure a substantial freehold landholding in the heart of Takapuna.\r\n\r\nAttention developers, investors, and visionary buyers — this is your chance to secure a premium 1,098m² freehold site in one of Auckland’s most sought-after coastal locations.\r\n\r\nPositioned just a five-minute walk from the iconic Takapuna Beach, this property presents an exciting opportunity to explore the potential of Terrace Housing and Apartment Building zoning, subject to planning requirements, resource consent, and relevant development approvals.\r\n\r\nA substantial site. A premium location. A wealth of possibilities.\r\n\r\nPROPERTY HIGHLIGHTS\r\n•  Generous 1,098m² Freehold Landholding: A substantial parcel offering an exciting foundation for your next property venture.\r\n•  Existing Accommodation Potential: Flexible multi-living possibilities, with space suited to a four-to-six-bedroom configuration, subject to the existing layout and property condition.\r\n•  Coastal Lifestyle Appeal: Enjoy easy access to Takapuna Beach, vibrant cafés, boutique shopping, and popular restaurants.\r\n•  Convenient Connectivity: Minutes from motorway access, with convenient connections to Auckland CBD and surrounding commercial hubs.\r\n•  Investment and Development Appeal: Consider the possibilities of holding, enhancing, or redeveloping this well-positioned property, subject to due diligence.\r\n\r\nLOCATION, LIFESTYLE AND LONG-TERM VISION\r\nTakapuna continues to attract attention for its sought-after coastal lifestyle, established amenities, and convenient city connections. Opportunities to secure a substantial freehold site in such a desirable location are well worth exploring.\r\n\r\nWhether you are looking to landbank, investigate a development project, or secure a property with future potential, this offering deserves your attention.\r\n\r\nSECURE YOUR PLACE IN TAKAPUNA\r\nBring your vision, complete your due diligence, and explore the possibilities this exceptional landholding offers.\r\n\r\nSubstantial land. Desirable zoning. A location that speaks for itself.\r\n\r\nContact us today for further information or to arrange a viewing.",
   "photos": [
@@ -532,6 +532,20 @@
       "estimate_mid": 1090000
     },
     {
+      "property_id": "4aad3cc9-662a-4b76-a11e-dea29946e829",
+      "address": "4E/175 Hurstmere Road, Takapuna, Auckland",
+      "sale_price": 1390000,
+      "sale_date": "2026-07-22T00:00:00+00:00",
+      "distance_km": 0.91,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1600000,
+      "estimate_mid": 1400000
+    },
+    {
       "property_id": "6b8baf29-3c5c-4eff-9a70-4a702cbcc0b3",
       "address": "40/15 Puriri Street, Takapuna, Auckland",
       "sale_price": 435000,
@@ -600,25 +614,11 @@
       "property_type": null,
       "cv": 970000,
       "estimate_mid": 835000
-    },
-    {
-      "property_id": "84404325-3577-4a17-9005-ee33b8d574c0",
-      "address": "4/15 Northboro Road, Hauraki, Auckland",
-      "sale_price": 925000,
-      "sale_date": "2026-09-02T00:00:00+00:00",
-      "distance_km": 1.55,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 920000,
-      "estimate_mid": 925000
     }
   ],
   "valuation": {
     "value_low": 1240000,
-    "value_mid": 1360000,
+    "value_mid": 1350000,
     "value_high": 1935000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
@@ -627,19 +627,19 @@
         "name": "Nearby sold comparables",
         "range": "$1.24M – $1.94M",
         "low": 1240000,
-        "mid": 1360000,
+        "mid": 1350000,
         "high": 1935000,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "low",
-        "n": 34,
+        "n": 24,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 34,
-          "n_eff": 8.42,
+          "n": 24,
+          "n_eff": 6.91,
           "radius_km": 3.0,
-          "iqr_ratio": 0.511,
-          "same_suburb": 22,
+          "iqr_ratio": 0.5148,
+          "same_suburb": 13,
           "model_version": "comp-cv-v1"
         }
       }

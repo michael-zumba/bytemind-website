@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-08-10T00:32:00.457000+00:00",
-  "days_on_market": 79,
+  "days_on_market": 80,
   "lat": -36.8649792,
   "lon": 174.8770546,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2322424736.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": 32488,
   "ask_gap_pct": 0.0641,
   "deal_gap": -0.0641,
-  "view_count": 3312,
+  "view_count": 3330,
   "watchers": 60,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:29:10.048031+00:00",
-  "days_since_last_change": 0.14,
+  "days_since_last_change": 1.22,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 3,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 4,
-  "sale_pressure": 53.2,
+  "sale_pressure": 53.3,
   "sale_pressure_label": "medium",
-  "model_low": 442802,
-  "model_mid": 489494,
-  "model_high": 538778,
+  "model_low": 440850,
+  "model_mid": 484933,
+  "model_high": 533268,
   "model_confidence": "high",
-  "text_signal_pct": -8.4236,
-  "description_index": -0.398798,
+  "text_signal_pct": -17.4626,
+  "description_index": -0.814585,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -268,52 +268,33 @@
   ],
   "model": {
     "listing_id": 6075790390,
-    "low": 442802,
-    "mid": 489494,
-    "high": 538778,
+    "low": 440850,
+    "mid": 484933,
+    "high": 533268,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1003, 0.0959], \"rel_width\": 0.1961, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6075790390,
     "word_count": 164,
     "exclamations": 1,
-    "urgency": 0.4493,
+    "urgency": 0.4499,
     "luxury": 0.0,
-    "condition_renovation": 0.2546,
+    "condition_renovation": 0.2544,
     "views_waterfront": 0.0,
     "family_school": 0.1044,
     "investment": 1.0,
     "risk": 0.6616,
     "readability": 0.4016,
-    "description_premium_pct": -8.4236,
-    "description_index": -0.398798,
+    "description_premium_pct": -17.4626,
+    "description_index": -0.814585,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 0, \"family_school\": 1, \"investment\": 7, \"risk\": 2}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
-        "topic_id": 7,
-        "weight": 0.689633,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "brick",
-          "single",
-          "unit",
-          "sunny",
-          "street",
-          "ready",
-          "maintenance",
-          "low",
-          "garden",
-          "renovated",
-          "parking",
-          "low maintenance"
-        ]
-      },
-      {
         "topic_id": 4,
-        "weight": 0.173434,
+        "weight": 0.347305,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -322,17 +303,55 @@
           "lock leave",
           "car",
           "bedroom apartment",
-          "restaurants",
-          "complex",
-          "car park",
           "bedroom",
+          "restaurants",
+          "car park",
+          "complex",
           "balcony",
-          "residents"
+          "car parks"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.245906,
+        "label": "Family living & entertaining II",
+        "top_terms": [
+          "morning",
+          "coffee",
+          "friends",
+          "life",
+          "relaxed",
+          "morning coffee",
+          "step",
+          "feels",
+          "sense",
+          "day",
+          "away",
+          "place"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.233671,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "parking",
+          "street",
+          "brick",
+          "street parking",
+          "single",
+          "fully",
+          "college",
+          "garden",
+          "sunny",
+          "room",
+          "fenced",
+          "garage"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.092662,
+        "weight": 0.13337,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -341,31 +360,12 @@
           "land",
           "development",
           "subject",
+          "sqm",
           "property",
           "existing",
           "housing",
-          "sqm",
           "mixed",
-          "council"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.044271,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "modern",
-          "quality",
-          "brand",
-          "brand new",
-          "new",
-          "comfort",
-          "stylish",
-          "convenience",
-          "outdoor flow",
-          "light filled",
-          "contemporary",
-          "internal access"
+          "value"
         ]
       }
     ]
@@ -439,7 +439,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "Huge Price Reduction $46,000\r\n\r\nVendor understands the market .\r\n\r\nLooking for a smart investment or an easy-care home in a sought-after location? This beautifully presented one-bedroom cross-lease unit is one of only three in the block, offering privacy, comfort, and outstanding value.\r\n\r\nStep inside to discover a light-filled living space that flows seamlessly to your own private courtyard - the perfect spot to enjoy your morning coffee, entertain friends, or simply relax in peace.\r\n\r\nCurrently tenanted by a wonderful occupant who would love to stay, this property provides an immediate rental income, making it an ideal addition to any investment portfolio.\r\n\r\n**Property Features:**\r\n\r\n* One spacious bedroom\r\n* One of only three units in the block\r\n* Private, fully fenced courtyard\r\n* Low-maintenance cross-lease title\r\n* Excellent long-term tenant wishing to remain\r\n* Fantastic location close to shops, transport, and local amenities\r\n\r\nWhether you're a seasoned investor, first-home buyer, or looking to downsize, this charming property is packed with potential and positioned for convenience.\r\n\r\n**Opportunities like this don't come around often - call Sandy today to arrange your viewing!**",
   "photos": [
@@ -819,14 +819,14 @@
         "low": 495000,
         "mid": 530000,
         "high": 558462,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "medium",
         "n": 46,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
           "n": 46,
-          "n_eff": 6.99,
+          "n_eff": 6.96,
           "radius_km": 3.0,
           "median_ratio": 0.9636,
           "iqr_ratio": 0.1197,

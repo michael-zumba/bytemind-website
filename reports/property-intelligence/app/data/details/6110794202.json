@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-09-01T02:13:17.597000+00:00",
-  "days_on_market": 57,
+  "days_on_market": 58,
   "lat": -36.8568344,
   "lon": 174.8301544,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2326490667.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 2645050,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 2035724,
-  "comp_mid": 2342642,
+  "comp_low": 2058962,
+  "comp_mid": 2346239,
   "comp_high": 2473500,
   "comp_confidence": "high",
-  "comp_n": 65,
+  "comp_n": 67,
   "value_low": 2353355,
   "value_mid": 2499202,
   "value_high": 2645050,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 8526,
+  "view_count": 8544,
   "watchers": 67,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:25:39.263888+00:00",
-  "days_since_last_change": 0.14,
+  "days_since_last_change": 1.23,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 3,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 39.5,
+  "sale_pressure": 39.7,
   "sale_pressure_label": "low",
-  "model_low": 2201259,
-  "model_mid": 2433376,
-  "model_high": 2678375,
+  "model_low": 2207280,
+  "model_mid": 2428001,
+  "model_high": 2670009,
   "model_confidence": "medium",
-  "text_signal_pct": -5.8779,
-  "description_index": -0.274538,
+  "text_signal_pct": 5.2831,
+  "description_index": 0.218513,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -278,71 +278,52 @@
   ],
   "model": {
     "listing_id": 6110794202,
-    "low": 2201259,
-    "mid": 2433376,
-    "high": 2678375,
+    "low": 2207280,
+    "mid": 2428001,
+    "high": 2670009,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1003, 0.0959], \"rel_width\": 0.1961, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6110794202,
     "word_count": 316,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.0823,
-    "condition_renovation": 0.6608,
-    "views_waterfront": 0.0922,
+    "luxury": 0.0835,
+    "condition_renovation": 0.66,
+    "views_waterfront": 0.092,
     "family_school": 0.7582,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3561,
-    "description_premium_pct": -5.8779,
-    "description_index": -0.274538,
+    "description_premium_pct": 5.2831,
+    "description_index": 0.218513,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 5, \"views_waterfront\": 1, \"family_school\": 14, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
-        "topic_id": 6,
-        "weight": 0.279499,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "ensuite",
-          "wardrobe",
-          "walk wardrobe",
-          "bathroom",
-          "separate",
-          "lounge",
-          "suite",
-          "walk",
-          "upstairs",
-          "level",
-          "floor",
-          "master"
-        ]
-      },
-      {
         "topic_id": 7,
-        "weight": 0.27334,
-        "label": "Brick / tile / low-maintenance units",
+        "weight": 0.415459,
+        "label": "Parking, garden & section",
         "top_terms": [
-          "brick",
-          "single",
-          "unit",
-          "sunny",
-          "street",
-          "ready",
-          "maintenance",
-          "low",
-          "garden",
-          "renovated",
           "parking",
-          "low maintenance"
+          "street",
+          "brick",
+          "street parking",
+          "single",
+          "fully",
+          "college",
+          "garden",
+          "sunny",
+          "room",
+          "fenced",
+          "garage"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.169504,
+        "weight": 0.186272,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
@@ -352,30 +333,49 @@
           "sophisticated",
           "finishes",
           "year",
-          "designer kitchen",
-          "residence",
           "design",
-          "integrated",
+          "residence",
+          "designer kitchen",
+          "refined",
           "lighting"
         ]
       },
       {
+        "topic_id": 0,
+        "weight": 0.159859,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "wardrobe",
+          "ensuite",
+          "walk wardrobe",
+          "bathroom",
+          "suite",
+          "lounge",
+          "master",
+          "level",
+          "separate",
+          "master suite",
+          "upstairs",
+          "walk"
+        ]
+      },
+      {
         "topic_id": 9,
-        "weight": 0.146886,
+        "weight": 0.133892,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
-          "regional",
           "regional park",
+          "regional",
           "village",
           "walking",
-          "suburb village",
-          "suburb regional",
           "suburb college",
-          "centre",
-          "community",
+          "suburb village",
+          "college",
           "distance",
-          "walking distance"
+          "walking distance",
+          "suburb regional",
+          "centre"
         ]
       }
     ]
@@ -449,7 +449,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "For those with active youngsters, this property facing Patteson Reserve has it all. A ready-made play area and cubby house occupy a corner of the garden, while the superb position captures picturesque park, city and Sky Tower vistas.\r\n\r\nCombining distinctive character with a thoughtfully designed weatherboard extension, the substantial home faces north for excellent sun and natural light, while a wood burner and five heat pumps ensure year-round comfort. Edgy designer lighting contrasts with original character features in the open-plan living and dining area, where bifolds stack back for maximum flow to a covered deck with an adjustable roof and side screens, creating a versatile outdoor living zone in all seasons.\r\n\r\nFrench doors connect the dining area to a sheltered, private and fully fenced courtyard for alfresco entertaining, while a second gallery-style family lounge also opens to this inviting space. The crisp white kitchen boasts composite stone benchtops, ample cabinetry, a Bosch dishwasher, double fridge/freezer and an eye-catching graphic glass splashback.\r\n\r\nFive double bedrooms are complemented by stylish bathrooms, including two ensuites, with the family bathroom cleverly incorporating the laundry. The kids will undoubtedly love the two ladder-accessed attic 'secret rooms', while the adults can retreat upstairs to the spacious master suite, complete with Juliet balcony views, a skylit ensuite, generous walk-through dressing room and additional attic storage.\r\n\r\nInternal-access single garaging with an adjoining workshop, plus two outdoor sheds, adds to the copious storage throughout, while three additional parks are available on the forecourt. Flat, fully fenced and low maintenance, the section is ideal for children and pets.\r\n\r\nIn zone for Kohimarama School and Selwyn College and well positioned for public transport, the property is approximately a 10-minute walk from Mission Bay beach. Eastridge Shopping Centre is also just a few minutes' walk away, putting everyday shopping, New World supermarket, cafés and eateries within easy reach.\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -684,34 +684,6 @@
       "estimate_mid": 4430000
     },
     {
-      "property_id": "3d67d898-1ce1-498d-a119-5da23450a8de",
-      "address": "1/68 Atkin Avenue, Mission Bay, Auckland",
-      "sale_price": 930000,
-      "sale_date": "2026-07-21T00:00:00+00:00",
-      "distance_km": 0.3,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1175000,
-      "estimate_mid": 950000
-    },
-    {
-      "property_id": "2cd90b4d-5f99-4e83-8b1e-5f81e59d36f7",
-      "address": "61A Atkin Avenue, Mission Bay, Auckland",
-      "sale_price": 1825000,
-      "sale_date": "2026-07-23T00:00:00+00:00",
-      "distance_km": 0.4,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2350000,
-      "estimate_mid": 1880000
-    },
-    {
       "property_id": "430df567-dece-42cb-af00-0c85d3290600",
       "address": "14A Godden Crescent, Orakei, Auckland",
       "sale_price": 1275000,
@@ -723,7 +695,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1250000,
-      "estimate_mid": 1260000
+      "estimate_mid": 1170000
     },
     {
       "property_id": "33914963-f2ed-4f87-a71e-d3d57162f934",
@@ -737,7 +709,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1450000,
-      "estimate_mid": 1580000
+      "estimate_mid": 1200000
     },
     {
       "property_id": "73ef5da0-7c03-4e19-857b-53984bc54046",
@@ -754,6 +726,62 @@
       "estimate_mid": 1460000
     },
     {
+      "property_id": "342452bd-d87f-49d4-88bc-bb30a3f3cc9a",
+      "address": "4A Godden Crescent, Orakei, Auckland",
+      "sale_price": 1300000,
+      "sale_date": "2026-09-02T00:00:00+00:00",
+      "distance_km": 0.53,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1275000,
+      "estimate_mid": 1310000
+    },
+    {
+      "property_id": "6eb4a171-a3ad-4e7b-8aa0-6c22158a501e",
+      "address": "1/1 Tokomaru Street, Orakei, Auckland",
+      "sale_price": 1125000,
+      "sale_date": "2026-09-16T00:00:00+00:00",
+      "distance_km": 0.58,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1325000,
+      "estimate_mid": 1230000
+    },
+    {
+      "property_id": "dedbd2c6-879a-4352-9cea-4918e6713889",
+      "address": "128A Kohimarama Road, Kohimarama, Auckland",
+      "sale_price": 1605000,
+      "sale_date": "2026-08-09T00:00:00+00:00",
+      "distance_km": 0.61,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1925000,
+      "estimate_mid": 1730000
+    },
+    {
+      "property_id": "7163db6f-8fc3-44ce-a821-52081bbc9d2d",
+      "address": "4/19 Thatcher Street, Mission Bay, Auckland",
+      "sale_price": 640000,
+      "sale_date": "2026-08-28T00:00:00+00:00",
+      "distance_km": 0.65,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 620000,
+      "estimate_mid": 615000
+    },
+    {
       "property_id": "bdd62e3e-85f7-4620-b165-8b09f854bf3d",
       "address": "124 Selwyn Avenue, Mission Bay, Auckland",
       "sale_price": 1193500,
@@ -765,21 +793,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1275000,
-      "estimate_mid": 1200000
-    },
-    {
-      "property_id": "6db4c5ec-496d-4c2d-bb7d-a3a9cbc35899",
-      "address": "19B Hawera Road, Kohimarama, Auckland",
-      "sale_price": 2580000,
-      "sale_date": "2026-07-21T00:00:00+00:00",
-      "distance_km": 0.78,
-      "bedrooms": 4,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 3075000,
-      "estimate_mid": 2580000
+      "estimate_mid": 1170000
     },
     {
       "property_id": "aa1e8f11-d420-47a5-8843-424ddaedf4fd",
@@ -808,20 +822,6 @@
       "property_type": null,
       "cv": 2050000,
       "estimate_mid": 1820000
-    },
-    {
-      "property_id": "4ca6f655-10f9-4747-9357-f421f79901c2",
-      "address": "148 Coates Avenue, Orakei, Auckland",
-      "sale_price": 1595000,
-      "sale_date": "2026-08-13T00:00:00+00:00",
-      "distance_km": 0.91,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1900000,
-      "estimate_mid": 1630000
     }
   ],
   "valuation": {
@@ -843,22 +843,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$2.04M – $2.47M",
-        "low": 2035724,
-        "mid": 2342642,
+        "range": "$2.06M – $2.47M",
+        "low": 2058962,
+        "mid": 2346239,
         "high": 2473500,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "high",
-        "n": 65,
+        "n": 67,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 65,
-          "n_eff": 12.35,
+          "n": 67,
+          "n_eff": 13.15,
           "radius_km": 3.0,
-          "median_ratio": 0.966,
-          "iqr_ratio": 0.1869,
-          "same_suburb": 14,
+          "median_ratio": 0.9675,
+          "iqr_ratio": 0.1767,
+          "same_suburb": 15,
           "model_version": "comp-cv-v1"
         }
       },

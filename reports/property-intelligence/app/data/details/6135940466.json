@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-09-17T01:19:44.943000+00:00",
-  "days_on_market": 41,
+  "days_on_market": 42,
   "lat": -36.7853966,
   "lon": 174.7701111,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2329512226.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 2047033,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1837931,
-  "comp_mid": 1900000,
-  "comp_high": 2017287,
+  "comp_low": 1832576,
+  "comp_mid": 1898478,
+  "comp_high": 1996053,
   "comp_confidence": "medium",
-  "comp_n": 54,
+  "comp_n": 45,
   "value_low": 1821288,
   "value_mid": 1934160,
   "value_high": 2047033,
@@ -51,7 +51,7 @@
   "ask_gap": 144840,
   "ask_gap_pct": 0.0749,
   "deal_gap": -0.0749,
-  "view_count": 2755,
+  "view_count": 2796,
   "watchers": 63,
   "is_standard": 1,
   "standard_reason": null,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 56.8,
+  "sale_pressure": 57.0,
   "sale_pressure_label": "medium",
-  "model_low": 1748407,
-  "model_mid": 1932772,
-  "model_high": 2127368,
+  "model_low": 1749386,
+  "model_mid": 1924319,
+  "model_high": 2116124,
   "model_confidence": "medium",
-  "text_signal_pct": 5.0788,
-  "description_index": 0.224518,
+  "text_signal_pct": 11.2326,
+  "description_index": 0.451835,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 6135940466,
-    "low": 1748407,
-    "mid": 1932772,
-    "high": 2127368,
+    "low": 1749386,
+    "mid": 1924319,
+    "high": 2116124,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1003, 0.0959], \"rel_width\": 0.1961, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6135940466,
@@ -290,21 +290,21 @@
     "exclamations": 1,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.1266,
-    "views_waterfront": 0.4413,
+    "condition_renovation": 0.1264,
+    "views_waterfront": 0.4405,
     "family_school": 0.1037,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3853,
-    "description_premium_pct": 5.0788,
-    "description_index": 0.224518,
+    "description_premium_pct": 11.2326,
+    "description_index": 0.451835,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 5, \"family_school\": 2, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
         "topic_id": 4,
-        "weight": 0.239386,
+        "weight": 0.259806,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -313,55 +313,36 @@
           "lock leave",
           "car",
           "bedroom apartment",
-          "restaurants",
-          "complex",
-          "car park",
           "bedroom",
+          "restaurants",
+          "car park",
+          "complex",
           "balcony",
-          "residents"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.169141,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "ensuite",
-          "wardrobe",
-          "walk wardrobe",
-          "bathroom",
-          "separate",
-          "lounge",
-          "suite",
-          "walk",
-          "upstairs",
-          "level",
-          "floor",
-          "master"
+          "car parks"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.131196,
+        "weight": 0.170798,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "harbour",
           "views",
           "residence",
-          "scale",
           "waterfront",
-          "pool",
-          "expansive",
+          "scale",
+          "city",
           "aucklands",
           "gulf",
-          "city",
-          "architectural",
-          "position"
+          "pool",
+          "expansive",
+          "extraordinary",
+          "island"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.115541,
+        "weight": 0.132206,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
@@ -371,11 +352,30 @@
           "sophisticated",
           "finishes",
           "year",
-          "designer kitchen",
-          "residence",
           "design",
-          "integrated",
+          "residence",
+          "designer kitchen",
+          "refined",
           "lighting"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.114681,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "wardrobe",
+          "ensuite",
+          "walk wardrobe",
+          "bathroom",
+          "suite",
+          "lounge",
+          "master",
+          "level",
+          "separate",
+          "master suite",
+          "upstairs",
+          "walk"
         ]
       }
     ]
@@ -441,7 +441,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "Experience the timeless European ambience of this spacious and secure lock-up and leave townhouse right in the heart of Takapuna in the boutique mews setting of “Killarney Rise”. Recently renovated and comprising a floor area of some 230m² (more or less), this solidly constructed property offers 3 double bedrooms, 2.5 bathrooms including a stylish master ensuite and a third guest powder-room.\r\n\r\nThe design features a central atrium that drenches the central core of the home with an abundance of natural light, right down to the open-plan mid floor level now encompassing the natural look of real timber flooring for ease of cleaning and high durability which is exceedingly practical as this level is totally devoted to generous living and dining spaces. These connect seamlessly from the entertainer kitchen across the lounge to the tiled balcony; a perfect spot for breaky and a morning latte, whilst the private and sunny northern courtyard adjoining the  family/dining room, is imminently suited to outdoor entertaining and summer barbeques.\r\n\r\nInternal access is provided to the oversized basement garaging that provides parking for at least 2 motor vehicles plus workshop/storage space and leads to a spacious separate laundry room.\r\n\r\nSituated right in the heart of Takapuna, along the Killarney Street ridge, the property enjoys an extensive 180° view which encompasses the CBD of Auckland to Rangitoto and the Hauraki Gulf. It is an engaging outlook by day and an attractive display of lights by night. This is Takapuna at its best being just a short stroll from fabulous Takapuna Beach, the Bruce Mason Centre (performing arts), Lake Pupuke, The Takapuna Pool and Leisure Centre, Shore City Shopping Centre, plus numerous cafés, bars, restaurants and specialty shops.\r\n\r\nThis is timeless architecture offering privacy and security in a coastal setting and represents sound value to the knowledgeable buyer seeking a top Takapuna location. The CV is just $2,050,000 and the vendor advises that all reasonable offers will be considered. So, make your appointment today for a private viewing or attend one of the advertised open homes; you will not be disappointed!\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -648,6 +648,20 @@
   ],
   "comps": [
     {
+      "property_id": "8904f082-b62c-43ec-83a8-5b462f1dfe41",
+      "address": "103/16 Huron Street, Takapuna, Auckland",
+      "sale_price": 1240000,
+      "sale_date": "2026-07-24T00:00:00+00:00",
+      "distance_km": 0.52,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1375000,
+      "estimate_mid": 1240000
+    },
+    {
       "property_id": "933f221b-86ce-4a9d-bc45-0ceeb71a61d4",
       "address": "B 209/130 Anzac Street, Takapuna, Auckland",
       "sale_price": 711000,
@@ -760,20 +774,6 @@
       "estimate_mid": 460000
     },
     {
-      "property_id": "632645d1-bba2-43d3-a732-ae388d3477fe",
-      "address": "23 Muritai Road, Milford, Auckland",
-      "sale_price": 7200000,
-      "sale_date": "2026-07-29T00:00:00+00:00",
-      "distance_km": 1.48,
-      "bedrooms": 4,
-      "bathrooms": 4,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 6750000,
-      "estimate_mid": 7620000
-    },
-    {
       "property_id": "52d41785-0972-428d-95b7-75b482c9c1e0",
       "address": "24 Muritai Road, Milford, Auckland",
       "sale_price": 3800000,
@@ -835,22 +835,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.84M – $2.02M",
-        "low": 1837931,
-        "mid": 1900000,
-        "high": 2017287,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "range": "$1.83M – $2M",
+        "low": 1832576,
+        "mid": 1898478,
+        "high": 1996053,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "medium",
-        "n": 54,
+        "n": 45,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
-          "n": 54,
-          "n_eff": 7.85,
+          "n": 45,
+          "n_eff": 7.18,
           "radius_km": 3.0,
-          "median_ratio": 0.9268,
-          "iqr_ratio": 0.0944,
-          "same_suburb": 33,
+          "median_ratio": 0.9261,
+          "iqr_ratio": 0.0861,
+          "same_suburb": 24,
           "model_version": "comp-cv-v1"
         }
       },

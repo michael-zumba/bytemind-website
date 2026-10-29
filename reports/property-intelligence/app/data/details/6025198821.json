@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-07-09T02:07:42.933000+00:00",
-  "days_on_market": 111,
+  "days_on_market": 112,
   "lat": -36.8516477,
   "lon": 174.8519651,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2316938431.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 8396354,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 8444444,
-  "comp_mid": 9084375,
-  "comp_high": 9690000,
+  "comp_low": 8452336,
+  "comp_mid": 9191453,
+  "comp_high": 9728916,
   "comp_confidence": "high",
-  "comp_n": 75,
+  "comp_n": 77,
   "value_low": 7470408,
   "value_mid": 7933381,
   "value_high": 8396354,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 9655,
-  "watchers": 139,
+  "view_count": 9708,
+  "watchers": 140,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 3,
   "last_change_at": "2026-10-28T15:28:23.819445+00:00",
-  "days_since_last_change": 0.14,
+  "days_since_last_change": 1.22,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 4,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 48.5,
+  "sale_pressure": 48.7,
   "sale_pressure_label": "medium",
-  "model_low": 8976241,
-  "model_mid": 9922762,
-  "model_high": 10921814,
+  "model_low": 9081944,
+  "model_mid": 9990111,
+  "model_high": 10985864,
   "model_confidence": "high",
-  "text_signal_pct": 45.2899,
-  "description_index": 1.692975,
+  "text_signal_pct": 53.1868,
+  "description_index": 1.810195,
   "events_count": 3,
   "last_event": "cv_change",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6025198821,
-    "low": 8976241,
-    "mid": 9922762,
-    "high": 10921814,
+    "low": 9081944,
+    "mid": 9990111,
+    "high": 10985864,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1003, 0.0959], \"rel_width\": 0.1961, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6025198821,
@@ -280,21 +280,21 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 1.0,
-    "condition_renovation": 0.394,
+    "condition_renovation": 0.3935,
     "views_waterfront": 1.0,
     "family_school": 0.0807,
     "investment": 1.0,
     "risk": 0.2559,
     "readability": 0.2131,
-    "description_premium_pct": 45.2899,
-    "description_index": 1.692975,
+    "description_premium_pct": 53.1868,
+    "description_index": 1.810195,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 9, \"condition_renovation\": 2, \"views_waterfront\": 8, \"family_school\": 1, \"investment\": 7, \"risk\": 1}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
         "topic_id": 1,
-        "weight": 0.699568,
+        "weight": 0.682135,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -303,36 +303,55 @@
           "land",
           "development",
           "subject",
+          "sqm",
           "property",
           "existing",
           "housing",
-          "sqm",
           "mixed",
-          "council"
+          "value"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.218954,
+        "weight": 0.214925,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "harbour",
           "views",
           "residence",
-          "scale",
           "waterfront",
-          "pool",
-          "expansive",
+          "scale",
+          "city",
           "aucklands",
           "gulf",
-          "city",
-          "architectural",
-          "position"
+          "pool",
+          "expansive",
+          "extraordinary",
+          "island"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.06095,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "sea views",
+          "views",
+          "elevated",
+          "rangitoto",
+          "rangitoto college",
+          "gulf",
+          "hauraki gulf",
+          "hauraki",
+          "spectacular",
+          "panoramic",
+          "living areas"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.045089,
+        "weight": 0.04199,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
@@ -342,30 +361,11 @@
           "sophisticated",
           "finishes",
           "year",
-          "designer kitchen",
-          "residence",
           "design",
-          "integrated",
+          "residence",
+          "designer kitchen",
+          "refined",
           "lighting"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.036389,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "sea",
-          "sea views",
-          "views",
-          "rangitoto",
-          "elevated",
-          "rangitoto college",
-          "living areas",
-          "areas",
-          "gulf",
-          "college",
-          "family home",
-          "intermediate"
         ]
       }
     ]
@@ -461,7 +461,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "A truly exceptional landholding in one of Auckland's most prestigious coastal suburbs, this expansive 1,605m² freehold site presents an increasingly rare opportunity to secure a premium development project with breathtaking harbour and St Heliers views.\r\n\r\nWhether you're looking to landbank for future capital growth, explore subdivision or townhouse development (subject to council approval), or create an iconic luxury residence, opportunities of this scale and calibre are seldom available. The elevated position, generous site dimensions, and outstanding outlook provide the ideal foundation for a landmark project.\r\n\r\nWith panoramic views stretching across the harbour, a prestigious St Heliers address, and the beach, village, cafés and waterfront just moments away, the location offers the lifestyle that premium buyers actively seek-making it an attractive proposition for developers and investors alike.\r\n\r\nProperties combining significant land size, elevated views, and blue-chip positioning are becoming increasingly scarce. Secure this remarkable site today and unlock its full potential. Whether your vision is luxury homes, boutique townhouses, a long-term landbank, or your ultimate dream estate, 10 Long Drive is a development opportunity that deserves your attention.\r\n\r\nThis home is currently lovingly owner occupied but is of an era that would require significant renovations internally and externally. The vendor is selling the house as is where is.",
   "photos": [
@@ -693,7 +693,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 3175000,
-      "estimate_mid": 3020000
+      "estimate_mid": 3110000
     },
     {
       "property_id": "819c261e-17db-4a8e-822d-d5fdb7560efe",
@@ -736,20 +736,6 @@
       "property_type": null,
       "cv": 3575000,
       "estimate_mid": 3800000
-    },
-    {
-      "property_id": "f505b737-e368-41c9-ac4a-e3b1541a60ae",
-      "address": "4/36 Towai Street, St Heliers, Auckland",
-      "sale_price": 515000,
-      "sale_date": "2026-07-16T00:00:00+00:00",
-      "distance_km": 0.73,
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 670000,
-      "estimate_mid": 615000
     },
     {
       "property_id": "4ed0d2df-9ae0-4dd0-9258-47b94b745a46",
@@ -834,6 +820,20 @@
       "property_type": null,
       "cv": 3000000,
       "estimate_mid": 2780000
+    },
+    {
+      "property_id": "d70e6264-4cf4-4766-bd5e-2f78e33df589",
+      "address": "25F Eltham Road, Kohimarama, Auckland",
+      "sale_price": 630000,
+      "sale_date": "2026-08-05T00:00:00+00:00",
+      "distance_km": 0.95,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 850000,
+      "estimate_mid": 645000
     }
   ],
   "valuation": {
@@ -855,21 +855,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$8.44M – $9.69M",
-        "low": 8444444,
-        "mid": 9084375,
-        "high": 9690000,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "range": "$8.45M – $9.73M",
+        "low": 8452336,
+        "mid": 9191453,
+        "high": 9728916,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "high",
-        "n": 75,
+        "n": 77,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 75,
+          "n": 77,
           "n_eff": 12.98,
           "radius_km": 3.0,
-          "median_ratio": 0.9563,
-          "iqr_ratio": 0.1371,
+          "median_ratio": 0.9675,
+          "iqr_ratio": 0.1389,
           "same_suburb": 24,
           "model_version": "comp-cv-v1"
         }

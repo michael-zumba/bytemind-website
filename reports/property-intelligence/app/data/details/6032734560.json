@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-07-13T21:52:26.077000+00:00",
-  "days_on_market": 106,
+  "days_on_market": 107,
   "lat": -36.8549212,
   "lon": 174.8339411,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2317642636.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1430121,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1154276,
-  "comp_mid": 1299213,
-  "comp_high": 1386957,
+  "comp_low": 1167453,
+  "comp_mid": 1328302,
+  "comp_high": 1402500,
   "comp_confidence": "high",
-  "comp_n": 71,
+  "comp_n": 73,
   "value_low": 1272408,
   "value_mid": 1351264,
   "value_high": 1430121,
@@ -51,8 +51,8 @@
   "ask_gap": -322264,
   "ask_gap_pct": -0.2385,
   "deal_gap": 0.2385,
-  "view_count": 12570,
-  "watchers": 360,
+  "view_count": 12624,
+  "watchers": 361,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "crosslease",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:25:44.157663+00:00",
-  "days_since_last_change": 0.14,
+  "days_since_last_change": 1.23,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 5,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 67.7,
+  "sale_pressure": 67.8,
   "sale_pressure_label": "high",
-  "model_low": 1215724,
-  "model_mid": 1343919,
-  "model_high": 1479228,
+  "model_low": 1215498,
+  "model_mid": 1337044,
+  "model_high": 1470313,
   "model_confidence": "high",
-  "text_signal_pct": 1.309,
-  "description_index": 0.058939,
+  "text_signal_pct": 0.0584,
+  "description_index": 0.002476,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -278,33 +278,52 @@
   ],
   "model": {
     "listing_id": 6032734560,
-    "low": 1215724,
-    "mid": 1343919,
-    "high": 1479228,
+    "low": 1215498,
+    "mid": 1337044,
+    "high": 1470313,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1003, 0.0959], \"rel_width\": 0.1961, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6032734560,
     "word_count": 280,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.0929,
-    "condition_renovation": 0.1491,
-    "views_waterfront": 0.208,
+    "luxury": 0.0942,
+    "condition_renovation": 0.149,
+    "views_waterfront": 0.2077,
     "family_school": 0.7946,
     "investment": 0.109,
     "risk": 0.1938,
     "readability": 0.4649,
-    "description_premium_pct": 1.309,
-    "description_index": 0.058939,
+    "description_premium_pct": 0.0584,
+    "description_index": 0.002476,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 13, \"investment\": 1, \"risk\": 1}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
+        "topic_id": 6,
+        "weight": 0.272555,
+        "label": "Family living & entertaining II",
+        "top_terms": [
+          "morning",
+          "coffee",
+          "friends",
+          "life",
+          "relaxed",
+          "morning coffee",
+          "step",
+          "feels",
+          "sense",
+          "day",
+          "away",
+          "place"
+        ]
+      },
+      {
         "topic_id": 1,
-        "weight": 0.295036,
+        "weight": 0.247527,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -313,69 +332,50 @@
           "land",
           "development",
           "subject",
+          "sqm",
           "property",
           "existing",
           "housing",
-          "sqm",
           "mixed",
-          "council"
+          "value"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.252931,
-        "label": "Brick / tile / low-maintenance units",
+        "weight": 0.227714,
+        "label": "Parking, garden & section",
         "top_terms": [
-          "brick",
-          "single",
-          "unit",
-          "sunny",
-          "street",
-          "ready",
-          "maintenance",
-          "low",
-          "garden",
-          "renovated",
           "parking",
-          "low maintenance"
+          "street",
+          "brick",
+          "street parking",
+          "single",
+          "fully",
+          "college",
+          "garden",
+          "sunny",
+          "room",
+          "fenced",
+          "garage"
         ]
       },
       {
-        "topic_id": 0,
-        "weight": 0.202994,
+        "topic_id": 2,
+        "weight": 0.130617,
         "label": "Family living & entertaining",
         "top_terms": [
-          "friends",
-          "relaxed",
-          "room",
-          "setting",
+          "areas",
+          "living areas",
           "entertaining",
-          "life",
-          "children",
-          "summer",
+          "family living",
+          "multiple",
           "outdoor",
-          "peaceful",
-          "sense",
-          "spaces"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.079608,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "ensuite",
-          "wardrobe",
-          "walk wardrobe",
-          "bathroom",
-          "separate",
-          "lounge",
-          "suite",
-          "walk",
-          "upstairs",
-          "level",
-          "floor",
-          "master"
+          "flexibility",
+          "multiple living",
+          "indoor",
+          "indoor outdoor",
+          "setting",
+          "pool"
         ]
       }
     ]
@@ -465,7 +465,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "Offered for the first time in 32 years, this Mission Bay classic offers an extraordinary foundation for its next chapter.  Held and cherished by one family, it is not time for a new owner to bring their vision, modernise and add serious value in one of Auckland's most coveted coastal suburbs.\r\n\r\nThe perfect family layout designed with practical family living in mind, the home includes:\r\n\r\n*  Three generous bedrooms: Sun-lit, comfortable retreats for children, guests or a home office\r\n\r\n*  1.5 bathrooms: a main family bathroom plus a dedicated guest powder room.\r\n\r\n*  Exceptional Parking: A secure double garage paired with 3 additional off-street parks - ideal for a boat, camper or extra family vehicles.\r\n\r\nSun drenched outdoor living positioned to maximise natural light, the property boasts beautifully sunny outdoor living spaces. Imagine summer BBQs on the deck, children playing safely in the yard, or simply enjoying your morning coffee in a peaceful, private setting. \"Room for a pool, subject to Council Consent\"\r\n\r\nRenovate and reap the rewards. While comfortable as is, the home presents a fantastic canvas for renovators, investors, or families looking to stamp their own style. Bring your mood boards, unleash your design flair, and transform this classic into your dream family home.\r\n\r\nA location second to none - nestled in a highly desirable, family friendly pocket of Mission Bay, the lifestyle on offer here is unmatched:\r\n\r\n*  Moments from the vibrant Mission Bay waterfront, cafes, and restaurants.\r\n\r\n*  Easy access to the beach for morning walks and summer swims.\r\n\r\n*  Zoned for excellent local schools and an easy commute to the CBD.\r\n\r\nOpportunities like this where location, structure, and potential align so well are incredibly rare. Don't wait another 32 years.\r\n\r\nContact Deb today to arrange a viewing and secure your future in Mission Bay.",
   "photos": [
@@ -679,7 +679,21 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1450000,
-      "estimate_mid": 1580000
+      "estimate_mid": 1200000
+    },
+    {
+      "property_id": "dedbd2c6-879a-4352-9cea-4918e6713889",
+      "address": "128A Kohimarama Road, Kohimarama, Auckland",
+      "sale_price": 1605000,
+      "sale_date": "2026-08-09T00:00:00+00:00",
+      "distance_km": 0.28,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1925000,
+      "estimate_mid": 1730000
     },
     {
       "property_id": "bdd62e3e-85f7-4620-b165-8b09f854bf3d",
@@ -693,7 +707,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1275000,
-      "estimate_mid": 1200000
+      "estimate_mid": 1170000
     },
     {
       "property_id": "3a05a62c-ee59-403a-b3ff-c63e449b4884",
@@ -724,20 +738,6 @@
       "estimate_mid": 4430000
     },
     {
-      "property_id": "3d67d898-1ce1-498d-a119-5da23450a8de",
-      "address": "1/68 Atkin Avenue, Mission Bay, Auckland",
-      "sale_price": 930000,
-      "sale_date": "2026-07-21T00:00:00+00:00",
-      "distance_km": 0.45,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1175000,
-      "estimate_mid": 950000
-    },
-    {
       "property_id": "2cd90b4d-5f99-4e83-8b1e-5f81e59d36f7",
       "address": "61A Atkin Avenue, Mission Bay, Auckland",
       "sale_price": 1825000,
@@ -750,20 +750,6 @@
       "property_type": null,
       "cv": 2350000,
       "estimate_mid": 1880000
-    },
-    {
-      "property_id": "6db4c5ec-496d-4c2d-bb7d-a3a9cbc35899",
-      "address": "19B Hawera Road, Kohimarama, Auckland",
-      "sale_price": 2580000,
-      "sale_date": "2026-07-21T00:00:00+00:00",
-      "distance_km": 0.56,
-      "bedrooms": 4,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 3075000,
-      "estimate_mid": 2580000
     },
     {
       "property_id": "aa1e8f11-d420-47a5-8843-424ddaedf4fd",
@@ -799,7 +785,7 @@
       "sale_price": 2050000,
       "sale_date": "2026-07-27T00:00:00+00:00",
       "distance_km": 0.69,
-      "bedrooms": null,
+      "bedrooms": 3,
       "bathrooms": null,
       "land_area": null,
       "floor_area": null,
@@ -822,6 +808,20 @@
       "estimate_mid": 645000
     },
     {
+      "property_id": "7163db6f-8fc3-44ce-a821-52081bbc9d2d",
+      "address": "4/19 Thatcher Street, Mission Bay, Auckland",
+      "sale_price": 640000,
+      "sale_date": "2026-08-28T00:00:00+00:00",
+      "distance_km": 0.81,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 620000,
+      "estimate_mid": 615000
+    },
+    {
       "property_id": "430df567-dece-42cb-af00-0c85d3290600",
       "address": "14A Godden Crescent, Orakei, Auckland",
       "sale_price": 1275000,
@@ -833,7 +833,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1250000,
-      "estimate_mid": 1260000
+      "estimate_mid": 1170000
     }
   ],
   "valuation": {
@@ -855,22 +855,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.15M – $1.39M",
-        "low": 1154276,
-        "mid": 1299213,
-        "high": 1386957,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "range": "$1.17M – $1.40M",
+        "low": 1167453,
+        "mid": 1328302,
+        "high": 1402500,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "high",
-        "n": 71,
+        "n": 73,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 71,
-          "n_eff": 13.03,
+          "n": 73,
+          "n_eff": 13.7,
           "radius_km": 3.0,
-          "median_ratio": 0.9449,
-          "iqr_ratio": 0.1791,
-          "same_suburb": 14,
+          "median_ratio": 0.966,
+          "iqr_ratio": 0.177,
+          "same_suburb": 15,
           "model_version": "comp-cv-v1"
         }
       },

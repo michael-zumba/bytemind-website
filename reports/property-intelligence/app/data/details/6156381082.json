@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-09-30T02:52:26.450000+00:00",
-  "days_on_market": 28,
+  "days_on_market": 29,
   "lat": -36.8633187,
   "lon": 174.8335116,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2332291107.jpg",
@@ -30,13 +30,13 @@
   "estimate_source": null,
   "estimate_updated_at": null,
   "comp_low": 1208000,
-  "comp_mid": 1780000,
-  "comp_high": 2580000,
+  "comp_mid": 1740000,
+  "comp_high": 2500000,
   "comp_confidence": "low",
-  "comp_n": 64,
+  "comp_n": 67,
   "value_low": 1208000,
-  "value_mid": 1780000,
-  "value_high": 2580000,
+  "value_mid": 1740000,
+  "value_high": 2500000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 764,
+  "view_count": 771,
   "watchers": 21,
   "is_standard": 1,
   "standard_reason": null,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 34.7,
+  "sale_pressure": 34.8,
   "sale_pressure_label": "low",
-  "model_low": 1156975,
-  "model_mid": 1657932,
-  "model_high": 2337607,
+  "model_low": 1128796,
+  "model_mid": 1607417,
+  "model_high": 2285813,
   "model_confidence": "low",
-  "text_signal_pct": -15.7541,
-  "description_index": -0.776922,
+  "text_signal_pct": -24.916,
+  "description_index": -1.216293,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6156381082,
-    "low": 1156975,
-    "mid": 1657932,
-    "high": 2337607,
+    "low": 1128796,
+    "mid": 1607417,
+    "high": 2285813,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3535, 0.3521], \"rel_width\": 0.7198, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6156381082,
@@ -300,78 +300,59 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.4094,
-    "views_waterfront": 0.2856,
+    "condition_renovation": 0.409,
+    "views_waterfront": 0.285,
     "family_school": 0.3356,
-    "investment": 0.2991,
+    "investment": 0.2992,
     "risk": 0.0,
     "readability": 0.3186,
-    "description_premium_pct": -15.7541,
-    "description_index": -0.776922,
+    "description_premium_pct": -24.916,
+    "description_index": -1.216293,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 1, \"family_school\": 2, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
-        "topic_id": 2,
-        "weight": 0.345983,
+        "topic_id": 10,
+        "weight": 0.468513,
         "label": "New build / brand-new quality",
         "top_terms": [
+          "brand new",
+          "brand",
+          "new",
           "modern",
           "quality",
-          "brand",
-          "brand new",
-          "new",
-          "comfort",
-          "stylish",
-          "convenience",
-          "outdoor flow",
-          "light filled",
-          "contemporary",
-          "internal access"
+          "lot",
+          "standalone",
+          "bedrooms bathrooms",
+          "homes",
+          "maintenance",
+          "floor area",
+          "sqm floor"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.340787,
-        "label": "Brick / tile / low-maintenance units",
+        "weight": 0.166036,
+        "label": "Parking, garden & section",
         "top_terms": [
-          "brick",
-          "single",
-          "unit",
-          "sunny",
-          "street",
-          "ready",
-          "maintenance",
-          "low",
-          "garden",
-          "renovated",
           "parking",
-          "low maintenance"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.173103,
-        "label": "Development & land potential II",
-        "top_terms": [
-          "lot",
-          "sqm",
-          "floor area",
-          "sqm floor",
-          "area sqm",
-          "floor",
-          "bedrooms bathrooms",
-          "sqm land",
-          "land",
-          "homes",
-          "brand new",
-          "brand"
+          "street",
+          "brick",
+          "street parking",
+          "single",
+          "fully",
+          "college",
+          "garden",
+          "sunny",
+          "room",
+          "fenced",
+          "garage"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.114789,
+        "weight": 0.136021,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -380,12 +361,31 @@
           "land",
           "development",
           "subject",
+          "sqm",
           "property",
           "existing",
           "housing",
-          "sqm",
           "mixed",
-          "council"
+          "value"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.11967,
+        "label": "Family living & entertaining II",
+        "top_terms": [
+          "morning",
+          "coffee",
+          "friends",
+          "life",
+          "relaxed",
+          "morning coffee",
+          "step",
+          "feels",
+          "sense",
+          "day",
+          "away",
+          "place"
         ]
       }
     ]
@@ -426,7 +426,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "Set in a quiet cul-de-sac in sought-after Mission Bay, this established development offers just two remaining homes, each with its own distinct appeal.\r\n\r\nFreestanding Residence\r\nA private standalone home offering comfortable modern living, ideal for families, downsizers or those seeking a low-maintenance lifestyle close to Mission Bay's beaches, cafés and amenities.\r\n\r\nThree-Storey Terrace - Tandem Parking\r\nA well-designed three-level terrace offering generous living across multiple floors, complemented by convenient tandem parking. Perfect for those wanting modern, easy-care living in a highly desirable coastal location.\r\n\r\nOnly 2 units remain - connate Annie today to secure your preferred home today.",
   "photos": [
@@ -462,18 +462,18 @@
       "estimate_mid": 1820000
     },
     {
-      "property_id": "2c9177a6-2f17-4247-9717-706631d43f3a",
-      "address": "267 Kepa Road, Mission Bay, Auckland",
-      "sale_price": 1280000,
-      "sale_date": "2026-07-15T00:00:00+00:00",
-      "distance_km": 0.3,
-      "bedrooms": 4,
-      "bathrooms": 2,
+      "property_id": "7163db6f-8fc3-44ce-a821-52081bbc9d2d",
+      "address": "4/19 Thatcher Street, Mission Bay, Auckland",
+      "sale_price": 640000,
+      "sale_date": "2026-08-28T00:00:00+00:00",
+      "distance_km": 0.14,
+      "bedrooms": 2,
+      "bathrooms": 1,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1325000,
-      "estimate_mid": 1290000
+      "cv": 620000,
+      "estimate_mid": 615000
     },
     {
       "property_id": "73ef5da0-7c03-4e19-857b-53984bc54046",
@@ -529,7 +529,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1250000,
-      "estimate_mid": 1260000
+      "estimate_mid": 1170000
     },
     {
       "property_id": "6db4c5ec-496d-4c2d-bb7d-a3a9cbc35899",
@@ -544,6 +544,20 @@
       "property_type": null,
       "cv": 3075000,
       "estimate_mid": 2580000
+    },
+    {
+      "property_id": "342452bd-d87f-49d4-88bc-bb30a3f3cc9a",
+      "address": "4A Godden Crescent, Orakei, Auckland",
+      "sale_price": 1300000,
+      "sale_date": "2026-09-02T00:00:00+00:00",
+      "distance_km": 0.77,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1275000,
+      "estimate_mid": 1310000
     },
     {
       "property_id": "aa1e8f11-d420-47a5-8843-424ddaedf4fd",
@@ -585,61 +599,47 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1450000,
-      "estimate_mid": 1580000
+      "estimate_mid": 1200000
     },
     {
-      "property_id": "9642cef8-c396-46d6-8846-149352278de3",
-      "address": "61A Kurahaupo Street, Orakei, Auckland",
-      "sale_price": 2235000,
-      "sale_date": "2026-07-15T00:00:00+00:00",
-      "distance_km": 0.97,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2425000,
-      "estimate_mid": 2290000
-    },
-    {
-      "property_id": "5e5196c8-7298-4029-9050-ec86fe21ab38",
-      "address": "93 Allum Street, Kohimarama, Auckland",
-      "sale_price": 2500000,
-      "sale_date": "2026-07-19T00:00:00+00:00",
-      "distance_km": 0.98,
+      "property_id": "dedbd2c6-879a-4352-9cea-4918e6713889",
+      "address": "128A Kohimarama Road, Kohimarama, Auckland",
+      "sale_price": 1605000,
+      "sale_date": "2026-08-09T00:00:00+00:00",
+      "distance_km": 0.88,
       "bedrooms": 4,
       "bathrooms": 2,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 2550000,
-      "estimate_mid": 2520000
+      "cv": 1925000,
+      "estimate_mid": 1730000
     }
   ],
   "valuation": {
     "value_low": 1208000,
-    "value_mid": 1780000,
-    "value_high": 2580000,
+    "value_mid": 1740000,
+    "value_high": 2500000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.21M – $2.58M",
+        "range": "$1.21M – $2.50M",
         "low": 1208000,
-        "mid": 1780000,
-        "high": 2580000,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "mid": 1740000,
+        "high": 2500000,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "low",
-        "n": 64,
+        "n": 67,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 64,
-          "n_eff": 20.55,
+          "n": 67,
+          "n_eff": 22.55,
           "radius_km": 3.0,
-          "iqr_ratio": 0.7708,
-          "same_suburb": 13,
+          "iqr_ratio": 0.7425,
+          "same_suburb": 14,
           "model_version": "comp-cv-v1"
         }
       }

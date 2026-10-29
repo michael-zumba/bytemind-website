@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-08-11T21:11:40.940000+00:00",
-  "days_on_market": 77,
+  "days_on_market": 78,
   "lat": -36.7562828,
   "lon": 174.75737,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2322950763.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 2831805,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 2734146,
-  "comp_mid": 2975652,
-  "comp_high": 3226170,
+  "comp_low": 2717576,
+  "comp_mid": 2950000,
+  "comp_high": 3266852,
   "comp_confidence": "high",
-  "comp_n": 62,
+  "comp_n": 66,
   "value_low": 2519515,
   "value_mid": 2675660,
   "value_high": 2831805,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 5634,
+  "view_count": 5664,
   "watchers": 100,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T14:39:31.564034+00:00",
-  "days_since_last_change": 0.17,
+  "days_since_last_change": 1.26,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 7,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 42.8,
+  "sale_pressure": 43.0,
   "sale_pressure_label": "medium",
-  "model_low": 2625579,
-  "model_mid": 2902439,
-  "model_high": 3194665,
+  "model_low": 2643326,
+  "model_mid": 2907650,
+  "model_high": 3197467,
   "model_confidence": "high",
-  "text_signal_pct": 9.6102,
-  "description_index": 0.415856,
+  "text_signal_pct": 9.9497,
+  "description_index": 0.402596,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -318,33 +318,71 @@
   ],
   "model": {
     "listing_id": 6078867587,
-    "low": 2625579,
-    "mid": 2902439,
-    "high": 3194665,
+    "low": 2643326,
+    "mid": 2907650,
+    "high": 3197467,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1003, 0.0959], \"rel_width\": 0.1961, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6078867587,
     "word_count": 308,
     "exclamations": 0,
-    "urgency": 0.2392,
-    "luxury": 0.7597,
+    "urgency": 0.2396,
+    "luxury": 0.7708,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.7565,
+    "views_waterfront": 0.7552,
     "family_school": 0.7223,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.2312,
-    "description_premium_pct": 9.6102,
-    "description_index": 0.415856,
+    "description_premium_pct": 9.9497,
+    "description_index": 0.402596,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 9, \"condition_renovation\": 0, \"views_waterfront\": 8, \"family_school\": 13, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
+        "topic_id": 2,
+        "weight": 0.25958,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "areas",
+          "living areas",
+          "entertaining",
+          "family living",
+          "multiple",
+          "outdoor",
+          "flexibility",
+          "multiple living",
+          "indoor",
+          "indoor outdoor",
+          "setting",
+          "pool"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.256339,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "sea views",
+          "views",
+          "elevated",
+          "rangitoto",
+          "rangitoto college",
+          "gulf",
+          "hauraki gulf",
+          "hauraki",
+          "spectacular",
+          "panoramic",
+          "living areas"
+        ]
+      },
+      {
         "topic_id": 5,
-        "weight": 0.257101,
+        "weight": 0.250124,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -355,67 +393,29 @@
           "westlake girls",
           "boys",
           "westlake boys",
-          "normal",
+          "intermediate",
           "suburb normal",
-          "normal intermediate",
-          "intermediate"
+          "normal",
+          "normal intermediate"
         ]
       },
       {
-        "topic_id": 8,
-        "weight": 0.244541,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "sea",
-          "sea views",
-          "views",
-          "rangitoto",
-          "elevated",
-          "rangitoto college",
-          "living areas",
-          "areas",
-          "gulf",
-          "college",
-          "family home",
-          "intermediate"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.170845,
+        "topic_id": 0,
+        "weight": 0.114112,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
-          "ensuite",
           "wardrobe",
+          "ensuite",
           "walk wardrobe",
           "bathroom",
-          "separate",
-          "lounge",
           "suite",
-          "walk",
-          "upstairs",
+          "lounge",
+          "master",
           "level",
-          "floor",
-          "master"
-        ]
-      },
-      {
-        "topic_id": 11,
-        "weight": 0.142029,
-        "label": "Resort amenities (pool / tennis / spa)",
-        "top_terms": [
-          "harbour",
-          "views",
-          "residence",
-          "scale",
-          "waterfront",
-          "pool",
-          "expansive",
-          "aucklands",
-          "gulf",
-          "city",
-          "architectural",
-          "position"
+          "separate",
+          "master suite",
+          "upstairs",
+          "walk"
         ]
       }
     ]
@@ -521,7 +521,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "Positioned in one of Campbell’s Bay’s most sought-after streets, 45 Aberdeen Road is an exceptional high-end residence offering an enviable combination of space, sophistication, spectacular sea views and a premium family lifestyle.\r\n\r\nFrom its elevated position, the home captures an incredible outlook across the Hauraki Gulf, providing a stunning backdrop to everyday living and entertaining.\r\n\r\nThoughtfully designed for modern family living, this substantial residence features four generous bedrooms, 3.5 bathrooms including two ensuites, a dedicated study, and two spacious living areas spread across two levels.\r\n\r\nThe generously proportioned master suite is a true private retreat, complete with a spacious walk-in wardrobe and a large private balcony. Step outside to enjoy an even more spectacular outlook across the Hauraki Gulf — the perfect setting to enjoy your morning coffee or unwind at the end of the day.\r\n\r\nAt the heart of the home is a spacious, sophisticated kitchen, thoughtfully designed for both everyday family living and effortless entertaining, with excellent space and a seamless connection to the living and entertaining areas.\r\n\r\nA well-appointed kitchenette adds another layer of flexibility, making the lower level ideal for teenagers, extended family or guests seeking additional independence. A separate laundry, ample storage and a double internal-access garage further enhance the home’s functionality.\r\n\r\nThe location is equally impressive. Campbells Bay School is within walking distance, while the property is zoned for Murrays Bay Intermediate, Westlake Boys’ High School and Westlake Girls’ High School — a highly desirable combination for families.\r\n\r\nSet within a peaceful and prestigious street, this is a home that delivers not only exceptional space and quality, but also the lifestyle that comes with living in one of the North Shore’s most sought-after coastal neighbourhoods.\r\n\r\nA spectacular sea-view home, premium school zones and sophisticated family living — 45 Aberdeen Road is an opportunity not to be missed.",
   "photos": [
@@ -770,34 +770,6 @@
       "estimate_mid": 775000
     },
     {
-      "property_id": "c3630f4f-e9c0-4ea0-9bc1-96d149f2416e",
-      "address": "34B William Souter Street, Forrest Hill, Auckland",
-      "sale_price": 1460000,
-      "sale_date": "2026-08-07T00:00:00+00:00",
-      "distance_km": 0.74,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1400000,
-      "estimate_mid": 1460000
-    },
-    {
-      "property_id": "39a7ca80-1a92-4f06-9c22-b81b749feb16",
-      "address": "1/98 Park Rise, Campbells Bay, Auckland",
-      "sale_price": 1495000,
-      "sale_date": "2026-08-13T00:00:00+00:00",
-      "distance_km": 0.76,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1350000,
-      "estimate_mid": 1490000
-    },
-    {
       "property_id": "050bd531-cdd2-4437-a3b8-939fffb4ac46",
       "address": "14B Cloverly Crescent, Campbells Bay, Auckland",
       "sale_price": 1320000,
@@ -809,7 +781,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1500000,
-      "estimate_mid": 1410000
+      "estimate_mid": 1320000
     },
     {
       "property_id": "1ac6a1ba-79f5-48b1-bc19-7bb1f75d3330",
@@ -868,20 +840,6 @@
       "estimate_mid": 955000
     },
     {
-      "property_id": "7f813c93-d2ef-463f-8ef3-2a77bcd1d47d",
-      "address": "1A Prestige Place, Castor Bay, Auckland",
-      "sale_price": 2150000,
-      "sale_date": "2026-08-11T00:00:00+00:00",
-      "distance_km": 1.27,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2350000,
-      "estimate_mid": 1930000
-    },
-    {
       "property_id": "1406ec74-6a8a-4e33-b8d8-7a42098e6e4d",
       "address": "4A View Road, Campbells Bay, Auckland",
       "sale_price": 1750000,
@@ -894,6 +852,48 @@
       "property_type": null,
       "cv": 2425000,
       "estimate_mid": 2360000
+    },
+    {
+      "property_id": "4543af0a-f427-4acb-a52a-252e0f250a39",
+      "address": "62A Matipo Road, Mairangi Bay, Auckland",
+      "sale_price": 988888,
+      "sale_date": "2026-09-08T00:00:00+00:00",
+      "distance_km": 1.33,
+      "bedrooms": 3,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1200000,
+      "estimate_mid": 1490000
+    },
+    {
+      "property_id": "1fb79496-a64b-4d05-bc9a-c128be91b54e",
+      "address": "6C Seaview Road, Milford, Auckland",
+      "sale_price": 2041888,
+      "sale_date": "2026-08-28T00:00:00+00:00",
+      "distance_km": 1.35,
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 2075000,
+      "estimate_mid": 2070000
+    },
+    {
+      "property_id": "1cbe906a-52d9-44a6-b906-d0533aa41a33",
+      "address": "47 Newhaven Terrace, Mairangi Bay, Auckland",
+      "sale_price": 1285000,
+      "sale_date": "2026-08-20T00:00:00+00:00",
+      "distance_km": 1.56,
+      "bedrooms": 3,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1175000,
+      "estimate_mid": 1290000
     }
   ],
   "valuation": {
@@ -915,21 +915,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$2.73M – $3.23M",
-        "low": 2734146,
-        "mid": 2975652,
-        "high": 3226170,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "range": "$2.72M – $3.27M",
+        "low": 2717576,
+        "mid": 2950000,
+        "high": 3266852,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "high",
-        "n": 62,
+        "n": 66,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 62,
-          "n_eff": 10.89,
+          "n": 66,
+          "n_eff": 11.06,
           "radius_km": 3.0,
-          "median_ratio": 1.0087,
-          "iqr_ratio": 0.1653,
+          "median_ratio": 1.0,
+          "iqr_ratio": 0.1862,
           "same_suburb": 10,
           "model_version": "comp-cv-v1"
         }

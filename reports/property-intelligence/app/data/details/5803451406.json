@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-02-26T00:17:15.183000+00:00",
-  "days_on_market": 244,
+  "days_on_market": 245,
   "lat": -36.7166426,
   "lon": 174.7426441,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2290296296.jpg",
@@ -31,12 +31,12 @@
   "estimate_updated_at": null,
   "comp_low": 764000,
   "comp_mid": 959500,
-  "comp_high": 1250000,
+  "comp_high": 1235000,
   "comp_confidence": "low",
-  "comp_n": 52,
+  "comp_n": 53,
   "value_low": 764000,
   "value_mid": 959500,
-  "value_high": 1250000,
+  "value_high": 1235000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 10118,
-  "watchers": 262,
+  "view_count": 10160,
+  "watchers": 261,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 381714,
-  "model_mid": 546991,
-  "model_high": 771232,
+  "model_low": 381109,
+  "model_mid": 542703,
+  "model_high": 771746,
   "model_confidence": "low",
-  "text_signal_pct": -3.8912,
-  "description_index": -0.179873,
+  "text_signal_pct": -3.2388,
+  "description_index": -0.139744,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 5803451406,
-    "low": 381714,
-    "mid": 546991,
-    "high": 771232,
+    "low": 381109,
+    "mid": 542703,
+    "high": 771746,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3535, 0.3521], \"rel_width\": 0.7198, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5803451406,
@@ -293,56 +293,37 @@
     "condition_renovation": 1.0,
     "views_waterfront": 0.0,
     "family_school": 0.6112,
-    "investment": 0.3632,
+    "investment": 0.3633,
     "risk": 0.0,
     "readability": 0.6442,
-    "description_premium_pct": -3.8912,
-    "description_index": -0.179873,
+    "description_premium_pct": -3.2388,
+    "description_index": -0.139744,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 4, \"views_waterfront\": 0, \"family_school\": 3, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
         "topic_id": 7,
-        "weight": 0.793613,
-        "label": "Brick / tile / low-maintenance units",
+        "weight": 0.601038,
+        "label": "Parking, garden & section",
         "top_terms": [
-          "brick",
-          "single",
-          "unit",
-          "sunny",
-          "street",
-          "ready",
-          "maintenance",
-          "low",
-          "garden",
-          "renovated",
           "parking",
-          "low maintenance"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.085615,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "modern",
-          "quality",
-          "brand",
-          "brand new",
-          "new",
-          "comfort",
-          "stylish",
-          "convenience",
-          "outdoor flow",
-          "light filled",
-          "contemporary",
-          "internal access"
+          "street",
+          "brick",
+          "street parking",
+          "single",
+          "fully",
+          "college",
+          "garden",
+          "sunny",
+          "room",
+          "fenced",
+          "garage"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.066012,
+        "weight": 0.256835,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -351,31 +332,50 @@
           "lock leave",
           "car",
           "bedroom apartment",
-          "restaurants",
-          "complex",
-          "car park",
           "bedroom",
+          "restaurants",
+          "car park",
+          "complex",
           "balcony",
-          "residents"
+          "car parks"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.094768,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand new",
+          "brand",
+          "new",
+          "modern",
+          "quality",
+          "lot",
+          "standalone",
+          "bedrooms bathrooms",
+          "homes",
+          "maintenance",
+          "floor area",
+          "sqm floor"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.029151,
+        "weight": 0.042757,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
-          "regional",
           "regional park",
+          "regional",
           "village",
           "walking",
-          "suburb village",
-          "suburb regional",
           "suburb college",
-          "centre",
-          "community",
+          "suburb village",
+          "college",
           "distance",
-          "walking distance"
+          "walking distance",
+          "suburb regional",
+          "centre"
         ]
       }
     ]
@@ -416,7 +416,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "Just moments from the shore, 4/760 Beach Road is a solid brick-and-tile unit offering easy, low-maintenance living in a sought-after seaside location.\r\n\r\nEnjoy a short stroll to Browns Bay Beach and the vibrant village with cafes, shops, and local amenities. Close to public transport and in excellent school zones.\r\nPerfect for first-home buyers, downsizers, or investors.\r\nAffordable. Solid. Coastal.\r\n\r\nFeatures:\r\n*\tTwo light-filled bedrooms\r\n*\tOpen-plan living and dining\r\n*\tNew kitchen with good storage\r\n*\tRenovated bathroom + separate laundry\r\n*\tEasy-care section\r\n*\tSingle garage with off-street parking\r\n*\tTwo sheds\r\n\r\nALL AGENTS WELCOME. \r\n\r\nTo download the property files please visit:- https://www.harcourtsfiles.co.nz/listings/2MSM",
   "photos": [
@@ -546,20 +546,6 @@
       "estimate_mid": 1080000
     },
     {
-      "property_id": "90f787d3-5df0-461d-9d06-834cb4d85d35",
-      "address": "44A Hyde Road, Rothesay Bay, Auckland",
-      "sale_price": 1688888,
-      "sale_date": "2026-08-06T00:00:00+00:00",
-      "distance_km": 0.81,
-      "bedrooms": null,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1575000,
-      "estimate_mid": 1710000
-    },
-    {
       "property_id": "ed83b631-6e76-41df-af68-5b039c7414ef",
       "address": "1/4 Firth Road, Torbay, Auckland",
       "sale_price": 1000000,
@@ -614,32 +600,46 @@
       "property_type": null,
       "cv": 830000,
       "estimate_mid": 890000
+    },
+    {
+      "property_id": "a7346b7a-73f3-4af4-aa75-6de489a9e214",
+      "address": "2/105 Carlisle Road, Torbay, Auckland",
+      "sale_price": 900000,
+      "sale_date": "2026-08-25T00:00:00+00:00",
+      "distance_km": 0.99,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 890000,
+      "estimate_mid": 900000
     }
   ],
   "valuation": {
     "value_low": 764000,
     "value_mid": 959500,
-    "value_high": 1250000,
+    "value_high": 1235000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$764K – $1.25M",
+        "range": "$764K – $1.24M",
         "low": 764000,
         "mid": 959500,
-        "high": 1250000,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "high": 1235000,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "low",
-        "n": 52,
+        "n": 53,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 52,
-          "n_eff": 17.9,
+          "n": 53,
+          "n_eff": 17.96,
           "radius_km": 3.0,
-          "iqr_ratio": 0.5065,
-          "same_suburb": 16,
+          "iqr_ratio": 0.4909,
+          "same_suburb": 17,
           "model_version": "comp-cv-v1"
         }
       }

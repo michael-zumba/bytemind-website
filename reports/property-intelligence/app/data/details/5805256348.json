@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-02-27T00:35:39.603000+00:00",
-  "days_on_market": 243,
+  "days_on_market": 244,
   "lat": -36.7756193,
   "lon": 174.7583372,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2290528863.jpg",
@@ -29,14 +29,14 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1300000,
-  "comp_mid": 1580000,
-  "comp_high": 2041888,
+  "comp_low": 1270000,
+  "comp_mid": 1550000,
+  "comp_high": 1935000,
   "comp_confidence": "low",
-  "comp_n": 36,
-  "value_low": 1300000,
-  "value_mid": 1580000,
-  "value_high": 2041888,
+  "comp_n": 34,
+  "value_low": 1270000,
+  "value_mid": 1550000,
+  "value_high": 1935000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 7712,
+  "view_count": 7724,
   "watchers": 121,
   "is_standard": 1,
   "standard_reason": null,
@@ -76,12 +76,12 @@
   "sale_method_stage": 3,
   "sale_pressure": 60.0,
   "sale_pressure_label": "medium",
-  "model_low": 1269295,
-  "model_mid": 1818884,
-  "model_high": 2564543,
+  "model_low": 1264569,
+  "model_mid": 1800759,
+  "model_high": 2560754,
   "model_confidence": "low",
-  "text_signal_pct": -18.6429,
-  "description_index": -0.935049,
+  "text_signal_pct": -14.0067,
+  "description_index": -0.640488,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,33 +288,33 @@
   ],
   "model": {
     "listing_id": 5805256348,
-    "low": 1269295,
-    "mid": 1818884,
-    "high": 2564543,
+    "low": 1264569,
+    "mid": 1800759,
+    "high": 2560754,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3535, 0.3521], \"rel_width\": 0.7198, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5805256348,
     "word_count": 306,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.4248,
-    "condition_renovation": 0.4094,
-    "views_waterfront": 0.0952,
+    "luxury": 0.431,
+    "condition_renovation": 0.409,
+    "views_waterfront": 0.095,
     "family_school": 0.5033,
     "investment": 0.0997,
     "risk": 0.0,
     "readability": 0.3111,
-    "description_premium_pct": -18.6429,
-    "description_index": -0.935049,
+    "description_premium_pct": -14.0067,
+    "description_index": -0.640488,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 5, \"condition_renovation\": 3, \"views_waterfront\": 1, \"family_school\": 9, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
         "topic_id": 5,
-        "weight": 0.288226,
+        "weight": 0.293131,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -325,34 +325,15 @@
           "westlake girls",
           "boys",
           "westlake boys",
-          "normal",
+          "intermediate",
           "suburb normal",
-          "normal intermediate",
-          "intermediate"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.231668,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "modern",
-          "quality",
-          "brand",
-          "brand new",
-          "new",
-          "comfort",
-          "stylish",
-          "convenience",
-          "outdoor flow",
-          "light filled",
-          "contemporary",
-          "internal access"
+          "normal",
+          "normal intermediate"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.222517,
+        "weight": 0.238637,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
@@ -362,30 +343,49 @@
           "sophisticated",
           "finishes",
           "year",
-          "designer kitchen",
-          "residence",
           "design",
-          "integrated",
+          "residence",
+          "designer kitchen",
+          "refined",
           "lighting"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.121858,
+        "weight": 0.144732,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
-          "regional",
           "regional park",
+          "regional",
           "village",
           "walking",
-          "suburb village",
-          "suburb regional",
           "suburb college",
-          "centre",
-          "community",
+          "suburb village",
+          "college",
           "distance",
-          "walking distance"
+          "walking distance",
+          "suburb regional",
+          "centre"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.136123,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand new",
+          "brand",
+          "new",
+          "modern",
+          "quality",
+          "lot",
+          "standalone",
+          "bedrooms bathrooms",
+          "homes",
+          "maintenance",
+          "floor area",
+          "sqm floor"
         ]
       }
     ]
@@ -426,7 +426,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "Discover effortless luxury in this architecturally designed Milford home, where prime location, modern comfort, and everyday convenience come together.\r\n\r\nNestled in the heart of Milford, this residence offers unbeatable convenience, with supermarkets, cafés, medical centres, and local shops all within walking distance-perfect for daily errands and relaxed weekends. For families, the coveted Double Westlake High School Zone is a major advantage, complemented by several top-quality schools and childcare options nearby, helping secure your family's future.\r\n\r\nCommuting is effortless with easy motorway access, connecting you quickly to the CBD, Smales Farm, and North Shore Hospital.\r\n\r\nInside, the home features a spacious open-plan layout ideal for family living and entertaining. The ground floor includes a sleek modern kitchen, light-filled living and dining areas that flow seamlessly to a private deck, a smart home system, a full bathroom, internal-access garaging, and a versatile multi-purpose room that can be used as a study, additional lounge, or home gym.\r\n\r\nUpstairs, four generous bedrooms and two stylish bathrooms-including a master ensuite-provide ample space for the whole family. Complete with premium fittings, double glazing, and full insulation, this home is built for year-round comfort and peace of mind. It also comes with a Master Builder 10-Year Guarantee, offering long-term investment security.\r\n\r\nKey Features:\r\n\r\nWalking distance to supermarkets, cafés, medical centres, and local amenities\r\n\r\nDouble Westlake High School Zone; close to multiple top schools and childcare options\r\n\r\nEasy motorway access to the CBD, Smales Farm, and North Shore Hospital\r\n\r\nSmart home system with CCTV security\r\n\r\nBosch appliances, central air conditioning, and premium finishes\r\n\r\nClose to Milford Beach, Lake Pupuke, parks, and local attractions\r\n\r\nMaster Builder 10-Year Guarantee\r\n\r\nIdeal for professionals, families, or downsizers seeking low-maintenance luxury in one of Milford's most desirable locations, this property won't last long.\r\n\r\nSecure your dream home today.\r\n\r\nContact Joanna on 021 568 899 to arrange a viewing.",
   "photos": [
@@ -506,6 +506,20 @@
       "estimate_mid": 980000
     },
     {
+      "property_id": "1061e044-107f-4322-9f79-69c2e33225cb",
+      "address": "16D Dallinghoe Crescent, Milford, Auckland",
+      "sale_price": 670500,
+      "sale_date": "2026-09-08T00:00:00+00:00",
+      "distance_km": 0.39,
+      "bedrooms": 2,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1000000,
+      "estimate_mid": 765000
+    },
+    {
       "property_id": "194ffb63-0e32-4286-891a-173ab14bbb7b",
       "address": "16A Dallinghoe Crescent, Milford, Auckland",
       "sale_price": 480000,
@@ -531,7 +545,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1900000,
-      "estimate_mid": 1880000
+      "estimate_mid": 1950000
     },
     {
       "property_id": "d16763ff-a062-4cee-85df-1f4da35f8c2f",
@@ -545,7 +559,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1450000,
-      "estimate_mid": 1430000
+      "estimate_mid": 1300000
     },
     {
       "property_id": "17ca0ba8-dfa5-4c18-8801-6e84c4f63d0e",
@@ -616,46 +630,32 @@
       "property_type": null,
       "cv": 1025000,
       "estimate_mid": 955000
-    },
-    {
-      "property_id": "9a068c84-f88e-4412-be39-3aad286dd189",
-      "address": "1O/72 Kitchener Road, Milford, Auckland",
-      "sale_price": 590000,
-      "sale_date": "2026-08-28T00:00:00+00:00",
-      "distance_km": 1.11,
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 660000,
-      "estimate_mid": 595000
     }
   ],
   "valuation": {
-    "value_low": 1300000,
-    "value_mid": 1580000,
-    "value_high": 2041888,
+    "value_low": 1270000,
+    "value_mid": 1550000,
+    "value_high": 1935000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.30M – $2.04M",
-        "low": 1300000,
-        "mid": 1580000,
-        "high": 2041888,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "range": "$1.27M – $1.94M",
+        "low": 1270000,
+        "mid": 1550000,
+        "high": 1935000,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "low",
-        "n": 36,
+        "n": 34,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 36,
-          "n_eff": 9.15,
+          "n": 34,
+          "n_eff": 8.59,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4695,
-          "same_suburb": 7,
+          "iqr_ratio": 0.429,
+          "same_suburb": 5,
           "model_version": "comp-cv-v1"
         }
       }

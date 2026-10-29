@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2024-08-02T02:10:34.177000+00:00",
-  "days_on_market": 817,
+  "days_on_market": 818,
   "lat": -36.8166048,
   "lon": 174.7910264,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2137672075.jpg",
@@ -29,13 +29,13 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1050000,
-  "comp_mid": 1255000,
+  "comp_low": 1025000,
+  "comp_mid": 1230000,
   "comp_high": 1600000,
   "comp_confidence": "low",
-  "comp_n": 49,
-  "value_low": 1050000,
-  "value_mid": 1255000,
+  "comp_n": 41,
+  "value_low": 1025000,
+  "value_mid": 1230000,
   "value_high": 1600000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 6622,
+  "view_count": 6641,
   "watchers": 44,
   "is_standard": 1,
   "standard_reason": null,
@@ -76,12 +76,12 @@
   "sale_method_stage": 3,
   "sale_pressure": 60.0,
   "sale_pressure_label": "medium",
-  "model_low": 1140008,
-  "model_mid": 1633618,
-  "model_high": 2303326,
+  "model_low": 1200927,
+  "model_mid": 1710132,
+  "model_high": 2431878,
   "model_confidence": "low",
-  "text_signal_pct": -22.1984,
-  "description_index": -1.137567,
+  "text_signal_pct": -18.6679,
+  "description_index": -0.877023,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -308,11 +308,11 @@
   ],
   "model": {
     "listing_id": 4844663816,
-    "low": 1140008,
-    "mid": 1633618,
-    "high": 2303326,
+    "low": 1200927,
+    "mid": 1710132,
+    "high": 2431878,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3535, 0.3521], \"rel_width\": 0.7198, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 4844663816,
@@ -326,34 +326,15 @@
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.5486,
-    "description_premium_pct": -22.1984,
-    "description_index": -1.137567,
+    "description_premium_pct": -18.6679,
+    "description_index": -0.877023,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
-        "topic_id": 10,
-        "weight": 0.556751,
-        "label": "Development & land potential II",
-        "top_terms": [
-          "lot",
-          "sqm",
-          "floor area",
-          "sqm floor",
-          "area sqm",
-          "floor",
-          "bedrooms bathrooms",
-          "sqm land",
-          "land",
-          "homes",
-          "brand new",
-          "brand"
-        ]
-      },
-      {
         "topic_id": 1,
-        "weight": 0.212197,
+        "weight": 0.395951,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -362,17 +343,17 @@
           "land",
           "development",
           "subject",
+          "sqm",
           "property",
           "existing",
           "housing",
-          "sqm",
           "mixed",
-          "council"
+          "value"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.151363,
+        "weight": 0.236197,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -383,29 +364,48 @@
           "westlake girls",
           "boys",
           "westlake boys",
-          "normal",
+          "intermediate",
           "suburb normal",
-          "normal intermediate",
-          "intermediate"
+          "normal",
+          "normal intermediate"
         ]
       },
       {
-        "topic_id": 8,
-        "weight": 0.04252,
-        "label": "Sea views & coastal outlook",
+        "topic_id": 10,
+        "weight": 0.217037,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "sea",
-          "sea views",
-          "views",
-          "rangitoto",
-          "elevated",
-          "rangitoto college",
-          "living areas",
-          "areas",
-          "gulf",
+          "brand new",
+          "brand",
+          "new",
+          "modern",
+          "quality",
+          "lot",
+          "standalone",
+          "bedrooms bathrooms",
+          "homes",
+          "maintenance",
+          "floor area",
+          "sqm floor"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.071793,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "parking",
+          "street",
+          "brick",
+          "street parking",
+          "single",
+          "fully",
           "college",
-          "family home",
-          "intermediate"
+          "garden",
+          "sunny",
+          "room",
+          "fenced",
+          "garage"
         ]
       }
     ]
@@ -446,7 +446,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "Very rarely do two properties side by side become available. With a combined land holding of 1611m2 more or less and very good street frontage, there are lots of possibilities to explore.\r\nRC GRANTED \r\n\r\n20 Ngataringa Road\r\n3 bedrooms 3 Bathrooms, Land area 911 m2 more or less\r\n\r\n22 Ngataringa Road\r\n4 bedrooms 1 Bathrooms, Land area 700m2 more or less\r\n\r\n\r\nThese properties are situated in a quiet cul de sac and positioned very well for all day sun. \r\nEasy motorway access, close to shops , beach .\r\nZoned in Takapuna Grammar, Belmont School and Bayswater School and Belmont Intermediate.",
   "photos": [
@@ -568,7 +568,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1450000,
-      "estimate_mid": 1300000
+      "estimate_mid": 1350000
     },
     {
       "property_id": "16068427-2157-46fd-b592-b7a0c6581458",
@@ -599,20 +599,6 @@
       "estimate_mid": 775000
     },
     {
-      "property_id": "bff20e89-3752-483f-915a-2a0022f21936",
-      "address": "16C Egremont Street, Belmont, Auckland",
-      "sale_price": 1535000,
-      "sale_date": "2026-08-06T00:00:00+00:00",
-      "distance_km": 1.08,
-      "bedrooms": 5,
-      "bathrooms": 4,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1525000,
-      "estimate_mid": 1540000
-    },
-    {
       "property_id": "9cfbd1fb-9784-4f9f-adf4-770af3b7d2d4",
       "address": "18 Cautley Street, Stanley Point, Auckland",
       "sale_price": 1270000,
@@ -639,32 +625,46 @@
       "property_type": null,
       "cv": 610000,
       "estimate_mid": 510000
+    },
+    {
+      "property_id": "2acbaa4e-6f16-4fff-a076-e9b2a51928c2",
+      "address": "12 Wairoa Road, Narrow Neck, Auckland",
+      "sale_price": 1600000,
+      "sale_date": "2026-09-10T00:00:00+00:00",
+      "distance_km": 1.15,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 2050000,
+      "estimate_mid": 1630000
     }
   ],
   "valuation": {
-    "value_low": 1050000,
-    "value_mid": 1255000,
+    "value_low": 1025000,
+    "value_mid": 1230000,
     "value_high": 1600000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.05M – $1.60M",
-        "low": 1050000,
-        "mid": 1255000,
+        "range": "$1.02M – $1.60M",
+        "low": 1025000,
+        "mid": 1230000,
         "high": 1600000,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "low",
-        "n": 49,
+        "n": 41,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 49,
-          "n_eff": 16.32,
+          "n": 41,
+          "n_eff": 13.69,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4382,
-          "same_suburb": 28,
+          "iqr_ratio": 0.4675,
+          "same_suburb": 29,
           "model_version": "comp-cv-v1"
         }
       }

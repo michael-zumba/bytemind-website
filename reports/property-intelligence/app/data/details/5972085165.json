@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-06-05T12:03:06.143000+00:00",
-  "days_on_market": 145,
+  "days_on_market": 146,
   "lat": -36.7902542,
   "lon": 174.7632647,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2304251508.jpg",
@@ -30,12 +30,12 @@
   "estimate_source": null,
   "estimate_updated_at": null,
   "comp_low": 720000,
-  "comp_mid": 1000000,
+  "comp_mid": 980000,
   "comp_high": 1240000,
   "comp_confidence": "low",
-  "comp_n": 38,
+  "comp_n": 35,
   "value_low": 720000,
-  "value_mid": 1000000,
+  "value_mid": 980000,
   "value_high": 1240000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 5071,
+  "view_count": 5096,
   "watchers": 107,
   "is_standard": 1,
   "standard_reason": null,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 74.2,
+  "sale_pressure": 74.3,
   "sale_pressure_label": "high",
-  "model_low": 696004,
-  "model_mid": 997365,
-  "model_high": 1406239,
+  "model_low": 721493,
+  "model_mid": 1027413,
+  "model_high": 1461024,
   "model_confidence": "low",
-  "text_signal_pct": 4.215,
-  "description_index": 0.187109,
+  "text_signal_pct": 7.8045,
+  "description_index": 0.318966,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -278,52 +278,33 @@
   ],
   "model": {
     "listing_id": 5972085165,
-    "low": 696004,
-    "mid": 997365,
-    "high": 1406239,
+    "low": 721493,
+    "mid": 1027413,
+    "high": 1461024,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3535, 0.3521], \"rel_width\": 0.7198, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5972085165,
     "word_count": 260,
     "exclamations": 2,
     "urgency": 0.0,
-    "luxury": 0.2,
+    "luxury": 0.2029,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.112,
+    "views_waterfront": 0.1118,
     "family_school": 0.2633,
-    "investment": 0.1173,
+    "investment": 0.1174,
     "risk": 0.0,
     "readability": 0.5876,
-    "description_premium_pct": 4.215,
-    "description_index": 0.187109,
+    "description_premium_pct": 7.8045,
+    "description_index": 0.318966,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 0, \"views_waterfront\": 1, \"family_school\": 4, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
-        "topic_id": 7,
-        "weight": 0.38274,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "brick",
-          "single",
-          "unit",
-          "sunny",
-          "street",
-          "ready",
-          "maintenance",
-          "low",
-          "garden",
-          "renovated",
-          "parking",
-          "low maintenance"
-        ]
-      },
-      {
         "topic_id": 4,
-        "weight": 0.370494,
+        "weight": 0.422629,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -332,36 +313,55 @@
           "lock leave",
           "car",
           "bedroom apartment",
-          "restaurants",
-          "complex",
-          "car park",
           "bedroom",
+          "restaurants",
+          "car park",
+          "complex",
           "balcony",
-          "residents"
+          "car parks"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.284873,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "parking",
+          "street",
+          "brick",
+          "street parking",
+          "single",
+          "fully",
+          "college",
+          "garden",
+          "sunny",
+          "room",
+          "fenced",
+          "garage"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.12654,
+        "weight": 0.137464,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
-          "regional",
           "regional park",
+          "regional",
           "village",
           "walking",
-          "suburb village",
-          "suburb regional",
           "suburb college",
-          "centre",
-          "community",
+          "suburb village",
+          "college",
           "distance",
-          "walking distance"
+          "walking distance",
+          "suburb regional",
+          "centre"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.06936,
+        "weight": 0.095814,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -370,12 +370,12 @@
           "land",
           "development",
           "subject",
+          "sqm",
           "property",
           "existing",
           "housing",
-          "sqm",
           "mixed",
-          "council"
+          "value"
         ]
       }
     ]
@@ -416,7 +416,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "Bring me an offer! \r\n\r\nTake a chance here and you might just land an early Christmas present. \r\n\r\nLet’s cut straight to the chase: This is officially your lowest-priced entry point into a two room property in Takapuna. \r\n\r\nFurnished, vacant and ready for a new owner. \r\n\r\nLocated in the highly sought-after Shoalhaven complex at 130 Anzac Street, the instructions here are absolute, this apartment will be sold. The vendor is moving on, creating an unprecedented opportunity for first-home buyers, downsizers, or savvy investors to steal the deal of the year.\r\n\r\nWhy this is the best buy on the Shore:\r\n\r\nUnbeatable Affordability: You will not find a cheaper 2 room option in the suburb.\r\n\r\nResort-Style Living: You get exclusive access to a swimming pool, a fully equipped fitness center, and a relaxed, community-first vibe that feels like a permanent vacation.\r\n\r\nPrime Location: Just a short, flat stroll into the vibrant heart of Takapuna’s shops, cafes, and beach, plus you're fully zoned for top-tier local schools.\r\n\r\nStress-Free Parking: Tons of visitor parking makes hosting friends and family an absolute breeze.\r\n\r\nYou don’t need a millionaire’s budget to secure a piece of Takapuna real estate, but you do need to act fast.\r\n\r\nGet in touch today to secure your viewing before it’s gone!\r\n\r\nNote: The photos used are of a similar unit in the same complex; however, please note that the furniture, outlook, and finishes may vary. For more specific details, please refer to the chattels list.\r\n\r\nWhile some tenants and owners may use the flexi room as a bedroom, it is not legally consented to be one.",
   "photos": [
@@ -558,6 +558,20 @@
       "estimate_mid": 1090000
     },
     {
+      "property_id": "4aad3cc9-662a-4b76-a11e-dea29946e829",
+      "address": "4E/175 Hurstmere Road, Takapuna, Auckland",
+      "sale_price": 1390000,
+      "sale_date": "2026-07-22T00:00:00+00:00",
+      "distance_km": 1.16,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1600000,
+      "estimate_mid": 1400000
+    },
+    {
       "property_id": "37b2f294-53fa-45d0-ba7c-5bffc869ad98",
       "address": "1/2 Hauraki Road, Hauraki, Auckland",
       "sale_price": 2500000,
@@ -597,26 +611,12 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1900000,
-      "estimate_mid": 1880000
-    },
-    {
-      "property_id": "f6b2966d-3dcf-445c-9d7d-5310d21a62ad",
-      "address": "2/70 Nile Road, Milford, Auckland",
-      "sale_price": 750000,
-      "sale_date": "2026-08-31T00:00:00+00:00",
-      "distance_km": 1.75,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 750000,
-      "estimate_mid": 805000
+      "estimate_mid": 1950000
     }
   ],
   "valuation": {
     "value_low": 720000,
-    "value_mid": 1000000,
+    "value_mid": 980000,
     "value_high": 1240000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
@@ -625,19 +625,19 @@
         "name": "Nearby sold comparables",
         "range": "$720K – $1.24M",
         "low": 720000,
-        "mid": 1000000,
+        "mid": 980000,
         "high": 1240000,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "low",
-        "n": 38,
+        "n": 35,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 38,
-          "n_eff": 12.32,
+          "n": 35,
+          "n_eff": 12.03,
           "radius_km": 3.0,
-          "iqr_ratio": 0.52,
-          "same_suburb": 27,
+          "iqr_ratio": 0.5306,
+          "same_suburb": 22,
           "model_version": "comp-cv-v1"
         }
       }

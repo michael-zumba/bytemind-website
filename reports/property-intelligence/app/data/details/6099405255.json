@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-08-24T21:25:39.600000+00:00",
-  "days_on_market": 64,
+  "days_on_market": 65,
   "lat": -36.864053,
   "lon": 174.8509651,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2325185193.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 7355132,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 4798768,
-  "comp_mid": 5287105,
-  "comp_high": 5631142,
+  "comp_low": 4933333,
+  "comp_mid": 5348182,
+  "comp_high": 5683735,
   "comp_confidence": "high",
-  "comp_n": 76,
+  "comp_n": 78,
   "value_low": 6544012,
   "value_mid": 6949572,
   "value_high": 7355132,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 9439,
+  "view_count": 9604,
   "watchers": 200,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:27:55.344500+00:00",
-  "days_since_last_change": 0.14,
+  "days_since_last_change": 1.22,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 40.7,
+  "sale_pressure": 40.8,
   "sale_pressure_label": "medium",
-  "model_low": 5399550,
-  "model_mid": 5968919,
-  "model_high": 6569886,
+  "model_low": 5416635,
+  "model_mid": 5958282,
+  "model_high": 6552167,
   "model_confidence": "high",
-  "text_signal_pct": 25.4618,
-  "description_index": 1.027996,
+  "text_signal_pct": 26.318,
+  "description_index": 0.991636,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -268,71 +268,90 @@
   ],
   "model": {
     "listing_id": 6099405255,
-    "low": 5399550,
-    "mid": 5968919,
-    "high": 6569886,
+    "low": 5416635,
+    "mid": 5958282,
+    "high": 6552167,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1003, 0.0959], \"rel_width\": 0.1961, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6099405255,
     "word_count": 301,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.6047,
+    "luxury": 0.6135,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.2903,
+    "views_waterfront": 0.2898,
     "family_school": 0.3411,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.2472,
-    "description_premium_pct": 25.4618,
-    "description_index": 1.027996,
+    "description_premium_pct": 26.318,
+    "description_index": 0.991636,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 7, \"condition_renovation\": 0, \"views_waterfront\": 3, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
-        "topic_id": 6,
-        "weight": 0.463285,
+        "topic_id": 0,
+        "weight": 0.330074,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
-          "ensuite",
           "wardrobe",
+          "ensuite",
           "walk wardrobe",
           "bathroom",
-          "separate",
-          "lounge",
           "suite",
-          "walk",
-          "upstairs",
+          "lounge",
+          "master",
           "level",
-          "floor",
-          "master"
+          "separate",
+          "master suite",
+          "upstairs",
+          "walk"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.339849,
+        "weight": 0.302645,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "harbour",
           "views",
           "residence",
-          "scale",
           "waterfront",
-          "pool",
-          "expansive",
+          "scale",
+          "city",
           "aucklands",
           "gulf",
-          "city",
-          "architectural",
-          "position"
+          "pool",
+          "expansive",
+          "extraordinary",
+          "island"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.210276,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "areas",
+          "living areas",
+          "entertaining",
+          "family living",
+          "multiple",
+          "outdoor",
+          "flexibility",
+          "multiple living",
+          "indoor",
+          "indoor outdoor",
+          "setting",
+          "pool"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.137353,
+        "weight": 0.147343,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
@@ -342,30 +361,11 @@
           "sophisticated",
           "finishes",
           "year",
-          "designer kitchen",
-          "residence",
           "design",
-          "integrated",
+          "residence",
+          "designer kitchen",
+          "refined",
           "lighting"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.053207,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "friends",
-          "relaxed",
-          "room",
-          "setting",
-          "entertaining",
-          "life",
-          "children",
-          "summer",
-          "outdoor",
-          "peaceful",
-          "sense",
-          "spaces"
         ]
       }
     ]
@@ -431,7 +431,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "Impressive in both scale and execution, this substantial 534sqm (approx.) residence presents an exceptional opportunity in one of St Heliers’ most tightly held and desirable streets. Built in 2011 by renowned builder Peter Jones, it combines enduring architectural appeal with the comfort, versatility and quality expected of a truly considered family home.\r\n\r\nDesigned for effortless entertaining and everyday family life, the main living level centres around a beautifully appointed kitchen with generous stone surfaces, a full butler’s pantry and excellent connection to the expansive open-plan living and dining spaces. Floor-to-ceiling glazing draws natural light deep into the home while opening seamlessly to a private outdoor setting, where a sheltered dining terrace, built-in heaters, manicured gardens and spa pool create an inviting environment for entertaining throughout the seasons.\r\n\r\nThe home’s three-level configuration, complemented by lift access, provides remarkable flexibility for families of all ages. The upper level is devoted to accommodation, with a luxurious master suite featuring a walk-in wardrobe, ensuite and views towards Rangitoto. A second ensuite bedroom, two further bedrooms and a beautifully appointed family bathroom complete this level.\r\n\r\nOn the middle floor, a fifth bedroom provides valuable flexibility for guests, older children or extended family, while a dedicated study offers an ideal work-from-home environment. A guest bathroom and separate laundry add further practicality.\r\n\r\nAt lower level, the exceptional six-car garaging is a rare luxury, providing secure parking alongside considerable storage and space for those with a serious appreciation for cars, boats or recreational equipment.\r\n\r\nPrivately positioned yet close to the village, waterfront and the best of St Heliers’ amenities, this is a home distinguished by its scale, construction quality and thoughtful design. A rare offering for those seeking a substantial residence in one of Auckland’s most coveted coastal neighbourhoods.\r\n\r\nImportant: This property may be marketed as suitable for overseas purchasers. However, this does not constitute confirmation of eligibility, approval, or suitability for any individual buyer. All overseas purchasers remain subject to New Zealand’s overseas investment laws, including the Overseas Investment Act 2005, and may require consent from the Overseas Investment Office. You must obtain your own independent legal, financial, and technical advice and secure any necessary approvals before proceeding with a purchase.",
   "photos": [
@@ -677,7 +677,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2825000,
-      "estimate_mid": 2820000
+      "estimate_mid": 2950000
     },
     {
       "property_id": "6957ffd4-8e04-4bd4-8308-ce5148e3f11f",
@@ -778,6 +778,20 @@
       "estimate_mid": 1940000
     },
     {
+      "property_id": "d2bd1304-d1c6-430e-8058-2041ccf2fa48",
+      "address": "90 Grampian Road, St Heliers, Auckland",
+      "sale_price": 5250000,
+      "sale_date": "2026-09-13T00:00:00+00:00",
+      "distance_km": 0.55,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 2775000,
+      "estimate_mid": 5220000
+    },
+    {
       "property_id": "7cf5aee3-32e3-432b-93d0-5b273812ea88",
       "address": "11 Florida Place, St Heliers, Auckland",
       "sale_price": 1120000,
@@ -790,20 +804,6 @@
       "property_type": null,
       "cv": 1400000,
       "estimate_mid": 1140000
-    },
-    {
-      "property_id": "5e5196c8-7298-4029-9050-ec86fe21ab38",
-      "address": "93 Allum Street, Kohimarama, Auckland",
-      "sale_price": 2500000,
-      "sale_date": "2026-07-19T00:00:00+00:00",
-      "distance_km": 0.64,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2550000,
-      "estimate_mid": 2520000
     }
   ],
   "valuation": {
@@ -825,21 +825,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$4.80M – $5.63M",
-        "low": 4798768,
-        "mid": 5287105,
-        "high": 5631142,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "range": "$4.93M – $5.68M",
+        "low": 4933333,
+        "mid": 5348182,
+        "high": 5683735,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "high",
-        "n": 76,
+        "n": 78,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 76,
-          "n_eff": 14.48,
+          "n": 78,
+          "n_eff": 14.77,
           "radius_km": 3.0,
-          "median_ratio": 0.9526,
-          "iqr_ratio": 0.1574,
+          "median_ratio": 0.9636,
+          "iqr_ratio": 0.1403,
           "same_suburb": 24,
           "model_version": "comp-cv-v1"
         }

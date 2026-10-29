@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-04-10T05:08:20.423000+00:00",
-  "days_on_market": 201,
+  "days_on_market": 202,
   "lat": -36.772355,
   "lon": 174.7570316,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2310515650.jpg",
@@ -29,14 +29,14 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 950000,
-  "comp_mid": 1270000,
-  "comp_high": 1580000,
+  "comp_low": 920000,
+  "comp_mid": 1150000,
+  "comp_high": 1460000,
   "comp_confidence": "low",
-  "comp_n": 48,
-  "value_low": 950000,
-  "value_mid": 1270000,
-  "value_high": 1580000,
+  "comp_n": 46,
+  "value_low": 920000,
+  "value_mid": 1150000,
+  "value_high": 1460000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 34241,
-  "watchers": 530,
+  "view_count": 34300,
+  "watchers": 532,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 705248,
-  "model_mid": 1010612,
-  "model_high": 1424916,
+  "model_low": 702814,
+  "model_mid": 1000815,
+  "model_high": 1423200,
   "model_confidence": "low",
-  "text_signal_pct": -20.9861,
-  "description_index": -1.067492,
+  "text_signal_pct": -27.954,
+  "description_index": -1.391599,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -298,52 +298,33 @@
   ],
   "model": {
     "listing_id": 5877502479,
-    "low": 705248,
-    "mid": 1010612,
-    "high": 1424916,
+    "low": 702814,
+    "mid": 1000815,
+    "high": 1423200,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3535, 0.3521], \"rel_width\": 0.7198, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5877502479,
     "word_count": 201,
     "exclamations": 4,
     "urgency": 0.0,
-    "luxury": 0.3881,
-    "condition_renovation": 0.4155,
-    "views_waterfront": 0.1449,
+    "luxury": 0.3937,
+    "condition_renovation": 0.4151,
+    "views_waterfront": 0.1446,
     "family_school": 0.3406,
-    "investment": 0.6071,
+    "investment": 0.6074,
     "risk": 0.0,
     "readability": 0.3781,
-    "description_premium_pct": -20.9861,
-    "description_index": -1.067492,
+    "description_premium_pct": -27.954,
+    "description_index": -1.391599,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 3, \"condition_renovation\": 2, \"views_waterfront\": 1, \"family_school\": 4, \"investment\": 4, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
-        "topic_id": 10,
-        "weight": 0.373471,
-        "label": "Development & land potential II",
-        "top_terms": [
-          "lot",
-          "sqm",
-          "floor area",
-          "sqm floor",
-          "area sqm",
-          "floor",
-          "bedrooms bathrooms",
-          "sqm land",
-          "land",
-          "homes",
-          "brand new",
-          "brand"
-        ]
-      },
-      {
         "topic_id": 4,
-        "weight": 0.240982,
+        "weight": 0.353538,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -352,36 +333,55 @@
           "lock leave",
           "car",
           "bedroom apartment",
-          "restaurants",
-          "complex",
-          "car park",
           "bedroom",
+          "restaurants",
+          "car park",
+          "complex",
           "balcony",
-          "residents"
+          "car parks"
         ]
       },
       {
-        "topic_id": 7,
-        "weight": 0.141978,
-        "label": "Brick / tile / low-maintenance units",
+        "topic_id": 10,
+        "weight": 0.341607,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "brick",
-          "single",
-          "unit",
-          "sunny",
-          "street",
-          "ready",
+          "brand new",
+          "brand",
+          "new",
+          "modern",
+          "quality",
+          "lot",
+          "standalone",
+          "bedrooms bathrooms",
+          "homes",
           "maintenance",
-          "low",
-          "garden",
-          "renovated",
-          "parking",
-          "low maintenance"
+          "floor area",
+          "sqm floor"
+        ]
+      },
+      {
+        "topic_id": 1,
+        "weight": 0.112173,
+        "label": "Development & land potential",
+        "top_terms": [
+          "potential",
+          "site",
+          "future",
+          "land",
+          "development",
+          "subject",
+          "sqm",
+          "property",
+          "existing",
+          "housing",
+          "mixed",
+          "value"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.102297,
+        "weight": 0.110875,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -392,10 +392,10 @@
           "westlake girls",
           "boys",
           "westlake boys",
-          "normal",
+          "intermediate",
           "suburb normal",
-          "normal intermediate",
-          "intermediate"
+          "normal",
+          "normal intermediate"
         ]
       }
     ]
@@ -436,7 +436,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "LOT 1 - SOLD\r\nLOT 2 - SOLD\r\nLOT 3 - SOLD \r\nLOT 4 - SOLD\r\nLOT 5 - SOLD\r\nLOT 6 - SOLD \r\nLOT 6B - AVAILABLE\r\n\r\nAn exceptional opportunity to secure a stylish home in the heart of Milford - one of the North Shore's most desirable coastal suburbs.\r\n\r\nThis boutique development offers several properties with a range of floor plans designed to suit different lifestyles and families.\r\n\r\nWhether you're a first-home buyer looking to get into a premium suburb, an investor seeking strong rental appeal, or simply wanting easy-care living close to everything - these homes are a must-see.\r\n\r\n16 Dallinghoe Crescent, Milford\r\n\r\nPerfectly positioned within walking distance to cafes, restaurants, supermarkets, schools, and public transport, with Milford Beach just minutes \r\naway.\r\n\r\nForget the car - everything you need is right at your doorstep.\r\n\r\nFeatures:\r\n\r\n* Double Westlake School Zone\r\n*  Milford & Takapuna Beaches Nearby - No need for a pool\r\n*  Walk to Shops, Cafes & Transport\r\n*  Modern, Low-Maintenance Living\r\n*  Ideal Lock-Up-and-Leave Lifestyle\r\n* Excellent Investment Opportunity\r\n\r\nWith stylish finishes, functional layouts, and move-in-ready convenience, these homes represent exceptional value in a tightly held location.\r\n\r\n\r\nBonus!!!!:\r\n\r\nEnjoy 2 Years FREE Body Corporate Fees (cashback on settlement) \r\n\r\nContact us today for more information or to arrange your viewing.\r\n\r\n*Images have been virtually staged\r\n\r\n16E Dallinghoe Crescent, Milford\r\nhttp://rwmairangibay.co.nz/MRG34660",
   "photos": [
@@ -461,6 +461,20 @@
   },
   "history": [],
   "comps": [
+    {
+      "property_id": "1061e044-107f-4322-9f79-69c2e33225cb",
+      "address": "16D Dallinghoe Crescent, Milford, Auckland",
+      "sale_price": 670500,
+      "sale_date": "2026-09-08T00:00:00+00:00",
+      "distance_km": 0.02,
+      "bedrooms": 2,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1000000,
+      "estimate_mid": 765000
+    },
     {
       "property_id": "194ffb63-0e32-4286-891a-173ab14bbb7b",
       "address": "16A Dallinghoe Crescent, Milford, Auckland",
@@ -529,7 +543,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1450000,
-      "estimate_mid": 1430000
+      "estimate_mid": 1300000
     },
     {
       "property_id": "17ca0ba8-dfa5-4c18-8801-6e84c4f63d0e",
@@ -602,58 +616,44 @@
       "estimate_mid": 1340000
     },
     {
-      "property_id": "b4e139b0-1dbe-48c1-96fd-abb4d2200eb8",
-      "address": "15 Forrest Hill Road, Milford, Auckland",
-      "sale_price": 1850000,
-      "sale_date": "2026-08-31T00:00:00+00:00",
-      "distance_km": 0.85,
-      "bedrooms": 4,
-      "bathrooms": 3,
+      "property_id": "6550c637-8bb9-4656-9c72-ac1411c45df2",
+      "address": "1/16 Bond Crescent, Forrest Hill, Auckland",
+      "sale_price": 1110500,
+      "sale_date": "2026-09-23T00:00:00+00:00",
+      "distance_km": 0.75,
+      "bedrooms": 3,
+      "bathrooms": 1,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1900000,
-      "estimate_mid": 1880000
-    },
-    {
-      "property_id": "28a0d6b7-5383-4842-8b08-35964f7d7882",
-      "address": "3A Holiday Road, Milford, Auckland",
-      "sale_price": 11000000,
-      "sale_date": "2026-09-03T00:00:00+00:00",
-      "distance_km": 1.16,
-      "bedrooms": 5,
-      "bathrooms": 4,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 8250000,
-      "estimate_mid": 8410000
+      "cv": 1075000,
+      "estimate_mid": 1070000
     }
   ],
   "valuation": {
-    "value_low": 950000,
-    "value_mid": 1270000,
-    "value_high": 1580000,
+    "value_low": 920000,
+    "value_mid": 1150000,
+    "value_high": 1460000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$950K – $1.58M",
-        "low": 950000,
-        "mid": 1270000,
-        "high": 1580000,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "range": "$920K – $1.46M",
+        "low": 920000,
+        "mid": 1150000,
+        "high": 1460000,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "low",
-        "n": 48,
+        "n": 46,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 48,
-          "n_eff": 14.82,
+          "n": 46,
+          "n_eff": 14.99,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4961,
-          "same_suburb": 10,
+          "iqr_ratio": 0.4696,
+          "same_suburb": 9,
           "model_version": "comp-cv-v1"
         }
       }

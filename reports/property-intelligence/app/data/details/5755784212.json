@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-01-28T20:15:37.813000+00:00",
-  "days_on_market": 272,
+  "days_on_market": 274,
   "lat": -36.7907593,
   "lon": 174.7707558,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2283766423.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 4379419,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1966667,
-  "comp_mid": 2037391,
-  "comp_high": 2149231,
-  "comp_confidence": "high",
-  "comp_n": 53,
+  "comp_low": 1917826,
+  "comp_mid": 2028000,
+  "comp_high": 2112000,
+  "comp_confidence": "medium",
+  "comp_n": 43,
   "value_low": 3896459,
   "value_mid": 4137939,
   "value_high": 4379419,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 10966,
+  "view_count": 10995,
   "watchers": 141,
   "is_standard": 1,
   "standard_reason": null,
@@ -76,12 +76,12 @@
   "sale_method_stage": 3,
   "sale_pressure": 60.0,
   "sale_pressure_label": "medium",
-  "model_low": 1986274,
-  "model_mid": 2195721,
-  "model_high": 2416792,
+  "model_low": 1985223,
+  "model_mid": 2183739,
+  "model_high": 2401401,
   "model_confidence": "high",
-  "text_signal_pct": 29.7962,
-  "description_index": 1.181923,
+  "text_signal_pct": 45.5973,
+  "description_index": 1.594522,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -278,33 +278,52 @@
   ],
   "model": {
     "listing_id": 5755784212,
-    "low": 1986274,
-    "mid": 2195721,
-    "high": 2416792,
+    "low": 1985223,
+    "mid": 2183739,
+    "high": 2401401,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1003, 0.0959], \"rel_width\": 0.1961, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5755784212,
     "word_count": 343,
     "exclamations": 0,
-    "urgency": 0.2148,
-    "luxury": 0.8338,
-    "condition_renovation": 0.3653,
-    "views_waterfront": 0.5944,
+    "urgency": 0.2151,
+    "luxury": 0.846,
+    "condition_renovation": 0.3648,
+    "views_waterfront": 0.5933,
     "family_school": 0.0499,
     "investment": 0.0,
     "risk": 0.1582,
     "readability": 0.3857,
-    "description_premium_pct": 29.7962,
-    "description_index": 1.181923,
+    "description_premium_pct": 45.5973,
+    "description_index": 1.594522,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 11, \"condition_renovation\": 3, \"views_waterfront\": 7, \"family_school\": 1, \"investment\": 0, \"risk\": 1}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
+        "topic_id": 11,
+        "weight": 0.370792,
+        "label": "Resort amenities (pool / tennis / spa)",
+        "top_terms": [
+          "harbour",
+          "views",
+          "residence",
+          "waterfront",
+          "scale",
+          "city",
+          "aucklands",
+          "gulf",
+          "pool",
+          "expansive",
+          "extraordinary",
+          "island"
+        ]
+      },
+      {
         "topic_id": 4,
-        "weight": 0.417682,
+        "weight": 0.33947,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -313,36 +332,17 @@
           "lock leave",
           "car",
           "bedroom apartment",
-          "restaurants",
-          "complex",
-          "car park",
           "bedroom",
+          "restaurants",
+          "car park",
+          "complex",
           "balcony",
-          "residents"
-        ]
-      },
-      {
-        "topic_id": 11,
-        "weight": 0.306335,
-        "label": "Resort amenities (pool / tennis / spa)",
-        "top_terms": [
-          "harbour",
-          "views",
-          "residence",
-          "scale",
-          "waterfront",
-          "pool",
-          "expansive",
-          "aucklands",
-          "gulf",
-          "city",
-          "architectural",
-          "position"
+          "car parks"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.241312,
+        "weight": 0.243456,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
@@ -352,30 +352,30 @@
           "sophisticated",
           "finishes",
           "year",
-          "designer kitchen",
-          "residence",
           "design",
-          "integrated",
+          "residence",
+          "designer kitchen",
+          "refined",
           "lighting"
         ]
       },
       {
         "topic_id": 8,
-        "weight": 0.03467,
+        "weight": 0.046282,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
           "sea views",
           "views",
-          "rangitoto",
           "elevated",
+          "rangitoto",
           "rangitoto college",
-          "living areas",
-          "areas",
           "gulf",
-          "college",
-          "family home",
-          "intermediate"
+          "hauraki gulf",
+          "hauraki",
+          "spectacular",
+          "panoramic",
+          "living areas"
         ]
       }
     ]
@@ -441,7 +441,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "This premium New Zealand apartment is your ultimate cross-border oasis. \r\n\r\nTwenty floors up, this two-level penthouse occupies the most elevated and sought after position in the building, capturing outrageous views across Rangitoto, Waiheke and the Hauraki Gulf.\r\n\r\nWith four-metre glazing and a prime north-east aspect, the outlook is permanent, protected and extraordinary.\r\n\r\nThis iconic Spencer on Byron tower was completely transformed in 2022, with a complete building upgrade to comply with the latest building standards. Works included the replacement of cladding with a modern Alucobond aluminium cladding and new waterproof membranes, and all new double-glazed joinery. Upgrades were also made to the full-size tennis court, and there was a full refurbishment of the pool and spa facilities; CCC issued in 2023. \r\n\r\nAnd with this building upgrade, this particular apartment was completely gutted and refurbished with a premium specification of fixtures and fittings, including European oak flooring, granite tiling, ducted four-zone air-conditioning, and premium Miele appliances, complemented by a 180-bottle wine fridge for effortless entertaining.  You have the luxury of 75’’ Samsung TV, electric fireplace, electric blinds and plenty of storage.\r\n\r\nSpanning approximately 174 sq m of luxury living, this three bedroom, three-bathroom residence with double garaging delivers luxury living at its best. Every bedroom — including the sumptuous master suite opens to this mesmerising harbour panorama.\r\n\r\nResidents enjoy resort-style amenities including full-size flood-lit tennis court, swimming pool, spa and fully equipped gym, all just moments from Takapuna Beach, cafés/restaurants, theatre and high-end shopping.  \r\n\r\nThe location of this residence is the icing on the cake, minutes from the motorways to access the heart of the CBD and less than an hour to the top coastal beaches, golf courses and lifestyle retreats that Auckland has to offer.\r\n\r\nThis is more than a penthouse — it is a front-row seat to Auckland’s most spectacular coastal theatre, wrapped in absolute luxury and complete peace of mind.\r\n\r\nDon’t miss the opportunity to secure this rarest of gems and make this property your premium lifestyle asset.  Contact me to make a time to view.\r\n\r\nAmanda Evans\r\nNew Zealand Sotheby's International Realty\r\n+6421813910  |  amanda.evans@nzsir.com",
   "photos": [
@@ -689,6 +689,20 @@
       "estimate_mid": 1090000
     },
     {
+      "property_id": "4aad3cc9-662a-4b76-a11e-dea29946e829",
+      "address": "4E/175 Hurstmere Road, Takapuna, Auckland",
+      "sale_price": 1390000,
+      "sale_date": "2026-07-22T00:00:00+00:00",
+      "distance_km": 0.78,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1600000,
+      "estimate_mid": 1400000
+    },
+    {
       "property_id": "9ef549fa-4c42-4b89-b280-0b716faa6fed",
       "address": "1/3 Dominion Street, Takapuna, Auckland",
       "sale_price": 1240000,
@@ -759,6 +773,20 @@
       "estimate_mid": 835000
     },
     {
+      "property_id": "fc86e493-015f-49de-9ca5-383bd7e5f582",
+      "address": "1/24 Clifton Road, Hauraki, Auckland",
+      "sale_price": 2290000,
+      "sale_date": "2026-07-22T00:00:00+00:00",
+      "distance_km": 1.25,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 2000000,
+      "estimate_mid": 2290000
+    },
+    {
       "property_id": "6b8baf29-3c5c-4eff-9a70-4a702cbcc0b3",
       "address": "40/15 Puriri Street, Takapuna, Auckland",
       "sale_price": 435000,
@@ -785,34 +813,6 @@
       "property_type": null,
       "cv": 475000,
       "estimate_mid": 460000
-    },
-    {
-      "property_id": "9ad93561-1377-412a-af9d-5d5c509f8ab5",
-      "address": "60 Jutland Road, Hauraki, Auckland",
-      "sale_price": 720000,
-      "sale_date": "2026-08-23T00:00:00+00:00",
-      "distance_km": 1.31,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 920000,
-      "estimate_mid": 965000
-    },
-    {
-      "property_id": "84404325-3577-4a17-9005-ee33b8d574c0",
-      "address": "4/15 Northboro Road, Hauraki, Auckland",
-      "sale_price": 925000,
-      "sale_date": "2026-09-02T00:00:00+00:00",
-      "distance_km": 1.34,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 920000,
-      "estimate_mid": 925000
     }
   ],
   "valuation": {
@@ -834,22 +834,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.97M – $2.15M",
-        "low": 1966667,
-        "mid": 2037391,
-        "high": 2149231,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
-        "confidence": "high",
-        "n": 53,
+        "range": "$1.92M – $2.11M",
+        "low": 1917826,
+        "mid": 2028000,
+        "high": 2112000,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "confidence": "medium",
+        "n": 43,
         "basis": {
-          "confidence": "high",
+          "confidence": "medium",
           "source": "sold_comps",
-          "n": 53,
-          "n_eff": 8.22,
+          "n": 43,
+          "n_eff": 7.21,
           "radius_km": 3.0,
-          "median_ratio": 0.9261,
-          "iqr_ratio": 0.0896,
-          "same_suburb": 34,
+          "median_ratio": 0.9218,
+          "iqr_ratio": 0.0957,
+          "same_suburb": 24,
           "model_version": "comp-cv-v1"
         }
       },

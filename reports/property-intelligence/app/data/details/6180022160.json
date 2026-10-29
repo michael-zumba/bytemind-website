@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-14T22:03:59.763000+00:00",
-  "days_on_market": 13,
+  "days_on_market": 14,
   "lat": -36.853838,
   "lon": 174.8170526,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2292774563.jpg",
@@ -30,12 +30,12 @@
   "estimate_source": null,
   "estimate_updated_at": null,
   "comp_low": 1275000,
-  "comp_mid": 1750000,
+  "comp_mid": 1740000,
   "comp_high": 2150000,
   "comp_confidence": "low",
-  "comp_n": 40,
+  "comp_n": 43,
   "value_low": 1275000,
-  "value_mid": 1750000,
+  "value_mid": 1740000,
   "value_high": 2150000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 379,
-  "watchers": 4,
+  "view_count": 395,
+  "watchers": 6,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 32.2,
+  "sale_pressure": 32.3,
   "sale_pressure_label": "low",
-  "model_low": 800080,
-  "model_mid": 1146504,
-  "model_high": 1616518,
+  "model_low": 762032,
+  "model_mid": 1085141,
+  "model_high": 1543115,
   "model_confidence": "low",
-  "text_signal_pct": -21.2512,
-  "description_index": -1.082729,
+  "text_signal_pct": -26.2947,
+  "description_index": -1.294954,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6180022160,
-    "low": 800080,
-    "mid": 1146504,
-    "high": 1616518,
+    "low": 762032,
+    "mid": 1085141,
+    "high": 1543115,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3535, 0.3521], \"rel_width\": 0.7198, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6180022160,
@@ -300,59 +300,40 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.58,
-    "views_waterfront": 0.2023,
+    "condition_renovation": 0.5794,
+    "views_waterfront": 0.2019,
     "family_school": 0.0,
-    "investment": 0.8474,
+    "investment": 0.8478,
     "risk": 0.0,
     "readability": 0.2107,
-    "description_premium_pct": -21.2512,
-    "description_index": -1.082729,
+    "description_premium_pct": -26.2947,
+    "description_index": -1.294954,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 2, \"views_waterfront\": 1, \"family_school\": 0, \"investment\": 4, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
-        "topic_id": 2,
-        "weight": 0.436826,
+        "topic_id": 10,
+        "weight": 0.40414,
         "label": "New build / brand-new quality",
         "top_terms": [
+          "brand new",
+          "brand",
+          "new",
           "modern",
           "quality",
-          "brand",
-          "brand new",
-          "new",
-          "comfort",
-          "stylish",
-          "convenience",
-          "outdoor flow",
-          "light filled",
-          "contemporary",
-          "internal access"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.347679,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "brick",
-          "single",
-          "unit",
-          "sunny",
-          "street",
-          "ready",
+          "lot",
+          "standalone",
+          "bedrooms bathrooms",
+          "homes",
           "maintenance",
-          "low",
-          "garden",
-          "renovated",
-          "parking",
-          "low maintenance"
+          "floor area",
+          "sqm floor"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.131505,
+        "weight": 0.293372,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -361,17 +342,36 @@
           "lock leave",
           "car",
           "bedroom apartment",
-          "restaurants",
-          "complex",
-          "car park",
           "bedroom",
+          "restaurants",
+          "car park",
+          "complex",
           "balcony",
-          "residents"
+          "car parks"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.122507,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "parking",
+          "street",
+          "brick",
+          "street parking",
+          "single",
+          "fully",
+          "college",
+          "garden",
+          "sunny",
+          "room",
+          "fenced",
+          "garage"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.053462,
+        "weight": 0.069778,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -380,12 +380,12 @@
           "land",
           "development",
           "subject",
+          "sqm",
           "property",
           "existing",
           "housing",
-          "sqm",
           "mixed",
-          "council"
+          "value"
         ]
       }
     ]
@@ -426,7 +426,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "Price guide - ENQ OVER $2,150,000 \r\n\r\nFreehold, brand new, terrace home with a blend of contemporary design and convenience ideal for downsizers or those seeking a low maintenance life style. \r\n\r\n- 3 spacious bedrooms\r\n- 3 modern bathrooms\r\n- 2 well-separated living areas with lift access\r\n- Ample garage space and storage areas\r\n- Low maintenance, ideal for downsizers or busy professionals\r\n- Easy stroll to waterfront, local cafes, and central CBD location\r\n- Sunny, warm, and contemporary design throughout\r\n\r\nWhy You'll Love It:\r\n\r\n- Spend your time enjoying life, not maintaining your home\r\n- Modern, easy-care living with all conveniences at your doorstep\r\n- Perfect for home ownership or a strategic rental investment\r\n- Strong vendor instructions to sell - opportunity should not be missed\r\n\r\nVendor prepared to guarantee a generous rental return for approved purchasers for an initial period. Sunny, warm, and beautifully designed home, Ready for immediate enjoyment or investment. Book a viewing today before this opportunity is gone.",
   "photos": [
@@ -576,6 +576,20 @@
       "estimate_mid": 1630000
     },
     {
+      "property_id": "6eb4a171-a3ad-4e7b-8aa0-6c22158a501e",
+      "address": "1/1 Tokomaru Street, Orakei, Auckland",
+      "sale_price": 1125000,
+      "sale_date": "2026-09-16T00:00:00+00:00",
+      "distance_km": 0.88,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1325000,
+      "estimate_mid": 1230000
+    },
+    {
       "property_id": "2cd90b4d-5f99-4e83-8b1e-5f81e59d36f7",
       "address": "61A Atkin Avenue, Mission Bay, Auckland",
       "sale_price": 1825000,
@@ -590,18 +604,18 @@
       "estimate_mid": 1880000
     },
     {
-      "property_id": "3d67d898-1ce1-498d-a119-5da23450a8de",
-      "address": "1/68 Atkin Avenue, Mission Bay, Auckland",
-      "sale_price": 930000,
-      "sale_date": "2026-07-21T00:00:00+00:00",
-      "distance_km": 1.06,
-      "bedrooms": 2,
+      "property_id": "342452bd-d87f-49d4-88bc-bb30a3f3cc9a",
+      "address": "4A Godden Crescent, Orakei, Auckland",
+      "sale_price": 1300000,
+      "sale_date": "2026-09-02T00:00:00+00:00",
+      "distance_km": 1.05,
+      "bedrooms": 3,
       "bathrooms": 1,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1175000,
-      "estimate_mid": 950000
+      "cv": 1275000,
+      "estimate_mid": 1310000
     },
     {
       "property_id": "430df567-dece-42cb-af00-0c85d3290600",
@@ -615,26 +629,12 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1250000,
-      "estimate_mid": 1260000
-    },
-    {
-      "property_id": "3a05a62c-ee59-403a-b3ff-c63e449b4884",
-      "address": "10 Palmer Crescent, Mission Bay, Auckland",
-      "sale_price": 4431000,
-      "sale_date": "2026-08-19T00:00:00+00:00",
-      "distance_km": 1.34,
-      "bedrooms": 4,
-      "bathrooms": 4,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 3850000,
-      "estimate_mid": 4400000
+      "estimate_mid": 1170000
     }
   ],
   "valuation": {
     "value_low": 1275000,
-    "value_mid": 1750000,
+    "value_mid": 1740000,
     "value_high": 2150000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
@@ -643,19 +643,19 @@
         "name": "Nearby sold comparables",
         "range": "$1.27M – $2.15M",
         "low": 1275000,
-        "mid": 1750000,
+        "mid": 1740000,
         "high": 2150000,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "low",
-        "n": 40,
+        "n": 43,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 40,
-          "n_eff": 12.39,
+          "n": 43,
+          "n_eff": 13.31,
           "radius_km": 3.0,
-          "iqr_ratio": 0.5,
-          "same_suburb": 11,
+          "iqr_ratio": 0.5029,
+          "same_suburb": 12,
           "model_version": "comp-cv-v1"
         }
       }

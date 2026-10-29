@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-07-16T03:53:39.277000+00:00",
-  "days_on_market": 104,
+  "days_on_market": 105,
   "lat": -36.767971,
   "lon": 174.762619,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2318094122.jpg",
@@ -29,14 +29,14 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1320000,
-  "comp_mid": 1580000,
-  "comp_high": 2041888,
+  "comp_low": 1300000,
+  "comp_mid": 1560000,
+  "comp_high": 1980000,
   "comp_confidence": "low",
-  "comp_n": 44,
-  "value_low": 1320000,
-  "value_mid": 1580000,
-  "value_high": 2041888,
+  "comp_n": 42,
+  "value_low": 1300000,
+  "value_mid": 1560000,
+  "value_high": 1980000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2426,
+  "view_count": 2436,
   "watchers": 37,
   "is_standard": 1,
   "standard_reason": null,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 47.3,
+  "sale_pressure": 47.5,
   "sale_pressure_label": "medium",
-  "model_low": 1727445,
-  "model_mid": 2475407,
-  "model_high": 3490210,
+  "model_low": 1704297,
+  "model_mid": 2426935,
+  "model_high": 3451202,
   "model_confidence": "low",
-  "text_signal_pct": 10.0874,
-  "description_index": 0.435547,
+  "text_signal_pct": 1.5264,
+  "description_index": 0.064298,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6036418732,
-    "low": 1727445,
-    "mid": 2475407,
-    "high": 3490210,
+    "low": 1704297,
+    "mid": 2426935,
+    "high": 3451202,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3598, 0.3436], \"rel_width\": 0.7121, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3535, 0.3521], \"rel_width\": 0.7198, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6036418732,
@@ -300,21 +300,21 @@
     "exclamations": 1,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.2643,
-    "views_waterfront": 0.9217,
+    "condition_renovation": 0.264,
+    "views_waterfront": 0.9201,
     "family_school": 0.6499,
-    "investment": 0.5792,
+    "investment": 0.5795,
     "risk": 0.0,
     "readability": 0.3766,
-    "description_premium_pct": 10.0874,
-    "description_index": 0.435547,
+    "description_premium_pct": 1.5264,
+    "description_index": 0.064298,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 5, \"family_school\": 6, \"investment\": 3, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-28T18:48:50.138354+00:00",
+    "updated_at": "2026-10-29T20:50:29.219408+00:00",
     "top_topics": [
       {
         "topic_id": 1,
-        "weight": 0.393567,
+        "weight": 0.393119,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -323,55 +323,36 @@
           "land",
           "development",
           "subject",
+          "sqm",
           "property",
           "existing",
           "housing",
-          "sqm",
           "mixed",
-          "council"
+          "value"
         ]
       },
       {
         "topic_id": 8,
-        "weight": 0.325113,
+        "weight": 0.349889,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
           "sea views",
           "views",
-          "rangitoto",
           "elevated",
+          "rangitoto",
           "rangitoto college",
-          "living areas",
-          "areas",
           "gulf",
-          "college",
-          "family home",
-          "intermediate"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.141827,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "ensuite",
-          "wardrobe",
-          "walk wardrobe",
-          "bathroom",
-          "separate",
-          "lounge",
-          "suite",
-          "walk",
-          "upstairs",
-          "level",
-          "floor",
-          "master"
+          "hauraki gulf",
+          "hauraki",
+          "spectacular",
+          "panoramic",
+          "living areas"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.136769,
+        "weight": 0.145089,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -382,10 +363,29 @@
           "westlake girls",
           "boys",
           "westlake boys",
-          "normal",
+          "intermediate",
           "suburb normal",
-          "normal intermediate",
-          "intermediate"
+          "normal",
+          "normal intermediate"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.10597,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "wardrobe",
+          "ensuite",
+          "walk wardrobe",
+          "bathroom",
+          "suite",
+          "lounge",
+          "master",
+          "level",
+          "separate",
+          "master suite",
+          "upstairs",
+          "walk"
         ]
       }
     ]
@@ -426,7 +426,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-28T18:48:49.881316+00:00"
+    "updated_at": "2026-10-29T20:50:28.965302+00:00"
   },
   "body": "Nestled in the heart of Milford, this expansive 1322sqm freehold site offers a rare combination of space, lifestyle, and potential. Zoned for Residential - Mixed Housing Suburban.\r\n\r\nSituated in an elevated position, the property provides panoramic sea views and is just minutes away from Milford Beach. Whether you choose to live in the classic 1960s two-story brick home or explore subdivision and redevelopment options (subject to Council approval, own due diligence recommended), the possibilities are endless.\r\n\r\n\r\nProperty Features:\r\n• Upper Level: Open-plan kitchen/living opening to a balcony with panoramic sea views, 3 spacious bedrooms (master with ensuite), a study, and a sheltered deck.\r\n\r\n• Lower Level: Second living area, large fourth bedroom, additional bathroom, and a pool for relaxation.\r\n\r\n• Double garage with internal access and ample off-street parking.\r\n\r\n• Zoned for Westlake Boys' & Girls' High Schools, walking distance to Milford Beach and Village.\r\n\r\n\r\nPerfect as a spacious family home or an exciting development opportunity (subject to council approval). \r\n\r\n\r\nDon’t miss out—contact us today to arrange a private viewing!",
   "photos": [
@@ -523,6 +523,20 @@
       "estimate_mid": 500000
     },
     {
+      "property_id": "1061e044-107f-4322-9f79-69c2e33225cb",
+      "address": "16D Dallinghoe Crescent, Milford, Auckland",
+      "sale_price": 670500,
+      "sale_date": "2026-09-08T00:00:00+00:00",
+      "distance_km": 0.68,
+      "bedrooms": 2,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1000000,
+      "estimate_mid": 765000
+    },
+    {
       "property_id": "d16763ff-a062-4cee-85df-1f4da35f8c2f",
       "address": "51A Gordon Avenue, Forrest Hill, Auckland",
       "sale_price": 1300000,
@@ -534,7 +548,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1450000,
-      "estimate_mid": 1430000
+      "estimate_mid": 1300000
     },
     {
       "property_id": "b36b7d47-eb4e-4e65-a0ce-df26680beb4d",
@@ -605,46 +619,32 @@
       "property_type": null,
       "cv": 750000,
       "estimate_mid": 805000
-    },
-    {
-      "property_id": "f585aa31-6a1e-4c4c-b176-adb44deeead9",
-      "address": "2/3 Quebec Road, Milford, Auckland",
-      "sale_price": 980000,
-      "sale_date": "2026-09-14T00:00:00+00:00",
-      "distance_km": 1.09,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1025000,
-      "estimate_mid": 980000
     }
   ],
   "valuation": {
-    "value_low": 1320000,
-    "value_mid": 1580000,
-    "value_high": 2041888,
+    "value_low": 1300000,
+    "value_mid": 1560000,
+    "value_high": 1980000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.32M – $2.04M",
-        "low": 1320000,
-        "mid": 1580000,
-        "high": 2041888,
-        "updated_at": "2026-10-28T18:48:49.881316+00:00",
+        "range": "$1.30M – $1.98M",
+        "low": 1300000,
+        "mid": 1560000,
+        "high": 1980000,
+        "updated_at": "2026-10-29T20:50:28.965302+00:00",
         "confidence": "low",
-        "n": 44,
+        "n": 42,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 44,
-          "n_eff": 12.34,
+          "n": 42,
+          "n_eff": 11.45,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4569,
-          "same_suburb": 7,
+          "iqr_ratio": 0.4359,
+          "same_suburb": 5,
           "model_version": "comp-cv-v1"
         }
       }

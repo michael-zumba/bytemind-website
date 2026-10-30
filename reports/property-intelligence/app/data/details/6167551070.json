@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-07T01:28:18.323000+00:00",
-  "days_on_market": 22,
+  "days_on_market": 23,
   "lat": -36.6976051,
   "lon": 174.751709,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333774058.jpg",
@@ -63,7 +63,7 @@
   "change_signal": "price increase",
   "change_count": 3,
   "last_change_at": "2026-10-28T15:38:37.964684+00:00",
-  "days_since_last_change": 1.22,
+  "days_since_last_change": 2.1,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 1,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 63.7,
+  "sale_pressure": 63.8,
   "sale_pressure_label": "medium",
-  "model_low": 740147,
-  "model_mid": 814160,
-  "model_high": 895310,
+  "model_low": 743526,
+  "model_mid": 813699,
+  "model_high": 888825,
   "model_confidence": "high",
-  "text_signal_pct": 0.9538,
-  "description_index": 0.04029,
+  "text_signal_pct": 4.2548,
+  "description_index": 0.170278,
   "events_count": 3,
   "last_event": "price_change",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6167551070,
-    "low": 740147,
-    "mid": 814160,
-    "high": 895310,
+    "low": 743526,
+    "mid": 813699,
+    "high": 888825,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6167551070,
@@ -302,57 +302,76 @@
     "luxury": 0.0,
     "condition_renovation": 0.0,
     "views_waterfront": 0.0,
-    "family_school": 0.4191,
+    "family_school": 0.4203,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.6063,
-    "description_premium_pct": 0.9538,
-    "description_index": 0.04029,
+    "description_premium_pct": 4.2548,
+    "description_index": 0.170278,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
-        "topic_id": 6,
-        "weight": 0.697822,
-        "label": "Family living & entertaining II",
-        "top_terms": [
-          "morning",
-          "coffee",
-          "friends",
-          "life",
-          "relaxed",
-          "morning coffee",
-          "step",
-          "feels",
-          "sense",
-          "day",
-          "away",
-          "place"
-        ]
-      },
-      {
         "topic_id": 9,
-        "weight": 0.293466,
+        "weight": 0.472474,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
           "regional park",
           "regional",
           "village",
-          "walking",
           "suburb college",
           "suburb village",
-          "college",
-          "distance",
-          "walking distance",
           "suburb regional",
-          "centre"
+          "walking",
+          "college",
+          "community",
+          "centre",
+          "distance"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.402412,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "relaxed",
+          "friends",
+          "setting",
+          "entertaining",
+          "peaceful",
+          "morning",
+          "outdoor",
+          "life",
+          "welcoming",
+          "inviting",
+          "family living",
+          "flexibility"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.102041,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low",
+          "low maintenance",
+          "unit",
+          "care",
+          "easy care",
+          "sunny",
+          "brick",
+          "buyers",
+          "downsizers",
+          "single",
+          "lock"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.008712,
+        "weight": 0.023072,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -364,28 +383,9 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "suburb normal",
           "normal",
+          "suburb normal",
           "normal intermediate"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.0,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "ensuite",
-          "walk wardrobe",
-          "bathroom",
-          "suite",
-          "lounge",
-          "master",
-          "level",
-          "separate",
-          "master suite",
-          "upstairs",
-          "walk"
         ]
       }
     ]
@@ -462,14 +462,14 @@
     "first_description_change_at": null,
     "last_description_change_at": null,
     "days_to_first_change": 2.81,
-    "days_since_last_change": 3.76,
+    "days_since_last_change": 4.64,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "set",
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "There’s something rather lovely about finding a home that makes life feel easy.\r\n\r\nTucked away on Deep Creek Road, this beautifully maintained home is the kind of place that instantly feels like somewhere you could settle into. Everything has been thoughtfully looked after, leaving you free to simply move in and enjoy it.\r\n\r\nAnd then there’s the location.\r\n\r\nTorbay Kindy and the local primary school are both within walking distance, while Torbay Village is close enough for those spontaneous coffee runs and easy errands. When the weekend arrives, you’re spoilt for choice with Winstones Cove, Waiake Beach and Long Bay Beach all close by, with Long Bay Regional Park there for walks and long, lazy days outdoors. Browns Bay town centre provides an even bigger choice of cafés, restaurants, shopping and essentials.\r\n\r\nIt’s a wonderfully connected little pocket of the North Shore, where the things you need are close and the things you want to do are even closer.\r\n\r\nBack home, there’s a lovely sense of privacy and calm. The interiors are inviting and beautifully cared for, with spaces that feel comfortable, practical and easy to make your own.\r\n\r\nThis is less about ticking boxes and more about the way life could feel here. Morning coffee in the village, school runs without the daily battle, beach afternoons on a whim and everything you need within easy reach.\r\n\r\nIf that sounds like your kind of everyday, come and see why this one feels a little different.",
   "photos": [
@@ -502,12 +502,6 @@
       "estimate_low": 786402,
       "estimate_mid": 833794,
       "estimate_high": 881186
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 786159,
-      "estimate_mid": 833540,
-      "estimate_high": 880920
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -808,20 +802,6 @@
       "estimate_mid": 1050000
     },
     {
-      "property_id": "54ece96f-6634-443f-ae66-d59da7f1d739",
-      "address": "144 Weatherly Road, Torbay, Auckland",
-      "sale_price": 1002000,
-      "sale_date": "2026-08-06T00:00:00+00:00",
-      "distance_km": 1.52,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1200000,
-      "estimate_mid": 1020000
-    },
-    {
       "property_id": "56e27234-dc9c-4141-91fa-a3d54c398243",
       "address": "12 Airey Place, Torbay, Auckland",
       "sale_price": 940000,
@@ -834,6 +814,20 @@
       "property_type": null,
       "cv": 1025000,
       "estimate_mid": 945000
+    },
+    {
+      "property_id": "ed83b631-6e76-41df-af68-5b039c7414ef",
+      "address": "1/4 Firth Road, Torbay, Auckland",
+      "sale_price": 1000000,
+      "sale_date": "2026-09-30T00:00:00+00:00",
+      "distance_km": 1.64,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1025000,
+      "estimate_mid": 1000000
     }
   ],
   "valuation": {
@@ -859,14 +853,14 @@
         "low": 817500,
         "mid": 855000,
         "high": 917561,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "high",
         "n": 64,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 64,
-          "n_eff": 9.89,
+          "n_eff": 9.86,
           "radius_km": 3.0,
           "median_ratio": 0.95,
           "iqr_ratio": 0.117,

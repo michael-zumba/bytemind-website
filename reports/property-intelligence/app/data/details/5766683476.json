@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-02-03T23:57:43.107000+00:00",
-  "days_on_market": 267,
+  "days_on_market": 268,
   "lat": -36.7389183,
   "lon": 174.7503052,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2285624874.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1806382,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1591667,
+  "comp_low": 1578889,
   "comp_mid": 1799885,
   "comp_high": 1968750,
   "comp_confidence": "high",
-  "comp_n": 85,
+  "comp_n": 79,
   "value_low": 1607175,
   "value_mid": 1706779,
   "value_high": 1806382,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-29T19:02:53.034345+00:00",
-  "days_since_last_change": 0.07,
+  "days_since_last_change": 0.95,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 1,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 1553874,
-  "model_mid": 1709256,
-  "model_high": 1879624,
+  "model_low": 1550966,
+  "model_mid": 1697343,
+  "model_high": 1854053,
   "model_confidence": "high",
-  "text_signal_pct": -12.552,
-  "description_index": -0.569286,
+  "text_signal_pct": -12.0813,
+  "description_index": -0.526178,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -288,56 +288,56 @@
   ],
   "model": {
     "listing_id": 5766683476,
-    "low": 1553874,
-    "mid": 1709256,
-    "high": 1879624,
+    "low": 1550966,
+    "mid": 1697343,
+    "high": 1854053,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5766683476,
     "word_count": 256,
     "exclamations": 1,
     "urgency": 0.0,
-    "luxury": 0.103,
+    "luxury": 0.1016,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.1136,
-    "family_school": 0.2674,
-    "investment": 0.4769,
+    "views_waterfront": 0.1129,
+    "family_school": 0.2682,
+    "investment": 0.4738,
     "risk": 0.0,
     "readability": 0.5804,
-    "description_premium_pct": -12.552,
-    "description_index": -0.569286,
+    "description_premium_pct": -12.0813,
+    "description_index": -0.526178,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 0, \"views_waterfront\": 1, \"family_school\": 4, \"investment\": 4, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
         "topic_id": 7,
-        "weight": 0.242095,
+        "weight": 0.34846,
         "label": "Parking, garden & section",
         "top_terms": [
           "parking",
-          "street",
-          "brick",
-          "street parking",
-          "single",
-          "fully",
           "college",
-          "garden",
-          "sunny",
           "room",
+          "street parking",
+          "street",
+          "double",
+          "plus",
+          "rangitoto college",
           "fenced",
-          "garage"
+          "fully",
+          "deck",
+          "years"
         ]
       },
       {
-        "topic_id": 10,
-        "weight": 0.233041,
+        "topic_id": 2,
+        "weight": 0.216033,
         "label": "New build / brand-new quality",
         "top_terms": [
-          "brand new",
           "brand",
+          "brand new",
           "new",
           "modern",
           "quality",
@@ -345,14 +345,33 @@
           "standalone",
           "bedrooms bathrooms",
           "homes",
-          "maintenance",
+          "sqm floor",
           "floor area",
-          "sqm floor"
+          "sqm"
+        ]
+      },
+      {
+        "topic_id": 3,
+        "weight": 0.099568,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "premium",
+          "luxury",
+          "appliances",
+          "designer",
+          "year",
+          "finishes",
+          "sophisticated",
+          "designer kitchen",
+          "design",
+          "residence",
+          "quality",
+          "lighting"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.126197,
+        "weight": 0.098888,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -361,31 +380,12 @@
           "land",
           "development",
           "subject",
-          "sqm",
-          "property",
           "existing",
+          "property",
+          "sqm",
           "housing",
-          "mixed",
-          "value"
-        ]
-      },
-      {
-        "topic_id": 3,
-        "weight": 0.104321,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "premium",
-          "luxury",
-          "appliances",
-          "designer",
-          "sophisticated",
-          "finishes",
-          "year",
-          "design",
-          "residence",
-          "designer kitchen",
-          "refined",
-          "lighting"
+          "council",
+          "mixed"
         ]
       }
     ]
@@ -443,7 +443,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "*Viewings by appointment - contact us today*\r\n\r\nThis massive 227sqm (approx.) floor area home was purchased brand new in 2022 and then extensively upgraded by its current owners. \r\n\r\nHardwood floors, premium lighting, custom window treatments, additional heat pumps, clever storage throughout - they turned a brand-new home into something well beyond developer spec.\r\n\r\nYou're within walking distance to Mairangi Bay Village and 650 metres from the beach, zoned for Rangitoto College, Mairangi Bay Primary, and Murrays Bay Intermediate. You know what this location commands. Now imagine getting into it at an unbelievable price.\r\n\r\nFour bedrooms across three levels with a lift servicing every floor, three bathrooms, sun-drenched decks at both ends, and a ground-floor bedroom with ensuite that works perfectly for guests, teens, or multi-generational living. \r\n\r\nThe modern kitchen has gas cooking, and the home is being sold with whiteware - washing machine, dryer, double door refrigerator and a wine fridge!\r\n\r\nThe tandem garage has been converted into flexible living space - gym, office, studio - or use it as a double garage. At approx 227sqm internally, this is one of the larger properties in its class in the East Coast Bays.\r\n\r\nVendor's instructions leave zero room for interpretation: 'GET IT SOLD'. Forget the CV, forget the estimates, and forget what the owners paid. None of it matters.\r\n\r\nInvestors — currently tenanted at $1,150 per week with happy tenants willing to stay long-term and will accept rent increases. Cash flow from day one in a blue-chip suburb.\r\n\r\nCall us today to view.\r\n\r\nNB: Internal photos are from the last time this property was listed.\r\n\r\nAgents - bring your buyers, generous conjunctional offered.",
   "photos": [
@@ -484,12 +484,6 @@
       "estimate_low": 1602995,
       "estimate_mid": 1699598,
       "estimate_high": 1796201
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 1638630,
-      "estimate_mid": 1737387,
-      "estimate_high": 1836145
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -837,21 +831,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.59M – $1.97M",
-        "low": 1591667,
+        "range": "$1.58M – $1.97M",
+        "low": 1578889,
         "mid": 1799885,
         "high": 1968750,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "high",
-        "n": 85,
+        "n": 79,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 85,
-          "n_eff": 15.35,
+          "n": 79,
+          "n_eff": 14.77,
           "radius_km": 3.0,
           "median_ratio": 1.0285,
-          "iqr_ratio": 0.2095,
+          "iqr_ratio": 0.2166,
           "same_suburb": 24,
           "model_version": "comp-cv-v1"
         }

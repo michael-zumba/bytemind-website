@@ -30,10 +30,10 @@
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
   "comp_low": 1743182,
-  "comp_mid": 1805870,
+  "comp_mid": 1797545,
   "comp_high": 1872000,
   "comp_confidence": "medium",
-  "comp_n": 44,
+  "comp_n": 40,
   "value_low": 1881248,
   "value_mid": 1997837,
   "value_high": 2114426,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2054,
-  "watchers": 55,
+  "view_count": 2241,
+  "watchers": 57,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "crosslease",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:03:52.201966+00:00",
-  "days_since_last_change": 1.24,
+  "days_since_last_change": 2.12,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,44 +76,63 @@
   "sale_method_stage": 0,
   "sale_pressure": 0.3,
   "sale_pressure_label": "low",
-  "model_low": 1783380,
-  "model_mid": 1961712,
-  "model_high": 2157244,
+  "model_low": 1792390,
+  "model_mid": 1961552,
+  "model_high": 2142656,
   "model_confidence": "high",
-  "text_signal_pct": -12.9964,
-  "description_index": -0.590912,
+  "text_signal_pct": -5.2685,
+  "description_index": -0.221179,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [],
   "model": {
     "listing_id": 6200874728,
-    "low": 1783380,
-    "mid": 1961712,
-    "high": 2157244,
+    "low": 1792390,
+    "mid": 1961552,
+    "high": 2142656,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6200874728,
     "word_count": 272,
     "exclamations": 1,
-    "urgency": 0.5426,
-    "luxury": 0.097,
-    "condition_renovation": 0.9202,
-    "views_waterfront": 0.1069,
-    "family_school": 0.1258,
-    "investment": 0.3366,
+    "urgency": 0.5347,
+    "luxury": 0.0956,
+    "condition_renovation": 0.9185,
+    "views_waterfront": 0.1062,
+    "family_school": 0.1262,
+    "investment": 0.3345,
     "risk": 1.0,
     "readability": 0.2645,
-    "description_premium_pct": -12.9964,
-    "description_index": -0.590912,
+    "description_premium_pct": -5.2685,
+    "description_index": -0.221179,
     "lexicon_hits_json": "{\"urgency\": 2, \"luxury\": 1, \"condition_renovation\": 6, \"views_waterfront\": 1, \"family_school\": 2, \"investment\": 3, \"risk\": 6}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
+        "topic_id": 10,
+        "weight": 0.38133,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low",
+          "low maintenance",
+          "unit",
+          "care",
+          "easy care",
+          "sunny",
+          "brick",
+          "buyers",
+          "downsizers",
+          "single",
+          "lock"
+        ]
+      },
+      {
         "topic_id": 1,
-        "weight": 0.310538,
+        "weight": 0.276004,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -122,17 +141,17 @@
           "land",
           "development",
           "subject",
-          "sqm",
-          "property",
           "existing",
+          "property",
+          "sqm",
           "housing",
-          "mixed",
-          "value"
+          "council",
+          "mixed"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.160318,
+        "weight": 0.16366,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -144,47 +163,28 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "suburb normal",
           "normal",
+          "suburb normal",
           "normal intermediate"
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.129152,
-        "label": "Family living & entertaining II",
+        "topic_id": 11,
+        "weight": 0.125031,
+        "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
-          "morning",
-          "coffee",
-          "friends",
-          "life",
-          "relaxed",
-          "morning coffee",
-          "step",
-          "feels",
-          "sense",
-          "day",
-          "away",
-          "place"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.114376,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "parking",
-          "street",
-          "brick",
-          "street parking",
-          "single",
-          "fully",
-          "college",
-          "garden",
-          "sunny",
-          "room",
-          "fenced",
-          "garage"
+          "harbour",
+          "views",
+          "residence",
+          "scale",
+          "waterfront",
+          "expansive",
+          "pool",
+          "aucklands",
+          "architectural",
+          "extraordinary",
+          "city",
+          "privacy"
         ]
       }
     ]
@@ -233,7 +233,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Offered to the market for the first time in 28 years, this cherished deceased estate presents an extraordinary, value-packed opening in the heart of Takapuna. Configured across two functional levels, this light-filled 3-bedroom, 2-bathroom cross-lease home delivers comfortable living spaces, an original double garage, and an easy-care, low-maintenance section complete with a private enclosed pergola retreat.\r\n\r\nFor astute buyers, visionary renovators, builders, and strategic land-bankers, this is the ultimate combination of prime location and untapped capital growth.\r\n\r\nProperty Highlights:\r\n\r\n* First Time Offered in 28 Years: A rare, tightly held deceased estate sale providing a clear path to ownership in a blue-chip North Shore pocket.\r\n\r\n* Functional Two-Level Layout: Features 3 well-proportioned bedrooms, 2 bathrooms, generous living zones, and substantial double garaging.\r\n\r\n* Private Outdoor Entertaining: Low-maintenance grounds complemented by a sheltered, enclosed pergola area designed for effortless, relaxed living.\r\n\r\n* Unbeatable Walk-Everywhere Lifestyle: Just a short, easy stroll to the golden sands of Takapuna Beach, with vibrant cafes, celebrated eateries, boutique shopping, supermarkets, and tranquil Lake Pupuke right on your doorstep.\r\n\r\n* Exceptional Connectivity & Schooling: Minutes to top-tier school zoning, Akoranga Busway Station, rapid SH1 motorway links, Smales Farm, and North Shore Hospital.\r\n\r\n* Significant Project & Value-Add Scope: Plaster construction with an original profile, being sold strictly on an \"as-is, where-is\" basis-allowing you to reclad, remodel, live in, or land-bank for the long term.\r\n\r\nOpportunities in this coveted Huron Street address are remarkably scarce. Bring your builder, complete your due diligence, and discover the extraordinary potential waiting to be unlocked.\r\n\r\nYour opportunity to secure central Takapuna starts here!",
   "photos": [
@@ -274,12 +274,6 @@
       "estimate_low": 1890466,
       "estimate_mid": 2004393,
       "estimate_high": 2118320
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 1899753,
-      "estimate_mid": 2014249,
-      "estimate_high": 2128744
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -440,6 +434,20 @@
   ],
   "comps": [
     {
+      "property_id": "af89f289-f4fb-4972-acd2-97ac647d33f4",
+      "address": "1/20 Huron Street, Takapuna, Auckland",
+      "sale_price": 1615000,
+      "sale_date": "2026-07-16T00:00:00+00:00",
+      "distance_km": 0.1,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1800000,
+      "estimate_mid": 1660000
+    },
+    {
       "property_id": "8904f082-b62c-43ec-83a8-5b462f1dfe41",
       "address": "103/16 Huron Street, Takapuna, Auckland",
       "sale_price": 1240000,
@@ -466,6 +474,20 @@
       "property_type": null,
       "cv": 830000,
       "estimate_mid": 720000
+    },
+    {
+      "property_id": "1e9a1a62-9eba-43f3-9c3a-dcb6365eede2",
+      "address": "1/15 Anzac Street, Takapuna, Auckland",
+      "sale_price": 950000,
+      "sale_date": "2026-07-20T00:00:00+00:00",
+      "distance_km": 0.58,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1100000,
+      "estimate_mid": 955000
     },
     {
       "property_id": "9ef549fa-4c42-4b89-b280-0b716faa6fed",
@@ -578,34 +600,6 @@
       "property_type": null,
       "cv": 1975000,
       "estimate_mid": 2310000
-    },
-    {
-      "property_id": "ad0f6167-8c3d-4754-a03b-107bc801f196",
-      "address": "2/7 Onepoto Road, Hauraki, Auckland",
-      "sale_price": 820000,
-      "sale_date": "2026-07-31T00:00:00+00:00",
-      "distance_km": 1.47,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 970000,
-      "estimate_mid": 835000
-    },
-    {
-      "property_id": "9ad93561-1377-412a-af9d-5d5c509f8ab5",
-      "address": "60 Jutland Road, Hauraki, Auckland",
-      "sale_price": 720000,
-      "sale_date": "2026-08-23T00:00:00+00:00",
-      "distance_km": 1.47,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 920000,
-      "estimate_mid": 965000
     }
   ],
   "valuation": {
@@ -629,19 +623,19 @@
         "name": "Nearby sold comparables",
         "range": "$1.74M – $1.87M",
         "low": 1743182,
-        "mid": 1805870,
+        "mid": 1797545,
         "high": 1872000,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "medium",
-        "n": 44,
+        "n": 40,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
-          "n": 44,
-          "n_eff": 7.43,
+          "n": 40,
+          "n_eff": 7.13,
           "radius_km": 3.0,
-          "median_ratio": 0.9261,
-          "iqr_ratio": 0.0713,
+          "median_ratio": 0.9218,
+          "iqr_ratio": 0.0717,
           "same_suburb": 24,
           "model_version": "comp-cv-v1"
         }

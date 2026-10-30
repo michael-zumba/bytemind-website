@@ -17,7 +17,7 @@
   "sale_method": "Deadline sale",
   "deadline_at": "2026-11-10T11:00:00+00:00",
   "listed_at": "2026-10-08T21:38:36.907000+00:00",
-  "days_on_market": 20,
+  "days_on_market": 21,
   "lat": -36.7464176,
   "lon": 174.7560052,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2334106312.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 4706468,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 3608000,
-  "comp_mid": 4164062,
+  "comp_low": 3553333,
+  "comp_mid": 4164950,
   "comp_high": 4555556,
   "comp_confidence": "high",
-  "comp_n": 78,
+  "comp_n": 67,
   "value_low": 4103329,
   "value_mid": 4404899,
   "value_high": 4706468,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 2,
-  "sale_pressure": 23.3,
+  "sale_pressure": 23.5,
   "sale_pressure_label": "low",
-  "model_low": 4105505,
-  "model_mid": 4516042,
-  "model_high": 4966174,
+  "model_low": 4117882,
+  "model_mid": 4506518,
+  "model_high": 4922590,
   "model_confidence": "high",
-  "text_signal_pct": 21.0564,
-  "description_index": 0.811051,
+  "text_signal_pct": 29.897,
+  "description_index": 1.068928,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -318,33 +318,52 @@
   ],
   "model": {
     "listing_id": 6170702287,
-    "low": 4105505,
-    "mid": 4516042,
-    "high": 4966174,
+    "low": 4117882,
+    "mid": 4506518,
+    "high": 4922590,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6170702287,
     "word_count": 270,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.3908,
-    "condition_renovation": 0.4635,
-    "views_waterfront": 0.1077,
-    "family_school": 0.5071,
+    "luxury": 0.3852,
+    "condition_renovation": 0.4627,
+    "views_waterfront": 0.107,
+    "family_school": 0.5085,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.1932,
-    "description_premium_pct": 21.0564,
-    "description_index": 0.811051,
+    "description_premium_pct": 29.897,
+    "description_index": 1.068928,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 4, \"condition_renovation\": 3, \"views_waterfront\": 1, \"family_school\": 8, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
+        "topic_id": 11,
+        "weight": 0.388607,
+        "label": "Resort amenities (pool / tennis / spa)",
+        "top_terms": [
+          "harbour",
+          "views",
+          "residence",
+          "scale",
+          "waterfront",
+          "expansive",
+          "pool",
+          "aucklands",
+          "architectural",
+          "extraordinary",
+          "city",
+          "privacy"
+        ]
+      },
+      {
         "topic_id": 5,
-        "weight": 0.394034,
+        "weight": 0.386999,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -356,66 +375,47 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "suburb normal",
           "normal",
+          "suburb normal",
           "normal intermediate"
         ]
       },
       {
-        "topic_id": 11,
-        "weight": 0.315999,
-        "label": "Resort amenities (pool / tennis / spa)",
-        "top_terms": [
-          "harbour",
-          "views",
-          "residence",
-          "waterfront",
-          "scale",
-          "city",
-          "aucklands",
-          "gulf",
-          "pool",
-          "expansive",
-          "extraordinary",
-          "island"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.266561,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "areas",
-          "living areas",
-          "entertaining",
-          "family living",
-          "multiple",
-          "outdoor",
-          "flexibility",
-          "multiple living",
-          "indoor",
-          "indoor outdoor",
-          "setting",
-          "pool"
-        ]
-      },
-      {
         "topic_id": 7,
-        "weight": 0.014637,
+        "weight": 0.131278,
         "label": "Parking, garden & section",
         "top_terms": [
           "parking",
-          "street",
-          "brick",
-          "street parking",
-          "single",
-          "fully",
           "college",
-          "garden",
-          "sunny",
           "room",
+          "street parking",
+          "street",
+          "double",
+          "plus",
+          "rangitoto college",
           "fenced",
-          "garage"
+          "fully",
+          "deck",
+          "years"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.093116,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "relaxed",
+          "friends",
+          "setting",
+          "entertaining",
+          "peaceful",
+          "morning",
+          "outdoor",
+          "life",
+          "welcoming",
+          "inviting",
+          "family living",
+          "flexibility"
         ]
       }
     ]
@@ -481,7 +481,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Designed by the late Sir Ian Athfield, The Cole House is a landmark residence of rare architectural significance, privately positioned on an extraordinary 4,025sqm (more or less) in sought-after Campbells Bay.\r\n\r\nOriginally commissioned for the Cole family in 1975, this iconic home showcases Athfield's unmistakable vision through its sculptural forms, bottle towers, porthole windows, dramatic ceiling heights and harmonious blend of cedar and concrete construction. Full of character and creativity, it is a residence that offers a living experience unlike any other.\r\n\r\nHidden amongst established native bush and mature gardens, the property delivers a resort-like atmosphere of privacy and tranquility. Expansive living spaces flow effortlessly to sun-drenched decks, lawns, heated swimming pool and spa, creating a setting that feels worlds away from the city.\r\n\r\nAccommodation is both substantial and flexible, offering four bedrooms and three bathrooms within the main residence, complemented by a separate studio with bathroom and kitchenette, ideal as guest accommodation, a fifth bedroom, or creative work-from-home space. Multiple living zones, including a mezzanine office, provide exceptional versatility for families and entertainers alike.\r\nExtensive recent upgrades, including a new cedar shingle roof, double-glazed cedar joinery and substantial cedar weatherboard replacement, ensuring this architectural icon is ready for many years to come.\r\n\r\nPositioned just moments from Campbells Bay Beach, local cafés, shops and recreational amenities, and within the coveted school zones for Campbells Bay Primary, Murrays Bay Intermediate, Rangitoto College, Westlake Boys' High School and Westlake Girls' High School.\r\n\r\nThe Cole House presents a once-in-a-generation opportunity to secure one of the North Shore's most unique and admired residences.",
   "photos": [
@@ -522,12 +522,6 @@
       "estimate_low": 4415458,
       "estimate_mid": 4544737,
       "estimate_high": 4674016
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 4364102,
-      "estimate_mid": 4542629,
-      "estimate_high": 4721157
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -875,21 +869,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$3.61M – $4.56M",
-        "low": 3608000,
-        "mid": 4164062,
+        "range": "$3.55M – $4.56M",
+        "low": 3553333,
+        "mid": 4164950,
         "high": 4555556,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "high",
-        "n": 78,
+        "n": 67,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 78,
-          "n_eff": 13.3,
+          "n": 67,
+          "n_eff": 12.05,
           "radius_km": 3.0,
-          "median_ratio": 1.0156,
-          "iqr_ratio": 0.2276,
+          "median_ratio": 1.0158,
+          "iqr_ratio": 0.2406,
           "same_suburb": 21,
           "model_version": "comp-cv-v1"
         }

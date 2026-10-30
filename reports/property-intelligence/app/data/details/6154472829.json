@@ -17,7 +17,7 @@
   "sale_method": "Deadline sale",
   "deadline_at": "2026-11-04T11:00:00+00:00",
   "listed_at": "2026-09-28T21:24:50.013000+00:00",
-  "days_on_market": 30,
+  "days_on_market": 31,
   "lat": -36.7569542,
   "lon": 174.760025,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2331964973.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1530449,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1312727,
-  "comp_mid": 1402260,
+  "comp_low": 1303723,
+  "comp_mid": 1447266,
   "comp_high": 1578056,
   "comp_confidence": "high",
-  "comp_n": 63,
+  "comp_n": 53,
   "value_low": 1361672,
   "value_mid": 1446060,
   "value_high": 1530449,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 5122,
-  "watchers": 168,
+  "view_count": 5176,
+  "watchers": 167,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T14:39:40.473723+00:00",
-  "days_since_last_change": 1.26,
+  "days_since_last_change": 2.14,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 6,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 2,
-  "sale_pressure": 25.0,
+  "sale_pressure": 25.2,
   "sale_pressure_label": "low",
-  "model_low": 1347663,
-  "model_mid": 1482426,
-  "model_high": 1630185,
+  "model_low": 1362362,
+  "model_mid": 1490939,
+  "model_high": 1628592,
   "model_confidence": "high",
-  "text_signal_pct": -4.8572,
-  "description_index": -0.211335,
+  "text_signal_pct": -5.0733,
+  "description_index": -0.212769,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -318,11 +318,11 @@
   ],
   "model": {
     "listing_id": 6154472829,
-    "low": 1347663,
-    "mid": 1482426,
-    "high": 1630185,
+    "low": 1362362,
+    "mid": 1490939,
+    "high": 1628592,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6154472829,
@@ -330,59 +330,40 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.1611,
-    "views_waterfront": 0.3368,
-    "family_school": 0.6608,
+    "condition_renovation": 0.1608,
+    "views_waterfront": 0.3347,
+    "family_school": 0.6627,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3271,
-    "description_premium_pct": -4.8572,
-    "description_index": -0.211335,
+    "description_premium_pct": -5.0733,
+    "description_index": -0.212769,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 3, \"family_school\": 10, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
-        "topic_id": 2,
-        "weight": 0.60719,
+        "topic_id": 6,
+        "weight": 0.761341,
         "label": "Family living & entertaining",
         "top_terms": [
-          "areas",
-          "living areas",
-          "entertaining",
-          "family living",
-          "multiple",
-          "outdoor",
-          "flexibility",
-          "multiple living",
-          "indoor",
-          "indoor outdoor",
-          "setting",
-          "pool"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.244449,
-        "label": "Family living & entertaining II",
-        "top_terms": [
-          "morning",
-          "coffee",
-          "friends",
-          "life",
           "relaxed",
-          "morning coffee",
-          "step",
-          "feels",
-          "sense",
-          "day",
-          "away",
-          "place"
+          "friends",
+          "setting",
+          "entertaining",
+          "peaceful",
+          "morning",
+          "outdoor",
+          "life",
+          "welcoming",
+          "inviting",
+          "family living",
+          "flexibility"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.111797,
+        "weight": 0.127986,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -391,17 +372,36 @@
           "land",
           "development",
           "subject",
-          "sqm",
-          "property",
           "existing",
+          "property",
+          "sqm",
           "housing",
-          "mixed",
-          "value"
+          "council",
+          "mixed"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.044666,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "parking",
+          "college",
+          "room",
+          "street parking",
+          "street",
+          "double",
+          "plus",
+          "rangitoto college",
+          "fenced",
+          "fully",
+          "deck",
+          "years"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.035057,
+        "weight": 0.030729,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -413,8 +413,8 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "suburb normal",
           "normal",
+          "suburb normal",
           "normal intermediate"
         ]
       }
@@ -513,7 +513,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Deadline sale: Closes on Thursday 5 November 2026 at 4:00PM  (unless sold prior)\r\n\r\nPrivately positioned in one of Castor Bay’s most desirable locations, this charming weatherboard home offers space, sunshine and relaxed coastal living on a generous 832m² freehold section.\r\n\r\nSet well back from the road and surrounded by established greenery, the property enjoys a wonderful sense of privacy, with a versatile layout offering three to four bedrooms and two separate living areas. Whether accommodating a growing family, teenagers, guests or working from home, there is flexibility here to suit a variety of lifestyles.\r\n\r\nAt the heart of the home, open-plan living and dining connect seamlessly to expansive, sun-soaked decks, creating the perfect setting for entertaining, outdoor dining or simply unwinding in the sunshine. Beyond, the lush native garden provides a peaceful natural backdrop, with plenty of space for children and pets to play and garden enthusiasts to enjoy.\r\n\r\nWarm and welcoming, the home combines generous proportions with comfortable family living, offering room for everyone to spread out while still enjoying those important moments together.\r\n\r\nThe location is equally appealing. Castor Bay Beach is nearby, while Milford and Takapuna provide an excellent choice of cafés, restaurants, shopping and everyday amenities. Auckland’s CBD is also easily accessible, and families will appreciate the sought-after local school zones.\r\n\r\nWith our vendors committed to their next move, this is an exciting opportunity to secure a substantial freehold property in one of the North Shore’s most tightly held coastal neighbourhoods.\r\n\r\nSpace, privacy, sunshine and an enviable coastal setting — discover the lifestyle that makes Castor Bay so special.\r\n\r\nCome and experience it for yourself.",
   "photos": [
@@ -554,12 +554,6 @@
       "estimate_low": 1371668,
       "estimate_mid": 1454331,
       "estimate_high": 1536993
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 1381058,
-      "estimate_mid": 1464292,
-      "estimate_high": 1547527
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -734,20 +728,6 @@
       "estimate_mid": 1820000
     },
     {
-      "property_id": "b36b7d47-eb4e-4e65-a0ce-df26680beb4d",
-      "address": "1/170 East Coast Road, Forrest Hill, Auckland",
-      "sale_price": 1650000,
-      "sale_date": "2026-09-16T00:00:00+00:00",
-      "distance_km": 0.64,
-      "bedrooms": 3,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1725000,
-      "estimate_mid": 1670000
-    },
-    {
       "property_id": "050bd531-cdd2-4437-a3b8-939fffb4ac46",
       "address": "14B Cloverly Crescent, Campbells Bay, Auckland",
       "sale_price": 1320000,
@@ -762,18 +742,18 @@
       "estimate_mid": 1320000
     },
     {
-      "property_id": "187692aa-2c2e-4190-93d9-fbffdad868b2",
-      "address": "1/20 William Souter Street, Forrest Hill, Auckland",
-      "sale_price": 1260000,
-      "sale_date": "2026-08-26T00:00:00+00:00",
+      "property_id": "39a7ca80-1a92-4f06-9c22-b81b749feb16",
+      "address": "1/98 Park Rise, Campbells Bay, Auckland",
+      "sale_price": 1495000,
+      "sale_date": "2026-08-13T00:00:00+00:00",
       "distance_km": 0.94,
-      "bedrooms": 4,
-      "bathrooms": null,
+      "bedrooms": 3,
+      "bathrooms": 2,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 575000,
-      "estimate_mid": 775000
+      "cv": 1350000,
+      "estimate_mid": 1490000
     },
     {
       "property_id": "1ac6a1ba-79f5-48b1-bc19-7bb1f75d3330",
@@ -804,20 +784,6 @@
       "estimate_mid": 1420000
     },
     {
-      "property_id": "39d85e85-54ad-4917-bb20-9bf847087a71",
-      "address": "2/100 East Coast Road, Forrest Hill, Auckland",
-      "sale_price": 950000,
-      "sale_date": "2026-10-01T00:00:00+00:00",
-      "distance_km": 1.23,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1025000,
-      "estimate_mid": 955000
-    },
-    {
       "property_id": "1fb79496-a64b-4d05-bc9a-c128be91b54e",
       "address": "6C Seaview Road, Milford, Auckland",
       "sale_price": 2041888,
@@ -830,20 +796,6 @@
       "property_type": null,
       "cv": 2075000,
       "estimate_mid": 2070000
-    },
-    {
-      "property_id": "543ceb03-e678-499f-9869-cc0427eaf984",
-      "address": "2/188 Forrest Hill Road, Forrest Hill, Auckland",
-      "sale_price": 900000,
-      "sale_date": "2026-09-11T00:00:00+00:00",
-      "distance_km": 1.27,
-      "bedrooms": 3,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 930000,
-      "estimate_mid": 920000
     },
     {
       "property_id": "1406ec74-6a8a-4e33-b8d8-7a42098e6e4d",
@@ -886,6 +838,48 @@
       "property_type": null,
       "cv": 1200000,
       "estimate_mid": 1490000
+    },
+    {
+      "property_id": "194ffb63-0e32-4286-891a-173ab14bbb7b",
+      "address": "16A Dallinghoe Crescent, Milford, Auckland",
+      "sale_price": 480000,
+      "sale_date": "2026-09-07T00:00:00+00:00",
+      "distance_km": 1.7,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1175000,
+      "estimate_mid": 500000
+    },
+    {
+      "property_id": "17ca0ba8-dfa5-4c18-8801-6e84c4f63d0e",
+      "address": "1/133 Nile Road, Milford, Auckland",
+      "sale_price": 1270000,
+      "sale_date": "2026-09-03T00:00:00+00:00",
+      "distance_km": 1.72,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1000000,
+      "estimate_mid": 1020000
+    },
+    {
+      "property_id": "1061e044-107f-4322-9f79-69c2e33225cb",
+      "address": "16D Dallinghoe Crescent, Milford, Auckland",
+      "sale_price": 670500,
+      "sale_date": "2026-09-08T00:00:00+00:00",
+      "distance_km": 1.72,
+      "bedrooms": 2,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1000000,
+      "estimate_mid": 765000
     }
   ],
   "valuation": {
@@ -907,22 +901,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.31M – $1.58M",
-        "low": 1312727,
-        "mid": 1402260,
+        "range": "$1.30M – $1.58M",
+        "low": 1303723,
+        "mid": 1447266,
         "high": 1578056,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "high",
-        "n": 63,
+        "n": 53,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 63,
-          "n_eff": 10.38,
+          "n": 53,
+          "n_eff": 8.16,
           "radius_km": 3.0,
-          "median_ratio": 0.984,
-          "iqr_ratio": 0.1892,
-          "same_suburb": 10,
+          "median_ratio": 1.0156,
+          "iqr_ratio": 0.1896,
+          "same_suburb": 0,
           "model_version": "comp-cv-v1"
         }
       },

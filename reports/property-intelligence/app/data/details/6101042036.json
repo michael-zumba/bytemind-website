@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-08-25T21:22:40.017000+00:00",
-  "days_on_market": 64,
+  "days_on_market": 65,
   "lat": -36.7623711,
   "lon": 174.7602997,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2325435089.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 522615,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 497455,
-  "comp_mid": 525789,
-  "comp_high": 580065,
-  "comp_confidence": "high",
-  "comp_n": 61,
+  "comp_low": 494043,
+  "comp_mid": 531383,
+  "comp_high": 587368,
+  "comp_confidence": "medium",
+  "comp_n": 51,
   "value_low": 464981,
   "value_mid": 493798,
   "value_high": 522615,
@@ -51,8 +51,8 @@
   "ask_gap": -18798,
   "ask_gap_pct": -0.0381,
   "deal_gap": 0.0381,
-  "view_count": 6570,
-  "watchers": 188,
+  "view_count": 6603,
+  "watchers": 189,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "crosslease",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T14:39:28.710163+00:00",
-  "days_since_last_change": 1.26,
+  "days_since_last_change": 2.14,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 7,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 60.7,
+  "sale_pressure": 60.8,
   "sale_pressure_label": "medium",
-  "model_low": 495097,
-  "model_mid": 544605,
-  "model_high": 598888,
+  "model_low": 491731,
+  "model_mid": 538140,
+  "model_high": 587824,
   "model_confidence": "medium",
-  "text_signal_pct": -7.953,
-  "description_index": -0.351738,
+  "text_signal_pct": -3.0149,
+  "description_index": -0.125103,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -318,52 +318,71 @@
   ],
   "model": {
     "listing_id": 6101042036,
-    "low": 495097,
-    "mid": 544605,
-    "high": 598888,
+    "low": 491731,
+    "mid": 538140,
+    "high": 587824,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6101042036,
     "word_count": 196,
     "exclamations": 1,
     "urgency": 0.0,
-    "luxury": 0.4038,
-    "condition_renovation": 0.2128,
+    "luxury": 0.398,
+    "condition_renovation": 0.2124,
     "views_waterfront": 0.0,
-    "family_school": 0.1746,
-    "investment": 0.4671,
+    "family_school": 0.1751,
+    "investment": 0.4641,
     "risk": 0.2768,
     "readability": 0.5982,
-    "description_premium_pct": -7.953,
-    "description_index": -0.351738,
+    "description_premium_pct": -3.0149,
+    "description_index": -0.125103,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 3, \"condition_renovation\": 1, \"views_waterfront\": 0, \"family_school\": 2, \"investment\": 3, \"risk\": 1}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
+        "topic_id": 10,
+        "weight": 0.42911,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low",
+          "low maintenance",
+          "unit",
+          "care",
+          "easy care",
+          "sunny",
+          "brick",
+          "buyers",
+          "downsizers",
+          "single",
+          "lock"
+        ]
+      },
+      {
         "topic_id": 4,
-        "weight": 0.422212,
+        "weight": 0.242613,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
-          "lock",
-          "leave",
-          "lock leave",
           "car",
+          "leave",
+          "lock",
           "bedroom apartment",
-          "bedroom",
-          "restaurants",
-          "car park",
+          "lock leave",
           "complex",
+          "restaurants",
+          "residents",
+          "car park",
           "balcony",
-          "car parks"
+          "pool"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.21921,
+        "weight": 0.202648,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -375,47 +394,28 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "suburb normal",
           "normal",
+          "suburb normal",
           "normal intermediate"
         ]
       },
       {
-        "topic_id": 7,
-        "weight": 0.101601,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "parking",
-          "street",
-          "brick",
-          "street parking",
-          "single",
-          "fully",
-          "college",
-          "garden",
-          "sunny",
-          "room",
-          "fenced",
-          "garage"
-        ]
-      },
-      {
         "topic_id": 11,
-        "weight": 0.099677,
+        "weight": 0.098225,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "harbour",
           "views",
           "residence",
-          "waterfront",
           "scale",
-          "city",
-          "aucklands",
-          "gulf",
-          "pool",
+          "waterfront",
           "expansive",
+          "pool",
+          "aucklands",
+          "architectural",
           "extraordinary",
-          "island"
+          "city",
+          "privacy"
         ]
       }
     ]
@@ -521,7 +521,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "The High Court has ordered this sale. This is an unbelievable opportunity to add a high-yield unit to your portfolio.\r\n\r\nHave you always thought a property in Castor Bay was beyond your budget? Well, think again! This affordable, adorable one-bedroom home may be just what you’ve been waiting for, small and exclusive resort-style living with a pool.\r\n\r\nWestlake school zones. Castor Bay. What are you waiting for?\r\n\r\n• Single level\r\n• Lock-up-and-leave\r\n• Tastefully presented throughout\r\n• Spacious living with a modern, stylish kitchen\r\n• Generous bedroom with large wardrobe\r\n• Updated bathroom\r\n\r\nLocated in one of the North Shore’s prettiest and most sought-after suburbs, this home is within easy reach of Castor Bay beaches, Milford, Takapuna and city transport links.\r\n\r\nEnjoy privacy and security in this small, exclusive complex of just 15 residences, with a swimming pool and well-maintained grounds.\r\n\r\nFreehold (Cross Lease) title, with a very modest annual body corporate fee that includes building insurance and maintenance of the grounds and pool. Rates $2,475.84.\r\n\r\nFor the astute investor, the value is obvious. For a first-home buyer, this could be your opportunity to get onto the property ladder and into Castor Bay.\r\n\r\nAffordable Castor Bay living. Westlake school zones. Resort-style facilities.\r\n\r\nWhat are you waiting for?",
   "photos": [
@@ -548,12 +548,6 @@
       "estimate_low": 490114,
       "estimate_mid": 519650,
       "estimate_high": 549186
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 494351,
-      "estimate_mid": 524145,
-      "estimate_high": 553938
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -714,18 +708,18 @@
   ],
   "comps": [
     {
-      "property_id": "b36b7d47-eb4e-4e65-a0ce-df26680beb4d",
-      "address": "1/170 East Coast Road, Forrest Hill, Auckland",
-      "sale_price": 1650000,
-      "sale_date": "2026-09-16T00:00:00+00:00",
-      "distance_km": 0.35,
+      "property_id": "7f813c93-d2ef-463f-8ef3-2a77bcd1d47d",
+      "address": "1A Prestige Place, Castor Bay, Auckland",
+      "sale_price": 2150000,
+      "sale_date": "2026-08-11T00:00:00+00:00",
+      "distance_km": 0.62,
       "bedrooms": 3,
-      "bathrooms": 3,
+      "bathrooms": 2,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1725000,
-      "estimate_mid": 1670000
+      "cv": 2350000,
+      "estimate_mid": 1930000
     },
     {
       "property_id": "1fb79496-a64b-4d05-bc9a-c128be91b54e",
@@ -756,20 +750,6 @@
       "estimate_mid": 1820000
     },
     {
-      "property_id": "39d85e85-54ad-4917-bb20-9bf847087a71",
-      "address": "2/100 East Coast Road, Forrest Hill, Auckland",
-      "sale_price": 950000,
-      "sale_date": "2026-10-01T00:00:00+00:00",
-      "distance_km": 0.69,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1025000,
-      "estimate_mid": 955000
-    },
-    {
       "property_id": "28a0d6b7-5383-4842-8b08-35964f7d7882",
       "address": "3A Holiday Road, Milford, Auckland",
       "sale_price": 11000000,
@@ -782,20 +762,6 @@
       "property_type": null,
       "cv": 8250000,
       "estimate_mid": 8410000
-    },
-    {
-      "property_id": "543ceb03-e678-499f-9869-cc0427eaf984",
-      "address": "2/188 Forrest Hill Road, Forrest Hill, Auckland",
-      "sale_price": 900000,
-      "sale_date": "2026-09-11T00:00:00+00:00",
-      "distance_km": 1.09,
-      "bedrooms": 3,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 930000,
-      "estimate_mid": 920000
     },
     {
       "property_id": "194ffb63-0e32-4286-891a-173ab14bbb7b",
@@ -826,20 +792,6 @@
       "estimate_mid": 765000
     },
     {
-      "property_id": "187692aa-2c2e-4190-93d9-fbffdad868b2",
-      "address": "1/20 William Souter Street, Forrest Hill, Auckland",
-      "sale_price": 1260000,
-      "sale_date": "2026-08-26T00:00:00+00:00",
-      "distance_km": 1.2,
-      "bedrooms": 4,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 575000,
-      "estimate_mid": 775000
-    },
-    {
       "property_id": "17ca0ba8-dfa5-4c18-8801-6e84c4f63d0e",
       "address": "1/133 Nile Road, Milford, Auckland",
       "sale_price": 1270000,
@@ -854,18 +806,18 @@
       "estimate_mid": 1020000
     },
     {
-      "property_id": "afd8da77-f0e5-43a0-b229-331ec5a0800b",
-      "address": "2/121 Forrest Hill Road, Forrest Hill, Auckland",
-      "sale_price": 1360000,
-      "sale_date": "2026-09-03T00:00:00+00:00",
-      "distance_km": 1.26,
-      "bedrooms": 4,
-      "bathrooms": 2,
+      "property_id": "709ff01c-36c7-4152-9c3f-105213eec309",
+      "address": "3/6 Corunna Road, Milford, Auckland",
+      "sale_price": 767000,
+      "sale_date": "2026-08-12T00:00:00+00:00",
+      "distance_km": 1.47,
+      "bedrooms": 2,
+      "bathrooms": 1,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1150000,
-      "estimate_mid": 1340000
+      "cv": 780000,
+      "estimate_mid": 760000
     },
     {
       "property_id": "39a7ca80-1a92-4f06-9c22-b81b749feb16",
@@ -880,6 +832,48 @@
       "property_type": null,
       "cv": 1350000,
       "estimate_mid": 1490000
+    },
+    {
+      "property_id": "050bd531-cdd2-4437-a3b8-939fffb4ac46",
+      "address": "14B Cloverly Crescent, Campbells Bay, Auckland",
+      "sale_price": 1320000,
+      "sale_date": "2026-08-27T00:00:00+00:00",
+      "distance_km": 1.49,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1500000,
+      "estimate_mid": 1320000
+    },
+    {
+      "property_id": "f585aa31-6a1e-4c4c-b176-adb44deeead9",
+      "address": "2/3 Quebec Road, Milford, Auckland",
+      "sale_price": 980000,
+      "sale_date": "2026-09-14T00:00:00+00:00",
+      "distance_km": 1.53,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1025000,
+      "estimate_mid": 980000
+    },
+    {
+      "property_id": "f6b2966d-3dcf-445c-9d7d-5310d21a62ad",
+      "address": "2/70 Nile Road, Milford, Auckland",
+      "sale_price": 750000,
+      "sale_date": "2026-08-31T00:00:00+00:00",
+      "distance_km": 1.55,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 750000,
+      "estimate_mid": 805000
     }
   ],
   "valuation": {
@@ -901,22 +895,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$497K – $580K",
-        "low": 497455,
-        "mid": 525789,
-        "high": 580065,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
-        "confidence": "high",
-        "n": 61,
+        "range": "$494K – $587K",
+        "low": 494043,
+        "mid": 531383,
+        "high": 587368,
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
+        "confidence": "medium",
+        "n": 51,
         "basis": {
-          "confidence": "high",
+          "confidence": "medium",
           "source": "sold_comps",
-          "n": 61,
-          "n_eff": 9.97,
+          "n": 51,
+          "n_eff": 7.39,
           "radius_km": 3.0,
-          "median_ratio": 0.9737,
-          "iqr_ratio": 0.1571,
-          "same_suburb": 10,
+          "median_ratio": 0.984,
+          "iqr_ratio": 0.1756,
+          "same_suburb": 0,
           "model_version": "comp-cv-v1"
         }
       },

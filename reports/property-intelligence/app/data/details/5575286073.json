@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2025-10-14T22:25:26.463000+00:00",
-  "days_on_market": 379,
+  "days_on_market": 380,
   "lat": -36.8519466,
   "lon": 174.8437591,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2329286451.jpg",
@@ -63,7 +63,7 @@
   "change_signal": "price increase",
   "change_count": 3,
   "last_change_at": "2026-10-28T15:26:24.315840+00:00",
-  "days_since_last_change": 1.23,
+  "days_since_last_change": 2.1,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 1,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 90.0,
   "sale_pressure_label": "high",
-  "model_low": 734664,
-  "model_mid": 808128,
-  "model_high": 888677,
+  "model_low": 741329,
+  "model_mid": 811294,
+  "model_high": 886198,
   "model_confidence": "high",
-  "text_signal_pct": 0.3243,
-  "description_index": 0.013744,
+  "text_signal_pct": -0.1905,
+  "description_index": -0.007792,
   "events_count": 3,
   "last_event": "price_change",
   "schools": [
@@ -278,90 +278,71 @@
   ],
   "model": {
     "listing_id": 5575286073,
-    "low": 734664,
-    "mid": 808128,
-    "high": 888677,
+    "low": 741329,
+    "mid": 811294,
+    "high": 886198,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5575286073,
     "word_count": 161,
     "exclamations": 0,
-    "urgency": 0.4583,
+    "urgency": 0.4517,
     "luxury": 0.0,
-    "condition_renovation": 0.2591,
-    "views_waterfront": 0.1806,
-    "family_school": 0.3189,
-    "investment": 0.1896,
+    "condition_renovation": 0.2586,
+    "views_waterfront": 0.1795,
+    "family_school": 0.3198,
+    "investment": 0.1883,
     "risk": 0.0,
     "readability": 0.3089,
-    "description_premium_pct": 0.3243,
-    "description_index": 0.013744,
+    "description_premium_pct": -0.1905,
+    "description_index": -0.007792,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 1, \"family_school\": 3, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
+        "topic_id": 10,
+        "weight": 0.392861,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low",
+          "low maintenance",
+          "unit",
+          "care",
+          "easy care",
+          "sunny",
+          "brick",
+          "buyers",
+          "downsizers",
+          "single",
+          "lock"
+        ]
+      },
+      {
         "topic_id": 4,
-        "weight": 0.50912,
+        "weight": 0.358015,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
-          "lock",
-          "leave",
-          "lock leave",
           "car",
+          "leave",
+          "lock",
           "bedroom apartment",
-          "bedroom",
-          "restaurants",
-          "car park",
+          "lock leave",
           "complex",
+          "restaurants",
+          "residents",
+          "car park",
           "balcony",
-          "car parks"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.204394,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "parking",
-          "street",
-          "brick",
-          "street parking",
-          "single",
-          "fully",
-          "college",
-          "garden",
-          "sunny",
-          "room",
-          "fenced",
-          "garage"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.120906,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "areas",
-          "living areas",
-          "entertaining",
-          "family living",
-          "multiple",
-          "outdoor",
-          "flexibility",
-          "multiple living",
-          "indoor",
-          "indoor outdoor",
-          "setting",
           "pool"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.069088,
+        "weight": 0.070451,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -370,12 +351,31 @@
           "land",
           "development",
           "subject",
-          "sqm",
-          "property",
           "existing",
+          "property",
+          "sqm",
           "housing",
-          "mixed",
-          "value"
+          "council",
+          "mixed"
+        ]
+      },
+      {
+        "topic_id": 11,
+        "weight": 0.058777,
+        "label": "Resort amenities (pool / tennis / spa)",
+        "top_terms": [
+          "harbour",
+          "views",
+          "residence",
+          "scale",
+          "waterfront",
+          "expansive",
+          "pool",
+          "aucklands",
+          "architectural",
+          "extraordinary",
+          "city",
+          "privacy"
         ]
       }
     ]
@@ -452,14 +452,14 @@
     "first_description_change_at": null,
     "last_description_change_at": null,
     "days_to_first_change": 4.34,
-    "days_since_last_change": 2.24,
+    "days_since_last_change": 3.12,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "set",
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Perfectly positioned just one street back from Kohimarama Beach, this immaculate apartment offers an unbeatable lock-and-leave lifestyle close to popular waterfront cafés, Madills Farm, and local amenities. \r\n\r\nSeamless indoor-outdoor flow leads directly to your own private garden lawn, creating a serene, pet-friendly sanctuary perfect for weekend entertaining or relaxing after a quick match at the adjacent Kohimarama Tennis and Bowling Clubs.\r\n\r\nFlexibility is at the heart of this residence, currently configured as a spacious single-bedroom layout with the effortless option to adapt into a two-bedroom setup to match your evolving lifestyle needs. Complete with two coveted off-street car parks and easy public transport access, it presents an affordable entry point for first-home buyers, active downsizers, or savvy investors looking for a high-demand address. \r\n\r\nWith motivated vendors ready to move onto their next chapter, this is the ideal window of opportunity to make a competitive move on a prime piece of real estate.\r\n\r\nVisit us at the open homes this weekend or contact John or Antonia to arrange a suitable viewing time during the week.",
   "photos": [
@@ -490,12 +490,6 @@
       "estimate_low": 784568,
       "estimate_mid": 831849,
       "estimate_high": 879130
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 769493,
-      "estimate_mid": 815870,
-      "estimate_high": 862246
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -847,14 +841,14 @@
         "low": 778179,
         "mid": 869434,
         "high": 918000,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "high",
         "n": 83,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 83,
-          "n_eff": 13.75,
+          "n_eff": 13.71,
           "radius_km": 3.0,
           "median_ratio": 0.966,
           "iqr_ratio": 0.1608,

@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-11-04T21:00:00+00:00",
   "listed_at": "2026-10-05T13:34:40.370000+00:00",
-  "days_on_market": 24,
+  "days_on_market": 25,
   "lat": -36.7931137,
   "lon": 174.7689819,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333474925.jpg",
@@ -33,7 +33,7 @@
   "comp_mid": 838303,
   "comp_high": 873600,
   "comp_confidence": "medium",
-  "comp_n": 40,
+  "comp_n": 38,
   "value_low": 745849,
   "value_mid": 792072,
   "value_high": 838295,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2565,
-  "watchers": 99,
+  "view_count": 2604,
+  "watchers": 98,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unit title",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:35:12.844885+00:00",
-  "days_since_last_change": 1.22,
+  "days_since_last_change": 2.1,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 8,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 4.0,
+  "sale_pressure": 4.2,
   "sale_pressure_label": "low",
-  "model_low": 800444,
-  "model_mid": 880486,
-  "model_high": 968248,
+  "model_low": 809088,
+  "model_mid": 885447,
+  "model_high": 967198,
   "model_confidence": "medium",
-  "text_signal_pct": 19.1718,
-  "description_index": 0.744457,
+  "text_signal_pct": 13.3908,
+  "description_index": 0.513559,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -278,33 +278,52 @@
   ],
   "model": {
     "listing_id": 6165209264,
-    "low": 800444,
-    "mid": 880486,
-    "high": 968248,
+    "low": 809088,
+    "mid": 885447,
+    "high": 967198,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6165209264,
     "word_count": 261,
     "exclamations": 0,
-    "urgency": 0.2827,
-    "luxury": 0.2021,
-    "condition_renovation": 0.4795,
-    "views_waterfront": 0.557,
-    "family_school": 0.2623,
+    "urgency": 0.2786,
+    "luxury": 0.1992,
+    "condition_renovation": 0.4786,
+    "views_waterfront": 0.5536,
+    "family_school": 0.263,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4027,
-    "description_premium_pct": 19.1718,
-    "description_index": 0.744457,
+    "description_premium_pct": 13.3908,
+    "description_index": 0.513559,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 2, \"condition_renovation\": 3, \"views_waterfront\": 5, \"family_school\": 4, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
+        "topic_id": 10,
+        "weight": 0.304672,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low",
+          "low maintenance",
+          "unit",
+          "care",
+          "easy care",
+          "sunny",
+          "brick",
+          "buyers",
+          "downsizers",
+          "single",
+          "lock"
+        ]
+      },
+      {
         "topic_id": 5,
-        "weight": 0.252,
+        "weight": 0.265934,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -316,66 +335,47 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "suburb normal",
           "normal",
+          "suburb normal",
           "normal intermediate"
         ]
       },
       {
-        "topic_id": 7,
-        "weight": 0.242507,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "parking",
-          "street",
-          "brick",
-          "street parking",
-          "single",
-          "fully",
-          "college",
-          "garden",
-          "sunny",
-          "room",
-          "fenced",
-          "garage"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.172553,
-        "label": "Family living & entertaining II",
-        "top_terms": [
-          "morning",
-          "coffee",
-          "friends",
-          "life",
-          "relaxed",
-          "morning coffee",
-          "step",
-          "feels",
-          "sense",
-          "day",
-          "away",
-          "place"
-        ]
-      },
-      {
         "topic_id": 11,
-        "weight": 0.117966,
+        "weight": 0.129538,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "harbour",
           "views",
           "residence",
-          "waterfront",
           "scale",
-          "city",
-          "aucklands",
-          "gulf",
-          "pool",
+          "waterfront",
           "expansive",
+          "pool",
+          "aucklands",
+          "architectural",
           "extraordinary",
-          "island"
+          "city",
+          "privacy"
+        ]
+      },
+      {
+        "topic_id": 3,
+        "weight": 0.109736,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "premium",
+          "luxury",
+          "appliances",
+          "designer",
+          "year",
+          "finishes",
+          "sophisticated",
+          "designer kitchen",
+          "design",
+          "residence",
+          "quality",
+          "lighting"
         ]
       }
     ]
@@ -489,7 +489,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Auction: 8-12 The Promenade, Takapuna on Thursday 5 November 2026 at 10:00AM  (unless sold prior)\r\n\r\nUniquely positioned at the end of a quiet cul-de-sac, this beautifully renovated 2-bedroom brick and tile end unit offers peace, privacy and an exceptional Central Takapuna lifestyle.\r\n\r\nFrom the moment you step inside the open plan living you will experience the warmth of the polished timber flooring and be captivated by the surrounding marine environment. With unobstructed views that extend across the coastal margin to Auckland’s CBD, this is an outlook that can never be built out.\r\n\r\nThe home is surrounded by established greenery and abundant native birdlife, creating a wonderful tranquil setting despite being right in the heart of Takapuna.\r\n\r\nThe beautiful kitchen features soft close American Oak cabinetry, engineered-stone benchtops and generous storage. Its seamless connection with the living area makes it perfect for entertaining while enjoying the engaging coastal and city views.\r\n\r\nThere are two generously sized bedrooms and a fully renovated bathroom, along with extensive basement workshop and storage space.\r\n\r\nSituated in the TNIS, Takapuna Grammar and Westlake Girls’ High School Zones, the amenities here are second to none. Fabulous Takapuna Beach and the shopping precinct are just a 5-minute walk away, and public transport located at the top of the street will take you to the CBD in under 12 minutes, even during peak-hour periods.\r\n\r\nIf you are looking for an entry-level property offering style, thoughtful design and an exceptional location in a truly unique coastal setting, then look no further. Our vendor is motivated and this property is seriously for sale – either prior to or on auction day.\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -524,12 +524,6 @@
       "estimate_low": 791807,
       "estimate_mid": 839524,
       "estimate_high": 887242
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 791554,
-      "estimate_mid": 839260,
-      "estimate_high": 886966
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -760,6 +754,20 @@
       "estimate_mid": 955000
     },
     {
+      "property_id": "6a09f092-a9f9-46c2-9c71-c13102d53dc5",
+      "address": "8A Ewen Street, Takapuna, Auckland",
+      "sale_price": 1935000,
+      "sale_date": "2026-07-02T00:00:00+00:00",
+      "distance_km": 0.83,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 2425000,
+      "estimate_mid": 2360000
+    },
+    {
       "property_id": "9ef549fa-4c42-4b89-b280-0b716faa6fed",
       "address": "1/3 Dominion Street, Takapuna, Auckland",
       "sale_price": 1240000,
@@ -830,32 +838,18 @@
       "estimate_mid": 1400000
     },
     {
-      "property_id": "6b8baf29-3c5c-4eff-9a70-4a702cbcc0b3",
-      "address": "40/15 Puriri Street, Takapuna, Auckland",
-      "sale_price": 435000,
-      "sale_date": "2026-07-29T00:00:00+00:00",
-      "distance_km": 1.11,
-      "bedrooms": 1,
+      "property_id": "44aa1eeb-e4a0-4aff-b9bd-465dc2c98dd0",
+      "address": "2/1 Ngaio Street, Takapuna, Auckland",
+      "sale_price": 920000,
+      "sale_date": "2026-06-28T00:00:00+00:00",
+      "distance_km": 1.09,
+      "bedrooms": 2,
       "bathrooms": 1,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 450000,
-      "estimate_mid": 440000
-    },
-    {
-      "property_id": "85230b45-31e4-419e-a289-940d8762432b",
-      "address": "23/15 Puriri Street, Takapuna, Auckland",
-      "sale_price": 456000,
-      "sale_date": "2026-08-05T00:00:00+00:00",
-      "distance_km": 1.11,
-      "bedrooms": 1,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 475000,
-      "estimate_mid": 460000
+      "cv": 1025000,
+      "estimate_mid": 925000
     }
   ],
   "valuation": {
@@ -881,14 +875,14 @@
         "low": 793283,
         "mid": 838303,
         "high": 873600,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "medium",
-        "n": 40,
+        "n": 38,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
-          "n": 40,
-          "n_eff": 6.95,
+          "n": 38,
+          "n_eff": 6.81,
           "radius_km": 3.0,
           "median_ratio": 0.9212,
           "iqr_ratio": 0.0958,

@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-08-25T20:56:34.847000+00:00",
-  "days_on_market": 64,
+  "days_on_market": 65,
   "lat": -36.6875636,
   "lon": 174.738294,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338066664.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2068,
+  "view_count": 2076,
   "watchers": 37,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T14:41:41.807216+00:00",
-  "days_since_last_change": 1.26,
+  "days_since_last_change": 2.14,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 1,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 40.7,
+  "sale_pressure": 40.8,
   "sale_pressure_label": "medium",
-  "model_low": 1768019,
-  "model_mid": 1944816,
-  "model_high": 2138663,
+  "model_low": 1780091,
+  "model_mid": 1948092,
+  "model_high": 2127953,
   "model_confidence": "high",
-  "text_signal_pct": -20.7772,
-  "description_index": -0.988555,
+  "text_signal_pct": -20.2703,
+  "description_index": -0.92572,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6101012056,
-    "low": 1768019,
-    "mid": 1944816,
-    "high": 2138663,
+    "low": 1780091,
+    "mid": 1948092,
+    "high": 2127953,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6101012056,
@@ -301,20 +301,20 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.1555,
-    "family_school": 0.6406,
+    "views_waterfront": 0.1545,
+    "family_school": 0.6425,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4399,
-    "description_premium_pct": -20.7772,
-    "description_index": -0.988555,
+    "description_premium_pct": -20.2703,
+    "description_index": -0.92572,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 1, \"family_school\": 7, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
         "topic_id": 0,
-        "weight": 0.499888,
+        "weight": 0.52231,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -322,60 +322,41 @@
           "walk wardrobe",
           "bathroom",
           "suite",
-          "lounge",
-          "master",
           "level",
+          "master",
+          "lounge",
           "separate",
-          "master suite",
           "upstairs",
+          "master suite",
           "walk"
         ]
       },
       {
-        "topic_id": 2,
-        "weight": 0.138903,
-        "label": "Family living & entertaining",
+        "topic_id": 7,
+        "weight": 0.155445,
+        "label": "Parking, garden & section",
         "top_terms": [
-          "areas",
-          "living areas",
-          "entertaining",
-          "family living",
-          "multiple",
-          "outdoor",
-          "flexibility",
-          "multiple living",
-          "indoor",
-          "indoor outdoor",
-          "setting",
-          "pool"
-        ]
-      },
-      {
-        "topic_id": 9,
-        "weight": 0.135851,
-        "label": "Coastal village & park proximity",
-        "top_terms": [
-          "park",
-          "regional park",
-          "regional",
-          "village",
-          "walking",
-          "suburb college",
-          "suburb village",
+          "parking",
           "college",
-          "distance",
-          "walking distance",
-          "suburb regional",
-          "centre"
+          "room",
+          "street parking",
+          "street",
+          "double",
+          "plus",
+          "rangitoto college",
+          "fenced",
+          "fully",
+          "deck",
+          "years"
         ]
       },
       {
-        "topic_id": 10,
-        "weight": 0.106633,
+        "topic_id": 2,
+        "weight": 0.148118,
         "label": "New build / brand-new quality",
         "top_terms": [
-          "brand new",
           "brand",
+          "brand new",
           "new",
           "modern",
           "quality",
@@ -383,9 +364,28 @@
           "standalone",
           "bedrooms bathrooms",
           "homes",
-          "maintenance",
+          "sqm floor",
           "floor area",
-          "sqm floor"
+          "sqm"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.105773,
+        "label": "Coastal village & park proximity",
+        "top_terms": [
+          "park",
+          "regional park",
+          "regional",
+          "village",
+          "suburb college",
+          "suburb village",
+          "suburb regional",
+          "walking",
+          "college",
+          "community",
+          "centre",
+          "distance"
         ]
       }
     ]
@@ -443,7 +443,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Discover the versatility and space of this beautifully designed home in the sought-after Long Bay area. Offering 4 bedrooms plus a versatile office space with the potential to be used as an additional bedroom, offering flexibility for growing families or guests, or those working from home.\r\n\r\n* Ground floor: Separate office/multipurpose room + lounge + bathroom, with its own access - a fantastic flexible space for work from home, teenagers, extended family or guests. Double garaging with internal access.\r\n\r\n* First floor: Open-plan kitchen, dining and family living flowing seamlessly to the outdoor deck, plus a separate living room opening onto the balcony. There is one master bedroom with its own ensuite on this level, as well as a guest toilet.\r\n\r\n* Second floor: 3 bedrooms, 2 bathrooms including another master ensuite, plus an additional study/living area.\r\n\r\nPerfectly positioned in sought-after Long Bay, you'll be just minutes from Long Bay Beach, Ashley Reserve, Long Bay College, Long Bay Primary School, New World, local cafes, and public transport. With a sunny north-facing aspect and outstanding versatility, this is a home designed to adapt to your family's changing needs. \r\n\r\nContact Fiona at 021 0292 9309 or Iris at 027 2797 990 to arrange a viewing now!",
   "photos": [
@@ -484,12 +484,6 @@
       "estimate_low": 1673261,
       "estimate_mid": 1774099,
       "estimate_high": 1874936
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 1680091,
-      "estimate_mid": 1781348,
-      "estimate_high": 1882605
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -841,14 +835,14 @@
         "low": 1695388,
         "mid": 1813413,
         "high": 1887317,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "high",
         "n": 53,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 53,
-          "n_eff": 9.66,
+          "n_eff": 9.64,
           "radius_km": 3.0,
           "median_ratio": 0.9937,
           "iqr_ratio": 0.1058,

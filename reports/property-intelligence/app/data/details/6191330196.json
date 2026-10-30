@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-11-10T20:30:00+00:00",
   "listed_at": "2026-10-21T23:00:52.063000+00:00",
-  "days_on_market": 7,
+  "days_on_market": 8,
   "lat": -36.7448616,
   "lon": 174.7488403,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2336709957.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 2279716,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1989894,
-  "comp_mid": 2228421,
+  "comp_low": 1914000,
+  "comp_mid": 2237000,
   "comp_high": 2439107,
   "comp_confidence": "high",
-  "comp_n": 83,
+  "comp_n": 73,
   "value_low": 2028310,
   "value_mid": 2154013,
   "value_high": 2279716,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:34:06.285705+00:00",
-  "days_since_last_change": 1.22,
+  "days_since_last_change": 2.1,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 1.2,
+  "sale_pressure": 1.3,
   "sale_pressure_label": "low",
-  "model_low": 1990935,
-  "model_mid": 2190022,
-  "model_high": 2408310,
+  "model_low": 2008009,
+  "model_mid": 2197520,
+  "model_high": 2400410,
   "model_confidence": "high",
-  "text_signal_pct": -10.349,
-  "description_index": -0.463686,
+  "text_signal_pct": -1.0705,
+  "description_index": -0.043984,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6191330196,
-    "low": 1990935,
-    "mid": 2190022,
-    "high": 2408310,
+    "low": 2008009,
+    "mid": 2197520,
+    "high": 2400410,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6191330196,
@@ -300,40 +300,21 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.3447,
-    "views_waterfront": 0.4806,
-    "family_school": 0.99,
+    "condition_renovation": 0.3441,
+    "views_waterfront": 0.4777,
+    "family_school": 0.9929,
     "investment": 1.0,
     "risk": 0.0,
     "readability": 0.4653,
-    "description_premium_pct": -10.349,
-    "description_index": -0.463686,
+    "description_premium_pct": -1.0705,
+    "description_index": -0.043984,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 7, \"investment\": 4, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
-        "topic_id": 8,
-        "weight": 0.346221,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "sea",
-          "sea views",
-          "views",
-          "elevated",
-          "rangitoto",
-          "rangitoto college",
-          "gulf",
-          "hauraki gulf",
-          "hauraki",
-          "spectacular",
-          "panoramic",
-          "living areas"
-        ]
-      },
-      {
         "topic_id": 5,
-        "weight": 0.278707,
+        "weight": 0.275274,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -345,14 +326,52 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "suburb normal",
           "normal",
+          "suburb normal",
           "normal intermediate"
         ]
       },
       {
+        "topic_id": 7,
+        "weight": 0.2668,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "parking",
+          "college",
+          "room",
+          "street parking",
+          "street",
+          "double",
+          "plus",
+          "rangitoto college",
+          "fenced",
+          "fully",
+          "deck",
+          "years"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.262076,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "sea views",
+          "views",
+          "elevated",
+          "gulf",
+          "rangitoto",
+          "hauraki gulf",
+          "hauraki",
+          "spectacular",
+          "living areas",
+          "areas",
+          "outlook"
+        ]
+      },
+      {
         "topic_id": 1,
-        "weight": 0.180526,
+        "weight": 0.150214,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -361,31 +380,12 @@
           "land",
           "development",
           "subject",
-          "sqm",
-          "property",
           "existing",
+          "property",
+          "sqm",
           "housing",
-          "mixed",
-          "value"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.121079,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "parking",
-          "street",
-          "brick",
-          "street parking",
-          "single",
-          "fully",
-          "college",
-          "garden",
-          "sunny",
-          "room",
-          "fenced",
-          "garage"
+          "council",
+          "mixed"
         ]
       }
     ]
@@ -451,7 +451,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Auction: 8-12 The Promenade, Takapuna on Wednesday 11 November 2026 at 9:30AM  (unless sold prior)\r\n\r\nA substantial 1,146m² site in a sought-after location, offering a wide street frontage, a legal home and income, and potential sea views.\r\n\r\nThe main home offers 3 bedrooms, a modern bathroom and kitchen, and a double garage with extra storage space. Classic weatherboard construction, tongue-and-groove flooring and an easy flow to decks and garden spaces. \r\n\r\nThe one-bedroom income flat provides flexibility for extended family or additional income.\r\n\r\nFabulous location - easy walk to the beach and shops, a stroll to Mairangi Bay Primary School, also zoned for Rangitoto College and Westlake Girls' High School.\r\n\r\nLarge land, a versatile legal home and income, and a position that rarely comes to market - this is an opportunity worth exploring.",
   "photos": [
@@ -492,12 +492,6 @@
       "estimate_low": 2118022,
       "estimate_mid": 2245662,
       "estimate_high": 2373302
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 2073012,
-      "estimate_mid": 2197949,
-      "estimate_high": 2322887
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -845,21 +839,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.99M – $2.44M",
-        "low": 1989894,
-        "mid": 2228421,
+        "range": "$1.91M – $2.44M",
+        "low": 1914000,
+        "mid": 2237000,
         "high": 2439107,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "high",
-        "n": 83,
+        "n": 73,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 83,
-          "n_eff": 14.53,
+          "n": 73,
+          "n_eff": 13.4,
           "radius_km": 3.0,
-          "median_ratio": 1.0246,
-          "iqr_ratio": 0.2016,
+          "median_ratio": 1.0285,
+          "iqr_ratio": 0.2347,
           "same_suburb": 24,
           "model_version": "comp-cv-v1"
         }

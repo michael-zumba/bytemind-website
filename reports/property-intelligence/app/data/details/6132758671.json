@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-09-15T03:52:41.177000+00:00",
-  "days_on_market": 44,
+  "days_on_market": 45,
   "lat": -36.8504448,
   "lon": 174.8645325,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2329106079.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2538,
-  "watchers": 56,
+  "view_count": 2559,
+  "watchers": 57,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 4,
   "last_change_at": "2026-10-29T20:44:12.521758+00:00",
-  "days_since_last_change": 0.0,
+  "days_since_last_change": 0.88,
   "price_drop_count": 0,
   "description_change_count": 2,
   "prior_sale_count": 1,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 47.3,
+  "sale_pressure": 47.5,
   "sale_pressure_label": "medium",
-  "model_low": 2709984,
-  "model_mid": 2980974,
-  "model_high": 3278099,
+  "model_low": 2730601,
+  "model_mid": 2988309,
+  "model_high": 3264210,
   "model_confidence": "high",
-  "text_signal_pct": 7.3393,
-  "description_index": 0.300609,
+  "text_signal_pct": 8.1827,
+  "description_index": 0.321415,
   "events_count": 4,
   "last_event": "cv_change",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6132758671,
-    "low": 2709984,
-    "mid": 2980974,
-    "high": 3278099,
+    "low": 2730601,
+    "mid": 2988309,
+    "high": 3264210,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6132758671,
@@ -280,21 +280,40 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.5875,
-    "views_waterfront": 0.1365,
-    "family_school": 0.4821,
-    "investment": 0.1433,
+    "condition_renovation": 0.5865,
+    "views_waterfront": 0.1357,
+    "family_school": 0.4835,
+    "investment": 0.1424,
     "risk": 0.0,
     "readability": 0.496,
-    "description_premium_pct": 7.3393,
-    "description_index": 0.300609,
+    "description_premium_pct": 8.1827,
+    "description_index": 0.321415,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 3, \"views_waterfront\": 1, \"family_school\": 6, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
+        "topic_id": 7,
+        "weight": 0.424358,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "parking",
+          "college",
+          "room",
+          "street parking",
+          "street",
+          "double",
+          "plus",
+          "rangitoto college",
+          "fenced",
+          "fully",
+          "deck",
+          "years"
+        ]
+      },
+      {
         "topic_id": 1,
-        "weight": 0.369161,
+        "weight": 0.354026,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -303,69 +322,50 @@
           "land",
           "development",
           "subject",
-          "sqm",
-          "property",
           "existing",
+          "property",
+          "sqm",
           "housing",
-          "mixed",
-          "value"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.284671,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "parking",
-          "street",
-          "brick",
-          "street parking",
-          "single",
-          "fully",
-          "college",
-          "garden",
-          "sunny",
-          "room",
-          "fenced",
-          "garage"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.271612,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "areas",
-          "living areas",
-          "entertaining",
-          "family living",
-          "multiple",
-          "outdoor",
-          "flexibility",
-          "multiple living",
-          "indoor",
-          "indoor outdoor",
-          "setting",
-          "pool"
+          "council",
+          "mixed"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.071537,
-        "label": "Family living & entertaining II",
+        "weight": 0.221616,
+        "label": "Family living & entertaining",
         "top_terms": [
-          "morning",
-          "coffee",
-          "friends",
-          "life",
           "relaxed",
-          "morning coffee",
-          "step",
-          "feels",
-          "sense",
-          "day",
-          "away",
-          "place"
+          "friends",
+          "setting",
+          "entertaining",
+          "peaceful",
+          "morning",
+          "outdoor",
+          "life",
+          "welcoming",
+          "inviting",
+          "family living",
+          "flexibility"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.0,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "wardrobe",
+          "ensuite",
+          "walk wardrobe",
+          "bathroom",
+          "suite",
+          "level",
+          "master",
+          "lounge",
+          "separate",
+          "upstairs",
+          "master suite",
+          "walk"
         ]
       }
     ]
@@ -444,7 +444,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Space for the family now. Scope for your next move. This private 1,118m² freehold property in St Heliers gives you both.\r\n\r\nSet back from the road, the well-presented 1960s home is ready to enjoy, with an expansive lawn, established boundaries and room to make your own plans. Move in and settle, renovate over time or explore a new home designed around you.\r\n\r\nThree bedrooms, two living areas and a conservatory provide comfortable everyday living. Timber floors bring warmth, while a heat pump keeps things comfortable. A large downstairs rumpus adds space for teenagers, hobbies or working from home, with excellent storage, a freestanding double garage and plenty of extra parking.\r\n\r\nOutside, there’s room for children to play, pets to roam and friends to gather, plus potential to investigate a swimming pool.\r\n\r\nAt a glance:\r\n\r\n• 1,118m² freehold site, privately positioned off the road\r\n\r\n• Approximately 170m² home with three bedrooms\r\n\r\n• Two living areas, conservatory and large downstairs rumpus\r\n\r\n• One bathroom and separate WC\r\n\r\n• Double garage, excellent storage and generous parking\r\n\r\n• Mixed Housing Suburban zoning\r\n\r\n• Indicative two-home concept available\r\n\r\nFor buyers looking further ahead, the land offers scope to investigate rebuilding or further residential possibilities. St Heliers Village, the waterfront, local schools and parks are all within easy reach.\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -485,12 +485,6 @@
       "estimate_low": 2754529,
       "estimate_mid": 2920527,
       "estimate_high": 3086526
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 2715871,
-      "estimate_mid": 2879553,
-      "estimate_high": 3043235
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -662,7 +656,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1775000,
-      "estimate_mid": 1680000
+      "estimate_mid": 1690000
     },
     {
       "property_id": "1ea85c38-befb-450f-aea7-f8c871204f0e",
@@ -842,14 +836,14 @@
         "low": 2891589,
         "mid": 3107812,
         "high": 3444444,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "high",
         "n": 62,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 62,
-          "n_eff": 10.24,
+          "n_eff": 10.21,
           "radius_km": 3.0,
           "median_ratio": 0.9563,
           "iqr_ratio": 0.1779,

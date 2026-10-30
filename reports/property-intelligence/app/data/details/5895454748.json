@@ -16,8 +16,8 @@
   "asking_kind": "asking",
   "sale_method": "Asking price",
   "deadline_at": null,
-  "listed_at": "2026-04-21T03:19:55.647000+00:00",
-  "days_on_market": 191,
+  "listed_at": "2026-04-21T02:19:55.647000+00:00",
+  "days_on_market": 192,
   "lat": -36.8117388,
   "lon": 174.7913151,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2301261226.jpg",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:24:51.232562+00:00",
-  "days_since_last_change": 1.23,
+  "days_since_last_change": 2.11,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 3,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 510754,
-  "model_mid": 561828,
-  "model_high": 617828,
+  "model_low": 510172,
+  "model_mid": 558321,
+  "model_high": 609869,
   "model_confidence": "medium",
-  "text_signal_pct": -4.3663,
-  "description_index": -0.189493,
+  "text_signal_pct": -3.9885,
+  "description_index": -0.166332,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -308,52 +308,71 @@
   ],
   "model": {
     "listing_id": 5895454748,
-    "low": 510754,
-    "mid": 561828,
-    "high": 617828,
+    "low": 510172,
+    "mid": 558321,
+    "high": 609869,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5895454748,
     "word_count": 167,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.3159,
-    "condition_renovation": 0.4996,
-    "views_waterfront": 0.1741,
-    "family_school": 0.205,
-    "investment": 0.3655,
+    "luxury": 0.3114,
+    "condition_renovation": 0.4987,
+    "views_waterfront": 0.173,
+    "family_school": 0.2055,
+    "investment": 0.3632,
     "risk": 0.0,
     "readability": 0.3147,
-    "description_premium_pct": -4.3663,
-    "description_index": -0.189493,
+    "description_premium_pct": -3.9885,
+    "description_index": -0.166332,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 2, \"views_waterfront\": 1, \"family_school\": 2, \"investment\": 2, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
         "topic_id": 4,
-        "weight": 0.604483,
+        "weight": 0.569727,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
-          "lock",
-          "leave",
-          "lock leave",
           "car",
+          "leave",
+          "lock",
           "bedroom apartment",
-          "bedroom",
-          "restaurants",
-          "car park",
+          "lock leave",
           "complex",
+          "restaurants",
+          "residents",
+          "car park",
           "balcony",
-          "car parks"
+          "pool"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.163824,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low",
+          "low maintenance",
+          "unit",
+          "care",
+          "easy care",
+          "sunny",
+          "brick",
+          "buyers",
+          "downsizers",
+          "single",
+          "lock"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.114172,
+        "weight": 0.110966,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -362,50 +381,31 @@
           "land",
           "development",
           "subject",
-          "sqm",
-          "property",
           "existing",
+          "property",
+          "sqm",
           "housing",
-          "mixed",
-          "value"
+          "council",
+          "mixed"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.09302,
-        "label": "Family living & entertaining II",
+        "weight": 0.073665,
+        "label": "Family living & entertaining",
         "top_terms": [
-          "morning",
-          "coffee",
-          "friends",
-          "life",
           "relaxed",
-          "morning coffee",
-          "step",
-          "feels",
-          "sense",
-          "day",
-          "away",
-          "place"
-        ]
-      },
-      {
-        "topic_id": 3,
-        "weight": 0.06481,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "premium",
-          "luxury",
-          "appliances",
-          "designer",
-          "sophisticated",
-          "finishes",
-          "year",
-          "design",
-          "residence",
-          "designer kitchen",
-          "refined",
-          "lighting"
+          "friends",
+          "setting",
+          "entertaining",
+          "peaceful",
+          "morning",
+          "outdoor",
+          "life",
+          "welcoming",
+          "inviting",
+          "family living",
+          "flexibility"
         ]
       }
     ]
@@ -479,7 +479,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Renovated to an exceptional standard with meticulous attention to detail, this apartment offers a compelling opportunity for buyers seeking a Devonport retreat, first home, or Airbnb investment. \r\n\r\nPositioned on the second floor, the apartment enjoys a desirable north-facing aspect, with a sun-soaked balcony capturing all-day light. Inside, you'll find two generously sized bedrooms, a designer kitchen, and open-plan living that blends style with functionality. Added conveniences include a storage locker, shared laundry facilities, and a designated car park.\r\n\r\nThe location is equally appealing, with beaches, local shops, and the charm of Devonport village all within easy reach. A well-managed body corporate and long-term maintenance plan provide peace of mind and protect your investment.\r\n\r\nHaving poured significant effort into the renovation, the current owner has decided apartment living isn't for him-he misses having a garden. That decision presents a fantastic opportunity for you to secure a beautifully finished home in a sought-after location.\r\n\r\nTo download property files please go to: https://www.harcourtsfiles.co.nz/listings/8Z4Y",
   "photos": [
@@ -510,12 +510,6 @@
       "estimate_low": 485269,
       "estimate_mid": 514514,
       "estimate_high": 543758
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 485635,
-      "estimate_mid": 514903,
-      "estimate_high": 544172
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -774,6 +768,20 @@
       "estimate_mid": 2500000
     },
     {
+      "property_id": "b83bd098-c104-4c4a-ad21-07c48cb3af9c",
+      "address": "3/6 North Avenue, Narrow Neck, Auckland",
+      "sale_price": 938000,
+      "sale_date": "2026-07-24T00:00:00+00:00",
+      "distance_km": 1.16,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 950000,
+      "estimate_mid": 940000
+    },
+    {
       "property_id": "47925259-5734-482c-8bc5-794d70e99c45",
       "address": "24 Empire Road, Devonport, Auckland",
       "sale_price": 1100000,
@@ -828,20 +836,6 @@
       "property_type": null,
       "cv": 920000,
       "estimate_mid": 775000
-    },
-    {
-      "property_id": "cb316ecc-1d3d-4ace-a1ef-d9671c543b77",
-      "address": "30 Northboro Road, Hauraki, Auckland",
-      "sale_price": 1288000,
-      "sale_date": "2026-08-05T00:00:00+00:00",
-      "distance_km": 1.5,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1425000,
-      "estimate_mid": 1310000
     }
   ],
   "valuation": {
@@ -867,14 +861,14 @@
         "low": 453158,
         "mid": 483000,
         "high": 504000,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "medium",
         "n": 44,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
           "n": 44,
-          "n_eff": 7.76,
+          "n_eff": 7.74,
           "radius_km": 3.0,
           "median_ratio": 0.92,
           "iqr_ratio": 0.1053,

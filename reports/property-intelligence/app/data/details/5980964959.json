@@ -16,8 +16,8 @@
   "asking_kind": "asking",
   "sale_method": "Asking price",
   "deadline_at": null,
-  "listed_at": "2026-06-11T04:08:04.793000+00:00",
-  "days_on_market": 140,
+  "listed_at": "2026-06-11T03:08:04.793000+00:00",
+  "days_on_market": 141,
   "lat": -36.7380794,
   "lon": 174.7519188,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333919380.jpg",
@@ -30,10 +30,10 @@
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
   "comp_low": 721778,
-  "comp_mid": 819649,
+  "comp_mid": 822805,
   "comp_high": 900000,
   "comp_confidence": "high",
-  "comp_n": 83,
+  "comp_n": 78,
   "value_low": 712704,
   "value_mid": 756873,
   "value_high": 801043,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:33:56.456047+00:00",
-  "days_since_last_change": 1.22,
+  "days_since_last_change": 2.1,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 73.3,
+  "sale_pressure": 73.5,
   "sale_pressure_label": "high",
-  "model_low": 730120,
-  "model_mid": 803130,
-  "model_high": 883181,
+  "model_low": 729018,
+  "model_mid": 797821,
+  "model_high": 871481,
   "model_confidence": "medium",
-  "text_signal_pct": -18.5304,
-  "description_index": -0.869853,
+  "text_signal_pct": -11.7167,
+  "description_index": -0.509262,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 5980964959,
-    "low": 730120,
-    "mid": 803130,
-    "high": 883181,
+    "low": 729018,
+    "mid": 797821,
+    "high": 871481,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5980964959,
@@ -290,78 +290,59 @@
     "exclamations": 1,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.7631,
-    "views_waterfront": 0.3546,
-    "family_school": 0.8348,
-    "investment": 0.1861,
+    "condition_renovation": 0.7617,
+    "views_waterfront": 0.3524,
+    "family_school": 0.8372,
+    "investment": 0.1849,
     "risk": 0.0,
     "readability": 0.6031,
-    "description_premium_pct": -18.5304,
-    "description_index": -0.869853,
+    "description_premium_pct": -11.7167,
+    "description_index": -0.509262,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 3, \"views_waterfront\": 2, \"family_school\": 8, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
+        "topic_id": 10,
+        "weight": 0.530982,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low",
+          "low maintenance",
+          "unit",
+          "care",
+          "easy care",
+          "sunny",
+          "brick",
+          "buyers",
+          "downsizers",
+          "single",
+          "lock"
+        ]
+      },
+      {
         "topic_id": 4,
-        "weight": 0.514214,
+        "weight": 0.26658,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
-          "lock",
-          "leave",
-          "lock leave",
           "car",
+          "leave",
+          "lock",
           "bedroom apartment",
-          "bedroom",
-          "restaurants",
-          "car park",
+          "lock leave",
           "complex",
+          "restaurants",
+          "residents",
+          "car park",
           "balcony",
-          "car parks"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.18826,
-        "label": "Family living & entertaining II",
-        "top_terms": [
-          "morning",
-          "coffee",
-          "friends",
-          "life",
-          "relaxed",
-          "morning coffee",
-          "step",
-          "feels",
-          "sense",
-          "day",
-          "away",
-          "place"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.108442,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "parking",
-          "street",
-          "brick",
-          "street parking",
-          "single",
-          "fully",
-          "college",
-          "garden",
-          "sunny",
-          "room",
-          "fenced",
-          "garage"
+          "pool"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.087359,
+        "weight": 0.090453,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -373,9 +354,28 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "suburb normal",
           "normal",
+          "suburb normal",
           "normal intermediate"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.048113,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "relaxed",
+          "friends",
+          "setting",
+          "entertaining",
+          "peaceful",
+          "morning",
+          "outdoor",
+          "life",
+          "welcoming",
+          "inviting",
+          "family living",
+          "flexibility"
         ]
       }
     ]
@@ -441,7 +441,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "MODERN SINGLE-LEVEL & MOVE IN READY!\r\n\r\nRight in the heart of Mairangi Bay, this beautifully presented home delivers easy-care coastal living just moments from the beach and village.\r\n\r\nGrab your morning coffee, stroll to the beach or enjoy dinner at one of the local cafés and restaurants - everything you need is right on your doorstep.\r\n\r\nInside, the home is warm, light-filled and effortlessly functional, with open-plan living and dining. Two generous double bedrooms, a spacious kitchen and separate laundry complete the picture.\r\n\r\nPerfect for downsizer's, professionals, investors or anyone wanting a lock-up-and-leave by the coast, this is an opportunity to secure a low-maintenance home in one of the North Shore's most sought-after seaside suburbs.\r\n\r\nKey Features:\r\n- Prime Mairangi Bay location, moments from the beach and village.\r\n- Light-filled open-plan living and dining.\r\n- Two generous double bedrooms.\r\n- Separate laundry.\r\n- Easy-care, lock-up-and-leave living.\r\n- Walk to cafés, restaurants, shops and Mairangi Bay Beach.\r\n- Zoned for Murrays Bay School, Murrays Bay Intermediate and Rangitoto College.\r\n\r\nAuction (unless sold prior) - Thursday 29 October 2026.",
   "photos": [
@@ -471,12 +471,6 @@
       "estimate_low": 731635,
       "estimate_mid": 775726,
       "estimate_high": 819817
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 726455,
-      "estimate_mid": 770238,
-      "estimate_high": 814020
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -826,19 +820,19 @@
         "name": "Nearby sold comparables",
         "range": "$722K – $900K",
         "low": 721778,
-        "mid": 819649,
+        "mid": 822805,
         "high": 900000,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "high",
-        "n": 83,
+        "n": 78,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 83,
-          "n_eff": 14.96,
+          "n": 78,
+          "n_eff": 14.46,
           "radius_km": 3.0,
-          "median_ratio": 1.0246,
-          "iqr_ratio": 0.2174,
+          "median_ratio": 1.0285,
+          "iqr_ratio": 0.2166,
           "same_suburb": 24,
           "model_version": "comp-cv-v1"
         }

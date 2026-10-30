@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-08-24T21:25:39.600000+00:00",
-  "days_on_market": 65,
+  "days_on_market": 66,
   "lat": -36.864053,
   "lon": 174.8509651,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2325185193.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 9604,
+  "view_count": 9630,
   "watchers": 200,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:27:55.344500+00:00",
-  "days_since_last_change": 1.22,
+  "days_since_last_change": 2.1,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 40.8,
+  "sale_pressure": 41.0,
   "sale_pressure_label": "medium",
-  "model_low": 5416635,
-  "model_mid": 5958282,
-  "model_high": 6552167,
+  "model_low": 5375671,
+  "model_mid": 5883015,
+  "model_high": 6426174,
   "model_confidence": "high",
-  "text_signal_pct": 26.318,
-  "description_index": 0.991636,
+  "text_signal_pct": 30.3455,
+  "description_index": 1.083016,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -268,33 +268,52 @@
   ],
   "model": {
     "listing_id": 6099405255,
-    "low": 5416635,
-    "mid": 5958282,
-    "high": 6552167,
+    "low": 5375671,
+    "mid": 5883015,
+    "high": 6426174,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6099405255,
     "word_count": 301,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.6135,
+    "luxury": 0.6047,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.2898,
-    "family_school": 0.3411,
+    "views_waterfront": 0.288,
+    "family_school": 0.3421,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.2472,
-    "description_premium_pct": 26.318,
-    "description_index": 0.991636,
+    "description_premium_pct": 30.3455,
+    "description_index": 1.083016,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 7, \"condition_renovation\": 0, \"views_waterfront\": 3, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
+        "topic_id": 11,
+        "weight": 0.380815,
+        "label": "Resort amenities (pool / tennis / spa)",
+        "top_terms": [
+          "harbour",
+          "views",
+          "residence",
+          "scale",
+          "waterfront",
+          "expansive",
+          "pool",
+          "aucklands",
+          "architectural",
+          "extraordinary",
+          "city",
+          "privacy"
+        ]
+      },
+      {
         "topic_id": 0,
-        "weight": 0.330074,
+        "weight": 0.347849,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -302,70 +321,51 @@
           "walk wardrobe",
           "bathroom",
           "suite",
-          "lounge",
-          "master",
           "level",
+          "master",
+          "lounge",
           "separate",
-          "master suite",
           "upstairs",
+          "master suite",
           "walk"
         ]
       },
       {
-        "topic_id": 11,
-        "weight": 0.302645,
-        "label": "Resort amenities (pool / tennis / spa)",
-        "top_terms": [
-          "harbour",
-          "views",
-          "residence",
-          "waterfront",
-          "scale",
-          "city",
-          "aucklands",
-          "gulf",
-          "pool",
-          "expansive",
-          "extraordinary",
-          "island"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.210276,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "areas",
-          "living areas",
-          "entertaining",
-          "family living",
-          "multiple",
-          "outdoor",
-          "flexibility",
-          "multiple living",
-          "indoor",
-          "indoor outdoor",
-          "setting",
-          "pool"
-        ]
-      },
-      {
         "topic_id": 3,
-        "weight": 0.147343,
+        "weight": 0.133364,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "luxury",
           "appliances",
           "designer",
-          "sophisticated",
-          "finishes",
           "year",
+          "finishes",
+          "sophisticated",
+          "designer kitchen",
           "design",
           "residence",
-          "designer kitchen",
-          "refined",
+          "quality",
           "lighting"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.123518,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "relaxed",
+          "friends",
+          "setting",
+          "entertaining",
+          "peaceful",
+          "morning",
+          "outdoor",
+          "life",
+          "welcoming",
+          "inviting",
+          "family living",
+          "flexibility"
         ]
       }
     ]
@@ -431,7 +431,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Impressive in both scale and execution, this substantial 534sqm (approx.) residence presents an exceptional opportunity in one of St Heliers’ most tightly held and desirable streets. Built in 2011 by renowned builder Peter Jones, it combines enduring architectural appeal with the comfort, versatility and quality expected of a truly considered family home.\r\n\r\nDesigned for effortless entertaining and everyday family life, the main living level centres around a beautifully appointed kitchen with generous stone surfaces, a full butler’s pantry and excellent connection to the expansive open-plan living and dining spaces. Floor-to-ceiling glazing draws natural light deep into the home while opening seamlessly to a private outdoor setting, where a sheltered dining terrace, built-in heaters, manicured gardens and spa pool create an inviting environment for entertaining throughout the seasons.\r\n\r\nThe home’s three-level configuration, complemented by lift access, provides remarkable flexibility for families of all ages. The upper level is devoted to accommodation, with a luxurious master suite featuring a walk-in wardrobe, ensuite and views towards Rangitoto. A second ensuite bedroom, two further bedrooms and a beautifully appointed family bathroom complete this level.\r\n\r\nOn the middle floor, a fifth bedroom provides valuable flexibility for guests, older children or extended family, while a dedicated study offers an ideal work-from-home environment. A guest bathroom and separate laundry add further practicality.\r\n\r\nAt lower level, the exceptional six-car garaging is a rare luxury, providing secure parking alongside considerable storage and space for those with a serious appreciation for cars, boats or recreational equipment.\r\n\r\nPrivately positioned yet close to the village, waterfront and the best of St Heliers’ amenities, this is a home distinguished by its scale, construction quality and thoughtful design. A rare offering for those seeking a substantial residence in one of Auckland’s most coveted coastal neighbourhoods.\r\n\r\nImportant: This property may be marketed as suitable for overseas purchasers. However, this does not constitute confirmation of eligibility, approval, or suitability for any individual buyer. All overseas purchasers remain subject to New Zealand’s overseas investment laws, including the Overseas Investment Act 2005, and may require consent from the Overseas Investment Office. You must obtain your own independent legal, financial, and technical advice and secure any necessary approvals before proceeding with a purchase.",
   "photos": [
@@ -472,12 +472,6 @@
       "estimate_low": 5397721,
       "estimate_mid": 5723008,
       "estimate_high": 6048296
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 5247175,
-      "estimate_mid": 5563414,
-      "estimate_high": 5879654
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -829,14 +823,14 @@
         "low": 4933333,
         "mid": 5348182,
         "high": 5683735,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "high",
         "n": 78,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 78,
-          "n_eff": 14.77,
+          "n_eff": 14.73,
           "radius_km": 3.0,
           "median_ratio": 0.9636,
           "iqr_ratio": 0.1403,

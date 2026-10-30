@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-11-04T23:00:00+00:00",
   "listed_at": "2026-10-13T01:56:27.993000+00:00",
-  "days_on_market": 16,
+  "days_on_market": 17,
   "lat": -36.7099173,
   "lon": 174.7399437,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2334841341.jpg",
@@ -31,7 +31,7 @@
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
   "comp_low": 735750,
   "comp_mid": 790244,
-  "comp_high": 834453,
+  "comp_high": 835694,
   "comp_confidence": "high",
   "comp_n": 96,
   "value_low": 962717,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2767,
-  "watchers": 122,
+  "view_count": 2840,
+  "watchers": 124,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "crosslease",
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 2.7,
+  "sale_pressure": 2.8,
   "sale_pressure_label": "low",
-  "model_low": 740796,
-  "model_mid": 814873,
-  "model_high": 896094,
+  "model_low": 742886,
+  "model_mid": 812997,
+  "model_high": 888059,
   "model_confidence": "high",
-  "text_signal_pct": 6.5464,
-  "description_index": 0.26914,
+  "text_signal_pct": 2.1447,
+  "description_index": 0.086716,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6177019894,
-    "low": 740796,
-    "mid": 814873,
-    "high": 896094,
+    "low": 742886,
+    "mid": 812997,
+    "high": 888059,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6177019894,
@@ -300,82 +300,63 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.3045,
-    "views_waterfront": 0.5305,
+    "condition_renovation": 0.3039,
+    "views_waterfront": 0.5273,
     "family_school": 1.0,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3372,
-    "description_premium_pct": 6.5464,
-    "description_index": 0.26914,
+    "description_premium_pct": 2.1447,
+    "description_index": 0.086716,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 2, \"views_waterfront\": 5, \"family_school\": 20, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
         "topic_id": 7,
-        "weight": 0.636084,
+        "weight": 0.692827,
         "label": "Parking, garden & section",
         "top_terms": [
           "parking",
-          "street",
-          "brick",
-          "street parking",
-          "single",
-          "fully",
           "college",
-          "garden",
-          "sunny",
           "room",
+          "street parking",
+          "street",
+          "double",
+          "plus",
+          "rangitoto college",
           "fenced",
-          "garage"
+          "fully",
+          "deck",
+          "years"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.170012,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "relaxed",
+          "friends",
+          "setting",
+          "entertaining",
+          "peaceful",
+          "morning",
+          "outdoor",
+          "life",
+          "welcoming",
+          "inviting",
+          "family living",
+          "flexibility"
         ]
       },
       {
         "topic_id": 2,
-        "weight": 0.229799,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "areas",
-          "living areas",
-          "entertaining",
-          "family living",
-          "multiple",
-          "outdoor",
-          "flexibility",
-          "multiple living",
-          "indoor",
-          "indoor outdoor",
-          "setting",
-          "pool"
-        ]
-      },
-      {
-        "topic_id": 9,
-        "weight": 0.058294,
-        "label": "Coastal village & park proximity",
-        "top_terms": [
-          "park",
-          "regional park",
-          "regional",
-          "village",
-          "walking",
-          "suburb college",
-          "suburb village",
-          "college",
-          "distance",
-          "walking distance",
-          "suburb regional",
-          "centre"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.046831,
+        "weight": 0.069025,
         "label": "New build / brand-new quality",
         "top_terms": [
-          "brand new",
           "brand",
+          "brand new",
           "new",
           "modern",
           "quality",
@@ -383,9 +364,28 @@
           "standalone",
           "bedrooms bathrooms",
           "homes",
-          "maintenance",
+          "sqm floor",
           "floor area",
-          "sqm floor"
+          "sqm"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.02363,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "wardrobe",
+          "ensuite",
+          "walk wardrobe",
+          "bathroom",
+          "suite",
+          "level",
+          "master",
+          "lounge",
+          "separate",
+          "upstairs",
+          "master suite",
+          "walk"
         ]
       }
     ]
@@ -467,7 +467,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Property docs: https://www.harcourtsfiles.co.nz/listings/6NNA\r\nAuction: Thursday, 05 Nov, from 12:00pm at Harcourts Takapuna (Unless Sold Prior)\r\n\r\nElevated and north facing on a half share of 963sqm (more or less), this light-filled family home offers sunshine, privacy and a fantastic lifestyle in the heart of Browns Bay. Ideally located close to Browns Bay Village, local parks, shops and excellent schools, it's a home that's ready for your family to move in and enjoy.\r\n\r\nThe bright open plan living and dining area is filled with natural light and opens through bifold doors to a wraparound deck, creating a seamless space for entertaining and everyday family living. A second deck at the rear, fully fenced grounds and a sandpit provide even more room for children, pets and outdoor enjoyment.\r\n\r\n**Key Features**\r\n* Half share of 963sqm (more or less) with an elevated, north-facing position and pleasant outlook\r\n* Four bedrooms, including a separate downstairs bedroom ideal for teenagers, guests or working from home\r\n* Modern kitchen with open plan dining and a modernised family bathroom\r\n* Light-filled living opening through bifold doors to a wraparound entertaining deck\r\n* Second rear deck, fully fenced outdoor area and sandpit, perfect for children and pets\r\n* Four heat pumps providing year-round comfort\r\n* Large windows with double glazing enhancing natural light and comfort\r\n* Internal access single garage with laundry, plus two off-street parking spaces\r\n* Walking distance to Browns Bay Village, local parks, shops and public transport\r\n* Zoned for Torbay School, Sherwood School, Northcross Intermediate and Long Bay College\r\n\r\nWhether you're searching for your first family home, extra space for a growing family or a home in sought-after school zones, this well-presented property is ready for its next chapter. Contact us today to arrange your viewing.\r\n\r\nWe work with all agencies from Day 1.",
   "photos": [
@@ -508,12 +508,6 @@
       "estimate_low": 797112,
       "estimate_mid": 845150,
       "estimate_high": 893187
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 795688,
-      "estimate_mid": 843643,
-      "estimate_high": 891598
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -861,21 +855,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$736K – $834K",
+        "range": "$736K – $836K",
         "low": 735750,
         "mid": 790244,
-        "high": 834453,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "high": 835694,
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "high",
         "n": 96,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 96,
-          "n_eff": 15.6,
+          "n_eff": 15.56,
           "radius_km": 3.0,
           "median_ratio": 0.9756,
-          "iqr_ratio": 0.1249,
+          "iqr_ratio": 0.1265,
           "same_suburb": 23,
           "model_version": "comp-cv-v1"
         }

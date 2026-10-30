@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-01T00:07:09.220000+00:00",
-  "days_on_market": 28,
+  "days_on_market": 29,
   "lat": -36.696064,
   "lon": 174.7330933,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2332512375.jpg",
@@ -63,7 +63,7 @@
   "change_signal": "price increase",
   "change_count": 2,
   "last_change_at": "2026-10-29T20:49:19.527369+00:00",
-  "days_since_last_change": 0.0,
+  "days_since_last_change": 0.88,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 3,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 64.7,
+  "sale_pressure": 64.8,
   "sale_pressure_label": "medium",
-  "model_low": 1165973,
-  "model_mid": 1282566,
-  "model_high": 1410405,
+  "model_low": 1171508,
+  "model_mid": 1282072,
+  "model_high": 1400442,
   "model_confidence": "high",
-  "text_signal_pct": -2.7222,
-  "description_index": -0.117142,
+  "text_signal_pct": 0.5439,
+  "description_index": 0.022165,
   "events_count": 2,
   "last_event": "price_change",
   "schools": [
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 6157783676,
-    "low": 1165973,
-    "mid": 1282566,
-    "high": 1410405,
+    "low": 1171508,
+    "mid": 1282072,
+    "high": 1400442,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6157783676,
@@ -290,59 +290,78 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.1464,
+    "condition_renovation": 0.1461,
     "views_waterfront": 0.0,
-    "family_school": 0.5404,
+    "family_school": 0.542,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.7297,
-    "description_premium_pct": -2.7222,
-    "description_index": -0.117142,
+    "description_premium_pct": 0.5439,
+    "description_index": 0.022165,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 0, \"family_school\": 9, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
-        "topic_id": 6,
-        "weight": 0.56007,
-        "label": "Family living & entertaining II",
-        "top_terms": [
-          "morning",
-          "coffee",
-          "friends",
-          "life",
-          "relaxed",
-          "morning coffee",
-          "step",
-          "feels",
-          "sense",
-          "day",
-          "away",
-          "place"
-        ]
-      },
-      {
         "topic_id": 7,
-        "weight": 0.173756,
+        "weight": 0.492663,
         "label": "Parking, garden & section",
         "top_terms": [
           "parking",
-          "street",
-          "brick",
-          "street parking",
-          "single",
-          "fully",
           "college",
-          "garden",
-          "sunny",
           "room",
+          "street parking",
+          "street",
+          "double",
+          "plus",
+          "rangitoto college",
           "fenced",
-          "garage"
+          "fully",
+          "deck",
+          "years"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.292426,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "relaxed",
+          "friends",
+          "setting",
+          "entertaining",
+          "peaceful",
+          "morning",
+          "outdoor",
+          "life",
+          "welcoming",
+          "inviting",
+          "family living",
+          "flexibility"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.107852,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "wardrobe",
+          "ensuite",
+          "walk wardrobe",
+          "bathroom",
+          "suite",
+          "level",
+          "master",
+          "lounge",
+          "separate",
+          "upstairs",
+          "master suite",
+          "walk"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.138978,
+        "weight": 0.103161,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -351,31 +370,12 @@
           "land",
           "development",
           "subject",
-          "sqm",
-          "property",
           "existing",
+          "property",
+          "sqm",
           "housing",
-          "mixed",
-          "value"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.124255,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "ensuite",
-          "walk wardrobe",
-          "bathroom",
-          "suite",
-          "lounge",
-          "master",
-          "level",
-          "separate",
-          "master suite",
-          "upstairs",
-          "walk"
+          "council",
+          "mixed"
         ]
       }
     ]
@@ -461,14 +461,14 @@
     "first_description_change_at": null,
     "last_description_change_at": null,
     "days_to_first_change": 6.59,
-    "days_since_last_change": 0.0,
+    "days_since_last_change": 0.88,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "set",
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Room to run. Room to grow. Room for everyone.\r\n\r\nTucked away in one of Torbay's much loved family neighbourhoods, 36 Stredwick Drive is the kind of home that makes you want to stay.\r\n\r\nSet on a generous 817m² of freehold land, there's space here for the kids to disappear outside, the dog to chase a ball, friends to spill onto the deck and family life to unfold without everyone being on top of each other.\r\n\r\nBeautifully modernised throughout, the home has been designed around the way families actually live. The kitchen is the natural hub, opening to the deck and outdoors, while the clever split level layout gives everyone somewhere to retreat to. Upstairs brings two bedrooms, bathroom, home office and a seriously generous walk in wardrobe, while downstairs delivers two further bedrooms, a lounge and two bathrooms.\r\nTeenagers wanting their own zone? Extended family? Guests? Flatmates? A work from home setup? There's room to make it work.\r\n\r\nAnd outside, that big backyard is the kind of asset families dream about. There's already plenty of space to play and entertain, with scope to explore how you might create even more of your ideal outdoor lifestyle.\r\n\r\nAfter 30 years, the current owners know exactly what makes this place special. It's the neighbours who became friends. The children who grew up here. The pets who ruled the backyard. The countless ordinary days that somehow became the best memories.\r\n\r\nNow, it's your turn.\r\n\r\nWith schools, beaches, cafés, parks and the wider East Coast Bays lifestyle all close at hand, this is more than a home with plenty of space. It's a home with room for a whole lot of life.\r\n\r\nCome and see what your family's next chapter could look like.",
   "photos": [
@@ -509,12 +509,6 @@
       "estimate_low": 1195631,
       "estimate_mid": 1267684,
       "estimate_high": 1339738
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 1195672,
-      "estimate_mid": 1267734,
-      "estimate_high": 1339795
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -866,14 +860,14 @@
         "low": 1147500,
         "mid": 1220043,
         "high": 1301842,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "high",
         "n": 67,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 67,
-          "n_eff": 10.46,
+          "n_eff": 10.42,
           "radius_km": 3.0,
           "median_ratio": 0.9569,
           "iqr_ratio": 0.1265,

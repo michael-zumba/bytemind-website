@@ -17,7 +17,7 @@
   "sale_method": "Deadline sale",
   "deadline_at": "2026-11-01T11:00:00+00:00",
   "listed_at": "2026-10-15T23:59:07.203000+00:00",
-  "days_on_market": 13,
+  "days_on_market": 14,
   "lat": -36.6969021,
   "lon": 174.7536102,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2335456898.jpg",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:39:40.565307+00:00",
-  "days_since_last_change": 1.22,
+  "days_since_last_change": 2.09,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 5,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 2,
-  "sale_pressure": 22.2,
+  "sale_pressure": 22.3,
   "sale_pressure_label": "low",
-  "model_low": 622189,
-  "model_mid": 684406,
-  "model_high": 752623,
+  "model_low": 629186,
+  "model_mid": 688568,
+  "model_high": 752141,
   "model_confidence": "high",
-  "text_signal_pct": -0.0914,
-  "description_index": -0.003881,
+  "text_signal_pct": -1.2096,
+  "description_index": -0.049732,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6181960549,
-    "low": 622189,
-    "mid": 684406,
-    "high": 752623,
+    "low": 629186,
+    "mid": 688568,
+    "high": 752141,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6181960549,
@@ -301,39 +301,58 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.2987,
-    "family_school": 0.293,
+    "views_waterfront": 0.2969,
+    "family_school": 0.2939,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3646,
-    "description_premium_pct": -0.0914,
-    "description_index": -0.003881,
+    "description_premium_pct": -1.2096,
+    "description_index": -0.049732,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 3, \"family_school\": 5, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
         "topic_id": 6,
-        "weight": 0.672298,
-        "label": "Family living & entertaining II",
+        "weight": 0.632629,
+        "label": "Family living & entertaining",
         "top_terms": [
-          "morning",
-          "coffee",
-          "friends",
-          "life",
           "relaxed",
-          "morning coffee",
-          "step",
-          "feels",
-          "sense",
-          "day",
-          "away",
-          "place"
+          "friends",
+          "setting",
+          "entertaining",
+          "peaceful",
+          "morning",
+          "outdoor",
+          "life",
+          "welcoming",
+          "inviting",
+          "family living",
+          "flexibility"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.216893,
+        "label": "Coastal village & park proximity",
+        "top_terms": [
+          "park",
+          "regional park",
+          "regional",
+          "village",
+          "suburb college",
+          "suburb village",
+          "suburb regional",
+          "walking",
+          "college",
+          "community",
+          "centre",
+          "distance"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.161914,
+        "weight": 0.14133,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -341,50 +360,31 @@
           "walk wardrobe",
           "bathroom",
           "suite",
-          "lounge",
-          "master",
           "level",
+          "master",
+          "lounge",
           "separate",
-          "master suite",
           "upstairs",
+          "master suite",
           "walk"
         ]
       },
       {
-        "topic_id": 9,
-        "weight": 0.131838,
-        "label": "Coastal village & park proximity",
+        "topic_id": 4,
+        "weight": 0.009148,
+        "label": "Apartment / lock-up-and-leave",
         "top_terms": [
-          "park",
-          "regional park",
-          "regional",
-          "village",
-          "walking",
-          "suburb college",
-          "suburb village",
-          "college",
-          "distance",
-          "walking distance",
-          "suburb regional",
-          "centre"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.032723,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "areas",
-          "living areas",
-          "entertaining",
-          "family living",
-          "multiple",
-          "outdoor",
-          "flexibility",
-          "multiple living",
-          "indoor",
-          "indoor outdoor",
-          "setting",
+          "apartment",
+          "car",
+          "leave",
+          "lock",
+          "bedroom apartment",
+          "lock leave",
+          "complex",
+          "restaurants",
+          "residents",
+          "car park",
+          "balcony",
           "pool"
         ]
       }
@@ -475,7 +475,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Where days unfold at an unhurried pace and evenings settle into a gentler rhythm, this one-bedroom Torbay home offers a welcoming retreat from the everyday bustle. Spanning a 83m² floor plan, the home brings together comfortable interiors, open-plan living and a separate cabin, creating a flexible setting for those seeking a relaxed coastal lifestyle.\r\n\r\nThe kitchen, dining and lounge flow together with little fuss, forming a sociable heart of the home where everyday routines and relaxed gatherings come naturally. A well-appointed kitchen features a central island for casual meals and conversation, while the adjoining living area offers a comfortable place to unwind. Generous glazing draws natural light indoors, with doors opening onto the balcony to encourage an easy connection with the outdoors.\r\n\r\nThe bedroom offers a restful space to retreat to, positioned alongside a bathroom with a shower and everyday essentials. Beyond the main home, a separate cabin adds another layer of versatility, providing a dedicated space for creative pursuits, hobbies or working from home. This thoughtful arrangement allows shared living and quieter moments to sit comfortably alongside one another.\r\n\r\nThe balcony extends the living space outdoors, offering an inviting spot for morning coffees, leisurely lunches or evenings spent catching up with friends. With room to sit back and enjoy the surrounding outlook, it brings a welcome sense of openness to everyday living. A separate garage and two carparks provide secure parking and useful storage, completing the property's practical appeal.\r\n\r\nPositioned on Rewi Street, the home enjoys access to Torbay Village for cafés, shops and daily essentials, while Torbay School and Long Bay College serve the wider area. Weekends invite beach outings at Waiake Beach, picnics at Long Bay Regional Park or leisurely walks along the coastal tracks. \r\n\r\nPrivate Viewings Available at Short Notice - Contact Sudu on 022 681 0578.",
   "photos": [
@@ -505,12 +505,6 @@
       "estimate_low": 647164,
       "estimate_mid": 686164,
       "estimate_high": 725165
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 639666,
-      "estimate_mid": 678217,
-      "estimate_high": 716769
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -811,20 +805,6 @@
       "estimate_mid": 1760000
     },
     {
-      "property_id": "54ece96f-6634-443f-ae66-d59da7f1d739",
-      "address": "144 Weatherly Road, Torbay, Auckland",
-      "sale_price": 1002000,
-      "sale_date": "2026-08-06T00:00:00+00:00",
-      "distance_km": 1.7,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1200000,
-      "estimate_mid": 1020000
-    },
-    {
       "property_id": "56e27234-dc9c-4141-91fa-a3d54c398243",
       "address": "12 Airey Place, Torbay, Auckland",
       "sale_price": 940000,
@@ -837,6 +817,20 @@
       "property_type": null,
       "cv": 1025000,
       "estimate_mid": 945000
+    },
+    {
+      "property_id": "ed83b631-6e76-41df-af68-5b039c7414ef",
+      "address": "1/4 Firth Road, Torbay, Auckland",
+      "sale_price": 1000000,
+      "sale_date": "2026-09-30T00:00:00+00:00",
+      "distance_km": 1.8,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1025000,
+      "estimate_mid": 1000000
     }
   ],
   "valuation": {
@@ -862,14 +856,14 @@
         "low": 681250,
         "mid": 715385,
         "high": 764634,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "high",
         "n": 64,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 64,
-          "n_eff": 9.16,
+          "n_eff": 9.13,
           "radius_km": 3.0,
           "median_ratio": 0.9538,
           "iqr_ratio": 0.1166,

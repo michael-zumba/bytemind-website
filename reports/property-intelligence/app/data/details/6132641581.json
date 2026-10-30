@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-09-15T02:17:52.713000+00:00",
-  "days_on_market": 44,
+  "days_on_market": 45,
   "lat": -36.6794707,
   "lon": 174.7378755,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2329083911.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2532,
+  "view_count": 2551,
   "watchers": 71,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T14:41:49.294792+00:00",
-  "days_since_last_change": 1.26,
+  "days_since_last_change": 2.13,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 3,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 37.3,
+  "sale_pressure": 37.5,
   "sale_pressure_label": "low",
-  "model_low": 821249,
-  "model_mid": 903372,
-  "model_high": 993414,
+  "model_low": 831212,
+  "model_mid": 909660,
+  "model_high": 993646,
   "model_confidence": "high",
-  "text_signal_pct": -10.9091,
-  "description_index": -0.490284,
+  "text_signal_pct": -13.4064,
+  "description_index": -0.588236,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -288,37 +288,56 @@
   ],
   "model": {
     "listing_id": 6132641581,
-    "low": 821249,
-    "mid": 903372,
-    "high": 993414,
+    "low": 831212,
+    "mid": 909660,
+    "high": 993646,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6132641581,
     "word_count": 310,
     "exclamations": 0,
-    "urgency": 0.238,
-    "luxury": 0.3404,
-    "condition_renovation": 0.1346,
-    "views_waterfront": 0.8441,
-    "family_school": 0.5521,
+    "urgency": 0.2346,
+    "luxury": 0.3355,
+    "condition_renovation": 0.1343,
+    "views_waterfront": 0.839,
+    "family_school": 0.5536,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.2178,
-    "description_premium_pct": -10.9091,
-    "description_index": -0.490284,
+    "description_premium_pct": -13.4064,
+    "description_index": -0.588236,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 4, \"condition_renovation\": 1, \"views_waterfront\": 9, \"family_school\": 10, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
-        "topic_id": 10,
-        "weight": 0.26119,
+        "topic_id": 6,
+        "weight": 0.273165,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "relaxed",
+          "friends",
+          "setting",
+          "entertaining",
+          "peaceful",
+          "morning",
+          "outdoor",
+          "life",
+          "welcoming",
+          "inviting",
+          "family living",
+          "flexibility"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.241755,
         "label": "New build / brand-new quality",
         "top_terms": [
-          "brand new",
           "brand",
+          "brand new",
           "new",
           "modern",
           "quality",
@@ -326,66 +345,47 @@
           "standalone",
           "bedrooms bathrooms",
           "homes",
-          "maintenance",
+          "sqm floor",
           "floor area",
-          "sqm floor"
+          "sqm"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.206303,
+        "weight": 0.201186,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "luxury",
           "appliances",
           "designer",
-          "sophisticated",
-          "finishes",
           "year",
+          "finishes",
+          "sophisticated",
+          "designer kitchen",
           "design",
           "residence",
-          "designer kitchen",
-          "refined",
+          "quality",
           "lighting"
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.198776,
-        "label": "Family living & entertaining II",
-        "top_terms": [
-          "morning",
-          "coffee",
-          "friends",
-          "life",
-          "relaxed",
-          "morning coffee",
-          "step",
-          "feels",
-          "sense",
-          "day",
-          "away",
-          "place"
-        ]
-      },
-      {
         "topic_id": 8,
-        "weight": 0.18755,
+        "weight": 0.193994,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
           "sea views",
           "views",
           "elevated",
-          "rangitoto",
-          "rangitoto college",
           "gulf",
+          "rangitoto",
           "hauraki gulf",
           "hauraki",
           "spectacular",
-          "panoramic",
-          "living areas"
+          "living areas",
+          "areas",
+          "outlook"
         ]
       }
     ]
@@ -459,7 +459,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Set in a sought-after Long Bay location, this beautifully finished brand-new 4-bedroom home with two kitchens combines contemporary design, quality craftsmanship and an elevated outlook towards the sea.\r\n\r\nFrom the moment you step inside, the attention to detail is evident. The light-filled open-plan living, dining and kitchen area forms the heart of the home, with large windows and sliding doors creating an inviting space for everyday family living and entertaining.\r\n\r\nThe striking main kitchen features sophisticated dark cabinetry, a generous island, quality appliances, excellent storage and stylish feature lighting. A second kitchen adds convenience and flexibility, offering extra space for meal preparation when hosting family and friends.\r\n\r\nWarm-toned flooring, clean architectural lines and carefully selected finishes create a stylish and inviting atmosphere throughout. Step onto the upper-level deck and enjoy views across neighbouring rooftops and greenery to the sea beyond-an inviting setting for a morning coffee or relaxed evening. The bathroom also captures a lovely outlook towards the water.\r\n\r\nProperty highlights\r\n*Brand-new contemporary home\r\n*4 bedrooms\r\n*Two kitchens for added convenience and flexibility\r\n*Elevated outlook with sea views\r\n*Spacious open-plan living and dining\r\n*Designer main kitchen with a large island and quality appliances\r\n*Stylish feature lighting and modern interior finishes\r\n*Excellent indoor-outdoor connection\r\n*Elevated position with abundant natural light\r\n*Double internal-access garage\r\n*Fully fenced frontage with gated access\r\n*Modern, low-maintenance design\r\n*Zoned for Long Bay School, Northcross Intermediate and Long Bay College\r\n\r\nLocated in the popular Long Bay community, this home offers easy access to Long Bay Village, local cafés and amenities, beautiful beaches and reserves. School zoning provides options from primary through to secondary, adding further appeal for families.\r\n\r\nFor buyers seeking a modern family home with style, quality and the convenience of two kitchens, 15 Pakirikiri Street deserves your attention.\r\n\r\nMotivated vendor-come and experience this home for yourself.",
   "photos": [
@@ -500,12 +500,6 @@
       "estimate_low": 788599,
       "estimate_mid": 836123,
       "estimate_high": 883647
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 787711,
-      "estimate_mid": 835186,
-      "estimate_high": 882660
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -857,14 +851,14 @@
         "low": 799773,
         "mid": 851855,
         "high": 893367,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "medium",
         "n": 36,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
           "n": 36,
-          "n_eff": 6.44,
+          "n_eff": 6.42,
           "radius_km": 3.0,
           "median_ratio": 1.0022,
           "iqr_ratio": 0.1099,

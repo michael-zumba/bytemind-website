@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-05-04T21:08:38.587000+00:00",
-  "days_on_market": 177,
+  "days_on_market": 178,
   "lat": -36.8514683,
   "lon": 174.8421334,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2304331952.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 8757,
+  "view_count": 8779,
   "watchers": 130,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:26:33.976503+00:00",
-  "days_since_last_change": 1.22,
+  "days_since_last_change": 2.1,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 3,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 79.5,
+  "sale_pressure": 79.7,
   "sale_pressure_label": "high",
-  "model_low": 1045061,
-  "model_mid": 1149563,
-  "model_high": 1264145,
+  "model_low": 1047441,
+  "model_mid": 1146296,
+  "model_high": 1252130,
   "model_confidence": "high",
-  "text_signal_pct": -22.5611,
-  "description_index": -1.085221,
+  "text_signal_pct": -19.0342,
+  "description_index": -0.862849,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 5918405302,
-    "low": 1045061,
-    "mid": 1149563,
-    "high": 1264145,
+    "low": 1047441,
+    "mid": 1146296,
+    "high": 1252130,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5918405302,
@@ -292,57 +292,76 @@
     "luxury": 0.0,
     "condition_renovation": 0.0,
     "views_waterfront": 0.0,
-    "family_school": 0.2252,
-    "investment": 0.4016,
+    "family_school": 0.2258,
+    "investment": 0.399,
     "risk": 0.7138,
     "readability": 0.4832,
-    "description_premium_pct": -22.5611,
-    "description_index": -1.085221,
+    "description_premium_pct": -19.0342,
+    "description_index": -0.862849,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 2, \"investment\": 2, \"risk\": 2}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
         "topic_id": 4,
-        "weight": 0.71124,
+        "weight": 0.588506,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
-          "lock",
-          "leave",
-          "lock leave",
           "car",
+          "leave",
+          "lock",
           "bedroom apartment",
-          "bedroom",
-          "restaurants",
-          "car park",
+          "lock leave",
           "complex",
+          "restaurants",
+          "residents",
+          "car park",
           "balcony",
-          "car parks"
+          "pool"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.283597,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low",
+          "low maintenance",
+          "unit",
+          "care",
+          "easy care",
+          "sunny",
+          "brick",
+          "buyers",
+          "downsizers",
+          "single",
+          "lock"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.219774,
+        "weight": 0.072779,
         "label": "Parking, garden & section",
         "top_terms": [
           "parking",
-          "street",
-          "brick",
-          "street parking",
-          "single",
-          "fully",
           "college",
-          "garden",
-          "sunny",
           "room",
+          "street parking",
+          "street",
+          "double",
+          "plus",
+          "rangitoto college",
           "fenced",
-          "garage"
+          "fully",
+          "deck",
+          "years"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.039997,
+        "weight": 0.041046,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -350,32 +369,13 @@
           "walk wardrobe",
           "bathroom",
           "suite",
-          "lounge",
-          "master",
           "level",
+          "master",
+          "lounge",
           "separate",
-          "master suite",
           "upstairs",
+          "master suite",
           "walk"
-        ]
-      },
-      {
-        "topic_id": 1,
-        "weight": 0.018223,
-        "label": "Development & land potential",
-        "top_terms": [
-          "potential",
-          "site",
-          "future",
-          "land",
-          "development",
-          "subject",
-          "sqm",
-          "property",
-          "existing",
-          "housing",
-          "mixed",
-          "value"
         ]
       }
     ]
@@ -449,7 +449,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Beautifully presented this 1970's solid concrete and tile apartment in the prime Kohimarama Beach location will capture your heart, without hurting your wallet!\r\nIn a block of four, this upstairs 148sqm two bedroom apartment captures the morning and afternoon sun throughout the light, bright and stylishly proportioned rooms.\r\nIt also boasts a delightfully private courtyard and bonus conservatory space perfect for entertaining and relaxing. It is completed with a single lockup garage, separate laundry and extra storage under the stairs.\r\n\r\nThis is a fabulous central location just 100 metres (approx) from Kohimarama Beach, the cafes and restaurants, Tamaki Drive Transport and a gentle walk around to Mission Bay or Saint Heliers.\r\n\r\nThe perfect lock up and leave or investment for the future.\r\n\r\nThis is a leasehold, crosslease title with an annual ground rental of $40,000 pa.\r\nLocation is everything.\r\n\r\n\"It is in the shelter of each other, that people live.\"",
   "photos": [
@@ -485,12 +485,6 @@
       "estimate_low": 1133059,
       "estimate_mid": 1201341,
       "estimate_high": 1269624
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 1142095,
-      "estimate_mid": 1210927,
-      "estimate_high": 1279760
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -842,14 +836,14 @@
         "low": 1035429,
         "mid": 1159245,
         "high": 1224000,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "high",
         "n": 82,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 82,
-          "n_eff": 13.51,
+          "n_eff": 13.47,
           "radius_km": 3.0,
           "median_ratio": 0.966,
           "iqr_ratio": 0.1627,

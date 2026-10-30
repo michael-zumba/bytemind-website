@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-09-30T00:25:55.800000+00:00",
-  "days_on_market": 29,
+  "days_on_market": 30,
   "lat": -36.8233094,
   "lon": 174.8038929,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2332255267.jpg",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:30:55.102200+00:00",
-  "days_since_last_change": 1.22,
+  "days_since_last_change": 2.1,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 54.8,
+  "sale_pressure": 55.0,
   "sale_pressure_label": "medium",
-  "model_low": 1810152,
-  "model_mid": 1991162,
-  "model_high": 2189628,
+  "model_low": 1843000,
+  "model_mid": 2016939,
+  "model_high": 2203156,
   "model_confidence": "high",
-  "text_signal_pct": -6.4861,
-  "description_index": -0.28463,
+  "text_signal_pct": -4.9905,
+  "description_index": -0.209206,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -308,11 +308,11 @@
   ],
   "model": {
     "listing_id": 6156217552,
-    "low": 1810152,
-    "mid": 1991162,
-    "high": 2189628,
+    "low": 1843000,
+    "mid": 2016939,
+    "high": 2203156,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0953, 0.095], \"rel_width\": 0.1906, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6156217552,
@@ -320,40 +320,78 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.8875,
-    "views_waterfront": 0.3093,
+    "condition_renovation": 0.886,
+    "views_waterfront": 0.3074,
     "family_school": 1.0,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3873,
-    "description_premium_pct": -6.4861,
-    "description_index": -0.28463,
+    "description_premium_pct": -4.9905,
+    "description_index": -0.209206,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 4, \"views_waterfront\": 2, \"family_school\": 12, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-29T20:50:29.219408+00:00",
+    "updated_at": "2026-10-30T17:56:12.203886+00:00",
     "top_topics": [
       {
         "topic_id": 6,
-        "weight": 0.553648,
-        "label": "Family living & entertaining II",
+        "weight": 0.291929,
+        "label": "Family living & entertaining",
         "top_terms": [
-          "morning",
-          "coffee",
-          "friends",
-          "life",
           "relaxed",
-          "morning coffee",
-          "step",
-          "feels",
-          "sense",
-          "day",
-          "away",
-          "place"
+          "friends",
+          "setting",
+          "entertaining",
+          "peaceful",
+          "morning",
+          "outdoor",
+          "life",
+          "welcoming",
+          "inviting",
+          "family living",
+          "flexibility"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.237417,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low",
+          "low maintenance",
+          "unit",
+          "care",
+          "easy care",
+          "sunny",
+          "brick",
+          "buyers",
+          "downsizers",
+          "single",
+          "lock"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.167948,
+        "label": "Coastal village & park proximity",
+        "top_terms": [
+          "park",
+          "regional park",
+          "regional",
+          "village",
+          "suburb college",
+          "suburb village",
+          "suburb regional",
+          "walking",
+          "college",
+          "community",
+          "centre",
+          "distance"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.164377,
+        "weight": 0.165147,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -365,47 +403,9 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "suburb normal",
           "normal",
+          "suburb normal",
           "normal intermediate"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.133573,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "parking",
-          "street",
-          "brick",
-          "street parking",
-          "single",
-          "fully",
-          "college",
-          "garden",
-          "sunny",
-          "room",
-          "fenced",
-          "garage"
-        ]
-      },
-      {
-        "topic_id": 9,
-        "weight": 0.125868,
-        "label": "Coastal village & park proximity",
-        "top_terms": [
-          "park",
-          "regional park",
-          "regional",
-          "village",
-          "walking",
-          "suburb college",
-          "suburb village",
-          "college",
-          "distance",
-          "walking distance",
-          "suburb regional",
-          "centre"
         ]
       }
     ]
@@ -471,7 +471,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-29T20:50:28.965302+00:00"
+    "updated_at": "2026-10-30T17:56:11.910650+00:00"
   },
   "body": "Positioned in the heart of Devonport on coveted Vauxhall Road, this charming 1910 character villa perfectly captures the relaxed coastal lifestyle the area is known for. \r\n\r\nStart your mornings with a stroll down to Cheltenham Beach for a swim, cross the road to the park to throw a ball for the dog, or pop down to the local café for your morning coffee after the school run. \r\n\r\nInside, the versatile layout offers four spacious bedrooms, or three double bedrooms plus a dedicated home office for working from home. Inside the fully fenced garden, a sun-drenched veranda catches the evening sun, the perfect spot for a BBQ and an evening beverage before a sunset beach walk. \r\n\r\nMove straight in and enjoy, or introduce your own creative touches to add value over time — the choice is yours. Families will appreciate being zoned for top local schools, including Devonport Primary, Belmont Intermediate, and Takapuna Grammar.  \r\n\r\nThis is quintessential Devonport character at its finest, conveniently located just minutes from Devonport Village and the ferry terminal for an effortless CBD commute, this versatile home caters effortlessly to families, couples, and professionals alike.",
   "photos": [
@@ -503,12 +503,6 @@
       "estimate_low": 2003006,
       "estimate_mid": 2123714,
       "estimate_high": 2244423
-    },
-    {
-      "date": "2025-10-30T00:00:00+00:00",
-      "estimate_low": 1986047,
-      "estimate_mid": 2105744,
-      "estimate_high": 2225440
     },
     {
       "date": "2025-11-13T00:00:00+00:00",
@@ -860,14 +854,14 @@
         "low": 1757609,
         "mid": 1906579,
         "high": 2066400,
-        "updated_at": "2026-10-29T20:50:28.965302+00:00",
+        "updated_at": "2026-10-30T17:56:11.910650+00:00",
         "confidence": "medium",
         "n": 32,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
           "n": 32,
-          "n_eff": 7.46,
+          "n_eff": 7.44,
           "radius_km": 3.0,
           "median_ratio": 0.9079,
           "iqr_ratio": 0.162,

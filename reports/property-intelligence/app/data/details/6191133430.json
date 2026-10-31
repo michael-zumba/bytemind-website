@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-21T19:45:54.337000+00:00",
-  "days_on_market": 8,
+  "days_on_market": 10,
   "lat": -36.6952515,
   "lon": 174.7406006,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2336673229.jpg",
@@ -30,10 +30,10 @@
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
   "comp_low": 708500,
-  "comp_mid": 741000,
+  "comp_mid": 741867,
   "comp_high": 795918,
   "comp_confidence": "high",
-  "comp_n": 66,
+  "comp_n": 67,
   "value_low": 710249,
   "value_mid": 754267,
   "value_high": 798284,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2002,
-  "watchers": 83,
+  "view_count": 2111,
+  "watchers": 89,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "crosslease",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:02:56.409603+00:00",
-  "days_since_last_change": 2.12,
+  "days_since_last_change": 3.21,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 4,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 31.3,
+  "sale_pressure": 31.7,
   "sale_pressure_label": "low",
-  "model_low": 698458,
-  "model_mid": 764377,
-  "model_high": 834949,
+  "model_low": 694740,
+  "model_mid": 765903,
+  "model_high": 844379,
   "model_confidence": "medium",
-  "text_signal_pct": 2.6695,
-  "description_index": 0.10766,
+  "text_signal_pct": 8.905,
+  "description_index": 0.39861,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6191133430,
-    "low": 698458,
-    "mid": 764377,
-    "high": 834949,
+    "low": 694740,
+    "mid": 765903,
+    "high": 844379,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0975, 0.0975], \"rel_width\": 0.1954, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6191133430,
@@ -300,59 +300,40 @@
     "exclamations": 2,
     "urgency": 0.5961,
     "luxury": 0.0,
-    "condition_renovation": 0.3413,
+    "condition_renovation": 0.3414,
     "views_waterfront": 0.0,
-    "family_school": 0.7034,
+    "family_school": 0.6996,
     "investment": 0.0,
     "risk": 0.4447,
     "readability": 0.3988,
-    "description_premium_pct": 2.6695,
-    "description_index": 0.10766,
+    "description_premium_pct": 8.905,
+    "description_index": 0.39861,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 0, \"family_school\": 5, \"investment\": 0, \"risk\": 1}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-30T17:56:12.203886+00:00",
+    "updated_at": "2026-10-31T20:01:31.997208+00:00",
     "top_topics": [
       {
         "topic_id": 7,
-        "weight": 0.623201,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "parking",
-          "college",
-          "room",
-          "street parking",
-          "street",
-          "double",
-          "plus",
-          "rangitoto college",
-          "fenced",
-          "fully",
-          "deck",
-          "years"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.199309,
+        "weight": 0.791674,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "maintenance",
-          "low",
-          "low maintenance",
-          "unit",
-          "care",
-          "easy care",
-          "sunny",
           "brick",
-          "buyers",
-          "downsizers",
           "single",
-          "lock"
+          "street",
+          "parking",
+          "garden",
+          "ready",
+          "fully",
+          "sunny",
+          "street parking",
+          "fenced",
+          "deck",
+          "room"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.108697,
+        "weight": 0.111767,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -361,31 +342,50 @@
           "land",
           "development",
           "subject",
-          "existing",
           "property",
-          "sqm",
+          "existing",
           "housing",
           "council",
-          "mixed"
+          "mixed",
+          "sqm"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.063131,
+        "weight": 0.052712,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
           "regional park",
           "regional",
           "village",
-          "suburb college",
           "suburb village",
-          "suburb regional",
           "walking",
-          "college",
+          "suburb college",
+          "suburb regional",
           "community",
+          "distance",
           "centre",
-          "distance"
+          "walking distance"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.025385,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "sea views",
+          "views",
+          "elevated",
+          "rangitoto",
+          "rangitoto college",
+          "living areas",
+          "areas",
+          "suburb intermediate",
+          "intermediate",
+          "gulf",
+          "college"
         ]
       }
     ]
@@ -467,7 +467,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-30T17:56:11.910650+00:00"
+    "updated_at": "2026-10-31T20:01:31.702044+00:00"
   },
   "body": "Comfortable as it stands yet brimming with potential, this is an exciting opportunity to renovate, refresh and reap the benefits.\r\n\r\nNestled at the end of a cul-de-sac, this brick and tile unit offers two bedrooms, a combined bathroom, and open-plan kitchen, dining and living spaces.\r\n\r\nOutside the generous fenced rear garden provides plenty of room for future landscaping, while the single garage adds secure parking and storage and the off-street parking accommodates your visitors.\r\n\r\nConveniently located close to Long Bay College, Long Bay Primary School, beautiful beaches, local cafes and everyday amenities securing you a lifestyle to be enjoyed.\r\n\r\nOpportunities like this are rare, clear instructions for this deceased estate - Sell!\r\nBring your vision and make the move!",
   "photos": [
@@ -493,12 +493,6 @@
     "member_nickname": "bt_torbay"
   },
   "history": [
-    {
-      "date": "2025-10-02T00:00:00+00:00",
-      "estimate_low": 736252,
-      "estimate_mid": 780622,
-      "estimate_high": 824991
-    },
     {
       "date": "2025-11-13T00:00:00+00:00",
       "estimate_low": 718778,
@@ -700,20 +694,6 @@
       "estimate_mid": 1370000
     },
     {
-      "property_id": "ee4fa172-8650-474a-8861-28bf35bf40cd",
-      "address": "52A Glamorgan Drive, Torbay, Auckland",
-      "sale_price": 1235000,
-      "sale_date": "2026-08-05T00:00:00+00:00",
-      "distance_km": 0.73,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1300000,
-      "estimate_mid": 1270000
-    },
-    {
       "property_id": "b057960d-5092-4ed0-a57f-a211890f9383",
       "address": "2/18 Stredwick Drive, Torbay, Auckland",
       "sale_price": 1030000,
@@ -768,6 +748,20 @@
       "property_type": null,
       "cv": 1200000,
       "estimate_mid": 1020000
+    },
+    {
+      "property_id": "4a5a231a-b060-43e2-88e0-c9ed3b67874c",
+      "address": "112 Weatherly Road, Torbay, Auckland",
+      "sale_price": 1070000,
+      "sale_date": "2026-10-30T00:00:00+00:00",
+      "distance_km": 1.07,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1125000,
+      "estimate_mid": 1070000
     },
     {
       "property_id": "ccda11a8-554b-4e1d-b38d-60cf745f1a50",
@@ -847,20 +841,20 @@
         "name": "Nearby sold comparables",
         "range": "$708K – $796K",
         "low": 708500,
-        "mid": 741000,
+        "mid": 741867,
         "high": 795918,
-        "updated_at": "2026-10-30T17:56:11.910650+00:00",
+        "updated_at": "2026-10-31T20:01:31.702044+00:00",
         "confidence": "high",
-        "n": 66,
+        "n": 67,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 66,
-          "n_eff": 11.09,
+          "n": 67,
+          "n_eff": 11.36,
           "radius_km": 3.0,
-          "median_ratio": 0.95,
-          "iqr_ratio": 0.118,
-          "same_suburb": 12,
+          "median_ratio": 0.9511,
+          "iqr_ratio": 0.1178,
+          "same_suburb": 14,
           "model_version": "comp-cv-v1"
         }
       },

@@ -16,8 +16,8 @@
   "asking_kind": null,
   "sale_method": "Price by negotiation",
   "deadline_at": null,
-  "listed_at": "2026-07-28T01:35:59.173000+00:00",
-  "days_on_market": 94,
+  "listed_at": "2026-07-28T02:35:59.173000+00:00",
+  "days_on_market": 95,
   "lat": -36.849781,
   "lon": 174.8357391,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2320161623.jpg",
@@ -30,8 +30,8 @@
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
   "comp_low": 2971698,
-  "comp_mid": 3334211,
-  "comp_high": 3568627,
+  "comp_mid": 3381132,
+  "comp_high": 3570000,
   "comp_confidence": "high",
   "comp_n": 75,
   "value_low": 3141498,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 7656,
-  "watchers": 46,
+  "view_count": 7688,
+  "watchers": 47,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unit title",
@@ -63,7 +63,7 @@
   "change_signal": "price cut",
   "change_count": 2,
   "last_change_at": "2026-10-27T15:05:58.208207+00:00",
-  "days_since_last_change": 3.12,
+  "days_since_last_change": 4.21,
   "price_drop_count": 1,
   "description_change_count": 0,
   "prior_sale_count": 1,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 63.7,
+  "sale_pressure": 63.8,
   "sale_pressure_label": "medium",
-  "model_low": 3118568,
-  "model_mid": 3412891,
-  "model_high": 3727992,
+  "model_low": 3089581,
+  "model_mid": 3406050,
+  "model_high": 3755039,
   "model_confidence": "high",
-  "text_signal_pct": 21.4131,
-  "description_index": 0.792909,
+  "text_signal_pct": 19.3658,
+  "description_index": 0.827173,
   "events_count": 2,
   "last_event": "price_change",
   "schools": [
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 6055314526,
-    "low": 3118568,
-    "mid": 3412891,
-    "high": 3727992,
+    "low": 3089581,
+    "mid": 3406050,
+    "high": 3755039,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0975, 0.0975], \"rel_width\": 0.1954, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6055314526,
@@ -292,57 +292,76 @@
     "luxury": 0.5149,
     "condition_renovation": 0.1374,
     "views_waterfront": 0.5722,
-    "family_school": 0.2266,
+    "family_school": 0.2254,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.2515,
-    "description_premium_pct": 21.4131,
-    "description_index": 0.792909,
+    "description_premium_pct": 19.3658,
+    "description_index": 0.827173,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 6, \"condition_renovation\": 1, \"views_waterfront\": 6, \"family_school\": 4, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-30T17:56:12.203886+00:00",
+    "updated_at": "2026-10-31T20:01:31.997208+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.282997,
+        "weight": 0.277618,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "luxury",
           "appliances",
           "designer",
-          "year",
-          "finishes",
           "sophisticated",
+          "finishes",
+          "year",
+          "residence",
           "designer kitchen",
           "design",
-          "residence",
-          "quality",
-          "lighting"
+          "refined",
+          "integrated"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.260376,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "ensuite",
+          "wardrobe",
+          "walk wardrobe",
+          "bathroom",
+          "suite",
+          "lounge",
+          "separate",
+          "level",
+          "master",
+          "upstairs",
+          "walk",
+          "floor"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.245277,
+        "weight": 0.202944,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
-          "car",
-          "leave",
           "lock",
-          "bedroom apartment",
+          "leave",
           "lock leave",
-          "complex",
+          "car",
+          "bedroom apartment",
           "restaurants",
-          "residents",
+          "bedroom",
           "car park",
+          "complex",
           "balcony",
-          "pool"
+          "caf restaurants"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.18941,
+        "weight": 0.172678,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "harbour",
@@ -350,32 +369,13 @@
           "residence",
           "scale",
           "waterfront",
-          "expansive",
           "pool",
-          "aucklands",
-          "architectural",
-          "extraordinary",
+          "gulf",
           "city",
-          "privacy"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.167385,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "ensuite",
-          "walk wardrobe",
-          "bathroom",
-          "suite",
-          "level",
-          "master",
-          "lounge",
-          "separate",
-          "upstairs",
-          "master suite",
-          "walk"
+          "aucklands",
+          "expansive",
+          "extraordinary",
+          "hauraki"
         ]
       }
     ]
@@ -445,14 +445,14 @@
     "first_description_change_at": null,
     "last_description_change_at": null,
     "days_to_first_change": 4.34,
-    "days_since_last_change": 3.12,
+    "days_since_last_change": 4.21,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "removed",
-    "updated_at": "2026-10-30T17:56:11.910650+00:00"
+    "updated_at": "2026-10-31T20:01:31.702044+00:00"
   },
   "body": "Nestled at the end of a secluded right of way, this exclusive Warren and Mahoney-designed apartment occupies the entire first floor of one of only two residences. Complete with lift access from the basement and secure triple car garaging, this beautifully oriented luxury home has been cherished by its original owner since its completion in 2009. Offering all the space and comfort of a substantial home in one of the Bays' most desirable neighbourhoods, Mission Bay and Kohimarama's renowned beaches, waterfront promenade and village amenities are all within an easy stroll.\r\n\r\nThoughtfully designed across approximately 234sqm, the generous floor plan centres around expansive living and dining areas that flow effortlessly to north-facing decks, partly sheltered by a louvre roof, an enclosed landscaped courtyard and a private spa area. Solid timber floors, neutral carpet, crisp white interiors, plantation shutters and glass balustrades create a light-filled coastal ambience, while extensive custom cabinetry reinforces the home's refined, streamlined aesthetic. The designer kitchen is anchored by a large central island and features Miele appliances, a generous scullery and sleek high-gloss cabinetry. Four double bedrooms provide excellent flexibility, with one currently configured as a home office. The spacious master suite opens to its own balcony, capturing cooling sea breezes, and includes a walk-in wardrobe leading to a beautifully tiled ensuite with a dual-head walk-in shower. The family bathroom is equally well appointed with a bath, separate shower, vanity and toilet.\r\n\r\nA generous separate laundry adds further practicality, while a secure storeroom and three-car basement garage provide exceptional storage. Zoned for Kohimarama School and Selwyn College, and just moments from waterfront boardwalks, public transport and an outstanding selection of award-winning cafés, restaurants and beachside eateries, this exceptional residence delivers a rare combination of privacy, scale and effortless coastal living.\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -488,12 +488,6 @@
     "member_nickname": "bt_mission"
   },
   "history": [
-    {
-      "date": "2025-10-02T00:00:00+00:00",
-      "estimate_low": 3112494,
-      "estimate_mid": 3300065,
-      "estimate_high": 3487636
-    },
     {
       "date": "2025-11-13T00:00:00+00:00",
       "estimate_low": 3243180,
@@ -842,19 +836,19 @@
         "name": "Nearby sold comparables",
         "range": "$2.97M – $3.57M",
         "low": 2971698,
-        "mid": 3334211,
-        "high": 3568627,
-        "updated_at": "2026-10-30T17:56:11.910650+00:00",
+        "mid": 3381132,
+        "high": 3570000,
+        "updated_at": "2026-10-31T20:01:31.702044+00:00",
         "confidence": "high",
         "n": 75,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 75,
-          "n_eff": 11.46,
+          "n_eff": 11.57,
           "radius_km": 3.0,
-          "median_ratio": 0.9526,
-          "iqr_ratio": 0.179,
+          "median_ratio": 0.966,
+          "iqr_ratio": 0.177,
           "same_suburb": 15,
           "model_version": "comp-cv-v1"
         }

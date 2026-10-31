@@ -774,6 +774,17 @@ def _bh_fdr(pvalues: Sequence[float]) -> np.ndarray:
     return result
 
 
+def _finite_or_none(value: Any, digits: int = 6) -> float | None:
+    """Return a JSON-safe float; infinite/NaN regression output becomes None."""
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        return None
+    if not math.isfinite(number):
+        return None
+    return round(number, digits)
+
+
 def run_association(
     *,
     name: str,
@@ -807,8 +818,8 @@ def run_association(
     try:
         joint = model.wald_test(restrictions, use_f=True, scalar=True)
         joint_record = {
-            "statistic": round(float(joint.statistic), 4),
-            "p": round(float(joint.pvalue), 6),
+            "statistic": _finite_or_none(joint.statistic, 4),
+            "p": _finite_or_none(joint.pvalue, 6),
             "df_num": int(text_features.shape[1]),
             "df_denom": int(model.df_resid),
         }
@@ -837,17 +848,18 @@ def run_association(
                 "kind": meta.get("kind", "lexicon"),
                 "topic_id": meta.get("topic_id"),
                 "label": meta.get("label", column),
-                "coef": round(float(model.params.get(column, float("nan"))), 6),
-                "se": round(float(model.bse.get(column, float("nan"))), 6),
-                "t": round(float(model.tvalues.get(column, float("nan"))), 4),
-                "p": round(p, 6),
+                "coef": _finite_or_none(model.params.get(column, float("nan"))),
+                "se": _finite_or_none(model.bse.get(column, float("nan"))),
+                "t": _finite_or_none(model.tvalues.get(column, float("nan")), 4),
+                "p": _finite_or_none(p),
             }
         )
     qvals = _bh_fdr(pvals)
     for record, q in zip(feature_records, qvals):
-        record["q"] = round(float(q), 6) if not math.isnan(float(q)) else None
-        record["significant_fdr_05"] = bool(q < 0.05) if not math.isnan(float(q)) else False
-        record["significant_fdr_10"] = bool(q < 0.10) if not math.isnan(float(q)) else False
+        q_value = _finite_or_none(q)
+        record["q"] = q_value
+        record["significant_fdr_05"] = bool(q_value is not None and q_value < 0.05)
+        record["significant_fdr_10"] = bool(q_value is not None and q_value < 0.10)
 
     significant = [
         r for r in feature_records

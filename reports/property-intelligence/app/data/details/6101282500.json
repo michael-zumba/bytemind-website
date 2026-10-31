@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-08-26T01:10:32.800000+00:00",
-  "days_on_market": 65,
+  "days_on_market": 66,
   "lat": -36.854454,
   "lon": 174.8252258,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2325440443.jpg",
@@ -30,8 +30,8 @@
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
   "comp_low": 1379717,
-  "comp_mid": 1581858,
-  "comp_high": 1656863,
+  "comp_mid": 1583333,
+  "comp_high": 1657500,
   "comp_confidence": "high",
   "comp_n": 58,
   "value_low": 1429787,
@@ -51,8 +51,8 @@
   "ask_gap": -468397,
   "ask_gap_pct": -0.3085,
   "deal_gap": 0.3085,
-  "view_count": 4580,
-  "watchers": 132,
+  "view_count": 4624,
+  "watchers": 133,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:29:49.727650+00:00",
-  "days_since_last_change": 2.1,
+  "days_since_last_change": 3.19,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 7,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 60.8,
+  "sale_pressure": 61.0,
   "sale_pressure_label": "medium",
-  "model_low": 1405152,
-  "model_mid": 1537768,
-  "model_high": 1679745,
+  "model_low": 1391281,
+  "model_mid": 1533792,
+  "model_high": 1690946,
   "model_confidence": "high",
-  "text_signal_pct": 32.9194,
-  "description_index": 1.162925,
+  "text_signal_pct": 24.9235,
+  "description_index": 1.039824,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6101282500,
-    "low": 1405152,
-    "mid": 1537768,
-    "high": 1679745,
+    "low": 1391281,
+    "mid": 1533792,
+    "high": 1690946,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0975, 0.0975], \"rel_width\": 0.1954, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6101282500,
@@ -302,38 +302,57 @@
     "luxury": 0.4785,
     "condition_renovation": 0.0,
     "views_waterfront": 0.3546,
-    "family_school": 0.2106,
+    "family_school": 0.2095,
     "investment": 0.186,
     "risk": 0.0,
     "readability": 0.5091,
-    "description_premium_pct": 32.9194,
-    "description_index": 1.162925,
+    "description_premium_pct": 24.9235,
+    "description_index": 1.039824,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 3, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 2, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-30T17:56:12.203886+00:00",
+    "updated_at": "2026-10-31T20:01:31.997208+00:00",
     "top_topics": [
       {
+        "topic_id": 11,
+        "weight": 0.196318,
+        "label": "Resort amenities (pool / tennis / spa)",
+        "top_terms": [
+          "harbour",
+          "views",
+          "residence",
+          "scale",
+          "waterfront",
+          "pool",
+          "gulf",
+          "city",
+          "aucklands",
+          "expansive",
+          "extraordinary",
+          "hauraki"
+        ]
+      },
+      {
         "topic_id": 8,
-        "weight": 0.2089,
+        "weight": 0.186302,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
           "sea views",
           "views",
           "elevated",
-          "gulf",
           "rangitoto",
-          "hauraki gulf",
-          "hauraki",
-          "spectacular",
+          "rangitoto college",
           "living areas",
           "areas",
-          "outlook"
+          "suburb intermediate",
+          "intermediate",
+          "gulf",
+          "college"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.207273,
+        "weight": 0.182714,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -342,50 +361,31 @@
           "land",
           "development",
           "subject",
-          "existing",
           "property",
-          "sqm",
+          "existing",
           "housing",
           "council",
-          "mixed"
+          "mixed",
+          "sqm"
         ]
       },
       {
-        "topic_id": 11,
-        "weight": 0.191665,
-        "label": "Resort amenities (pool / tennis / spa)",
+        "topic_id": 9,
+        "weight": 0.145856,
+        "label": "Coastal village & park proximity",
         "top_terms": [
-          "harbour",
-          "views",
-          "residence",
-          "scale",
-          "waterfront",
-          "expansive",
-          "pool",
-          "aucklands",
-          "architectural",
-          "extraordinary",
-          "city",
-          "privacy"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.156691,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low",
-          "low maintenance",
-          "unit",
-          "care",
-          "easy care",
-          "sunny",
-          "brick",
-          "buyers",
-          "downsizers",
-          "single",
-          "lock"
+          "park",
+          "regional park",
+          "regional",
+          "village",
+          "suburb village",
+          "walking",
+          "suburb college",
+          "suburb regional",
+          "community",
+          "distance",
+          "centre",
+          "walking distance"
         ]
       }
     ]
@@ -491,7 +491,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-30T17:56:11.910650+00:00"
+    "updated_at": "2026-10-31T20:01:31.702044+00:00"
   },
   "body": "A great opportunity in the absolute heart of Orakei! Sitting proud on a massive 689m² freehold section, this solid 1960s ex-state duplex serves up an unexpectedly affordable entry into a top-tier neighbourhood, complete with sweeping,  views across the park to the glittering waters of Mission Bay and the sparkling sea beyond.\r\n\r\nThis property offers two bedrooms,1960's construction, and an incredibly rare chance to secure a substantial piece of prime Orakei land without the ultra-luxury price tag. Whether you bring your architect to craft a breathtaking new masterpiece, renovate the dependable bones, or execute a high-reward redevelopment, the upside here is massive.\r\n\r\nYou are positioned just minutes from Mission Bay beaches, iconic waterfront cafés, good school zones, and a quick dash to the CBD. Opportunities to secure this much dirt with views this good at an accessible price point simply do not last. Bring your boldest dreams—23 Te Arawa Street is ready for its next iconic chapter.\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -527,12 +527,6 @@
     "member_nickname": "bt_mission"
   },
   "history": [
-    {
-      "date": "2025-10-02T00:00:00+00:00",
-      "estimate_low": 1467704,
-      "estimate_mid": 1556154,
-      "estimate_high": 1644604
-    },
     {
       "date": "2025-11-13T00:00:00+00:00",
       "estimate_low": 1448266,
@@ -692,6 +686,20 @@
   ],
   "comps": [
     {
+      "property_id": "2cd90b4d-5f99-4e83-8b1e-5f81e59d36f7",
+      "address": "61A Atkin Avenue, Mission Bay, Auckland",
+      "sale_price": 1825000,
+      "sale_date": "2026-07-23T00:00:00+00:00",
+      "distance_km": 0.29,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 2350000,
+      "estimate_mid": 1880000
+    },
+    {
       "property_id": "6eb4a171-a3ad-4e7b-8aa0-6c22158a501e",
       "address": "1/1 Tokomaru Street, Orakei, Auckland",
       "sale_price": 1125000,
@@ -844,20 +852,6 @@
       "property_type": null,
       "cv": 660000,
       "estimate_mid": 655000
-    },
-    {
-      "property_id": "bdd62e3e-85f7-4620-b165-8b09f854bf3d",
-      "address": "124 Selwyn Avenue, Mission Bay, Auckland",
-      "sale_price": 1193500,
-      "sale_date": "2026-09-23T00:00:00+00:00",
-      "distance_km": 0.94,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1275000,
-      "estimate_mid": 1170000
     }
   ],
   "valuation": {
@@ -881,19 +875,19 @@
         "name": "Nearby sold comparables",
         "range": "$1.38M – $1.66M",
         "low": 1379717,
-        "mid": 1581858,
-        "high": 1656863,
-        "updated_at": "2026-10-30T17:56:11.910650+00:00",
+        "mid": 1583333,
+        "high": 1657500,
+        "updated_at": "2026-10-31T20:01:31.702044+00:00",
         "confidence": "high",
         "n": 58,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 58,
-          "n_eff": 10.53,
+          "n_eff": 10.57,
           "radius_km": 3.0,
-          "median_ratio": 0.9735,
-          "iqr_ratio": 0.1752,
+          "median_ratio": 0.9744,
+          "iqr_ratio": 0.1754,
           "same_suburb": 12,
           "model_version": "comp-cv-v1"
         }

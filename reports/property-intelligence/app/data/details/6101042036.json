@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-08-25T21:22:40.017000+00:00",
-  "days_on_market": 65,
+  "days_on_market": 66,
   "lat": -36.7623711,
   "lon": 174.7602997,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2325435089.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": -18798,
   "ask_gap_pct": -0.0381,
   "deal_gap": 0.0381,
-  "view_count": 6603,
-  "watchers": 189,
+  "view_count": 6647,
+  "watchers": 191,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "crosslease",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T14:39:28.710163+00:00",
-  "days_since_last_change": 2.14,
+  "days_since_last_change": 3.22,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 7,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 60.8,
+  "sale_pressure": 61.0,
   "sale_pressure_label": "medium",
-  "model_low": 491731,
-  "model_mid": 538140,
-  "model_high": 587824,
+  "model_low": 491777,
+  "model_mid": 542150,
+  "model_high": 597700,
   "model_confidence": "medium",
-  "text_signal_pct": -3.0149,
-  "description_index": -0.125103,
+  "text_signal_pct": -3.7175,
+  "description_index": -0.177018,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -318,11 +318,11 @@
   ],
   "model": {
     "listing_id": 6101042036,
-    "low": 491731,
-    "mid": 538140,
-    "high": 587824,
+    "low": 491777,
+    "mid": 542150,
+    "high": 597700,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0975, 0.0975], \"rel_width\": 0.1954, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6101042036,
@@ -330,59 +330,40 @@
     "exclamations": 1,
     "urgency": 0.0,
     "luxury": 0.398,
-    "condition_renovation": 0.2124,
+    "condition_renovation": 0.2125,
     "views_waterfront": 0.0,
-    "family_school": 0.1751,
+    "family_school": 0.1742,
     "investment": 0.4641,
     "risk": 0.2768,
     "readability": 0.5982,
-    "description_premium_pct": -3.0149,
-    "description_index": -0.125103,
+    "description_premium_pct": -3.7175,
+    "description_index": -0.177018,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 3, \"condition_renovation\": 1, \"views_waterfront\": 0, \"family_school\": 2, \"investment\": 3, \"risk\": 1}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-30T17:56:12.203886+00:00",
+    "updated_at": "2026-10-31T20:01:31.997208+00:00",
     "top_topics": [
       {
-        "topic_id": 10,
-        "weight": 0.42911,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low",
-          "low maintenance",
-          "unit",
-          "care",
-          "easy care",
-          "sunny",
-          "brick",
-          "buyers",
-          "downsizers",
-          "single",
-          "lock"
-        ]
-      },
-      {
         "topic_id": 4,
-        "weight": 0.242613,
+        "weight": 0.374603,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
-          "car",
-          "leave",
           "lock",
-          "bedroom apartment",
+          "leave",
           "lock leave",
-          "complex",
+          "car",
+          "bedroom apartment",
           "restaurants",
-          "residents",
+          "bedroom",
           "car park",
+          "complex",
           "balcony",
-          "pool"
+          "caf restaurants"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.202648,
+        "weight": 0.232551,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -393,15 +374,34 @@
           "westlake girls",
           "boys",
           "westlake boys",
-          "intermediate",
           "normal",
           "suburb normal",
-          "normal intermediate"
+          "normal intermediate",
+          "intermediate"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.192801,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "brick",
+          "single",
+          "street",
+          "parking",
+          "garden",
+          "ready",
+          "fully",
+          "sunny",
+          "street parking",
+          "fenced",
+          "deck",
+          "room"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.098225,
+        "weight": 0.136536,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "harbour",
@@ -409,13 +409,13 @@
           "residence",
           "scale",
           "waterfront",
-          "expansive",
           "pool",
-          "aucklands",
-          "architectural",
-          "extraordinary",
+          "gulf",
           "city",
-          "privacy"
+          "aucklands",
+          "expansive",
+          "extraordinary",
+          "hauraki"
         ]
       }
     ]
@@ -521,7 +521,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-30T17:56:11.910650+00:00"
+    "updated_at": "2026-10-31T20:01:31.702044+00:00"
   },
   "body": "The High Court has ordered this sale. This is an unbelievable opportunity to add a high-yield unit to your portfolio.\r\n\r\nHave you always thought a property in Castor Bay was beyond your budget? Well, think again! This affordable, adorable one-bedroom home may be just what you’ve been waiting for, small and exclusive resort-style living with a pool.\r\n\r\nWestlake school zones. Castor Bay. What are you waiting for?\r\n\r\n• Single level\r\n• Lock-up-and-leave\r\n• Tastefully presented throughout\r\n• Spacious living with a modern, stylish kitchen\r\n• Generous bedroom with large wardrobe\r\n• Updated bathroom\r\n\r\nLocated in one of the North Shore’s prettiest and most sought-after suburbs, this home is within easy reach of Castor Bay beaches, Milford, Takapuna and city transport links.\r\n\r\nEnjoy privacy and security in this small, exclusive complex of just 15 residences, with a swimming pool and well-maintained grounds.\r\n\r\nFreehold (Cross Lease) title, with a very modest annual body corporate fee that includes building insurance and maintenance of the grounds and pool. Rates $2,475.84.\r\n\r\nFor the astute investor, the value is obvious. For a first-home buyer, this could be your opportunity to get onto the property ladder and into Castor Bay.\r\n\r\nAffordable Castor Bay living. Westlake school zones. Resort-style facilities.\r\n\r\nWhat are you waiting for?",
   "photos": [
@@ -543,12 +543,6 @@
     "member_nickname": "bt_milford"
   },
   "history": [
-    {
-      "date": "2025-10-02T00:00:00+00:00",
-      "estimate_low": 490114,
-      "estimate_mid": 519650,
-      "estimate_high": 549186
-    },
     {
       "date": "2025-11-13T00:00:00+00:00",
       "estimate_low": 484487,
@@ -899,14 +893,14 @@
         "low": 494043,
         "mid": 531383,
         "high": 587368,
-        "updated_at": "2026-10-30T17:56:11.910650+00:00",
+        "updated_at": "2026-10-31T20:01:31.702044+00:00",
         "confidence": "medium",
         "n": 51,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
           "n": 51,
-          "n_eff": 7.39,
+          "n_eff": 7.37,
           "radius_km": 3.0,
           "median_ratio": 0.984,
           "iqr_ratio": 0.1756,

@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-09-20T23:27:31.813000+00:00",
-  "days_on_market": 39,
+  "days_on_market": 40,
   "lat": -36.7483995,
   "lon": 174.7609625,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2327779712.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1206,
-  "watchers": 22,
+  "view_count": 1220,
+  "watchers": 21,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 36.5,
+  "sale_pressure": 36.7,
   "sale_pressure_label": "low",
-  "model_low": 1013581,
-  "model_mid": 1438316,
-  "model_high": 2092237,
+  "model_low": 1026146,
+  "model_mid": 1438687,
+  "model_high": 2034787,
   "model_confidence": "low",
-  "text_signal_pct": -19.9801,
-  "description_index": -0.910872,
+  "text_signal_pct": -14.3142,
+  "description_index": -0.721853,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -308,11 +308,11 @@
   ],
   "model": {
     "listing_id": 6141992476,
-    "low": 1013581,
-    "mid": 1438316,
-    "high": 2092237,
+    "low": 1026146,
+    "mid": 1438687,
+    "high": 2034787,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.35, 0.3748], \"rel_width\": 0.7499, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3379, 0.3467], \"rel_width\": 0.7011, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6141992476,
@@ -320,21 +320,59 @@
     "exclamations": 0,
     "urgency": 0.3218,
     "luxury": 0.6903,
-    "condition_renovation": 0.1842,
+    "condition_renovation": 0.1843,
     "views_waterfront": 0.5115,
     "family_school": 1.0,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4097,
-    "description_premium_pct": -19.9801,
-    "description_index": -0.910872,
+    "description_premium_pct": -14.3142,
+    "description_index": -0.721853,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 6, \"condition_renovation\": 1, \"views_waterfront\": 4, \"family_school\": 17, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-30T17:56:12.203886+00:00",
+    "updated_at": "2026-10-31T20:01:31.997208+00:00",
     "top_topics": [
       {
+        "topic_id": 2,
+        "weight": 0.29843,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand",
+          "brand new",
+          "modern",
+          "new",
+          "quality",
+          "low maintenance",
+          "maintenance",
+          "low",
+          "comfort",
+          "convenience",
+          "stylish",
+          "finishes"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.284068,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "sea views",
+          "views",
+          "elevated",
+          "rangitoto",
+          "rangitoto college",
+          "living areas",
+          "areas",
+          "suburb intermediate",
+          "intermediate",
+          "gulf",
+          "college"
+        ]
+      },
+      {
         "topic_id": 5,
-        "weight": 0.296524,
+        "weight": 0.280361,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -345,67 +383,29 @@
           "westlake girls",
           "boys",
           "westlake boys",
-          "intermediate",
           "normal",
           "suburb normal",
-          "normal intermediate"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.278217,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "brand",
-          "brand new",
-          "new",
-          "modern",
-          "quality",
-          "lot",
-          "standalone",
-          "bedrooms bathrooms",
-          "homes",
-          "sqm floor",
-          "floor area",
-          "sqm"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.265574,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "sea",
-          "sea views",
-          "views",
-          "elevated",
-          "gulf",
-          "rangitoto",
-          "hauraki gulf",
-          "hauraki",
-          "spectacular",
-          "living areas",
-          "areas",
-          "outlook"
+          "normal intermediate",
+          "intermediate"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.138593,
+        "weight": 0.13714,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "luxury",
           "appliances",
           "designer",
-          "year",
-          "finishes",
           "sophisticated",
+          "finishes",
+          "year",
+          "residence",
           "designer kitchen",
           "design",
-          "residence",
-          "quality",
-          "lighting"
+          "refined",
+          "integrated"
         ]
       }
     ]
@@ -446,7 +446,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-30T17:56:11.910650+00:00"
+    "updated_at": "2026-10-31T20:01:31.702044+00:00"
   },
   "body": "Wake up to sea views, walk the kids to some of Auckland's most sought-after schools, then finish the day with a stroll to Campbells Bay Beach. This is the lifestyle buyers search for but rarely find in a brand-new home.\r\n\r\nArchitecturally designed and finished to an exceptional standard, this brand-new residence has been thoughtfully crafted across two levels to offer the perfect balance of style, functionality and low-maintenance living. Whether you're upsizing, downsizing or simply looking for a home that lets you lock up and travel, this one delivers.\r\n\r\nFour generous bedrooms, 2.5 beautifully appointed bathrooms and flexible living spaces provide room for growing families, professionals and guests alike. Sun-filled interiors, quality finishes and sea views combine to create a home that feels both luxurious and effortless.\r\n\r\nLocated just moments from Campbells Bay Beach, Centennial Park, cafes and local amenities, you'll also enjoy zoning for Campbells Bay School, Murrays Bay Intermediate, Rangitoto College and both Westlake Boys' and Westlake Girls' High Schools.\r\n\r\nAt a Glance\r\n\r\n* Brand-new architecturally designed home\r\n* Four bedrooms | 2.5 bathrooms\r\n* Two-level floor plan with flexible living\r\n* Sea views\r\n* Designer kitchen with premium finishes\r\n* Internal access garage plus off-street parking\r\n* No body corporate fees\r\n* Walk to Campbells Bay Beach and Centennial Park\r\n* Zoned for Campbells Bay School, Murrays Bay Intermediate, Rangitoto College and both Westlake schools\r\n\r\nBy Negotiation. \r\nContact Drew Miller on 021 963 654 or Harrison Cutfield 021 136 1955 today to arrange your private viewing.",
   "photos": [
@@ -538,20 +538,6 @@
       "property_type": null,
       "cv": 1400000,
       "estimate_mid": 1420000
-    },
-    {
-      "property_id": "39a7ca80-1a92-4f06-9c22-b81b749feb16",
-      "address": "1/98 Park Rise, Campbells Bay, Auckland",
-      "sale_price": 1495000,
-      "sale_date": "2026-08-13T00:00:00+00:00",
-      "distance_km": 0.65,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1350000,
-      "estimate_mid": 1490000
     },
     {
       "property_id": "35ff7b4b-6576-4c36-92e0-1eb5aef90290",
@@ -650,6 +636,20 @@
       "property_type": null,
       "cv": 1600000,
       "estimate_mid": 1780000
+    },
+    {
+      "property_id": "dee00419-6b2e-4e74-bd30-6c5e4624b412",
+      "address": "8/423 Beach Road, Mairangi Bay, Auckland",
+      "sale_price": 1200000,
+      "sale_date": "2026-09-18T00:00:00+00:00",
+      "distance_km": 1.27,
+      "bedrooms": 3,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1925000,
+      "estimate_mid": 1950000
     }
   ],
   "valuation": {
@@ -665,14 +665,14 @@
         "low": 1320000,
         "mid": 1495000,
         "high": 1770000,
-        "updated_at": "2026-10-30T17:56:11.910650+00:00",
+        "updated_at": "2026-10-31T20:01:31.702044+00:00",
         "confidence": "medium",
         "n": 54,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
           "n": 54,
-          "n_eff": 16.85,
+          "n_eff": 16.8,
           "radius_km": 3.0,
           "iqr_ratio": 0.301,
           "same_suburb": 19,

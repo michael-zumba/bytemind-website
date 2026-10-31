@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-11-10T20:30:00+00:00",
   "listed_at": "2026-10-15T20:06:49.063000+00:00",
-  "days_on_market": 14,
+  "days_on_market": 15,
   "lat": -36.693615,
   "lon": 174.7468872,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2335410558.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1000000,
+  "comp_low": 1002000,
   "comp_mid": 1170000,
   "comp_high": 1455000,
   "comp_confidence": "low",
-  "comp_n": 58,
-  "value_low": 1000000,
+  "comp_n": 59,
+  "value_low": 1002000,
   "value_mid": 1170000,
   "value_high": 1455000,
   "value_source": "sold_comps_absolute",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1295,
-  "watchers": 62,
+  "view_count": 1372,
+  "watchers": 61,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 2.3,
+  "sale_pressure": 2.5,
   "sale_pressure_label": "low",
-  "model_low": 932529,
-  "model_mid": 1323300,
-  "model_high": 1924929,
+  "model_low": 961148,
+  "model_mid": 1347558,
+  "model_high": 1905900,
   "model_confidence": "low",
-  "text_signal_pct": -10.1624,
-  "description_index": -0.437944,
+  "text_signal_pct": -7.5477,
+  "description_index": -0.3667,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6181707287,
-    "low": 932529,
-    "mid": 1323300,
-    "high": 1924929,
+    "low": 961148,
+    "mid": 1347558,
+    "high": 1905900,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.35, 0.3748], \"rel_width\": 0.7499, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3379, 0.3467], \"rel_width\": 0.7011, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6181707287,
@@ -302,90 +302,90 @@
     "luxury": 0.1275,
     "condition_renovation": 0.0,
     "views_waterfront": 0.2833,
-    "family_school": 0.5889,
+    "family_school": 0.5858,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3746,
-    "description_premium_pct": -10.1624,
-    "description_index": -0.437944,
+    "description_premium_pct": -7.5477,
+    "description_index": -0.3667,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 7, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-30T17:56:12.203886+00:00",
+    "updated_at": "2026-10-31T20:01:31.997208+00:00",
     "top_topics": [
       {
-        "topic_id": 0,
-        "weight": 0.51193,
+        "topic_id": 6,
+        "weight": 0.648427,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
-          "wardrobe",
           "ensuite",
+          "wardrobe",
           "walk wardrobe",
           "bathroom",
           "suite",
-          "level",
-          "master",
           "lounge",
           "separate",
+          "level",
+          "master",
           "upstairs",
-          "master suite",
-          "walk"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.199526,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "relaxed",
-          "friends",
-          "setting",
-          "entertaining",
-          "peaceful",
-          "morning",
-          "outdoor",
-          "life",
-          "welcoming",
-          "inviting",
-          "family living",
-          "flexibility"
+          "walk",
+          "floor"
         ]
       },
       {
         "topic_id": 8,
-        "weight": 0.178729,
+        "weight": 0.14291,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
           "sea views",
           "views",
           "elevated",
-          "gulf",
           "rangitoto",
-          "hauraki gulf",
-          "hauraki",
-          "spectacular",
+          "rangitoto college",
           "living areas",
           "areas",
-          "outlook"
+          "suburb intermediate",
+          "intermediate",
+          "gulf",
+          "college"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.109815,
+        "weight": 0.110372,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
           "regional park",
           "regional",
           "village",
-          "suburb college",
           "suburb village",
-          "suburb regional",
           "walking",
-          "college",
+          "suburb college",
+          "suburb regional",
           "community",
+          "distance",
           "centre",
-          "distance"
+          "walking distance"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.098292,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "relaxed",
+          "friends",
+          "entertaining",
+          "setting",
+          "life",
+          "room",
+          "areas",
+          "outdoor",
+          "spaces",
+          "peaceful",
+          "living areas",
+          "children"
         ]
       }
     ]
@@ -426,7 +426,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-30T17:56:11.910650+00:00"
+    "updated_at": "2026-10-31T20:01:31.702044+00:00"
   },
   "body": "Auction: 8-12 The Promenade, Takapuna on Wednesday 11 November 2026 at 9:30AM  (unless sold prior)\r\n\r\nDesigned for easy day-to-day living and family connection, this modern split-level residence offers a flexible layout featuring four bedrooms, three full bathrooms, two distinct living areas, and a double garage.\r\n\r\nAt the heart of the home on the upper level, the open-plan kitchen, dining, and central living area seamlessly flow out onto an outdoor deck—an inviting setting for family meals, entertaining guests, or simply enjoying the fresh coastal breeze and natural light.\r\n\r\nQuietly situated on the top floor, the private master suite serves as a comfortable retreat complete with a walk-in wardrobe, an ensuite bathroom, and sea views. Two well-appointed bedrooms and a full family bathroom occupy the middle level, keeping children or visitors conveniently close.\r\n\r\nThe lower entry level provides exceptional versatility, featuring the fourth bedroom alongside a second lounge. This self-contained layout is well-suited as a quiet work-from-home office, a teenager's retreat, or separate accommodation for extended family and flatmates.\r\n\r\nPositioned in a desirable neighborhood, you are just a short distance from the local village with its cafes and essential shops, while the sands of Long Bay Beach, regional reserves, and scenic parks are all within easy reach for weekend recreation. CALL TODAY!",
   "photos": [
@@ -618,22 +618,22 @@
       "estimate_mid": 1760000
     },
     {
-      "property_id": "e09321c3-51c4-4e0d-b85c-ce5c419ae602",
-      "address": "14B Gerontius Glade, Torbay, Auckland",
-      "sale_price": 1040000,
-      "sale_date": "2026-08-01T00:00:00+00:00",
-      "distance_km": 1.4,
+      "property_id": "54ece96f-6634-443f-ae66-d59da7f1d739",
+      "address": "144 Weatherly Road, Torbay, Auckland",
+      "sale_price": 1002000,
+      "sale_date": "2026-08-06T00:00:00+00:00",
+      "distance_km": 1.42,
       "bedrooms": 3,
-      "bathrooms": null,
+      "bathrooms": 2,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1050000,
-      "estimate_mid": 1040000
+      "cv": 1200000,
+      "estimate_mid": 1020000
     }
   ],
   "valuation": {
-    "value_low": 1000000,
+    "value_low": 1002000,
     "value_mid": 1170000,
     "value_high": 1455000,
     "value_source": "sold_comps_absolute",
@@ -642,20 +642,20 @@
       {
         "name": "Nearby sold comparables",
         "range": "$1M – $1.46M",
-        "low": 1000000,
+        "low": 1002000,
         "mid": 1170000,
         "high": 1455000,
-        "updated_at": "2026-10-30T17:56:11.910650+00:00",
+        "updated_at": "2026-10-31T20:01:31.702044+00:00",
         "confidence": "low",
-        "n": 58,
+        "n": 59,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 58,
-          "n_eff": 17.0,
+          "n": 59,
+          "n_eff": 17.35,
           "radius_km": 3.0,
-          "iqr_ratio": 0.3889,
-          "same_suburb": 12,
+          "iqr_ratio": 0.3872,
+          "same_suburb": 14,
           "model_version": "comp-cv-v1"
         }
       }

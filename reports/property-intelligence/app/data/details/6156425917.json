@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-09-30T03:25:03.373000+00:00",
-  "days_on_market": 30,
+  "days_on_market": 31,
   "lat": -36.7770133,
   "lon": 174.7579268,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2332302948.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": 15826,
   "ask_gap_pct": 0.0222,
   "deal_gap": -0.0222,
-  "view_count": 3638,
+  "view_count": 3673,
   "watchers": 88,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T14:40:06.581377+00:00",
-  "days_since_last_change": 2.14,
+  "days_since_last_change": 3.22,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 3,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 55.0,
+  "sale_pressure": 55.2,
   "sale_pressure_label": "medium",
-  "model_low": 635822,
-  "model_mid": 695829,
-  "model_high": 760073,
+  "model_low": 631711,
+  "model_mid": 696417,
+  "model_high": 767773,
   "model_confidence": "high",
-  "text_signal_pct": -6.1436,
-  "description_index": -0.259106,
+  "text_signal_pct": -4.0308,
+  "description_index": -0.19225,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6156425917,
-    "low": 635822,
-    "mid": 695829,
-    "high": 760073,
+    "low": 631711,
+    "mid": 696417,
+    "high": 767773,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0902, 0.0883], \"rel_width\": 0.1786, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0975, 0.0975], \"rel_width\": 0.1954, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6156425917,
@@ -302,38 +302,19 @@
     "luxury": 0.2105,
     "condition_renovation": 0.3372,
     "views_waterfront": 0.117,
-    "family_school": 0.2779,
+    "family_school": 0.2765,
     "investment": 0.1228,
     "risk": 0.0,
     "readability": 0.5988,
-    "description_premium_pct": -6.1436,
-    "description_index": -0.259106,
+    "description_premium_pct": -4.0308,
+    "description_index": -0.19225,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 2, \"views_waterfront\": 1, \"family_school\": 4, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-30T17:56:12.203886+00:00",
+    "updated_at": "2026-10-31T20:01:31.997208+00:00",
     "top_topics": [
       {
-        "topic_id": 10,
-        "weight": 0.476959,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low",
-          "low maintenance",
-          "unit",
-          "care",
-          "easy care",
-          "sunny",
-          "brick",
-          "buyers",
-          "downsizers",
-          "single",
-          "lock"
-        ]
-      },
-      {
         "topic_id": 5,
-        "weight": 0.440767,
+        "weight": 0.463838,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -344,48 +325,67 @@
           "westlake girls",
           "boys",
           "westlake boys",
-          "intermediate",
           "normal",
           "suburb normal",
-          "normal intermediate"
+          "normal intermediate",
+          "intermediate"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.330138,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "brick",
+          "single",
+          "street",
+          "parking",
+          "garden",
+          "ready",
+          "fully",
+          "sunny",
+          "street parking",
+          "fenced",
+          "deck",
+          "room"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.082275,
+        "weight": 0.127524,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
           "regional park",
           "regional",
           "village",
-          "suburb college",
           "suburb village",
-          "suburb regional",
           "walking",
-          "college",
+          "suburb college",
+          "suburb regional",
           "community",
+          "distance",
           "centre",
-          "distance"
+          "walking distance"
         ]
       },
       {
-        "topic_id": 0,
-        "weight": 0.0,
-        "label": "Bedrooms, bathrooms & layout",
+        "topic_id": 4,
+        "weight": 0.0785,
+        "label": "Apartment / lock-up-and-leave",
         "top_terms": [
-          "wardrobe",
-          "ensuite",
-          "walk wardrobe",
-          "bathroom",
-          "suite",
-          "level",
-          "master",
-          "lounge",
-          "separate",
-          "upstairs",
-          "master suite",
-          "walk"
+          "apartment",
+          "lock",
+          "leave",
+          "lock leave",
+          "car",
+          "bedroom apartment",
+          "restaurants",
+          "bedroom",
+          "car park",
+          "complex",
+          "balcony",
+          "caf restaurants"
         ]
       }
     ]
@@ -459,7 +459,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-30T17:56:11.910650+00:00"
+    "updated_at": "2026-10-31T20:01:31.702044+00:00"
   },
   "body": "Gems like this one don't come along every day so put it on your must see list and be in for Christmas. \r\n\r\nIdeal for a first home buyer, downsizers or a great investment property.  The choices are endless!\r\n\r\nNot only are you walking distance from the Milford Mall and Smales Farm, you also have public transport close by.\r\n\r\nTucked away down a long and quiet driveway means there is no road noise while you enjoy your morning coffee on your new decking area. Situated on the ground floor this unit is sunny, warm and North facing. Complete with a rear and often hard to find large grassy area including a garden shed and clothesline. What more are you looking for! \r\n\r\nThis is the ultimate in convenience with this unbeatable location - just minutes from Milford Mall where you can enjoy the vibrant cafes, restaurants, and a wide range of shops. Excellent public transport, while the North Shore Hospital is only a short, flat stroll away. \r\n\r\nEnjoy seamless access to Takapuna, the CBD, and surrounding suburbs, your daily commute couldn't be easier!\r\n\r\nPositioned for top-tier schools including Westlake Boys, Westlake Girls, Milford School, Takapuna Normal Intermediate - your family's educational future will be poised for success.\r\n\r\nSolid, sunny - and ready to move in. This is your opportunity to secure a home in a premium location, without the premium price tag.\r\n\r\n* 2 bedrooms\r\n* Separate Bathroom\r\n* Separate toilet\r\n* Open plan\r\n* Renovated and Modern\r\n* Low Maintenance and easy care\r\n* 1 carport\r\n* 1 additional parking space available\r\n\r\nDon't delay, call now to arrange your viewing. \r\n\r\nOpportunities this good don't last long!   Call Tania on 021 709 660",
   "photos": [
@@ -495,12 +495,6 @@
     "member_nickname": "rw_northwest"
   },
   "history": [
-    {
-      "date": "2025-10-02T00:00:00+00:00",
-      "estimate_low": 698719,
-      "estimate_mid": 740827,
-      "estimate_high": 782934
-    },
     {
       "date": "2025-11-13T00:00:00+00:00",
       "estimate_low": 692312,
@@ -851,14 +845,14 @@
         "low": 686170,
         "mid": 717073,
         "high": 750000,
-        "updated_at": "2026-10-30T17:56:11.910650+00:00",
+        "updated_at": "2026-10-31T20:01:31.702044+00:00",
         "confidence": "medium",
         "n": 37,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
           "n": 37,
-          "n_eff": 6.77,
+          "n_eff": 6.75,
           "radius_km": 3.0,
           "median_ratio": 0.9561,
           "iqr_ratio": 0.089,

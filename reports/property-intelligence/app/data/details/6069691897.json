@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-08-06T03:19:30.867000+00:00",
-  "days_on_market": 86,
+  "days_on_market": 87,
   "lat": -36.6942864,
   "lon": 174.7552033,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2321781583.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1000000,
+  "comp_low": 980000,
   "comp_mid": 1200000,
   "comp_high": 1455000,
   "comp_confidence": "low",
-  "comp_n": 55,
-  "value_low": 1000000,
+  "comp_n": 53,
+  "value_low": 980000,
   "value_mid": 1200000,
   "value_high": 1455000,
   "value_source": "sold_comps_absolute",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1869,
+  "view_count": 1877,
   "watchers": 29,
   "is_standard": 1,
   "standard_reason": null,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 44.3,
+  "sale_pressure": 44.5,
   "sale_pressure_label": "medium",
-  "model_low": 1075035,
-  "model_mid": 1507232,
-  "model_high": 2131731,
+  "model_low": 1019904,
+  "model_mid": 1448125,
+  "model_high": 2057510,
   "model_confidence": "low",
-  "text_signal_pct": -12.4418,
-  "description_index": -0.620846,
+  "text_signal_pct": -10.9943,
+  "description_index": -0.493875,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6069691897,
-    "low": 1075035,
-    "mid": 1507232,
-    "high": 2131731,
+    "low": 1019904,
+    "mid": 1448125,
+    "high": 2057510,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3379, 0.3467], \"rel_width\": 0.7011, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3506, 0.3512], \"rel_width\": 0.7165, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6069691897,
@@ -302,38 +302,19 @@
     "luxury": 0.2694,
     "condition_renovation": 0.0,
     "views_waterfront": 0.2995,
-    "family_school": 0.4422,
-    "investment": 0.3142,
+    "family_school": 0.4423,
+    "investment": 0.3143,
     "risk": 0.0,
     "readability": 0.4874,
-    "description_premium_pct": -12.4418,
-    "description_index": -0.620846,
+    "description_premium_pct": -10.9943,
+    "description_index": -0.493875,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 2, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 5, \"investment\": 2, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-10-31T20:01:31.997208+00:00",
+    "updated_at": "2026-11-01T16:06:11.606146+00:00",
     "top_topics": [
       {
-        "topic_id": 2,
-        "weight": 0.421232,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "brand",
-          "brand new",
-          "modern",
-          "new",
-          "quality",
-          "low maintenance",
-          "maintenance",
-          "low",
-          "comfort",
-          "convenience",
-          "stylish",
-          "finishes"
-        ]
-      },
-      {
         "topic_id": 9,
-        "weight": 0.295432,
+        "weight": 0.304775,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
@@ -341,51 +322,70 @@
           "regional",
           "village",
           "suburb village",
-          "walking",
           "suburb college",
+          "walking",
           "suburb regional",
           "community",
           "distance",
-          "centre",
+          "college",
           "walking distance"
         ]
       },
       {
+        "topic_id": 2,
+        "weight": 0.30226,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand",
+          "brand new",
+          "new",
+          "modern",
+          "quality",
+          "standalone",
+          "lot",
+          "bedrooms bathrooms",
+          "homes",
+          "sqm floor",
+          "maintenance",
+          "floor area"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.102807,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "relaxed",
+          "friends",
+          "setting",
+          "entertaining",
+          "outdoor",
+          "life",
+          "peaceful",
+          "morning",
+          "areas",
+          "welcoming",
+          "family living",
+          "living areas"
+        ]
+      },
+      {
         "topic_id": 3,
-        "weight": 0.067756,
+        "weight": 0.097559,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "luxury",
           "appliances",
           "designer",
-          "sophisticated",
           "finishes",
-          "year",
-          "residence",
-          "designer kitchen",
+          "sophisticated",
           "design",
-          "refined",
-          "integrated"
-        ]
-      },
-      {
-        "topic_id": 1,
-        "weight": 0.066084,
-        "label": "Development & land potential",
-        "top_terms": [
-          "potential",
-          "site",
-          "future",
-          "land",
-          "development",
-          "subject",
-          "property",
-          "existing",
-          "housing",
-          "council",
-          "mixed",
-          "sqm"
+          "residence",
+          "year",
+          "designer kitchen",
+          "quality",
+          "refined"
         ]
       }
     ]
@@ -426,7 +426,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-10-31T20:01:31.702044+00:00"
+    "updated_at": "2026-11-01T16:06:11.336462+00:00"
   },
   "body": "Welcome to 35B and 35C Toroa Street Torbay. Step into a new era of refined seaside living at the heart of Old Torbay, where contemporary meets the vibrant rhythm of the coast.\r\n\r\nImmerse Yourself in Light, Modern, and Space:\r\n\r\n•  Brand New & Stand-alone\r\n•  Freehold Title, no Body Corp\r\n•  Four bedrooms designed for comfort and tranquility\r\n•  3.5 bathrooms, including not one, but two opulent master ensuites upstairs\r\n•  A sun-drenched open-plan living, dining, and designer kitchen – crafted for both effortless entertaining and everyday relaxation\r\n•  Seamless flow to your own private outdoor oasis – perfect for alfresco evenings and morning coffees\r\n\r\nThis home is more than just a place to live - it is a statement in style, space, and seaside charm. Whether you’re seeking more room to grow, moving closer to renowned schools, or securing a blue-chip coastal investment, this is your moment.\r\n\r\nPrime Location. Unmatched Convenience.\r\n•  Zoned for top schools: Long Bay College, Northcross Intermediate, and Torbay Primary\r\n•  Cafés, shops, supermarkets, parks, and sparkling beaches – all within minutes of your door\r\n\r\nContact us for further details or to arrange your viewing. Act now to secure your slice of Torbay’s coastal future.\r\n\r\nPlease always seek legal and technical advice before entering into any real estate transaction!",
   "photos": [
@@ -633,7 +633,7 @@
     }
   ],
   "valuation": {
-    "value_low": 1000000,
+    "value_low": 980000,
     "value_mid": 1200000,
     "value_high": 1455000,
     "value_source": "sold_comps_absolute",
@@ -641,21 +641,21 @@
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1M – $1.46M",
-        "low": 1000000,
+        "range": "$980K – $1.46M",
+        "low": 980000,
         "mid": 1200000,
         "high": 1455000,
-        "updated_at": "2026-10-31T20:01:31.702044+00:00",
+        "updated_at": "2026-11-01T16:06:11.336462+00:00",
         "confidence": "low",
-        "n": 55,
+        "n": 53,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 55,
-          "n_eff": 13.78,
+          "n": 53,
+          "n_eff": 13.41,
           "radius_km": 3.0,
-          "iqr_ratio": 0.3792,
-          "same_suburb": 14,
+          "iqr_ratio": 0.3958,
+          "same_suburb": 13,
           "model_version": "comp-cv-v1"
         }
       }

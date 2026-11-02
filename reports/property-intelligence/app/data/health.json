@@ -1,111 +1,111 @@
 {
   "status": "ok",
   "counts": {
-    "listings": 1053,
-    "all_listings": 1109,
-    "delisted_listings": 56,
-    "standard_listings": 1028,
+    "listings": 1049,
+    "all_listings": 1124,
+    "delisted_listings": 75,
+    "standard_listings": 1024,
     "non_standard_listings": 25,
-    "sales": 310,
+    "sales": 324,
     "suburbs": 17
   },
   "meta": {
-    "built_at": "2026-11-01T16:06:11.336462+00:00",
+    "built_at": "2026-11-02T16:33:31.576507+00:00",
     "model_version": "comp-cv-v1+hedonic-avm-v1",
-    "listings": 1109,
-    "sales": 310,
+    "listings": 1124,
+    "sales": 324,
     "valuation": {
-      "listings": 1053,
-      "with_homes_avm": 503,
-      "with_comp_model": 546,
+      "listings": 1049,
+      "with_homes_avm": 500,
+      "with_comp_model": 545,
       "with_active_guide": 4,
       "with_sold_median": 0,
       "unavailable": 0,
       "model_version": "comp-cv-v1",
-      "computed_at": "2026-11-01T16:06:11.336462+00:00"
+      "computed_at": "2026-11-02T16:33:31.576507+00:00"
     },
     "hedonic": {
       "model_version": "hedonic-avm-v1",
-      "n_train": 523,
-      "n_listings": 1084,
+      "n_train": 531,
+      "n_listings": 1099,
       "selected": "structural",
       "metrics": {
-        "n_train": 523,
-        "n_listings": 1084,
+        "n_train": 531,
+        "n_listings": 1099,
         "structural": {
           "r2": 0.9726,
-          "mae": 223213.3,
-          "mape": 0.0666,
-          "median_ape": 0.0441
+          "mae": 219814.9,
+          "mape": 0.0661,
+          "median_ape": 0.0452
         },
         "baseline_active_guide": {
-          "r2": 0.2915,
-          "mae": 1085200.0,
-          "mape": 0.4432,
-          "median_ape": 0.3137
+          "r2": 0.2525,
+          "mae": 1102448.9,
+          "mape": 0.4689,
+          "median_ape": 0.3004
         },
-        "interval_low": -0.0962,
-        "interval_high": 0.0971,
-        "interval_coverage_80": 0.7973,
+        "interval_low": -0.1004,
+        "interval_high": 0.0905,
+        "interval_coverage_80": 0.8004,
         "model_version": "hedonic-avm-v1",
-        "trained_at": "2026-11-01T16:06:11.336462+00:00",
+        "trained_at": "2026-11-02T16:33:31.576507+00:00",
         "features": 18,
         "no_cv_model": {
           "metrics": {
-            "r2": 0.7811,
-            "mae": 659454.5,
-            "mape": 0.2347,
-            "median_ape": 0.1714
+            "r2": 0.7785,
+            "mae": 668600.0,
+            "mape": 0.2405,
+            "median_ape": 0.1807
           },
           "baseline_active_guide": {
-            "r2": 0.2915,
-            "mae": 1085200.0,
-            "mape": 0.4432,
-            "median_ape": 0.3137
+            "r2": 0.2525,
+            "mae": 1102448.9,
+            "mape": 0.4689,
+            "median_ape": 0.3004
           },
           "interval": [
-            -0.3506,
-            0.3512
+            -0.357,
+            0.3575
           ]
         },
         "with_text": {
-          "r2": 0.9716,
-          "mae": 235110.8,
-          "mape": 0.0716,
-          "median_ape": 0.0521
+          "r2": 0.9714,
+          "mae": 236810.6,
+          "mape": 0.0723,
+          "median_ape": 0.0525
         },
         "text_delta": {
-          "r2": -0.001,
-          "mae": 11897.5,
-          "mape": 0.005
+          "r2": -0.0012,
+          "mae": 16995.7,
+          "mape": 0.0062
         },
         "selected": "structural",
         "sale_model": {
-          "n": 310,
+          "n": 324,
           "metrics": {
-            "r2": 0.8614,
-            "mae": 207445.5,
-            "mape": 0.1246,
-            "median_ape": 0.0876
+            "r2": 0.8675,
+            "mae": 197254.2,
+            "mape": 0.1199,
+            "median_ape": 0.0825
           },
-          "q10": -0.1896177719106884,
-          "q90": 0.1728441342675957,
+          "q10": -0.18083476518079988,
+          "q90": 0.1898829497562241,
           "model_version": "sale-cv-v1"
         }
       },
-      "predictions": 1084
+      "predictions": 1099
     },
     "text_analysis": {
       "model_version": "text-nmf-v1",
-      "generated_at": "2026-11-01T16:06:11.606146+00:00",
-      "runtime_seconds": 2.16,
-      "n_listings": 1082,
+      "generated_at": "2026-11-02T16:33:31.857470+00:00",
+      "runtime_seconds": 2.07,
+      "n_listings": 1095,
       "n_topics": 12,
       "cleaning": {
-        "documents": 1082,
-        "raw_words": 289877,
-        "cleaned_words": 272901,
-        "word_retention": 0.9414,
+        "documents": 1095,
+        "raw_words": 293452,
+        "cleaned_words": 276324,
+        "word_retention": 0.9416,
         "repeated_lines_dropped": 40,
         "fallback_documents": 1,
         "empty_documents": 0,
@@ -117,35 +117,35 @@
           "label": "Bedrooms, bathrooms & layout",
           "top_terms": [
             "wardrobe",
-            "ensuite",
             "walk wardrobe",
+            "ensuite",
             "bathroom",
             "suite",
+            "level",
             "lounge",
             "master",
-            "level",
-            "separate",
-            "master suite",
             "upstairs",
-            "floor"
+            "walk",
+            "master suite",
+            "separate"
           ],
-          "mean_weight": 0.068,
-          "share_docs_weight_gt_10pct": 0.2662,
+          "mean_weight": 0.0685,
+          "share_docs_weight_gt_10pct": 0.2749,
           "examples": [
             {
               "listing_id": 6202692186,
               "suburb": "Long Bay",
-              "weight": 0.704
+              "weight": 0.688
             },
             {
               "listing_id": 6132362677,
               "suburb": "Long Bay",
-              "weight": 0.672
+              "weight": 0.658
             },
             {
               "listing_id": 6158078858,
               "suburb": "Long Bay",
-              "weight": 0.615
+              "weight": 0.577
             }
           ]
         },
@@ -153,21 +153,21 @@
           "topic_id": 1,
           "label": "Development & land potential",
           "top_terms": [
-            "site",
             "potential",
-            "development",
-            "land",
+            "site",
             "future",
-            "sqm",
+            "land",
+            "development",
             "subject",
-            "housing",
-            "mixed",
+            "property",
             "existing",
+            "sqm",
+            "housing",
             "council",
-            "developers"
+            "mixed"
           ],
-          "mean_weight": 0.0734,
-          "share_docs_weight_gt_10pct": 0.1839,
+          "mean_weight": 0.0839,
+          "share_docs_weight_gt_10pct": 0.2164,
           "examples": [
             {
               "listing_id": 6079332508,
@@ -177,12 +177,12 @@
             {
               "listing_id": 6204768175,
               "suburb": "Mission Bay",
-              "weight": 0.992
+              "weight": 0.995
             },
             {
-              "listing_id": 6069354321,
-              "suburb": "Milford",
-              "weight": 0.943
+              "listing_id": 6143413538,
+              "suburb": "Torbay",
+              "weight": 0.967
             }
           ]
         },
@@ -198,28 +198,28 @@
             "standalone",
             "lot",
             "bedrooms bathrooms",
-            "homes",
             "sqm floor",
-            "maintenance",
-            "floor area"
+            "floor area",
+            "homes",
+            "sqm"
           ],
-          "mean_weight": 0.109,
-          "share_docs_weight_gt_10pct": 0.3262,
+          "mean_weight": 0.1074,
+          "share_docs_weight_gt_10pct": 0.3215,
           "examples": [
             {
               "listing_id": 6186622870,
               "suburb": "Browns Bay",
-              "weight": 0.899
+              "weight": 0.941
             },
             {
               "listing_id": 6154432112,
               "suburb": "Torbay",
-              "weight": 0.867
+              "weight": 0.883
             },
             {
-              "listing_id": 6180550728,
+              "listing_id": 6181866602,
               "suburb": "Browns Bay",
-              "weight": 0.863
+              "weight": 0.874
             }
           ]
         },
@@ -231,32 +231,32 @@
             "luxury",
             "appliances",
             "designer",
+            "year",
             "finishes",
             "sophisticated",
+            "designer kitchen",
             "design",
             "residence",
-            "year",
-            "designer kitchen",
             "quality",
-            "refined"
+            "lighting"
           ],
-          "mean_weight": 0.0895,
-          "share_docs_weight_gt_10pct": 0.2736,
+          "mean_weight": 0.089,
+          "share_docs_weight_gt_10pct": 0.2785,
           "examples": [
-            {
-              "listing_id": 5555788377,
-              "suburb": "St Heliers",
-              "weight": 0.707
-            },
             {
               "listing_id": 6036265920,
               "suburb": "Long Bay",
+              "weight": 0.699
+            },
+            {
+              "listing_id": 5555788377,
+              "suburb": "St Heliers",
               "weight": 0.695
             },
             {
               "listing_id": 5530901149,
               "suburb": "St Heliers",
-              "weight": 0.676
+              "weight": 0.673
             }
           ]
         },
@@ -265,35 +265,35 @@
           "label": "Apartment / lock-up-and-leave",
           "top_terms": [
             "apartment",
+            "car",
             "leave",
             "lock",
-            "lock leave",
-            "car",
             "bedroom apartment",
-            "bedroom",
-            "restaurants",
-            "car park",
+            "lock leave",
             "complex",
-            "balcony",
-            "caf restaurants"
+            "restaurants",
+            "residents",
+            "car park",
+            "pool",
+            "car parks"
           ],
-          "mean_weight": 0.0887,
-          "share_docs_weight_gt_10pct": 0.2477,
+          "mean_weight": 0.0718,
+          "share_docs_weight_gt_10pct": 0.1772,
           "examples": [
             {
-              "listing_id": 6056807578,
-              "suburb": "Mairangi Bay",
-              "weight": 0.915
-            },
-            {
-              "listing_id": 5946082516,
-              "suburb": "Long Bay",
-              "weight": 0.907
+              "listing_id": 6159200460,
+              "suburb": "Takapuna",
+              "weight": 0.989
             },
             {
               "listing_id": 6061807764,
               "suburb": "Takapuna",
-              "weight": 0.878
+              "weight": 0.968
+            },
+            {
+              "listing_id": 5876896476,
+              "suburb": "Takapuna",
+              "weight": 0.944
             }
           ]
         },
@@ -314,23 +314,23 @@
             "intermediate",
             "normal intermediate"
           ],
-          "mean_weight": 0.0694,
-          "share_docs_weight_gt_10pct": 0.1885,
+          "mean_weight": 0.0696,
+          "share_docs_weight_gt_10pct": 0.1872,
           "examples": [
-            {
-              "listing_id": 6012237030,
-              "suburb": "Castor Bay",
-              "weight": 0.645
-            },
             {
               "listing_id": 5895113721,
               "suburb": "Takapuna",
-              "weight": 0.636
+              "weight": 0.665
             },
             {
-              "listing_id": 6170790427,
-              "suburb": "Milford",
-              "weight": 0.618
+              "listing_id": 6012237030,
+              "suburb": "Castor Bay",
+              "weight": 0.656
+            },
+            {
+              "listing_id": 6164259205,
+              "suburb": "Castor Bay",
+              "weight": 0.617
             }
           ]
         },
@@ -339,35 +339,35 @@
           "label": "Family living & entertaining",
           "top_terms": [
             "relaxed",
-            "friends",
-            "setting",
             "entertaining",
+            "setting",
+            "friends",
             "outdoor",
-            "life",
-            "peaceful",
-            "morning",
-            "areas",
-            "welcoming",
             "family living",
-            "living areas"
+            "flexibility",
+            "peaceful",
+            "welcoming",
+            "areas",
+            "inviting",
+            "life"
           ],
-          "mean_weight": 0.1087,
-          "share_docs_weight_gt_10pct": 0.3771,
+          "mean_weight": 0.1046,
+          "share_docs_weight_gt_10pct": 0.3671,
           "examples": [
+            {
+              "listing_id": 6112013726,
+              "suburb": "St Heliers",
+              "weight": 0.794
+            },
             {
               "listing_id": 6146955029,
               "suburb": "Devonport",
-              "weight": 0.8
+              "weight": 0.791
             },
             {
               "listing_id": 6154472829,
               "suburb": "Castor Bay",
-              "weight": 0.782
-            },
-            {
-              "listing_id": 6112013726,
-              "suburb": "St Heliers",
-              "weight": 0.76
+              "weight": 0.767
             }
           ]
         },
@@ -375,36 +375,36 @@
           "topic_id": 7,
           "label": "Parking, garden & section",
           "top_terms": [
-            "street",
-            "fully",
-            "parking",
-            "fenced",
-            "street parking",
-            "facing",
-            "room",
-            "double",
             "college",
-            "garden",
-            "north facing",
-            "single"
+            "parking",
+            "room",
+            "street parking",
+            "street",
+            "double",
+            "plus",
+            "rangitoto college",
+            "fenced",
+            "fully",
+            "garage",
+            "deck"
           ],
-          "mean_weight": 0.1014,
-          "share_docs_weight_gt_10pct": 0.3577,
+          "mean_weight": 0.0999,
+          "share_docs_weight_gt_10pct": 0.3452,
           "examples": [
+            {
+              "listing_id": 6168023498,
+              "suburb": "Torbay",
+              "weight": 0.874
+            },
             {
               "listing_id": 6203336827,
               "suburb": "Browns Bay",
-              "weight": 0.765
-            },
-            {
-              "listing_id": 6134194645,
-              "suburb": "St Heliers",
-              "weight": 0.714
+              "weight": 0.827
             },
             {
               "listing_id": 6090362874,
               "suburb": "Kohimarama",
-              "weight": 0.684
+              "weight": 0.713
             }
           ]
         },
@@ -416,32 +416,32 @@
             "sea views",
             "views",
             "elevated",
+            "gulf",
             "rangitoto",
-            "rangitoto college",
+            "hauraki gulf",
+            "hauraki",
+            "spectacular",
             "living areas",
             "areas",
-            "gulf",
-            "suburb intermediate",
-            "hauraki gulf",
-            "hauraki"
+            "outlook"
           ],
-          "mean_weight": 0.07,
-          "share_docs_weight_gt_10pct": 0.2505,
+          "mean_weight": 0.0632,
+          "share_docs_weight_gt_10pct": 0.2329,
           "examples": [
             {
               "listing_id": 6129610779,
               "suburb": "Torbay",
-              "weight": 0.824
+              "weight": 0.807
             },
             {
-              "listing_id": 6113856006,
-              "suburb": "Rothesay Bay",
-              "weight": 0.596
+              "listing_id": 6045590807,
+              "suburb": "Long Bay",
+              "weight": 0.521
             },
             {
-              "listing_id": 6193461256,
-              "suburb": "Mairangi Bay",
-              "weight": 0.549
+              "listing_id": 6167658231,
+              "suburb": "Long Bay",
+              "weight": 0.518
             }
           ]
         },
@@ -453,69 +453,69 @@
             "regional park",
             "regional",
             "village",
-            "suburb village",
             "suburb college",
-            "walking",
+            "suburb village",
             "suburb regional",
+            "walking",
             "community",
-            "distance",
             "college",
-            "walking distance"
+            "distance",
+            "centre"
           ],
-          "mean_weight": 0.0813,
-          "share_docs_weight_gt_10pct": 0.2847,
+          "mean_weight": 0.0777,
+          "share_docs_weight_gt_10pct": 0.2712,
           "examples": [
             {
               "listing_id": 5924139235,
               "suburb": "Long Bay",
-              "weight": 1.0
+              "weight": 0.988
             },
             {
               "listing_id": 5043789848,
               "suburb": "Long Bay",
-              "weight": 0.993
+              "weight": 0.985
             },
             {
               "listing_id": 4381088334,
               "suburb": "Long Bay",
-              "weight": 0.934
+              "weight": 0.937
             }
           ]
         },
         {
           "topic_id": 10,
-          "label": "Renovation & character",
+          "label": "Brick / tile / low-maintenance units",
           "top_terms": [
-            "potential",
-            "value",
-            "add value",
-            "add",
-            "property",
+            "maintenance",
+            "low",
+            "low maintenance",
+            "unit",
+            "care",
+            "easy care",
+            "sunny",
+            "brick",
+            "downsizers",
             "buyers",
-            "ready",
-            "bring",
-            "vision",
-            "renovation",
-            "exciting",
-            "renovate"
+            "single",
+            "morning"
           ],
-          "mean_weight": 0.0598,
-          "share_docs_weight_gt_10pct": 0.1802,
+          "mean_weight": 0.0851,
+          "share_docs_weight_gt_10pct": 0.2877,
           "examples": [
             {
-              "listing_id": 6190789480,
+              "listing_id": 6176711730,
               "suburb": "St Heliers",
-              "weight": 0.874
+              "weight": 0.949
             },
             {
-              "listing_id": 5817408691,
-              "suburb": "Rothesay Bay",
-              "weight": 0.84
+              "listing_id": 6075790390,
+              "suburb": "Glendowie",
+              "weight": 0.897
             },
             {
-              "listing_id": 6201205170,
-              "suburb": "Waiake",
-              "weight": 0.805
+              "listing_id": 6124832415,
+              "suburb": "Browns Bay",
+              "weight": 0.848
             }
           ]
         },
@@ -527,85 +527,85 @@
             "views",
             "residence",
             "scale",
-            "pool",
             "waterfront",
             "expansive",
-            "city",
+            "pool",
             "aucklands",
-            "gulf",
+            "architectural",
+            "city",
             "extraordinary",
             "privacy"
           ],
-          "mean_weight": 0.0808,
-          "share_docs_weight_gt_10pct": 0.2477,
+          "mean_weight": 0.0793,
+          "share_docs_weight_gt_10pct": 0.242,
           "examples": [
             {
               "listing_id": 5932793738,
               "suburb": "Ōrākei",
-              "weight": 0.931
+              "weight": 0.796
             },
             {
-              "listing_id": 6126633073,
-              "suburb": "Takapuna",
-              "weight": 0.75
+              "listing_id": 5861627037,
+              "suburb": "St Heliers",
+              "weight": 0.761
             },
             {
-              "listing_id": 6003601185,
-              "suburb": "Ōrākei",
-              "weight": 0.748
+              "listing_id": 6060635817,
+              "suburb": "St Heliers",
+              "weight": 0.751
             }
           ]
         }
       ],
       "lexicons": {
         "urgency": {
-          "mean": 0.0984,
-          "p90": 0.3808,
-          "share_positive": 0.2311
+          "mean": 0.0979,
+          "p90": 0.381,
+          "share_positive": 0.2301
         },
         "luxury": {
-          "mean": 0.2607,
-          "p90": 0.7076,
-          "share_positive": 0.7006
+          "mean": 0.2633,
+          "p90": 0.7122,
+          "share_positive": 0.7023
         },
         "condition_renovation": {
           "mean": 0.2406,
-          "p90": 0.6353,
-          "share_positive": 0.6266
+          "p90": 0.6367,
+          "share_positive": 0.6256
         },
         "views_waterfront": {
-          "mean": 0.3311,
-          "p90": 0.7504,
-          "share_positive": 0.8105
+          "mean": 0.3299,
+          "p90": 0.747,
+          "share_positive": 0.8073
         },
         "family_school": {
-          "mean": 0.4489,
-          "p90": 0.8354,
-          "share_positive": 0.9603
+          "mean": 0.4502,
+          "p90": 0.8385,
+          "share_positive": 0.9598
         },
         "investment": {
-          "mean": 0.1167,
-          "p90": 0.3772,
-          "share_positive": 0.3678
+          "mean": 0.1168,
+          "p90": 0.377,
+          "share_positive": 0.3699
         },
         "risk": {
-          "mean": 0.0245,
+          "mean": 0.0236,
           "p90": 0.0,
-          "share_positive": 0.0739
+          "share_positive": 0.0731
         },
         "word_count": {
-          "mean": 252.2,
-          "median": 248.0,
-          "p90": 368.9
+          "mean": 252.4,
+          "median": 249.0,
+          "p90": 368.6
         }
       },
       "associations": {
         "value_cv_ratio": {
           "name": "value_cv_ratio",
           "dependent": "log(value_mid / cv)",
-          "n": 523,
-          "r2": 0.1865,
-          "adj_r2": 0.1003,
+          "n": 531,
+          "r2": 0.1794,
+          "adj_r2": 0.0939,
           "fdr": "Benjamini-Hochberg across the 18 text features",
           "n_significant_fdr_05": 0,
           "n_significant_fdr_10": 0,
@@ -616,11 +616,11 @@
               "kind": "topic",
               "topic_id": 0,
               "label": "Bedrooms, bathrooms & layout",
-              "coef": -0.028799,
-              "se": 0.066417,
-              "t": -0.4336,
-              "p": 0.664569,
-              "q": 0.782613,
+              "coef": -0.019603,
+              "se": 0.069662,
+              "t": -0.2814,
+              "p": 0.778399,
+              "q": 0.977343,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -629,11 +629,11 @@
               "kind": "topic",
               "topic_id": 1,
               "label": "Development & land potential",
-              "coef": -0.027637,
-              "se": 0.054824,
-              "t": -0.5041,
-              "p": 0.614188,
-              "q": 0.782613,
+              "coef": -0.001656,
+              "se": 0.058305,
+              "t": -0.0284,
+              "p": 0.977343,
+              "q": 0.977343,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -642,11 +642,11 @@
               "kind": "topic",
               "topic_id": 3,
               "label": "Luxury, architectural & prestige",
-              "coef": 0.123151,
-              "se": 0.078289,
-              "t": 1.573,
-              "p": 0.115712,
-              "q": 0.520703,
+              "coef": 0.119026,
+              "se": 0.07678,
+              "t": 1.5502,
+              "p": 0.121091,
+              "q": 0.433887,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -655,11 +655,11 @@
               "kind": "topic",
               "topic_id": 4,
               "label": "Apartment / lock-up-and-leave",
-              "coef": -0.064466,
-              "se": 0.068117,
-              "t": -0.9464,
-              "p": 0.343942,
-              "q": 0.773871,
+              "coef": -0.046682,
+              "se": 0.077756,
+              "t": -0.6004,
+              "p": 0.548262,
+              "q": 0.941579,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -668,11 +668,11 @@
               "kind": "topic",
               "topic_id": 5,
               "label": "Westlake school zone",
-              "coef": -0.15053,
-              "se": 0.069015,
-              "t": -2.1811,
-              "p": 0.029174,
-              "q": 0.276771,
+              "coef": -0.127578,
+              "se": 0.069259,
+              "t": -1.8421,
+              "p": 0.065467,
+              "q": 0.392803,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -681,11 +681,11 @@
               "kind": "topic",
               "topic_id": 6,
               "label": "Family living & entertaining",
-              "coef": -0.025437,
-              "se": 0.051681,
-              "t": -0.4922,
-              "p": 0.622576,
-              "q": 0.782613,
+              "coef": -0.020552,
+              "se": 0.056172,
+              "t": -0.3659,
+              "p": 0.714463,
+              "q": 0.977343,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -694,11 +694,11 @@
               "kind": "topic",
               "topic_id": 7,
               "label": "Parking, garden & section",
-              "coef": 0.001448,
-              "se": 0.051261,
-              "t": 0.0282,
-              "p": 0.977468,
-              "q": 0.977468,
+              "coef": 0.003895,
+              "se": 0.051445,
+              "t": 0.0757,
+              "p": 0.939653,
+              "q": 0.977343,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -707,11 +707,11 @@
               "kind": "topic",
               "topic_id": 8,
               "label": "Sea views & coastal outlook",
-              "coef": -0.043563,
-              "se": 0.111359,
-              "t": -0.3912,
-              "p": 0.695656,
-              "q": 0.782613,
+              "coef": -0.029706,
+              "se": 0.093043,
+              "t": -0.3193,
+              "p": 0.749523,
+              "q": 0.977343,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -720,11 +720,11 @@
               "kind": "topic",
               "topic_id": 9,
               "label": "Coastal village & park proximity",
-              "coef": 0.054241,
-              "se": 0.080109,
-              "t": 0.6771,
-              "p": 0.498344,
-              "q": 0.782613,
+              "coef": 0.065649,
+              "se": 0.087969,
+              "t": 0.7463,
+              "p": 0.455501,
+              "q": 0.941579,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -732,12 +732,12 @@
               "feature": "topic_10",
               "kind": "topic",
               "topic_id": 10,
-              "label": "Renovation & character",
-              "coef": -0.005448,
-              "se": 0.054967,
-              "t": -0.0991,
-              "p": 0.921047,
-              "q": 0.975227,
+              "label": "Brick / tile / low-maintenance units",
+              "coef": -0.008697,
+              "se": 0.067037,
+              "t": -0.1297,
+              "p": 0.896775,
+              "q": 0.977343,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -746,11 +746,11 @@
               "kind": "topic",
               "topic_id": 11,
               "label": "Resort amenities (pool / tennis / spa)",
-              "coef": 0.090708,
-              "se": 0.071428,
-              "t": 1.2699,
-              "p": 0.204112,
-              "q": 0.612335,
+              "coef": 0.083377,
+              "se": 0.0699,
+              "t": 1.1928,
+              "p": 0.23295,
+              "q": 0.599015,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -759,11 +759,11 @@
               "kind": "lexicon",
               "topic_id": null,
               "label": "urgency",
-              "coef": -0.024711,
-              "se": 0.019239,
-              "t": -1.2844,
-              "p": 0.199006,
-              "q": 0.612335,
+              "coef": -0.027439,
+              "se": 0.01881,
+              "t": -1.4588,
+              "p": 0.144629,
+              "q": 0.433887,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -772,11 +772,11 @@
               "kind": "lexicon",
               "topic_id": null,
               "label": "luxury",
-              "coef": -0.014375,
-              "se": 0.033046,
-              "t": -0.435,
-              "p": 0.663557,
-              "q": 0.782613,
+              "coef": -0.005413,
+              "se": 0.031988,
+              "t": -0.1692,
+              "p": 0.86563,
+              "q": 0.977343,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -785,11 +785,11 @@
               "kind": "lexicon",
               "topic_id": null,
               "label": "condition_renovation",
-              "coef": 0.009379,
-              "se": 0.018866,
-              "t": 0.4971,
-              "p": 0.61909,
-              "q": 0.782613,
+              "coef": 0.010341,
+              "se": 0.018462,
+              "t": 0.5601,
+              "p": 0.575409,
+              "q": 0.941579,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -798,11 +798,11 @@
               "kind": "lexicon",
               "topic_id": null,
               "label": "views_waterfront",
-              "coef": 0.018526,
-              "se": 0.030887,
-              "t": 0.5998,
-              "p": 0.548646,
-              "q": 0.782613,
+              "coef": 0.018585,
+              "se": 0.028221,
+              "t": 0.6586,
+              "p": 0.510176,
+              "q": 0.941579,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -811,11 +811,11 @@
               "kind": "lexicon",
               "topic_id": null,
               "label": "family_school",
-              "coef": 0.056604,
-              "se": 0.02744,
-              "t": 2.0628,
-              "p": 0.039129,
-              "q": 0.276771,
+              "coef": 0.052707,
+              "se": 0.026743,
+              "t": 1.9709,
+              "p": 0.048741,
+              "q": 0.392803,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -824,11 +824,11 @@
               "kind": "lexicon",
               "topic_id": null,
               "label": "investment",
-              "coef": -0.029577,
-              "se": 0.030672,
-              "t": -0.9643,
-              "p": 0.334898,
-              "q": 0.773871,
+              "coef": -0.045737,
+              "se": 0.030975,
+              "t": -1.4766,
+              "p": 0.139795,
+              "q": 0.433887,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -837,24 +837,24 @@
               "kind": "lexicon",
               "topic_id": null,
               "label": "risk",
-              "coef": 0.080887,
-              "se": 0.040561,
-              "t": 1.9942,
-              "p": 0.046129,
-              "q": 0.276771,
+              "coef": 0.083727,
+              "se": 0.041184,
+              "t": 2.033,
+              "p": 0.042052,
+              "q": 0.392803,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             }
           ],
           "joint_text_test": {
-            "statistic": 1.5048,
-            "p": 0.083215,
+            "statistic": 1.5304,
+            "p": 0.074813,
             "df_num": 18,
-            "df_denom": 472,
-            "r2_structural_only": 0.1283,
-            "r2_with_text": 0.1865,
-            "delta_r2": 0.0582,
-            "delta_adj_r2": 0.029
+            "df_denom": 480,
+            "r2_structural_only": 0.1261,
+            "r2_with_text": 0.1794,
+            "delta_r2": 0.0533,
+            "delta_adj_r2": 0.024
           },
           "controls": [
             "bedrooms",
@@ -905,9 +905,9 @@
         "ask_gap": {
           "name": "ask_gap",
           "dependent": "ask_gap = (asking - value_mid) / value_mid",
-          "n": 197,
-          "r2": 0.381,
-          "adj_r2": 0.1965,
+          "n": 200,
+          "r2": 0.3402,
+          "adj_r2": 0.1474,
           "fdr": "Benjamini-Hochberg across the 18 text features",
           "n_significant_fdr_05": 0,
           "n_significant_fdr_10": 0,
@@ -918,11 +918,11 @@
               "kind": "topic",
               "topic_id": 0,
               "label": "Bedrooms, bathrooms & layout",
-              "coef": 0.087064,
-              "se": 0.205586,
-              "t": 0.4235,
-              "p": 0.671935,
-              "q": 0.874804,
+              "coef": -0.002462,
+              "se": 0.188122,
+              "t": -0.0131,
+              "p": 0.989559,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -931,11 +931,11 @@
               "kind": "topic",
               "topic_id": 1,
               "label": "Development & land potential",
-              "coef": 0.20082,
-              "se": 0.172161,
-              "t": 1.1665,
-              "p": 0.243427,
-              "q": 0.704238,
+              "coef": 0.008855,
+              "se": 0.169972,
+              "t": 0.0521,
+              "p": 0.958453,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -944,11 +944,11 @@
               "kind": "topic",
               "topic_id": 3,
               "label": "Luxury, architectural & prestige",
-              "coef": 0.077272,
-              "se": 0.187593,
-              "t": 0.4119,
-              "p": 0.680403,
-              "q": 0.874804,
+              "coef": 0.08777,
+              "se": 0.190654,
+              "t": 0.4604,
+              "p": 0.645256,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -957,11 +957,11 @@
               "kind": "topic",
               "topic_id": 4,
               "label": "Apartment / lock-up-and-leave",
-              "coef": -0.07833,
-              "se": 0.165653,
-              "t": -0.4729,
-              "p": 0.636316,
-              "q": 0.874804,
+              "coef": 0.00908,
+              "se": 0.22786,
+              "t": 0.0398,
+              "p": 0.968214,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -970,11 +970,11 @@
               "kind": "topic",
               "topic_id": 5,
               "label": "Westlake school zone",
-              "coef": -0.349462,
-              "se": 0.255864,
-              "t": -1.3658,
-              "p": 0.171998,
-              "q": 0.704238,
+              "coef": -0.404797,
+              "se": 0.267417,
+              "t": -1.5137,
+              "p": 0.130095,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -983,11 +983,11 @@
               "kind": "topic",
               "topic_id": 6,
               "label": "Family living & entertaining",
-              "coef": 0.055706,
-              "se": 0.121362,
-              "t": 0.459,
-              "p": 0.646231,
-              "q": 0.874804,
+              "coef": -0.03589,
+              "se": 0.140076,
+              "t": -0.2562,
+              "p": 0.797782,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -996,11 +996,11 @@
               "kind": "topic",
               "topic_id": 7,
               "label": "Parking, garden & section",
-              "coef": 0.007646,
-              "se": 0.130967,
-              "t": 0.0584,
-              "p": 0.953443,
-              "q": 0.998687,
+              "coef": -0.070123,
+              "se": 0.144547,
+              "t": -0.4851,
+              "p": 0.627591,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -1009,11 +1009,11 @@
               "kind": "topic",
               "topic_id": 8,
               "label": "Sea views & coastal outlook",
-              "coef": 0.311921,
-              "se": 0.244677,
-              "t": 1.2748,
-              "p": 0.20237,
-              "q": 0.704238,
+              "coef": 0.127215,
+              "se": 0.231656,
+              "t": 0.5492,
+              "p": 0.5829,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -1022,11 +1022,11 @@
               "kind": "topic",
               "topic_id": 9,
               "label": "Coastal village & park proximity",
-              "coef": 0.282538,
-              "se": 0.161869,
-              "t": 1.7455,
-              "p": 0.080902,
-              "q": 0.547439,
+              "coef": 0.224749,
+              "se": 0.180894,
+              "t": 1.2424,
+              "p": 0.214078,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -1034,12 +1034,12 @@
               "feature": "topic_10",
               "kind": "topic",
               "topic_id": 10,
-              "label": "Renovation & character",
-              "coef": -0.274125,
-              "se": 0.16231,
-              "t": -1.6889,
-              "p": 0.09124,
-              "q": 0.547439,
+              "label": "Brick / tile / low-maintenance units",
+              "coef": -0.082439,
+              "se": 0.164303,
+              "t": -0.5018,
+              "p": 0.615842,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -1048,11 +1048,11 @@
               "kind": "topic",
               "topic_id": 11,
               "label": "Resort amenities (pool / tennis / spa)",
-              "coef": 0.176181,
-              "se": 0.161015,
-              "t": 1.0942,
-              "p": 0.27387,
-              "q": 0.704238,
+              "coef": 0.044074,
+              "se": 0.160301,
+              "t": 0.2749,
+              "p": 0.783359,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -1061,11 +1061,11 @@
               "kind": "lexicon",
               "topic_id": null,
               "label": "urgency",
-              "coef": 0.024051,
-              "se": 0.048294,
-              "t": 0.498,
-              "p": 0.618481,
-              "q": 0.874804,
+              "coef": -0.017769,
+              "se": 0.047547,
+              "t": -0.3737,
+              "p": 0.708616,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -1074,11 +1074,11 @@
               "kind": "lexicon",
               "topic_id": null,
               "label": "luxury",
-              "coef": 0.069997,
-              "se": 0.086247,
-              "t": 0.8116,
-              "p": 0.417025,
-              "q": 0.834051,
+              "coef": 0.054132,
+              "se": 0.091213,
+              "t": 0.5935,
+              "p": 0.552863,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -1087,11 +1087,11 @@
               "kind": "lexicon",
               "topic_id": null,
               "label": "condition_renovation",
-              "coef": 0.116812,
-              "se": 0.05995,
-              "t": 1.9485,
-              "p": 0.051355,
-              "q": 0.547439,
+              "coef": 0.114342,
+              "se": 0.058795,
+              "t": 1.9448,
+              "p": 0.051804,
+              "q": 0.932476,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -1100,11 +1100,11 @@
               "kind": "lexicon",
               "topic_id": null,
               "label": "views_waterfront",
-              "coef": -0.072616,
-              "se": 0.076058,
-              "t": -0.9547,
-              "p": 0.339708,
-              "q": 0.764343,
+              "coef": -0.017925,
+              "se": 0.073142,
+              "t": -0.2451,
+              "p": 0.806407,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -1113,11 +1113,11 @@
               "kind": "lexicon",
               "topic_id": null,
               "label": "family_school",
-              "coef": -0.000104,
-              "se": 0.063489,
-              "t": -0.0016,
-              "p": 0.998687,
-              "q": 0.998687,
+              "coef": 0.046174,
+              "se": 0.072205,
+              "t": 0.6395,
+              "p": 0.522513,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -1126,11 +1126,11 @@
               "kind": "lexicon",
               "topic_id": null,
               "label": "investment",
-              "coef": 0.029067,
-              "se": 0.088945,
-              "t": 0.3268,
-              "p": 0.743825,
-              "q": 0.89259,
+              "coef": 0.047668,
+              "se": 0.093544,
+              "t": 0.5096,
+              "p": 0.610351,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             },
@@ -1139,24 +1139,24 @@
               "kind": "lexicon",
               "topic_id": null,
               "label": "risk",
-              "coef": -0.006996,
-              "se": 0.196873,
-              "t": -0.0355,
-              "p": 0.971654,
-              "q": 0.998687,
+              "coef": -0.007338,
+              "se": 0.309375,
+              "t": -0.0237,
+              "p": 0.981078,
+              "q": 0.989559,
               "significant_fdr_05": false,
               "significant_fdr_10": false
             }
           ],
           "joint_text_test": {
-            "statistic": 1.5757,
-            "p": 0.072944,
+            "statistic": 1.049,
+            "p": 0.409379,
             "df_num": 18,
-            "df_denom": 151,
-            "r2_structural_only": 0.2499,
-            "r2_with_text": 0.381,
-            "delta_r2": 0.131,
-            "delta_adj_r2": 0.0664
+            "df_denom": 154,
+            "r2_structural_only": 0.248,
+            "r2_with_text": 0.3402,
+            "delta_r2": 0.0922,
+            "delta_adj_r2": 0.0174
           },
           "controls": [
             "bedrooms",
@@ -1206,148 +1206,148 @@
         }
       },
       "incremental_model": {
-        "n": 523,
+        "n": 531,
         "folds": 5,
         "alpha": 1.0,
         "target": "log(value_mid) for Homes AVM listings",
         "structural": {
-          "r2_log": 0.6084,
-          "r2_dollar": 0.3771,
-          "mae_dollar": 880004.5,
-          "mape_pct": 31.958
+          "r2_log": 0.5993,
+          "r2_dollar": 0.3699,
+          "mae_dollar": 877429.2,
+          "mape_pct": 32.276
         },
         "structural_plus_text": {
-          "r2_log": 0.7449,
-          "r2_dollar": 0.6171,
-          "mae_dollar": 692450.0,
-          "mape_pct": 25.341
+          "r2_log": 0.7511,
+          "r2_dollar": 0.5997,
+          "mae_dollar": 688078.1,
+          "mape_pct": 25.207
         },
         "delta": {
-          "r2_log": 0.1365,
-          "r2_dollar": 0.24,
-          "mae_dollar": -187554.5,
-          "mape_pct": -6.617
+          "r2_log": 0.1518,
+          "r2_dollar": 0.2298,
+          "mae_dollar": -189351.1,
+          "mape_pct": -7.069
         }
       },
       "description_index": {
-        "corpus_mean_log_premium": -0.066009,
-        "corpus_sd_log_premium": 0.235828,
+        "corpus_mean_log_premium": -0.075522,
+        "corpus_sd_log_premium": 0.250049,
         "winsorise_residual_pct": 2.5,
         "clip_z": 3.0,
-        "share_clipped": 0.0055,
-        "mean_index_corpus": 0.0,
-        "sd_index_corpus": 0.9972,
-        "premium_pct_p10": -25.07,
-        "premium_pct_p90": 33.48,
-        "premium_pct_sd": 24.6,
-        "text_model_oof_sd_log": 0.2016,
+        "share_clipped": 0.01,
+        "mean_index_corpus": 0.003,
+        "sd_index_corpus": 0.9904,
+        "premium_pct_p10": -26.01,
+        "premium_pct_p90": 34.31,
+        "premium_pct_sd": 25.53,
+        "text_model_oof_sd_log": 0.205,
         "most_positive": [
-          {
-            "listing_id": 5932793738,
-            "suburb": "Ōrākei",
-            "property_type": "House",
-            "value_mid": 21918330,
-            "description_index": 3.0,
-            "description_premium_pct": 102.89,
-            "snippet": "an international sized floodlit tennis court sets this exceptional paritai drive estate apart occupying nearly half an acre in one of aucklands ..."
-          },
-          {
-            "listing_id": 6126633073,
-            "suburb": "Takapuna",
-            "property_type": "Apartment",
-            "value_mid": 1550000,
-            "description_index": 3.0,
-            "description_premium_pct": 102.89,
-            "snippet": "north facing lake rangitoto harbour and skyline views dual kitchens garaging for up to 9 vehicles occupying an entire floor with a ..."
-          },
           {
             "listing_id": 6098112252,
             "suburb": "St Heliers",
             "property_type": "House",
             "value_mid": 2183708,
-            "description_index": 2.937,
-            "description_premium_pct": 99.88,
+            "description_index": 2.833,
+            "description_premium_pct": 103.08,
             "snippet": "a distinctive and beautifully considered st heliers residence offering approximately 260 sqm of living exceptional harbour and rangitoto views and a sense ..."
+          },
+          {
+            "listing_id": 5932793738,
+            "suburb": "Ōrākei",
+            "property_type": "House",
+            "value_mid": 21918330,
+            "description_index": 2.808,
+            "description_premium_pct": 101.79,
+            "snippet": "an international sized floodlit tennis court sets this exceptional paritai drive estate apart occupying nearly half an acre in one of aucklands ..."
+          },
+          {
+            "listing_id": 6205074814,
+            "suburb": "Ōrākei",
+            "property_type": "Apartment",
+            "value_mid": 5205800,
+            "description_index": 2.73,
+            "description_premium_pct": 97.92,
+            "snippet": "positioned at the pinnacle of this boutique residence this exceptional penthouse delivers a lifestyle defined by space privacy and breathtaking outlooks framed ..."
           }
         ],
         "most_negative": [
           {
+            "listing_id": 6186622870,
+            "suburb": "Browns Bay",
+            "property_type": "Townhouse",
+            "value_mid": 1130000,
+            "description_index": -3.0,
+            "description_premium_pct": -52.77,
+            "snippet": "an outstanding opportunity to secure a brand new standalone home in the highly sought after suburb of browns bay on aucklands north ..."
+          },
+          {
             "listing_id": 6001204808,
             "suburb": "Browns Bay",
             "property_type": "House",
-            "value_mid": 1100000,
+            "value_mid": 1130000,
             "description_index": -3.0,
-            "description_premium_pct": -50.71,
-            "snippet": "both title and ccc issued lot 1 sold lot 2 and 3 by negotiation 153 sqm land 120 sqm floor 4 bedrooms ..."
-          },
-          {
-            "listing_id": 6001388356,
-            "suburb": "Browns Bay",
-            "property_type": "House",
-            "value_mid": 1100000,
-            "description_index": -3.0,
-            "description_premium_pct": -50.71,
+            "description_premium_pct": -52.77,
             "snippet": "both title and ccc issued lot 1 sold lot 2 and 3 by negotiation 153 sqm land 120 sqm floor 4 bedrooms ..."
           },
           {
             "listing_id": 6001388428,
             "suburb": "Browns Bay",
             "property_type": "House",
-            "value_mid": 1100000,
+            "value_mid": 1130000,
             "description_index": -3.0,
-            "description_premium_pct": -50.71,
+            "description_premium_pct": -52.77,
             "snippet": "both title and ccc issued lot 1 sold lot 2 and 3 by negotiation 153 sqm land 120 sqm floor 4 bedrooms ..."
           }
         ],
         "top_text_features": [
           {
             "feature": "topic_02",
-            "log_points_per_unit": -0.818966
+            "log_points_per_unit": -0.911414
           },
           {
             "feature": "topic_11",
-            "log_points_per_unit": 0.743342
-          },
-          {
-            "feature": "topic_00",
-            "log_points_per_unit": -0.365988
-          },
-          {
-            "feature": "topic_05",
-            "log_points_per_unit": -0.250435
-          },
-          {
-            "feature": "topic_04",
-            "log_points_per_unit": -0.249806
-          },
-          {
-            "feature": "views_waterfront",
-            "log_points_per_unit": 0.179377
+            "log_points_per_unit": 0.680486
           },
           {
             "feature": "topic_09",
-            "log_points_per_unit": 0.155339
+            "log_points_per_unit": 0.315082
+          },
+          {
+            "feature": "topic_00",
+            "log_points_per_unit": -0.307251
+          },
+          {
+            "feature": "views_waterfront",
+            "log_points_per_unit": 0.19707
           },
           {
             "feature": "topic_07",
-            "log_points_per_unit": 0.12773
+            "log_points_per_unit": 0.189006
           },
           {
-            "feature": "topic_08",
-            "log_points_per_unit": -0.088371
+            "feature": "topic_04",
+            "log_points_per_unit": -0.176396
           },
           {
-            "feature": "topic_01",
-            "log_points_per_unit": 0.084791
+            "feature": "topic_10",
+            "log_points_per_unit": -0.173368
+          },
+          {
+            "feature": "family_school",
+            "log_points_per_unit": -0.144391
+          },
+          {
+            "feature": "topic_05",
+            "log_points_per_unit": -0.131483
           }
         ]
       },
       "price_change_test": {
         "name": "estimate_history_trend_8w",
         "dependent": "Homes AVM 8-week trend (% per week)",
-        "n": 521,
-        "r2": 0.123,
-        "adj_r2": 0.0255,
+        "n": 529,
+        "r2": 0.1364,
+        "adj_r2": 0.042,
         "fdr": "Benjamini-Hochberg across the 18 text features",
         "n_significant_fdr_05": 0,
         "n_significant_fdr_10": 0,
@@ -1358,11 +1358,11 @@
             "kind": "topic",
             "topic_id": 0,
             "label": "Bedrooms, bathrooms & layout",
-            "coef": -0.482394,
-            "se": 0.498012,
-            "t": -0.9686,
-            "p": 0.332726,
-            "q": 0.748633,
+            "coef": -0.52933,
+            "se": 0.523564,
+            "t": -1.011,
+            "p": 0.31201,
+            "q": 0.43523,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1371,11 +1371,11 @@
             "kind": "topic",
             "topic_id": 1,
             "label": "Development & land potential",
-            "coef": -0.501319,
-            "se": 0.624421,
-            "t": -0.8029,
-            "p": 0.422059,
-            "q": 0.755122,
+            "coef": -0.659986,
+            "se": 0.584084,
+            "t": -1.13,
+            "p": 0.258497,
+            "q": 0.43523,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1384,11 +1384,11 @@
             "kind": "topic",
             "topic_id": 3,
             "label": "Luxury, architectural & prestige",
-            "coef": -0.337184,
-            "se": 0.470028,
-            "t": -0.7174,
-            "p": 0.473146,
-            "q": 0.755122,
+            "coef": -0.475631,
+            "se": 0.472713,
+            "t": -1.0062,
+            "p": 0.314333,
+            "q": 0.43523,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1397,11 +1397,11 @@
             "kind": "topic",
             "topic_id": 4,
             "label": "Apartment / lock-up-and-leave",
-            "coef": -0.79187,
-            "se": 0.626039,
-            "t": -1.2649,
-            "p": 0.205911,
-            "q": 0.748633,
+            "coef": -1.250429,
+            "se": 0.658104,
+            "t": -1.9,
+            "p": 0.057427,
+            "q": 0.43523,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1410,11 +1410,11 @@
             "kind": "topic",
             "topic_id": 5,
             "label": "Westlake school zone",
-            "coef": -0.639434,
-            "se": 0.583472,
-            "t": -1.0959,
-            "p": 0.273118,
-            "q": 0.748633,
+            "coef": -0.588836,
+            "se": 0.521463,
+            "t": -1.1292,
+            "p": 0.258814,
+            "q": 0.43523,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1423,11 +1423,11 @@
             "kind": "topic",
             "topic_id": 6,
             "label": "Family living & entertaining",
-            "coef": 0.041671,
-            "se": 0.57402,
-            "t": 0.0726,
-            "p": 0.942128,
-            "q": 0.942128,
+            "coef": -0.097325,
+            "se": 0.530034,
+            "t": -0.1836,
+            "p": 0.854311,
+            "q": 0.854311,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1436,11 +1436,11 @@
             "kind": "topic",
             "topic_id": 7,
             "label": "Parking, garden & section",
-            "coef": 0.074568,
-            "se": 0.574949,
-            "t": 0.1297,
-            "p": 0.896807,
-            "q": 0.942128,
+            "coef": 0.608388,
+            "se": 0.858997,
+            "t": 0.7083,
+            "p": 0.478788,
+            "q": 0.583762,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1449,11 +1449,11 @@
             "kind": "topic",
             "topic_id": 8,
             "label": "Sea views & coastal outlook",
-            "coef": -0.133696,
-            "se": 0.635715,
-            "t": -0.2103,
-            "p": 0.833427,
-            "q": 0.937606,
+            "coef": -1.179227,
+            "se": 0.9435,
+            "t": -1.2498,
+            "p": 0.211357,
+            "q": 0.43523,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1462,11 +1462,11 @@
             "kind": "topic",
             "topic_id": 9,
             "label": "Coastal village & park proximity",
-            "coef": -0.338592,
-            "se": 0.327739,
-            "t": -1.0331,
-            "p": 0.30155,
-            "q": 0.748633,
+            "coef": -0.5017,
+            "se": 0.331219,
+            "t": -1.5147,
+            "p": 0.129846,
+            "q": 0.43523,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1474,12 +1474,12 @@
             "feature": "topic_10",
             "kind": "topic",
             "topic_id": 10,
-            "label": "Renovation & character",
-            "coef": -0.666303,
-            "se": 1.19228,
-            "t": -0.5588,
-            "p": 0.576266,
-            "q": 0.797906,
+            "label": "Brick / tile / low-maintenance units",
+            "coef": 0.136535,
+            "se": 0.498769,
+            "t": 0.2737,
+            "p": 0.784281,
+            "q": 0.830415,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1488,11 +1488,11 @@
             "kind": "topic",
             "topic_id": 11,
             "label": "Resort amenities (pool / tennis / spa)",
-            "coef": -0.173466,
-            "se": 0.366381,
-            "t": -0.4735,
-            "p": 0.635885,
-            "q": 0.817567,
+            "coef": -0.439635,
+            "se": 0.405669,
+            "t": -1.0837,
+            "p": 0.278485,
+            "q": 0.43523,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1501,11 +1501,11 @@
             "kind": "lexicon",
             "topic_id": null,
             "label": "urgency",
-            "coef": -0.419524,
-            "se": 0.264127,
-            "t": -1.5883,
-            "p": 0.112209,
-            "q": 0.748633,
+            "coef": -0.431552,
+            "se": 0.295854,
+            "t": -1.4587,
+            "p": 0.144657,
+            "q": 0.43523,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1514,11 +1514,11 @@
             "kind": "lexicon",
             "topic_id": null,
             "label": "luxury",
-            "coef": 0.115876,
-            "se": 0.167297,
-            "t": 0.6926,
-            "p": 0.488539,
-            "q": 0.755122,
+            "coef": 0.245259,
+            "se": 0.172995,
+            "t": 1.4177,
+            "p": 0.156272,
+            "q": 0.43523,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1527,11 +1527,11 @@
             "kind": "lexicon",
             "topic_id": null,
             "label": "condition_renovation",
-            "coef": -0.427068,
-            "se": 0.301379,
-            "t": -1.417,
-            "p": 0.156469,
-            "q": 0.748633,
+            "coef": -0.550538,
+            "se": 0.312308,
+            "t": -1.7628,
+            "p": 0.077933,
+            "q": 0.43523,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1540,11 +1540,11 @@
             "kind": "lexicon",
             "topic_id": null,
             "label": "views_waterfront",
-            "coef": -0.523115,
-            "se": 0.230451,
-            "t": -2.27,
-            "p": 0.02321,
-            "q": 0.417771,
+            "coef": -0.240329,
+            "se": 0.181728,
+            "t": -1.3225,
+            "p": 0.186013,
+            "q": 0.43523,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1553,11 +1553,11 @@
             "kind": "lexicon",
             "topic_id": null,
             "label": "family_school",
-            "coef": -0.07607,
-            "se": 0.269371,
-            "t": -0.2824,
-            "p": 0.777639,
-            "q": 0.933166,
+            "coef": -0.150356,
+            "se": 0.323692,
+            "t": -0.4645,
+            "p": 0.642287,
+            "q": 0.722573,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1566,11 +1566,11 @@
             "kind": "lexicon",
             "topic_id": null,
             "label": "investment",
-            "coef": 0.494009,
-            "se": 0.452576,
-            "t": 1.0916,
-            "p": 0.275031,
-            "q": 0.748633,
+            "coef": 0.580335,
+            "se": 0.432963,
+            "t": 1.3404,
+            "p": 0.180122,
+            "q": 0.43523,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           },
@@ -1579,24 +1579,24 @@
             "kind": "lexicon",
             "topic_id": null,
             "label": "risk",
-            "coef": 0.434337,
-            "se": 0.64911,
-            "t": 0.6691,
-            "p": 0.503415,
-            "q": 0.755122,
+            "coef": 0.393268,
+            "se": 0.565092,
+            "t": 0.6959,
+            "p": 0.486469,
+            "q": 0.583762,
             "significant_fdr_05": false,
             "significant_fdr_10": false
           }
         ],
         "joint_text_test": {
-          "statistic": 0.5943,
-          "p": 0.904365,
+          "statistic": 0.7546,
+          "p": 0.753702,
           "df_num": 18,
-          "df_denom": 468,
-          "r2_structural_only": 0.0764,
-          "r2_with_text": 0.123,
-          "delta_r2": 0.0466,
-          "delta_adj_r2": 0.0137
+          "df_denom": 476,
+          "r2_structural_only": 0.0758,
+          "r2_with_text": 0.1364,
+          "delta_r2": 0.0606,
+          "delta_adj_r2": 0.0298
         },
         "controls": [
           "bedrooms",
@@ -1638,15 +1638,15 @@
           "sale_method=negotiation",
           "sale_method=tender"
         ],
-        "n_listings_with_history": 533,
-        "mean_abs_change_8w_pct": 3.187,
-        "share_changed_gt_half_pct": 0.837,
+        "n_listings_with_history": 541,
+        "mean_abs_change_8w_pct": 3.196,
+        "share_changed_gt_half_pct": 0.834,
         "snapshots": {
           "available": true,
-          "listings_with_snapshots": 1109,
-          "listings_with_multiple_snapshots": 1106,
-          "listings_with_changing_value": 987,
-          "max_snapshots": 12,
+          "listings_with_snapshots": 1124,
+          "listings_with_multiple_snapshots": 1107,
+          "listings_with_changing_value": 993,
+          "max_snapshots": 13,
           "note": "Snapshot history is too thin (mostly one capture per listing) to measure price changes; the AVM estimate history is used instead."
         },
         "limitations": "AVM revision history, not transaction prices. 8 weekly points at most. Homes AVM revisions are largely market-wide, and the text model observes marketing language at one point in time, so this test detects association at best; it is not a causal or predictive price-change model. Daily snapshots would be required to study true asking-price changes."
@@ -1654,14 +1654,14 @@
     },
     "text_terms": {
       "model_version": "text-terms-v1",
-      "n_listings": 1082,
+      "n_listings": 1095,
       "n_terms": 56,
       "n_associations": 100,
       "cleaning": {
-        "documents": 1082,
-        "raw_words": 289877,
-        "cleaned_words": 272901,
-        "word_retention": 0.9414,
+        "documents": 1095,
+        "raw_words": 293452,
+        "cleaned_words": 276324,
+        "word_retention": 0.9416,
         "repeated_lines_dropped": 40,
         "fallback_documents": 1,
         "empty_documents": 0
@@ -1670,107 +1670,121 @@
         {
           "term": "pool",
           "group": "amenity",
-          "effect_pct": 23.55,
-          "q": 1.1e-05,
-          "n_with": 157
-        },
-        {
-          "term": "school",
-          "group": "school",
-          "effect_pct": -10.61,
-          "q": 1.8e-05,
-          "n_with": 516
+          "effect_pct": 23.95,
+          "q": 5e-06,
+          "n_with": 160
         },
         {
           "term": "transport",
           "group": "location",
-          "effect_pct": -10.52,
-          "q": 2.4e-05,
-          "n_with": 215
+          "effect_pct": -10.72,
+          "q": 3.2e-05,
+          "n_with": 216
+        },
+        {
+          "term": "school",
+          "group": "school",
+          "effect_pct": -10.15,
+          "q": 4.8e-05,
+          "n_with": 523
         },
         {
           "term": "modern",
           "group": "quality",
-          "effect_pct": -8.64,
-          "q": 0.000481,
-          "n_with": 430
+          "effect_pct": -8.51,
+          "q": 0.000528,
+          "n_with": 437
         },
         {
           "term": "harbour",
           "group": "views",
-          "effect_pct": 30.15,
-          "q": 0.002515,
+          "effect_pct": 30.27,
+          "q": 0.002372,
           "n_with": 67
-        },
-        {
-          "term": "villa",
-          "group": "quality",
-          "effect_pct": 29.44,
-          "q": 0.009787,
-          "n_with": 14
         },
         {
           "term": "waterfront",
           "group": "views",
-          "effect_pct": 16.69,
-          "q": 0.016257,
-          "n_with": 127
-        },
-        {
-          "term": "westlake",
-          "group": "school",
-          "effect_pct": -14.02,
-          "q": 0.017178,
-          "n_with": 184
+          "effect_pct": 17.83,
+          "q": 0.007715,
+          "n_with": 128
         },
         {
           "term": "investment",
           "group": "investment",
-          "effect_pct": -8.35,
-          "q": 0.019472,
-          "n_with": 118
+          "effect_pct": -9.11,
+          "q": 0.007715,
+          "n_with": 119
         },
         {
-          "term": "income",
-          "group": "investment",
-          "effect_pct": -13.28,
-          "q": 0.019472,
-          "n_with": 67
+          "term": "westlake",
+          "group": "school",
+          "effect_pct": -15.06,
+          "q": 0.007879,
+          "n_with": 187
+        },
+        {
+          "term": "villa",
+          "group": "quality",
+          "effect_pct": 28.56,
+          "q": 0.012792,
+          "n_with": 14
         },
         {
           "term": "garage",
           "group": "amenity",
-          "effect_pct": -6.3,
-          "q": 0.021956,
-          "n_with": 483
+          "effect_pct": -6.53,
+          "q": 0.016268,
+          "n_with": 491
+        },
+        {
+          "term": "income",
+          "group": "investment",
+          "effect_pct": -12.21,
+          "q": 0.024955,
+          "n_with": 72
         },
         {
           "term": "tenanted",
           "group": "investment",
-          "effect_pct": -21.46,
-          "q": 0.02854,
+          "effect_pct": -21.54,
+          "q": 0.032147,
           "n_with": 11
         },
         {
           "term": "zoning",
           "group": "land",
-          "effect_pct": -7.05,
-          "q": 0.038366,
-          "n_with": 129
+          "effect_pct": -6.71,
+          "q": 0.042291,
+          "n_with": 132
+        },
+        {
+          "term": "coastal",
+          "group": "views",
+          "effect_pct": 5.9,
+          "q": 0.047004,
+          "n_with": 524
+        },
+        {
+          "term": "rangitoto",
+          "group": "views",
+          "effect_pct": 9.17,
+          "q": 0.047004,
+          "n_with": 285
         },
         {
           "term": "brand new",
           "group": "quality",
-          "effect_pct": -15.88,
+          "effect_pct": -15.63,
           "q": 0.0,
-          "n_with": 264
+          "n_with": 268
         },
         {
           "term": "freehold",
           "group": "land",
-          "effect_pct": -27.65,
+          "effect_pct": -27.77,
           "q": 0.0,
-          "n_with": 340
+          "n_with": 347
         }
       ],
       "premium_significant_fdr_05": [],
@@ -1779,217 +1793,217 @@
           "term": "pool",
           "term_group": "amenity",
           "dependent": "value",
-          "n": 1082,
-          "n_with": 157,
-          "coef": 0.2114403558610704,
-          "se": 0.042534869595750195,
-          "p": 6.661233429654507e-07,
-          "effect_pct": 23.55,
-          "mean_value_with": 3252570.0,
-          "mean_value_without": 1697886.0,
-          "mean_premium_with": 1.0237,
-          "mean_premium_without": 0.9869,
-          "q": 1.1e-05,
+          "n": 1095,
+          "n_with": 160,
+          "coef": 0.21472825608288004,
+          "se": 0.04192732525914051,
+          "p": 3.032121629486993e-07,
+          "effect_pct": 23.95,
+          "mean_value_with": 3242700.0,
+          "mean_value_without": 1694587.0,
+          "mean_premium_with": 1.0211,
+          "mean_premium_without": 0.9872,
+          "q": 5e-06,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
-        },
-        {
-          "term": "school",
-          "term_group": "school",
-          "dependent": "value",
-          "n": 1082,
-          "n_with": 516,
-          "coef": -0.11213670183870372,
-          "se": 0.023270194919625658,
-          "p": 1.4435313632232594e-06,
-          "effect_pct": -10.61,
-          "mean_value_with": 1643144.0,
-          "mean_value_without": 2179038.0,
-          "mean_premium_with": 0.9947,
-          "mean_premium_without": 0.9942,
-          "q": 1.8e-05,
-          "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         },
         {
           "term": "transport",
           "term_group": "location",
           "dependent": "value",
-          "n": 1082,
-          "n_with": 215,
-          "coef": -0.11116576653989055,
-          "se": 0.023560315065037266,
-          "p": 2.3776746530297863e-06,
-          "effect_pct": -10.52,
-          "mean_value_with": 1441581.0,
-          "mean_value_without": 2042974.0,
-          "mean_premium_with": 0.9773,
-          "mean_premium_without": 0.9987,
-          "q": 2.4e-05,
+          "n": 1095,
+          "n_with": 216,
+          "coef": -0.11333869521649143,
+          "se": 0.024089058752995912,
+          "p": 2.5388280605128152e-06,
+          "effect_pct": -10.72,
+          "mean_value_with": 1443200.0,
+          "mean_value_without": 2038156.0,
+          "mean_premium_with": 0.9801,
+          "mean_premium_without": 0.9978,
+          "q": 3.2e-05,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
+        },
+        {
+          "term": "school",
+          "term_group": "school",
+          "dependent": "value",
+          "n": 1095,
+          "n_with": 523,
+          "coef": -0.10700691720964728,
+          "se": 0.023374929327110557,
+          "p": 4.697796418232469e-06,
+          "effect_pct": -10.15,
+          "mean_value_with": 1640825.0,
+          "mean_value_without": 2176782.0,
+          "mean_premium_with": 0.9952,
+          "mean_premium_without": 0.9935,
+          "q": 4.8e-05,
+          "model_version": "text-terms-v1",
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         },
         {
           "term": "modern",
           "term_group": "quality",
           "dependent": "value",
-          "n": 1082,
-          "n_with": 430,
-          "coef": -0.09034747364639584,
-          "se": 0.022463515228128186,
-          "p": 5.771461771171798e-05,
-          "effect_pct": -8.64,
-          "mean_value_with": 1712915.0,
-          "mean_value_without": 2062339.0,
-          "mean_premium_with": 1.0,
-          "mean_premium_without": 0.9918,
-          "q": 0.000481,
+          "n": 1095,
+          "n_with": 437,
+          "coef": -0.0889381953620072,
+          "se": 0.02220860019963072,
+          "p": 6.210316519520231e-05,
+          "effect_pct": -8.51,
+          "mean_value_with": 1709564.0,
+          "mean_value_without": 2061081.0,
+          "mean_premium_with": 1.0015,
+          "mean_premium_without": 0.9909,
+          "q": 0.000528,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         },
         {
           "term": "harbour",
           "term_group": "views",
           "dependent": "value",
-          "n": 1082,
+          "n": 1095,
           "n_with": 67,
-          "coef": 0.26350139804759753,
-          "se": 0.07373501575914077,
-          "p": 0.00035207118443597574,
-          "effect_pct": 30.15,
-          "mean_value_with": 3760098.0,
-          "mean_value_without": 1802238.0,
+          "coef": 0.26442423593282316,
+          "se": 0.07357206133066702,
+          "p": 0.00032553366263928765,
+          "effect_pct": 30.27,
+          "mean_value_with": 3759203.0,
+          "mean_value_without": 1800977.0,
           "mean_premium_with": 1.0389,
-          "mean_premium_without": 0.9897,
-          "q": 0.002515,
+          "mean_premium_without": 0.9896,
+          "q": 0.002372,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
-        },
-        {
-          "term": "villa",
-          "term_group": "quality",
-          "dependent": "value",
-          "n": 1082,
-          "n_with": 14,
-          "coef": 0.25804539159543805,
-          "se": 0.08160392054244345,
-          "p": 0.001565986277770542,
-          "effect_pct": 29.44,
-          "mean_value_with": 2520966.0,
-          "mean_value_without": 1915641.0,
-          "mean_premium_with": 1.0074,
-          "mean_premium_without": 0.9942,
-          "q": 0.009787,
-          "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         },
         {
           "term": "waterfront",
           "term_group": "views",
           "dependent": "value",
-          "n": 1082,
-          "n_with": 127,
-          "coef": 0.15438332850334313,
-          "se": 0.05188709131708078,
-          "p": 0.002926347352988432,
-          "effect_pct": 16.69,
-          "mean_value_with": 2929444.0,
-          "mean_value_without": 1789695.0,
-          "mean_premium_with": 0.994,
-          "mean_premium_without": 0.9945,
-          "q": 0.016257,
+          "n": 1095,
+          "n_with": 128,
+          "coef": 0.16407682630772136,
+          "se": 0.05123107592311614,
+          "p": 0.001361544059365366,
+          "effect_pct": 17.83,
+          "mean_value_with": 2949840.0,
+          "mean_value_without": 1784582.0,
+          "mean_premium_with": 0.9946,
+          "mean_premium_without": 0.9942,
+          "q": 0.007715,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
-        },
-        {
-          "term": "westlake",
-          "term_group": "school",
-          "dependent": "value",
-          "n": 1082,
-          "n_with": 184,
-          "coef": -0.1510616188677411,
-          "se": 0.05163065618060907,
-          "p": 0.0034355794003886678,
-          "effect_pct": -14.02,
-          "mean_value_with": 1715019.0,
-          "mean_value_without": 1966185.0,
-          "mean_premium_with": 0.9984,
-          "mean_premium_without": 0.9938,
-          "q": 0.017178,
-          "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         },
         {
           "term": "investment",
           "term_group": "investment",
           "dependent": "value",
-          "n": 1082,
-          "n_with": 118,
-          "coef": -0.0871460596275015,
-          "se": 0.030637894308605744,
-          "p": 0.00444968230718385,
-          "effect_pct": -8.35,
-          "mean_value_with": 1391360.0,
-          "mean_value_without": 1988607.0,
-          "mean_premium_with": 0.9789,
-          "mean_premium_without": 0.9958,
-          "q": 0.019472,
+          "n": 1095,
+          "n_with": 119,
+          "coef": -0.09549862254311721,
+          "se": 0.029797794833529512,
+          "p": 0.0013511461278204549,
+          "effect_pct": -9.11,
+          "mean_value_with": 1383760.0,
+          "mean_value_without": 1986274.0,
+          "mean_premium_with": 0.9788,
+          "mean_premium_without": 0.9956,
+          "q": 0.007715,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         },
         {
-          "term": "income",
-          "term_group": "investment",
+          "term": "westlake",
+          "term_group": "school",
           "dependent": "value",
-          "n": 1082,
-          "n_with": 67,
-          "coef": -0.14247683063074112,
-          "se": 0.050367775381685485,
-          "p": 0.0046733126489457094,
-          "effect_pct": -13.28,
-          "mean_value_with": 2055475.0,
-          "mean_value_without": 1914760.0,
-          "mean_premium_with": 1.0109,
-          "mean_premium_without": 0.9935,
-          "q": 0.019472,
+          "n": 1095,
+          "n_with": 187,
+          "coef": -0.16324439943402935,
+          "se": 0.051559978313823536,
+          "p": 0.0015449404346668347,
+          "effect_pct": -15.06,
+          "mean_value_with": 1690830.0,
+          "mean_value_without": 1968156.0,
+          "mean_premium_with": 0.998,
+          "mean_premium_without": 0.9936,
+          "q": 0.007879,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
+        },
+        {
+          "term": "villa",
+          "term_group": "quality",
+          "dependent": "value",
+          "n": 1095,
+          "n_with": 14,
+          "coef": 0.25120710689443015,
+          "se": 0.08392119253635379,
+          "p": 0.0027591581486336113,
+          "effect_pct": 28.56,
+          "mean_value_with": 2506545.0,
+          "mean_value_without": 1913209.0,
+          "mean_premium_with": 1.0074,
+          "mean_premium_without": 0.994,
+          "q": 0.012792,
+          "model_version": "text-terms-v1",
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         },
         {
           "term": "garage",
           "term_group": "amenity",
           "dependent": "value",
-          "n": 1082,
-          "n_with": 483,
-          "coef": -0.06507662056188673,
-          "se": 0.02354377726274566,
-          "p": 0.005708549852834025,
-          "effect_pct": -6.3,
-          "mean_value_with": 1787387.0,
-          "mean_value_without": 2033206.0,
-          "mean_premium_with": 1.0084,
-          "mean_premium_without": 0.9836,
-          "q": 0.021956,
+          "n": 1095,
+          "n_with": 491,
+          "coef": -0.06755664953911733,
+          "se": 0.023359696009613858,
+          "p": 0.0038277663130585633,
+          "effect_pct": -6.53,
+          "mean_value_with": 1781567.0,
+          "mean_value_without": 2033976.0,
+          "mean_premium_with": 1.0086,
+          "mean_premium_without": 0.9831,
+          "q": 0.016268,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
+        },
+        {
+          "term": "income",
+          "term_group": "investment",
+          "dependent": "value",
+          "n": 1095,
+          "n_with": 72,
+          "coef": -0.13025726897612944,
+          "se": 0.04773850107621576,
+          "p": 0.0063611902809843175,
+          "effect_pct": -12.21,
+          "mean_value_with": 2080687.0,
+          "mean_value_without": 1909542.0,
+          "mean_premium_with": 1.0055,
+          "mean_premium_without": 0.9935,
+          "q": 0.024955,
+          "model_version": "text-terms-v1",
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         },
         {
           "term": "tenanted",
           "term_group": "investment",
           "dependent": "value",
-          "n": 1082,
+          "n": 1095,
           "n_with": 11,
-          "coef": -0.24160562806018615,
-          "se": 0.09108789298530745,
-          "p": 0.007991114121136787,
-          "effect_pct": -21.46,
-          "mean_value_with": 1447713.0,
-          "mean_value_without": 1928360.0,
+          "coef": -0.24263671474890125,
+          "se": 0.09265272643429023,
+          "p": 0.008824593294112528,
+          "effect_pct": -21.54,
+          "mean_value_with": 1450440.0,
+          "mean_value_without": 1925568.0,
           "mean_premium_with": 0.9726,
-          "mean_premium_without": 0.9947,
-          "q": 0.02854,
+          "mean_premium_without": 0.9945,
+          "q": 0.032147,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         }
       ],
       "top_premium": [
@@ -1997,217 +2011,217 @@
           "term": "plaster",
           "term_group": "quality",
           "dependent": "premium",
-          "n": 523,
+          "n": 531,
           "n_with": 14,
-          "coef": 0.03206731090756027,
-          "se": 0.013585059691906128,
-          "p": 0.01825112420209998,
-          "effect_pct": 3.26,
-          "mean_value_with": 2240212.0,
-          "mean_value_without": 2464189.0,
-          "mean_premium_with": 1.0267,
-          "mean_premium_without": 0.9938,
-          "q": 0.304185,
+          "coef": 0.029881306877572532,
+          "se": 0.01318608788393601,
+          "p": 0.023443807698249282,
+          "effect_pct": 3.03,
+          "mean_value_with": 2333894.0,
+          "mean_value_without": 2454137.0,
+          "mean_premium_with": 1.0226,
+          "mean_premium_without": 0.9937,
+          "q": 0.415453,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         },
         {
           "term": "subdivision",
           "term_group": "land",
           "dependent": "premium",
-          "n": 523,
-          "n_with": 26,
-          "coef": -0.07897972683024755,
-          "se": 0.03329170986095653,
-          "p": 0.017675138755761287,
-          "effect_pct": -7.59,
-          "mean_value_with": 2798115.0,
-          "mean_value_without": 2454421.0,
-          "mean_premium_with": 0.9356,
-          "mean_premium_without": 0.9954,
-          "q": 0.304185,
+          "n": 531,
+          "n_with": 25,
+          "coef": -0.07976182418898002,
+          "se": 0.03569212740047684,
+          "p": 0.025435896426935143,
+          "effect_pct": -7.67,
+          "mean_value_with": 2781571.0,
+          "mean_value_without": 2446188.0,
+          "mean_premium_with": 0.9328,
+          "mean_premium_without": 0.9953,
+          "q": 0.415453,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         },
         {
           "term": "zoning",
           "term_group": "land",
           "dependent": "premium",
-          "n": 523,
-          "n_with": 129,
-          "coef": -0.039143946073620525,
-          "se": 0.01643948438442786,
-          "p": 0.017261339583862337,
-          "effect_pct": -3.84,
-          "mean_value_with": 2064241.0,
-          "mean_value_without": 2496720.0,
-          "mean_premium_with": 0.9776,
-          "mean_premium_without": 0.9959,
-          "q": 0.304185,
+          "n": 531,
+          "n_with": 132,
+          "coef": -0.036472968053888596,
+          "se": 0.016149196472235176,
+          "p": 0.023914474413913093,
+          "effect_pct": -3.58,
+          "mean_value_with": 2044792.0,
+          "mean_value_without": 2489565.0,
+          "mean_premium_with": 0.9782,
+          "mean_premium_without": 0.9957,
+          "q": 0.415453,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
-        },
-        {
-          "term": "harbour",
-          "term_group": "views",
-          "dependent": "premium",
-          "n": 523,
-          "n_with": 67,
-          "coef": 0.0424963467863759,
-          "se": 0.02794003181332243,
-          "p": 0.12826380367644175,
-          "effect_pct": 4.34,
-          "mean_value_with": 4464616.0,
-          "mean_value_without": 2248466.0,
-          "mean_premium_with": 1.0389,
-          "mean_premium_without": 0.9897,
-          "q": 0.61917,
-          "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
-        },
-        {
-          "term": "coastal",
-          "term_group": "views",
-          "dependent": "premium",
-          "n": 523,
-          "n_with": 518,
-          "coef": 0.014240996235574337,
-          "se": 0.00985883085907383,
-          "p": 0.14860080152362742,
-          "effect_pct": 1.43,
-          "mean_value_with": 2659996.0,
-          "mean_value_without": 2296154.0,
-          "mean_premium_with": 1.0138,
-          "mean_premium_without": 0.9784,
-          "q": 0.61917,
-          "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
-        },
-        {
-          "term": "reserve",
-          "term_group": "views",
-          "dependent": "premium",
-          "n": 523,
-          "n_with": 85,
-          "coef": 0.02981233782922146,
-          "se": 0.01971652956817485,
-          "p": 0.13052166837988863,
-          "effect_pct": 3.03,
-          "mean_value_with": 2713667.0,
-          "mean_value_without": 2437641.0,
-          "mean_premium_with": 1.0264,
-          "mean_premium_without": 0.9915,
-          "q": 0.61917,
-          "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         },
         {
           "term": "westlake",
           "term_group": "school",
           "dependent": "premium",
-          "n": 523,
-          "n_with": 184,
-          "coef": -0.03997305834046928,
-          "se": 0.02065261800790855,
-          "p": 0.05292946618909866,
-          "effect_pct": -3.92,
-          "mean_value_with": 2058515.0,
-          "mean_value_without": 2524484.0,
-          "mean_premium_with": 0.9984,
-          "mean_premium_without": 0.9938,
-          "q": 0.61917,
+          "n": 531,
+          "n_with": 187,
+          "coef": -0.039094844947765314,
+          "se": 0.020473153063030405,
+          "p": 0.056189066284868736,
+          "effect_pct": -3.83,
+          "mean_value_with": 2037236.0,
+          "mean_value_without": 2517960.0,
+          "mean_premium_with": 0.998,
+          "mean_premium_without": 0.9936,
+          "q": 0.530963,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         },
         {
           "term": "garage",
           "term_group": "amenity",
           "dependent": "premium",
-          "n": 523,
-          "n_with": 483,
-          "coef": 0.017238347529183087,
-          "se": 0.010113901855912438,
-          "p": 0.08830244838897974,
-          "effect_pct": 1.74,
-          "mean_value_with": 2129424.0,
-          "mean_value_without": 2716090.0,
-          "mean_premium_with": 1.0084,
-          "mean_premium_without": 0.9836,
-          "q": 0.61917,
+          "n": 531,
+          "n_with": 491,
+          "coef": 0.018612691705827026,
+          "se": 0.010087363250835962,
+          "p": 0.0650158166333212,
+          "effect_pct": 1.88,
+          "mean_value_with": 2117363.0,
+          "mean_value_without": 2711424.0,
+          "mean_premium_with": 1.0086,
+          "mean_premium_without": 0.9831,
+          "q": 0.530963,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         },
         {
           "term": "rental",
           "term_group": "investment",
           "dependent": "premium",
-          "n": 523,
+          "n": 531,
           "n_with": 59,
-          "coef": -0.02665266094968617,
-          "se": 0.015777754611502316,
-          "p": 0.09117045059831194,
-          "effect_pct": -2.63,
-          "mean_value_with": 1717915.0,
-          "mean_value_without": 2497605.0,
-          "mean_premium_with": 0.9611,
-          "mean_premium_without": 0.9961,
-          "q": 0.61917,
+          "coef": -0.030353430549290277,
+          "se": 0.01611087828030177,
+          "p": 0.05956047651617956,
+          "effect_pct": -2.99,
+          "mean_value_with": 1748036.0,
+          "mean_value_without": 2488109.0,
+          "mean_premium_with": 0.9622,
+          "mean_premium_without": 0.9959,
+          "q": 0.530963,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         },
         {
           "term": "north facing",
           "term_group": "orientation",
           "dependent": "premium",
-          "n": 523,
-          "n_with": 148,
-          "coef": 0.021624578866651933,
-          "se": 0.012940177987046707,
-          "p": 0.09469815123720735,
-          "effect_pct": 2.19,
-          "mean_value_with": 2619676.0,
-          "mean_value_without": 2420309.0,
+          "n": 531,
+          "n_with": 150,
+          "coef": 0.021775589314729588,
+          "se": 0.012715389710788432,
+          "p": 0.08679754984007025,
+          "effect_pct": 2.2,
+          "mean_value_with": 2601319.0,
+          "mean_value_without": 2414158.0,
+          "mean_premium_with": 1.0075,
+          "mean_premium_without": 0.9909,
+          "q": 0.607583,
+          "model_version": "text-terms-v1",
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
+        },
+        {
+          "term": "sea",
+          "term_group": "views",
+          "dependent": "premium",
+          "n": 531,
+          "n_with": 241,
+          "coef": -0.017915639144433546,
+          "se": 0.013064360281779031,
+          "p": 0.1702699622311702,
+          "effect_pct": -1.78,
+          "mean_value_with": 2812426.0,
+          "mean_value_without": 2358743.0,
+          "mean_premium_with": 1.002,
+          "mean_premium_without": 0.9922,
+          "q": 0.609425,
+          "model_version": "text-terms-v1",
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
+        },
+        {
+          "term": "harbour",
+          "term_group": "views",
+          "dependent": "premium",
+          "n": 531,
+          "n_with": 67,
+          "coef": 0.04374235671784105,
+          "se": 0.027983258977093226,
+          "p": 0.11801458258460824,
+          "effect_pct": 4.47,
+          "mean_value_with": 4464616.0,
+          "mean_value_without": 2242647.0,
+          "mean_premium_with": 1.0389,
+          "mean_premium_without": 0.9896,
+          "q": 0.609425,
+          "model_version": "text-terms-v1",
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
+        },
+        {
+          "term": "coastal",
+          "term_group": "views",
+          "dependent": "premium",
+          "n": 531,
+          "n_with": 524,
+          "coef": 0.013099893474213756,
+          "se": 0.00975431215035625,
+          "p": 0.17927687839887385,
+          "effect_pct": 1.32,
+          "mean_value_with": 2648431.0,
+          "mean_value_without": 2288525.0,
+          "mean_premium_with": 1.0133,
+          "mean_premium_without": 0.9784,
+          "q": 0.609425,
+          "model_version": "text-terms-v1",
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
+        },
+        {
+          "term": "reserve",
+          "term_group": "views",
+          "dependent": "premium",
+          "n": 531,
+          "n_with": 86,
+          "coef": 0.02980534246782653,
+          "se": 0.019712494306317083,
+          "p": 0.1305332033815603,
+          "effect_pct": 3.03,
+          "mean_value_with": 2713667.0,
+          "mean_value_without": 2428804.0,
+          "mean_premium_with": 1.0264,
+          "mean_premium_without": 0.9914,
+          "q": 0.609425,
+          "model_version": "text-terms-v1",
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
+        },
+        {
+          "term": "park",
+          "term_group": "views",
+          "dependent": "premium",
+          "n": 531,
+          "n_with": 223,
+          "coef": 0.016466372881043065,
+          "se": 0.012466703706027952,
+          "p": 0.18655867960473538,
+          "effect_pct": 1.66,
+          "mean_value_with": 2067207.0,
+          "mean_value_without": 2533548.0,
           "mean_premium_with": 1.0077,
-          "mean_premium_without": 0.9911,
-          "q": 0.61917,
+          "mean_premium_without": 0.9914,
+          "q": 0.609425,
           "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
-        },
-        {
-          "term": "quiet",
-          "term_group": "orientation",
-          "dependent": "premium",
-          "n": 523,
-          "n_with": 209,
-          "coef": -0.014616004768938054,
-          "se": 0.010010756687942912,
-          "p": 0.14428183785428472,
-          "effect_pct": -1.45,
-          "mean_value_with": 2419638.0,
-          "mean_value_without": 2469602.0,
-          "mean_premium_with": 0.9788,
-          "mean_premium_without": 0.9979,
-          "q": 0.61917,
-          "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
-        },
-        {
-          "term": "private",
-          "term_group": "orientation",
-          "dependent": "premium",
-          "n": 523,
-          "n_with": 526,
-          "coef": 0.014955955308974079,
-          "se": 0.009224634412877599,
-          "p": 0.10495202452907802,
-          "effect_pct": 1.51,
-          "mean_value_with": 2747888.0,
-          "mean_value_without": 2139021.0,
-          "mean_premium_with": 1.0058,
-          "mean_premium_without": 0.9816,
-          "q": 0.61917,
-          "model_version": "text-terms-v1",
-          "updated_at": "2026-11-01T16:06:14.768275+00:00"
+          "updated_at": "2026-11-02T16:33:34.896716+00:00"
         }
       ],
       "note": "Curated pre-specified phrases; OLS controls for suburb, type, beds, baths, land/floor area, DOM, tenure and sale method; HC3 + BH-FDR within each dependent. Associations are conditional, not causal, and the value target is the Homes AVM."
@@ -2223,94 +2237,94 @@
         "5": "Asking price",
         "9": "Other"
       },
-      "n": 1084,
+      "n": 1099,
       "ols": {
-        "n": 523,
-        "r2": 0.1246,
+        "n": 531,
+        "r2": 0.1219,
         "terms": {
           "C(stage_c)[T.1]": {
-            "coef": -0.0392,
-            "p": 0.0676
+            "coef": -0.0573,
+            "p": 1.0
           },
           "C(stage_c)[T.2]": {
-            "coef": -0.0153,
-            "p": 0.3889
+            "coef": -0.0092,
+            "p": 1.0
           },
           "C(stage_c)[T.3]": {
-            "coef": 0.0015,
-            "p": 0.9002
+            "coef": 0.0027,
+            "p": 1.0
           },
           "C(stage_c)[T.4]": {
-            "coef": -0.0124,
-            "p": 0.5472
+            "coef": -0.0121,
+            "p": 1.0
           },
           "C(stage_c)[T.5]": {
             "coef": -0.0193,
-            "p": 0.0564
+            "p": 1.0
           },
           "C(stage_c)[T.9]": {
-            "coef": -0.0,
-            "p": 0.4467
+            "coef": 0.0,
+            "p": 1.0
           }
         },
         "1": {
-          "coef": -0.0392,
-          "p": 0.0676
+          "coef": -0.0573,
+          "p": 1.0
         },
         "2": {
-          "coef": -0.0153,
-          "p": 0.3889
+          "coef": -0.0092,
+          "p": 1.0
         },
         "3": {
-          "coef": 0.0015,
-          "p": 0.9002
+          "coef": 0.0027,
+          "p": 1.0
         },
         "4": {
-          "coef": -0.0124,
-          "p": 0.5472
+          "coef": -0.0121,
+          "p": 1.0
         },
         "5": {
           "coef": -0.0193,
-          "p": 0.0564
+          "p": 1.0
         },
         "9": {
-          "coef": -0.0,
-          "p": 0.4467
+          "coef": 0.0,
+          "p": 1.0
         }
       },
-      "updated_at": "2026-11-01T16:06:11.336462+00:00"
+      "updated_at": "2026-11-02T16:33:31.576507+00:00"
     },
     "counts": {
-      "listings": 1109,
-      "sales": 310,
-      "properties": 840,
+      "listings": 1124,
+      "sales": 324,
+      "properties": 860,
       "schools": 222,
-      "estimate_history": 13779,
-      "events": 907,
-      "active_listings": 1053,
-      "delisted_listings": 56,
-      "model_predictions": 2635,
-      "price_history": 1177,
-      "price_dynamics": 1109,
-      "property_sales": 1548,
+      "estimate_history": 13972,
+      "events": 1024,
+      "active_listings": 1049,
+      "delisted_listings": 75,
+      "model_predictions": 2654,
+      "price_history": 1206,
+      "price_dynamics": 1124,
+      "property_sales": 1577,
       "sale_outcomes": 1,
-      "listing_signals": 1109,
-      "tenure_known": 752,
-      "build_year_known": 541,
-      "description_changes": 67
+      "listing_signals": 1124,
+      "tenure_known": 762,
+      "build_year_known": 548,
+      "description_changes": 87
     },
     "lifecycle": {
       "available": true,
-      "inventory_ids": 1053,
-      "marked_delisted": 56,
+      "inventory_ids": 1049,
+      "marked_delisted": 75,
       "relisted": 0
     },
     "history_policy": {
-      "snapshots_before": 11576,
-      "snapshots_keep": 11576,
+      "snapshots_before": 12625,
+      "snapshots_keep": 12625,
       "snapshots_removed": 0,
-      "estimate_history_before": 13841,
-      "estimate_history_keep": 13779,
+      "estimate_history_before": 14034,
+      "estimate_history_keep": 13972,
       "estimate_history_removed": 62,
       "snapshot_days_full": 120,
       "older_snapshot_rule": "first+last capture per listing per month"
@@ -2320,43 +2334,43 @@
       "outcomes": 1,
       "median_ratio": 1.045038,
       "mae": 64646.0,
-      "predictions_applied": 1028,
+      "predictions_applied": 1024,
       "ml": {
         "available": false,
         "n": 1,
         "reason": "warming_up"
       }
     },
-    "listing_signals": 1109,
+    "listing_signals": 1124,
     "derived": {
-      "standard": 1084,
-      "hedonic_predictions": 1084,
-      "text_eligible": 1082,
-      "text_features": 1082,
+      "standard": 1099,
+      "hedonic_predictions": 1099,
+      "text_eligible": 1095,
+      "text_features": 1095,
       "text_nulls": 0,
       "topics": 12,
       "model_metrics": 38,
       "text_metrics": 49,
       "text_terms": 100,
       "sale_stages": 6,
-      "price_dynamics": 1109,
-      "property_sales": 1548,
+      "price_dynamics": 1124,
+      "property_sales": 1577,
       "sale_outcomes": 1,
-      "listing_signals": 1109,
-      "tenure_known": 752,
-      "build_year_known": 541,
-      "price_history": 1177,
+      "listing_signals": 1124,
+      "tenure_known": 762,
+      "build_year_known": 548,
+      "price_history": 1206,
       "price_history_missing_dates": 0,
       "validated": true,
       "errors": []
     },
     "manifest": {
       "started_at": "2026-10-23T14:16:36.107264+00:00",
-      "finished_at": "2026-11-01T16:05:59.215824+00:00",
-      "unique_listings": 1109,
-      "details_ok": 1107,
-      "details_missing_estimate": 572,
-      "details_failed": 2
+      "finished_at": "2026-11-02T16:33:18.220608+00:00",
+      "unique_listings": 1124,
+      "details_ok": 1120,
+      "details_missing_estimate": 577,
+      "details_failed": 4
     }
   }
 }

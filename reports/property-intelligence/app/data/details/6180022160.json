@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-14T22:03:59.763000+00:00",
-  "days_on_market": 17,
+  "days_on_market": 18,
   "lat": -36.853838,
   "lon": 174.8170526,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2292774563.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 424,
+  "view_count": 430,
   "watchers": 6,
   "is_standard": 1,
   "standard_reason": null,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 32.8,
+  "sale_pressure": 33.0,
   "sale_pressure_label": "low",
-  "model_low": 731141,
-  "model_mid": 1038121,
-  "model_high": 1474972,
+  "model_low": 737743,
+  "model_mid": 1054271,
+  "model_high": 1507334,
   "model_confidence": "low",
-  "text_signal_pct": -29.6681,
-  "description_index": -1.49238,
+  "text_signal_pct": -23.184,
+  "description_index": -1.054824,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6180022160,
-    "low": 731141,
-    "mid": 1038121,
-    "high": 1474972,
+    "low": 737743,
+    "mid": 1054271,
+    "high": 1507334,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3506, 0.3512], \"rel_width\": 0.7165, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.357, 0.3575], \"rel_width\": 0.73, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6180022160,
@@ -300,21 +300,40 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.5765,
-    "views_waterfront": 0.2007,
+    "condition_renovation": 0.578,
+    "views_waterfront": 0.2011,
     "family_school": 0.0,
-    "investment": 0.8424,
+    "investment": 0.8441,
     "risk": 0.0,
     "readability": 0.2107,
-    "description_premium_pct": -29.6681,
-    "description_index": -1.49238,
+    "description_premium_pct": -23.184,
+    "description_index": -1.054824,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 2, \"views_waterfront\": 1, \"family_school\": 0, \"investment\": 4, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-01T16:06:11.606146+00:00",
+    "updated_at": "2026-11-02T16:33:31.857470+00:00",
     "top_topics": [
       {
+        "topic_id": 10,
+        "weight": 0.599436,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low",
+          "low maintenance",
+          "unit",
+          "care",
+          "easy care",
+          "sunny",
+          "brick",
+          "downsizers",
+          "buyers",
+          "single",
+          "morning"
+        ]
+      },
+      {
         "topic_id": 2,
-        "weight": 0.408909,
+        "weight": 0.265297,
         "label": "New build / brand-new quality",
         "top_terms": [
           "brand",
@@ -325,67 +344,48 @@
           "standalone",
           "lot",
           "bedrooms bathrooms",
-          "homes",
           "sqm floor",
-          "maintenance",
-          "floor area"
-        ]
-      },
-      {
-        "topic_id": 4,
-        "weight": 0.335736,
-        "label": "Apartment / lock-up-and-leave",
-        "top_terms": [
-          "apartment",
-          "leave",
-          "lock",
-          "lock leave",
-          "car",
-          "bedroom apartment",
-          "bedroom",
-          "restaurants",
-          "car park",
-          "complex",
-          "balcony",
-          "caf restaurants"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.135144,
-        "label": "Renovation & character",
-        "top_terms": [
-          "potential",
-          "value",
-          "add value",
-          "add",
-          "property",
-          "buyers",
-          "ready",
-          "bring",
-          "vision",
-          "renovation",
-          "exciting",
-          "renovate"
+          "floor area",
+          "homes",
+          "sqm"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.050771,
+        "weight": 0.078236,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "luxury",
           "appliances",
           "designer",
+          "year",
           "finishes",
           "sophisticated",
+          "designer kitchen",
           "design",
           "residence",
-          "year",
-          "designer kitchen",
           "quality",
-          "refined"
+          "lighting"
+        ]
+      },
+      {
+        "topic_id": 1,
+        "weight": 0.028668,
+        "label": "Development & land potential",
+        "top_terms": [
+          "potential",
+          "site",
+          "future",
+          "land",
+          "development",
+          "subject",
+          "property",
+          "existing",
+          "sqm",
+          "housing",
+          "council",
+          "mixed"
         ]
       }
     ]
@@ -426,7 +426,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-01T16:06:11.336462+00:00"
+    "updated_at": "2026-11-02T16:33:31.576507+00:00"
   },
   "body": "Price guide - ENQ OVER $2,150,000 \r\n\r\nFreehold, brand new, terrace home with a blend of contemporary design and convenience ideal for downsizers or those seeking a low maintenance life style. \r\n\r\n- 3 spacious bedrooms\r\n- 3 modern bathrooms\r\n- 2 well-separated living areas with lift access\r\n- Ample garage space and storage areas\r\n- Low maintenance, ideal for downsizers or busy professionals\r\n- Easy stroll to waterfront, local cafes, and central CBD location\r\n- Sunny, warm, and contemporary design throughout\r\n\r\nWhy You'll Love It:\r\n\r\n- Spend your time enjoying life, not maintaining your home\r\n- Modern, easy-care living with all conveniences at your doorstep\r\n- Perfect for home ownership or a strategic rental investment\r\n- Strong vendor instructions to sell - opportunity should not be missed\r\n\r\nVendor prepared to guarantee a generous rental return for approved purchasers for an initial period. Sunny, warm, and beautifully designed home, Ready for immediate enjoyment or investment. Book a viewing today before this opportunity is gone.",
   "photos": [
@@ -645,14 +645,14 @@
         "low": 1275000,
         "mid": 1740000,
         "high": 2150000,
-        "updated_at": "2026-11-01T16:06:11.336462+00:00",
+        "updated_at": "2026-11-02T16:33:31.576507+00:00",
         "confidence": "low",
         "n": 44,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
           "n": 44,
-          "n_eff": 13.35,
+          "n_eff": 13.31,
           "radius_km": 3.0,
           "iqr_ratio": 0.5029,
           "same_suburb": 12,

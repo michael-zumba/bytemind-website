@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2025-06-09T17:05:23.220000+00:00",
-  "days_on_market": 509,
+  "days_on_market": 510,
   "lat": -36.6835279,
   "lon": 174.739095,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2219275066.jpg",
@@ -30,12 +30,12 @@
   "estimate_source": null,
   "estimate_updated_at": null,
   "comp_low": 1035000,
-  "comp_mid": 1200000,
+  "comp_mid": 1235000,
   "comp_high": 1360000,
   "comp_confidence": "medium",
-  "comp_n": 39,
+  "comp_n": 40,
   "value_low": 1035000,
-  "value_mid": 1200000,
+  "value_mid": 1235000,
   "value_high": 1360000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "medium",
@@ -48,10 +48,10 @@
   "build_year_source": null,
   "tenure_source": "unknown",
   "cv_ratio": null,
-  "ask_gap": 750000,
-  "ask_gap_pct": 0.625,
-  "deal_gap": -0.625,
-  "view_count": 13188,
+  "ask_gap": 715000,
+  "ask_gap_pct": 0.5789,
+  "deal_gap": -0.5789,
+  "view_count": 13199,
   "watchers": 102,
   "is_standard": 1,
   "standard_reason": null,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 1247017,
-  "model_mid": 1770595,
-  "model_high": 2515679,
+  "model_low": 1230884,
+  "model_mid": 1758995,
+  "model_high": 2514905,
   "model_confidence": "low",
-  "text_signal_pct": 16.4417,
-  "description_index": 0.645471,
+  "text_signal_pct": 23.185,
+  "description_index": 0.833906,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,52 +288,52 @@
   ],
   "model": {
     "listing_id": 5362643353,
-    "low": 1247017,
-    "mid": 1770595,
-    "high": 2515679,
+    "low": 1230884,
+    "mid": 1758995,
+    "high": 2514905,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3506, 0.3512], \"rel_width\": 0.7165, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.357, 0.3575], \"rel_width\": 0.73, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5362643353,
     "word_count": 84,
     "exclamations": 1,
-    "urgency": 0.8658,
+    "urgency": 0.8664,
     "luxury": 0.0,
     "condition_renovation": 0.0,
     "views_waterfront": 0.0,
-    "family_school": 0.6098,
+    "family_school": 0.6121,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.6975,
-    "description_premium_pct": 16.4417,
-    "description_index": 0.645471,
+    "description_premium_pct": 23.185,
+    "description_index": 0.833906,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 3, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-01T16:06:11.606146+00:00",
+    "updated_at": "2026-11-02T16:33:31.857470+00:00",
     "top_topics": [
       {
         "topic_id": 9,
-        "weight": 0.880806,
+        "weight": 0.870396,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
           "regional park",
           "regional",
           "village",
-          "suburb village",
           "suburb college",
-          "walking",
+          "suburb village",
           "suburb regional",
+          "walking",
           "community",
-          "distance",
           "college",
-          "walking distance"
+          "distance",
+          "centre"
         ]
       },
       {
         "topic_id": 2,
-        "weight": 0.108161,
+        "weight": 0.129604,
         "label": "New build / brand-new quality",
         "top_terms": [
           "brand",
@@ -344,29 +344,10 @@
           "standalone",
           "lot",
           "bedrooms bathrooms",
-          "homes",
           "sqm floor",
-          "maintenance",
-          "floor area"
-        ]
-      },
-      {
-        "topic_id": 3,
-        "weight": 0.011033,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "premium",
-          "luxury",
-          "appliances",
-          "designer",
-          "finishes",
-          "sophisticated",
-          "design",
-          "residence",
-          "year",
-          "designer kitchen",
-          "quality",
-          "refined"
+          "floor area",
+          "homes",
+          "sqm"
         ]
       },
       {
@@ -375,17 +356,36 @@
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
-          "ensuite",
           "walk wardrobe",
+          "ensuite",
           "bathroom",
           "suite",
+          "level",
           "lounge",
           "master",
-          "level",
-          "separate",
-          "master suite",
           "upstairs",
-          "floor"
+          "walk",
+          "master suite",
+          "separate"
+        ]
+      },
+      {
+        "topic_id": 1,
+        "weight": 0.0,
+        "label": "Development & land potential",
+        "top_terms": [
+          "potential",
+          "site",
+          "future",
+          "land",
+          "development",
+          "subject",
+          "property",
+          "existing",
+          "sqm",
+          "housing",
+          "council",
+          "mixed"
         ]
       }
     ]
@@ -426,7 +426,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-01T16:06:11.336462+00:00"
+    "updated_at": "2026-11-02T16:33:31.576507+00:00"
   },
   "body": "Don’t miss the opportunity to purchase this brand new pavilion design build home in the heart of Long Bay at Green View. \r\n\r\nGreen View is the final stage of Long Bay with only 13 sections remaining in the entire ‘new “Long Bay’ / they’re selling fast so dream home builders best be quick! \r\n\r\nWalking distance to Long Bay beach, new village shopping centre including cafes’s, bars, eateries and more. \r\n\r\nYou will have piece-of-mind knowing your home has been designed and built by David Reid Homes who are well recognised for building quality homes throughout the North Shore and NZ. \r\n\r\nPlease copy and paste the below hyperlink to view the new David Reid Homes Show Home in North Auckland: \r\n\r\nhttps://davidreidhomes.co.nz/our-locations/auckland-north-shore-west/showhomes/warkworth-show-home/ \r\n\r\nIn zone for the well established Long Bay college. \r\n\r\nA comprehensive Master Builders guarantee is included.",
   "photos": [
@@ -630,7 +630,7 @@
   ],
   "valuation": {
     "value_low": 1035000,
-    "value_mid": 1200000,
+    "value_mid": 1235000,
     "value_high": 1360000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "medium",
@@ -639,18 +639,18 @@
         "name": "Nearby sold comparables",
         "range": "$1.03M – $1.36M",
         "low": 1035000,
-        "mid": 1200000,
+        "mid": 1235000,
         "high": 1360000,
-        "updated_at": "2026-11-01T16:06:11.336462+00:00",
+        "updated_at": "2026-11-02T16:33:31.576507+00:00",
         "confidence": "medium",
-        "n": 39,
+        "n": 40,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 39,
-          "n_eff": 10.33,
+          "n": 40,
+          "n_eff": 10.49,
           "radius_km": 3.0,
-          "iqr_ratio": 0.2708,
+          "iqr_ratio": 0.2632,
           "same_suburb": 17,
           "model_version": "comp-cv-v1"
         }

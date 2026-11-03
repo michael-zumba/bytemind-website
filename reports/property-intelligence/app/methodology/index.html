@@ -140,7 +140,7 @@
     <p class="standfirst">How the data is collected, how estimates are built, how the models are tested, and what the numbers can and cannot tell you.</p>
     <div class="meta">
       <div><strong>Version 1.2</strong>29 October 2026</div>
-      <div><strong>Coverage</strong>17 North Shore and Eastern Bays suburbs</div>
+      <div><strong>Coverage</strong>30 Auckland suburbs across five areas</div>
       <div><strong>Access</strong>Free to read and download · independent research</div>
     </div>
   </header>
@@ -176,7 +176,7 @@
 
   <section id="scope">
     <h2>1. What this project is and is not</h2>
-    <p>Auckland Property Scout is an independent, non-commercial research project covering 17 suburbs on Auckland's North Shore and Eastern Bays: Browns Bay, Murrays Bay, Mairangi Bay, Rothesay Bay, Campbells Bay, Castor Bay, Milford, Long Bay, Waiake, Torbay, Takapuna, Devonport, Mission Bay, Kohimarama, St Heliers, Glendowie and Ōrākei.</p>
+    <p>Auckland Property Scout is an independent, non-commercial research project covering 30 Auckland suburbs across the North Shore, Eastern Bays, Eastern Beaches (Howick), Hibiscus Coast and Whangaparāoa Peninsula.</p>
     <p>The project shows the evidence behind an estimate. Instead of one price, it gives a range, a source, a date and a record of past errors.</p>
     <h3>What it is</h3>
     <ul>
@@ -197,7 +197,7 @@
 
   <section id="data">
     <h2>2. Data collected and when</h2>
-    <p>The collector reads public Trade Me search results and listing pages for the 17 suburbs. It stores the facts needed for research, with a timestamp for each capture.</p>
+    <p>The collector reads public Trade Me search results and listing pages for the 30 suburbs. It stores the facts needed for research, with a timestamp for each capture.</p>
     <h3>What is captured</h3>
     <table>
       <thead><tr><th>Group</th><th>Examples</th><th>What it is used for</th></tr></thead>
@@ -215,7 +215,7 @@
     <ul>
       <li>The job runs daily at <strong>03:15</strong> local time. If the public site blocks a request, a slower browser fallback tries again.</li>
       <li>Recent snapshots are kept in full. Older ones are reduced to the first and last capture per listing per month, which keeps the database small.</li>
-      <li>When a listing disappears from a complete 17-suburb search, it is marked <strong>delisted</strong> with a date. If it returns, it is marked <strong>relisted</strong>. Its descriptions, prices and model outputs stay in the database.</li>
+      <li>When a listing disappears from a complete suburb sweep, it is marked <strong>delisted</strong> with a date. If it returns, it is marked <strong>relisted</strong>. Its descriptions, prices and model outputs stay in the database.</li>
       <li>Raw descriptions are kept privately so the work can be rebuilt. They are <strong>not</strong> redistributed because they are third-party content.</li>
     </ul>
     <h3>Listing universe and cleaning</h3>
@@ -302,16 +302,16 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
     <p>A range is only helpful if its error is known. We report three standard measures.</p>
     <div class="eq"><span class="eq-label">Error measures</span>MAE  = average(|prediction − reference|)<br>MAPE = average(|prediction − reference| ÷ reference) × 100%<br>R²   = share of variation in the reference explained by the model</div>
     <p class="explain"><strong>MAE</strong> is the average dollar error. <strong>MAPE</strong> turns that into a percentage, which is easier to compare across cheap and expensive homes. <strong>R²</strong> runs from 0 to 1. A higher R² means the model follows the reference more closely, but says nothing about whether the reference is right.</p>
-    <p><strong>Example.</strong> A model predicts $1.08m and the reference is $1.00m. The error is $80,000, or 8%. At a 7% MAPE, a $1.0m property is typically about $70,000 off. That helps research, but is not precise enough to call a valuation.</p>
+    <p><strong>Example.</strong> A model predicts $1.08m and the reference is $1.00m. The error is $80,000, or 8%. At a 6% MAPE, a $1.0m property is typically about $60,000 off. That helps research, but is not precise enough to call a valuation.</p>
     <p>The 80% interval comes from out-of-fold errors: errors on cases left out during training. On the validation sample, about 80% of actual values fell inside it. It is a check on calibration, not a guarantee for one property.</p>
     <table>
       <thead><tr><th>Signal (28 Oct 2026 snapshot)</th><th>Reference / test</th><th>Typical error</th><th>How to read it</th></tr></thead>
       <tbody>
-        <tr><td>Hedonic fallback with CV</td><td>5-fold cross-validation against Homes AVM; 497 training cases</td><td class="num">MAE $265k · MAPE 7.0% · R² 0.973</td><td>Most accurate fallback. The target is an AVM, not a sale price.</td></tr>
-        <tr><td>Hedonic fallback without CV</td><td>Same test with CV removed</td><td class="num">MAE $756k · MAPE 24.6% · R² 0.784</td><td>A harder test. Much weaker, with a low-confidence label.</td></tr>
-        <tr><td>Comparable-sales model</td><td>Compared with Homes AVM on the same listings</td><td class="num">MAE $275k · MAPE 7.2% · R² 0.969</td><td>An independent check when an AVM exists. Small samples make it fragile.</td></tr>
-        <tr><td>Sale-price model</td><td>320 recorded sold prices</td><td class="num">MAE $195k · MAPE 13.4% · R² 0.830</td><td>A different target: actual sale prices. It is a cross-check, not the primary range.</td></tr>
-        <tr><td>Old suburb-guide baseline</td><td>Same validation sample</td><td class="num">MAE $1.22m · MAPE 47.5%</td><td>Shows the gain over a simple suburb median.</td></tr>
+        <tr><td>Hedonic fallback with CV</td><td>5-fold cross-validation against Homes AVM; 935 training cases</td><td class="num">MAE $163k · MAPE 6.3% · R² 0.969</td><td>Most accurate fallback. The target is an AVM, not a sale price.</td></tr>
+        <tr><td>Hedonic fallback without CV</td><td>Same test with CV removed</td><td class="num">MAE $518k · MAPE 22.3% · R² 0.772</td><td>A harder test. Much weaker, with a low-confidence label.</td></tr>
+        <tr><td>Comparable-sales model</td><td>Compared with Homes AVM on the same listings</td><td class="num">MAE $168k · MAPE 6.5% · R² 0.967</td><td>An independent check when an AVM exists. Small samples make it fragile.</td></tr>
+        <tr><td>Sale-price model</td><td>526 recorded sold prices</td><td class="num">MAE $194k · MAPE 11.9% · R² 0.851</td><td>A different target: actual sale prices. It is a cross-check, not the primary range.</td></tr>
+        <tr><td>Old suburb-guide baseline</td><td>Same validation sample</td><td class="num">MAE $832k · MAPE 38.5%</td><td>Shows the gain over a simple suburb median.</td></tr>
       </tbody>
     </table>
     <p>Two points to keep in mind. The with-CV model is accurate partly because the AVM and CV are related. And the test uses random folds, not a time-based backtest. Daily snapshots will allow a time-based test later. Until then, these are internal validation figures, not an external audit.</p>
@@ -462,7 +462,7 @@ range = [Q25(ratio) × CV_subject, Q50(ratio) × CV_subject, Q75(ratio) × CV_su
       <dt>BH-FDR</dt><dd>Benjamini–Hochberg false discovery rate. A correction for testing many hypotheses at once. It makes a chance result less likely to look significant.</dd>
       <dt>DOM</dt><dd>Days on market: how long a listing has been publicly advertised.</dd>
       <dt>Price state</dt><dd>A distinct observed asking price, display text and sale method. Repeated daily captures of the same state do not add rows.</dd>
-      <dt>Delisted</dt><dd>A listing absent from a complete 17-suburb search. It is retained in the database with a date rather than deleted.</dd>
+      <dt>Delisted</dt><dd>A listing absent from a complete suburb sweep. It is retained in the database with a date rather than deleted.</dd>
     </dl>
   </section>
 

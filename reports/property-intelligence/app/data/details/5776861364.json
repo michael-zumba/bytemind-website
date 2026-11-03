@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-02-10T04:08:53.797000+00:00",
-  "days_on_market": 265,
+  "days_on_market": 266,
   "lat": -36.6860605,
   "lon": 174.7400212,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2287243851.jpg",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T14:41:42.321052+00:00",
-  "days_since_last_change": 5.08,
+  "days_since_last_change": 6.05,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 1,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 575213,
-  "model_mid": 635965,
-  "model_high": 696229,
+  "model_low": 573616,
+  "model_mid": 634197,
+  "model_high": 698384,
   "model_confidence": "high",
-  "text_signal_pct": -3.771,
-  "description_index": -0.153726,
+  "text_signal_pct": -4.863,
+  "description_index": -0.210885,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -209,7 +209,7 @@
       "id": 28,
       "name": "RANGITOTO COLLEGE",
       "type": "Secondary (Year 9-13)",
-      "roll": 4188,
+      "roll": 4187,
       "authority": "State",
       "gender": "Co-Educational",
       "decile": null,
@@ -249,7 +249,7 @@
       "id": 1584,
       "name": "TKKM O TE RAKI PAEWHENUA",
       "type": "Composite (Year 1-13)",
-      "roll": 145,
+      "roll": 144,
       "authority": "State",
       "gender": "Co-Educational",
       "decile": null,
@@ -288,71 +288,52 @@
   ],
   "model": {
     "listing_id": 5776861364,
-    "low": 575213,
-    "mid": 635965,
-    "high": 696229,
+    "low": 573616,
+    "mid": 634197,
+    "high": 698384,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1004, 0.0905], \"rel_width\": 0.1903, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1004, 0.0964], \"rel_width\": 0.1967, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5776861364,
     "word_count": 205,
     "exclamations": 0,
-    "urgency": 0.355,
-    "luxury": 0.2566,
-    "condition_renovation": 0.203,
-    "views_waterfront": 0.2825,
-    "family_school": 0.3344,
-    "investment": 0.1482,
+    "urgency": 0.3531,
+    "luxury": 0.2537,
+    "condition_renovation": 0.2026,
+    "views_waterfront": 0.285,
+    "family_school": 0.3347,
+    "investment": 0.1487,
     "risk": 0.0,
     "readability": 0.5792,
-    "description_premium_pct": -3.771,
-    "description_index": -0.153726,
+    "description_premium_pct": -4.863,
+    "description_index": -0.210885,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 2, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 4, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-02T16:33:31.857470+00:00",
+    "updated_at": "2026-11-03T15:48:29.992976+00:00",
     "top_topics": [
       {
         "topic_id": 4,
-        "weight": 0.330647,
+        "weight": 0.452132,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
-          "car",
           "leave",
           "lock",
-          "bedroom apartment",
           "lock leave",
-          "complex",
+          "car",
+          "bedroom apartment",
+          "bedroom",
           "restaurants",
-          "residents",
           "car park",
-          "pool",
-          "car parks"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.266168,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low",
-          "low maintenance",
-          "unit",
-          "care",
-          "easy care",
-          "sunny",
-          "brick",
-          "downsizers",
-          "buyers",
-          "single",
-          "morning"
+          "balcony",
+          "complex",
+          "maintenance"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.195319,
+        "weight": 0.193289,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "park",
@@ -361,17 +342,17 @@
           "village",
           "suburb college",
           "suburb village",
-          "suburb regional",
           "walking",
-          "community",
+          "suburb regional",
           "college",
           "distance",
-          "centre"
+          "walking distance",
+          "community"
         ]
       },
       {
         "topic_id": 2,
-        "weight": 0.099522,
+        "weight": 0.111229,
         "label": "New build / brand-new quality",
         "top_terms": [
           "brand",
@@ -379,13 +360,32 @@
           "new",
           "modern",
           "quality",
-          "standalone",
           "lot",
+          "standalone",
           "bedrooms bathrooms",
-          "sqm floor",
-          "floor area",
+          "maintenance",
           "homes",
-          "sqm"
+          "low maintenance",
+          "low"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.085815,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "parking",
+          "fully",
+          "fenced",
+          "double",
+          "facing",
+          "street parking",
+          "college",
+          "north facing",
+          "room",
+          "deck",
+          "fully fenced"
         ]
       }
     ]
@@ -443,7 +443,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-02T16:33:31.576507+00:00"
+    "updated_at": "2026-11-03T15:48:29.708896+00:00"
   },
   "body": "If you've been looking for a smart, low-maintenance home walking distance from Long Bay Beach, this is well worth a look.\r\n\r\nThis near-new 52m² one-bedroom apartment at Elementum offers a sunny north facing position, quality finishes and easy, lock and leave living.\r\nThe open-plan kitchen and living area is bright and practical, with a designer kitchen featuring quality appliances, good storage and plenty of bench space. There is also room to create a dedicated dining area if desired.\r\n\r\nThe bedroom is a good size with excellent natural light, while the fully tiled bathroom is modern and well finished.\r\nBuilt by an award-winning developer, the apartment is backed by a 10-year building guarantee, giving you the confidence that comes with a near-new home.\r\n\r\nLocated in the heart of Long Bay, you're close to the beach, Long Bay Regional Park, local cafes, restaurants and shops, with good transport links and excellent schools nearby. Whether you're a first-home buyer, professional, downsizer or investor, this is an easy-care property in a popular coastal location.\r\n\r\nThe owner is ready to move on and wants this sold. We're keen to hear from buyers and will consider genuine offers. Property Docs here https://www.harcourtsfiles.co.nz/listings/351N",
   "photos": [
@@ -815,7 +815,7 @@
         "low": 660820,
         "mid": 705492,
         "high": 734244,
-        "updated_at": "2026-11-02T16:33:31.576507+00:00",
+        "updated_at": "2026-11-03T15:48:29.708896+00:00",
         "confidence": "high",
         "n": 53,
         "basis": {

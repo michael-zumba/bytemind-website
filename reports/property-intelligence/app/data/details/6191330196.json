@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-11-10T20:30:00+00:00",
   "listed_at": "2026-10-21T23:00:52.063000+00:00",
-  "days_on_market": 11,
+  "days_on_market": 12,
   "lat": -36.7448616,
   "lon": 174.7488403,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2336709957.jpg",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:34:06.285705+00:00",
-  "days_since_last_change": 5.04,
+  "days_since_last_change": 6.01,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 1.8,
+  "sale_pressure": 2.0,
   "sale_pressure_label": "low",
-  "model_low": 1985234,
-  "model_mid": 2194910,
-  "model_high": 2402897,
+  "model_low": 1988303,
+  "model_mid": 2198293,
+  "model_high": 2420780,
   "model_confidence": "high",
-  "text_signal_pct": -3.7169,
-  "description_index": -0.151479,
+  "text_signal_pct": -11.1463,
+  "description_index": -0.499919,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -109,7 +109,7 @@
       "id": 28,
       "name": "RANGITOTO COLLEGE",
       "type": "Secondary (Year 9-13)",
-      "roll": 4188,
+      "roll": 4187,
       "authority": "State",
       "gender": "Co-Educational",
       "decile": null,
@@ -259,7 +259,7 @@
       "id": 1584,
       "name": "TKKM O TE RAKI PAEWHENUA",
       "type": "Composite (Year 1-13)",
-      "roll": 145,
+      "roll": 144,
       "authority": "State",
       "gender": "Co-Educational",
       "decile": null,
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6191330196,
-    "low": 1985234,
-    "mid": 2194910,
-    "high": 2402897,
+    "low": 1988303,
+    "mid": 2198293,
+    "high": 2420780,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1004, 0.0905], \"rel_width\": 0.1903, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1004, 0.0964], \"rel_width\": 0.1967, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6191330196,
@@ -300,21 +300,40 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.3439,
-    "views_waterfront": 0.4785,
-    "family_school": 0.9915,
+    "condition_renovation": 0.3433,
+    "views_waterfront": 0.4829,
+    "family_school": 0.9924,
     "investment": 1.0,
     "risk": 0.0,
     "readability": 0.4653,
-    "description_premium_pct": -3.7169,
-    "description_index": -0.151479,
+    "description_premium_pct": -11.1463,
+    "description_index": -0.499919,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 7, \"investment\": 4, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-02T16:33:31.857470+00:00",
+    "updated_at": "2026-11-03T15:48:29.992976+00:00",
     "top_topics": [
       {
+        "topic_id": 8,
+        "weight": 0.324994,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "sea views",
+          "views",
+          "elevated",
+          "rangitoto",
+          "rangitoto college",
+          "living areas",
+          "areas",
+          "gulf",
+          "hauraki gulf",
+          "hauraki",
+          "spectacular"
+        ]
+      },
+      {
         "topic_id": 5,
-        "weight": 0.278565,
+        "weight": 0.266315,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -327,65 +346,46 @@
           "westlake boys",
           "normal",
           "suburb normal",
-          "intermediate",
-          "normal intermediate"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.26064,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "sea",
-          "sea views",
-          "views",
-          "elevated",
-          "gulf",
-          "rangitoto",
-          "hauraki gulf",
-          "hauraki",
-          "spectacular",
-          "living areas",
-          "areas",
-          "outlook"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.25078,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "college",
-          "parking",
-          "room",
-          "street parking",
-          "street",
-          "double",
-          "plus",
-          "rangitoto college",
-          "fenced",
-          "fully",
-          "garage",
-          "deck"
+          "normal intermediate",
+          "intermediate"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.157971,
+        "weight": 0.205549,
         "label": "Development & land potential",
         "top_terms": [
-          "potential",
           "site",
-          "future",
+          "potential",
           "land",
           "development",
-          "subject",
-          "property",
-          "existing",
+          "future",
           "sqm",
+          "subject",
           "housing",
+          "existing",
+          "mixed",
           "council",
-          "mixed"
+          "developers"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.135392,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "parking",
+          "fully",
+          "fenced",
+          "double",
+          "facing",
+          "street parking",
+          "college",
+          "north facing",
+          "room",
+          "deck",
+          "fully fenced"
         ]
       }
     ]
@@ -451,7 +451,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-02T16:33:31.576507+00:00"
+    "updated_at": "2026-11-03T15:48:29.708896+00:00"
   },
   "body": "Auction: 8-12 The Promenade, Takapuna on Wednesday 11 November 2026 at 9:30AM  (unless sold prior)\r\n\r\nA substantial 1,146m² site in a sought-after location, offering a wide street frontage, a legal home and income, and potential sea views.\r\n\r\nThe main home offers 3 bedrooms, a modern bathroom and kitchen, and a double garage with extra storage space. Classic weatherboard construction, tongue-and-groove flooring and an easy flow to decks and garden spaces. \r\n\r\nThe one-bedroom income flat provides flexibility for extended family or additional income.\r\n\r\nFabulous location - easy walk to the beach and shops, a stroll to Mairangi Bay Primary School, also zoned for Rangitoto College and Westlake Girls' High School.\r\n\r\nLarge land, a versatile legal home and income, and a position that rarely comes to market - this is an opportunity worth exploring.",
   "photos": [
@@ -837,14 +837,14 @@
         "low": 1977891,
         "mid": 2223618,
         "high": 2438636,
-        "updated_at": "2026-11-02T16:33:31.576507+00:00",
+        "updated_at": "2026-11-03T15:48:29.708896+00:00",
         "confidence": "high",
         "n": 85,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 85,
-          "n_eff": 14.84,
+          "n_eff": 14.79,
           "radius_km": 3.0,
           "median_ratio": 1.0224,
           "iqr_ratio": 0.2072,

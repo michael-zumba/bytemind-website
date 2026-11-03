@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-11-04T21:00:00+00:00",
   "listed_at": "2026-10-05T13:34:40.370000+00:00",
-  "days_on_market": 28,
+  "days_on_market": 29,
   "lat": -36.7931137,
   "lon": 174.7689819,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333474924.jpg",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:35:12.844885+00:00",
-  "days_since_last_change": 5.04,
+  "days_since_last_change": 6.01,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 8,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 4.7,
+  "sale_pressure": 4.8,
   "sale_pressure_label": "low",
-  "model_low": 795693,
-  "model_mid": 879733,
-  "model_high": 963095,
+  "model_low": 796666,
+  "model_mid": 880804,
+  "model_high": 969949,
   "model_confidence": "medium",
-  "text_signal_pct": 16.1822,
-  "description_index": 0.599843,
+  "text_signal_pct": 17.6983,
+  "description_index": 0.689325,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -278,52 +278,33 @@
   ],
   "model": {
     "listing_id": 6165209264,
-    "low": 795693,
-    "mid": 879733,
-    "high": 963095,
+    "low": 796666,
+    "mid": 880804,
+    "high": 969949,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1004, 0.0905], \"rel_width\": 0.1903, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.1004, 0.0964], \"rel_width\": 0.1967, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6165209264,
     "word_count": 261,
     "exclamations": 0,
-    "urgency": 0.2788,
-    "luxury": 0.2016,
-    "condition_renovation": 0.4783,
-    "views_waterfront": 0.5546,
-    "family_school": 0.2627,
+    "urgency": 0.2774,
+    "luxury": 0.1992,
+    "condition_renovation": 0.4775,
+    "views_waterfront": 0.5597,
+    "family_school": 0.2629,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4027,
-    "description_premium_pct": 16.1822,
-    "description_index": 0.599843,
+    "description_premium_pct": 17.6983,
+    "description_index": 0.689325,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 2, \"condition_renovation\": 3, \"views_waterfront\": 5, \"family_school\": 4, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-02T16:33:31.857470+00:00",
+    "updated_at": "2026-11-03T15:48:29.992976+00:00",
     "top_topics": [
       {
-        "topic_id": 10,
-        "weight": 0.294568,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low",
-          "low maintenance",
-          "unit",
-          "care",
-          "easy care",
-          "sunny",
-          "brick",
-          "downsizers",
-          "buyers",
-          "single",
-          "morning"
-        ]
-      },
-      {
         "topic_id": 5,
-        "weight": 0.266524,
+        "weight": 0.2748,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -336,46 +317,65 @@
           "westlake boys",
           "normal",
           "suburb normal",
-          "intermediate",
-          "normal intermediate"
+          "normal intermediate",
+          "intermediate"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.216725,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "parking",
+          "fully",
+          "fenced",
+          "double",
+          "facing",
+          "street parking",
+          "college",
+          "north facing",
+          "room",
+          "deck",
+          "fully fenced"
+        ]
+      },
+      {
+        "topic_id": 4,
+        "weight": 0.125634,
+        "label": "Apartment / lock-up-and-leave",
+        "top_terms": [
+          "apartment",
+          "leave",
+          "lock",
+          "lock leave",
+          "car",
+          "bedroom apartment",
+          "bedroom",
+          "restaurants",
+          "car park",
+          "balcony",
+          "complex",
+          "maintenance"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.13181,
+        "weight": 0.115904,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "harbour",
           "views",
           "residence",
+          "pool",
           "scale",
           "waterfront",
           "expansive",
-          "pool",
-          "aucklands",
-          "architectural",
           "city",
+          "aucklands",
+          "gulf",
           "extraordinary",
-          "privacy"
-        ]
-      },
-      {
-        "topic_id": 3,
-        "weight": 0.112283,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "premium",
-          "luxury",
-          "appliances",
-          "designer",
-          "year",
-          "finishes",
-          "sophisticated",
-          "designer kitchen",
-          "design",
-          "residence",
-          "quality",
-          "lighting"
+          "sqm"
         ]
       }
     ]
@@ -489,7 +489,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-02T16:33:31.576507+00:00"
+    "updated_at": "2026-11-03T15:48:29.708896+00:00"
   },
   "body": "Auction: 8-12 The Promenade, Takapuna on Thursday 5 November 2026 at 10:00AM  (unless sold prior)\r\n\r\nUniquely positioned at the end of a quiet cul-de-sac, this beautifully renovated 2-bedroom brick and tile end unit offers peace, privacy and an exceptional Central Takapuna lifestyle.\r\n\r\nFrom the moment you step inside the open plan living you will experience the warmth of the polished timber flooring and be captivated by the surrounding marine environment. With unobstructed views that extend across the coastal margin to Auckland’s CBD, this is an outlook that can never be built out.\r\n\r\nThe home is surrounded by established greenery and abundant native birdlife, creating a wonderful tranquil setting despite being right in the heart of Takapuna.\r\n\r\nThe beautiful kitchen features soft close American Oak cabinetry, engineered-stone benchtops and generous storage. Its seamless connection with the living area makes it perfect for entertaining while enjoying the engaging coastal and city views.\r\n\r\nThere are two generously sized bedrooms and a fully renovated bathroom, along with extensive basement workshop and storage space.\r\n\r\nSituated in the TNIS, Takapuna Grammar and Westlake Girls’ High School Zones, the amenities here are second to none. Fabulous Takapuna Beach and the shopping precinct are just a 5-minute walk away, and public transport located at the top of the street will take you to the CBD in under 12 minutes, even during peak-hour periods.\r\n\r\nIf you are looking for an entry-level property offering style, thoughtful design and an exceptional location in a truly unique coastal setting, then look no further. Our vendor is motivated and this property is seriously for sale – either prior to or on auction day.\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -869,14 +869,14 @@
         "low": 793283,
         "mid": 838303,
         "high": 873600,
-        "updated_at": "2026-11-02T16:33:31.576507+00:00",
+        "updated_at": "2026-11-03T15:48:29.708896+00:00",
         "confidence": "medium",
         "n": 38,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
           "n": 38,
-          "n_eff": 6.75,
+          "n_eff": 6.73,
           "radius_km": 3.0,
           "median_ratio": 0.9212,
           "iqr_ratio": 0.0958,

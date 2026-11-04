@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-11-25T23:00:00+00:00",
   "listed_at": "2026-11-03T00:14:54.303000+00:00",
-  "days_on_market": 0,
+  "days_on_market": 1,
   "lat": -36.7469487,
   "lon": 174.7467638,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2339407519.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1807767,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1568672,
-  "comp_mid": 1755263,
+  "comp_low": 1556333,
+  "comp_mid": 1763559,
   "comp_high": 1916667,
   "comp_confidence": "high",
-  "comp_n": 82,
+  "comp_n": 93,
   "value_low": 1608407,
   "value_mid": 1708087,
   "value_high": 1807767,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T15:48:04.536196+00:00",
-  "days_since_last_change": 0.24,
+  "days_since_last_change": 1.22,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 3,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 0.0,
+  "sale_pressure": 0.2,
   "sale_pressure_label": "low",
-  "model_low": 1581626,
-  "model_mid": 1724039,
-  "model_high": 1879797,
+  "model_low": 1571284,
+  "model_mid": 1714761,
+  "model_high": 1874316,
   "model_confidence": "high",
-  "text_signal_pct": -10.5367,
-  "description_index": -0.553907,
+  "text_signal_pct": -3.8522,
+  "description_index": -0.197836,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -318,71 +318,90 @@
   ],
   "model": {
     "listing_id": 6211045312,
-    "low": 1581626,
-    "mid": 1724039,
-    "high": 1879797,
+    "low": 1571284,
+    "mid": 1714761,
+    "high": 1874316,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0862, 0.0865], \"rel_width\": 0.1729, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6211045312,
     "word_count": 177,
     "exclamations": 1,
     "urgency": 0.3616,
-    "luxury": 0.4658,
+    "luxury": 0.467,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.1545,
-    "family_school": 0.2963,
+    "views_waterfront": 0.154,
+    "family_school": 0.2966,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.5782,
-    "description_premium_pct": -10.5367,
-    "description_index": -0.553907,
+    "description_premium_pct": -3.8522,
+    "description_index": -0.197836,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 3, \"condition_renovation\": 0, \"views_waterfront\": 1, \"family_school\": 3, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
-        "topic_id": 6,
-        "weight": 0.340527,
+        "topic_id": 7,
+        "weight": 0.333157,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
           "walk wardrobe",
           "ensuite",
           "walk",
-          "master",
           "bathroom",
+          "master",
           "upstairs",
-          "suite",
-          "floor",
-          "family bathroom",
           "lounge",
-          "master suite"
+          "suite",
+          "family bathroom",
+          "separate",
+          "bedroom"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.221248,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "views",
+          "sea views",
+          "elevated",
+          "position",
+          "rangitoto",
+          "outlook",
+          "spectacular",
+          "elevated position",
+          "gulf",
+          "hauraki gulf",
+          "hauraki"
         ]
       },
       {
         "topic_id": 8,
-        "weight": 0.195595,
-        "label": "Investment & rental income",
+        "weight": 0.120924,
+        "label": "Family living & entertaining",
         "top_terms": [
           "extended",
-          "extended family",
           "flexibility",
+          "extended family",
+          "guests",
           "living areas",
           "areas",
-          "guests",
-          "multiple",
-          "teenagers",
           "family living",
-          "income",
+          "multiple",
+          "families",
+          "teenagers",
           "separate",
-          "families"
+          "impressive"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.112593,
+        "weight": 0.093138,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -397,25 +416,6 @@
           "intermediate",
           "school suburb",
           "shore"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.100483,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low maintenance",
-          "low",
-          "brand new",
-          "brand",
-          "new",
-          "easy care",
-          "single",
-          "care",
-          "buyers",
-          "investors",
-          "home buyers"
         ]
       }
     ]
@@ -489,7 +489,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "Tucked away from the main road this amazing home is situated in a highly desirable location for sought after school zones and enjoys stunning sea views. It is also close to local amenities including beaches, shops and public transport. \r\n\r\nThe generous two-story layout boasts ample space with a generous floor area for a growing family or those who love to entertain guests. The Chef of the home will love the new designer open plan kitchen.\r\n\r\nThe second living room downstairs flows out to a private courtyard, the perfect retreat for parents or teenagers who may want to have their own ME time.\r\n\r\nFour generous sized bedrooms including the MEGA-sized master with walk-in wardrobe & ensuite is impressive, along with a separate office perfect for working from home or it could be used as a 5th bedroom.\r\n\r\nEasy-care grounds with no lawns to mow makes this home a winner for enjoying all that a Bays' lifestyle has to offer. Don't miss out on this incredible opportunity to own a stunning property in Mairangi Bay.\r\nBe Quick - Come along to the open homes - This home will be Sold on or before Auction Day!",
   "photos": [
@@ -708,7 +708,7 @@
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1725000,
+      "cv": 1925000,
       "estimate_mid": 1980000
     },
     {
@@ -740,32 +740,18 @@
       "estimate_mid": 1130000
     },
     {
-      "property_id": "1cbe906a-52d9-44a6-b906-d0533aa41a33",
-      "address": "47 Newhaven Terrace, Mairangi Bay, Auckland",
-      "sale_price": 1285000,
-      "sale_date": "2026-08-20T00:00:00+00:00",
-      "distance_km": 0.54,
+      "property_id": "3c40cd36-c2b7-45fd-afeb-793cb640438f",
+      "address": "35D Matipo Road, Mairangi Bay, Auckland",
+      "sale_price": 990000,
+      "sale_date": "2026-09-28T00:00:00+00:00",
+      "distance_km": 0.4,
       "bedrooms": 3,
       "bathrooms": null,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1175000,
-      "estimate_mid": 1290000
-    },
-    {
-      "property_id": "e9645e93-e102-4ef7-b922-506efdc91ece",
-      "address": "313 East Coast Road, Mairangi Bay, Auckland",
-      "sale_price": 1410000,
-      "sale_date": "2026-08-25T00:00:00+00:00",
-      "distance_km": 0.59,
-      "bedrooms": 4,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1500000,
-      "estimate_mid": 1420000
+      "cv": 1200000,
+      "estimate_mid": 1160000
     },
     {
       "property_id": "9e68916a-bd3a-4101-b8bc-4e7aba341c28",
@@ -796,18 +782,18 @@
       "estimate_mid": 1420000
     },
     {
-      "property_id": "1ac6a1ba-79f5-48b1-bc19-7bb1f75d3330",
-      "address": "5 Tree Fern Trail, Campbells Bay, Auckland",
-      "sale_price": 1475000,
-      "sale_date": "2026-08-22T00:00:00+00:00",
-      "distance_km": 0.69,
-      "bedrooms": 4,
-      "bathrooms": 2,
+      "property_id": "35ff7b4b-6576-4c36-92e0-1eb5aef90290",
+      "address": "1 Newhaven Terrace, Mairangi Bay, Auckland",
+      "sale_price": 2050000,
+      "sale_date": "2026-09-17T00:00:00+00:00",
+      "distance_km": 0.92,
+      "bedrooms": 3,
+      "bathrooms": 3,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1800000,
-      "estimate_mid": 1510000
+      "cv": 1650000,
+      "estimate_mid": 2030000
     },
     {
       "property_id": "35ff7b4b-6576-4c36-92e0-1eb5aef90290",
@@ -838,18 +824,32 @@
       "estimate_mid": 2080000
     },
     {
-      "property_id": "1406ec74-6a8a-4e33-b8d8-7a42098e6e4d",
-      "address": "4A View Road, Campbells Bay, Auckland",
-      "sale_price": 1750000,
-      "sale_date": "2026-08-22T00:00:00+00:00",
-      "distance_km": 1.08,
+      "property_id": "dee00419-6b2e-4e74-bd30-6c5e4624b412",
+      "address": "8/423 Beach Road, Mairangi Bay, Auckland",
+      "sale_price": 1200000,
+      "sale_date": "2026-09-18T00:00:00+00:00",
+      "distance_km": 1.12,
+      "bedrooms": 3,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1925000,
+      "estimate_mid": 1950000
+    },
+    {
+      "property_id": "34f38985-8516-4d71-b7c7-493966201f81",
+      "address": "1/7 Jutland Street, Mairangi Bay, Auckland",
+      "sale_price": 1385000,
+      "sale_date": "2026-09-17T00:00:00+00:00",
+      "distance_km": 1.15,
       "bedrooms": 4,
       "bathrooms": 2,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 2425000,
-      "estimate_mid": 2360000
+      "cv": 1500000,
+      "estimate_mid": 1470000
     }
   ],
   "valuation": {
@@ -871,22 +871,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.57M – $1.92M",
-        "low": 1568672,
-        "mid": 1755263,
+        "range": "$1.56M – $1.92M",
+        "low": 1556333,
+        "mid": 1763559,
         "high": 1916667,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "high",
-        "n": 82,
+        "n": 93,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 82,
-          "n_eff": 13.5,
+          "n": 93,
+          "n_eff": 14.97,
           "radius_km": 3.0,
-          "median_ratio": 1.0175,
-          "iqr_ratio": 0.1983,
-          "same_suburb": 24,
+          "median_ratio": 1.0224,
+          "iqr_ratio": 0.2043,
+          "same_suburb": 27,
           "model_version": "comp-cv-v1"
         }
       },

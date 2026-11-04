@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-08-11T01:53:57.743000+00:00",
-  "days_on_market": 84,
+  "days_on_market": 85,
   "lat": -36.6965615,
   "lon": 174.7473541,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2322611572.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 959398,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 885625,
+  "comp_low": 871981,
   "comp_mid": 926250,
   "comp_high": 995526,
   "comp_confidence": "high",
-  "comp_n": 67,
+  "comp_n": 80,
   "value_low": 853596,
   "value_mid": 906497,
   "value_high": 959398,
@@ -51,8 +51,8 @@
   "ask_gap": 68503,
   "ask_gap_pct": 0.0756,
   "deal_gap": -0.0756,
-  "view_count": 4226,
-  "watchers": 82,
+  "view_count": 4256,
+  "watchers": 83,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 64.0,
+  "sale_pressure": 64.2,
   "sale_pressure_label": "medium",
-  "model_low": 856282,
-  "model_mid": 933383,
-  "model_high": 1017710,
+  "model_low": 851337,
+  "model_mid": 929074,
+  "model_high": 1015523,
   "model_confidence": "high",
-  "text_signal_pct": -12.1731,
-  "description_index": -0.645742,
+  "text_signal_pct": -11.8104,
+  "description_index": -0.632944,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6077510417,
-    "low": 856282,
-    "mid": 933383,
-    "high": 1017710,
+    "low": 851337,
+    "mid": 929074,
+    "high": 1015523,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0862, 0.0865], \"rel_width\": 0.1729, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6077510417,
@@ -300,59 +300,40 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.3908,
-    "views_waterfront": 0.1633,
-    "family_school": 0.5218,
-    "investment": 0.0987,
+    "condition_renovation": 0.3839,
+    "views_waterfront": 0.1627,
+    "family_school": 0.5223,
+    "investment": 0.0992,
     "risk": 0.0,
     "readability": 0.2693,
-    "description_premium_pct": -12.1731,
-    "description_index": -0.645742,
+    "description_premium_pct": -11.8104,
+    "description_index": -0.632944,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 3, \"views_waterfront\": 2, \"family_school\": 10, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
         "topic_id": 2,
-        "weight": 0.357772,
+        "weight": 0.432929,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
           "maintenance",
           "low maintenance",
           "low",
+          "easy care",
+          "care",
+          "single",
           "brand new",
           "brand",
+          "convenience",
           "new",
-          "easy care",
-          "single",
-          "care",
           "buyers",
-          "investors",
-          "home buyers"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.1886,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "morning",
-          "friends",
-          "coffee",
-          "relaxed",
-          "life",
-          "coastal",
-          "morning coffee",
-          "sense",
-          "setting",
-          "inviting",
-          "summer",
-          "step"
+          "investors"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.169511,
+        "weight": 0.159035,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -370,8 +351,8 @@
         ]
       },
       {
-        "topic_id": 7,
-        "weight": 0.073125,
+        "topic_id": 6,
+        "weight": 0.07245,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -382,10 +363,29 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
-          "mountain"
+          "mountain",
+          "suburb marina"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.064787,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "views",
+          "sea views",
+          "elevated",
+          "position",
+          "rangitoto",
+          "outlook",
+          "spectacular",
+          "elevated position",
+          "gulf",
+          "hauraki gulf",
+          "hauraki"
         ]
       }
     ]
@@ -426,7 +426,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "Beautifully presented and thoughtfully designed, this stylish corner-site weatherboard duplex delivers the perfect balance of modern comfort, easy-care living and everyday convenience.\r\n\r\nBuilt in 2024, this freehold home offers approximately 118m2 of well-planned living across two levels, with 3 generous bedrooms, 2.5 bathrooms and a single internal-access garage plus off-street parking. Positioned on a desirable corner site, the home enjoys enhanced street presence, excellent natural light and a greater sense of space and privacy.\r\n\r\nStep inside to a light-filled open-plan living and dining area, complemented by a contemporary kitchen and seamless connection to the private outdoor space. Upstairs, the well-proportioned bedrooms provide a comfortable retreat, with the master bedroom featuring its own ensuite and private balcony - the perfect spot to enjoy your morning coffee or unwind at the end of the day.\r\n\r\nDesigned for modern family life, downsizers or astute investors, this is a home that offers genuine lock-up-and-leave appeal without compromising on space or style.\r\n\r\nProperty Highlights:\r\n* Desirable corner-site position\r\n* 3 well-proportioned bedrooms\r\n* 2.5 bathrooms, including master ensuite\r\n* Master bedroom with its own private balcony\r\n* Modern open-plan kitchen, dining and living\r\n* Two-level weatherboard construction\r\n* Approx. 118m2 floor area and 145m2 freehold site\r\n* Single internal-access garage plus off-street parking\r\n* Private, low-maintenance outdoor area\r\n* Built in 2024\r\n* School zones: Torbay School and Long Bay College\r\n* Excellent local amenities and coastal lifestyle\r\n* No Body Corp levy or Residential Society levy\r\n\r\nPositioned in the popular Torbay area, you're moments from the coastline, local beaches, cafes, shops and everyday amenities, while Albany and Westfield Albany are also within easy reach. Long Bay Beach, Waiake Beach and coastal walkways add to the lifestyle appeal of this sought-after North Shore location.\r\n\r\nFamilies will appreciate the added convenience of being zoned for Torbay School and Long Bay College, while the corner-site position provides an extra sense of openness, privacy and street appeal.\r\n\r\nA contemporary corner-site home with effortless appeal - simply move in, settle back and enjoy everything the North Shore lifestyle has to offer.",
   "photos": [
@@ -655,18 +655,18 @@
       "estimate_mid": 1470000
     },
     {
-      "property_id": "01f2cdae-698f-47a0-91a7-ad7a22cc4c9b",
-      "address": "3 Corric Hill, Torbay, Auckland",
-      "sale_price": 1080000,
-      "sale_date": "2026-08-07T00:00:00+00:00",
+      "property_id": "65775620-cc5e-46cc-8b24-7ca1d94a8e79",
+      "address": "40A Waiake Street, Torbay, Auckland",
+      "sale_price": 1730000,
+      "sale_date": "2026-08-26T00:00:00+00:00",
       "distance_km": 0.68,
-      "bedrooms": 3,
-      "bathrooms": 1,
+      "bedrooms": 4,
+      "bathrooms": 3,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1325000,
-      "estimate_mid": 1100000
+      "cv": 1725000,
+      "estimate_mid": 1750000
     },
     {
       "property_id": "698de6d4-a8b4-4e12-8734-3e203650a73d",
@@ -683,18 +683,18 @@
       "estimate_mid": 1380000
     },
     {
-      "property_id": "ccda11a8-554b-4e1d-b38d-60cf745f1a50",
-      "address": "8 Morlie Place, Torbay, Auckland",
-      "sale_price": 800000,
-      "sale_date": "2026-08-09T00:00:00+00:00",
-      "distance_km": 0.79,
+      "property_id": "d71e1990-4939-410f-bc98-8d402b245ae1",
+      "address": "39 Waiau Street, Torbay, Auckland",
+      "sale_price": 1185000,
+      "sale_date": "2026-09-24T00:00:00+00:00",
+      "distance_km": 0.77,
       "bedrooms": 3,
       "bathrooms": 2,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1300000,
-      "estimate_mid": 1010000
+      "cv": 1325000,
+      "estimate_mid": 1210000
     },
     {
       "property_id": "b56e22f1-5ca4-41b5-aa1f-676b28894142",
@@ -707,7 +707,7 @@
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1525000,
+      "cv": 1750000,
       "estimate_mid": 1760000
     },
     {
@@ -723,20 +723,6 @@
       "property_type": null,
       "cv": 1100000,
       "estimate_mid": 1170000
-    },
-    {
-      "property_id": "7beffa74-5f09-4998-8381-e7c2c81b7f7e",
-      "address": "1/893 Beach Road, Waiake, Auckland",
-      "sale_price": 1200000,
-      "sale_date": "2026-08-13T00:00:00+00:00",
-      "distance_km": 1.13,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1200000,
-      "estimate_mid": 1210000
     },
     {
       "property_id": "2ec0cb59-ed00-4d67-80ca-976016183eba",
@@ -779,6 +765,20 @@
       "property_type": null,
       "cv": 1025000,
       "estimate_mid": 945000
+    },
+    {
+      "property_id": "a077deca-bb8c-4ee0-820e-4d973a663e96",
+      "address": "30 Portobello Place, Torbay, Auckland",
+      "sale_price": 1239000,
+      "sale_date": "2026-09-22T00:00:00+00:00",
+      "distance_km": 1.45,
+      "bedrooms": 6,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1500000,
+      "estimate_mid": 1420000
     }
   ],
   "valuation": {
@@ -800,21 +800,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$886K – $996K",
-        "low": 885625,
+        "range": "$872K – $996K",
+        "low": 871981,
         "mid": 926250,
         "high": 995526,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "high",
-        "n": 67,
+        "n": 80,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 67,
-          "n_eff": 11.16,
+          "n": 80,
+          "n_eff": 12.52,
           "radius_km": 3.0,
           "median_ratio": 0.95,
-          "iqr_ratio": 0.1187,
+          "iqr_ratio": 0.1334,
           "same_suburb": 15,
           "model_version": "comp-cv-v1"
         }

@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-08T00:37:31.297000+00:00",
-  "days_on_market": 26,
+  "days_on_market": 27,
   "lat": -36.8804954,
   "lon": 174.9062712,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333960192.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1315239,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1078525,
-  "comp_mid": 1163049,
+  "comp_low": 1081056,
+  "comp_mid": 1166949,
   "comp_high": 1295000,
   "comp_confidence": "high",
-  "comp_n": 50,
+  "comp_n": 49,
   "value_low": 1170195,
   "value_mid": 1242717,
   "value_high": 1315239,
@@ -44,9 +44,9 @@
   "improvement_value": 525000,
   "cv_updated_at": "2024-04-30T12:00:00+00:00",
   "build_decade": "1990",
-  "build_year": null,
-  "build_year_source": null,
-  "tenure_source": "unknown",
+  "build_year": 1990,
+  "build_year_source": "homes_timeline_approx",
+  "tenure_source": "homes.co.nz",
   "cv_ratio": 0.9747,
   "ask_gap": -47717,
   "ask_gap_pct": -0.0384,
@@ -55,7 +55,7 @@
   "watchers": 108,
   "is_standard": 1,
   "standard_reason": null,
-  "tenure": "unknown",
+  "tenure": "crosslease",
   "school_zone_count": 4,
   "school_zone_secondary_count": 2,
   "school_zone_eqi_mean": 373.75,
@@ -63,25 +63,25 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:32:22.659920+00:00",
-  "days_since_last_change": 0.04,
+  "days_since_last_change": 1.02,
   "price_drop_count": 0,
   "description_change_count": 0,
-  "prior_sale_count": 0,
-  "ownership_years_mean": null,
-  "last_sale_date": null,
-  "last_sale_price": null,
-  "sale_frequency_label": "No recorded sales",
+  "prior_sale_count": 4,
+  "ownership_years_mean": 3.647729865389003,
+  "last_sale_date": "2004-06-21T00:00:00Z",
+  "last_sale_price": 410000,
+  "sale_frequency_label": "Frequent trading",
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 54.3,
+  "sale_pressure": 54.5,
   "sale_pressure_label": "medium",
-  "model_low": 1088750,
-  "model_mid": 1186784,
-  "model_high": 1294004,
+  "model_low": 1084158,
+  "model_mid": 1183155,
+  "model_high": 1293244,
   "model_confidence": "medium",
-  "text_signal_pct": 7.3077,
-  "description_index": 0.350875,
+  "text_signal_pct": 4.0888,
+  "description_index": 0.201818,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -318,90 +318,71 @@
   ],
   "model": {
     "listing_id": 6169135802,
-    "low": 1088750,
-    "mid": 1186784,
-    "high": 1294004,
+    "low": 1084158,
+    "mid": 1183155,
+    "high": 1293244,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0862, 0.0865], \"rel_width\": 0.1729, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6169135802,
     "word_count": 269,
     "exclamations": 2,
     "urgency": 0.0,
-    "luxury": 0.4086,
-    "condition_renovation": 0.4867,
-    "views_waterfront": 0.1017,
-    "family_school": 0.2599,
+    "luxury": 0.4097,
+    "condition_renovation": 0.4781,
+    "views_waterfront": 0.1013,
+    "family_school": 0.2602,
     "investment": 0.0,
-    "risk": 0.2897,
+    "risk": 0.3084,
     "readability": 0.4211,
-    "description_premium_pct": 7.3077,
-    "description_index": 0.350875,
+    "description_premium_pct": 4.0888,
+    "description_index": 0.201818,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 4, \"condition_renovation\": 3, \"views_waterfront\": 1, \"family_school\": 4, \"investment\": 0, \"risk\": 1}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
-        "topic_id": 9,
-        "weight": 0.541958,
+        "topic_id": 0,
+        "weight": 0.363033,
         "label": "Parking, garden & section",
         "top_terms": [
-          "brick",
-          "street",
-          "fenced",
-          "parking",
-          "fully",
-          "fully fenced",
-          "garden",
           "room",
-          "sunny",
-          "facing",
-          "north facing",
-          "street parking"
+          "garden",
+          "morning",
+          "brick",
+          "fenced",
+          "summer",
+          "street",
+          "away",
+          "renovated",
+          "coffee",
+          "ready",
+          "fully fenced"
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.138634,
+        "topic_id": 7,
+        "weight": 0.218931,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
           "walk wardrobe",
           "ensuite",
           "walk",
-          "master",
           "bathroom",
+          "master",
           "upstairs",
-          "suite",
-          "floor",
-          "family bathroom",
           "lounge",
-          "master suite"
+          "suite",
+          "family bathroom",
+          "separate",
+          "bedroom"
         ]
       },
       {
-        "topic_id": 2,
-        "weight": 0.111101,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low maintenance",
-          "low",
-          "brand new",
-          "brand",
-          "new",
-          "easy care",
-          "single",
-          "care",
-          "buyers",
-          "investors",
-          "home buyers"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.109903,
+        "topic_id": 6,
+        "weight": 0.177771,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -412,15 +393,67 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
-          "mountain"
+          "mountain",
+          "suburb marina"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.15421,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low maintenance",
+          "low",
+          "easy care",
+          "care",
+          "single",
+          "brand new",
+          "brand",
+          "convenience",
+          "new",
+          "buyers",
+          "investors"
         ]
       }
     ]
   },
-  "sales_history": [],
+  "sales_history": [
+    {
+      "sale_date": "2004-06-21T00:00:00Z",
+      "sale_price": 410000,
+      "display_price": "$410,000",
+      "sale_type": "S11",
+      "council_confirmed": 1,
+      "source": "homes.co.nz"
+    },
+    {
+      "sale_date": "2000-08-21T00:00:00Z",
+      "sale_price": null,
+      "display_price": "$N/A",
+      "sale_type": "M13",
+      "council_confirmed": 1,
+      "source": "homes.co.nz"
+    },
+    {
+      "sale_date": "1994-04-01T00:00:00Z",
+      "sale_price": 247500,
+      "display_price": "$247,500",
+      "sale_type": "S11",
+      "council_confirmed": 1,
+      "source": "homes.co.nz"
+    },
+    {
+      "sale_date": "1993-07-12T00:00:00Z",
+      "sale_price": null,
+      "display_price": "$N/A",
+      "sale_type": "S13",
+      "council_confirmed": 1,
+      "source": "homes.co.nz"
+    }
+  ],
   "sale_outcome": null,
   "sale_events": [
     {
@@ -464,7 +497,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "If you've been waiting for a home where there is genuinely nothing to do but move in and enjoy, this could be the one you've been looking for!\r\nLight, bright and beautifully presented, this stunning two-level home is in top condition throughout and offers an exceptional combination of space, privacy and convenience.\r\nThe near new  kitchen is a real highlight and provides plenty of space for family life. The master bedroom and ensuite are on the lower level , whilst upstairs are two generous bedrooms all beautifully presented with fitted wardrobes and a lovely spacious  tiled family bathroom.\r\nThe north-facing lounge opens effortlessly to a private fully fenced  patio area, creating a lovely sunny spot to relax, entertain or simply enjoy the peace and privacy this home provides. Add air conditioning, a ventilation system, security alarm, loads of storage , quality carpet, excellent presentation and you really are set for comfortable easy care living .\r\nThere's a double garage with internal access plus off-street parking, and the brick and plaster exterior is in excellent condition.\r\nAnd then there's the location…\r\nThe Half Moon Bay ferry service to the CBD is just a very short stroll away, while Macleans top three schools are all within easy walking distance.  Public transport is also close at hand, making everyday living wonderfully convenient.\r\nLight, bright and beautifully presented, this stunning two-level home is in top condition throughout and offers an exceptional combination of space, privacy and convenience.\r\nHomes offering this combination of presentation, privacy and location don't come along every day. Put this one at the top of your viewing list - you won't be disappointed\r\nNothing to do , nothing to spend , just move in and enjoy!\r\n\r\nWe look forward to seeing you at the open homes or if you prefer a private viewing contact Ellen Ming  021450856\r\nellen.ming@raywhite.com",
   "photos": [
@@ -715,20 +748,6 @@
       "estimate_mid": 1310000
     },
     {
-      "property_id": "6625af65-fb17-4f70-a3d7-395784ba4844",
-      "address": "1/258 Bucklands Beach Road, Bucklands Beach, Auckland",
-      "sale_price": 990000,
-      "sale_date": "2026-07-23T00:00:00+00:00",
-      "distance_km": 0.49,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1300000,
-      "estimate_mid": 1170000
-    },
-    {
       "property_id": "7806ae28-078c-4a3c-93a2-bde89bde11eb",
       "address": "22 Gillard Place, Eastern Beach, Auckland",
       "sale_price": 2060000,
@@ -771,20 +790,6 @@
       "estimate_mid": 1250000
     },
     {
-      "property_id": "64ff3d29-468f-43b9-8ad0-3bbbc7a1d17f",
-      "address": "24 Priestley Drive, Bucklands Beach, Auckland",
-      "sale_price": 2580000,
-      "sale_date": "2026-07-21T00:00:00+00:00",
-      "distance_km": 0.81,
-      "bedrooms": 6,
-      "bathrooms": 6,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 3050000,
-      "estimate_mid": 2660000
-    },
-    {
       "property_id": "fad4b584-e6cc-4611-a1eb-bbdc65db151f",
       "address": "3D Jillteresa Crescent, Half Moon Bay, Auckland",
       "sale_price": 1381000,
@@ -797,6 +802,20 @@
       "property_type": null,
       "cv": 1300000,
       "estimate_mid": 1380000
+    },
+    {
+      "property_id": "e159f05b-30c3-449b-928e-b38c7307573d",
+      "address": "36 Oakwood Grove, Eastern Beach, Auckland",
+      "sale_price": 1720000,
+      "sale_date": "2026-10-13T00:00:00+00:00",
+      "distance_km": 0.82,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 2250000,
+      "estimate_mid": 1760000
     },
     {
       "property_id": "4839d005-c40f-4269-a5bc-6d1cc0e93b38",
@@ -825,6 +844,20 @@
       "property_type": null,
       "cv": 1050000,
       "estimate_mid": 995000
+    },
+    {
+      "property_id": "d1d7dc8b-a716-4335-bb7a-079f987055fc",
+      "address": "48 Priestley Drive, Bucklands Beach, Auckland",
+      "sale_price": 1505000,
+      "sale_date": "2026-10-06T00:00:00+00:00",
+      "distance_km": 0.98,
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1775000,
+      "estimate_mid": 1740000
     }
   ],
   "valuation": {
@@ -847,20 +880,20 @@
       {
         "name": "Nearby sold comparables",
         "range": "$1.08M – $1.29M",
-        "low": 1078525,
-        "mid": 1163049,
+        "low": 1081056,
+        "mid": 1166949,
         "high": 1295000,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "high",
-        "n": 50,
+        "n": 49,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 50,
-          "n_eff": 10.0,
+          "n": 49,
+          "n_eff": 9.87,
           "radius_km": 3.0,
-          "median_ratio": 0.9122,
-          "iqr_ratio": 0.1861,
+          "median_ratio": 0.9153,
+          "iqr_ratio": 0.1833,
           "same_suburb": 14,
           "model_version": "comp-cv-v1"
         }

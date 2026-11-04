@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-08T08:10:36.277000+00:00",
-  "days_on_market": 26,
+  "days_on_market": 27,
   "lat": -36.7208436,
   "lon": 174.7356417,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2334049801.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1148457,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1045952,
+  "comp_low": 1037556,
   "comp_mid": 1150000,
-  "comp_high": 1246452,
+  "comp_high": 1252222,
   "comp_confidence": "high",
-  "comp_n": 106,
+  "comp_n": 129,
   "value_low": 1021806,
   "value_mid": 1085131,
   "value_high": 1148457,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 3029,
+  "view_count": 3093,
   "watchers": 95,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 7,
   "last_change_at": "2026-10-30T14:15:31.742613+00:00",
-  "days_since_last_change": 4.31,
+  "days_since_last_change": 5.28,
   "price_drop_count": 0,
   "description_change_count": 4,
   "prior_sale_count": 4,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 54.3,
+  "sale_pressure": 54.5,
   "sale_pressure_label": "medium",
-  "model_low": 1011634,
-  "model_mid": 1102724,
-  "model_high": 1202349,
+  "model_low": 1010939,
+  "model_mid": 1103251,
+  "model_high": 1205905,
   "model_confidence": "high",
-  "text_signal_pct": 21.8017,
-  "description_index": 0.981156,
+  "text_signal_pct": 11.4717,
+  "description_index": 0.546927,
   "events_count": 7,
   "last_event": "estimate_change",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6169813866,
-    "low": 1011634,
-    "mid": 1102724,
-    "high": 1202349,
+    "low": 1010939,
+    "mid": 1103251,
+    "high": 1205905,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0862, 0.0865], \"rel_width\": 0.1729, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6169813866,
@@ -301,39 +301,58 @@
     "urgency": 0.5926,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.5065,
-    "family_school": 0.4856,
+    "views_waterfront": 0.5047,
+    "family_school": 0.4861,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4388,
-    "description_premium_pct": 21.8017,
-    "description_index": 0.981156,
+    "description_premium_pct": 11.4717,
+    "description_index": 0.546927,
     "lexicon_hits_json": "{\"urgency\": 2, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 4, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
-        "topic_id": 9,
-        "weight": 0.430977,
+        "topic_id": 0,
+        "weight": 0.281101,
         "label": "Parking, garden & section",
         "top_terms": [
-          "brick",
-          "street",
-          "fenced",
-          "parking",
-          "fully",
-          "fully fenced",
-          "garden",
           "room",
-          "sunny",
-          "facing",
-          "north facing",
-          "street parking"
+          "garden",
+          "morning",
+          "brick",
+          "fenced",
+          "summer",
+          "street",
+          "away",
+          "renovated",
+          "coffee",
+          "ready",
+          "fully fenced"
         ]
       },
       {
-        "topic_id": 7,
-        "weight": 0.150227,
+        "topic_id": 10,
+        "weight": 0.197812,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "views",
+          "sea views",
+          "elevated",
+          "position",
+          "rangitoto",
+          "outlook",
+          "spectacular",
+          "elevated position",
+          "gulf",
+          "hauraki gulf",
+          "hauraki"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.176292,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -344,48 +363,29 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
-          "mountain"
+          "mountain",
+          "suburb marina"
         ]
       },
       {
-        "topic_id": 0,
-        "weight": 0.115701,
-        "label": "Family living & entertaining",
+        "topic_id": 2,
+        "weight": 0.126704,
+        "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "morning",
-          "friends",
-          "coffee",
-          "relaxed",
-          "life",
-          "coastal",
-          "morning coffee",
-          "sense",
-          "setting",
-          "inviting",
-          "summer",
-          "step"
-        ]
-      },
-      {
-        "topic_id": 5,
-        "weight": 0.106141,
-        "label": "Westlake school zone",
-        "top_terms": [
-          "westlake",
-          "school",
-          "girls",
-          "girls high",
-          "high school",
-          "westlake girls",
-          "high",
-          "boys",
-          "westlake boys",
-          "intermediate",
-          "school suburb",
-          "shore"
+          "maintenance",
+          "low maintenance",
+          "low",
+          "easy care",
+          "care",
+          "single",
+          "brand new",
+          "brand",
+          "convenience",
+          "new",
+          "buyers",
+          "investors"
         ]
       }
     ]
@@ -509,7 +509,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "Urgent action is required here!\r\n\r\nIf you're looking for a much-loved home in a superb location, this one deserves your attention.\r\n\r\nElevated, north-facing and filled with natural light, this warm and inviting home enjoys expansive urban views and a fantastic connection to the outdoors. Fresh, stylish decor complements three double bedrooms and two excellent outdoor living spaces, including a sunny north-facing deck and a covered deck that's ideal for year-round entertaining, summer BBQs or simply relaxing at home. A second toilet adds convenience, while the separate laundry offers plenty of storage and practical space.\r\n\r\nLocation is another standout. With Sherwood Primary and Northcross Intermediate within easy walking distance, and a walkway directly across the road providing a pleasant route through to Browns Bay, you'll have cafes, restaurants, shops and the beautiful Browns Bay beach all within easy reach.\r\n\r\nParking is exceptionally practical, with a large single garage offering additional storage, plus spots for three further vehicles.\r\n\r\nZoned for Rangitoto College, Murrays Bay Intermediate and Northcross Intermediate, this is a home that offers both lifestyle and convenience.\r\n\r\nHomes offering this combination of sunshine, views, outdoor living and location are always in demand. Don't miss your opportunity to make this one yours.\r\n\r\nThis is seriously for sale!\r\n\r\nBuy now and be in for Christmas!",
   "photos": [
@@ -704,20 +704,6 @@
   ],
   "comps": [
     {
-      "property_id": "81119117-8d25-452d-859b-e64cf46218a1",
-      "address": "12 Squirrel Lane, Browns Bay, Auckland",
-      "sale_price": 1350000,
-      "sale_date": "2026-08-14T00:00:00+00:00",
-      "distance_km": 0.33,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1350000,
-      "estimate_mid": 1380000
-    },
-    {
       "property_id": "7f0aaab9-8059-42f8-b248-569b4a5136fd",
       "address": "31 Squirrel Lane, Browns Bay, Auckland",
       "sale_price": 1350000,
@@ -774,6 +760,20 @@
       "estimate_mid": 1810000
     },
     {
+      "property_id": "997ecde6-1f00-430b-a551-8a9d7e29db83",
+      "address": "640 Beach Road, Browns Bay, Auckland",
+      "sale_price": 1506000,
+      "sale_date": "2026-09-25T00:00:00+00:00",
+      "distance_km": 0.6,
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1300000,
+      "estimate_mid": 1480000
+    },
+    {
       "property_id": "7b1cb497-7717-4985-a5d9-3e6cdf74c48c",
       "address": "2B Robin Lane, Browns Bay, Auckland",
       "sale_price": 1087000,
@@ -813,7 +813,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 690000,
-      "estimate_mid": 730000
+      "estimate_mid": 600000
     },
     {
       "property_id": "9e7ca474-368c-4afe-b6a5-8b8d16a02d06",
@@ -844,6 +844,20 @@
       "estimate_mid": 1430000
     },
     {
+      "property_id": "ae7102cf-1cb8-4926-83e5-ac2360b1de4a",
+      "address": "20 Sandiacre Way, Browns Bay, Auckland",
+      "sale_price": 1287000,
+      "sale_date": "2026-10-05T00:00:00+00:00",
+      "distance_km": 0.82,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1550000,
+      "estimate_mid": 1310000
+    },
+    {
       "property_id": "7db91eef-b1dd-4376-a2c9-b1904e5f3e35",
       "address": "12 Naviti Place, Browns Bay, Auckland",
       "sale_price": 1485000,
@@ -856,20 +870,6 @@
       "property_type": null,
       "cv": 1350000,
       "estimate_mid": 1490000
-    },
-    {
-      "property_id": "b895be84-37c5-4cf7-a891-76952769fd0d",
-      "address": "5 Knights Close, Rothesay Bay, Auckland",
-      "sale_price": 1250000,
-      "sale_date": "2026-09-03T00:00:00+00:00",
-      "distance_km": 0.84,
-      "bedrooms": null,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1250000,
-      "estimate_mid": 1260000
     }
   ],
   "valuation": {
@@ -891,22 +891,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.05M – $1.25M",
-        "low": 1045952,
+        "range": "$1.04M – $1.25M",
+        "low": 1037556,
         "mid": 1150000,
-        "high": 1246452,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "high": 1252222,
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "high",
-        "n": 106,
+        "n": 129,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 106,
-          "n_eff": 16.22,
+          "n": 129,
+          "n_eff": 20.32,
           "radius_km": 3.0,
           "median_ratio": 1.0,
-          "iqr_ratio": 0.1743,
-          "same_suburb": 22,
+          "iqr_ratio": 0.1867,
+          "same_suburb": 41,
           "model_version": "comp-cv-v1"
         }
       },

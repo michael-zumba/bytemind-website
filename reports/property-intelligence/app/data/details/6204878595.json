@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-30T01:35:43.217000+00:00",
-  "days_on_market": 4,
+  "days_on_market": 5,
   "lat": -36.6251345,
   "lon": 174.7235256,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338551408.jpg",
@@ -29,7 +29,7 @@
   "estimate_high": 1025847,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 897959,
+  "comp_low": 869295,
   "comp_mid": 1009302,
   "comp_high": 1071429,
   "comp_confidence": "medium",
@@ -44,9 +44,9 @@
   "improvement_value": 480000,
   "cv_updated_at": "2024-04-30T12:00:00+00:00",
   "build_decade": "1970",
-  "build_year": null,
-  "build_year_source": null,
-  "tenure_source": "listing_text",
+  "build_year": 1970,
+  "build_year_source": "homes_timeline_approx",
+  "tenure_source": "homes.co.nz",
   "cv_ratio": 0.9693,
   "ask_gap": null,
   "ask_gap_pct": null,
@@ -63,25 +63,25 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:22:14.970408+00:00",
-  "days_since_last_change": 0.01,
+  "days_since_last_change": 0.98,
   "price_drop_count": 0,
   "description_change_count": 0,
-  "prior_sale_count": 0,
+  "prior_sale_count": 1,
   "ownership_years_mean": null,
-  "last_sale_date": null,
-  "last_sale_price": null,
-  "sale_frequency_label": "No recorded sales",
+  "last_sale_date": "2009-05-29T00:00:00Z",
+  "last_sale_price": 390000,
+  "sale_frequency_label": "Longer holding period",
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 30.7,
+  "sale_pressure": 30.8,
   "sale_pressure_label": "low",
-  "model_low": 927851,
-  "model_mid": 1011397,
-  "model_high": 1102771,
+  "model_low": 910181,
+  "model_mid": 993292,
+  "model_high": 1085715,
   "model_confidence": "high",
-  "text_signal_pct": 9.5656,
-  "description_index": 0.454468,
+  "text_signal_pct": 13.1446,
+  "description_index": 0.621944,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6204878595,
-    "low": 927851,
-    "mid": 1011397,
-    "high": 1102771,
+    "low": 910181,
+    "mid": 993292,
+    "high": 1085715,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0862, 0.0865], \"rel_width\": 0.1729, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6204878595,
@@ -281,39 +281,20 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.1447,
-    "family_school": 0.185,
+    "views_waterfront": 0.1442,
+    "family_school": 0.1852,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.7095,
-    "description_premium_pct": 9.5656,
-    "description_index": 0.454468,
+    "description_premium_pct": 13.1446,
+    "description_index": 0.621944,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 1, \"family_school\": 2, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
-        "topic_id": 9,
-        "weight": 0.373915,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "brick",
-          "street",
-          "fenced",
-          "parking",
-          "fully",
-          "fully fenced",
-          "garden",
-          "room",
-          "sunny",
-          "facing",
-          "north facing",
-          "street parking"
-        ]
-      },
-      {
         "topic_id": 1,
-        "weight": 0.371366,
+        "weight": 0.46198,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -323,54 +304,82 @@
           "land",
           "property",
           "subject",
-          "existing",
           "council",
+          "existing",
           "mixed",
           "housing",
           "value"
         ]
       },
       {
-        "topic_id": 10,
-        "weight": 0.137843,
-        "label": "Sea views & coastal outlook",
+        "topic_id": 0,
+        "weight": 0.276777,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "room",
+          "garden",
+          "morning",
+          "brick",
+          "fenced",
+          "summer",
+          "street",
+          "away",
+          "renovated",
+          "coffee",
+          "ready",
+          "fully fenced"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.154827,
+        "label": "New build / brand-new quality",
         "top_terms": [
           "section",
           "dream",
           "build",
           "dream home",
-          "coastal",
-          "views",
           "land",
-          "sea",
-          "whangaparaoa",
-          "building",
           "sections",
-          "sea views"
+          "whangaparaoa",
+          "community",
+          "auckland",
+          "penlink",
+          "building",
+          "secure"
         ]
       },
       {
         "topic_id": 8,
-        "weight": 0.116875,
-        "label": "Investment & rental income",
+        "weight": 0.106416,
+        "label": "Family living & entertaining",
         "top_terms": [
           "extended",
-          "extended family",
           "flexibility",
+          "extended family",
+          "guests",
           "living areas",
           "areas",
-          "guests",
-          "multiple",
-          "teenagers",
           "family living",
-          "income",
+          "multiple",
+          "families",
+          "teenagers",
           "separate",
-          "families"
+          "impressive"
         ]
       }
     ]
   },
-  "sales_history": [],
+  "sales_history": [
+    {
+      "sale_date": "2009-05-29T00:00:00Z",
+      "sale_price": 390000,
+      "display_price": "$390,000",
+      "sale_type": "ASR",
+      "council_confirmed": 0,
+      "source": "homes.co.nz"
+    }
+  ],
   "sale_outcome": null,
   "sale_events": [
     {
@@ -414,7 +423,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "Calling all renovators and those who can see potential!\r\nThe potential is here for you to put a roof over your head and do some upgrading of this three bedroom home.\r\n\r\nSet on 725sqm of Freehold land, this tired family home is crying out for a transformation.  The layout is different from the rest, but you can re-imagine it and transform it into a home to be proud of and call your own.\r\n\r\nThe flow to the north facing decks, allows for extra entertaining and relaxing space - just in time for summer.  Recreate the kitchen as it flows effortlessly to the dining and living areas. \r\n\r\nOutside, get the gardening gloves and weed eater out, and bring back the garden.\r\n\r\nGet the paint brushes out and your imagination revitalized and take this dream on.\r\nIgnore the CV.  \r\n\r\nThere is plenty here for you to do to bring this tired property back to standard.  \r\n\r\nYes, it is tired, its rough around the edges, and it certainly isn't a finished product, but if you are prepared to put in the work and can see beyond the current condition, there could be a rewarding opportunity here!\r\n\r\nBring your ideas, crunch the numbers and let your imagination run wild. This current owner wants it sold.\r\n\r\nYour next project awaits!     Download documents  https://www.harcourtsfiles.co.nz/listings/4C4L",
   "photos": [
@@ -636,20 +645,6 @@
       "estimate_mid": 1080000
     },
     {
-      "property_id": "9b33f558-ee3a-4f5f-b268-335b4d658f71",
-      "address": "434 Whangaparaoa Road, Stanmore Bay, Whangaparaoa",
-      "sale_price": 1085000,
-      "sale_date": "2026-08-17T00:00:00+00:00",
-      "distance_km": 0.42,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1075000,
-      "estimate_mid": 1090000
-    },
-    {
       "property_id": "feb4c4ef-171f-48cc-b0d6-a38a9287e839",
       "address": "77 Gledstane Road, Stanmore Bay, Whangaparaoa",
       "sale_price": 701500,
@@ -664,20 +659,6 @@
       "estimate_mid": 790000
     },
     {
-      "property_id": "77e77041-890a-49c8-9bdd-5ef360e6f14e",
-      "address": "37 Scott Road, Stanmore Bay, Whangaparaoa",
-      "sale_price": 2846000,
-      "sale_date": "2026-08-06T00:00:00+00:00",
-      "distance_km": 0.91,
-      "bedrooms": 5,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2200000,
-      "estimate_mid": 2090000
-    },
-    {
       "property_id": "1405b067-a5c4-4d2c-be69-7635acf2d706",
       "address": "5 Shadon Place, Stanmore Bay, Whangaparaoa",
       "sale_price": 840000,
@@ -690,20 +671,6 @@
       "property_type": null,
       "cv": 780000,
       "estimate_mid": 775000
-    },
-    {
-      "property_id": "7499cac0-f8ab-440f-9ff1-4923bd0eeb65",
-      "address": "352 Whangaparaoa Road, Stanmore Bay, Whangaparaoa",
-      "sale_price": 583000,
-      "sale_date": "2026-08-12T00:00:00+00:00",
-      "distance_km": 1.07,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 680000,
-      "estimate_mid": 595000
     },
     {
       "property_id": "1483b8b8-b48b-4ea4-adda-0f94c28ab207",
@@ -734,34 +701,6 @@
       "estimate_mid": 775000
     },
     {
-      "property_id": "b1227f0c-8ce7-4713-bc7d-913d762bdb8d",
-      "address": "15A Rimu Road, Stanmore Bay, Whangaparaoa",
-      "sale_price": 695000,
-      "sale_date": "2026-08-17T00:00:00+00:00",
-      "distance_km": 1.68,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 760000,
-      "estimate_mid": 705000
-    },
-    {
-      "property_id": "5349ac19-fd6a-4245-a829-2289420c8283",
-      "address": "22 Rimu Road, Stanmore Bay, Whangaparaoa",
-      "sale_price": 735000,
-      "sale_date": "2026-08-13T00:00:00+00:00",
-      "distance_km": 1.74,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 940000,
-      "estimate_mid": 980000
-    },
-    {
       "property_id": "6f68a1e0-2dbb-484b-9c42-c8d0b67de1c7",
       "address": "8 Pinestead Reach, Stillwater, Silverdale",
       "sale_price": 810000,
@@ -774,6 +713,76 @@
       "property_type": null,
       "cv": 885500,
       "estimate_mid": 810000
+    },
+    {
+      "property_id": "ecc7cc6a-ce71-401e-a000-0d49f180ecf1",
+      "address": "5 Red Hibiscus Road, Stanmore Bay, Whangaparaoa",
+      "sale_price": 900000,
+      "sale_date": "2026-08-19T00:00:00+00:00",
+      "distance_km": 1.94,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 840000,
+      "estimate_mid": 900000
+    },
+    {
+      "property_id": "c83d84ba-aaa1-498a-9a43-7b5ca21efd33",
+      "address": "33 Durness Place, Red Beach, Red Beach",
+      "sale_price": 1230000,
+      "sale_date": "2026-09-13T00:00:00+00:00",
+      "distance_km": 1.96,
+      "bedrooms": 4,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1175000,
+      "estimate_mid": 1230000
+    },
+    {
+      "property_id": "3de06838-f786-48dc-b1e1-db1a6334e698",
+      "address": "25 Ardern Avenue, Stanmore Bay, Whangaparaoa",
+      "sale_price": 1550000,
+      "sale_date": "2026-09-03T00:00:00+00:00",
+      "distance_km": 1.99,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1175000,
+      "estimate_mid": 1220000
+    },
+    {
+      "property_id": "703a8f96-90ea-4cdb-945d-171aa9bce759",
+      "address": "22 Durness Place, Red Beach, Red Beach",
+      "sale_price": 1100000,
+      "sale_date": "2026-09-03T00:00:00+00:00",
+      "distance_km": 1.99,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1225000,
+      "estimate_mid": 1110000
+    },
+    {
+      "property_id": "6daab980-885e-45a1-a44b-66001507babf",
+      "address": "108 Stanmore Bay Road, Stanmore Bay, Whangaparaoa",
+      "sale_price": 1120000,
+      "sale_date": "2026-09-02T00:00:00+00:00",
+      "distance_km": 2.16,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1175000,
+      "estimate_mid": 1180000
     }
   ],
   "valuation": {
@@ -795,21 +804,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$898K – $1.07M",
-        "low": 897959,
+        "range": "$869K – $1.07M",
+        "low": 869295,
         "mid": 1009302,
         "high": 1071429,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "medium",
         "n": 41,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
           "n": 41,
-          "n_eff": 6.24,
+          "n_eff": 6.28,
           "radius_km": 3.0,
           "median_ratio": 1.0093,
-          "iqr_ratio": 0.1719,
+          "iqr_ratio": 0.2003,
           "same_suburb": 20,
           "model_version": "comp-cv-v1"
         }

@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-09-30T01:18:57.403000+00:00",
-  "days_on_market": 34,
+  "days_on_market": 35,
   "lat": -36.6950302,
   "lon": 174.7440491,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2331158198.jpg",
@@ -29,13 +29,13 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1002000,
-  "comp_mid": 1138000,
+  "comp_low": 1030000,
+  "comp_mid": 1150000,
   "comp_high": 1455000,
   "comp_confidence": "low",
-  "comp_n": 60,
-  "value_low": 1002000,
-  "value_mid": 1138000,
+  "comp_n": 72,
+  "value_low": 1030000,
+  "value_mid": 1150000,
   "value_high": 1455000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 440,
+  "view_count": 456,
   "watchers": 8,
   "is_standard": 1,
   "standard_reason": null,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 35.7,
+  "sale_pressure": 35.8,
   "sale_pressure_label": "low",
-  "model_low": 778993,
-  "model_mid": 1086568,
-  "model_high": 1482806,
+  "model_low": 774991,
+  "model_mid": 1083186,
+  "model_high": 1495722,
   "model_confidence": "low",
-  "text_signal_pct": -20.5371,
-  "description_index": -1.143611,
+  "text_signal_pct": -19.5503,
+  "description_index": -1.095551,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6156273716,
-    "low": 778993,
-    "mid": 1086568,
-    "high": 1482806,
+    "low": 774991,
+    "mid": 1083186,
+    "high": 1495722,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3328, 0.3109], \"rel_width\": 0.6477, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6156273716,
@@ -300,59 +300,78 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.3667,
-    "views_waterfront": 0.0766,
-    "family_school": 0.4896,
-    "investment": 0.0927,
+    "condition_renovation": 0.3602,
+    "views_waterfront": 0.0763,
+    "family_school": 0.4901,
+    "investment": 0.093,
     "risk": 0.0,
     "readability": 0.2758,
-    "description_premium_pct": -20.5371,
-    "description_index": -1.143611,
+    "description_premium_pct": -19.5503,
+    "description_index": -1.095551,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 3, \"views_waterfront\": 1, \"family_school\": 10, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
         "topic_id": 2,
-        "weight": 0.362258,
+        "weight": 0.334433,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
           "maintenance",
           "low maintenance",
           "low",
+          "easy care",
+          "care",
+          "single",
           "brand new",
           "brand",
+          "convenience",
           "new",
-          "easy care",
-          "single",
-          "care",
           "buyers",
-          "investors",
-          "home buyers"
+          "investors"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.148877,
+        "weight": 0.18478,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "quality",
           "finishes",
+          "year",
           "designer",
           "appliances",
-          "year",
-          "luxury",
+          "new",
+          "brand",
+          "brand new",
           "comfort",
           "designer kitchen",
-          "new",
-          "design",
-          "heating"
+          "luxury"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.141017,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "wardrobe",
+          "walk wardrobe",
+          "ensuite",
+          "walk",
+          "bathroom",
+          "master",
+          "upstairs",
+          "lounge",
+          "suite",
+          "family bathroom",
+          "separate",
+          "bedroom"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.142755,
+        "weight": 0.135117,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -367,25 +386,6 @@
           "intermediate",
           "school suburb",
           "shore"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.126982,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "ensuite",
-          "walk",
-          "master",
-          "bathroom",
-          "upstairs",
-          "suite",
-          "floor",
-          "family bathroom",
-          "lounge",
-          "master suite"
         ]
       }
     ]
@@ -426,7 +426,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "Freshly completed and positioned on a road-front site, this brand-new two-level home delivers modern comfort, practical living and an enviable North Shore lifestyle. Located in popular Torbay, it is an excellent opportunity for families, first-home buyers and investors seeking a quality new-build in a well-connected Auckland location.\r\n\r\nDownstairs offers a generous open-plan living, dining and kitchen area, designed for effortless everyday living and entertaining. Large doors open seamlessly to a sun-soaked, spacious deck, creating an inviting outdoor extension of the living space. A guest toilet and internal-access single garage add everyday convenience.\r\n\r\nUpstairs features four well-appointed bedrooms and two bathrooms, including a private master bedroom with its own ensuite and walk-in wardrobe. Contemporary finishes, quality appliances, full insulation and double glazing provide year-round comfort and energy efficiency.\r\n\r\nThe property is freehold and fully standalone, with no body corporate or similar ongoing fees. Fully fenced and road-front, it offers excellent privacy and easy access while maintaining a modern, low-maintenance lifestyle.\r\n\r\nFamilies will appreciate the zoning for Long Bay College, Torbay School and Northcross Intermediate, while the surrounding area provides an outstanding choice of beaches, parks, shopping and recreational facilities. Enjoy easy access to Long Bay Regional Park and Waiake Beach, perfect for weekend walks, swimming, picnics and enjoying the coastal lifestyle that makes Auckland’s North Shore so desirable.\r\n\r\nProperty highlights:\r\n• Master bedroom with ensuite & walk-in wardrobe\r\n• Open-plan kitchen, dining & living\r\n• Spacious sun-soaked deck\r\n• Single internal-access garage\r\n• Freehold title – no body corporate fees\r\n• Fully fenced, road-front position\r\n• Double glazing & full insulation\r\n• Quality appliances and contemporary design\r\n• Multiple layouts for your choice:\r\nLot 1 - 4 bedrooms | 2.5 bathrooms | 1 garage | For Sale\r\nLot 2 - 3 bedrooms | 2.5 bathrooms | 1 garage + balcony | For Sale\r\nLot 3 - 3 bedrooms | 2.5 bathrooms | 1 garage + balcony | For Sale\r\nLot 4 - 3 bedrooms | 2.5 bathrooms | 1 garage + balcony | For Sale\r\nLot 5 - 4 bedrooms | 2.5 bathrooms | 1 garage | For Sale\r\n\r\nA superb opportunity to secure a brand-new home in Torbay, North Shore Auckland, combining modern living with easy access to some of the North Shore's most popular beaches, parks and schools.",
   "photos": [
@@ -464,20 +464,6 @@
   "history": [],
   "comps": [
     {
-      "property_id": "01f2cdae-698f-47a0-91a7-ad7a22cc4c9b",
-      "address": "3 Corric Hill, Torbay, Auckland",
-      "sale_price": 1080000,
-      "sale_date": "2026-08-07T00:00:00+00:00",
-      "distance_km": 0.36,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1325000,
-      "estimate_mid": 1100000
-    },
-    {
       "property_id": "58ba46bf-bdb7-48b8-9adb-ed3e7f0e7cc6",
       "address": "2A Marina Road, Torbay, Auckland",
       "sale_price": 1090000,
@@ -506,18 +492,18 @@
       "estimate_mid": 1370000
     },
     {
-      "property_id": "ccda11a8-554b-4e1d-b38d-60cf745f1a50",
-      "address": "8 Morlie Place, Torbay, Auckland",
-      "sale_price": 800000,
-      "sale_date": "2026-08-09T00:00:00+00:00",
-      "distance_km": 0.94,
+      "property_id": "d71e1990-4939-410f-bc98-8d402b245ae1",
+      "address": "39 Waiau Street, Torbay, Auckland",
+      "sale_price": 1185000,
+      "sale_date": "2026-09-24T00:00:00+00:00",
+      "distance_km": 0.88,
       "bedrooms": 3,
       "bathrooms": 2,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1300000,
-      "estimate_mid": 1010000
+      "cv": 1325000,
+      "estimate_mid": 1210000
     },
     {
       "property_id": "99c6fe0c-c97f-4b4b-ab2a-f83eee568eb6",
@@ -546,6 +532,20 @@
       "property_type": null,
       "cv": 1375000,
       "estimate_mid": 1380000
+    },
+    {
+      "property_id": "65775620-cc5e-46cc-8b24-7ca1d94a8e79",
+      "address": "40A Waiake Street, Torbay, Auckland",
+      "sale_price": 1730000,
+      "sale_date": "2026-08-26T00:00:00+00:00",
+      "distance_km": 1.02,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1725000,
+      "estimate_mid": 1750000
     },
     {
       "property_id": "b057960d-5092-4ed0-a57f-a211890f9383",
@@ -600,7 +600,7 @@
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1525000,
+      "cv": 1750000,
       "estimate_mid": 1760000
     },
     {
@@ -618,43 +618,43 @@
       "estimate_mid": 1060000
     },
     {
-      "property_id": "ae18400e-c794-4cfe-81ae-072d812dfa86",
-      "address": "12 Streamview Way, Long Bay, Auckland",
-      "sale_price": 2220000,
-      "sale_date": "2026-08-19T00:00:00+00:00",
-      "distance_km": 1.36,
-      "bedrooms": 5,
-      "bathrooms": null,
+      "property_id": "a9e1f7e8-3519-4fd6-88a8-287d600db59b",
+      "address": "1/1 Sharon Road, Waiake, Auckland",
+      "sale_price": 930000,
+      "sale_date": "2026-08-29T00:00:00+00:00",
+      "distance_km": 1.37,
+      "bedrooms": 4,
+      "bathrooms": 3,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 2350000,
-      "estimate_mid": 2140000
+      "cv": 1100000,
+      "estimate_mid": 1170000
     }
   ],
   "valuation": {
-    "value_low": 1002000,
-    "value_mid": 1138000,
+    "value_low": 1030000,
+    "value_mid": 1150000,
     "value_high": 1455000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1M – $1.46M",
-        "low": 1002000,
-        "mid": 1138000,
+        "range": "$1.03M – $1.46M",
+        "low": 1030000,
+        "mid": 1150000,
         "high": 1455000,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "low",
-        "n": 60,
+        "n": 72,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 60,
-          "n_eff": 18.63,
+          "n": 72,
+          "n_eff": 21.28,
           "radius_km": 3.0,
-          "iqr_ratio": 0.3981,
+          "iqr_ratio": 0.3696,
           "same_suburb": 14,
           "model_version": "comp-cv-v1"
         }

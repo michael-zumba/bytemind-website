@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-15T03:44:43.863000+00:00",
-  "days_on_market": 19,
+  "days_on_market": 20,
   "lat": -36.8864266,
   "lon": 174.9066613,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2335303106.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 2057941,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1860984,
-  "comp_mid": 2006829,
+  "comp_low": 1865352,
+  "comp_mid": 2032800,
   "comp_high": 2234510,
   "comp_confidence": "high",
-  "comp_n": 49,
+  "comp_n": 48,
   "value_low": 1830992,
   "value_mid": 1944466,
   "value_high": 2057941,
@@ -44,9 +44,9 @@
   "improvement_value": 310000,
   "cv_updated_at": "2024-04-30T12:00:00+00:00",
   "build_decade": "1980",
-  "build_year": null,
-  "build_year_source": null,
-  "tenure_source": "listing_text",
+  "build_year": 1980,
+  "build_year_source": "homes_timeline_approx",
+  "tenure_source": "homes.co.nz",
   "cv_ratio": 0.8838,
   "ask_gap": null,
   "ask_gap_pct": null,
@@ -63,25 +63,25 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:32:15.331216+00:00",
-  "days_since_last_change": 0.04,
+  "days_since_last_change": 1.02,
   "price_drop_count": 0,
   "description_change_count": 0,
-  "prior_sale_count": 0,
-  "ownership_years_mean": null,
-  "last_sale_date": null,
-  "last_sale_price": null,
-  "sale_frequency_label": "No recorded sales",
+  "prior_sale_count": 6,
+  "ownership_years_mean": 1.5512662559890487,
+  "last_sale_date": "1991-03-18T00:00:00Z",
+  "last_sale_price": 210000,
+  "sale_frequency_label": "Frequent trading",
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 33.2,
+  "sale_pressure": 33.3,
   "sale_pressure_label": "low",
-  "model_low": 1832304,
-  "model_mid": 1997289,
-  "model_high": 2177734,
+  "model_low": 1795533,
+  "model_mid": 1959487,
+  "model_high": 2141813,
   "model_confidence": "high",
-  "text_signal_pct": 8.1113,
-  "description_index": 0.387993,
+  "text_signal_pct": 9.3742,
+  "description_index": 0.451263,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -318,11 +318,11 @@
   ],
   "model": {
     "listing_id": 6180462653,
-    "low": 1832304,
-    "mid": 1997289,
-    "high": 2177734,
+    "low": 1795533,
+    "mid": 1959487,
+    "high": 2141813,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0862, 0.0865], \"rel_width\": 0.1729, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6180462653,
@@ -333,18 +333,18 @@
     "condition_renovation": 1.0,
     "views_waterfront": 0.0,
     "family_school": 1.0,
-    "investment": 0.4353,
+    "investment": 0.4371,
     "risk": 0.0,
     "readability": 0.3914,
-    "description_premium_pct": 8.1113,
-    "description_index": 0.387993,
+    "description_premium_pct": 9.3742,
+    "description_index": 0.451263,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 2, \"views_waterfront\": 0, \"family_school\": 5, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
-        "topic_id": 7,
-        "weight": 0.628755,
+        "topic_id": 6,
+        "weight": 0.680587,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -355,15 +355,15 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
-          "mountain"
+          "mountain",
+          "suburb marina"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.260828,
+        "weight": 0.283375,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -373,54 +373,103 @@
           "land",
           "property",
           "subject",
-          "existing",
           "council",
+          "existing",
           "mixed",
           "housing",
           "value"
         ]
       },
       {
-        "topic_id": 9,
-        "weight": 0.110417,
+        "topic_id": 0,
+        "weight": 0.036039,
         "label": "Parking, garden & section",
         "top_terms": [
-          "brick",
-          "street",
-          "fenced",
-          "parking",
-          "fully",
-          "fully fenced",
-          "garden",
           "room",
-          "sunny",
-          "facing",
-          "north facing",
-          "street parking"
+          "garden",
+          "morning",
+          "brick",
+          "fenced",
+          "summer",
+          "street",
+          "away",
+          "renovated",
+          "coffee",
+          "ready",
+          "fully fenced"
         ]
       },
       {
-        "topic_id": 0,
+        "topic_id": 2,
         "weight": 0.0,
-        "label": "Family living & entertaining",
+        "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "morning",
-          "friends",
-          "coffee",
-          "relaxed",
-          "life",
-          "coastal",
-          "morning coffee",
-          "sense",
-          "setting",
-          "inviting",
-          "summer",
-          "step"
+          "maintenance",
+          "low maintenance",
+          "low",
+          "easy care",
+          "care",
+          "single",
+          "brand new",
+          "brand",
+          "convenience",
+          "new",
+          "buyers",
+          "investors"
         ]
       }
     ]
   },
-  "sales_history": [],
+  "sales_history": [
+    {
+      "sale_date": "1991-03-18T00:00:00Z",
+      "sale_price": 210000,
+      "display_price": "$210,000",
+      "sale_type": "S11",
+      "council_confirmed": 1,
+      "source": "homes.co.nz"
+    },
+    {
+      "sale_date": "1989-08-31T00:00:00Z",
+      "sale_price": 258000,
+      "display_price": "$258,000",
+      "sale_type": "S11",
+      "council_confirmed": 1,
+      "source": "homes.co.nz"
+    },
+    {
+      "sale_date": "1989-06-14T00:00:00Z",
+      "sale_price": 220000,
+      "display_price": "$220,000",
+      "sale_type": "S11",
+      "council_confirmed": 1,
+      "source": "homes.co.nz"
+    },
+    {
+      "sale_date": "1985-10-15T00:00:00Z",
+      "sale_price": 132500,
+      "display_price": "$132,500",
+      "sale_type": "S11",
+      "council_confirmed": 1,
+      "source": "homes.co.nz"
+    },
+    {
+      "sale_date": "1983-09-03T00:00:00Z",
+      "sale_price": 100000,
+      "display_price": "$100,000",
+      "sale_type": "S11",
+      "council_confirmed": 1,
+      "source": "homes.co.nz"
+    },
+    {
+      "sale_date": "1983-06-15T00:00:00Z",
+      "sale_price": 105000,
+      "display_price": "$105,000",
+      "sale_type": "S11",
+      "council_confirmed": 1,
+      "source": "homes.co.nz"
+    }
+  ],
   "sale_outcome": null,
   "sale_events": [
     {
@@ -464,7 +513,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "*\tFirst time on the market in 35 years \r\n\r\n*\t4 Bedrooms single level brick and tile house\r\n\r\n*\tFreehold land of 663 sqm (mol) with road frontage\r\n\r\n*\tMixed housing suburban zone\r\n\r\n*\tLocated on a quiet street and within walking distance to schools\r\n\r\n*\tSchool zone: Macleans College, BBI and Pigeon Mountain School\r\n\r\n*\tClose to Marina, Cafe, restaurants, local amenities, and the ferry\r\n\r\n\r\nDon't miss out on the opportunity to make this well positioned and high potential property your own. Contact us today to arrange a viewing and start your journey towards your dream home.",
   "photos": [
@@ -699,20 +748,6 @@
       "estimate_mid": 1330000
     },
     {
-      "property_id": "06f07d9d-1c0f-4f11-bb3c-c04abe708df7",
-      "address": "351 Bucklands Beach Road, Bucklands Beach, Auckland",
-      "sale_price": 1300000,
-      "sale_date": "2026-06-28T00:00:00+00:00",
-      "distance_km": 0.48,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1500000,
-      "estimate_mid": 1330000
-    },
-    {
       "property_id": "50c7407f-34f6-419f-89e0-92615417de61",
       "address": "121B Gills Road, Bucklands Beach, Auckland",
       "sale_price": 740000,
@@ -739,34 +774,6 @@
       "property_type": null,
       "cv": 2050000,
       "estimate_mid": 1900000
-    },
-    {
-      "property_id": "6625af65-fb17-4f70-a3d7-395784ba4844",
-      "address": "1/258 Bucklands Beach Road, Bucklands Beach, Auckland",
-      "sale_price": 990000,
-      "sale_date": "2026-07-23T00:00:00+00:00",
-      "distance_km": 0.58,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1300000,
-      "estimate_mid": 1170000
-    },
-    {
-      "property_id": "64ff3d29-468f-43b9-8ad0-3bbbc7a1d17f",
-      "address": "24 Priestley Drive, Bucklands Beach, Auckland",
-      "sale_price": 2580000,
-      "sale_date": "2026-07-21T00:00:00+00:00",
-      "distance_km": 0.59,
-      "bedrooms": 6,
-      "bathrooms": 6,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 3050000,
-      "estimate_mid": 2660000
     },
     {
       "property_id": "d1d7dc8b-a716-4335-bb7a-079f987055fc",
@@ -823,6 +830,48 @@
       "property_type": null,
       "cv": 1350000,
       "estimate_mid": 1310000
+    },
+    {
+      "property_id": "21a4d1d3-fef9-4fd6-a3a1-b218d0343a34",
+      "address": "9 Ervine Place, Bucklands Beach, Auckland",
+      "sale_price": 1651000,
+      "sale_date": "2026-07-16T00:00:00+00:00",
+      "distance_km": 0.68,
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1975000,
+      "estimate_mid": 1690000
+    },
+    {
+      "property_id": "4e846e08-9858-4fba-8ca1-53ecfc2a541e",
+      "address": "23C Sorrel Crescent, Bucklands Beach, Auckland",
+      "sale_price": 1880000,
+      "sale_date": "2026-08-03T00:00:00+00:00",
+      "distance_km": 0.73,
+      "bedrooms": null,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1750000,
+      "estimate_mid": 1880000
+    },
+    {
+      "property_id": "196c80cd-2830-4347-8cc1-f0f68c73dcff",
+      "address": "74 Gills Road, Bucklands Beach, Auckland",
+      "sale_price": 1650000,
+      "sale_date": "2026-08-11T00:00:00+00:00",
+      "distance_km": 0.79,
+      "bedrooms": 4,
+      "bathrooms": 4,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 2250000,
+      "estimate_mid": 1690000
     }
   ],
   "valuation": {
@@ -844,21 +893,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.86M – $2.23M",
-        "low": 1860984,
-        "mid": 2006829,
+        "range": "$1.87M – $2.23M",
+        "low": 1865352,
+        "mid": 2032800,
         "high": 2234510,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "high",
-        "n": 49,
+        "n": 48,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 49,
-          "n_eff": 10.49,
+          "n": 48,
+          "n_eff": 10.17,
           "radius_km": 3.0,
-          "median_ratio": 0.9122,
-          "iqr_ratio": 0.1861,
+          "median_ratio": 0.924,
+          "iqr_ratio": 0.1816,
           "same_suburb": 14,
           "model_version": "comp-cv-v1"
         }

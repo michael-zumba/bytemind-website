@@ -31,12 +31,12 @@
   "estimate_updated_at": null,
   "comp_low": 800000,
   "comp_mid": 900000,
-  "comp_high": 1250000,
+  "comp_high": 1420000,
   "comp_confidence": "low",
-  "comp_n": 30,
+  "comp_n": 32,
   "value_low": 800000,
   "value_mid": 900000,
-  "value_high": 1250000,
+  "value_high": 1420000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:25:27.095251+00:00",
-  "days_since_last_change": 0.01,
+  "days_since_last_change": 0.98,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 1280126,
-  "model_mid": 1785566,
-  "model_high": 2436706,
+  "model_low": 1210791,
+  "model_mid": 1692291,
+  "model_high": 2336808,
   "model_confidence": "low",
-  "text_signal_pct": 23.919,
-  "description_index": 1.066891,
+  "text_signal_pct": 26.3285,
+  "description_index": 1.177022,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -258,71 +258,90 @@
   ],
   "model": {
     "listing_id": 5590501001,
-    "low": 1280126,
-    "mid": 1785566,
-    "high": 2436706,
+    "low": 1210791,
+    "mid": 1692291,
+    "high": 2336808,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3328, 0.3109], \"rel_width\": 0.6477, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5590501001,
     "word_count": 252,
     "exclamations": 1,
     "urgency": 0.0,
-    "luxury": 0.5452,
-    "condition_renovation": 0.1732,
-    "views_waterfront": 0.6512,
-    "family_school": 0.1387,
+    "luxury": 0.5467,
+    "condition_renovation": 0.1701,
+    "views_waterfront": 0.6489,
+    "family_school": 0.1389,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4207,
-    "description_premium_pct": 23.919,
-    "description_index": 1.066891,
+    "description_premium_pct": 26.3285,
+    "description_index": 1.177022,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 5, \"condition_renovation\": 1, \"views_waterfront\": 6, \"family_school\": 2, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
-        "topic_id": 10,
-        "weight": 0.671048,
-        "label": "Sea views & coastal outlook",
+        "topic_id": 9,
+        "weight": 0.597624,
+        "label": "New build / brand-new quality",
         "top_terms": [
           "section",
           "dream",
           "build",
           "dream home",
-          "coastal",
-          "views",
           "land",
-          "sea",
-          "whangaparaoa",
-          "building",
           "sections",
-          "sea views"
+          "whangaparaoa",
+          "community",
+          "auckland",
+          "penlink",
+          "building",
+          "secure"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.184763,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "views",
+          "sea views",
+          "elevated",
+          "position",
+          "rangitoto",
+          "outlook",
+          "spectacular",
+          "elevated position",
+          "gulf",
+          "hauraki gulf",
+          "hauraki"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.245712,
+        "weight": 0.163718,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
-          "views",
           "residence",
-          "expansive",
           "scale",
-          "gulf",
+          "expansive",
           "waterfront",
           "harbour",
-          "hauraki",
-          "hauraki gulf",
-          "spectacular",
           "pool",
-          "position"
+          "views",
+          "architectural",
+          "aucklands",
+          "substantial",
+          "setting",
+          "privacy"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.053765,
+        "weight": 0.03834,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -337,25 +356,6 @@
           "intermediate",
           "school suburb",
           "shore"
-        ]
-      },
-      {
-        "topic_id": 1,
-        "weight": 0.027906,
-        "label": "Development & land potential",
-        "top_terms": [
-          "potential",
-          "future",
-          "site",
-          "development",
-          "land",
-          "property",
-          "subject",
-          "existing",
-          "council",
-          "mixed",
-          "housing",
-          "value"
         ]
       }
     ]
@@ -404,7 +404,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "Open to offers!\r\n\r\nDiscover an extraordinary opportunity to build your dream home on this premium 817sqm (more or less) north-facing waterfront site, offering unparalleled, sweeping sea views across the stunning Hauraki Gulf. From the picturesque Orewa coastline to the serene Mahurangi Harbour, and extending out to the iconic Kawau and Great Barrier Islands, this location captures the very essence of coastal living.\r\n\r\nA true idyllic retreat, this sun-drenched property presents a blank canvas for you to craft your perfect escape. With a near level building platform, you can start planning your ideal home in a setting that feels like paradise. Concept designs are available upon inquiry, providing inspiration for a home that fully embraces the beauty and tranquility of this remarkable location.\r\n\r\nThe scheduled completion of PenLink (currently 2028) motorway foreshadows even greater accessibility to the North Shore and the City adding further appeal to this prime property. The beauty of the location is that you are just a stroll to several stunning beaches with a choice of schools including the highly regarded Wentworth College and Primary offering Cambridge International Education, golf course, shops, eateries and transport all close by. \r\n\r\nSeize this rare opportunity to create a bespoke haven in one of the most desirable Hibiscus Coast locations. Let your vision come to life in this sunny, tranquil sanctuary.\r\n\r\nConcept plans are available on Maddren Homes website. See link below...\r\nhttps://maddrenhomes.co.nz/house-land-90-ardern\r\n \r\nThe site is only minutes from the proposed Penlink motorway access.\r\nPenlink Information can be found at this link.... https://www.youtube.com/watch?app=desktop&v=kyya_x-PQr4",
   "photos": [
@@ -457,6 +457,20 @@
       "estimate_mid": 1180000
     },
     {
+      "property_id": "40c70c2a-322a-4cfb-97bb-3e7010f2c61f",
+      "address": "31 Shuttleworth Place, Manly, Whangaparaoa",
+      "sale_price": 1420000,
+      "sale_date": "2026-10-01T00:00:00+00:00",
+      "distance_km": 1.17,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1300000,
+      "estimate_mid": 1460000
+    },
+    {
       "property_id": "18a60d99-1766-4fce-beef-a29a19d65da3",
       "address": "3 Ardlui Avenue, Manly, Whangaparaoa",
       "sale_price": 2550000,
@@ -497,6 +511,20 @@
       "property_type": null,
       "cv": 760000,
       "estimate_mid": 705000
+    },
+    {
+      "property_id": "71ca2576-072d-47b7-8efa-78c4f1972f8e",
+      "address": "6 Cross Street, Manly, Whangaparāoa",
+      "sale_price": 1480000,
+      "sale_date": "2026-10-08T00:00:00+00:00",
+      "distance_km": 1.64,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1375000,
+      "estimate_mid": 1470000
     },
     {
       "property_id": "ecc7cc6a-ce71-401e-a000-0d49f180ecf1",
@@ -567,59 +595,31 @@
       "property_type": null,
       "cv": 1100000,
       "estimate_mid": 1080000
-    },
-    {
-      "property_id": "3c8f6e01-5c4c-4136-8c0c-7f9a5e0daecc",
-      "address": "952B Whangaparaoa Road, Manly, Whangaparaoa",
-      "sale_price": 1000000,
-      "sale_date": "2026-08-23T00:00:00+00:00",
-      "distance_km": 1.96,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1200000,
-      "estimate_mid": 1020000
-    },
-    {
-      "property_id": "9cceaa29-f4e1-4beb-b6c5-ce245c609fa3",
-      "address": "937B Whangaparaoa Road, Manly, Whangaparāoa",
-      "sale_price": 845000,
-      "sale_date": "2026-08-24T00:00:00+00:00",
-      "distance_km": 1.99,
-      "bedrooms": 3,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 880000,
-      "estimate_mid": 845000
     }
   ],
   "valuation": {
     "value_low": 800000,
     "value_mid": 900000,
-    "value_high": 1250000,
+    "value_high": 1420000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$800K – $1.25M",
+        "range": "$800K – $1.42M",
         "low": 800000,
         "mid": 900000,
-        "high": 1250000,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "high": 1420000,
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "low",
-        "n": 30,
+        "n": 32,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 30,
-          "n_eff": 6.91,
+          "n": 32,
+          "n_eff": 7.57,
           "radius_km": 3.0,
-          "iqr_ratio": 0.5,
+          "iqr_ratio": 0.6889,
           "same_suburb": 20,
           "model_version": "comp-cv-v1"
         }

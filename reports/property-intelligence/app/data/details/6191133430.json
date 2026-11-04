@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-21T19:45:54.337000+00:00",
-  "days_on_market": 12,
+  "days_on_market": 14,
   "lat": -36.6952515,
   "lon": 174.7406006,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2336673229.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 798284,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 708500,
+  "comp_low": 697585,
   "comp_mid": 741000,
   "comp_high": 796421,
   "comp_confidence": "high",
-  "comp_n": 67,
+  "comp_n": 80,
   "value_low": 710249,
   "value_mid": 754267,
   "value_high": 798284,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2292,
-  "watchers": 97,
+  "view_count": 2352,
+  "watchers": 98,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "crosslease",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:02:56.409603+00:00",
-  "days_since_last_change": 6.27,
+  "days_since_last_change": 7.25,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 4,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 32.0,
+  "sale_pressure": 32.3,
   "sale_pressure_label": "low",
-  "model_low": 707681,
-  "model_mid": 771402,
-  "model_high": 841095,
+  "model_low": 705969,
+  "model_mid": 770432,
+  "model_high": 842119,
   "model_confidence": "medium",
-  "text_signal_pct": 14.3425,
-  "description_index": 0.666764,
+  "text_signal_pct": 11.3798,
+  "description_index": 0.542775,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6191133430,
-    "low": 707681,
-    "mid": 771402,
-    "high": 841095,
+    "low": 705969,
+    "mid": 770432,
+    "high": 842119,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0862, 0.0865], \"rel_width\": 0.1729, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6191133430,
@@ -300,40 +300,21 @@
     "exclamations": 2,
     "urgency": 0.5246,
     "luxury": 0.0,
-    "condition_renovation": 0.3577,
+    "condition_renovation": 0.3514,
     "views_waterfront": 0.0,
-    "family_school": 0.7164,
+    "family_school": 0.7171,
     "investment": 0.0,
-    "risk": 0.6387,
+    "risk": 0.68,
     "readability": 0.3988,
-    "description_premium_pct": 14.3425,
-    "description_index": 0.666764,
+    "description_premium_pct": 11.3798,
+    "description_index": 0.542775,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 0, \"family_school\": 5, \"investment\": 0, \"risk\": 1}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
-        "topic_id": 9,
-        "weight": 0.509557,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "brick",
-          "street",
-          "fenced",
-          "parking",
-          "fully",
-          "fully fenced",
-          "garden",
-          "room",
-          "sunny",
-          "facing",
-          "north facing",
-          "street parking"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.242202,
+        "topic_id": 6,
+        "weight": 0.351819,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -344,15 +325,34 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
-          "mountain"
+          "mountain",
+          "suburb marina"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.31568,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "room",
+          "garden",
+          "morning",
+          "brick",
+          "fenced",
+          "summer",
+          "street",
+          "away",
+          "renovated",
+          "coffee",
+          "ready",
+          "fully fenced"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.170635,
+        "weight": 0.231815,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -362,30 +362,30 @@
           "land",
           "property",
           "subject",
-          "existing",
           "council",
+          "existing",
           "mixed",
           "housing",
           "value"
         ]
       },
       {
-        "topic_id": 10,
-        "weight": 0.058903,
-        "label": "Sea views & coastal outlook",
+        "topic_id": 9,
+        "weight": 0.063961,
+        "label": "New build / brand-new quality",
         "top_terms": [
           "section",
           "dream",
           "build",
           "dream home",
-          "coastal",
-          "views",
           "land",
-          "sea",
-          "whangaparaoa",
-          "building",
           "sections",
-          "sea views"
+          "whangaparaoa",
+          "community",
+          "auckland",
+          "penlink",
+          "building",
+          "secure"
         ]
       }
     ]
@@ -467,7 +467,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "Comfortable as it stands yet brimming with potential, this is an exciting opportunity to renovate, refresh and reap the benefits.\r\n\r\nNestled at the end of a cul-de-sac, this brick and tile unit offers two bedrooms, a combined bathroom, and open-plan kitchen, dining and living spaces.\r\n\r\nOutside the generous fenced rear garden provides plenty of room for future landscaping, while the single garage adds secure parking and storage and the off-street parking accommodates your visitors.\r\n\r\nConveniently located close to Long Bay College, Long Bay Primary School, beautiful beaches, local cafes and everyday amenities securing you a lifestyle to be enjoyed.\r\n\r\nOpportunities like this are rare, clear instructions for this deceased estate - Sell!\r\nBring your vision and make the move!",
   "photos": [
@@ -652,20 +652,6 @@
   ],
   "comps": [
     {
-      "property_id": "01f2cdae-698f-47a0-91a7-ad7a22cc4c9b",
-      "address": "3 Corric Hill, Torbay, Auckland",
-      "sale_price": 1080000,
-      "sale_date": "2026-08-07T00:00:00+00:00",
-      "distance_km": 0.06,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1325000,
-      "estimate_mid": 1100000
-    },
-    {
       "property_id": "58ba46bf-bdb7-48b8-9adb-ed3e7f0e7cc6",
       "address": "2A Marina Road, Torbay, Auckland",
       "sale_price": 1090000,
@@ -750,18 +736,18 @@
       "estimate_mid": 1070000
     },
     {
-      "property_id": "ccda11a8-554b-4e1d-b38d-60cf745f1a50",
-      "address": "8 Morlie Place, Torbay, Auckland",
-      "sale_price": 800000,
-      "sale_date": "2026-08-09T00:00:00+00:00",
-      "distance_km": 1.23,
+      "property_id": "d71e1990-4939-410f-bc98-8d402b245ae1",
+      "address": "39 Waiau Street, Torbay, Auckland",
+      "sale_price": 1185000,
+      "sale_date": "2026-09-24T00:00:00+00:00",
+      "distance_km": 1.16,
       "bedrooms": 3,
       "bathrooms": 2,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1300000,
-      "estimate_mid": 1010000
+      "cv": 1325000,
+      "estimate_mid": 1210000
     },
     {
       "property_id": "99c6fe0c-c97f-4b4b-ab2a-f83eee568eb6",
@@ -778,6 +764,34 @@
       "estimate_mid": 1470000
     },
     {
+      "property_id": "d63c4ec1-989d-474f-bd8b-98f014169b8f",
+      "address": "34 Streamview Way, Long Bay, Auckland",
+      "sale_price": 1858000,
+      "sale_date": "2026-08-29T00:00:00+00:00",
+      "distance_km": 1.27,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1650000,
+      "estimate_mid": 1820000
+    },
+    {
+      "property_id": "65775620-cc5e-46cc-8b24-7ca1d94a8e79",
+      "address": "40A Waiake Street, Torbay, Auckland",
+      "sale_price": 1730000,
+      "sale_date": "2026-08-26T00:00:00+00:00",
+      "distance_km": 1.29,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1725000,
+      "estimate_mid": 1750000
+    },
+    {
       "property_id": "b56e22f1-5ca4-41b5-aa1f-676b28894142",
       "address": "1/47 Deep Creek Road, Waiake, Auckland",
       "sale_price": 1609000,
@@ -788,22 +802,8 @@
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1525000,
+      "cv": 1750000,
       "estimate_mid": 1760000
-    },
-    {
-      "property_id": "ae18400e-c794-4cfe-81ae-072d812dfa86",
-      "address": "12 Streamview Way, Long Bay, Auckland",
-      "sale_price": 2220000,
-      "sale_date": "2026-08-19T00:00:00+00:00",
-      "distance_km": 1.3,
-      "bedrooms": 5,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2350000,
-      "estimate_mid": 2140000
     },
     {
       "property_id": "698de6d4-a8b4-4e12-8734-3e203650a73d",
@@ -839,21 +839,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$708K – $796K",
-        "low": 708500,
+        "range": "$698K – $796K",
+        "low": 697585,
         "mid": 741000,
         "high": 796421,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "high",
-        "n": 67,
+        "n": 80,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 67,
-          "n_eff": 11.3,
+          "n": 80,
+          "n_eff": 13.14,
           "radius_km": 3.0,
           "median_ratio": 0.95,
-          "iqr_ratio": 0.1187,
+          "iqr_ratio": 0.1334,
           "same_suburb": 15,
           "model_version": "comp-cv-v1"
         }

@@ -16,8 +16,8 @@
   "asking_kind": null,
   "sale_method": "Price by negotiation",
   "deadline_at": null,
-  "listed_at": "2026-05-14T23:44:06.410000+00:00",
-  "days_on_market": 172,
+  "listed_at": "2026-05-14T22:44:06.410000+00:00",
+  "days_on_market": 173,
   "lat": -36.616833,
   "lon": 174.7903178,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2306314186.jpg",
@@ -30,13 +30,13 @@
   "estimate_source": null,
   "estimate_updated_at": null,
   "comp_low": 570000,
-  "comp_mid": 760000,
-  "comp_high": 970000,
+  "comp_mid": 850000,
+  "comp_high": 1000000,
   "comp_confidence": "low",
-  "comp_n": 21,
+  "comp_n": 25,
   "value_low": 570000,
-  "value_mid": 760000,
-  "value_high": 970000,
+  "value_mid": 850000,
+  "value_high": 1000000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:55:42.975699+00:00",
-  "days_since_last_change": 0.03,
+  "days_since_last_change": 1.0,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 58.7,
+  "sale_pressure": 58.8,
   "sale_pressure_label": "medium",
-  "model_low": 914679,
-  "model_mid": 1275827,
-  "model_high": 1741082,
+  "model_low": 875714,
+  "model_mid": 1223963,
+  "model_high": 1690115,
   "model_confidence": "low",
-  "text_signal_pct": 23.135,
-  "description_index": 1.035315,
+  "text_signal_pct": 28.8788,
+  "description_index": 1.277678,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,71 +268,52 @@
   ],
   "model": {
     "listing_id": 5936003729,
-    "low": 914679,
-    "mid": 1275827,
-    "high": 1741082,
+    "low": 875714,
+    "mid": 1223963,
+    "high": 1690115,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3328, 0.3109], \"rel_width\": 0.6477, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5936003729,
     "word_count": 269,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.6129,
-    "condition_renovation": 0.1622,
+    "luxury": 0.6146,
+    "condition_renovation": 0.1594,
     "views_waterfront": 1.0,
-    "family_school": 0.13,
-    "investment": 0.7378,
+    "family_school": 0.1301,
+    "investment": 0.7409,
     "risk": 0.0,
     "readability": 0.3321,
-    "description_premium_pct": 23.135,
-    "description_index": 1.035315,
+    "description_premium_pct": 28.8788,
+    "description_index": 1.277678,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 6, \"condition_renovation\": 1, \"views_waterfront\": 10, \"family_school\": 2, \"investment\": 6, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
         "topic_id": 11,
-        "weight": 0.31021,
+        "weight": 0.277052,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
-          "views",
           "residence",
-          "expansive",
           "scale",
-          "gulf",
+          "expansive",
           "waterfront",
           "harbour",
-          "hauraki",
-          "hauraki gulf",
-          "spectacular",
           "pool",
-          "position"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.180552,
-        "label": "Investment & rental income",
-        "top_terms": [
-          "extended",
-          "extended family",
-          "flexibility",
-          "living areas",
-          "areas",
-          "guests",
-          "multiple",
-          "teenagers",
-          "family living",
-          "income",
-          "separate",
-          "families"
+          "views",
+          "architectural",
+          "aucklands",
+          "substantial",
+          "setting",
+          "privacy"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.176902,
+        "weight": 0.177691,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -341,17 +322,36 @@
           "car",
           "lock leave",
           "park",
-          "pool",
           "secure",
-          "complex",
           "kensington",
+          "pool",
+          "complex",
           "balcony",
-          "gym"
+          "kensington park"
         ]
       },
       {
-        "topic_id": 7,
-        "weight": 0.111451,
+        "topic_id": 8,
+        "weight": 0.172141,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "extended",
+          "flexibility",
+          "extended family",
+          "guests",
+          "living areas",
+          "areas",
+          "family living",
+          "multiple",
+          "families",
+          "teenagers",
+          "separate",
+          "impressive"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.130081,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -362,10 +362,10 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
-          "mountain"
+          "mountain",
+          "suburb marina"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "NOTE: This property includes ownership of a 14 metre marina berth which is not reflected in CV or online appraisals.\r\nPositioned within the exclusive marina enclave at Gulf Harbour this exceptional residence delivers an enviable blend of coastal luxury, flexibility and income. Overlooking the marina surrounds and designed for effortless living the property combines solid construction, generous proportions and a highly versatile layout with the rare advantage of an included 14m marina berth for personal use or additional income. Whether you are seeking a premium lock-up-and-leave lifestyle, a waterfront base with your boat on hand 24/7 or a unique investment with genuine lifestyle appeal this outstanding Harbour Village Drive offering places you at the gateway to the spectacular Hauraki Gulf.\r\n\r\nKEY FEATURES:\r\nStratum Freehold property\r\nPrestigious waterfront Marina position with own 14m² marina berth. (Currently rented for additional income).\r\nSolid tilt slab concrete construction.\r\nDouble internal access garage plus additional private storage room\r\nLift and stairwell plus a Pedestrian overbridge walkway with very secure building entry.\r\nFront and rear balconies capturing both canal and street aspects.\r\nFlexible single level floorplan with two separate living wings. \r\nAccess to exclusive Marina walkway network to shops, cafés and hospitality offerings.\r\nAccess to Gulf Harbour Rotunda for private functions.\r\nStrong lifestyle and income combination in a sought after marina community.\r\nIdeal lock-up-and-leave, investment or extended family living option\r\nOn hand Ferry Services to CBD and close proximity to bus service.\r\nGateway to the Hauraki Gulf for family fun, fishing and sightseeing.\r\n\r\n\r\nTo arrange a private viewing please contact Kim Diack on 021 755 007 or Michelle Kennedy on 021 886 089 or email Michellek@jameslaw.co.nz\r\n\r\nPlease be aware that this information has been sourced from external sources and/or third parties. View our disclaimer here: jameslaw.co.nz/disclaimer",
   "photos": [
@@ -490,6 +490,20 @@
       "estimate_mid": 765000
     },
     {
+      "property_id": "f006acba-62ab-4649-adfc-d8a6fcdc5596",
+      "address": "278 Alec Craig Way, Gulf Harbour, Whangaparaoa",
+      "sale_price": 799000,
+      "sale_date": "2026-09-19T00:00:00+00:00",
+      "distance_km": 0.56,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 830000,
+      "estimate_mid": 805000
+    },
+    {
       "property_id": "48497177-9d3b-425b-8d8b-5b1e7985dbc1",
       "address": "244 Alec Craig Way, Gulf Harbour, Whangaparaoa",
       "sale_price": 470000,
@@ -502,6 +516,20 @@
       "property_type": null,
       "cv": 920000,
       "estimate_mid": 495000
+    },
+    {
+      "property_id": "ed87698d-2e0b-4877-afeb-eae72f0c9678",
+      "address": "96 Pinecrest Drive, Gulf Harbour, Whangaparaoa",
+      "sale_price": 900000,
+      "sale_date": "2026-09-27T00:00:00+00:00",
+      "distance_km": 0.67,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 900000,
+      "estimate_mid": 910000
     },
     {
       "property_id": "9a83a749-3e0e-423c-8f6b-6276827f6fa2",
@@ -586,60 +614,32 @@
       "property_type": null,
       "cv": 1000000,
       "estimate_mid": 840000
-    },
-    {
-      "property_id": "90197bb5-4eb0-40bc-9581-294809f832d9",
-      "address": "1297B Whangaparaoa Road, Army Bay, Whangaparaoa",
-      "sale_price": 865000,
-      "sale_date": "2026-07-07T00:00:00+00:00",
-      "distance_km": 1.28,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 860000,
-      "estimate_mid": 865000
-    },
-    {
-      "property_id": "55b4eed7-88a3-49dd-a0f1-285cee813bf4",
-      "address": "1314 Whangaparaoa Road, Army Bay, Whangaparaoa",
-      "sale_price": 995000,
-      "sale_date": "2026-04-23T00:00:00+00:00",
-      "distance_km": 1.42,
-      "bedrooms": 5,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1100000,
-      "estimate_mid": 1020000
     }
   ],
   "valuation": {
     "value_low": 570000,
-    "value_mid": 760000,
-    "value_high": 970000,
+    "value_mid": 850000,
+    "value_high": 1000000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$570K – $970K",
+        "range": "$570K – $1M",
         "low": 570000,
-        "mid": 760000,
-        "high": 970000,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "mid": 850000,
+        "high": 1000000,
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "low",
-        "n": 21,
+        "n": 25,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 21,
-          "n_eff": 7.56,
+          "n": 25,
+          "n_eff": 9.39,
           "radius_km": 3.0,
-          "iqr_ratio": 0.5263,
-          "same_suburb": 10,
+          "iqr_ratio": 0.5059,
+          "same_suburb": 13,
           "model_version": "comp-cv-v1"
         }
       }

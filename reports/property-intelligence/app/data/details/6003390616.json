@@ -16,8 +16,8 @@
   "asking_kind": null,
   "sale_method": "Price by negotiation",
   "deadline_at": null,
-  "listed_at": "2026-06-25T03:07:24.360000+00:00",
-  "days_on_market": 131,
+  "listed_at": "2026-06-25T02:07:24.360000+00:00",
+  "days_on_market": 132,
   "lat": -36.5846748,
   "lon": 174.6708832,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2328193831.jpg",
@@ -31,12 +31,12 @@
   "estimate_updated_at": null,
   "comp_low": 1056521,
   "comp_mid": 1220000,
-  "comp_high": 1420000,
+  "comp_high": 1430000,
   "comp_confidence": "medium",
-  "comp_n": 46,
+  "comp_n": 55,
   "value_low": 1056521,
   "value_mid": 1220000,
-  "value_high": 1420000,
+  "value_high": 1430000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "medium",
   "cv": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:09:28.336228+00:00",
-  "days_since_last_change": 0.02,
+  "days_since_last_change": 0.99,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 51.8,
+  "sale_pressure": 52.0,
   "sale_pressure_label": "medium",
-  "model_low": 921202,
-  "model_mid": 1284926,
-  "model_high": 1753499,
+  "model_low": 926482,
+  "model_mid": 1294921,
+  "model_high": 1788097,
   "model_confidence": "low",
-  "text_signal_pct": -17.6985,
-  "description_index": -0.969003,
+  "text_signal_pct": -13.6816,
+  "description_index": -0.740954,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6003390616,
-    "low": 921202,
-    "mid": 1284926,
-    "high": 1753499,
+    "low": 926482,
+    "mid": 1294921,
+    "high": 1788097,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3328, 0.3109], \"rel_width\": 0.6477, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6003390616,
@@ -280,40 +280,78 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.6982,
-    "views_waterfront": 0.4376,
-    "family_school": 0.5594,
+    "condition_renovation": 0.6859,
+    "views_waterfront": 0.4361,
+    "family_school": 0.5599,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4049,
-    "description_premium_pct": -17.6985,
-    "description_index": -0.969003,
+    "description_premium_pct": -13.6816,
+    "description_index": -0.740954,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 2, \"views_waterfront\": 2, \"family_school\": 4, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
         "topic_id": 2,
-        "weight": 0.540207,
+        "weight": 0.460846,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
           "maintenance",
           "low maintenance",
           "low",
+          "easy care",
+          "care",
+          "single",
           "brand new",
           "brand",
+          "convenience",
           "new",
-          "easy care",
-          "single",
-          "care",
           "buyers",
-          "investors",
-          "home buyers"
+          "investors"
         ]
       },
       {
-        "topic_id": 7,
-        "weight": 0.104184,
+        "topic_id": 10,
+        "weight": 0.143262,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "views",
+          "sea views",
+          "elevated",
+          "position",
+          "rangitoto",
+          "outlook",
+          "spectacular",
+          "elevated position",
+          "gulf",
+          "hauraki gulf",
+          "hauraki"
+        ]
+      },
+      {
+        "topic_id": 4,
+        "weight": 0.139402,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "premium",
+          "quality",
+          "finishes",
+          "year",
+          "designer",
+          "appliances",
+          "new",
+          "brand",
+          "brand new",
+          "comfort",
+          "designer kitchen",
+          "luxury"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.107094,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -324,48 +362,10 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
-          "mountain"
-        ]
-      },
-      {
-        "topic_id": 4,
-        "weight": 0.091813,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "premium",
-          "quality",
-          "finishes",
-          "designer",
-          "appliances",
-          "year",
-          "luxury",
-          "comfort",
-          "designer kitchen",
-          "new",
-          "design",
-          "heating"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.080308,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "ensuite",
-          "walk",
-          "master",
-          "bathroom",
-          "upstairs",
-          "suite",
-          "floor",
-          "family bathroom",
-          "lounge",
-          "master suite"
+          "mountain",
+          "suburb marina"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "Enjoy the benefits of an elevated position with excellent nature light, and a layout designed to grow with your family.\r\n\r\nThis brand-new four-bedroom home offers a refreshing alternative to the standard new-build. Set on an elevated section within the Strathmill community, it enjoys a bright, open feel and a sunny backyard perfect for everyday living and entertaining.\r\n\r\nFeatures include:\r\n\r\n•  Four bedrooms and three bathrooms, including a master ensuite\r\n\r\n• Spacious open-plan living, kitchen and dining positioned on the upper level\r\n\r\n• Central air conditioning\r\n\r\n• Sound system\r\n\r\n• Flexible accommodation across both floors\r\n\r\n• Easy-care, low-maintenance living\r\n\r\n• 10-Year Master Build Guarantee\r\n\r\n• Zoned for Nukumea Primary School and Orewa College\r\n\r\nModern, practical, and positioned to make the most of its surroundings, this is a home that delivers both comfort and long-term value.\r\n\r\nContact us now for more information or to arrange a viewing.\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -487,6 +487,20 @@
       "estimate_mid": 2160000
     },
     {
+      "property_id": "47c1e99b-b429-4bf1-8bba-49415878fbc6",
+      "address": "11B Maire Road, Orewa, Orewa",
+      "sale_price": 1852000,
+      "sale_date": "2026-09-24T00:00:00+00:00",
+      "distance_km": 0.48,
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1575000,
+      "estimate_mid": 1840000
+    },
+    {
       "property_id": "94c185ad-67fe-4049-a05d-1fe0d32ae4ed",
       "address": "113 Tauranga Place, Orewa, Orewa",
       "sale_price": 1500000,
@@ -515,17 +529,17 @@
       "estimate_mid": 1400000
     },
     {
-      "property_id": "85161ea5-bb10-4787-975b-f5d25206149c",
-      "address": "96 Huanui Drive, Wainui, Wainui",
-      "sale_price": 1220000,
-      "sale_date": "2026-08-10T00:00:00+00:00",
-      "distance_km": 0.85,
+      "property_id": "d16909b0-721b-432b-9124-e57b1dd5eefb",
+      "address": "98 Huanui Drive, Wainui, Wainui",
+      "sale_price": 1070000,
+      "sale_date": "2026-09-05T00:00:00+00:00",
+      "distance_km": 0.84,
       "bedrooms": 4,
-      "bathrooms": null,
+      "bathrooms": 3,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1300000,
+      "cv": 1225000,
       "estimate_mid": 1060000
     },
     {
@@ -557,6 +571,20 @@
       "estimate_mid": 1290000
     },
     {
+      "property_id": "c23a2497-07b9-4ee9-9fcd-524769b0e31b",
+      "address": "72 Huanui Drive, Wainui, Wainui",
+      "sale_price": 1045000,
+      "sale_date": "2026-08-22T00:00:00+00:00",
+      "distance_km": 0.95,
+      "bedrooms": 3,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1225000,
+      "estimate_mid": 1100000
+    },
+    {
       "property_id": "901bfba4-e3a1-488a-a8a8-0713f3614ce9",
       "address": "53 Kath Hopper Drive, Orewa, Orewa",
       "sale_price": 1255000,
@@ -583,60 +611,32 @@
       "property_type": null,
       "cv": 1900000,
       "estimate_mid": 1850000
-    },
-    {
-      "property_id": "ba9e7a5c-37f7-40f8-824d-f9a39ae58c9d",
-      "address": "49 Huanui Drive, Wainui, Wainui",
-      "sale_price": 1080000,
-      "sale_date": "2026-08-06T00:00:00+00:00",
-      "distance_km": 0.99,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1225000,
-      "estimate_mid": 1080000
-    },
-    {
-      "property_id": "d3da18d0-96f2-488c-af03-71d87aa23f6a",
-      "address": "6 Akau Lane, Wainui, Wainui",
-      "sale_price": 1056521,
-      "sale_date": "2026-10-09T00:00:00+00:00",
-      "distance_km": 1.01,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1075000,
-      "estimate_mid": 1080000
     }
   ],
   "valuation": {
     "value_low": 1056521,
     "value_mid": 1220000,
-    "value_high": 1420000,
+    "value_high": 1430000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "medium",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.06M – $1.42M",
+        "range": "$1.06M – $1.43M",
         "low": 1056521,
         "mid": 1220000,
-        "high": 1420000,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "high": 1430000,
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "medium",
-        "n": 46,
+        "n": 55,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 46,
-          "n_eff": 15.37,
+          "n": 55,
+          "n_eff": 18.33,
           "radius_km": 3.0,
-          "iqr_ratio": 0.2979,
-          "same_suburb": 34,
+          "iqr_ratio": 0.3061,
+          "same_suburb": 38,
           "model_version": "comp-cv-v1"
         }
       }

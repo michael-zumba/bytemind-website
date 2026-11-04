@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2023-11-01T02:48:00+00:00",
-  "days_on_market": 1098,
+  "days_on_market": 1099,
   "lat": -36.7927289,
   "lon": 174.7684556,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2305767296.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 920000,
+  "comp_low": 888456,
   "comp_mid": 1240000,
   "comp_high": 1390000,
   "comp_confidence": "low",
-  "comp_n": 33,
-  "value_low": 920000,
+  "comp_n": 38,
+  "value_low": 888456,
   "value_mid": 1240000,
   "value_high": 1390000,
   "value_source": "sold_comps_absolute",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 19160,
-  "watchers": 220,
+  "view_count": 19208,
+  "watchers": 221,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 1512268,
-  "model_mid": 2109366,
-  "model_high": 2878586,
+  "model_low": 1521893,
+  "model_mid": 2127111,
+  "model_high": 2937231,
   "model_confidence": "low",
-  "text_signal_pct": -14.2131,
-  "description_index": -0.762659,
+  "text_signal_pct": -11.2626,
+  "description_index": -0.601762,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -278,52 +278,71 @@
   ],
   "model": {
     "listing_id": 5302131829,
-    "low": 1512268,
-    "mid": 2109366,
-    "high": 2878586,
+    "low": 1521893,
+    "mid": 2127111,
+    "high": 2937231,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3328, 0.3109], \"rel_width\": 0.6477, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5302131829,
     "word_count": 123,
     "exclamations": 1,
     "urgency": 0.0,
-    "luxury": 0.4468,
+    "luxury": 0.448,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.2224,
-    "family_school": 0.5685,
-    "investment": 0.2689,
+    "views_waterfront": 0.2216,
+    "family_school": 0.5691,
+    "investment": 0.2701,
     "risk": 0.0,
     "readability": 0.4387,
-    "description_premium_pct": -14.2131,
-    "description_index": -0.762659,
+    "description_premium_pct": -11.2626,
+    "description_index": -0.601762,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 0, \"views_waterfront\": 1, \"family_school\": 4, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
         "topic_id": 4,
-        "weight": 0.224309,
+        "weight": 0.261326,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "quality",
           "finishes",
+          "year",
           "designer",
           "appliances",
-          "year",
-          "luxury",
+          "new",
+          "brand",
+          "brand new",
           "comfort",
           "designer kitchen",
-          "new",
-          "design",
-          "heating"
+          "luxury"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.189373,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "section",
+          "dream",
+          "build",
+          "dream home",
+          "land",
+          "sections",
+          "whangaparaoa",
+          "community",
+          "auckland",
+          "penlink",
+          "building",
+          "secure"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.169783,
+        "weight": 0.148948,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -332,50 +351,31 @@
           "car",
           "lock leave",
           "park",
-          "pool",
           "secure",
-          "complex",
           "kensington",
+          "pool",
+          "complex",
           "balcony",
-          "gym"
+          "kensington park"
         ]
       },
       {
-        "topic_id": 2,
-        "weight": 0.167038,
-        "label": "Brick / tile / low-maintenance units",
+        "topic_id": 5,
+        "weight": 0.128056,
+        "label": "Westlake school zone",
         "top_terms": [
-          "maintenance",
-          "low maintenance",
-          "low",
-          "brand new",
-          "brand",
-          "new",
-          "easy care",
-          "single",
-          "care",
-          "buyers",
-          "investors",
-          "home buyers"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.159718,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "section",
-          "dream",
-          "build",
-          "dream home",
-          "coastal",
-          "views",
-          "land",
-          "sea",
-          "whangaparaoa",
-          "building",
-          "sections",
-          "sea views"
+          "westlake",
+          "school",
+          "girls",
+          "girls high",
+          "high school",
+          "westlake girls",
+          "high",
+          "boys",
+          "westlake boys",
+          "intermediate",
+          "school suburb",
+          "shore"
         ]
       }
     ]
@@ -416,7 +416,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "New builds ready to occupy immediately. Clear instructions from Receiver to sell! \r\n\r\nThese contemporary terraced homes offer exceptional quality, modern design, and unbeatable convenience each with full CCC and freehold title.\r\n\r\nLot 13 (10 Wai Court)\r\n•3 bedrooms, 3 bathrooms, study\r\n•Tandem two-car garaging\r\n•Bosch appliances\r\n•Spacious 198sqm total living\r\n\r\nLot 6 (11 Wai Court)\r\n•3 bedrooms, 2 bathrooms\r\n•Tandem two-car garaging\r\n•Bosch appliances\r\n•Spacious 179sqm total living\r\n\r\nEnjoy north-west aspect, sun filled open plan living, and seamless indoor-outdoor flow, perfect for family life or entertaining. Walk to Takapuna's shops, cafes, and beach; zoned for top schools; easy motorway access to Auckland CBD.\r\nSecure your coastal residence or portfolio addition now, these premium, turn-key homes are ready to occupy today.\r\n\r\nContact for more details.",
   "photos": [
@@ -453,20 +453,6 @@
   },
   "history": [],
   "comps": [
-    {
-      "property_id": "af89f289-f4fb-4972-acd2-97ac647d33f4",
-      "address": "1/20 Huron Street, Takapuna, Auckland",
-      "sale_price": 1615000,
-      "sale_date": "2026-07-16T00:00:00+00:00",
-      "distance_km": 0.24,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1800000,
-      "estimate_mid": 1660000
-    },
     {
       "property_id": "8904f082-b62c-43ec-83a8-5b462f1dfe41",
       "address": "103/16 Huron Street, Takapuna, Auckland",
@@ -508,6 +494,20 @@
       "property_type": null,
       "cv": 1150000,
       "estimate_mid": 1090000
+    },
+    {
+      "property_id": "01cdc114-c405-4d64-ab84-791284e300a0",
+      "address": "3/10 Park Avenue, Takapuna, Auckland",
+      "sale_price": 888456,
+      "sale_date": "2026-09-21T00:00:00+00:00",
+      "distance_km": 0.69,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1025000,
+      "estimate_mid": 920000
     },
     {
       "property_id": "1e9a1a62-9eba-43f3-9c3a-dcb6365eede2",
@@ -566,34 +566,6 @@
       "estimate_mid": 715000
     },
     {
-      "property_id": "6a09f092-a9f9-46c2-9c71-c13102d53dc5",
-      "address": "8A Ewen Street, Takapuna, Auckland",
-      "sale_price": 1935000,
-      "sale_date": "2026-07-02T00:00:00+00:00",
-      "distance_km": 0.89,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2425000,
-      "estimate_mid": 2360000
-    },
-    {
-      "property_id": "44aa1eeb-e4a0-4aff-b9bd-465dc2c98dd0",
-      "address": "2/1 Ngaio Street, Takapuna, Auckland",
-      "sale_price": 920000,
-      "sale_date": "2026-06-28T00:00:00+00:00",
-      "distance_km": 1.02,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1025000,
-      "estimate_mid": 925000
-    },
-    {
       "property_id": "37b2f294-53fa-45d0-ba7c-5bffc869ad98",
       "address": "1/2 Hauraki Road, Hauraki, Auckland",
       "sale_price": 2500000,
@@ -620,10 +592,38 @@
       "property_type": null,
       "cv": 1600000,
       "estimate_mid": 1400000
+    },
+    {
+      "property_id": "6b8baf29-3c5c-4eff-9a70-4a702cbcc0b3",
+      "address": "40/15 Puriri Street, Takapuna, Auckland",
+      "sale_price": 435000,
+      "sale_date": "2026-07-29T00:00:00+00:00",
+      "distance_km": 1.06,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 450000,
+      "estimate_mid": 440000
+    },
+    {
+      "property_id": "85230b45-31e4-419e-a289-940d8762432b",
+      "address": "23/15 Puriri Street, Takapuna, Auckland",
+      "sale_price": 456000,
+      "sale_date": "2026-08-05T00:00:00+00:00",
+      "distance_km": 1.06,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 475000,
+      "estimate_mid": 460000
     }
   ],
   "valuation": {
-    "value_low": 920000,
+    "value_low": 888456,
     "value_mid": 1240000,
     "value_high": 1390000,
     "value_source": "sold_comps_absolute",
@@ -631,21 +631,21 @@
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$920K – $1.39M",
-        "low": 920000,
+        "range": "$888K – $1.39M",
+        "low": 888456,
         "mid": 1240000,
         "high": 1390000,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "low",
-        "n": 33,
+        "n": 38,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 33,
-          "n_eff": 11.03,
+          "n": 38,
+          "n_eff": 12.83,
           "radius_km": 3.0,
-          "iqr_ratio": 0.379,
-          "same_suburb": 22,
+          "iqr_ratio": 0.4045,
+          "same_suburb": 26,
           "model_version": "comp-cv-v1"
         }
       }

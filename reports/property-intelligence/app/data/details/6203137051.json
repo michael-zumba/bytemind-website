@@ -17,7 +17,7 @@
   "sale_method": "Tender",
   "deadline_at": "2026-11-11T11:00:00+00:00",
   "listed_at": "2026-10-29T03:16:29.453000+00:00",
-  "days_on_market": 5,
+  "days_on_market": 6,
   "lat": -36.8782234,
   "lon": 174.9048767,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338341652.jpg",
@@ -30,7 +30,7 @@
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
   "comp_low": 1136169,
-  "comp_mid": 1222341,
+  "comp_mid": 1226441,
   "comp_high": 1347053,
   "comp_confidence": "high",
   "comp_n": 51,
@@ -44,9 +44,9 @@
   "improvement_value": 700000,
   "cv_updated_at": "2024-04-30T12:00:00+00:00",
   "build_decade": "2020",
-  "build_year": null,
-  "build_year_source": null,
-  "tenure_source": "listing_text",
+  "build_year": 2020,
+  "build_year_source": "homes_timeline_approx",
+  "tenure_source": "homes.co.nz",
   "cv_ratio": 0.9598,
   "ask_gap": null,
   "ask_gap_pct": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:32:20.175399+00:00",
-  "days_since_last_change": 0.04,
+  "days_since_last_change": 1.02,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 1,
-  "sale_pressure": 10.8,
+  "sale_pressure": 11.0,
   "sale_pressure_label": "low",
-  "model_low": 1104178,
-  "model_mid": 1203601,
-  "model_high": 1312340,
+  "model_low": 1087261,
+  "model_mid": 1186541,
+  "model_high": 1296946,
   "model_confidence": "high",
-  "text_signal_pct": -3.8002,
-  "description_index": -0.192741,
+  "text_signal_pct": 0.2254,
+  "description_index": 0.011339,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -318,11 +318,11 @@
   ],
   "model": {
     "listing_id": 6203137051,
-    "low": 1104178,
-    "mid": 1203601,
-    "high": 1312340,
+    "low": 1087261,
+    "mid": 1186541,
+    "high": 1296946,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0862, 0.0865], \"rel_width\": 0.1729, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6203137051,
@@ -330,21 +330,21 @@
     "exclamations": 1,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.1593,
-    "views_waterfront": 0.1996,
+    "condition_renovation": 0.1564,
+    "views_waterfront": 0.1989,
     "family_school": 1.0,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3083,
-    "description_premium_pct": -3.8002,
-    "description_index": -0.192741,
+    "description_premium_pct": 0.2254,
+    "description_index": 0.011339,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 17, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
-        "topic_id": 7,
-        "weight": 0.443961,
+        "topic_id": 6,
+        "weight": 0.468653,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -355,67 +355,67 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
-          "mountain"
+          "mountain",
+          "suburb marina"
         ]
       },
       {
         "topic_id": 2,
-        "weight": 0.243291,
+        "weight": 0.311753,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
           "maintenance",
           "low maintenance",
           "low",
+          "easy care",
+          "care",
+          "single",
           "brand new",
           "brand",
+          "convenience",
           "new",
-          "easy care",
-          "single",
-          "care",
           "buyers",
-          "investors",
-          "home buyers"
+          "investors"
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.141447,
+        "topic_id": 7,
+        "weight": 0.122283,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
           "walk wardrobe",
           "ensuite",
           "walk",
-          "master",
           "bathroom",
+          "master",
           "upstairs",
-          "suite",
-          "floor",
-          "family bathroom",
           "lounge",
-          "master suite"
+          "suite",
+          "family bathroom",
+          "separate",
+          "bedroom"
         ]
       },
       {
-        "topic_id": 0,
-        "weight": 0.087948,
-        "label": "Family living & entertaining",
+        "topic_id": 11,
+        "weight": 0.041741,
+        "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
-          "morning",
-          "friends",
-          "coffee",
-          "relaxed",
-          "life",
-          "coastal",
-          "morning coffee",
-          "sense",
+          "residence",
+          "scale",
+          "expansive",
+          "waterfront",
+          "harbour",
+          "pool",
+          "views",
+          "architectural",
+          "aucklands",
+          "substantial",
           "setting",
-          "inviting",
-          "summer",
-          "step"
+          "privacy"
         ]
       }
     ]
@@ -464,7 +464,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "Tender: Closes on Thursday 12 November 2026 at 4:30PM  (unless sold prior)\r\n\r\nStep into this beautifully presented freestanding home, where contemporary style meets comfort and everyday practicality. Featuring light filled open plan living and dining areas, well appointed bedrooms, and a thoughtfully designed layout, this inviting residence offers a comfortable, easy care lifestyle. Perfectly suited to modern family living, its location within sought after school zones adds further appeal, making it an excellent choice for families and savvy buyers alike.\r\n\r\n4 Bedrooms | 2 Bathrooms | 1 guest toilet | Internal garage | Fully Fenced  \r\n \r\nKey Features:\r\n• Freehold, freestanding, two level home with a single internal access garage.\r\n• Four well appointed bedrooms upstairs, including a spacious master suite with its own ensuite and walk in wardrobe.\r\n• Stylish open plan living & dining area, thoughtfully designed for both entertaining and relaxed everyday living.\r\n• Sun soaked deck, perfectly positioned to capture all day sun—ideal for entertaining family and friends. The fully fenced, low maintenance backyard provides a safe and secure space for children and pets to enjoy.\r\n• Modern kitchen featuring quality appliances, ample storage, and excellent functionality.\r\n• The internal access garage provides secure parking and added convenience for everyday living.\r\n\r\nZoned for Top Schools:\r\n• Pigeon Mountain School – approximately a 12 minute walk\r\n• Bucklands Beach Intermediate– approximately a 16 minute walk\r\n• Macleans College– approximately a 17 minute walk\r\n \r\nPrime Half Moon Bay Location:\r\nEnjoy a vibrant coastal lifestyle just minutes from Half Moon Bay Marina, with its cafés, restaurants, shops, and ferry services to Auckland CBD. Within walking distance of Bucklands Beach and Eastern Beach, and a short drive to Howick Village, Botany, and Musick Point, this sought after location offers the perfect blend of convenience, recreation, and coastal living.\r\n\r\nDon’t miss your chance to move into one of East Auckland’s most desirable suburbs — with top tier education & coastal living, Call now to book a private viewing or visit us at the next open home. You won’t be disappointed!\r\n\r\n\r\nNote: While care has been taken in the preparation of these particulars, no responsibility is accepted for the accuracy of the whole or any part thereof and interested persons are advised to make their own enquiries and satisfy themselves in all respects.",
   "photos": [
@@ -743,18 +743,18 @@
       "estimate_mid": 2120000
     },
     {
-      "property_id": "6625af65-fb17-4f70-a3d7-395784ba4844",
-      "address": "1/258 Bucklands Beach Road, Bucklands Beach, Auckland",
-      "sale_price": 990000,
-      "sale_date": "2026-07-23T00:00:00+00:00",
-      "distance_km": 0.74,
-      "bedrooms": 3,
-      "bathrooms": 1,
+      "property_id": "e159f05b-30c3-449b-928e-b38c7307573d",
+      "address": "36 Oakwood Grove, Eastern Beach, Auckland",
+      "sale_price": 1720000,
+      "sale_date": "2026-10-13T00:00:00+00:00",
+      "distance_km": 0.71,
+      "bedrooms": 4,
+      "bathrooms": 2,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1300000,
-      "estimate_mid": 1170000
+      "cv": 2250000,
+      "estimate_mid": 1760000
     },
     {
       "property_id": "925c9bb5-2154-413e-906f-1a625bbd091d",
@@ -799,6 +799,20 @@
       "estimate_mid": 2330000
     },
     {
+      "property_id": "05a546ba-ab08-48e6-8f27-f12105dd305c",
+      "address": "5 Bucklands Beach Road, Bucklands Beach, Auckland",
+      "sale_price": 2450000,
+      "sale_date": "2026-09-14T00:00:00+00:00",
+      "distance_km": 1.01,
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 3175000,
+      "estimate_mid": 2560000
+    },
+    {
       "property_id": "4f77c191-323c-4e2a-a6a0-314e739d79ad",
       "address": "12 Bucklands Beach Road, Bucklands Beach, Auckland",
       "sale_price": 2657000,
@@ -811,20 +825,6 @@
       "property_type": null,
       "cv": 3475000,
       "estimate_mid": 2730000
-    },
-    {
-      "property_id": "4dec8fa7-b679-475b-86ba-d69f6778cede",
-      "address": "202B Clovelly Road, Bucklands Beach, Auckland",
-      "sale_price": 2065000,
-      "sale_date": "2026-08-26T00:00:00+00:00",
-      "distance_km": 1.03,
-      "bedrooms": 5,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2200000,
-      "estimate_mid": 2130000
     }
   ],
   "valuation": {
@@ -848,19 +848,19 @@
         "name": "Nearby sold comparables",
         "range": "$1.14M – $1.35M",
         "low": 1136169,
-        "mid": 1222341,
+        "mid": 1226441,
         "high": 1347053,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "high",
         "n": 51,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 51,
-          "n_eff": 9.49,
+          "n_eff": 9.54,
           "radius_km": 3.0,
-          "median_ratio": 0.9122,
-          "iqr_ratio": 0.1725,
+          "median_ratio": 0.9153,
+          "iqr_ratio": 0.1719,
           "same_suburb": 14,
           "model_version": "comp-cv-v1"
         }

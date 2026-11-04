@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-06-03T02:57:09.747000+00:00",
-  "days_on_market": 153,
+  "days_on_market": 154,
   "lat": -36.8539354,
   "lon": 174.8379283,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2310263661.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 2606765,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 2250000,
-  "comp_mid": 2579646,
-  "comp_high": 2713855,
+  "comp_low": 2209481,
+  "comp_mid": 2524474,
+  "comp_high": 2735484,
   "comp_confidence": "high",
-  "comp_n": 79,
+  "comp_n": 84,
   "value_low": 2319293,
   "value_mid": 2463029,
   "value_high": 2606765,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:26:17.662023+00:00",
-  "days_since_last_change": 6.26,
+  "days_since_last_change": 7.23,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 4,
-  "sale_pressure": 65.5,
+  "sale_pressure": 65.7,
   "sale_pressure_label": "high",
-  "model_low": 2342413,
-  "model_mid": 2553330,
-  "model_high": 2784010,
+  "model_low": 2325358,
+  "model_mid": 2537692,
+  "model_high": 2773818,
   "model_confidence": "high",
-  "text_signal_pct": 16.4201,
-  "description_index": 0.756346,
+  "text_signal_pct": 8.1481,
+  "description_index": 0.394487,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 5968055702,
-    "low": 2342413,
-    "mid": 2553330,
-    "high": 2784010,
+    "low": 2325358,
+    "mid": 2537692,
+    "high": 2773818,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0862, 0.0865], \"rel_width\": 0.1729, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5968055702,
@@ -291,20 +291,20 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.3907,
-    "family_school": 0.9989,
-    "investment": 0.4726,
+    "views_waterfront": 0.3894,
+    "family_school": 0.9999,
+    "investment": 0.4746,
     "risk": 0.0,
     "readability": 0.494,
-    "description_premium_pct": 16.4201,
-    "description_index": 0.756346,
+    "description_premium_pct": 8.1481,
+    "description_index": 0.394487,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 3, \"family_school\": 12, \"investment\": 3, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
         "topic_id": 1,
-        "weight": 0.252844,
+        "weight": 0.270614,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -314,16 +314,54 @@
           "land",
           "property",
           "subject",
-          "existing",
           "council",
+          "existing",
           "mixed",
           "housing",
           "value"
         ]
       },
       {
+        "topic_id": 10,
+        "weight": 0.216445,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "views",
+          "sea views",
+          "elevated",
+          "position",
+          "rangitoto",
+          "outlook",
+          "spectacular",
+          "elevated position",
+          "gulf",
+          "hauraki gulf",
+          "hauraki"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.177371,
+        "label": "School zones & catchments",
+        "top_terms": [
+          "macleans",
+          "macleans college",
+          "college",
+          "school",
+          "intermediate",
+          "suburb intermediate",
+          "primary",
+          "marina",
+          "pigeon",
+          "pigeon mountain",
+          "mountain",
+          "suburb marina"
+        ]
+      },
+      {
         "topic_id": 5,
-        "weight": 0.176,
+        "weight": 0.157893,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -338,44 +376,6 @@
           "intermediate",
           "school suburb",
           "shore"
-        ]
-      },
-      {
-        "topic_id": 11,
-        "weight": 0.174785,
-        "label": "Resort amenities (pool / tennis / spa)",
-        "top_terms": [
-          "views",
-          "residence",
-          "expansive",
-          "scale",
-          "gulf",
-          "waterfront",
-          "harbour",
-          "hauraki",
-          "hauraki gulf",
-          "spectacular",
-          "pool",
-          "position"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.171859,
-        "label": "School zones & catchments",
-        "top_terms": [
-          "macleans",
-          "macleans college",
-          "college",
-          "school",
-          "intermediate",
-          "suburb intermediate",
-          "primary",
-          "marina",
-          "suburb marina",
-          "pigeon",
-          "pigeon mountain",
-          "mountain"
         ]
       }
     ]
@@ -441,7 +441,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "CALL Amy 0274820100 or Jayne 021352007 to view now. OPEN HOME Saturday 31st October at 12pm - 12:30pm\r\n\r\nElevated and centrally located in the heart of the Bays, this home offers everything a family could want and need. 8 Rawhitiroa Road faces due north and enjoys views of Rangitoto Island and is moments from Madills Farm, the Cafes and Restaurants of Kohimarama beach and you are a cricket ball throw away from Kohimarama Primary School, so the school drop off/pick up will be a dream. \r\n\r\nWith five double bedrooms and the master enjoying a private deck looking out to the Hauraki Gulf, this family home soaks up everyone with three living areas - including the ultimate teenage hangout downstairs. The large entertainer's kitchen is the hub of the home and our owners have enjoyed many family and friends occasions with two large decks leading off this central hub.  \r\n\r\nZoned Urban - the possibilities of development are enhanced by protected views.  Private, sunny and ready for a new family - we look forward to showing you this much-loved home.\r\n\r\n\r\n* Freehold\r\n\r\n* Floor Area: 244sqm (approx.) \r\n\r\n* Land Area: 615sqm (mol)\r\n\r\n* Council Rates: $7,271.87 p/a (2025/26) \r\n\r\n* CV: $2,650,000 (2024) \r\n\r\n* School Zones: Kohimarama School, St Ignatius School, Selwyn College, Baradene College\r\n\r\n* Residential - Mixed Housing Urban Zone\r\n\r\n* Rental Appraisal: $1450 - $1550 per week\r\n\r\n\r\nWe work with all agencies. Conjunctions are welcome",
   "photos": [
@@ -678,20 +678,6 @@
       "estimate_mid": 1200000
     },
     {
-      "property_id": "624af378-723b-46ae-ae48-098b9e5cf415",
-      "address": "2/1 Taranaki Road, Kohimarama, Auckland",
-      "sale_price": 2050000,
-      "sale_date": "2026-07-27T00:00:00+00:00",
-      "distance_km": 0.35,
-      "bedrooms": 3,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2100000,
-      "estimate_mid": 2050000
-    },
-    {
       "property_id": "d70e6264-4cf4-4766-bd5e-2f78e33df589",
       "address": "25F Eltham Road, Kohimarama, Auckland",
       "sale_price": 630000,
@@ -706,20 +692,6 @@
       "estimate_mid": 645000
     },
     {
-      "property_id": "6db4c5ec-496d-4c2d-bb7d-a3a9cbc35899",
-      "address": "19B Hawera Road, Kohimarama, Auckland",
-      "sale_price": 2580000,
-      "sale_date": "2026-07-21T00:00:00+00:00",
-      "distance_km": 0.47,
-      "bedrooms": 4,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 3075000,
-      "estimate_mid": 2580000
-    },
-    {
       "property_id": "aa1e8f11-d420-47a5-8843-424ddaedf4fd",
       "address": "25A Hawera Road, Kohimarama, Auckland",
       "sale_price": 1810000,
@@ -732,6 +704,20 @@
       "property_type": null,
       "cv": 1800000,
       "estimate_mid": 1830000
+    },
+    {
+      "property_id": "1ed64dda-9559-4522-8756-92116f6fedb4",
+      "address": "15/32 Dudley Road, Mission Bay, Auckland",
+      "sale_price": 1288000,
+      "sale_date": "2026-08-31T00:00:00+00:00",
+      "distance_km": 0.55,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1650000,
+      "estimate_mid": 1570000
     },
     {
       "property_id": "8c07de7c-e4ea-4cf3-bd96-64816f9a253e",
@@ -790,18 +776,32 @@
       "estimate_mid": 3800000
     },
     {
-      "property_id": "4ed0d2df-9ae0-4dd0-9258-47b94b745a46",
-      "address": "29 Allum Street, Kohimarama, Auckland",
-      "sale_price": 4075000,
-      "sale_date": "2026-07-28T00:00:00+00:00",
-      "distance_km": 0.8,
-      "bedrooms": 4,
-      "bathrooms": 2,
+      "property_id": "73ef5da0-7c03-4e19-857b-53984bc54046",
+      "address": "261 Kepa Road, Mission Bay, Auckland",
+      "sale_price": 1450000,
+      "sale_date": "2026-09-14T00:00:00+00:00",
+      "distance_km": 0.85,
+      "bedrooms": 3,
+      "bathrooms": 1,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 4075000,
-      "estimate_mid": 3750000
+      "cv": 1300000,
+      "estimate_mid": 1460000
+    },
+    {
+      "property_id": "7163db6f-8fc3-44ce-a821-52081bbc9d2d",
+      "address": "4/19 Thatcher Street, Mission Bay, Auckland",
+      "sale_price": 640000,
+      "sale_date": "2026-08-28T00:00:00+00:00",
+      "distance_km": 1.02,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 620000,
+      "estimate_mid": 615000
     }
   ],
   "valuation": {
@@ -823,22 +823,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$2.25M – $2.71M",
-        "low": 2250000,
-        "mid": 2579646,
-        "high": 2713855,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "range": "$2.21M – $2.74M",
+        "low": 2209481,
+        "mid": 2524474,
+        "high": 2735484,
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "high",
-        "n": 79,
+        "n": 84,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 79,
-          "n_eff": 14.21,
+          "n": 84,
+          "n_eff": 14.75,
           "radius_km": 3.0,
-          "median_ratio": 0.9735,
-          "iqr_ratio": 0.1798,
-          "same_suburb": 16,
+          "median_ratio": 0.9526,
+          "iqr_ratio": 0.2084,
+          "same_suburb": 12,
           "model_version": "comp-cv-v1"
         }
       },

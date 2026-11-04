@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-06-17T21:39:44.490000+00:00",
-  "days_on_market": 138,
+  "days_on_market": 139,
   "lat": -36.6080718,
   "lon": 174.699346,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2313079195.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 780000,
+  "comp_low": 799000,
   "comp_mid": 950000,
   "comp_high": 1205000,
   "comp_confidence": "low",
-  "comp_n": 26,
-  "value_low": 780000,
+  "comp_n": 30,
+  "value_low": 799000,
   "value_mid": 950000,
   "value_high": 1205000,
   "value_source": "sold_comps_absolute",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 7020,
-  "watchers": 101,
+  "view_count": 7045,
+  "watchers": 103,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:17:22.849009+00:00",
-  "days_since_last_change": 0.01,
+  "days_since_last_change": 0.99,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 53.0,
+  "sale_pressure": 53.2,
   "sale_pressure_label": "medium",
-  "model_low": 521981,
-  "model_mid": 728078,
-  "model_high": 993586,
+  "model_low": 472669,
+  "model_mid": 660638,
+  "model_high": 912244,
   "model_confidence": "low",
-  "text_signal_pct": 1.114,
-  "description_index": 0.055112,
+  "text_signal_pct": -2.8186,
+  "description_index": -0.143989,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 5991744175,
-    "low": 521981,
-    "mid": 728078,
-    "high": 993586,
+    "low": 472669,
+    "mid": 660638,
+    "high": 912244,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3328, 0.3109], \"rel_width\": 0.6477, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5991744175,
@@ -280,59 +280,40 @@
     "exclamations": 1,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.8392,
+    "condition_renovation": 0.8244,
     "views_waterfront": 0.0,
-    "family_school": 0.2521,
+    "family_school": 0.2524,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4407,
-    "description_premium_pct": 1.114,
-    "description_index": 0.055112,
+    "description_premium_pct": -2.8186,
+    "description_index": -0.143989,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 4, \"views_waterfront\": 0, \"family_school\": 3, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
-        "topic_id": 9,
-        "weight": 0.351395,
+        "topic_id": 0,
+        "weight": 0.358432,
         "label": "Parking, garden & section",
         "top_terms": [
-          "brick",
-          "street",
-          "fenced",
-          "parking",
-          "fully",
-          "fully fenced",
-          "garden",
           "room",
-          "sunny",
-          "facing",
-          "north facing",
-          "street parking"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.181944,
-        "label": "Family living & entertaining",
-        "top_terms": [
+          "garden",
           "morning",
-          "friends",
-          "coffee",
-          "relaxed",
-          "life",
-          "coastal",
-          "morning coffee",
-          "sense",
-          "setting",
-          "inviting",
+          "brick",
+          "fenced",
           "summer",
-          "step"
+          "street",
+          "away",
+          "renovated",
+          "coffee",
+          "ready",
+          "fully fenced"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.179145,
+        "weight": 0.225914,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -341,31 +322,50 @@
           "car",
           "lock leave",
           "park",
-          "pool",
           "secure",
-          "complex",
           "kensington",
+          "pool",
+          "complex",
           "balcony",
-          "gym"
+          "kensington park"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.084933,
+        "weight": 0.148674,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "quality",
           "finishes",
+          "year",
           "designer",
           "appliances",
-          "year",
-          "luxury",
+          "new",
+          "brand",
+          "brand new",
           "comfort",
           "designer kitchen",
-          "new",
-          "design",
-          "heating"
+          "luxury"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.086591,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "section",
+          "dream",
+          "build",
+          "dream home",
+          "land",
+          "sections",
+          "whangaparaoa",
+          "community",
+          "auckland",
+          "penlink",
+          "building",
+          "secure"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "Designed for those nearing or at retirement who are seeking a quieter way of life. The Grove Red Beach is a welcoming community that attracts like minded residents who value privacy, security, and a relaxed pace where you retain 100% full ownership and future gains when you sell. Perfectly positioned, this highly desirable corner unit is warm and tidy, brick and cedar, and enjoys all day sun.\r\n\r\nProperty Highlights:\r\n\r\n*\tSun & Flow: Spacious open plan living steps seamlessly out to a covered patio, your new favourite spot for a morning coffee or afternoon relaxation    \r\n*\tModern Comforts: A recently updated, stylish bathroom paired with a convenient separate toilet. Add further value and renovate to your taste. \r\n*      Heat pump and new hot water cylinder\r\n*\tEasy Living: Single garage with internal access for complete convenience, security, and extra storage. Solid construction for peace of mind\r\n\r\nThe home is ideally located close to Red Beach, Silverdale and Orewa, with a bus stop across the road and a handy shortcut to the local Red Beach Village shops. Everything you need is right at your doorstep, including a medical centre, pharmacy, bakery and friendly 4 Square which now offers incredibly convenient home deliveries.\r\n\r\n No complicated exit fees just pure independence, security, and financial peace of mind. Contact me today to secure your private viewing or come along to the next open home and downsize without compromise!\r\n\r\nRegister to download the documents available by going to https://www.harcourtsfiles.co.nz/listings/PTPJ",
   "photos": [
@@ -452,18 +452,18 @@
   "history": [],
   "comps": [
     {
-      "property_id": "3076082b-3f34-4182-bba6-21fe29c1ece0",
-      "address": "10 Lucy Foster Lane, Red Beach, Red Beach",
-      "sale_price": 780000,
-      "sale_date": "2026-08-17T00:00:00+00:00",
-      "distance_km": 0.24,
+      "property_id": "70797b04-6ca7-4b2c-8a71-a8341eb2fed0",
+      "address": "77 Red Beach Road, Red Beach, Red Beach",
+      "sale_price": 995000,
+      "sale_date": "2026-08-25T00:00:00+00:00",
+      "distance_km": 0.15,
       "bedrooms": 3,
-      "bathrooms": 2,
+      "bathrooms": 1,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 910000,
-      "estimate_mid": 800000
+      "cv": 1050000,
+      "estimate_mid": 1010000
     },
     {
       "property_id": "4a93665e-f2e7-4b7d-b635-415e9ef06f6f",
@@ -508,6 +508,34 @@
       "estimate_mid": 940000
     },
     {
+      "property_id": "54897e38-da18-4e99-8c64-831550e92194",
+      "address": "6 Awanui Road, Red Beach, Whangaparāoa",
+      "sale_price": 598000,
+      "sale_date": "2026-09-17T00:00:00+00:00",
+      "distance_km": 0.47,
+      "bedrooms": null,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 750000,
+      "estimate_mid": 665000
+    },
+    {
+      "property_id": "9f2469f3-0b94-49a6-8eeb-c2e8db7e5ec4",
+      "address": "19 Kuku Avenue, Red Beach, Red Beach",
+      "sale_price": 1400000,
+      "sale_date": "2026-09-11T00:00:00+00:00",
+      "distance_km": 0.53,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1225000,
+      "estimate_mid": 1380000
+    },
+    {
       "property_id": "ecac8cbc-c252-4e3d-a410-1adf0d309ede",
       "address": "22 Kuku Avenue, Red Beach, Red Beach",
       "sale_price": 1205000,
@@ -520,20 +548,6 @@
       "property_type": null,
       "cv": 1200000,
       "estimate_mid": 1210000
-    },
-    {
-      "property_id": "3192a45f-be31-4d24-9951-ee578bb6f1f3",
-      "address": "36 Awanui Road, Red Beach, Red Beach",
-      "sale_price": 1360000,
-      "sale_date": "2026-08-19T00:00:00+00:00",
-      "distance_km": 0.63,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1510000,
-      "estimate_mid": 1370000
     },
     {
       "property_id": "988d9d87-02f8-41f7-b11d-3d31a9ef8130",
@@ -550,20 +564,6 @@
       "estimate_mid": 1260000
     },
     {
-      "property_id": "c9a17c64-e1c2-48a7-a806-feb6726c84f7",
-      "address": "2B Marie Avenue, Red Beach, Whangaparāoa",
-      "sale_price": 2450000,
-      "sale_date": "2026-08-10T00:00:00+00:00",
-      "distance_km": 0.74,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1625000,
-      "estimate_mid": 2750000
-    },
-    {
       "property_id": "543a8684-a099-464b-b8ac-d244e180df95",
       "address": "24 Tawhana Crescent, Red Beach, Red Beach",
       "sale_price": 1110000,
@@ -578,6 +578,34 @@
       "estimate_mid": 1120000
     },
     {
+      "property_id": "f8bf62ee-46c7-43a0-9dd2-814cdc15b380",
+      "address": "84 Symes Drive, Red Beach, Red Beach",
+      "sale_price": 952000,
+      "sale_date": "2026-09-13T00:00:00+00:00",
+      "distance_km": 0.85,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 980000,
+      "estimate_mid": 960000
+    },
+    {
+      "property_id": "c55813cc-76ca-4ec0-b0d6-6ceff0e40b41",
+      "address": "1 Weka Close, Red Beach, Red Beach",
+      "sale_price": 900000,
+      "sale_date": "2026-10-08T00:00:00+00:00",
+      "distance_km": 1.02,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 950000,
+      "estimate_mid": 910000
+    },
+    {
       "property_id": "c83d84ba-aaa1-498a-9a43-7b5ca21efd33",
       "address": "33 Durness Place, Red Beach, Red Beach",
       "sale_price": 1230000,
@@ -590,38 +618,10 @@
       "property_type": null,
       "cv": 1175000,
       "estimate_mid": 1230000
-    },
-    {
-      "property_id": "703a8f96-90ea-4cdb-945d-171aa9bce759",
-      "address": "22 Durness Place, Red Beach, Red Beach",
-      "sale_price": 1100000,
-      "sale_date": "2026-09-03T00:00:00+00:00",
-      "distance_km": 1.21,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1225000,
-      "estimate_mid": 1110000
-    },
-    {
-      "property_id": "adcdd589-782e-403d-bcb2-683c737a457b",
-      "address": "16 Springtide Place, Red Beach, Red Beach",
-      "sale_price": 1272500,
-      "sale_date": "2026-09-17T00:00:00+00:00",
-      "distance_km": 1.45,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1250000,
-      "estimate_mid": 1240000
     }
   ],
   "valuation": {
-    "value_low": 780000,
+    "value_low": 799000,
     "value_mid": 950000,
     "value_high": 1205000,
     "value_source": "sold_comps_absolute",
@@ -629,21 +629,21 @@
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$780K – $1.21M",
-        "low": 780000,
+        "range": "$799K – $1.21M",
+        "low": 799000,
         "mid": 950000,
         "high": 1205000,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "low",
-        "n": 26,
+        "n": 30,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 26,
-          "n_eff": 8.99,
+          "n": 30,
+          "n_eff": 10.92,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4474,
-          "same_suburb": 7,
+          "iqr_ratio": 0.4274,
+          "same_suburb": 8,
           "model_version": "comp-cv-v1"
         }
       }

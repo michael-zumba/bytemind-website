@@ -16,8 +16,8 @@
   "asking_kind": null,
   "sale_method": "Price by negotiation",
   "deadline_at": null,
-  "listed_at": "2026-04-21T23:02:26.943000+00:00",
-  "days_on_market": 195,
+  "listed_at": "2026-04-22T00:02:26.943000+00:00",
+  "days_on_market": 196,
   "lat": -36.8560762,
   "lon": 174.8124797,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2316595651.jpg",
@@ -29,15 +29,15 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": null,
-  "comp_mid": null,
-  "comp_high": null,
-  "comp_confidence": null,
-  "comp_n": null,
-  "value_low": 3513909,
-  "value_mid": 3771281,
-  "value_high": 4945186,
-  "value_source": "active_suburb_guide",
+  "comp_low": 1300000,
+  "comp_mid": 1300000,
+  "comp_high": 1350000,
+  "comp_confidence": "low",
+  "comp_n": 4,
+  "value_low": 1300000,
+  "value_mid": 1300000,
+  "value_high": 1350000,
+  "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
   "land_value": null,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 4103,
-  "watchers": 72,
+  "view_count": 4141,
+  "watchers": 73,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -76,12 +76,12 @@
   "sale_method_stage": 3,
   "sale_pressure": 60.0,
   "sale_pressure_label": "medium",
-  "model_low": 3458714,
-  "model_mid": 4824339,
-  "model_high": 6583626,
+  "model_low": 3469208,
+  "model_mid": 4848824,
+  "model_high": 6695520,
   "model_confidence": "low",
-  "text_signal_pct": 21.2641,
-  "description_index": 0.95915,
+  "text_signal_pct": 24.37,
+  "description_index": 1.098334,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -298,52 +298,90 @@
   ],
   "model": {
     "listing_id": 5896949655,
-    "low": 3458714,
-    "mid": 4824339,
-    "high": 6583626,
+    "low": 3469208,
+    "mid": 4848824,
+    "high": 6695520,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3328, 0.3109], \"rel_width\": 0.6477, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5896949655,
     "word_count": 208,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.2642,
+    "luxury": 0.2649,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.263,
-    "family_school": 0.3362,
+    "views_waterfront": 0.2621,
+    "family_school": 0.3365,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4053,
-    "description_premium_pct": 21.2641,
-    "description_index": 0.95915,
+    "description_premium_pct": 24.37,
+    "description_index": 1.098334,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 4, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
         "topic_id": 11,
-        "weight": 0.201936,
+        "weight": 0.211915,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
-          "views",
           "residence",
-          "expansive",
           "scale",
-          "gulf",
+          "expansive",
           "waterfront",
           "harbour",
-          "hauraki",
-          "hauraki gulf",
-          "spectacular",
           "pool",
-          "position"
+          "views",
+          "architectural",
+          "aucklands",
+          "substantial",
+          "setting",
+          "privacy"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.175152,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "section",
+          "dream",
+          "build",
+          "dream home",
+          "land",
+          "sections",
+          "whangaparaoa",
+          "community",
+          "auckland",
+          "penlink",
+          "building",
+          "secure"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.157712,
+        "label": "School zones & catchments",
+        "top_terms": [
+          "macleans",
+          "macleans college",
+          "college",
+          "school",
+          "intermediate",
+          "suburb intermediate",
+          "primary",
+          "marina",
+          "pigeon",
+          "pigeon mountain",
+          "mountain",
+          "suburb marina"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.171734,
+        "weight": 0.151433,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -352,50 +390,12 @@
           "car",
           "lock leave",
           "park",
-          "pool",
           "secure",
-          "complex",
           "kensington",
+          "pool",
+          "complex",
           "balcony",
-          "gym"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.147132,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "section",
-          "dream",
-          "build",
-          "dream home",
-          "coastal",
-          "views",
-          "land",
-          "sea",
-          "whangaparaoa",
-          "building",
-          "sections",
-          "sea views"
-        ]
-      },
-      {
-        "topic_id": 9,
-        "weight": 0.127532,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "brick",
-          "street",
-          "fenced",
-          "parking",
-          "fully",
-          "fully fenced",
-          "garden",
-          "room",
-          "sunny",
-          "facing",
-          "north facing",
-          "street parking"
+          "kensington park"
         ]
       }
     ]
@@ -436,7 +436,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "A rare opportunity to secure two adjoining properties on Rewiti Street, Orakei, under one ownership and offering a combined 1,539sqm of prime real estate. Available to purchase together or individually.\r\n\r\nOption 1: Buy both properties 12A and 14A-14B Rewiti Street = 1,539sqm (more or less)\r\nOption 2: Buy 12A Rewiti Street = 651sqm (more or less)\r\nOption 3: Buy 14A-B Rewiti St - 888sqm (more or less)\r\n\r\nAcross both northwest facing properties, the offering includes a total of 9 bedrooms, 6 bathrooms, and 3 living areas, a spa, swimming pool, 1 double internal access garage and a single garage.\r\nBoth properties enjoy breathtaking views of the water and cityscape, offering sun, privacy and tranquil living. \r\n\r\nThere is the opportunity to create your dream mansion with stunning vistas, pool, tennis court, or develop multiple residences - the possibilities are endless. \r\n\r\nImmediate access to popular coastal walkways including Tamaki Drive, Coates Ave village shops and train and bus transport a short walk away, this is a community close to the CBD but a world away. School zones include Baradene College, Orakei School and Selwyn College.\r\n\r\nExplore full details and photos for 12A Rewiti Street here: \r\nwww.trademe.co.nz/a/property/residential/sale/auckland/auckland-city/orakei/listing/6003601185\r\n\r\nExplore full details and photos for 14A-B Rewiti Street here: \r\nwww.trademe.co.nz/a/property/residential/sale/auckland/auckland-city/orakei/listing/6003590299",
   "photos": [
@@ -489,6 +489,20 @@
       "estimate_mid": 2020000
     },
     {
+      "property_id": "87f66b40-e6f3-4643-889d-04ce68a12c25",
+      "address": "2/6A Fenton Circus, Orakei, Auckland",
+      "sale_price": 1845000,
+      "sale_date": "2026-09-30T00:00:00+00:00",
+      "distance_km": 0.26,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 2575000,
+      "estimate_mid": 2520000
+    },
+    {
       "property_id": "e52c1a36-d289-43a7-8b16-48f001403cd4",
       "address": "2A Fenton Circus, Orakei, Auckland",
       "sale_price": 1425000,
@@ -531,20 +545,6 @@
       "estimate_mid": 1770000
     },
     {
-      "property_id": "ec2a80d5-5c08-4b74-ac81-cd94eae5c390",
-      "address": "15A Rautara Street, Orakei, Auckland",
-      "sale_price": 1470000,
-      "sale_date": "2026-07-23T00:00:00+00:00",
-      "distance_km": 0.56,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1600000,
-      "estimate_mid": 1500000
-    },
-    {
       "property_id": "e63e88f3-1980-4e4b-8198-45715bcd3bb9",
       "address": "105A Coates Avenue, Orakei, Auckland",
       "sale_price": 2988500,
@@ -571,6 +571,20 @@
       "property_type": null,
       "cv": 1900000,
       "estimate_mid": 1630000
+    },
+    {
+      "property_id": "66cbe43a-99f1-406f-946c-9498a45d4e31",
+      "address": "40A Kupe Street, Orakei, Auckland",
+      "sale_price": 1300000,
+      "sale_date": "2026-09-07T00:00:00+00:00",
+      "distance_km": 1.09,
+      "bedrooms": null,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1400000,
+      "estimate_mid": 1400000
     },
     {
       "property_id": "6eb4a171-a3ad-4e7b-8aa0-6c22158a501e",
@@ -601,41 +615,48 @@
       "estimate_mid": 1310000
     },
     {
-      "property_id": "430df567-dece-42cb-af00-0c85d3290600",
-      "address": "14A Godden Crescent, Orakei, Auckland",
-      "sale_price": 1275000,
-      "sale_date": "2026-09-01T00:00:00+00:00",
-      "distance_km": 1.35,
+      "property_id": "b731715b-c9fa-433a-95e6-e53cf4e61c82",
+      "address": "7 Rukutai Street, Orakei, Auckland",
+      "sale_price": 1065000,
+      "sale_date": "2026-10-15T00:00:00+00:00",
+      "distance_km": 1.27,
       "bedrooms": 2,
       "bathrooms": 1,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1250000,
-      "estimate_mid": 1170000
-    },
-    {
-      "property_id": "2cd90b4d-5f99-4e83-8b1e-5f81e59d36f7",
-      "address": "61A Atkin Avenue, Mission Bay, Auckland",
-      "sale_price": 1825000,
-      "sale_date": "2026-07-23T00:00:00+00:00",
-      "distance_km": 1.44,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2350000,
+      "cv": 2125000,
       "estimate_mid": 1880000
     }
   ],
   "valuation": {
-    "value_low": 3513909,
-    "value_mid": 3771281,
-    "value_high": 4945186,
-    "value_source": "active_suburb_guide",
+    "value_low": 1300000,
+    "value_mid": 1300000,
+    "value_high": 1350000,
+    "value_source": "sold_comps_absolute",
     "value_confidence": "low",
-    "sources": [],
+    "sources": [
+      {
+        "name": "Nearby sold comparables",
+        "range": "$1.30M – $1.35M",
+        "low": 1300000,
+        "mid": 1300000,
+        "high": 1350000,
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
+        "confidence": "low",
+        "n": 4,
+        "basis": {
+          "confidence": "low",
+          "source": "sold_comps_absolute",
+          "n": 4,
+          "n_eff": 0.93,
+          "radius_km": 3.0,
+          "iqr_ratio": 0.0385,
+          "same_suburb": 1,
+          "model_version": "comp-cv-v1"
+        }
+      }
+    ],
     "methodology": "Primary range is the Homes.co.nz AVM shown on the Trade Me listing. The independent comparable model weights nearby sold prices by distance, recency and property type, and normalises by council CV. When neither is available, a calibrated hedonic fallback is used and labelled. The hedonic model is trained on listings with a Homes AVM and validated with 5-fold cross-validation; it is a fallback/cross-check, not a valuation."
   }
 }

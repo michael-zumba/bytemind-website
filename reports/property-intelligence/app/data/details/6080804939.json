@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-08-13T03:34:17.983000+00:00",
-  "days_on_market": 82,
+  "days_on_market": 83,
   "lat": -37.0213408,
   "lon": 174.8570322,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2323034579.jpg",
@@ -36,7 +36,7 @@
   "comp_n": null,
   "value_low": 960997,
   "value_mid": 1133066,
-  "value_high": 1393344,
+  "value_high": 1361312,
   "value_source": "active_suburb_guide",
   "value_confidence": "low",
   "cv": null,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2496,
+  "view_count": 2515,
   "watchers": 31,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:07:04.369986+00:00",
-  "days_since_last_change": 0.02,
+  "days_since_last_change": 0.99,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 43.7,
+  "sale_pressure": 43.8,
   "sale_pressure_label": "medium",
-  "model_low": 567913,
-  "model_mid": 792146,
-  "model_high": 1081018,
+  "model_low": 533527,
+  "model_mid": 745698,
+  "model_high": 1029700,
   "model_confidence": "low",
-  "text_signal_pct": -24.3583,
-  "description_index": -1.388785,
+  "text_signal_pct": -22.6508,
+  "description_index": -1.293477,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -298,11 +298,11 @@
   ],
   "model": {
     "listing_id": 6080804939,
-    "low": 567913,
-    "mid": 792146,
-    "high": 1081018,
+    "low": 533527,
+    "mid": 745698,
+    "high": 1029700,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3328, 0.3109], \"rel_width\": 0.6477, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6080804939,
@@ -310,78 +310,59 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.2843,
-    "views_waterfront": 0.0891,
-    "family_school": 0.3986,
-    "investment": 0.3232,
+    "condition_renovation": 0.2793,
+    "views_waterfront": 0.0888,
+    "family_school": 0.399,
+    "investment": 0.3246,
     "risk": 0.0,
     "readability": 0.377,
-    "description_premium_pct": -24.3583,
-    "description_index": -1.388785,
+    "description_premium_pct": -22.6508,
+    "description_index": -1.293477,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 2, \"views_waterfront\": 1, \"family_school\": 7, \"investment\": 3, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
         "topic_id": 2,
-        "weight": 0.609457,
+        "weight": 0.660863,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
           "maintenance",
           "low maintenance",
           "low",
+          "easy care",
+          "care",
+          "single",
           "brand new",
           "brand",
+          "convenience",
           "new",
-          "easy care",
-          "single",
-          "care",
           "buyers",
-          "investors",
-          "home buyers"
+          "investors"
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.185789,
+        "topic_id": 7,
+        "weight": 0.160792,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
           "walk wardrobe",
           "ensuite",
           "walk",
-          "master",
           "bathroom",
+          "master",
           "upstairs",
-          "suite",
-          "floor",
-          "family bathroom",
           "lounge",
-          "master suite"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.067136,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "morning",
-          "friends",
-          "coffee",
-          "relaxed",
-          "life",
-          "coastal",
-          "morning coffee",
-          "sense",
-          "setting",
-          "inviting",
-          "summer",
-          "step"
+          "suite",
+          "family bathroom",
+          "separate",
+          "bedroom"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.053663,
+        "weight": 0.049057,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -391,11 +372,30 @@
           "land",
           "property",
           "subject",
-          "existing",
           "council",
+          "existing",
           "mixed",
           "housing",
           "value"
+        ]
+      },
+      {
+        "topic_id": 5,
+        "weight": 0.041394,
+        "label": "Westlake school zone",
+        "top_terms": [
+          "westlake",
+          "school",
+          "girls",
+          "girls high",
+          "high school",
+          "westlake girls",
+          "high",
+          "boys",
+          "westlake boys",
+          "intermediate",
+          "school suburb",
+          "shore"
         ]
       }
     ]
@@ -444,7 +444,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "Please enter 242A West Hoe Heights, Orewa into your GPS and drive to that address.When you arrive, you'll come to a roundabout. Take the first left at the roundabout to enter the new housing development. Then drive to the Kopu street, and you'll find the property there.\r\n\r\nOffering a smart and practical layout, this well-presented three-bedroom home is an excellent choice for families, first-home buyers, downsizers, or investors looking for comfortable, low-maintenance living in the popular Orewa area.\r\n\r\nThe home features three well-proportioned bedrooms, including a spacious master bedroom complete with its own ensuite and walk-in wardrobe. The additional two bedrooms are ideal for children, guests, or a home office, while the family bathroom provides added convenience for everyday living.\r\n\r\nAt the heart of the home is a generous open-plan kitchen, living, and dining area, creating a welcoming space for family life and entertaining. The living area opens out to a private deck, providing an ideal spot for outdoor dining, relaxing, or enjoying the sunshine.\r\n\r\nA single internal-access garage, separate laundry, and practical storage further enhance the functionality of the home. With an easy-care layout and outdoor area, this property is designed for those who want to enjoy modern living without the high maintenance.\r\n\r\nLocated in the popular coastal community of Orewa, the home is conveniently positioned close to Orewa Beach, local shops, cafes, restaurants, parks, schools, and public transport. Easy access to the Northern Motorway also makes commuting towards Auckland and the wider North Shore straightforward, while the surrounding amenities provide everything you need for convenient day-to-day living.\r\n\r\nWhether you're looking for your first home, a comfortable family property, a low-maintenance downsizer, or a solid investment opportunity, this home offers an appealing combination of space, functionality, outdoor living, and a convenient Orewa location.\r\n\r\nContact us today to arrange a viewing and experience all this home has to offer.",
   "photos": [
@@ -481,7 +481,7 @@
   "valuation": {
     "value_low": 960997,
     "value_mid": 1133066,
-    "value_high": 1393344,
+    "value_high": 1361312,
     "value_source": "active_suburb_guide",
     "value_confidence": "low",
     "sources": [],

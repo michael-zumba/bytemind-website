@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-13T14:16:04.513000+00:00",
-  "days_on_market": 21,
+  "days_on_market": 22,
   "lat": -36.791851,
   "lon": 174.7692871,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2334960124.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1509672,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1285815,
-  "comp_mid": 1359682,
+  "comp_low": 1281406,
+  "comp_mid": 1333193,
   "comp_high": 1416000,
   "comp_confidence": "medium",
-  "comp_n": 39,
+  "comp_n": 44,
   "value_low": 1343186,
   "value_mid": 1426429,
   "value_high": 1509672,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:03:52.827168+00:00",
-  "days_since_last_change": 6.27,
+  "days_since_last_change": 7.25,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 33.5,
+  "sale_pressure": 33.7,
   "sale_pressure_label": "low",
-  "model_low": 1328227,
-  "model_mid": 1447824,
-  "model_high": 1578628,
+  "model_low": 1345209,
+  "model_mid": 1468044,
+  "model_high": 1604641,
   "model_confidence": "medium",
-  "text_signal_pct": -8.4874,
-  "description_index": -0.441233,
+  "text_signal_pct": -12.8607,
+  "description_index": -0.693284,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 6177920442,
-    "low": 1328227,
-    "mid": 1447824,
-    "high": 1578628,
+    "low": 1345209,
+    "mid": 1468044,
+    "high": 1604641,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0862, 0.0865], \"rel_width\": 0.1729, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6177920442,
@@ -290,78 +290,59 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.1753,
+    "condition_renovation": 0.1722,
     "views_waterfront": 0.0,
-    "family_school": 0.2808,
+    "family_school": 0.2811,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4198,
-    "description_premium_pct": -8.4874,
-    "description_index": -0.441233,
+    "description_premium_pct": -12.8607,
+    "description_index": -0.693284,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 0, \"family_school\": 4, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
-        "topic_id": 0,
-        "weight": 0.46753,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "morning",
-          "friends",
-          "coffee",
-          "relaxed",
-          "life",
-          "coastal",
-          "morning coffee",
-          "sense",
-          "setting",
-          "inviting",
-          "summer",
-          "step"
-        ]
-      },
-      {
         "topic_id": 2,
-        "weight": 0.304388,
+        "weight": 0.486263,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
           "maintenance",
           "low maintenance",
           "low",
+          "easy care",
+          "care",
+          "single",
           "brand new",
           "brand",
+          "convenience",
           "new",
-          "easy care",
-          "single",
-          "care",
           "buyers",
-          "investors",
-          "home buyers"
+          "investors"
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.116559,
-        "label": "Bedrooms, bathrooms & layout",
+        "topic_id": 0,
+        "weight": 0.309031,
+        "label": "Parking, garden & section",
         "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "ensuite",
-          "walk",
-          "master",
-          "bathroom",
-          "upstairs",
-          "suite",
-          "floor",
-          "family bathroom",
-          "lounge",
-          "master suite"
+          "room",
+          "garden",
+          "morning",
+          "brick",
+          "fenced",
+          "summer",
+          "street",
+          "away",
+          "renovated",
+          "coffee",
+          "ready",
+          "fully fenced"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.073047,
+        "weight": 0.111684,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -370,12 +351,31 @@
           "car",
           "lock leave",
           "park",
-          "pool",
           "secure",
-          "complex",
           "kensington",
+          "pool",
+          "complex",
           "balcony",
-          "gym"
+          "kensington park"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.086566,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "wardrobe",
+          "walk wardrobe",
+          "ensuite",
+          "walk",
+          "bathroom",
+          "master",
+          "upstairs",
+          "lounge",
+          "suite",
+          "family bathroom",
+          "separate",
+          "bedroom"
         ]
       }
     ]
@@ -441,7 +441,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "Tucked away in a boutique enclave in the heart of Takapuna, this stylish townhouse offers the perfect combination of location, lifestyle and low-maintenance living.\r\n\r\nDesigned for those who want to spend less time on upkeep and more time enjoying everything Takapuna has to offer, this home is an ideal choice for families looking for a quality property in a consistently sought-after location.\r\n\r\nThe main living level is light, welcoming and designed for everyday comfort. The sun is out on the deck and in the front courtyard. The contemporary kitchen connects seamlessly with the open-plan dining and living areas, creating a relaxed and practical space for both daily life and entertaining. Step outside to the private courtyard — a lovely spot for your morning coffee, weekend BBQs or alfresco dining with friends.\r\n\r\nUpstairs, three well-proportioned bedrooms provide comfortable accommodation, including a master bedroom with its own ensuite, complemented by a stylish family bathroom. A double garage is a real bonus in such a central Takapuna location, adding both convenience and valuable storage.\r\n\r\nAnd when it comes to lifestyle, it’s hard to beat. Takapuna Beach is just minutes away, while cafés, restaurants, bars, shops and everyday amenities are all within easy reach. Northcroft Reserve and playground are also right on your doorstep, giving you even more space to enjoy the outdoors.\r\n\r\nModern, easy-care and superbly positioned, this is a home that makes Takapuna living simple. Move in, enjoy the lifestyle, and let the location do the rest.",
   "photos": [
@@ -636,20 +636,6 @@
   ],
   "comps": [
     {
-      "property_id": "af89f289-f4fb-4972-acd2-97ac647d33f4",
-      "address": "1/20 Huron Street, Takapuna, Auckland",
-      "sale_price": 1615000,
-      "sale_date": "2026-07-16T00:00:00+00:00",
-      "distance_km": 0.15,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1800000,
-      "estimate_mid": 1660000
-    },
-    {
       "property_id": "8904f082-b62c-43ec-83a8-5b462f1dfe41",
       "address": "103/16 Huron Street, Takapuna, Auckland",
       "sale_price": 1240000,
@@ -678,6 +664,20 @@
       "estimate_mid": 720000
     },
     {
+      "property_id": "01cdc114-c405-4d64-ab84-791284e300a0",
+      "address": "3/10 Park Avenue, Takapuna, Auckland",
+      "sale_price": 888456,
+      "sale_date": "2026-09-21T00:00:00+00:00",
+      "distance_km": 0.61,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1025000,
+      "estimate_mid": 920000
+    },
+    {
       "property_id": "132b8fe7-a550-44f4-8bf3-1176e9c1b026",
       "address": "1/33 Harley Road, Takapuna, Auckland",
       "sale_price": 1065000,
@@ -690,20 +690,6 @@
       "property_type": null,
       "cv": 1150000,
       "estimate_mid": 1090000
-    },
-    {
-      "property_id": "1e9a1a62-9eba-43f3-9c3a-dcb6365eede2",
-      "address": "1/15 Anzac Street, Takapuna, Auckland",
-      "sale_price": 950000,
-      "sale_date": "2026-07-20T00:00:00+00:00",
-      "distance_km": 0.67,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1100000,
-      "estimate_mid": 955000
     },
     {
       "property_id": "9ef549fa-4c42-4b89-b280-0b716faa6fed",
@@ -732,20 +718,6 @@
       "property_type": null,
       "cv": 1300000,
       "estimate_mid": 1240000
-    },
-    {
-      "property_id": "6a09f092-a9f9-46c2-9c71-c13102d53dc5",
-      "address": "8A Ewen Street, Takapuna, Auckland",
-      "sale_price": 1935000,
-      "sale_date": "2026-07-02T00:00:00+00:00",
-      "distance_km": 0.85,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2425000,
-      "estimate_mid": 2360000
     },
     {
       "property_id": "daa08feb-4d35-49fa-aba6-031cf93e6d2a",
@@ -802,6 +774,34 @@
       "property_type": null,
       "cv": 450000,
       "estimate_mid": 440000
+    },
+    {
+      "property_id": "85230b45-31e4-419e-a289-940d8762432b",
+      "address": "23/15 Puriri Street, Takapuna, Auckland",
+      "sale_price": 456000,
+      "sale_date": "2026-08-05T00:00:00+00:00",
+      "distance_km": 1.13,
+      "bedrooms": 1,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 475000,
+      "estimate_mid": 460000
+    },
+    {
+      "property_id": "ad0f6167-8c3d-4754-a03b-107bc801f196",
+      "address": "2/7 Onepoto Road, Hauraki, Auckland",
+      "sale_price": 820000,
+      "sale_date": "2026-07-31T00:00:00+00:00",
+      "distance_km": 1.25,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 970000,
+      "estimate_mid": 835000
     }
   ],
   "valuation": {
@@ -823,22 +823,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.29M – $1.42M",
-        "low": 1285815,
-        "mid": 1359682,
+        "range": "$1.28M – $1.42M",
+        "low": 1281406,
+        "mid": 1333193,
         "high": 1416000,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "medium",
-        "n": 39,
+        "n": 44,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
-          "n": 39,
-          "n_eff": 6.88,
+          "n": 44,
+          "n_eff": 7.9,
           "radius_km": 3.0,
-          "median_ratio": 0.9218,
-          "iqr_ratio": 0.0957,
-          "same_suburb": 24,
+          "median_ratio": 0.9039,
+          "iqr_ratio": 0.101,
+          "same_suburb": 28,
           "model_version": "comp-cv-v1"
         }
       },

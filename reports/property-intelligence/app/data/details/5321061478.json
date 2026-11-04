@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2025-05-15T22:27:40.743000+00:00",
-  "days_on_market": 536,
+  "days_on_market": 537,
   "lat": -36.7730711,
   "lon": 174.7634466,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2339229018.jpg",
@@ -29,13 +29,13 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 869000,
-  "comp_mid": 1240000,
+  "comp_low": 888456,
+  "comp_mid": 1270000,
   "comp_high": 1550000,
   "comp_confidence": "low",
-  "comp_n": 39,
-  "value_low": 869000,
-  "value_mid": 1240000,
+  "comp_n": 41,
+  "value_low": 888456,
+  "value_mid": 1270000,
   "value_high": 1550000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
@@ -63,7 +63,7 @@
   "change_signal": "price increase",
   "change_count": 3,
   "last_change_at": "2026-11-02T16:20:21.443222+00:00",
-  "days_since_last_change": 1.22,
+  "days_since_last_change": 2.19,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 3,
   "sale_pressure": 75.0,
   "sale_pressure_label": "high",
-  "model_low": 1183028,
-  "model_mid": 1650130,
-  "model_high": 2251882,
+  "model_low": 1184883,
+  "model_mid": 1656080,
+  "model_high": 2286806,
   "model_confidence": "low",
-  "text_signal_pct": -8.8186,
-  "description_index": -0.459271,
+  "text_signal_pct": -13.425,
+  "description_index": -0.726002,
   "events_count": 3,
   "last_event": "price_change",
   "schools": [
@@ -298,33 +298,33 @@
   ],
   "model": {
     "listing_id": 5321061478,
-    "low": 1183028,
-    "mid": 1650130,
-    "high": 2251882,
+    "low": 1184883,
+    "mid": 1656080,
+    "high": 2286806,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3328, 0.3109], \"rel_width\": 0.6477, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5321061478,
     "word_count": 226,
     "exclamations": 8,
     "urgency": 0.5664,
-    "luxury": 0.3648,
-    "condition_renovation": 0.5793,
-    "views_waterfront": 0.3631,
-    "family_school": 0.5414,
+    "luxury": 0.3658,
+    "condition_renovation": 0.569,
+    "views_waterfront": 0.3618,
+    "family_school": 0.542,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4411,
-    "description_premium_pct": -8.8186,
-    "description_index": -0.459271,
+    "description_premium_pct": -13.425,
+    "description_index": -0.726002,
     "lexicon_hits_json": "{\"urgency\": 2, \"luxury\": 3, \"condition_renovation\": 3, \"views_waterfront\": 3, \"family_school\": 7, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-03T21:36:14.160526+00:00",
+    "updated_at": "2026-11-04T20:59:12.704213+00:00",
     "top_topics": [
       {
         "topic_id": 5,
-        "weight": 0.399551,
+        "weight": 0.420746,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -343,45 +343,26 @@
       },
       {
         "topic_id": 4,
-        "weight": 0.340015,
+        "weight": 0.381638,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "quality",
           "finishes",
+          "year",
           "designer",
           "appliances",
-          "year",
-          "luxury",
+          "new",
+          "brand",
+          "brand new",
           "comfort",
           "designer kitchen",
-          "new",
-          "design",
-          "heating"
-        ]
-      },
-      {
-        "topic_id": 9,
-        "weight": 0.108762,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "brick",
-          "street",
-          "fenced",
-          "parking",
-          "fully",
-          "fully fenced",
-          "garden",
-          "room",
-          "sunny",
-          "facing",
-          "north facing",
-          "street parking"
+          "luxury"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.069428,
+        "weight": 0.081246,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -390,12 +371,31 @@
           "car",
           "lock leave",
           "park",
-          "pool",
           "secure",
-          "complex",
           "kensington",
+          "pool",
+          "complex",
           "balcony",
-          "gym"
+          "kensington park"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.055821,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "wardrobe",
+          "walk wardrobe",
+          "ensuite",
+          "walk",
+          "bathroom",
+          "master",
+          "upstairs",
+          "lounge",
+          "suite",
+          "family bathroom",
+          "separate",
+          "bedroom"
         ]
       }
     ]
@@ -463,14 +463,14 @@
     "first_description_change_at": "2026-11-02T16:20:21.443222+00:00",
     "last_description_change_at": "2026-11-02T16:20:21.443222+00:00",
     "days_to_first_change": 10.4,
-    "days_since_last_change": 1.22,
+    "days_since_last_change": 2.19,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "removed",
-    "updated_at": "2026-11-03T21:36:13.491609+00:00"
+    "updated_at": "2026-11-04T20:59:12.003679+00:00"
   },
   "body": "LOT 3 NOW SOLD UNCONDITIONALLY! \r\nRemaining Available: Lots 1 & Lot 2\r\nWith another lot now sold, opportunities are narrowing!\r\nIf you've been watching and waiting, now is the time to act! Don't miss your chance to secure one of the remaining homes.\r\n\r\nStroll into the heart of Milford! Selling Well Below CV!!!\r\n\r\nJust a gentle stroll from Milford Beach and moments from Milford Village, Shakespeare Square offers a collection of freehold, newly built homes in one of the North Shore's most sought-after coastal suburbs.\r\n\r\n*Property Files: Copy & Paste the link below to view or download the property documents:\r\nhttps://rwmairangibay.co.nz/MRG32128\r\n\r\nEach home features three well-appointed bedrooms, an internal-access garage, and light-filled open-plan living flowing to a sunny, north-facing balcony.\r\n\r\nThoughtfully designed with high-spec interiors and backed by a 10-Year Master Build Guarantee, these homes offer comfort, quality and low-maintenance living.\r\n\r\nHighlights:\r\n- Three bedrooms, all with their own ensuites\r\n- Family bathroom plus separate guest toilet\r\n- Modern kitchen with premium appliances\r\n- Open-plan living and dining with balcony access\r\n- Sunny, north-facing balcony\r\n- Internal-access garage\r\n- Air conditioning, double glazing and quality flooring\r\n- Underfloor heating in the bathrooms\r\n- High-grade tapware and heated towel rails\r\n- Zoned for Westlake Boys and Girls, Takapuna Normal Intermediate, Takapuna Grammar and Milford School, Rosmini & Carmel Colleges nearby\r\n- Walk to Milford Beach, cafes, shops and public transport\r\n- 10-Year Master Build Guarantee\r\n\r\nA rare opportunity to secure a premium new home in a tightly held Milford location!\r\n\r\n**Photos are indicative and may showcase various homes within the development.",
   "photos": [
@@ -498,6 +498,20 @@
   },
   "history": [],
   "comps": [
+    {
+      "property_id": "7fbe1592-dfaf-4871-95b3-d67ff46ec402",
+      "address": "2E Rangitoto Terrace, Milford, Auckland",
+      "sale_price": 1400000,
+      "sale_date": "2026-09-04T00:00:00+00:00",
+      "distance_km": 0.36,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1520000,
+      "estimate_mid": 1410000
+    },
     {
       "property_id": "194ffb63-0e32-4286-891a-173ab14bbb7b",
       "address": "16A Dallinghoe Crescent, Milford, Auckland",
@@ -569,34 +583,6 @@
       "estimate_mid": 8410000
     },
     {
-      "property_id": "709ff01c-36c7-4152-9c3f-105213eec309",
-      "address": "3/6 Corunna Road, Milford, Auckland",
-      "sale_price": 767000,
-      "sale_date": "2026-08-12T00:00:00+00:00",
-      "distance_km": 0.76,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 780000,
-      "estimate_mid": 760000
-    },
-    {
-      "property_id": "7f813c93-d2ef-463f-8ef3-2a77bcd1d47d",
-      "address": "1A Prestige Place, Castor Bay, Auckland",
-      "sale_price": 2150000,
-      "sale_date": "2026-08-11T00:00:00+00:00",
-      "distance_km": 0.77,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2350000,
-      "estimate_mid": 1930000
-    },
-    {
       "property_id": "f6b2966d-3dcf-445c-9d7d-5310d21a62ad",
       "address": "2/70 Nile Road, Milford, Auckland",
       "sale_price": 750000,
@@ -653,6 +639,20 @@
       "estimate_mid": 1950000
     },
     {
+      "property_id": "4aa0a4e0-332a-49d5-bf1e-a3104aa6cf55",
+      "address": "201E Hurstmere Road, Takapuna, Auckland",
+      "sale_price": 1730000,
+      "sale_date": "2026-09-30T00:00:00+00:00",
+      "distance_km": 1.33,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1950000,
+      "estimate_mid": 1780000
+    },
+    {
       "property_id": "78cf715c-ccb3-4518-8d63-956364bddbf1",
       "address": "19 Aberdeen Road, Castor Bay, Auckland",
       "sale_price": 1830000,
@@ -668,29 +668,29 @@
     }
   ],
   "valuation": {
-    "value_low": 869000,
-    "value_mid": 1240000,
+    "value_low": 888456,
+    "value_mid": 1270000,
     "value_high": 1550000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$869K – $1.55M",
-        "low": 869000,
-        "mid": 1240000,
+        "range": "$888K – $1.55M",
+        "low": 888456,
+        "mid": 1270000,
         "high": 1550000,
-        "updated_at": "2026-11-03T21:36:13.491609+00:00",
+        "updated_at": "2026-11-04T20:59:12.003679+00:00",
         "confidence": "low",
-        "n": 39,
+        "n": 41,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 39,
-          "n_eff": 10.18,
+          "n": 41,
+          "n_eff": 11.3,
           "radius_km": 3.0,
-          "iqr_ratio": 0.5492,
-          "same_suburb": 9,
+          "iqr_ratio": 0.5209,
+          "same_suburb": 10,
           "model_version": "comp-cv-v1"
         }
       }

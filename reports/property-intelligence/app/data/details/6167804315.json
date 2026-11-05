@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-07T04:41:28.873000+00:00",
-  "days_on_market": 28,
+  "days_on_market": 29,
   "lat": -36.5761798,
   "lon": 174.6850313,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333824773.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1750228,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1383659,
-  "comp_mid": 1475272,
+  "comp_low": 1400932,
+  "comp_mid": 1478962,
   "comp_high": 1559736,
   "comp_confidence": "high",
-  "comp_n": 56,
+  "comp_n": 47,
   "value_low": 1557214,
   "value_mid": 1653721,
   "value_high": 1750228,
@@ -51,7 +51,7 @@
   "ask_gap": -3721,
   "ask_gap_pct": -0.0023,
   "deal_gap": 0.0023,
-  "view_count": 1516,
+  "view_count": 1579,
   "watchers": 23,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:08:19.075499+00:00",
-  "days_since_last_change": 0.99,
+  "days_since_last_change": 2.11,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 4,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 4,
-  "sale_pressure": 44.7,
+  "sale_pressure": 44.8,
   "sale_pressure_label": "medium",
-  "model_low": 1355331,
-  "model_mid": 1479090,
-  "model_high": 1616716,
+  "model_low": 1352559,
+  "model_mid": 1474412,
+  "model_high": 1619578,
   "model_confidence": "high",
-  "text_signal_pct": 8.4342,
-  "description_index": 0.40779,
+  "text_signal_pct": 9.408,
+  "description_index": 0.451546,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,71 +268,90 @@
   ],
   "model": {
     "listing_id": 6167804315,
-    "low": 1355331,
-    "mid": 1479090,
-    "high": 1616716,
+    "low": 1352559,
+    "mid": 1474412,
+    "high": 1619578,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0863, 0.0939], \"rel_width\": 0.1811, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6167804315,
     "word_count": 238,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.2316,
+    "luxury": 0.2294,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.229,
-    "family_school": 0.147,
+    "views_waterfront": 0.2261,
+    "family_school": 0.1445,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3161,
-    "description_premium_pct": 8.4342,
-    "description_index": 0.40779,
+    "description_premium_pct": 9.408,
+    "description_index": 0.451546,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 2, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-04T20:59:12.704213+00:00",
+    "updated_at": "2026-11-05T23:51:41.323765+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.767204,
+        "weight": 0.777437,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
           "lock",
           "leave",
-          "car",
           "lock leave",
+          "car",
+          "kensington",
           "park",
           "secure",
-          "kensington",
           "pool",
+          "kensington park",
           "complex",
-          "balcony",
-          "kensington park"
+          "balcony"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.085144,
-        "label": "Resort amenities (pool / tennis / spa)",
+        "weight": 0.095275,
+        "label": "Luxury, architectural & prestige",
         "top_terms": [
           "residence",
           "scale",
           "expansive",
           "waterfront",
-          "harbour",
           "pool",
-          "views",
+          "harbour",
           "architectural",
-          "aucklands",
-          "substantial",
+          "views",
+          "privacy",
           "setting",
-          "privacy"
+          "spaces",
+          "substantial"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.043674,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "room",
+          "morning",
+          "garden",
+          "brick",
+          "renovated",
+          "coffee",
+          "ready",
+          "fenced",
+          "street",
+          "away",
+          "sun",
+          "summer"
         ]
       },
       {
         "topic_id": 8,
-        "weight": 0.066133,
+        "weight": 0.039815,
         "label": "Family living & entertaining",
         "top_terms": [
           "extended",
@@ -347,25 +366,6 @@
           "teenagers",
           "separate",
           "impressive"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.055165,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "room",
-          "garden",
-          "morning",
-          "brick",
-          "fenced",
-          "summer",
-          "street",
-          "away",
-          "renovated",
-          "coffee",
-          "ready",
-          "fully fenced"
         ]
       }
     ]
@@ -447,7 +447,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-04T20:59:12.003679+00:00"
+    "updated_at": "2026-11-05T23:51:40.561333+00:00"
   },
   "body": "Apartment living doesn't have to mean compromising on space, sunshine or privacy.\r\n\r\nPerfectly positioned to face the north, and nestled within Kensington Park, this sought-after Eaves Bush Apartment offers an enviable combination of generous proportions, all day sunshine, a peaceful natural outlook and effortless indoor-outdoor living.\r\n\r\nCommanding the ground floor northeast corner, the 148m² apartment is filled with natural light and designed around spacious open-plan living. Quality fittings, plantation shutters and tailored drapery add a timeless sense of style, while the living area opens effortlessly to a covered deck and your own private steps leading directly to the beautifully maintained garden reserve. With the added bonus of being pet friendly.\r\n\r\nThe connection to nature is exceptional with native birds and bush creating a peaceful backdrop to your every day, whether it is morning coffee in the sunshine or an evening barbeque while watching the sun set. Just a few steps away from your apartment's north facing balcony is the footbridge access to Alice Eaves Scenic Reserve, with 16 hectares of native forest and walking tracks to explore.\r\n\r\nPracticality is equally well catered for, with two secure basement car parks and a private, lockable storage unit included in the purchase.\r\n\r\nAdd Kensington Park's resort-style amenities and beautifully maintained grounds, together with the security and flexibility of freehold ownership within the unit title structure, and you have a lifestyle that is both easy and rewarding.\r\n\r\nCome and experience it for yourself, private viewings are available today, call Jaimee or Mark, the Kensington Park Property Specialists.",
   "photos": [
@@ -670,20 +670,6 @@
       "estimate_mid": 895000
     },
     {
-      "property_id": "0148b6c7-e521-49df-829b-2452559e6861",
-      "address": "65 West Hoe Heights, Orewa, Orewa",
-      "sale_price": 1370000,
-      "sale_date": "2026-08-26T00:00:00+00:00",
-      "distance_km": 0.47,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1600000,
-      "estimate_mid": 1390000
-    },
-    {
       "property_id": "15590492-8b5d-4d4f-9e8a-15018107f469",
       "address": "1/36 Elizabeth Street, Orewa, Orewa",
       "sale_price": 795000,
@@ -808,6 +794,20 @@
       "property_type": null,
       "cv": 850000,
       "estimate_mid": 880000
+    },
+    {
+      "property_id": "05a947e7-e945-4449-8546-c63b7422fd2c",
+      "address": "1A Melanie Place, Orewa, Orewa",
+      "sale_price": 810000,
+      "sale_date": "2026-10-12T00:00:00+00:00",
+      "distance_km": 1.52,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 760000,
+      "estimate_mid": 740000
     }
   ],
   "valuation": {
@@ -829,22 +829,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.38M – $1.56M",
-        "low": 1383659,
-        "mid": 1475272,
+        "range": "$1.40M – $1.56M",
+        "low": 1400932,
+        "mid": 1478962,
         "high": 1559736,
-        "updated_at": "2026-11-04T20:59:12.003679+00:00",
+        "updated_at": "2026-11-05T23:51:40.561333+00:00",
         "confidence": "high",
-        "n": 56,
+        "n": 47,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 56,
-          "n_eff": 8.97,
+          "n": 47,
+          "n_eff": 8.03,
           "radius_km": 3.0,
-          "median_ratio": 0.9674,
-          "iqr_ratio": 0.1194,
-          "same_suburb": 46,
+          "median_ratio": 0.9698,
+          "iqr_ratio": 0.1074,
+          "same_suburb": 42,
           "model_version": "comp-cv-v1"
         }
       },

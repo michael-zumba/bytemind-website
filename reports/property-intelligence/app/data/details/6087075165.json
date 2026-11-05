@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-08-17T03:49:09.873000+00:00",
-  "days_on_market": 79,
+  "days_on_market": 80,
   "lat": -36.8862973,
   "lon": 174.9147552,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2323915815.jpg",
@@ -30,10 +30,10 @@
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
   "comp_low": 1335423,
-  "comp_mid": 1441525,
+  "comp_mid": 1455300,
   "comp_high": 1564322,
   "comp_confidence": "high",
-  "comp_n": 47,
+  "comp_n": 49,
   "value_low": 1400294,
   "value_mid": 1507022,
   "value_high": 1613750,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2280,
+  "view_count": 2294,
   "watchers": 49,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:36:20.078027+00:00",
-  "days_since_last_change": 1.02,
+  "days_since_last_change": 2.14,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 43.2,
+  "sale_pressure": 43.3,
   "sale_pressure_label": "medium",
-  "model_low": 1370444,
-  "model_mid": 1495582,
-  "model_high": 1634743,
+  "model_low": 1342505,
+  "model_mid": 1463452,
+  "model_high": 1607539,
   "model_confidence": "high",
-  "text_signal_pct": -8.6168,
-  "description_index": -0.453797,
+  "text_signal_pct": -11.5526,
+  "description_index": -0.616513,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -318,71 +318,52 @@
   ],
   "model": {
     "listing_id": 6087075165,
-    "low": 1370444,
-    "mid": 1495582,
-    "high": 1634743,
+    "low": 1342505,
+    "mid": 1463452,
+    "high": 1607539,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0863, 0.0939], \"rel_width\": 0.1811, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6087075165,
     "word_count": 224,
     "exclamations": 1,
     "urgency": 0.0,
-    "luxury": 0.369,
-    "condition_renovation": 0.1914,
+    "luxury": 0.3656,
+    "condition_renovation": 0.1897,
     "views_waterfront": 0.0,
-    "family_school": 0.3906,
+    "family_school": 0.3839,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.1988,
-    "description_premium_pct": -8.6168,
-    "description_index": -0.453797,
+    "description_premium_pct": -11.5526,
+    "description_index": -0.616513,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 3, \"condition_renovation\": 1, \"views_waterfront\": 0, \"family_school\": 5, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-04T20:59:12.704213+00:00",
+    "updated_at": "2026-11-05T23:51:41.323765+00:00",
     "top_topics": [
       {
         "topic_id": 7,
-        "weight": 0.387129,
+        "weight": 0.41922,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
           "walk wardrobe",
-          "ensuite",
           "walk",
-          "bathroom",
+          "ensuite",
           "master",
+          "bathroom",
+          "suite",
           "upstairs",
           "lounge",
-          "suite",
+          "master suite",
           "family bathroom",
-          "separate",
-          "bedroom"
-        ]
-      },
-      {
-        "topic_id": 4,
-        "weight": 0.280954,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "premium",
-          "quality",
-          "finishes",
-          "year",
-          "designer",
-          "appliances",
-          "new",
-          "brand",
-          "brand new",
-          "comfort",
-          "designer kitchen",
-          "luxury"
+          "separate"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.279664,
+        "weight": 0.248892,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -392,30 +373,49 @@
           "intermediate",
           "suburb intermediate",
           "primary",
-          "marina",
           "pigeon",
           "pigeon mountain",
           "mountain",
-          "suburb marina"
+          "marina",
+          "zone"
+        ]
+      },
+      {
+        "topic_id": 4,
+        "weight": 0.246786,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "quality",
+          "premium",
+          "finishes",
+          "new",
+          "designer",
+          "year",
+          "appliances",
+          "brand",
+          "brand new",
+          "luxury",
+          "comfort",
+          "design"
         ]
       },
       {
         "topic_id": 2,
-        "weight": 0.03401,
+        "weight": 0.046841,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
+          "single",
+          "easy care",
           "maintenance",
           "low maintenance",
-          "low",
-          "easy care",
           "care",
-          "single",
+          "low",
           "brand new",
           "brand",
-          "convenience",
           "new",
-          "buyers",
-          "investors"
+          "practical",
+          "strathmill",
+          "convenience"
         ]
       }
     ]
@@ -464,7 +464,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-04T20:59:12.003679+00:00"
+    "updated_at": "2026-11-05T23:51:40.561333+00:00"
   },
   "body": "Perfectly situated in one of the most sought-after neighbourhoods, this sophisticated brand-new standalone home offers effortless, timeless, and high-quality family living.\r\nThe ground floor is designed for everyday comfort and connection - featuring a sleek, contemporary open-plan kitchen with premium appliances, and a spacious dining and living area that seamlessly flows onto a sunny deck - the perfect setting for both relaxation and entertaining. A double bedroom with ensuite and a separate guest toilet adds extra convenience and flexibility for family or visitors.\r\nUpstairs, discover four beautifully appointed bedrooms, including a spacious master suite with walk-in wardrobe and ensuite. A full family bathroom serves the remaining three bedrooms, each complete with built-in double wardrobes.\r\nKey Features:\r\n•Standalone home with freehold title\r\n•Five generous bedrooms and three and a half bathrooms, including two ensuites\r\n•Internal-access garage with dedicated laundry and storage space\r\n• Equipped with three air conditioning units for year-round comfort\r\n•Prime education zone - only a 5-minute walk to Macleans Primary, BBI, and Macleans College\r\n•Minutes from Half Moon Bay ferry terminal - easy commute to Auckland City\r\n•Close to reserves, beaches, local shops, bakery, and eateries\r\n•Comes with a standard 10-year builder warranty and 1-year free maintenance period\r\nThis stunning, highly functional home combines modern comfort with unbeatable convenience, offering your family the lifestyle you've been dreaming of.\r\nDon't miss out - call now to arrange your private viewing!",
   "photos": [
@@ -671,20 +671,6 @@
       "estimate_mid": 1330000
     },
     {
-      "property_id": "3c6938b2-4b77-4b53-a68e-406caab36431",
-      "address": "66 Bleakhouse Road, Bucklands Beach, Auckland",
-      "sale_price": 1260000,
-      "sale_date": "2026-07-30T00:00:00+00:00",
-      "distance_km": 0.51,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1475000,
-      "estimate_mid": 1310000
-    },
-    {
       "property_id": "fad4b584-e6cc-4611-a1eb-bbdc65db151f",
       "address": "3D Jillteresa Crescent, Half Moon Bay, Auckland",
       "sale_price": 1381000,
@@ -695,7 +681,7 @@
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1300000,
+      "cv": 1475000,
       "estimate_mid": 1380000
     },
     {
@@ -737,7 +723,7 @@
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1300000,
+      "cv": 1475000,
       "estimate_mid": 1250000
     },
     {
@@ -753,6 +739,20 @@
       "property_type": null,
       "cv": 870000,
       "estimate_mid": 740000
+    },
+    {
+      "property_id": "6b01fabf-323f-4b36-aedb-573e635599ee",
+      "address": "110C Hutchinsons Road, Bucklands Beach, Auckland",
+      "sale_price": 905000,
+      "sale_date": "2026-08-10T00:00:00+00:00",
+      "distance_km": 0.65,
+      "bedrooms": null,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1000000,
+      "estimate_mid": 960000
     }
   ],
   "valuation": {
@@ -776,19 +776,19 @@
         "name": "Nearby sold comparables",
         "range": "$1.34M – $1.56M",
         "low": 1335423,
-        "mid": 1441525,
+        "mid": 1455300,
         "high": 1564322,
-        "updated_at": "2026-11-04T20:59:12.003679+00:00",
+        "updated_at": "2026-11-05T23:51:40.561333+00:00",
         "confidence": "high",
-        "n": 47,
+        "n": 49,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 47,
-          "n_eff": 9.96,
+          "n": 49,
+          "n_eff": 10.15,
           "radius_km": 3.0,
-          "median_ratio": 0.9153,
-          "iqr_ratio": 0.1588,
+          "median_ratio": 0.924,
+          "iqr_ratio": 0.1573,
           "same_suburb": 23,
           "model_version": "comp-cv-v1"
         }

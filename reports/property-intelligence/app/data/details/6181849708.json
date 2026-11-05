@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-15T22:20:01.380000+00:00",
-  "days_on_market": 19,
+  "days_on_market": 20,
   "lat": -36.8859673,
   "lon": 174.91539,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2288678082.jpg",
@@ -31,12 +31,12 @@
   "estimate_updated_at": null,
   "comp_low": 905000,
   "comp_mid": 1505000,
-  "comp_high": 1880000,
+  "comp_high": 1651000,
   "comp_confidence": "low",
-  "comp_n": 12,
+  "comp_n": 11,
   "value_low": 905000,
   "value_mid": 1505000,
-  "value_high": 1880000,
+  "value_high": 1651000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2337,
-  "watchers": 56,
+  "view_count": 2360,
+  "watchers": 57,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:36:34.087357+00:00",
-  "days_since_last_change": 1.02,
+  "days_since_last_change": 2.14,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 33.2,
+  "sale_pressure": 33.3,
   "sale_pressure_label": "low",
-  "model_low": 1445661,
-  "model_mid": 2020563,
-  "model_high": 2790104,
+  "model_low": 1547881,
+  "model_mid": 2137567,
+  "model_high": 2939204,
   "model_confidence": "low",
-  "text_signal_pct": -2.9259,
-  "description_index": -0.149551,
+  "text_signal_pct": -2.0878,
+  "description_index": -0.105959,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -308,33 +308,33 @@
   ],
   "model": {
     "listing_id": 6181849708,
-    "low": 1445661,
-    "mid": 2020563,
-    "high": 2790104,
+    "low": 1547881,
+    "mid": 2137567,
+    "high": 2939204,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3228, 0.3185], \"rel_width\": 0.6509, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6181849708,
     "word_count": 284,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.6792,
-    "condition_renovation": 0.1509,
+    "luxury": 0.6729,
+    "condition_renovation": 0.1496,
     "views_waterfront": 0.0,
-    "family_school": 0.9242,
+    "family_school": 0.9085,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4108,
-    "description_premium_pct": -2.9259,
-    "description_index": -0.149551,
+    "description_premium_pct": -2.0878,
+    "description_index": -0.105959,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 7, \"condition_renovation\": 1, \"views_waterfront\": 0, \"family_school\": 15, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-04T20:59:12.704213+00:00",
+    "updated_at": "2026-11-05T23:51:41.323765+00:00",
     "top_topics": [
       {
         "topic_id": 6,
-        "weight": 0.432726,
+        "weight": 0.408456,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -344,54 +344,35 @@
           "intermediate",
           "suburb intermediate",
           "primary",
-          "marina",
           "pigeon",
           "pigeon mountain",
           "mountain",
-          "suburb marina"
+          "marina",
+          "zone"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.277499,
+        "weight": 0.318971,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
           "walk wardrobe",
-          "ensuite",
           "walk",
-          "bathroom",
+          "ensuite",
           "master",
+          "bathroom",
+          "suite",
           "upstairs",
           "lounge",
-          "suite",
+          "master suite",
           "family bathroom",
-          "separate",
-          "bedroom"
-        ]
-      },
-      {
-        "topic_id": 4,
-        "weight": 0.140863,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "premium",
-          "quality",
-          "finishes",
-          "year",
-          "designer",
-          "appliances",
-          "new",
-          "brand",
-          "brand new",
-          "comfort",
-          "designer kitchen",
-          "luxury"
+          "separate"
         ]
       },
       {
         "topic_id": 8,
-        "weight": 0.140458,
+        "weight": 0.15564,
         "label": "Family living & entertaining",
         "top_terms": [
           "extended",
@@ -406,6 +387,25 @@
           "teenagers",
           "separate",
           "impressive"
+        ]
+      },
+      {
+        "topic_id": 4,
+        "weight": 0.113851,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "quality",
+          "premium",
+          "finishes",
+          "new",
+          "designer",
+          "year",
+          "appliances",
+          "brand",
+          "brand new",
+          "luxury",
+          "comfort",
+          "design"
         ]
       }
     ]
@@ -454,7 +454,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-04T20:59:12.003679+00:00"
+    "updated_at": "2026-11-05T23:51:40.561333+00:00"
   },
   "body": "Tucked privately in a peaceful cul-de-sac and just an easy walk to Macleans College, this stunning residence offers modern luxury and versatile living on a sunny 376sqm section with approx. 299sqm floor area.\r\n \r\nDesigned for extended families, this fantastic home features 6 bedrooms, 3 living areas, 2 legal kitchens and 4 bathrooms (2 ensuites) — a spacious 4-bedroom main home plus a fully self-contained 2-bedroom granny flat.\r\n \r\nStep inside to a light-filled open-plan living and dining area flowing seamlessly to the deck — perfect for entertaining. The designer kitchen showcases premium appliances and a large island bench, while the fully fenced section with security gate and landscaped garden ensures privacy and safety.\r\n \r\nThe separate 2-bedroom flat has its own entrance and includes a living area, kitchen and stylish bathroom — ideal for grandparents, teenagers or guests.\r\n \r\nUpstairs offers excellent separation with a generous family lounge and wet bar for relaxing or hosting. Four well-appointed bedrooms sit privately on one wing, including a luxurious master suite with walk-in wardrobe and spa bathroom. A wrap-around balcony connects 3 bedrooms, extending living outdoors.\r\n \r\nFeatures you’ll love include:\r\n• Premium materials and high-end appliances\r\n• Gas fireplace with Schist chimney\r\n• Underfloor heating in all bathrooms\r\n• Built-in Bluetooth speakers (main living)\r\n• Double internal garage and ample storage\r\n• Security gate and CCTV system\r\n \r\nLocated in a family-friendly neighbourhood and zoned for Macleans Primary, Bucklands Beach Intermediate and Macleans College — all within walking distance. Close to Highland Park Shopping Centre, Pak’n Save, Half Moon Bay Ferry Terminal and Lloyd Elsmore Park.\r\n \r\nBuilt in 2024 in the most popular school zone — it will be in high demand and ready to impress. Contact us today to secure it.",
   "photos": [
@@ -562,20 +562,6 @@
       "estimate_mid": 1690000
     },
     {
-      "property_id": "3c6938b2-4b77-4b53-a68e-406caab36431",
-      "address": "66 Bleakhouse Road, Bucklands Beach, Auckland",
-      "sale_price": 1260000,
-      "sale_date": "2026-07-30T00:00:00+00:00",
-      "distance_km": 0.49,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1475000,
-      "estimate_mid": 1310000
-    },
-    {
       "property_id": "4839d005-c40f-4269-a5bc-6d1cc0e93b38",
       "address": "69B Priestley Drive, Bucklands Beach, Auckland",
       "sale_price": 1325000,
@@ -628,7 +614,7 @@
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1300000,
+      "cv": 1475000,
       "estimate_mid": 1380000
     },
     {
@@ -642,7 +628,7 @@
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1300000,
+      "cv": 1475000,
       "estimate_mid": 1250000
     },
     {
@@ -658,32 +644,46 @@
       "property_type": null,
       "cv": 1000000,
       "estimate_mid": 960000
+    },
+    {
+      "property_id": "50c7407f-34f6-419f-89e0-92615417de61",
+      "address": "121B Gills Road, Bucklands Beach, Auckland",
+      "sale_price": 740000,
+      "sale_date": "2026-08-18T00:00:00+00:00",
+      "distance_km": 0.69,
+      "bedrooms": null,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 870000,
+      "estimate_mid": 740000
     }
   ],
   "valuation": {
     "value_low": 905000,
     "value_mid": 1505000,
-    "value_high": 1880000,
+    "value_high": 1651000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$905K – $1.88M",
+        "range": "$905K – $1.65M",
         "low": 905000,
         "mid": 1505000,
-        "high": 1880000,
-        "updated_at": "2026-11-04T20:59:12.003679+00:00",
+        "high": 1651000,
+        "updated_at": "2026-11-05T23:51:40.561333+00:00",
         "confidence": "low",
-        "n": 12,
+        "n": 11,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 12,
-          "n_eff": 4.79,
+          "n": 11,
+          "n_eff": 4.35,
           "radius_km": 3.0,
-          "iqr_ratio": 0.6478,
-          "same_suburb": 8,
+          "iqr_ratio": 0.4957,
+          "same_suburb": 7,
           "model_version": "comp-cv-v1"
         }
       }

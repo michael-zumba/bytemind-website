@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-09-09T13:33:38.097000+00:00",
-  "days_on_market": 56,
+  "days_on_market": 57,
   "lat": -36.88871,
   "lon": 174.9050903,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2336685575.jpg",
@@ -31,12 +31,12 @@
   "estimate_updated_at": null,
   "comp_low": 1155000,
   "comp_mid": 1381000,
-  "comp_high": 1720000,
+  "comp_high": 1650000,
   "comp_confidence": "low",
-  "comp_n": 41,
+  "comp_n": 42,
   "value_low": 1155000,
   "value_mid": 1381000,
-  "value_high": 1720000,
+  "value_high": 1650000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:32:26.485442+00:00",
-  "days_since_last_change": 1.02,
+  "days_since_last_change": 2.14,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 39.3,
+  "sale_pressure": 39.5,
   "sale_pressure_label": "low",
-  "model_low": 1010618,
-  "model_mid": 1412515,
-  "model_high": 1950478,
+  "model_low": 1068465,
+  "model_mid": 1475511,
+  "model_high": 2028862,
   "model_confidence": "low",
-  "text_signal_pct": 1.6839,
-  "description_index": 0.084095,
+  "text_signal_pct": 1.5839,
+  "description_index": 0.07892,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -318,33 +318,33 @@
   ],
   "model": {
     "listing_id": 6124305041,
-    "low": 1010618,
-    "mid": 1412515,
-    "high": 1950478,
+    "low": 1068465,
+    "mid": 1475511,
+    "high": 2028862,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3228, 0.3185], \"rel_width\": 0.6509, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6124305041,
     "word_count": 330,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.334,
-    "condition_renovation": 0.1299,
+    "luxury": 0.3309,
+    "condition_renovation": 0.1288,
     "views_waterfront": 0.0,
-    "family_school": 0.6363,
-    "investment": 0.2013,
+    "family_school": 0.6255,
+    "investment": 0.2117,
     "risk": 0.0,
     "readability": 0.3184,
-    "description_premium_pct": 1.6839,
-    "description_index": 0.084095,
+    "description_premium_pct": 1.5839,
+    "description_index": 0.07892,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 4, \"condition_renovation\": 1, \"views_waterfront\": 0, \"family_school\": 12, \"investment\": 2, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-04T20:59:12.704213+00:00",
+    "updated_at": "2026-11-05T23:51:41.323765+00:00",
     "top_topics": [
       {
         "topic_id": 6,
-        "weight": 0.448726,
+        "weight": 0.432567,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -354,16 +354,35 @@
           "intermediate",
           "suburb intermediate",
           "primary",
-          "marina",
           "pigeon",
           "pigeon mountain",
           "mountain",
-          "suburb marina"
+          "marina",
+          "zone"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.125115,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "single",
+          "easy care",
+          "maintenance",
+          "low maintenance",
+          "care",
+          "low",
+          "brand new",
+          "brand",
+          "new",
+          "practical",
+          "strathmill",
+          "convenience"
         ]
       },
       {
         "topic_id": 8,
-        "weight": 0.129221,
+        "weight": 0.117171,
         "label": "Family living & entertaining",
         "top_terms": [
           "extended",
@@ -381,41 +400,22 @@
         ]
       },
       {
-        "topic_id": 2,
-        "weight": 0.121706,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low maintenance",
-          "low",
-          "easy care",
-          "care",
-          "single",
-          "brand new",
-          "brand",
-          "convenience",
-          "new",
-          "buyers",
-          "investors"
-        ]
-      },
-      {
         "topic_id": 7,
-        "weight": 0.114096,
+        "weight": 0.111617,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
           "walk wardrobe",
-          "ensuite",
           "walk",
-          "bathroom",
+          "ensuite",
           "master",
+          "bathroom",
+          "suite",
           "upstairs",
           "lounge",
-          "suite",
+          "master suite",
           "family bathroom",
-          "separate",
-          "bedroom"
+          "separate"
         ]
       }
     ]
@@ -464,7 +464,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-04T20:59:12.003679+00:00"
+    "updated_at": "2026-11-05T23:51:40.561333+00:00"
   },
   "body": "32 Glenenandrew Drive, Half Moon Bay\r\n\r\nA Home That Stands Out\r\nStriking contemporary architecture meets modern family living. Featuring a bold gabled roofline, crisp white cladding, contrasting brickwork and distinctive architectural louvres, these homes deliver exceptional street appeal with a fresh, sophisticated look.\r\n\r\nMore Than Just a Backyard\r\nEnjoy generous outdoor space finished with artificial turf over a well-compacted base, providing a practical, low-maintenance and versatile area for everyday living. Whether it's outdoor activities, entertaining friends or additional vehicle parking where suitable, this space offers flexibility to suit your lifestyle.\r\n\r\nYour Neighbour Is the Park\r\nImagine coming home after a busy day and having a beautiful expanse of green space at arm's length. Enjoy evening walks, let the kids play, or simply take a moment to unwind and enjoy the open surroundings.\r\n\r\nPositioned at the rear of the street, these homes offer a more private setting with the neighbouring park just a short stroll away — a special lifestyle advantage that's hard to find.\r\n\r\nThe surrounding area also offers access to Pigeon Mountain, Half Moon Bay Marina and everyday amenities, adding to the appeal of this Eastern Suburbs location.\r\n\r\nSpace for the Whole Family\r\nSet within a 901m² four-lot development, each home offers approximately 170m² of interior living, four bedrooms and 2.5 bathrooms.\r\n\r\nTwo thoughtfully designed floor plans are available across the development, offering either an expansive open-plan kitchen, dining and living area or separate living and kitchen/dining spaces.\r\n\r\nAn additional upstairs family lounge provides valuable flexibility for relaxing, studying or spending quality time together, while the master bedroom features a walk-in wardrobe.\r\n\r\n• A Location Families Will Appreciate\r\n• Macleans College school zone, subject to confirmation\r\n• Convenient access to local primary and secondary schooling\r\n• Close to Highland Park Pak'nSave and everyday amenities\r\n• Pigeon Mountain reserve, with green open space to enjoy\r\n• Contemporary Style. Flexible Space. Parkside Living.\r\n• Discover modern family homes combining distinctive architectural design, versatile outdoor space and the rare advantage of having a park at arm's length.\r\n\r\nContact me today to arrange your private viewing and discover the possibilities.\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -502,7 +502,7 @@
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1300000,
+      "cv": 1475000,
       "estimate_mid": 1250000
     },
     {
@@ -530,7 +530,7 @@
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1300000,
+      "cv": 1475000,
       "estimate_mid": 1380000
     },
     {
@@ -560,6 +560,20 @@
       "property_type": null,
       "cv": 1400000,
       "estimate_mid": 1330000
+    },
+    {
+      "property_id": "3b37365d-8c5a-48a0-b6b8-53e445e09443",
+      "address": "2/28 Pigeon Mountain Road, Half Moon Bay, Auckland",
+      "sale_price": 1550000,
+      "sale_date": "2026-09-21T00:00:00+00:00",
+      "distance_km": 0.5,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1900000,
+      "estimate_mid": 1760000
     },
     {
       "property_id": "d642e051-7ceb-4377-a422-cc63c66aa6e7",
@@ -644,46 +658,32 @@
       "property_type": null,
       "cv": 1600000,
       "estimate_mid": 1350000
-    },
-    {
-      "property_id": "d1d7dc8b-a716-4335-bb7a-079f987055fc",
-      "address": "48 Priestley Drive, Bucklands Beach, Auckland",
-      "sale_price": 1505000,
-      "sale_date": "2026-10-06T00:00:00+00:00",
-      "distance_km": 0.77,
-      "bedrooms": 5,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1775000,
-      "estimate_mid": 1740000
     }
   ],
   "valuation": {
     "value_low": 1155000,
     "value_mid": 1381000,
-    "value_high": 1720000,
+    "value_high": 1650000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.16M – $1.72M",
+        "range": "$1.16M – $1.65M",
         "low": 1155000,
         "mid": 1381000,
-        "high": 1720000,
-        "updated_at": "2026-11-04T20:59:12.003679+00:00",
+        "high": 1650000,
+        "updated_at": "2026-11-05T23:51:40.561333+00:00",
         "confidence": "low",
-        "n": 41,
+        "n": 42,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 41,
-          "n_eff": 15.29,
+          "n": 42,
+          "n_eff": 16.0,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4091,
-          "same_suburb": 10,
+          "iqr_ratio": 0.3584,
+          "same_suburb": 11,
           "model_version": "comp-cv-v1"
         }
       }

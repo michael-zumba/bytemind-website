@@ -17,7 +17,7 @@
   "sale_method": "Deadline sale",
   "deadline_at": "2026-11-24T11:00:00+00:00",
   "listed_at": "2026-10-26T22:10:46.833000+00:00",
-  "days_on_market": 8,
+  "days_on_market": 9,
   "lat": -36.5885231,
   "lon": 174.6625236,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2337741408.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 642291,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1278367,
-  "comp_mid": 1360769,
-  "comp_high": 1456744,
+  "comp_low": 1300167,
+  "comp_mid": 1374479,
+  "comp_high": 1450000,
   "comp_confidence": "high",
-  "comp_n": 69,
+  "comp_n": 59,
   "value_low": 571460,
   "value_mid": 606876,
   "value_high": 642291,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1116,
-  "watchers": 40,
+  "view_count": 1157,
+  "watchers": 42,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:04:04.945148+00:00",
-  "days_since_last_change": 1.0,
+  "days_since_last_change": 2.12,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 1,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 2,
-  "sale_pressure": 21.3,
+  "sale_pressure": 21.5,
   "sale_pressure_label": "low",
-  "model_low": 1306380,
-  "model_mid": 1425669,
-  "model_high": 1558324,
+  "model_low": 1274197,
+  "model_mid": 1388990,
+  "model_high": 1525746,
   "model_confidence": "high",
-  "text_signal_pct": -21.5395,
-  "description_index": -1.221641,
+  "text_signal_pct": -24.0741,
+  "description_index": -1.383119,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6199420439,
-    "low": 1306380,
-    "mid": 1425669,
-    "high": 1558324,
+    "low": 1274197,
+    "mid": 1388990,
+    "high": 1525746,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0863, 0.0939], \"rel_width\": 0.1811, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6199420439,
@@ -281,20 +281,20 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.1997,
-    "family_school": 0.8974,
-    "investment": 0.4867,
+    "views_waterfront": 0.1971,
+    "family_school": 0.8821,
+    "investment": 0.5119,
     "risk": 0.0,
     "readability": 0.1725,
-    "description_premium_pct": -21.5395,
-    "description_index": -1.221641,
+    "description_premium_pct": -24.0741,
+    "description_index": -1.383119,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 14, \"investment\": 4, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-04T20:59:12.704213+00:00",
+    "updated_at": "2026-11-05T23:51:41.323765+00:00",
     "top_topics": [
       {
         "topic_id": 8,
-        "weight": 0.345097,
+        "weight": 0.365789,
         "label": "Family living & entertaining",
         "top_terms": [
           "extended",
@@ -313,26 +313,45 @@
       },
       {
         "topic_id": 7,
-        "weight": 0.171418,
+        "weight": 0.181205,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
           "walk wardrobe",
-          "ensuite",
           "walk",
-          "bathroom",
+          "ensuite",
           "master",
+          "bathroom",
+          "suite",
           "upstairs",
           "lounge",
-          "suite",
+          "master suite",
           "family bathroom",
-          "separate",
-          "bedroom"
+          "separate"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.133991,
+        "label": "Coastal village & park proximity",
+        "top_terms": [
+          "section",
+          "dream",
+          "marina",
+          "regional",
+          "whangaparaoa",
+          "regional park",
+          "auckland",
+          "build",
+          "dream home",
+          "ferry",
+          "golf",
+          "land"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.125023,
+        "weight": 0.097327,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -342,30 +361,11 @@
           "intermediate",
           "suburb intermediate",
           "primary",
-          "marina",
           "pigeon",
           "pigeon mountain",
           "mountain",
-          "suburb marina"
-        ]
-      },
-      {
-        "topic_id": 9,
-        "weight": 0.117124,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "section",
-          "dream",
-          "build",
-          "dream home",
-          "land",
-          "sections",
-          "whangaparaoa",
-          "community",
-          "auckland",
-          "penlink",
-          "building",
-          "secure"
+          "marina",
+          "zone"
         ]
       }
     ]
@@ -423,7 +423,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-04T20:59:12.003679+00:00"
+    "updated_at": "2026-11-05T23:51:40.561333+00:00"
   },
   "body": "Brand new, beautifully designed coastal living with a clever financial advantage, offering space for the whole family. With five bedrooms in total, this property offers a spacious three bedroom main home with multiple living areas, plus a fully self-contained, two-bedroom legal income with its own separate entrance. Whether you're looking to offset the mortgage, accommodate extended family or secure extra income, this is an opportunity to make your money work harder without compromising on comfort.\r\n\r\nFeatures you'll love:\r\n* Fully fenced, easy-care 392sqm freehold section\r\n* Three bedroom main home, including a spacious master suite with private ensuite\r\n* Contemporary open-plan kitchen, dining and living\r\n* Second separate lounge for movie nights, a kids retreat or a quiet escape\r\n* Modern family bathroom with quality, upmarket finishes\r\n* Sheltered, north-facing deck for sunny afternoons and outdoor entertaining\r\n* Heat pump for year-round comfort\r\n* Security alarm for added peace of mind\r\n* Fully self-contained two-bedroom legal income with its own kitchen\r\n* Private entrance and separate outdoor areas for independent living\r\n\r\nLocated in the sought-after Ara Hills subdivision, just minutes from Orewa's beaches, buzzing cafes, and restaurants, this home places lifestyle front and centre. With easy access to motorways, Matakana and Omaha are a short drive in one direction, while Silverdale and the CBD are within easy reach in the other. Families will also appreciate the fantastic local schooling options including KingsWay School, Stella Maris Primary School, Orewa College, Orewa School, Nukumea School, Silverdale School, and Meraki Montessori School.\r\n\r\nWhether you're bringing the family together or looking for a home that helps pay its way, this property offers a lifestyle and flexibility well worth exploring.\r\n\r\nDEADLINE SALE: Closes Wednesday 25th November (unless sold prior)\r\n\r\nTo download the property documents please visit: https://www.harcourtsfiles.co.nz/listings/9YQB\r\n\r\n- Flexible settlement terms available\r\n- Other agents bring your buyers, conjunctionals welcome",
   "photos": [
@@ -618,6 +618,20 @@
   ],
   "comps": [
     {
+      "property_id": "85161ea5-bb10-4787-975b-f5d25206149c",
+      "address": "96 Huanui Drive, Wainui, Wainui",
+      "sale_price": 1220000,
+      "sale_date": "2026-08-10T00:00:00+00:00",
+      "distance_km": 0.01,
+      "bedrooms": 4,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1300000,
+      "estimate_mid": 1060000
+    },
+    {
       "property_id": "6ae650ed-514b-47da-ae7c-866e151ac9bf",
       "address": "90 Huanui Drive, Wainui, Wainui",
       "sale_price": 1070000,
@@ -658,6 +672,20 @@
       "property_type": null,
       "cv": 1225000,
       "estimate_mid": 1100000
+    },
+    {
+      "property_id": "ba9e7a5c-37f7-40f8-824d-f9a39ae58c9d",
+      "address": "49 Huanui Drive, Wainui, Wainui",
+      "sale_price": 1080000,
+      "sale_date": "2026-08-06T00:00:00+00:00",
+      "distance_km": 0.16,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1225000,
+      "estimate_mid": 1080000
     },
     {
       "property_id": "1dad50db-7ac7-482f-afbc-ffc19a143bb4",
@@ -702,6 +730,20 @@
       "estimate_mid": 1080000
     },
     {
+      "property_id": "92baf40f-ecd7-4f65-8ca0-0c78bfbd4190",
+      "address": "1 Maheu Lane, Wainui, Wainui",
+      "sale_price": 685000,
+      "sale_date": "2026-08-07T00:00:00+00:00",
+      "distance_km": 0.69,
+      "bedrooms": 4,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 540000,
+      "estimate_mid": 580000
+    },
+    {
       "property_id": "014543ac-6102-44a4-9eef-5f45026bff1c",
       "address": "7 Halcyon Bay Lane, Wainui, Wainui",
       "sale_price": 2000000,
@@ -730,20 +772,6 @@
       "estimate_mid": 1290000
     },
     {
-      "property_id": "25d45801-a953-44df-bafc-60428f9a7644",
-      "address": "6 Pekanga Road, Orewa, Orewa",
-      "sale_price": 2100000,
-      "sale_date": "2026-08-20T00:00:00+00:00",
-      "distance_km": 0.77,
-      "bedrooms": 6,
-      "bathrooms": 4,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1800000,
-      "estimate_mid": 2090000
-    },
-    {
       "property_id": "c029b4e4-f2ba-4adf-b2be-7a7fe7db60cc",
       "address": "242F West Hoe Heights, Orewa, Orewa",
       "sale_price": 1290000,
@@ -756,34 +784,6 @@
       "property_type": null,
       "cv": 1500000,
       "estimate_mid": 2160000
-    },
-    {
-      "property_id": "a8773dda-ab2c-4f92-bc1c-538e53babee9",
-      "address": "18 Ara Taha Crescent, Orewa, Orewa",
-      "sale_price": 1170000,
-      "sale_date": "2026-09-14T00:00:00+00:00",
-      "distance_km": 0.9,
-      "bedrooms": null,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1200000,
-      "estimate_mid": 1220000
-    },
-    {
-      "property_id": "fcbeee90-3111-46d0-b50f-11eb5a1e9077",
-      "address": "32 Mahinga Kai Road, Orewa, Orewa",
-      "sale_price": 900000,
-      "sale_date": "2026-09-22T00:00:00+00:00",
-      "distance_km": 0.94,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 850000,
-      "estimate_mid": 880000
     }
   ],
   "valuation": {
@@ -805,22 +805,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.28M – $1.46M",
-        "low": 1278367,
-        "mid": 1360769,
-        "high": 1456744,
-        "updated_at": "2026-11-04T20:59:12.003679+00:00",
+        "range": "$1.30M – $1.45M",
+        "low": 1300167,
+        "mid": 1374479,
+        "high": 1450000,
+        "updated_at": "2026-11-05T23:51:40.561333+00:00",
         "confidence": "high",
-        "n": 69,
+        "n": 59,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 69,
-          "n_eff": 11.93,
+          "n": 59,
+          "n_eff": 10.23,
           "radius_km": 3.0,
-          "median_ratio": 0.9385,
-          "iqr_ratio": 0.1311,
-          "same_suburb": 41,
+          "median_ratio": 0.9479,
+          "iqr_ratio": 0.109,
+          "same_suburb": 38,
           "model_version": "comp-cv-v1"
         }
       },

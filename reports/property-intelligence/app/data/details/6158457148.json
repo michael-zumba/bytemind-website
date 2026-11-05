@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-01T07:47:27.577000+00:00",
-  "days_on_market": 34,
+  "days_on_market": 35,
   "lat": -36.6927032,
   "lon": 174.736839,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2296552722.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1035000,
+  "comp_low": 1030000,
   "comp_mid": 1185000,
   "comp_high": 1565000,
   "comp_confidence": "low",
-  "comp_n": 77,
-  "value_low": 1035000,
+  "comp_n": 75,
+  "value_low": 1030000,
   "value_mid": 1185000,
   "value_high": 1565000,
   "value_source": "sold_comps_absolute",
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 4,
-  "sale_pressure": 45.7,
+  "sale_pressure": 45.8,
   "sale_pressure_label": "medium",
-  "model_low": 825246,
-  "model_mid": 1153425,
-  "model_high": 1592712,
+  "model_low": 877004,
+  "model_mid": 1211110,
+  "model_high": 1665304,
   "model_confidence": "low",
-  "text_signal_pct": 7.9919,
-  "description_index": 0.387208,
+  "text_signal_pct": 9.1529,
+  "description_index": 0.439827,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,76 +288,95 @@
   ],
   "model": {
     "listing_id": 6158457148,
-    "low": 825246,
-    "mid": 1153425,
-    "high": 1592712,
+    "low": 877004,
+    "mid": 1211110,
+    "high": 1665304,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3228, 0.3185], \"rel_width\": 0.6509, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6158457148,
     "word_count": 245,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.4499,
+    "luxury": 0.4457,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.5562,
-    "family_school": 0.5,
-    "investment": 0.2712,
+    "views_waterfront": 0.5492,
+    "family_school": 0.4914,
+    "investment": 0.2852,
     "risk": 0.0,
     "readability": 0.4993,
-    "description_premium_pct": 7.9919,
-    "description_index": 0.387208,
+    "description_premium_pct": 9.1529,
+    "description_index": 0.439827,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 4, \"condition_renovation\": 0, \"views_waterfront\": 5, \"family_school\": 7, \"investment\": 2, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-04T20:59:12.704213+00:00",
+    "updated_at": "2026-11-05T23:51:41.323765+00:00",
     "top_topics": [
       {
         "topic_id": 9,
-        "weight": 0.462919,
-        "label": "New build / brand-new quality",
+        "weight": 0.384934,
+        "label": "Coastal village & park proximity",
         "top_terms": [
           "section",
           "dream",
+          "marina",
+          "regional",
+          "whangaparaoa",
+          "regional park",
+          "auckland",
           "build",
           "dream home",
-          "land",
-          "sections",
-          "whangaparaoa",
-          "community",
-          "auckland",
-          "penlink",
-          "building",
-          "secure"
+          "ferry",
+          "golf",
+          "land"
         ]
       },
       {
         "topic_id": 10,
-        "weight": 0.252032,
+        "weight": 0.252198,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
-          "views",
           "sea views",
+          "views",
           "elevated",
-          "position",
           "rangitoto",
+          "position",
+          "elevated position",
           "outlook",
           "spectacular",
-          "elevated position",
           "gulf",
-          "hauraki gulf",
-          "hauraki"
+          "panoramic",
+          "hauraki gulf"
+        ]
+      },
+      {
+        "topic_id": 1,
+        "weight": 0.144924,
+        "label": "Development & land potential",
+        "top_terms": [
+          "potential",
+          "future",
+          "site",
+          "land",
+          "development",
+          "property",
+          "subject",
+          "council",
+          "existing",
+          "housing",
+          "value",
+          "mixed"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.117138,
+        "weight": 0.112289,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
-          "school",
           "girls",
+          "school",
           "girls high",
           "high school",
           "westlake girls",
@@ -365,27 +384,8 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "school suburb",
-          "shore"
-        ]
-      },
-      {
-        "topic_id": 1,
-        "weight": 0.078902,
-        "label": "Development & land potential",
-        "top_terms": [
-          "potential",
-          "future",
-          "site",
-          "development",
-          "land",
-          "property",
-          "subject",
-          "council",
-          "existing",
-          "mixed",
-          "housing",
-          "value"
+          "north",
+          "school suburb"
         ]
       }
     ]
@@ -426,7 +426,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-04T20:59:12.003679+00:00"
+    "updated_at": "2026-11-05T23:51:40.561333+00:00"
   },
   "body": "Positioned to capture elevated outlooks and Sea Views. This prime Long Bay section offers a rare opportunity, to secure a 505sqm ready-to-build site in one of The North Shore’s most desirable coastal suburbs. \r\n \r\nThis section with no land caveats includes an approved Resource Consent for a three level home with architectural drawings, driveway and drainage plans, and geotechnical report. Much of the groundwork has already been done, allowing you to focus on bringing your vision to life, maximising sun, views, and outdoor living. Whether you’re planning a striking architectural build, a spacious family family home or a future-focused investment, this is a platform that supports it.\r\n\r\nLocation is where this property truly shines. Long Bay is where beachside living meets everyday convenience - enjoy a leisurely walk to Long Bay beach to long Bay beach, the stunning Long Bay-Okura coastline offers, nature walks, cycle trails, and private picnic spots . You’re 15 minutes walk to Long Bay Village and supermarket. Despite it’s relaxed coastal feel, you’re still within a 30 - 40 minute drive to Auckland’s CBD, offering the perfect balance between city access and seaside lifestyle.\r\n\r\nPremium Schools are a quick walk away. Long bay college (300m) is a 3 minute walk away, and around 7 minutes walk to Long Bay Primary (550m). A connecting bus stop to Northcross intermediate is only a 3 minute walk.\r\n\r\nSections in this location , with this level of preparation and outlook, are increasingly hard to find.",
   "photos": [
@@ -456,20 +456,6 @@
   },
   "history": [],
   "comps": [
-    {
-      "property_id": "49fa0e36-9e02-45c1-b1c7-9f4ad6d995be",
-      "address": "15 Bight Road, Long Bay, Auckland",
-      "sale_price": 1655000,
-      "sale_date": "2026-08-18T00:00:00+00:00",
-      "distance_km": 0.6,
-      "bedrooms": 5,
-      "bathrooms": 4,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1650000,
-      "estimate_mid": 1640000
-    },
     {
       "property_id": "b057960d-5092-4ed0-a57f-a211890f9383",
       "address": "2/18 Stredwick Drive, Torbay, Auckland",
@@ -607,7 +593,7 @@
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 580000,
+      "cv": 1250000,
       "estimate_mid": 645000
     },
     {
@@ -623,10 +609,24 @@
       "property_type": null,
       "cv": 1025000,
       "estimate_mid": 1100000
+    },
+    {
+      "property_id": "d7e06551-ea81-47a5-a9a0-7a1d1e60f351",
+      "address": "349 Glenvar Road, Long Bay, Auckland",
+      "sale_price": 1965000,
+      "sale_date": "2026-08-28T00:00:00+00:00",
+      "distance_km": 1.23,
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1950000,
+      "estimate_mid": 1980000
     }
   ],
   "valuation": {
-    "value_low": 1035000,
+    "value_low": 1030000,
     "value_mid": 1185000,
     "value_high": 1565000,
     "value_source": "sold_comps_absolute",
@@ -635,20 +635,20 @@
       {
         "name": "Nearby sold comparables",
         "range": "$1.03M – $1.56M",
-        "low": 1035000,
+        "low": 1030000,
         "mid": 1185000,
         "high": 1565000,
-        "updated_at": "2026-11-04T20:59:12.003679+00:00",
+        "updated_at": "2026-11-05T23:51:40.561333+00:00",
         "confidence": "low",
-        "n": 77,
+        "n": 75,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 77,
-          "n_eff": 23.5,
+          "n": 75,
+          "n_eff": 22.45,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4473,
-          "same_suburb": 30,
+          "iqr_ratio": 0.4515,
+          "same_suburb": 29,
           "model_version": "comp-cv-v1"
         }
       }

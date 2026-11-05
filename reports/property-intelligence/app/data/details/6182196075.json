@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-16T03:17:19.853000+00:00",
-  "days_on_market": 19,
+  "days_on_market": 20,
   "lat": -36.7251244,
   "lon": 174.730835,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2335503918.jpg",
@@ -29,7 +29,7 @@
   "estimate_high": 1342484,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1192195,
+  "comp_low": 1187931,
   "comp_mid": 1300000,
   "comp_high": 1430000,
   "comp_confidence": "high",
@@ -51,7 +51,7 @@
   "ask_gap": 152031,
   "ask_gap_pct": 0.1194,
   "deal_gap": -0.1194,
-  "view_count": 1771,
+  "view_count": 1786,
   "watchers": 30,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": "price increase",
   "change_count": 3,
   "last_change_at": "2026-11-03T14:15:39.655819+00:00",
-  "days_since_last_change": 1.28,
+  "days_since_last_change": 2.4,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 68.2,
+  "sale_pressure": 68.3,
   "sale_pressure_label": "high",
-  "model_low": 1147288,
-  "model_mid": 1252049,
-  "model_high": 1368549,
+  "model_low": 1136657,
+  "model_mid": 1239058,
+  "model_high": 1361052,
   "model_confidence": "high",
-  "text_signal_pct": -17.4458,
-  "description_index": -0.965502,
+  "text_signal_pct": -19.2728,
+  "description_index": -1.075184,
   "events_count": 3,
   "last_event": "price_change",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6182196075,
-    "low": 1147288,
-    "mid": 1252049,
-    "high": 1368549,
+    "low": 1136657,
+    "mid": 1239058,
+    "high": 1361052,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0863, 0.0939], \"rel_width\": 0.1811, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6182196075,
@@ -301,20 +301,39 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.236,
-    "family_school": 0.9848,
+    "views_waterfront": 0.233,
+    "family_school": 0.968,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.187,
-    "description_premium_pct": -17.4458,
-    "description_index": -0.965502,
+    "description_premium_pct": -19.2728,
+    "description_index": -1.075184,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 13, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-04T20:59:12.704213+00:00",
+    "updated_at": "2026-11-05T23:51:41.323765+00:00",
     "top_topics": [
       {
+        "topic_id": 2,
+        "weight": 0.25665,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "single",
+          "easy care",
+          "maintenance",
+          "low maintenance",
+          "care",
+          "low",
+          "brand new",
+          "brand",
+          "new",
+          "practical",
+          "strathmill",
+          "convenience"
+        ]
+      },
+      {
         "topic_id": 6,
-        "weight": 0.253443,
+        "weight": 0.250775,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -324,59 +343,40 @@
           "intermediate",
           "suburb intermediate",
           "primary",
-          "marina",
           "pigeon",
           "pigeon mountain",
           "mountain",
-          "suburb marina"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.251076,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low maintenance",
-          "low",
-          "easy care",
-          "care",
-          "single",
-          "brand new",
-          "brand",
-          "convenience",
-          "new",
-          "buyers",
-          "investors"
+          "marina",
+          "zone"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.229905,
-        "label": "Luxury, architectural & prestige",
+        "weight": 0.229483,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "premium",
           "quality",
+          "premium",
           "finishes",
-          "year",
-          "designer",
-          "appliances",
           "new",
+          "designer",
+          "year",
+          "appliances",
           "brand",
           "brand new",
+          "luxury",
           "comfort",
-          "designer kitchen",
-          "luxury"
+          "design"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.135206,
+        "weight": 0.136263,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
-          "school",
           "girls",
+          "school",
           "girls high",
           "high school",
           "westlake girls",
@@ -384,8 +384,8 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "school suburb",
-          "shore"
+          "north",
+          "school suburb"
         ]
       }
     ]
@@ -453,14 +453,14 @@
     "first_description_change_at": "2026-11-03T14:15:39.655819+00:00",
     "last_description_change_at": "2026-11-03T14:15:39.655819+00:00",
     "days_to_first_change": 11.32,
-    "days_since_last_change": 1.28,
+    "days_since_last_change": 2.4,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "set",
-    "updated_at": "2026-11-04T20:59:12.003679+00:00"
+    "updated_at": "2026-11-05T23:51:40.561333+00:00"
   },
   "body": "Ten-Year Halo Building Guarantee\r\nSunny, brand-new, and beautifully designed, this impressive two-level home offers modern comfort, quality finishes and an exceptionally convenient Browns Bay location. With five generous bedrooms and excellent indoor-outdoor flow, it is an ideal choice for families looking for space, style and easy everyday living.\r\n\r\nKey Features:\r\n• Brand-new, solid two-level home on a freehold title, with quality interiors and stylish finishes throughout\r\n• Five generous double bedrooms, plus 2.5 bathrooms including a master ensuite\r\n• Spacious open-plan living and dining with a modern, well-appointed kitchen\r\n• Excellent indoor-outdoor flow to a private entertainer's deck, perfect for relaxed gatherings and outdoor living\r\n• Single internal-access garage plus additional off-street parking\r\n• Backed by a 10-year Halo Building Guarantee for added peace of mind\r\n\r\nTop School Zones:\r\nZoned for highly regarded schools including Rangitoto College, Murrays Bay Intermediate, Northcross Intermediate and Pinehill School, this home is an excellent choice for families.\r\n\r\nUnbeatable Browns Bay Location:\r\nEnjoy the best of coastal living with everyday convenience close at hand. Sherwood Reserve and Freyberg Park are nearby, while Browns Bay beach, shops, restaurants, cafés, the community centre and local clubs are all within easy walking distance.\r\n\r\nWith parks, beaches, schools and amenities all close by, this is a wonderful opportunity to secure a spacious, modern family home in one of the North Shore's most sought-after locations.",
   "photos": [
@@ -713,20 +713,20 @@
       {
         "name": "Nearby sold comparables",
         "range": "$1.19M – $1.43M",
-        "low": 1192195,
+        "low": 1187931,
         "mid": 1300000,
         "high": 1430000,
-        "updated_at": "2026-11-04T20:59:12.003679+00:00",
+        "updated_at": "2026-11-05T23:51:40.561333+00:00",
         "confidence": "high",
         "n": 122,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 122,
-          "n_eff": 19.28,
+          "n_eff": 19.27,
           "radius_km": 3.0,
           "median_ratio": 1.0,
-          "iqr_ratio": 0.1829,
+          "iqr_ratio": 0.1862,
           "same_suburb": 41,
           "model_version": "comp-cv-v1"
         }

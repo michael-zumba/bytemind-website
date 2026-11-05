@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-28T19:58:31.593000+00:00",
-  "days_on_market": 6,
+  "days_on_market": 7,
   "lat": -36.609783,
   "lon": 174.7946605,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338227626.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 799000,
+  "comp_low": 760000,
   "comp_mid": 867000,
   "comp_high": 1025000,
   "comp_confidence": "medium",
-  "comp_n": 19,
-  "value_low": 799000,
+  "comp_n": 18,
+  "value_low": 760000,
   "value_mid": 867000,
   "value_high": 1025000,
   "value_source": "sold_comps_absolute",
@@ -51,7 +51,7 @@
   "ask_gap": -28000,
   "ask_gap_pct": -0.0323,
   "deal_gap": 0.0323,
-  "view_count": 1547,
+  "view_count": 1643,
   "watchers": 47,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:42:29.704814+00:00",
-  "days_since_last_change": 1.01,
+  "days_since_last_change": 2.13,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 51.0,
+  "sale_pressure": 51.2,
   "sale_pressure_label": "medium",
-  "model_low": 604224,
-  "model_mid": 844509,
-  "model_high": 1166143,
+  "model_low": 586313,
+  "model_mid": 809677,
+  "model_high": 1113324,
   "model_confidence": "low",
-  "text_signal_pct": 11.2232,
-  "description_index": 0.535685,
+  "text_signal_pct": 5.7101,
+  "description_index": 0.278871,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -258,11 +258,11 @@
   ],
   "model": {
     "listing_id": 6202582390,
-    "low": 604224,
-    "mid": 844509,
-    "high": 1166143,
+    "low": 586313,
+    "mid": 809677,
+    "high": 1113324,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3228, 0.3185], \"rel_width\": 0.6509, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6202582390,
@@ -270,92 +270,92 @@
     "exclamations": 4,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.1125,
-    "views_waterfront": 0.8584,
-    "family_school": 0.5052,
-    "investment": 0.3488,
+    "condition_renovation": 0.1115,
+    "views_waterfront": 0.8476,
+    "family_school": 0.4966,
+    "investment": 0.3668,
     "risk": 0.0,
     "readability": 0.5191,
-    "description_premium_pct": 11.2232,
-    "description_index": 0.535685,
+    "description_premium_pct": 5.7101,
+    "description_index": 0.278871,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 12, \"family_school\": 11, \"investment\": 4, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-04T20:59:12.704213+00:00",
+    "updated_at": "2026-11-05T23:51:41.323765+00:00",
     "top_topics": [
       {
         "topic_id": 0,
-        "weight": 0.353866,
+        "weight": 0.284043,
         "label": "Parking, garden & section",
         "top_terms": [
           "room",
-          "garden",
           "morning",
+          "garden",
           "brick",
-          "fenced",
-          "summer",
-          "street",
-          "away",
           "renovated",
           "coffee",
           "ready",
-          "fully fenced"
+          "fenced",
+          "street",
+          "away",
+          "sun",
+          "summer"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.278957,
+        "label": "Coastal village & park proximity",
+        "top_terms": [
+          "section",
+          "dream",
+          "marina",
+          "regional",
+          "whangaparaoa",
+          "regional park",
+          "auckland",
+          "build",
+          "dream home",
+          "ferry",
+          "golf",
+          "land"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.150156,
+        "weight": 0.18616,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
           "walk wardrobe",
-          "ensuite",
           "walk",
-          "bathroom",
+          "ensuite",
           "master",
+          "bathroom",
+          "suite",
           "upstairs",
           "lounge",
-          "suite",
+          "master suite",
           "family bathroom",
+          "separate"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.08318,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "extended",
+          "flexibility",
+          "extended family",
+          "guests",
+          "living areas",
+          "areas",
+          "family living",
+          "multiple",
+          "families",
+          "teenagers",
           "separate",
-          "bedroom"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.104045,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low maintenance",
-          "low",
-          "easy care",
-          "care",
-          "single",
-          "brand new",
-          "brand",
-          "convenience",
-          "new",
-          "buyers",
-          "investors"
-        ]
-      },
-      {
-        "topic_id": 1,
-        "weight": 0.095373,
-        "label": "Development & land potential",
-        "top_terms": [
-          "potential",
-          "future",
-          "site",
-          "development",
-          "land",
-          "property",
-          "subject",
-          "council",
-          "existing",
-          "mixed",
-          "housing",
-          "value"
+          "impressive"
         ]
       }
     ]
@@ -404,7 +404,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-04T20:59:12.003679+00:00"
+    "updated_at": "2026-11-05T23:51:40.561333+00:00"
   },
   "body": "Room to grow, sunshine to enjoy, and a coastal lifestyle to love!\r\n\r\nYour next chapter starts here! Whether you're taking your first step onto the property ladder, searching for the perfect family home or looking to grow your investment portfolio, this one ticks all the right boxes. Set on a freehold site in a popular street, with four bedrooms, two bathrooms and plenty of space to spread out, this is an opportunity to make the most of relaxed coastal living.\r\n\r\nBoasting lovely street appeal and light-filled interiors, this welcoming home is ideally positioned within walking distance of Gulf Harbour School - a real bonus for busy families.\r\n\r\nStep inside and discover the open-plan kitchen and living area, flowing effortlessly onto a lovely sunny deck - the perfect spot for summer BBQs and entertaining. The securely fenced backyard offers lawn for the kids and pets to enjoy.\r\n\r\nThe lower level features a generous bedroom with a bathroom conveniently opposite, plus a double garage with internal access.\r\n\r\nUpstairs, the master suite provides a peaceful retreat, complete with a walk-in wardrobe, semi-ensuite and balcony where you can relax and enjoy the outlook. Two additional bedrooms and a large attic storage space add further flexibility for growing families or those needing extra room.\r\n\r\nComfort is covered, with Healthy Homes compliance and a heat pump for year-round comfort.\r\n\r\nA home that works for you!\r\n\r\n* First-home buyers: Enjoy the space to settle in and make it your own.\r\n* Families: Four bedrooms, outdoor space and room for everyone.\r\n* Investors: Add a versatile property on a freehold site to your portfolio, existing tenants would love to stay.\r\n* Flatmate potential: Make the most of the flexible living options and help make home ownership work for you.\r\n\r\nEnjoy an enviable coastal lifestyle with beautiful beaches, parks, golf courses, the marina, local shops, cafes and restaurants. Nearby Shakespear Regional Park offers spectacular coastal walks, bike rides, hiking tracks and glorious summer beach days.\r\n\r\nWith Whangaparaoa Golf Course close at hand and the Gulf Harbour ferry connecting you to Auckland, you can enjoy relaxed coastal living while keeping everyday essentials within easy reach.\r\n\r\nSunshine, space and so many possibilities - this is Gulf Harbour living at its best!\r\n\r\nGet in touch today to arrange a viewing and discover all the space, outlook and lifestyle this special home has to offer.\r\n\r\nOther agents: Bring your buyers - conjunctionals welcome.\r\n\r\nTo view/download property files please copy this link into your browser: https://www.harcourtsfiles.co.nz/listings/45FJ",
   "photos": [
@@ -512,20 +512,6 @@
       "estimate_mid": 1140000
     },
     {
-      "property_id": "55b4eed7-88a3-49dd-a0f1-285cee813bf4",
-      "address": "1314 Whangaparaoa Road, Army Bay, Whangaparaoa",
-      "sale_price": 995000,
-      "sale_date": "2026-04-23T00:00:00+00:00",
-      "distance_km": 0.57,
-      "bedrooms": 5,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1100000,
-      "estimate_mid": 1020000
-    },
-    {
       "property_id": "9a47501e-a80f-436e-9725-02f9bc5d10cb",
       "address": "27 Pacific Parade, Army Bay, Whangaparaoa",
       "sale_price": 870000,
@@ -538,20 +524,6 @@
       "property_type": null,
       "cv": 930000,
       "estimate_mid": 870000
-    },
-    {
-      "property_id": "bfa9dfc0-f213-440e-b1ea-b12bcc391479",
-      "address": "26 Pacific Parade, Army Bay, Whangaparaoa",
-      "sale_price": 1150000,
-      "sale_date": "2026-04-22T00:00:00+00:00",
-      "distance_km": 0.72,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1150000,
-      "estimate_mid": 1150000
     },
     {
       "property_id": "9a83a749-3e0e-423c-8f6b-6276827f6fa2",
@@ -608,10 +580,38 @@
       "property_type": null,
       "cv": 520000,
       "estimate_mid": 575000
+    },
+    {
+      "property_id": "a68f72b4-a570-49a9-bad8-68094c96f63d",
+      "address": "1391 Whangaparaoa Road, Army Bay, Whangaparaoa",
+      "sale_price": 1000000,
+      "sale_date": "2026-09-12T00:00:00+00:00",
+      "distance_km": 0.9,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1075000,
+      "estimate_mid": 1020000
+    },
+    {
+      "property_id": "b02ba695-3359-4d3e-9a5f-1b7f28a3a925",
+      "address": "1390 Whangaparaoa Road, Army Bay, Whangaparaoa",
+      "sale_price": 810000,
+      "sale_date": "2026-09-28T00:00:00+00:00",
+      "distance_km": 0.95,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 880000,
+      "estimate_mid": 820000
     }
   ],
   "valuation": {
-    "value_low": 799000,
+    "value_low": 760000,
     "value_mid": 867000,
     "value_high": 1025000,
     "value_source": "sold_comps_absolute",
@@ -619,20 +619,20 @@
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$799K – $1.02M",
-        "low": 799000,
+        "range": "$760K – $1.02M",
+        "low": 760000,
         "mid": 867000,
         "high": 1025000,
-        "updated_at": "2026-11-04T20:59:12.003679+00:00",
+        "updated_at": "2026-11-05T23:51:40.561333+00:00",
         "confidence": "medium",
-        "n": 19,
+        "n": 18,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 19,
-          "n_eff": 8.65,
+          "n": 18,
+          "n_eff": 8.36,
           "radius_km": 3.0,
-          "iqr_ratio": 0.2607,
+          "iqr_ratio": 0.3057,
           "same_suburb": 12,
           "model_version": "comp-cv-v1"
         }

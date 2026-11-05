@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-09-10T22:46:48.267000+00:00",
-  "days_on_market": 54,
+  "days_on_market": 55,
   "lat": -36.7963676,
   "lon": 174.7688237,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2334985964.jpg",
@@ -30,12 +30,12 @@
   "estimate_source": null,
   "estimate_updated_at": null,
   "comp_low": 711000,
-  "comp_mid": 820000,
+  "comp_mid": 802000,
   "comp_high": 925000,
   "comp_confidence": "low",
-  "comp_n": 20,
+  "comp_n": 21,
   "value_low": 711000,
-  "value_mid": 820000,
+  "value_mid": 802000,
   "value_high": 925000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1879,
-  "watchers": 36,
+  "view_count": 1891,
+  "watchers": 37,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -63,7 +63,7 @@
   "change_signal": "price increase",
   "change_count": 2,
   "last_change_at": "2026-10-28T15:36:04.753426+00:00",
-  "days_since_last_change": 7.22,
+  "days_since_last_change": 8.34,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 69.0,
+  "sale_pressure": 69.2,
   "sale_pressure_label": "high",
-  "model_low": 558549,
-  "model_mid": 780669,
-  "model_high": 1077991,
+  "model_low": 602976,
+  "model_mid": 832687,
+  "model_high": 1144965,
   "model_confidence": "low",
-  "text_signal_pct": -29.8403,
-  "description_index": -1.784783,
+  "text_signal_pct": -29.6891,
+  "description_index": -1.768968,
   "events_count": 2,
   "last_event": "price_change",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6126437928,
-    "low": 558549,
-    "mid": 780669,
-    "high": 1077991,
+    "low": 602976,
+    "mid": 832687,
+    "high": 1144965,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3228, 0.3185], \"rel_width\": 0.6509, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6126437928,
@@ -303,23 +303,23 @@
     "condition_renovation": 0.0,
     "views_waterfront": 0.0,
     "family_school": 1.0,
-    "investment": 0.2575,
+    "investment": 0.2708,
     "risk": 0.0,
     "readability": 0.268,
-    "description_premium_pct": -29.8403,
-    "description_index": -1.784783,
+    "description_premium_pct": -29.6891,
+    "description_index": -1.768968,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 8, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-04T20:59:12.704213+00:00",
+    "updated_at": "2026-11-05T23:51:41.323765+00:00",
     "top_topics": [
       {
         "topic_id": 5,
-        "weight": 0.626752,
+        "weight": 0.632661,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
-          "school",
           "girls",
+          "school",
           "girls high",
           "high school",
           "westlake girls",
@@ -327,32 +327,13 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "school suburb",
-          "shore"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.13354,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "ensuite",
-          "walk",
-          "bathroom",
-          "master",
-          "upstairs",
-          "lounge",
-          "suite",
-          "family bathroom",
-          "separate",
-          "bedroom"
+          "north",
+          "school suburb"
         ]
       },
       {
         "topic_id": 8,
-        "weight": 0.128814,
+        "weight": 0.143442,
         "label": "Family living & entertaining",
         "top_terms": [
           "extended",
@@ -370,22 +351,41 @@
         ]
       },
       {
+        "topic_id": 7,
+        "weight": 0.125252,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "wardrobe",
+          "walk wardrobe",
+          "walk",
+          "ensuite",
+          "master",
+          "bathroom",
+          "suite",
+          "upstairs",
+          "lounge",
+          "master suite",
+          "family bathroom",
+          "separate"
+        ]
+      },
+      {
         "topic_id": 3,
-        "weight": 0.110895,
+        "weight": 0.098645,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
           "lock",
           "leave",
-          "car",
           "lock leave",
+          "car",
+          "kensington",
           "park",
           "secure",
-          "kensington",
           "pool",
+          "kensington park",
           "complex",
-          "balcony",
-          "kensington park"
+          "balcony"
         ]
       }
     ]
@@ -446,14 +446,14 @@
     "first_description_change_at": null,
     "last_description_change_at": null,
     "days_to_first_change": 5.36,
-    "days_since_last_change": 7.22,
+    "days_since_last_change": 8.34,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "set",
-    "updated_at": "2026-11-04T20:59:12.003679+00:00"
+    "updated_at": "2026-11-05T23:51:40.561333+00:00"
   },
   "body": "More Space. More Flexibility. More Value.\r\n\r\nA generously sized 58m² one-bedroom + study offering considerably more versatility than your typical one-bedroom apartment.\r\n\r\nThe standout is the large separate study complete with its own wardrobe, creating an incredibly flexible additional space - ideal as a home office, guest room, nursery or additional storage.\r\n\r\nKey Features:\r\n\r\n- Generous 58m² internal floor area\r\n- Spacious separate bedroom\r\n- Large separate study with wardrobe\r\n- Open-plan kitchen, dining & living\r\n- Modern bathroom\r\n- Excellent work-from-home flexibility\r\n- Ideal for first-home buyers, professionals or investors\r\n- Excellent school zones including Takapuna School, Takapuna Normal Intermediate, Belmont Intermediate, Takapuna Grammar School & Westlake Girls' High School\r\n- Prime Takapuna location with easy access to the beach, cafés, shopping, public transport and motorway connections\r\n\r\nA one-bedroom apartment that gives you the extra space you normally have to step up a category to get.\r\n\r\nContact Mitchell Eades on 021 255 8573 to arrange a private viewing.",
   "photos": [
@@ -656,7 +656,7 @@
   ],
   "valuation": {
     "value_low": 711000,
-    "value_mid": 820000,
+    "value_mid": 802000,
     "value_high": 925000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
@@ -665,19 +665,19 @@
         "name": "Nearby sold comparables",
         "range": "$711K – $925K",
         "low": 711000,
-        "mid": 820000,
+        "mid": 802000,
         "high": 925000,
-        "updated_at": "2026-11-04T20:59:12.003679+00:00",
+        "updated_at": "2026-11-05T23:51:40.561333+00:00",
         "confidence": "low",
-        "n": 20,
+        "n": 21,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 20,
-          "n_eff": 5.79,
+          "n": 21,
+          "n_eff": 5.84,
           "radius_km": 3.0,
-          "iqr_ratio": 0.261,
-          "same_suburb": 12,
+          "iqr_ratio": 0.2668,
+          "same_suburb": 11,
           "model_version": "comp-cv-v1"
         }
       }

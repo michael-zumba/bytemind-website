@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-08-21T01:37:45.213000+00:00",
-  "days_on_market": 75,
+  "days_on_market": 76,
   "lat": -36.5901489,
   "lon": 174.662262,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2324605171.jpg",
@@ -29,14 +29,14 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1056521,
-  "comp_mid": 1220000,
-  "comp_high": 1430000,
+  "comp_low": 1055000,
+  "comp_mid": 1215000,
+  "comp_high": 1427500,
   "comp_confidence": "medium",
-  "comp_n": 59,
-  "value_low": 1056521,
-  "value_mid": 1220000,
-  "value_high": 1430000,
+  "comp_n": 49,
+  "value_low": 1055000,
+  "value_mid": 1215000,
+  "value_high": 1427500,
   "value_source": "sold_comps_absolute",
   "value_confidence": "medium",
   "cv": null,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2336,
+  "view_count": 2358,
   "watchers": 41,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:05:06.499851+00:00",
-  "days_since_last_change": 1.0,
+  "days_since_last_change": 2.12,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 42.5,
+  "sale_pressure": 42.7,
   "sale_pressure_label": "medium",
-  "model_low": 843019,
-  "model_mid": 1178266,
-  "model_high": 1627015,
+  "model_low": 885092,
+  "model_mid": 1222279,
+  "model_high": 1680662,
   "model_confidence": "low",
-  "text_signal_pct": -19.2437,
-  "description_index": -1.076393,
+  "text_signal_pct": -17.553,
+  "description_index": -0.969317,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6093565243,
-    "low": 843019,
-    "mid": 1178266,
-    "high": 1627015,
+    "low": 885092,
+    "mid": 1222279,
+    "high": 1680662,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3348, 0.3227], \"rel_width\": 0.6654, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3228, 0.3185], \"rel_width\": 0.6509, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6093565243,
@@ -282,38 +282,57 @@
     "luxury": 0.0,
     "condition_renovation": 0.0,
     "views_waterfront": 0.0,
-    "family_school": 0.5854,
+    "family_school": 0.5755,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.5057,
-    "description_premium_pct": -19.2437,
-    "description_index": -1.076393,
+    "description_premium_pct": -17.553,
+    "description_index": -0.969317,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 9, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-04T20:59:12.704213+00:00",
+    "updated_at": "2026-11-05T23:51:41.323765+00:00",
     "top_topics": [
       {
         "topic_id": 7,
-        "weight": 0.497108,
+        "weight": 0.47901,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
           "walk wardrobe",
-          "ensuite",
           "walk",
-          "bathroom",
+          "ensuite",
           "master",
+          "bathroom",
+          "suite",
           "upstairs",
           "lounge",
-          "suite",
+          "master suite",
           "family bathroom",
-          "separate",
-          "bedroom"
+          "separate"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.254237,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "single",
+          "easy care",
+          "maintenance",
+          "low maintenance",
+          "care",
+          "low",
+          "brand new",
+          "brand",
+          "new",
+          "practical",
+          "strathmill",
+          "convenience"
         ]
       },
       {
         "topic_id": 8,
-        "weight": 0.230164,
+        "weight": 0.223759,
         "label": "Family living & entertaining",
         "top_terms": [
           "extended",
@@ -331,41 +350,22 @@
         ]
       },
       {
-        "topic_id": 2,
-        "weight": 0.206541,
-        "label": "Brick / tile / low-maintenance units",
+        "topic_id": 10,
+        "weight": 0.026243,
+        "label": "Sea views & coastal outlook",
         "top_terms": [
-          "maintenance",
-          "low maintenance",
-          "low",
-          "easy care",
-          "care",
-          "single",
-          "brand new",
-          "brand",
-          "convenience",
-          "new",
-          "buyers",
-          "investors"
-        ]
-      },
-      {
-        "topic_id": 4,
-        "weight": 0.036493,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "premium",
-          "quality",
-          "finishes",
-          "year",
-          "designer",
-          "appliances",
-          "new",
-          "brand",
-          "brand new",
-          "comfort",
-          "designer kitchen",
-          "luxury"
+          "sea",
+          "sea views",
+          "views",
+          "elevated",
+          "rangitoto",
+          "position",
+          "elevated position",
+          "outlook",
+          "spectacular",
+          "gulf",
+          "panoramic",
+          "hauraki gulf"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-04T20:59:12.003679+00:00"
+    "updated_at": "2026-11-05T23:51:40.561333+00:00"
   },
   "body": "Located in Ara Hills, this brand-new two-level home combines modern design with a practical and flexible family layout. One of the key highlights is the double internal- access garage, along with 4 bedrooms, 3 bathrooms and 2 living areas arranged across both levels.\r\n\r\nStep inside to a modern black kitchen with an island bench and quality Bosch appliances. The open-plan dining and living area opens out to the deck and backyard, making it easy to move between indoors and out. The good-sized backyard gives children room to play and is also a great spot for entertaining or relaxing outside. Also on the ground floor is a bedroom with a semi-ensuite, providing useful flexibility for guests, teenagers or extended family.\r\n\r\nUpstairs, a second family living area gives everyone another place to relax. The master bedroom gets plenty of natural light through large windows and features a well- appointed ensuite with double vanity and bathtub. Two further bedrooms share the family bathroom, completing the upper level.\r\n\r\nKey Features:\r\n\r\n• Approx. 204sqm floor area, positioned beside a walkway\r\n• 4 bedrooms, 3 bathrooms and 2 separate living areas\r\n• Double internal-access garage+2 off-street parking\r\n• Modern black kitchen with island bench and Bosch appliances\r\n• Ground-floor bedroom with semi-ensuite\r\n• Light-filled master suite with double vanity and bathtub \r\n\r\nClose to Orewa Beach, local cafés, schools and shops, with easy motorway access making commuting simple and convenient.\r\n\r\nWith a double garage, flexible layout and a good-sized backyard, there is plenty here for a family to enjoy. Come along and have a look, we'd be happy to show you around.\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -447,6 +447,20 @@
   "history": [],
   "comps": [
     {
+      "property_id": "ba9e7a5c-37f7-40f8-824d-f9a39ae58c9d",
+      "address": "49 Huanui Drive, Wainui, Wainui",
+      "sale_price": 1080000,
+      "sale_date": "2026-08-06T00:00:00+00:00",
+      "distance_km": 0.05,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1225000,
+      "estimate_mid": 1080000
+    },
+    {
       "property_id": "c23a2497-07b9-4ee9-9fcd-524769b0e31b",
       "address": "72 Huanui Drive, Wainui, Wainui",
       "sale_price": 1045000,
@@ -473,6 +487,20 @@
       "property_type": null,
       "cv": 1225000,
       "estimate_mid": 995000
+    },
+    {
+      "property_id": "85161ea5-bb10-4787-975b-f5d25206149c",
+      "address": "96 Huanui Drive, Wainui, Wainui",
+      "sale_price": 1220000,
+      "sale_date": "2026-08-10T00:00:00+00:00",
+      "distance_km": 0.2,
+      "bedrooms": 4,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1300000,
+      "estimate_mid": 1060000
     },
     {
       "property_id": "d16909b0-721b-432b-9124-e57b1dd5eefb",
@@ -531,20 +559,6 @@
       "estimate_mid": 1290000
     },
     {
-      "property_id": "25d45801-a953-44df-bafc-60428f9a7644",
-      "address": "6 Pekanga Road, Orewa, Orewa",
-      "sale_price": 2100000,
-      "sale_date": "2026-08-20T00:00:00+00:00",
-      "distance_km": 0.67,
-      "bedrooms": 6,
-      "bathrooms": 4,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1800000,
-      "estimate_mid": 2090000
-    },
-    {
       "property_id": "d3da18d0-96f2-488c-af03-71d87aa23f6a",
       "address": "6 Akau Lane, Wainui, Wainui",
       "sale_price": 1056521,
@@ -557,6 +571,20 @@
       "property_type": null,
       "cv": 1075000,
       "estimate_mid": 1080000
+    },
+    {
+      "property_id": "92baf40f-ecd7-4f65-8ca0-0c78bfbd4190",
+      "address": "1 Maheu Lane, Wainui, Wainui",
+      "sale_price": 685000,
+      "sale_date": "2026-08-07T00:00:00+00:00",
+      "distance_km": 0.85,
+      "bedrooms": 4,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 540000,
+      "estimate_mid": 580000
     },
     {
       "property_id": "014543ac-6102-44a4-9eef-5f45026bff1c",
@@ -585,60 +613,32 @@
       "property_type": null,
       "cv": 1400000,
       "estimate_mid": 1520000
-    },
-    {
-      "property_id": "c029b4e4-f2ba-4adf-b2be-7a7fe7db60cc",
-      "address": "242F West Hoe Heights, Orewa, Orewa",
-      "sale_price": 1290000,
-      "sale_date": "2026-10-13T00:00:00+00:00",
-      "distance_km": 1.03,
-      "bedrooms": 5,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1500000,
-      "estimate_mid": 2160000
-    },
-    {
-      "property_id": "a8773dda-ab2c-4f92-bc1c-538e53babee9",
-      "address": "18 Ara Taha Crescent, Orewa, Orewa",
-      "sale_price": 1170000,
-      "sale_date": "2026-09-14T00:00:00+00:00",
-      "distance_km": 1.04,
-      "bedrooms": null,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1200000,
-      "estimate_mid": 1220000
     }
   ],
   "valuation": {
-    "value_low": 1056521,
-    "value_mid": 1220000,
-    "value_high": 1430000,
+    "value_low": 1055000,
+    "value_mid": 1215000,
+    "value_high": 1427500,
     "value_source": "sold_comps_absolute",
     "value_confidence": "medium",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.06M – $1.43M",
-        "low": 1056521,
-        "mid": 1220000,
-        "high": 1430000,
-        "updated_at": "2026-11-04T20:59:12.003679+00:00",
+        "range": "$1.05M – $1.43M",
+        "low": 1055000,
+        "mid": 1215000,
+        "high": 1427500,
+        "updated_at": "2026-11-05T23:51:40.561333+00:00",
         "confidence": "medium",
-        "n": 59,
+        "n": 49,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 59,
-          "n_eff": 20.1,
+          "n": 49,
+          "n_eff": 17.12,
           "radius_km": 3.0,
-          "iqr_ratio": 0.3061,
-          "same_suburb": 33,
+          "iqr_ratio": 0.3066,
+          "same_suburb": 30,
           "model_version": "comp-cv-v1"
         }
       }

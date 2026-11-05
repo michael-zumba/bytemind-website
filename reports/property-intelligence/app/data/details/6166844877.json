@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-06T13:32:09.817000+00:00",
-  "days_on_market": 29,
+  "days_on_market": 30,
   "lat": -36.8590012,
   "lon": 174.8650971,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333667923.jpg",
@@ -31,9 +31,9 @@
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
   "comp_low": 1555000,
   "comp_mid": 1668974,
-  "comp_high": 1849020,
+  "comp_high": 1828205,
   "comp_confidence": "high",
-  "comp_n": 70,
+  "comp_n": 74,
   "value_low": 1673117,
   "value_mid": 1776807,
   "value_high": 1880497,
@@ -63,7 +63,7 @@
   "change_signal": "price increase",
   "change_count": 5,
   "last_change_at": "2026-11-02T16:04:28.674959+00:00",
-  "days_since_last_change": 2.2,
+  "days_since_last_change": 3.32,
   "price_drop_count": 0,
   "description_change_count": 2,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 74.8,
+  "sale_pressure": 75.0,
   "sale_pressure_label": "high",
-  "model_low": 1534967,
-  "model_mid": 1675129,
-  "model_high": 1830995,
+  "model_low": 1530134,
+  "model_mid": 1667984,
+  "model_high": 1832209,
   "model_confidence": "high",
-  "text_signal_pct": -0.5287,
-  "description_index": -0.026697,
+  "text_signal_pct": -0.8998,
+  "description_index": -0.04539,
   "events_count": 5,
   "last_event": "estimate_change",
   "schools": [
@@ -259,7 +259,7 @@
       "id": 4228,
       "name": "TKKM O PUAU TE MOANANUI-A-KIWA",
       "type": "Composite (Year 1-13)",
-      "roll": 87,
+      "roll": 86,
       "authority": "State",
       "gender": "Co-Educational",
       "decile": null,
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6166844877,
-    "low": 1534967,
-    "mid": 1675129,
-    "high": 1830995,
+    "low": 1530134,
+    "mid": 1667984,
+    "high": 1832209,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0874, 0.089], \"rel_width\": 0.1767, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0863, 0.0939], \"rel_width\": 0.1811, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6166844877,
@@ -280,78 +280,59 @@
     "exclamations": 1,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.2081,
-    "views_waterfront": 0.2646,
-    "family_school": 0.5946,
+    "condition_renovation": 0.2063,
+    "views_waterfront": 0.2613,
+    "family_school": 0.5845,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4876,
-    "description_premium_pct": -0.5287,
-    "description_index": -0.026697,
+    "description_premium_pct": -0.8998,
+    "description_index": -0.04539,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 7, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-04T20:59:12.704213+00:00",
+    "updated_at": "2026-11-05T23:51:41.323765+00:00",
     "top_topics": [
       {
         "topic_id": 7,
-        "weight": 0.305474,
+        "weight": 0.376296,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
           "walk wardrobe",
-          "ensuite",
           "walk",
-          "bathroom",
+          "ensuite",
           "master",
+          "bathroom",
+          "suite",
           "upstairs",
           "lounge",
-          "suite",
+          "master suite",
           "family bathroom",
-          "separate",
-          "bedroom"
+          "separate"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.182105,
+        "weight": 0.159985,
         "label": "Parking, garden & section",
         "top_terms": [
           "room",
-          "garden",
           "morning",
+          "garden",
           "brick",
-          "fenced",
-          "summer",
-          "street",
-          "away",
           "renovated",
           "coffee",
           "ready",
-          "fully fenced"
-        ]
-      },
-      {
-        "topic_id": 4,
-        "weight": 0.181936,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "premium",
-          "quality",
-          "finishes",
-          "year",
-          "designer",
-          "appliances",
-          "new",
-          "brand",
-          "brand new",
-          "comfort",
-          "designer kitchen",
-          "luxury"
+          "fenced",
+          "street",
+          "away",
+          "sun",
+          "summer"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.160419,
+        "weight": 0.148449,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -361,11 +342,30 @@
           "intermediate",
           "suburb intermediate",
           "primary",
-          "marina",
           "pigeon",
           "pigeon mountain",
           "mountain",
-          "suburb marina"
+          "marina",
+          "zone"
+        ]
+      },
+      {
+        "topic_id": 4,
+        "weight": 0.137935,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "quality",
+          "premium",
+          "finishes",
+          "new",
+          "designer",
+          "year",
+          "appliances",
+          "brand",
+          "brand new",
+          "luxury",
+          "comfort",
+          "design"
         ]
       }
     ]
@@ -464,14 +464,14 @@
     "first_description_change_at": "2026-11-02T16:04:28.674959+00:00",
     "last_description_change_at": "2026-11-02T16:04:28.674959+00:00",
     "days_to_first_change": 10.38,
-    "days_since_last_change": 2.2,
+    "days_since_last_change": 3.32,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "set",
-    "updated_at": "2026-11-04T20:59:12.003679+00:00"
+    "updated_at": "2026-11-05T23:51:40.561333+00:00"
   },
   "body": "Set back from the road on an elevated, freehold 261m² section, this near-new family home offers genuine privacy in a superb Bays location. Zoned for St Heliers School, St Ignatius Primary and Glendowie College, with St Heliers Village and the beach all within easy walking distance, the location delivers on both lifestyle and convenience.\r\n\r\nThe Bosch-appointed kitchen opens onto the living and dining areas, with Oak flooring and ducted air-conditioning throughout. The living spaces flow seamlessly out to a north-facing deck and turf garden — recently landscaped, with a retractable awning added over the past year for year-round outdoor enjoyment.\r\n\r\nUpstairs are four bedrooms, including a generous master suite with walk-in wardrobe and double-vanity ensuite. The home has two further bathrooms plus a separate downstairs toilet, offering rare flexibility for a busy family. A two-car internal-access garage with laundry, plus additional off-street parking, completes the package.\r\n\r\nFreehold sections of this size in near-new condition rarely come to market in Glendowie/St Heliers — and this one is going to auction, with the vendors committed to selling on or before auction day. If you've been watching this pocket and waiting for the right home, this is it. \r\n\r\nGet in touch to arrange a viewing before auction day!",
   "photos": [
@@ -680,20 +680,6 @@
       "estimate_mid": 2480000
     },
     {
-      "property_id": "11269303-bb6c-48bd-91aa-5e3a6e537903",
-      "address": "25 Sierra Street, Glendowie, Auckland",
-      "sale_price": 1685000,
-      "sale_date": "2026-08-13T00:00:00+00:00",
-      "distance_km": 0.45,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1850000,
-      "estimate_mid": 1720000
-    },
-    {
       "property_id": "354dd593-dd84-4f73-952d-2d11c1cdc218",
       "address": "3 Parkside Street, St Heliers, Auckland",
       "sale_price": 3010000,
@@ -832,6 +818,20 @@
       "property_type": null,
       "cv": 1800000,
       "estimate_mid": 1940000
+    },
+    {
+      "property_id": "bf14493e-69be-4cee-982c-703d572c800b",
+      "address": "167A Long Drive, St Heliers, Auckland",
+      "sale_price": 2350000,
+      "sale_date": "2026-08-23T00:00:00+00:00",
+      "distance_km": 0.99,
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 2525000,
+      "estimate_mid": 2360000
     }
   ],
   "valuation": {
@@ -853,21 +853,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.55M – $1.85M",
+        "range": "$1.55M – $1.83M",
         "low": 1555000,
         "mid": 1668974,
-        "high": 1849020,
-        "updated_at": "2026-11-04T20:59:12.003679+00:00",
+        "high": 1828205,
+        "updated_at": "2026-11-05T23:51:40.561333+00:00",
         "confidence": "high",
-        "n": 70,
+        "n": 74,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 70,
-          "n_eff": 13.51,
+          "n": 74,
+          "n_eff": 13.78,
           "radius_km": 3.0,
           "median_ratio": 0.9675,
-          "iqr_ratio": 0.1762,
+          "iqr_ratio": 0.1637,
           "same_suburb": 23,
           "model_version": "comp-cv-v1"
         }

@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2025-09-11T01:28:28.023000+00:00",
-  "days_on_market": 420,
+  "days_on_market": 421,
   "lat": -36.7265329,
   "lon": 174.7452554,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2268948170.jpg",
@@ -33,7 +33,7 @@
   "comp_mid": 1287000,
   "comp_high": 1590000,
   "comp_confidence": "low",
-  "comp_n": 111,
+  "comp_n": 110,
   "value_low": 1020000,
   "value_mid": 1287000,
   "value_high": 1590000,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 4614,
+  "view_count": 4618,
   "watchers": 48,
   "is_standard": 1,
   "standard_reason": null,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 745054,
-  "model_mid": 1028892,
-  "model_high": 1414750,
+  "model_low": 747709,
+  "model_mid": 1042221,
+  "model_high": 1440656,
   "model_confidence": "low",
-  "text_signal_pct": -10.1041,
-  "description_index": -0.534936,
+  "text_signal_pct": -8.817,
+  "description_index": -0.470498,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,38 +288,57 @@
   ],
   "model": {
     "listing_id": 5519263385,
-    "low": 745054,
-    "mid": 1028892,
-    "high": 1414750,
+    "low": 747709,
+    "mid": 1042221,
+    "high": 1440656,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3228, 0.3185], \"rel_width\": 0.6509, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3321, 0.3237], \"rel_width\": 0.6649, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5519263385,
     "word_count": 206,
     "exclamations": 1,
-    "urgency": 0.3301,
-    "luxury": 0.3976,
-    "condition_renovation": 0.2063,
-    "views_waterfront": 0.3919,
-    "family_school": 0.7515,
-    "investment": 0.1696,
+    "urgency": 0.3115,
+    "luxury": 0.4021,
+    "condition_renovation": 0.2076,
+    "views_waterfront": 0.3977,
+    "family_school": 0.7646,
+    "investment": 0.164,
     "risk": 0.0,
     "readability": 0.4712,
-    "description_premium_pct": -10.1041,
-    "description_index": -0.534936,
+    "description_premium_pct": -8.817,
+    "description_index": -0.470498,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 3, \"condition_renovation\": 1, \"views_waterfront\": 3, \"family_school\": 9, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-05T23:51:41.323765+00:00",
+    "updated_at": "2026-11-07T00:40:01.413091+00:00",
     "top_topics": [
       {
+        "topic_id": 2,
+        "weight": 0.293739,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low maintenance",
+          "brand new",
+          "brand",
+          "low",
+          "single",
+          "new",
+          "easy care",
+          "care",
+          "quality",
+          "buyers",
+          "investors"
+        ]
+      },
+      {
         "topic_id": 5,
-        "weight": 0.23011,
+        "weight": 0.241427,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
-          "girls",
           "school",
+          "girls",
           "girls high",
           "high school",
           "westlake girls",
@@ -327,51 +346,13 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "north",
-          "school suburb"
+          "school suburb",
+          "shore"
         ]
       },
       {
-        "topic_id": 2,
-        "weight": 0.226054,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "single",
-          "easy care",
-          "maintenance",
-          "low maintenance",
-          "care",
-          "low",
-          "brand new",
-          "brand",
-          "new",
-          "practical",
-          "strathmill",
-          "convenience"
-        ]
-      },
-      {
-        "topic_id": 4,
-        "weight": 0.19171,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "quality",
-          "premium",
-          "finishes",
-          "new",
-          "designer",
-          "year",
-          "appliances",
-          "brand",
-          "brand new",
-          "luxury",
-          "comfort",
-          "design"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.149505,
+        "topic_id": 7,
+        "weight": 0.152664,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -381,11 +362,30 @@
           "intermediate",
           "suburb intermediate",
           "primary",
+          "marina",
           "pigeon",
           "pigeon mountain",
           "mountain",
-          "marina",
-          "zone"
+          "suburb marina"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.129617,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "section",
+          "dream",
+          "build",
+          "dream home",
+          "land",
+          "sections",
+          "whangaparaoa",
+          "auckland",
+          "penlink",
+          "community",
+          "building",
+          "minutes"
         ]
       }
     ]
@@ -426,7 +426,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-05T23:51:40.561333+00:00"
+    "updated_at": "2026-11-07T00:40:00.731440+00:00"
   },
   "body": "21A sold\r\n21B sold for $1,368,000 in June 2025\r\n21C sold \r\n21D sold for $1,381,000 in July 2025\r\n21F under contract\r\n\r\n\r\nDiscover an exclusive opportunity to own a stylish, brand-new home in the heart of Rothesay Bay, one of Auckland's most desirable coastal neighbourhoods. Just steps from vibrant cafés, boutique shops, and sun- kissed beaches, these newly completed homes are the epitome of modern living for families, professionals, or investors seeking the perfect blend of style and functionality.\r\n\r\nWith three exceptional homes available - titles issued and CCC granted for two (with the third underway). Choose from versatile layouts offering 3 or 4 bedrooms and 2.5 bathrooms, including an indulgent master ensuite. Experience the joy of seamless daily living and entertaining in the open-plan kitchen, dining, and living areas that effortlessly flow to the outdoors.\r\n\r\nEmbrace the beauty of low-maintenance living with every comfort and convenience at your fingertips. This quiet, family-friendly street is a stroll away from Rothesay Bay village, beach, and top schools, such as Browns Bay\r\nSchool, Murrays Bay School, Murrays Bay Intermediate, Northcross Intermediate, and Rangitoto College.\r\n\r\nDon't miss this rare chance to claim your piece of Rothesay Bay's exclusive real estate market. Contact us today to explore individual listings and book your private viewing. Your dream coastal lifestyle awaits!",
   "photos": [
@@ -645,14 +645,14 @@
         "low": 1020000,
         "mid": 1287000,
         "high": 1590000,
-        "updated_at": "2026-11-05T23:51:40.561333+00:00",
+        "updated_at": "2026-11-07T00:40:00.731440+00:00",
         "confidence": "low",
-        "n": 111,
+        "n": 110,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 111,
-          "n_eff": 29.7,
+          "n": 110,
+          "n_eff": 29.36,
           "radius_km": 3.0,
           "iqr_ratio": 0.4429,
           "same_suburb": 9,

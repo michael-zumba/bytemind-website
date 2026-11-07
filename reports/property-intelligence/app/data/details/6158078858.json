@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-01T03:43:05.087000+00:00",
-  "days_on_market": 35,
+  "days_on_market": 36,
   "lat": -36.6882694,
   "lon": 174.7322762,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2332574350.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2705,
-  "watchers": 77,
+  "view_count": 2801,
+  "watchers": 80,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 35.8,
+  "sale_pressure": 36.0,
   "sale_pressure_label": "low",
-  "model_low": 1676234,
-  "model_mid": 1827247,
-  "model_high": 2007152,
+  "model_low": 1679708,
+  "model_mid": 1830299,
+  "model_high": 2011835,
   "model_confidence": "high",
-  "text_signal_pct": -10.1762,
-  "description_index": -0.538961,
+  "text_signal_pct": -25.8443,
+  "description_index": -1.524127,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 6158078858,
-    "low": 1676234,
-    "mid": 1827247,
-    "high": 2007152,
+    "low": 1679708,
+    "mid": 1830299,
+    "high": 2011835,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0863, 0.0939], \"rel_width\": 0.1811, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0859, 0.0946], \"rel_width\": 0.1815, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6158078858,
@@ -291,63 +291,44 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.2575,
-    "family_school": 0.9876,
+    "views_waterfront": 0.2613,
+    "family_school": 1.0,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4061,
-    "description_premium_pct": -10.1762,
-    "description_index": -0.538961,
+    "description_premium_pct": -25.8443,
+    "description_index": -1.524127,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 12, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-05T23:51:41.323765+00:00",
+    "updated_at": "2026-11-07T00:40:01.413091+00:00",
     "top_topics": [
       {
-        "topic_id": 7,
-        "weight": 0.623918,
+        "topic_id": 8,
+        "weight": 0.696599,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "walk",
-          "ensuite",
-          "master",
           "bathroom",
-          "suite",
-          "upstairs",
-          "lounge",
-          "master suite",
-          "family bathroom",
-          "separate"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.177964,
-        "label": "Family living & entertaining",
-        "top_terms": [
           "extended",
-          "flexibility",
+          "separate",
+          "walk wardrobe",
+          "wardrobe",
+          "ensuite",
+          "upstairs",
           "extended family",
           "guests",
-          "living areas",
-          "areas",
-          "family living",
-          "multiple",
-          "families",
-          "teenagers",
-          "separate",
-          "impressive"
+          "walk",
+          "floor",
+          "master"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.094492,
+        "weight": 0.136679,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
-          "girls",
           "school",
+          "girls",
           "girls high",
           "high school",
           "westlake girls",
@@ -355,13 +336,32 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "north",
-          "school suburb"
+          "school suburb",
+          "shore"
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.037486,
+        "topic_id": 0,
+        "weight": 0.063386,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "morning",
+          "friends",
+          "relaxed",
+          "coffee",
+          "life",
+          "sense",
+          "setting",
+          "morning coffee",
+          "inviting",
+          "welcoming",
+          "step",
+          "peaceful"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.060462,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -371,11 +371,11 @@
           "intermediate",
           "suburb intermediate",
           "primary",
+          "marina",
           "pigeon",
           "pigeon mountain",
           "mountain",
-          "marina",
-          "zone"
+          "suburb marina"
         ]
       }
     ]
@@ -433,7 +433,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-05T23:51:40.561333+00:00"
+    "updated_at": "2026-11-07T00:40:00.731440+00:00"
   },
   "body": "Enjoy the space your family needs and the coastal lifestyle you love in this thoughtfully designed Long Bay home. Set on approximately 750m² of freehold land, with a floor area of approximately 272m², it offers five bedrooms, three full bathrooms and a guest toilet across two well-arranged levels.\r\n\r\nThe ground floor brings everyone together around an open-plan kitchen, dining and family area, complemented by a walk-in pantry. A separate lounge provides another welcoming space to relax or entertain. A downstairs bedroom with a bathroom alongside offers a practical option for guests or extended family.\r\n\r\nUpstairs, four bedrooms include a master suite with its own ensuite and walk-in wardrobe. An additional lounge gives the family room to spread out, while a separate study provides a dedicated space for working from home or homework. A family bathroom with a bathtub completes the upper level.\r\n\r\nA separate laundry, generous storage and an internal-access double garage add everyday convenience.\r\n\r\nLong Bay Village's shops, cafés and restaurants are within easy reach, with Long Bay Beach and Regional Park offering plenty of opportunities to enjoy the outdoors. Zoned for Long Bay School, Northcross Intermediate and Long Bay College, this home combines family flexibility with an appealing coastal location.",
   "photos": [
@@ -819,14 +819,14 @@
         "low": 1696585,
         "mid": 1850000,
         "high": 1897742,
-        "updated_at": "2026-11-05T23:51:40.561333+00:00",
+        "updated_at": "2026-11-07T00:40:00.731440+00:00",
         "confidence": "high",
         "n": 67,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 67,
-          "n_eff": 10.42,
+          "n_eff": 10.4,
           "radius_km": 3.0,
           "median_ratio": 1.0,
           "iqr_ratio": 0.1087,

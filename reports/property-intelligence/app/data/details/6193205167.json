@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-22T22:43:53.587000+00:00",
-  "days_on_market": 13,
+  "days_on_market": 14,
   "lat": -36.8791199,
   "lon": 174.9078217,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338814821.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1089000,
+  "comp_low": 1155000,
   "comp_mid": 1380000,
   "comp_high": 1720000,
   "comp_confidence": "low",
-  "comp_n": 43,
-  "value_low": 1089000,
+  "comp_n": 42,
+  "value_low": 1155000,
   "value_mid": 1380000,
   "value_high": 1720000,
   "value_source": "sold_comps_absolute",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:36:39.708798+00:00",
-  "days_since_last_change": 2.14,
+  "days_since_last_change": 3.17,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 32.2,
+  "sale_pressure": 32.3,
   "sale_pressure_label": "low",
-  "model_low": 863599,
-  "model_mid": 1192598,
-  "model_high": 1639850,
+  "model_low": 819028,
+  "model_mid": 1141632,
+  "model_high": 1578072,
   "model_confidence": "low",
-  "text_signal_pct": 0.6171,
-  "description_index": 0.030897,
+  "text_signal_pct": -3.217,
+  "description_index": -0.166676,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -318,11 +318,11 @@
   ],
   "model": {
     "listing_id": 6193205167,
-    "low": 863599,
-    "mid": 1192598,
-    "high": 1639850,
+    "low": 819028,
+    "mid": 1141632,
+    "high": 1578072,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3228, 0.3185], \"rel_width\": 0.6509, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3321, 0.3237], \"rel_width\": 0.6649, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6193205167,
@@ -331,20 +331,20 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.1491,
-    "family_school": 0.3812,
-    "investment": 0.0968,
+    "views_waterfront": 0.1513,
+    "family_school": 0.3878,
+    "investment": 0.0936,
     "risk": 0.0,
     "readability": 0.3944,
-    "description_premium_pct": 0.6171,
-    "description_index": 0.030897,
+    "description_premium_pct": -3.217,
+    "description_index": -0.166676,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 8, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-05T23:51:41.323765+00:00",
+    "updated_at": "2026-11-07T00:40:01.413091+00:00",
     "top_topics": [
       {
-        "topic_id": 6,
-        "weight": 0.417898,
+        "topic_id": 7,
+        "weight": 0.43303,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -354,68 +354,68 @@
           "intermediate",
           "suburb intermediate",
           "primary",
+          "marina",
           "pigeon",
           "pigeon mountain",
           "mountain",
-          "marina",
-          "zone"
+          "suburb marina"
         ]
       },
       {
-        "topic_id": 7,
-        "weight": 0.331393,
+        "topic_id": 6,
+        "weight": 0.169739,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "parking",
+          "fenced",
+          "brick",
+          "fully",
+          "fully fenced",
+          "room",
+          "double",
+          "garden",
+          "street parking",
+          "facing",
+          "sunny"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.169376,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "walk",
-          "ensuite",
-          "master",
           "bathroom",
-          "suite",
+          "extended",
+          "separate",
+          "walk wardrobe",
+          "wardrobe",
+          "ensuite",
           "upstairs",
-          "lounge",
-          "master suite",
-          "family bathroom",
-          "separate"
+          "extended family",
+          "guests",
+          "walk",
+          "floor",
+          "master"
         ]
       },
       {
         "topic_id": 2,
-        "weight": 0.132031,
+        "weight": 0.131548,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "single",
-          "easy care",
           "maintenance",
           "low maintenance",
-          "care",
-          "low",
           "brand new",
           "brand",
+          "low",
+          "single",
           "new",
-          "practical",
-          "strathmill",
-          "convenience"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.040665,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "room",
-          "morning",
-          "garden",
-          "brick",
-          "renovated",
-          "coffee",
-          "ready",
-          "fenced",
-          "street",
-          "away",
-          "sun",
-          "summer"
+          "easy care",
+          "care",
+          "quality",
+          "buyers",
+          "investors"
         ]
       }
     ]
@@ -464,7 +464,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-05T23:51:40.561333+00:00"
+    "updated_at": "2026-11-07T00:40:00.731440+00:00"
   },
   "body": "Discover 13A Sorrel Crescent, a beautifully finished, brand-new freehold home occupying the front position in a boutique development. With excellent natural light, thoughtful extras and sought-after school zones, it offers easy, comfortable living.\r\n\r\nFeatures you’ll love:\r\n• Three bedrooms plus an upstairs flexi room — complete with a built-in study desk and wardrobe, can be used as a study, second lounge or bedroom.\r\n• Bright, sun-filled interiors — north & east  facing living and master bedroom, east-facing additional bedrooms and dining room with an open street-front outlook.\r\n• Quality finishes throughout — including a striking television feature wall, built-in fireplace and purpose-built entrance shoe storage.\r\n• A kitchen you can close off — a practical sliding door helps contain cooking aromas while keeping the kitchen beautifully connected when open.\r\n• A thoughtfully fitted master suite — with an ensuite, built-in desk and extra storage.\r\n• 2.5 bathrooms — a master ensuite, upstairs family bathroom and downstairs guest toilet.\r\n• Generous outdoor living — an approximately 4m × 5m deck, with planted greenery that will provide greater screening as it matures.\r\n• Convenient parking — a single internal-access garage, a dedicated additional parking space directly in front, plus on-street parking nearby.\r\n• Excellent school access — zoned for Pigeon Mountain Primary, BBI and Macleans College, with a nearby pedestrian connection via Thurston Place towards BBI and Pigeon Mountain, which will take children only 5 mins walk to the school\r\n• A desirable coastal neighbourhood —easy access to cafés, shops and Half Moon Bay Marina’s CBD ferry services, 10 mins walk to the Bucklands Beach.\r\n\r\nSelected Furniture Included:\r\nMove in with less to organise: the downstairs dining table, sofa, coffee table and rugs shown in the property photographs are all included in the sale at no extra cost—a welcome gift to the new owners.\r\n\r\nSelected upstairs photographs are digitally staged using AI. Beds, bedside tables and other digitally added furnishings are illustrative only and are not included. \r\n\r\nSelected upstairs photographs are digitally staged using AI. \r\n\r\nBeds, bedside tables and other digitally added furnishings are for illustration only and are not included in the sale. Artwork, vases, ornaments and other decorative staging accessories shown throughout the home are also excluded.\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -666,7 +666,7 @@
     }
   ],
   "valuation": {
-    "value_low": 1089000,
+    "value_low": 1155000,
     "value_mid": 1380000,
     "value_high": 1720000,
     "value_source": "sold_comps_absolute",
@@ -674,21 +674,21 @@
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.09M – $1.72M",
-        "low": 1089000,
+        "range": "$1.16M – $1.72M",
+        "low": 1155000,
         "mid": 1380000,
         "high": 1720000,
-        "updated_at": "2026-11-05T23:51:40.561333+00:00",
+        "updated_at": "2026-11-07T00:40:00.731440+00:00",
         "confidence": "low",
-        "n": 43,
+        "n": 42,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 43,
-          "n_eff": 15.54,
+          "n": 42,
+          "n_eff": 15.33,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4572,
-          "same_suburb": 19,
+          "iqr_ratio": 0.4094,
+          "same_suburb": 18,
           "model_version": "comp-cv-v1"
         }
       }

@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-02-11T00:59:03.627000+00:00",
-  "days_on_market": 267,
+  "days_on_market": 268,
   "lat": -36.7242927,
   "lon": 174.7506325,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2287386564.jpg",
@@ -33,7 +33,7 @@
   "comp_mid": 1238764,
   "comp_high": 1373485,
   "comp_confidence": "high",
-  "comp_n": 133,
+  "comp_n": 132,
   "value_low": 1148716,
   "value_mid": 1219907,
   "value_high": 1291098,
@@ -51,8 +51,8 @@
   "ask_gap": -19907,
   "ask_gap_pct": -0.0163,
   "deal_gap": 0.0163,
-  "view_count": 7989,
-  "watchers": 96,
+  "view_count": 8012,
+  "watchers": 95,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:34:47.353476+00:00",
-  "days_since_last_change": 8.35,
+  "days_since_last_change": 9.38,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 1,
@@ -76,12 +76,12 @@
   "sale_method_stage": 4,
   "sale_pressure": 70.0,
   "sale_pressure_label": "high",
-  "model_low": 1123924,
-  "model_mid": 1225179,
-  "model_high": 1345807,
+  "model_low": 1116179,
+  "model_mid": 1216248,
+  "model_high": 1336880,
   "model_confidence": "medium",
-  "text_signal_pct": -17.9871,
-  "description_index": -0.99583,
+  "text_signal_pct": -11.945,
+  "description_index": -0.64843,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -298,57 +298,38 @@
   ],
   "model": {
     "listing_id": 5778400440,
-    "low": 1123924,
-    "mid": 1225179,
-    "high": 1345807,
+    "low": 1116179,
+    "mid": 1216248,
+    "high": 1336880,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0863, 0.0939], \"rel_width\": 0.1811, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0859, 0.0946], \"rel_width\": 0.1815, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5778400440,
     "word_count": 163,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.335,
-    "condition_renovation": 0.2607,
-    "views_waterfront": 0.3302,
-    "family_school": 0.6331,
+    "luxury": 0.3388,
+    "condition_renovation": 0.2624,
+    "views_waterfront": 0.3351,
+    "family_school": 0.6442,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.2946,
-    "description_premium_pct": -17.9871,
-    "description_index": -0.99583,
+    "description_premium_pct": -11.945,
+    "description_index": -0.64843,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-05T23:51:41.323765+00:00",
+    "updated_at": "2026-11-07T00:40:01.413091+00:00",
     "top_topics": [
       {
-        "topic_id": 4,
-        "weight": 0.322184,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "quality",
-          "premium",
-          "finishes",
-          "new",
-          "designer",
-          "year",
-          "appliances",
-          "brand",
-          "brand new",
-          "luxury",
-          "comfort",
-          "design"
-        ]
-      },
-      {
         "topic_id": 5,
-        "weight": 0.287339,
+        "weight": 0.273581,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
-          "girls",
           "school",
+          "girls",
           "girls high",
           "high school",
           "westlake girls",
@@ -356,13 +337,32 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "north",
-          "school suburb"
+          "school suburb",
+          "shore"
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.218578,
+        "topic_id": 4,
+        "weight": 0.270111,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "premium",
+          "quality",
+          "finishes",
+          "appliances",
+          "designer",
+          "year",
+          "luxury",
+          "comfort",
+          "designer kitchen",
+          "new",
+          "design",
+          "heating"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.215551,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -372,30 +372,30 @@
           "intermediate",
           "suburb intermediate",
           "primary",
+          "marina",
           "pigeon",
           "pigeon mountain",
           "mountain",
-          "marina",
-          "zone"
+          "suburb marina"
         ]
       },
       {
-        "topic_id": 10,
-        "weight": 0.065297,
-        "label": "Sea views & coastal outlook",
+        "topic_id": 2,
+        "weight": 0.090432,
+        "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "sea",
-          "sea views",
-          "views",
-          "elevated",
-          "rangitoto",
-          "position",
-          "elevated position",
-          "outlook",
-          "spectacular",
-          "gulf",
-          "panoramic",
-          "hauraki gulf"
+          "maintenance",
+          "low maintenance",
+          "brand new",
+          "brand",
+          "low",
+          "single",
+          "new",
+          "easy care",
+          "care",
+          "quality",
+          "buyers",
+          "investors"
         ]
       }
     ]
@@ -453,7 +453,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-05T23:51:40.561333+00:00"
+    "updated_at": "2026-11-07T00:40:00.731440+00:00"
   },
   "body": "B, & C - 3 Bedroom 2.5 Bathrooms with singe garage Double storey \r\nD - 4 Bedrooms, 2 Bathrooms with singe garage triple storey\r\n\r\n\r\nThis three-story duplex homes offer more space with approximately 154m² of floor area. This 4 bedrooms 2 bathrooms home come with an internal single garage.\r\n\r\nFeatures:\r\n\r\n* Expansive open-plan living and dining areas\r\n* High-end kitchen with Smeg appliances\r\n* Private outdoor spaces with decks\r\n* Double glazed windows and full insulation\r\n* LED lighting throughout\r\n* Underfloor heating in the bathroom\r\n* High-quality fixtures and fittings\r\n\r\nAdditional Features for All Lots:\r\n\r\n* Freehold title with no Body Corporate fee\r\n* Zoned for excellent schools including Browns Bay School, Murrays Bay Intermediate, Northcross Intermediate, and Rangitoto College\r\n* Close proximity to public transport, local amenities, and a 400-meter walking distance to beautiful beaches This is your chance to own a brand-new home in the sought after Rothesay Bay area. Enjoy the perfect coastal lifestyle with easy access to local cafes, restaurants, and stunning beaches.\r\n\r\nPlease call us to book a private viewing or come through the\r\nopen home on weekend",
   "photos": [
@@ -831,7 +831,7 @@
         "high": 1291098,
         "updated_at": "2026-10-28T11:00:00+00:00",
         "confidence": "high",
-        "url": "https://homes.co.nz/address/auckland/rothesay-bay/33d-garadice-road/gNW1ZV"
+        "url": "https://homes.co.nz/address/auckland/rothesay-bay/33d-garadice-road/qnaBQX"
       },
       {
         "name": "Nearby sold comparables",
@@ -839,14 +839,14 @@
         "low": 1123415,
         "mid": 1238764,
         "high": 1373485,
-        "updated_at": "2026-11-05T23:51:40.561333+00:00",
+        "updated_at": "2026-11-07T00:40:00.731440+00:00",
         "confidence": "high",
-        "n": 133,
+        "n": 132,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 133,
-          "n_eff": 17.19,
+          "n": 132,
+          "n_eff": 17.01,
           "radius_km": 3.0,
           "median_ratio": 1.0112,
           "iqr_ratio": 0.2019,

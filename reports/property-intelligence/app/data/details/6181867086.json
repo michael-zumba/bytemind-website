@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-15T22:35:54.327000+00:00",
-  "days_on_market": 20,
+  "days_on_market": 21,
   "lat": -36.7243729,
   "lon": 174.7310638,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2337182105.jpg",
@@ -33,7 +33,7 @@
   "comp_mid": 1250000,
   "comp_high": 1506000,
   "comp_confidence": "low",
-  "comp_n": 106,
+  "comp_n": 105,
   "value_low": 1020000,
   "value_mid": 1250000,
   "value_high": 1506000,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 502,
-  "watchers": 11,
+  "view_count": 520,
+  "watchers": 12,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 33.3,
+  "sale_pressure": 33.5,
   "sale_pressure_label": "low",
-  "model_low": 803068,
-  "model_mid": 1109007,
-  "model_high": 1524910,
+  "model_low": 779791,
+  "model_mid": 1086940,
+  "model_high": 1502471,
   "model_confidence": "low",
-  "text_signal_pct": -18.1095,
-  "description_index": -1.003333,
+  "text_signal_pct": -11.2533,
+  "description_index": -0.608546,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,33 +288,52 @@
   ],
   "model": {
     "listing_id": 6181867086,
-    "low": 803068,
-    "mid": 1109007,
-    "high": 1524910,
+    "low": 779791,
+    "mid": 1086940,
+    "high": 1502471,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3228, 0.3185], \"rel_width\": 0.6509, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3321, 0.3237], \"rel_width\": 0.6649, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6181867086,
     "word_count": 258,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.1058,
+    "luxury": 0.107,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.2086,
-    "family_school": 0.7333,
+    "views_waterfront": 0.2117,
+    "family_school": 0.7461,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3979,
-    "description_premium_pct": -18.1095,
-    "description_index": -1.003333,
+    "description_premium_pct": -11.2533,
+    "description_index": -0.608546,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 11, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-05T23:51:41.323765+00:00",
+    "updated_at": "2026-11-07T00:40:01.413091+00:00",
     "top_topics": [
       {
-        "topic_id": 6,
-        "weight": 0.27402,
+        "topic_id": 2,
+        "weight": 0.321325,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low maintenance",
+          "brand new",
+          "brand",
+          "low",
+          "single",
+          "new",
+          "easy care",
+          "care",
+          "quality",
+          "buyers",
+          "investors"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.295044,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -324,59 +343,40 @@
           "intermediate",
           "suburb intermediate",
           "primary",
+          "marina",
           "pigeon",
           "pigeon mountain",
           "mountain",
-          "marina",
-          "zone"
+          "suburb marina"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.235561,
-        "label": "New build / brand-new quality",
+        "weight": 0.143071,
+        "label": "Luxury, architectural & prestige",
         "top_terms": [
-          "quality",
           "premium",
+          "quality",
           "finishes",
-          "new",
+          "appliances",
           "designer",
           "year",
-          "appliances",
-          "brand",
-          "brand new",
           "luxury",
           "comfort",
-          "design"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.231721,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "single",
-          "easy care",
-          "maintenance",
-          "low maintenance",
-          "care",
-          "low",
-          "brand new",
-          "brand",
+          "designer kitchen",
           "new",
-          "practical",
-          "strathmill",
-          "convenience"
+          "design",
+          "heating"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.117445,
+        "weight": 0.139446,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
-          "girls",
           "school",
+          "girls",
           "girls high",
           "high school",
           "westlake girls",
@@ -384,8 +384,8 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "north",
-          "school suburb"
+          "school suburb",
+          "shore"
         ]
       }
     ]
@@ -426,7 +426,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-05T23:51:40.561333+00:00"
+    "updated_at": "2026-11-07T00:40:00.731440+00:00"
   },
   "body": "Discover an exceptional opportunity to secure one of four brand-new standalone homes in a peaceful cul-de-sac at 5 Dianthus Place, Browns Bay. Located within the sought-after Rangitoto College (Rangi) school zone, these beautifully designed residences offer modern comfort, quality craftsmanship, and a choice of layouts to suit different family needs.\r\n\r\nFour Homes. Different Layouts. One Desirable Location.\r\n• Lot 1 & Lot 2: Spacious 4-bedroom homes, each featuring 2.5 bathrooms and a double internal-access garage — ideal for growing families seeking extra space and convenience.\r\n• Lot 3: A generously proportioned 139.7m² home featuring 3 bedrooms, 2.5 bathrooms, a dedicated study, and a single garage. Upstairs, a stylish beverage station adds an extra touch of convenience, making this a spacious and versatile three-bedroom home.\r\n• Lot 4: A thoughtfully designed 134.5m² home offering 3 bedrooms, 3 bathrooms, and a single garage — an excellent option for families or professionals who value comfort and practicality.\r\n\r\nQuality You Can Trust\r\n\r\nEach home comes with a 10-year Stamford Build Guarantee, providing added peace of mind for your new-home investment.\r\n\r\nWhy You'll Love This Location\r\n• Sought-after Rangitoto College school zone\r\n• Quiet cul-de-sac setting with minimal through traffic\r\n• Brand-new standalone homes offering modern living\r\n• A choice of floor plans to suit different lifestyles\r\n• Convenient access to Browns Bay's shops, cafés, beaches, and everyday amenities\r\n\r\nWhether you're upsizing, securing a quality family home, or looking for a brand-new property in a desirable North Shore location, these four homes deserve your attention.\r\n\r\nSecure your preferred home at 5 Dianthus Place, Browns Bay, and enjoy the benefits of modern living in a location families love.\r\n\r\nContact me today to arrange a private viewing or visit the next open home.",
   "photos": [
@@ -645,17 +645,17 @@
         "low": 1020000,
         "mid": 1250000,
         "high": 1506000,
-        "updated_at": "2026-11-05T23:51:40.561333+00:00",
+        "updated_at": "2026-11-07T00:40:00.731440+00:00",
         "confidence": "low",
-        "n": 106,
+        "n": 105,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 106,
-          "n_eff": 30.07,
+          "n": 105,
+          "n_eff": 29.57,
           "radius_km": 3.0,
           "iqr_ratio": 0.3888,
-          "same_suburb": 34,
+          "same_suburb": 33,
           "model_version": "comp-cv-v1"
         }
       }

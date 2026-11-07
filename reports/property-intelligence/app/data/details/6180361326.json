@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-15T02:31:28.460000+00:00",
-  "days_on_market": 21,
+  "days_on_market": 22,
   "lat": -36.8040367,
   "lon": 174.7877237,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2335282484.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1181000,
+  "comp_low": 1165000,
   "comp_mid": 1350000,
   "comp_high": 1760000,
   "comp_confidence": "low",
-  "comp_n": 41,
-  "value_low": 1181000,
+  "comp_n": 39,
+  "value_low": 1165000,
   "value_mid": 1350000,
   "value_high": 1760000,
   "value_source": "sold_comps_absolute",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2840,
+  "view_count": 2999,
   "watchers": 74,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": "price wording changed",
   "change_count": 3,
   "last_change_at": "2026-11-04T15:21:55.147914+00:00",
-  "days_since_last_change": 1.35,
+  "days_since_last_change": 2.39,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 43.5,
+  "sale_pressure": 43.7,
   "sale_pressure_label": "medium",
-  "model_low": 1277518,
-  "model_mid": 1764205,
-  "model_high": 2425822,
+  "model_low": 1199151,
+  "model_mid": 1671480,
+  "model_high": 2310476,
   "model_confidence": "low",
-  "text_signal_pct": 2.5148,
-  "description_index": 0.124731,
+  "text_signal_pct": 6.1837,
+  "description_index": 0.305842,
   "events_count": 3,
   "last_event": "cv_change",
   "schools": [
@@ -288,57 +288,76 @@
   ],
   "model": {
     "listing_id": 6180361326,
-    "low": 1277518,
-    "mid": 1764205,
-    "high": 2425822,
+    "low": 1199151,
+    "mid": 1671480,
+    "high": 2310476,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3228, 0.3185], \"rel_width\": 0.6509, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3321, 0.3237], \"rel_width\": 0.6649, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6180361326,
     "word_count": 293,
     "exclamations": 4,
     "urgency": 0.0,
-    "luxury": 0.1863,
+    "luxury": 0.1885,
     "condition_renovation": 1.0,
-    "views_waterfront": 0.2755,
-    "family_school": 0.998,
-    "investment": 0.1192,
+    "views_waterfront": 0.2796,
+    "family_school": 1.0,
+    "investment": 0.1153,
     "risk": 0.0,
     "readability": 0.4594,
-    "description_premium_pct": 2.5148,
-    "description_index": 0.124731,
+    "description_premium_pct": 6.1837,
+    "description_index": 0.305842,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 7, \"views_waterfront\": 3, \"family_school\": 17, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-05T23:51:41.323765+00:00",
+    "updated_at": "2026-11-07T00:40:01.413091+00:00",
     "top_topics": [
       {
         "topic_id": 1,
-        "weight": 0.309401,
+        "weight": 0.264077,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
           "future",
           "site",
+          "property",
           "land",
           "development",
-          "property",
           "subject",
           "council",
           "existing",
-          "housing",
+          "possibilities",
           "value",
           "mixed"
         ]
       },
       {
+        "topic_id": 6,
+        "weight": 0.239782,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "parking",
+          "fenced",
+          "brick",
+          "fully",
+          "fully fenced",
+          "room",
+          "double",
+          "garden",
+          "street parking",
+          "facing",
+          "sunny"
+        ]
+      },
+      {
         "topic_id": 5,
-        "weight": 0.257258,
+        "weight": 0.23603,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
-          "girls",
           "school",
+          "girls",
           "girls high",
           "high school",
           "westlake girls",
@@ -346,32 +365,13 @@
           "boys",
           "westlake boys",
           "intermediate",
-          "north",
-          "school suburb"
+          "school suburb",
+          "shore"
         ]
       },
       {
-        "topic_id": 0,
-        "weight": 0.102954,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "room",
-          "morning",
-          "garden",
-          "brick",
-          "renovated",
-          "coffee",
-          "ready",
-          "fenced",
-          "street",
-          "away",
-          "sun",
-          "summer"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.097654,
+        "topic_id": 7,
+        "weight": 0.082533,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -381,11 +381,11 @@
           "intermediate",
           "suburb intermediate",
           "primary",
+          "marina",
           "pigeon",
           "pigeon mountain",
           "mountain",
-          "marina",
-          "zone"
+          "suburb marina"
         ]
       }
     ]
@@ -448,7 +448,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-05T23:51:40.561333+00:00"
+    "updated_at": "2026-11-07T00:40:00.731440+00:00"
   },
   "body": "The Ultimate Belmont Family Lifestyle with Space, Style, and Unbeatable School Convenience.\r\n\r\nPositioned in one of the North Shore's most coveted coastal avenues, 197 Lake Road brings together an extensively renovated high-spec family home, generous outdoor space, and an enviable Belmont address.\r\n\r\nSet on a massive 809sqm (more or less) Freehold site (Zoned MHU), this property offers rare land size for children and pets to play today, with excellent long-term holding value.\r\n\r\nKEY FEATURES & HIGHLIGHTS:\r\n\r\nUnbeatable School Proximity: Literally 500m to Takapuna Grammar School! Also in zone for Belmont Primary and Belmont Intermediate. Enjoy effortless mornings where kids can safely walk to top schools from primary through college!\r\n\r\n \r\nFully Transformed & Move-In Ready: Modernized 4-bedroom, 2.5-bathroom family home (including master ensuite). Features a redesigned chef's kitchen, updated interiors, double-glazed windows, and seamless flow onto a broad sun-drenched deck.\r\n\r\nGenerous 809sqm Freehold Grounds: Beautifully updated front and rear gardens with sweeping lawns, new paving/gravel paths, and a huge backyard for active families.\r\n\r\n Smart CV Structure: Updated CV of $1,975,000 with a strong Land Value component of $1,550,000 - enjoy luxury improvements without paying excessive land rate premiums!\r\n\r\n Abundant Parking: Detached double garage plus brand-new off-street parking pad accommodating 3+ extra vehicles, boats, or trailers.\r\n\r\nTHE LIFESTYLE & LOCATION:\r\nWalk to St Leonards Bay Beach, local village cafes, parks, and Shoal Bay reserves. Commuting is smooth via Lake Road express bus lanes, Bayswater/Devonport ferries, and Esmonde Road motorway links (approx. 18 mins to Auckland CBD).\r\n\r\nRarely do land size, top school zones, and complete presentation combine in such a prime location.\r\n\r\n(Note: Land zoned MHU. Future land use/development subject to buyer's own DD and Council approval).\r\n\r\nContact Joleen 021 525 168 today to arrange a viewing !",
   "photos": [
@@ -556,6 +556,20 @@
       "estimate_mid": 1370000
     },
     {
+      "property_id": "0aca6051-dff7-4461-bcf6-14b6501afe64",
+      "address": "2/10 Northboro Road, Hauraki, Auckland",
+      "sale_price": 802000,
+      "sale_date": "2026-07-08T00:00:00+00:00",
+      "distance_km": 0.81,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 920000,
+      "estimate_mid": 805000
+    },
+    {
       "property_id": "e37d7c92-f3f5-4c58-84fd-9b4374d47fbd",
       "address": "3/50 Onepoto Road, Hauraki, Auckland",
       "sale_price": 1760000,
@@ -638,24 +652,10 @@
       "property_type": null,
       "cv": 920000,
       "estimate_mid": 965000
-    },
-    {
-      "property_id": "5297d14a-a947-47ff-934c-b197d72eb618",
-      "address": "4/38 Old Lake Road, Narrow Neck, Auckland",
-      "sale_price": 920000,
-      "sale_date": "2026-08-24T00:00:00+00:00",
-      "distance_km": 1.12,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1000000,
-      "estimate_mid": 930000
     }
   ],
   "valuation": {
-    "value_low": 1181000,
+    "value_low": 1165000,
     "value_mid": 1350000,
     "value_high": 1760000,
     "value_source": "sold_comps_absolute",
@@ -663,20 +663,20 @@
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.18M – $1.76M",
-        "low": 1181000,
+        "range": "$1.17M – $1.76M",
+        "low": 1165000,
         "mid": 1350000,
         "high": 1760000,
-        "updated_at": "2026-11-05T23:51:40.561333+00:00",
+        "updated_at": "2026-11-07T00:40:00.731440+00:00",
         "confidence": "low",
-        "n": 41,
+        "n": 39,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 41,
-          "n_eff": 10.62,
+          "n": 39,
+          "n_eff": 10.17,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4289,
+          "iqr_ratio": 0.4407,
           "same_suburb": 16,
           "model_version": "comp-cv-v1"
         }

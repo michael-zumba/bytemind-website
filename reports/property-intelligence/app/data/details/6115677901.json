@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-09-03T23:40:06.390000+00:00",
-  "days_on_market": 64,
+  "days_on_market": 65,
   "lat": -36.5787031,
   "lon": 174.6850887,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2327058699.jpg",
@@ -30,10 +30,10 @@
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
   "comp_low": 1217203,
-  "comp_mid": 1285000,
+  "comp_mid": 1291875,
   "comp_high": 1355181,
   "comp_confidence": "high",
-  "comp_n": 49,
+  "comp_n": 50,
   "value_low": 1247926,
   "value_mid": 1325266,
   "value_high": 1402605,
@@ -51,7 +51,7 @@
   "ask_gap": -30266,
   "ask_gap_pct": -0.0228,
   "deal_gap": 0.0228,
-  "view_count": 1940,
+  "view_count": 1967,
   "watchers": 30,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:05:56.824502+00:00",
-  "days_since_last_change": 3.83,
+  "days_since_last_change": 5.09,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 3,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 60.7,
+  "sale_pressure": 60.8,
   "sale_pressure_label": "medium",
-  "model_low": 1169628,
-  "model_mid": 1276223,
-  "model_high": 1400688,
+  "model_low": 1168022,
+  "model_mid": 1274766,
+  "model_high": 1398771,
   "model_confidence": "high",
-  "text_signal_pct": -2.5286,
-  "description_index": -0.133491,
+  "text_signal_pct": -2.518,
+  "description_index": -0.133228,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6115677901,
-    "low": 1169628,
-    "mid": 1276223,
-    "high": 1400688,
+    "low": 1168022,
+    "mid": 1274766,
+    "high": 1398771,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0872, 0.0931], \"rel_width\": 0.181, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0875, 0.0928], \"rel_width\": 0.181, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6115677901,
@@ -280,21 +280,21 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.1917,
-    "condition_renovation": 0.1486,
-    "views_waterfront": 0.1897,
+    "condition_renovation": 0.1484,
+    "views_waterfront": 0.1893,
     "family_school": 0.5455,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4247,
-    "description_premium_pct": -2.5286,
-    "description_index": -0.133491,
+    "description_premium_pct": -2.518,
+    "description_index": -0.133228,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 9, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-07T17:00:45.327256+00:00",
+    "updated_at": "2026-11-08T23:21:27.175973+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.477267,
+        "weight": 0.473678,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -305,15 +305,34 @@
           "secure",
           "park",
           "kensington",
-          "balcony",
           "complex",
+          "balcony",
           "pool",
           "restaurants"
         ]
       },
       {
+        "topic_id": 6,
+        "weight": 0.129949,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "fenced",
+          "parking",
+          "brick",
+          "room",
+          "fully",
+          "fully fenced",
+          "double",
+          "garden",
+          "street parking",
+          "sunny",
+          "facing"
+        ]
+      },
+      {
         "topic_id": 2,
-        "weight": 0.125622,
+        "weight": 0.127758,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
           "maintenance",
@@ -321,8 +340,8 @@
           "brand new",
           "brand",
           "low",
-          "single",
           "new",
+          "single",
           "easy care",
           "care",
           "quality",
@@ -331,27 +350,8 @@
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.124052,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "street",
-          "fenced",
-          "parking",
-          "brick",
-          "fully",
-          "fully fenced",
-          "room",
-          "double",
-          "garden",
-          "street parking",
-          "facing",
-          "sunny"
-        ]
-      },
-      {
         "topic_id": 9,
-        "weight": 0.084504,
+        "weight": 0.083518,
         "label": "New build / brand-new quality",
         "top_terms": [
           "section",
@@ -439,7 +439,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-07T17:00:44.671228+00:00"
+    "updated_at": "2026-11-08T23:21:26.294724+00:00"
   },
   "body": "Ready for a new family to move in and make it their own, this freehold Kensington Park home delivers the space, storage and easy-care living that busy families and those looking to simplify will appreciate.\r\n\r\nWith three generous bedrooms, 2.5 bathrooms, a double tandem garage and a fully fenced, low-maintenance garden, there's room for everyone, including the four legged members of the family. The tandem garage provides secure parking for two cars, with plenty of additional space for bikes, beach gear and all the essentials of an active coastal lifestyle.\r\n\r\nInside, light-filled open-plan living creates an inviting hub for everyday life and entertaining. The modern kitchen is bright and well appointed, with quality finishes and the luxury of a walk-in pantry. All three bedrooms are generously sized with excellent wardrobe storage, while the master suite enjoys a lovely sea view and modern ensuite.\r\n\r\nLife at Kensington Park comes with an affordable annual Residents Association fee and access to an enviable range of resort-style amenities, including a heated pool, gym, sauna and café, all surrounded by beautifully maintained gardens and parkland.\r\n\r\nAnd when you're ready to venture beyond the community, the golden sands of Orewa Beach are just a short walk away, while the Northern Motorway is approximately 3km from home, making the commute north or into Auckland remarkably convenient.\r\n\r\nThere's plenty to enjoy without going far, take a stroll through the landscaped gardens, relax at one of the park's picnic spots, or explore the natural beauty of nearby Eaves Bush.\r\n\r\nVacant and ready to move in. This property has been digitally staged to help inspire you to imagine the possibilities.\r\n\r\nContact Jaimee Durham on 027 389 2989 to arrange your private viewing.\r\n\r\nTo view the property documents copy this link into your browser : https://www.harcourtsfiles.co.nz/listings/U1PS",
   "photos": [
@@ -760,20 +760,6 @@
       "estimate_mid": 1070000
     },
     {
-      "property_id": "83666905-36a2-42ca-908f-6f0120f148eb",
-      "address": "26 Hatfield Heights, Hatfields Beach, Orewa",
-      "sale_price": 716000,
-      "sale_date": "2026-07-29T00:00:00+00:00",
-      "distance_km": 1.13,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 830000,
-      "estimate_mid": 725000
-    },
-    {
       "property_id": "ef4db35d-597b-4fee-b0fc-ea2cd6c2dce7",
       "address": "8 Chalmers Close, Orewa, Orewa",
       "sale_price": 1080000,
@@ -800,6 +786,20 @@
       "property_type": null,
       "cv": 760000,
       "estimate_mid": 740000
+    },
+    {
+      "property_id": "fcbeee90-3111-46d0-b50f-11eb5a1e9077",
+      "address": "32 Mahinga Kai Road, Orewa, Orewa",
+      "sale_price": 900000,
+      "sale_date": "2026-09-22T00:00:00+00:00",
+      "distance_km": 1.35,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 850000,
+      "estimate_mid": 880000
     }
   ],
   "valuation": {
@@ -823,20 +823,20 @@
         "name": "Nearby sold comparables",
         "range": "$1.22M – $1.36M",
         "low": 1217203,
-        "mid": 1285000,
+        "mid": 1291875,
         "high": 1355181,
-        "updated_at": "2026-11-07T17:00:44.671228+00:00",
+        "updated_at": "2026-11-08T23:21:26.294724+00:00",
         "confidence": "high",
-        "n": 49,
+        "n": 50,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 49,
-          "n_eff": 8.35,
+          "n": 50,
+          "n_eff": 8.5,
           "radius_km": 3.0,
-          "median_ratio": 0.9698,
-          "iqr_ratio": 0.1074,
-          "same_suburb": 42,
+          "median_ratio": 0.975,
+          "iqr_ratio": 0.1068,
+          "same_suburb": 43,
           "model_version": "comp-cv-v1"
         }
       },

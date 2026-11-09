@@ -11,13 +11,13 @@
   "parking": 9,
   "land_area": 1541.0,
   "floor_area": 426.0,
-  "price_display": "For sale by tender,  5 Nov",
+  "price_display": "Price by negotiation",
   "asking_price": null,
   "asking_kind": null,
-  "sale_method": "Tender",
-  "deadline_at": "2026-11-04T11:00:00+00:00",
+  "sale_method": "Price by negotiation",
+  "deadline_at": null,
   "listed_at": "2026-10-08T03:38:57.537000+00:00",
-  "days_on_market": 31,
+  "days_on_market": 32,
   "lat": -36.5886524,
   "lon": 174.6805287,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2334005313.jpg",
@@ -31,7 +31,7 @@
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
   "comp_low": 2627797,
   "comp_mid": 2778750,
-  "comp_high": 2943273,
+  "comp_high": 2920370,
   "comp_confidence": "high",
   "comp_n": 69,
   "value_low": 2565329,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2874,
-  "watchers": 70,
+  "view_count": 2920,
+  "watchers": 71,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -60,10 +60,10 @@
   "school_zone_secondary_count": 1,
   "school_zone_eqi_mean": 411.0,
   "school_zone_label": "In zone for 2 schools",
-  "change_signal": null,
-  "change_count": 1,
-  "last_change_at": "2026-11-03T21:06:43.990944+00:00",
-  "days_since_last_change": 5.09,
+  "change_signal": "price wording changed",
+  "change_count": 3,
+  "last_change_at": "2026-11-09T16:30:19.323886+00:00",
+  "days_since_last_change": 0.13,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 4,
@@ -73,16 +73,16 @@
   "sale_frequency_label": "Frequent trading",
   "status": "active",
   "delisted_at": null,
-  "sale_method_stage": 1,
-  "sale_pressure": 15.2,
-  "sale_pressure_label": "low",
-  "model_low": 2659851,
-  "model_mid": 2902931,
-  "model_high": 3185319,
+  "sale_method_stage": 3,
+  "sale_pressure": 45.3,
+  "sale_pressure_label": "medium",
+  "model_low": 2714344,
+  "model_mid": 2959928,
+  "model_high": 3235101,
   "model_confidence": "high",
-  "text_signal_pct": 66.0503,
-  "description_index": 2.649311,
-  "events_count": 1,
+  "text_signal_pct": 66.9939,
+  "description_index": 2.668645,
+  "events_count": 3,
   "last_event": "new_listing",
   "schools": [
     {
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6169390334,
-    "low": 2659851,
-    "mid": 2902931,
-    "high": 3185319,
+    "low": 2714344,
+    "mid": 2959928,
+    "high": 3235101,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0875, 0.0928], \"rel_width\": 0.181, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0866, 0.0889], \"rel_width\": 0.1759, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6169390334,
@@ -281,26 +281,26 @@
     "urgency": 0.0,
     "luxury": 1.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.555,
-    "family_school": 0.2665,
+    "views_waterfront": 0.5495,
+    "family_school": 0.2666,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.2971,
-    "description_premium_pct": 66.0503,
-    "description_index": 2.649311,
+    "description_premium_pct": 66.9939,
+    "description_index": 2.668645,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 17, \"condition_renovation\": 0, \"views_waterfront\": 8, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-08T23:21:27.175973+00:00",
+    "updated_at": "2026-11-09T19:34:23.151760+00:00",
     "top_topics": [
       {
         "topic_id": 11,
-        "weight": 0.565153,
+        "weight": 0.572799,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "residence",
           "pool",
-          "expansive",
           "scale",
+          "expansive",
           "waterfront",
           "substantial",
           "swimming",
@@ -308,12 +308,12 @@
           "swimming pool",
           "views",
           "spaces",
-          "architectural"
+          "held"
         ]
       },
       {
         "topic_id": 8,
-        "weight": 0.243921,
+        "weight": 0.245189,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "bathroom",
@@ -332,7 +332,7 @@
       },
       {
         "topic_id": 10,
-        "weight": 0.187489,
+        "weight": 0.179521,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
@@ -341,17 +341,17 @@
           "elevated",
           "position",
           "rangitoto",
-          "spectacular",
           "outlook",
+          "spectacular",
           "elevated position",
           "gulf",
-          "panoramic",
-          "sweeping"
+          "hauraki gulf",
+          "hauraki"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.003437,
+        "weight": 0.002491,
         "label": "Family living & entertaining",
         "top_terms": [
           "morning",
@@ -361,8 +361,8 @@
           "life",
           "sense",
           "morning coffee",
-          "setting",
           "inviting",
+          "setting",
           "welcoming",
           "step",
           "peaceful"
@@ -407,6 +407,20 @@
   "sale_outcome": null,
   "sale_events": [
     {
+      "event_type": "method_change",
+      "event_at": "2026-11-09T16:30:19.323886+00:00",
+      "old_value": "tender/",
+      "new_value": "negotiation/",
+      "detail_json": "{\"old\": [\"tender\", null], \"new\": [\"negotiation\", null]}"
+    },
+    {
+      "event_type": "price_display_change",
+      "event_at": "2026-11-09T16:30:19.323886+00:00",
+      "old_value": "For sale by tender,  5 Nov",
+      "new_value": "Price by negotiation",
+      "detail_json": "{\"old_price\": null, \"new_price\": null}"
+    },
+    {
       "event_type": "new_listing",
       "event_at": "2026-11-03T21:06:43.990944+00:00",
       "old_value": "",
@@ -447,7 +461,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-08T23:21:26.294724+00:00"
+    "updated_at": "2026-11-09T19:34:22.389778+00:00"
   },
   "body": "Space to indulge. Views to inspire. A home to celebrate.\r\n\r\nDiscover a magnificent family residence where grand proportions, luxurious accommodation and exceptional entertaining spaces come together amid beautiful gardens and sweeping lake and ocean views.\r\n\r\nAn impressive entrance hallway sets the scene, leading through to the home’s breathtaking centrepiece: a soaring 5.70 metre-high atrium, where a stunning chandelier hangs above the grand piano and elegant lounge. Imagine music filling this spectacular space, evenings spent with friends, and celebrations flowing onto the expansive hardwood deck and rolling lawns.\r\n\r\nThe magnificent main kitchen is complimented by a generous butler’s kitchen, offering space to prepare, host and entertain with ease. An adjoining informal dining area brings the family together, while the dedicated media room invites cosy movie nights and children’s gaming sessions.\r\n\r\nUpstairs, the lounge, formal dining and functions room elevate the entertaining experience with a mini bar, bar fridge and a conveniently positioned powder room to serve this area. Opening onto the backyard gardens and rolling lawns, this inviting space is perfect for relaxed family gatherings or memorable celebrations\r\n\r\nFive stately bedrooms each offer their own bathroom and walk-in wardrobe. The sumptuous master suite is a private sanctuary, complete with a sitting area, an expansive walk-in wardrobe and a luxurious ensuite, complimented by sweeping lake and ocean views. Two further bedrooms and the upstairs lounge with balcony also enjoy beautiful sea views.\r\n\r\nOutside, generous grounds provide space to relax, play and dream. Beautiful gardens frame the rolling lawns, with room to explore adding a swimming pool and creating your own resort-style retreat.\r\n\r\nExceptional features include:\r\n\r\n* Five generous bedrooms, each with its own bathroom \r\n* Luxurious master suite with private sitting area and expansive lake and ocean views\r\n* Sea views from two additional bedrooms and the upstairs lounge\r\n* Spectacular 5.70 metre-high atrium with statement chandelier\r\n* Elegant lounge and grand piano setting opening to outdoor entertaining\r\n* Magnificent kitchen with a substantial adjoining butler’s kitchen\r\n* Informal family dining area and dedicated media room\r\n* Upstairs functions room with mini bar, bar fridge and garden access\r\n* Expansive hardwood deck, beautiful gardens and rolling lawns\r\n* Generous grounds with potential for a swimming pool, subject to relevant approvals\r\n* Triple garage and fully fitted laundry\r\n* Generous parking accommodating approximately 10 cars\r\n\r\nA remarkable home for families who love space, appreciate luxury and entertain on a grand scale.\r\n\r\nContact Pavithra to arrange your private viewing and experience the splendour of 110 Grovenor Drive.",
   "photos": [
@@ -829,22 +843,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$2.63M – $2.94M",
+        "range": "$2.63M – $2.92M",
         "low": 2627797,
         "mid": 2778750,
-        "high": 2943273,
-        "updated_at": "2026-11-08T23:21:26.294724+00:00",
+        "high": 2920370,
+        "updated_at": "2026-11-09T19:34:22.389778+00:00",
         "confidence": "high",
         "n": 69,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 69,
-          "n_eff": 10.73,
+          "n_eff": 10.59,
           "radius_km": 3.0,
           "median_ratio": 0.975,
-          "iqr_ratio": 0.1135,
-          "same_suburb": 44,
+          "iqr_ratio": 0.1053,
+          "same_suburb": 43,
           "model_version": "comp-cv-v1"
         }
       },

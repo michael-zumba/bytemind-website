@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-04T22:27:05.700000+00:00",
-  "days_on_market": 34,
+  "days_on_market": 35,
   "lat": -36.8711073,
   "lon": 174.9119378,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333329649.jpg",
@@ -30,12 +30,12 @@
   "estimate_source": null,
   "estimate_updated_at": null,
   "comp_low": 1350000,
-  "comp_mid": 1480000,
+  "comp_mid": 1465000,
   "comp_high": 2060000,
   "comp_confidence": "low",
-  "comp_n": 43,
+  "comp_n": 44,
   "value_low": 1350000,
-  "value_mid": 1480000,
+  "value_mid": 1465000,
   "value_high": 2060000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:40:14.736535+00:00",
-  "days_since_last_change": 5.11,
+  "days_since_last_change": 5.95,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 35.7,
+  "sale_pressure": 35.8,
   "sale_pressure_label": "low",
-  "model_low": 1740526,
-  "model_mid": 2429014,
-  "model_high": 3346319,
+  "model_low": 1761152,
+  "model_mid": 2481130,
+  "model_high": 3406874,
   "model_confidence": "low",
-  "text_signal_pct": 36.65,
-  "description_index": 1.631279,
+  "text_signal_pct": 35.0285,
+  "description_index": 1.562903,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -318,33 +318,33 @@
   ],
   "model": {
     "listing_id": 6163979479,
-    "low": 1740526,
-    "mid": 2429014,
-    "high": 3346319,
+    "low": 1761152,
+    "mid": 2481130,
+    "high": 3406874,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3333, 0.3204], \"rel_width\": 0.6611, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3427, 0.3171], \"rel_width\": 0.6633, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6163979479,
     "word_count": 223,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.6189,
+    "luxury": 0.6199,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.9781,
-    "family_school": 0.8611,
-    "investment": 0.1515,
+    "views_waterfront": 0.9685,
+    "family_school": 0.8615,
+    "investment": 0.1529,
     "risk": 0.0,
     "readability": 0.3337,
-    "description_premium_pct": 36.65,
-    "description_index": 1.631279,
+    "description_premium_pct": 35.0285,
+    "description_index": 1.562903,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 5, \"condition_renovation\": 0, \"views_waterfront\": 8, \"family_school\": 11, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-08T23:21:27.175973+00:00",
+    "updated_at": "2026-11-09T19:34:23.151760+00:00",
     "top_topics": [
       {
         "topic_id": 7,
-        "weight": 0.253381,
+        "weight": 0.254798,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -362,27 +362,8 @@
         ]
       },
       {
-        "topic_id": 11,
-        "weight": 0.235991,
-        "label": "Resort amenities (pool / tennis / spa)",
-        "top_terms": [
-          "residence",
-          "pool",
-          "expansive",
-          "scale",
-          "waterfront",
-          "substantial",
-          "swimming",
-          "harbour",
-          "swimming pool",
-          "views",
-          "spaces",
-          "architectural"
-        ]
-      },
-      {
         "topic_id": 10,
-        "weight": 0.232223,
+        "weight": 0.231888,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
@@ -391,31 +372,50 @@
           "elevated",
           "position",
           "rangitoto",
-          "spectacular",
           "outlook",
+          "spectacular",
           "elevated position",
           "gulf",
-          "panoramic",
-          "sweeping"
+          "hauraki gulf",
+          "hauraki"
+        ]
+      },
+      {
+        "topic_id": 11,
+        "weight": 0.228899,
+        "label": "Resort amenities (pool / tennis / spa)",
+        "top_terms": [
+          "residence",
+          "pool",
+          "scale",
+          "expansive",
+          "waterfront",
+          "substantial",
+          "swimming",
+          "harbour",
+          "swimming pool",
+          "views",
+          "spaces",
+          "held"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.124796,
+        "weight": 0.130787,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "quality",
-          "finishes",
           "appliances",
+          "finishes",
           "designer",
           "year",
           "luxury",
           "comfort",
-          "new",
           "designer kitchen",
-          "design",
-          "heating"
+          "new",
+          "heating",
+          "design"
         ]
       }
     ]
@@ -464,7 +464,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-08T23:21:26.294724+00:00"
+    "updated_at": "2026-11-09T19:34:22.389778+00:00"
   },
   "body": "Set directly opposite the golden sands of Eastern Beach, this beautiful beachfront home delivers uninterrupted panoramic sea views and an exceptional coastal lifestyle in one of East Auckland's most tightly held locations.\r\n\r\nNatural stone flooring flows through the main living level, where a Mal Corboy-designed kitchen with premium Miele appliances anchors the open-plan living and dining areas. Expansive glazing captures the ever-changing seascape, while generous doors create effortless indoor-outdoor flow for relaxed entertaining.\r\n\r\nFour well-appointed bedrooms provide comfortable accommodation for family and guests, led by a master suite overlooking the beach with a stylish ensuite and generous wardrobe space. A study nook positioned within a full-height bay window creates a peaceful workspace framed by the view.\r\n\r\nHere, the beach becomes part of everyday life. Morning swims, sunrise paddleboarding and evening shoreline walks are all just steps from home.\r\n\r\nWith 395m2; of land, three bathrooms and direct access to the sand, the home combines a remarkable waterfront position with the practicality needed for everyday family living. Zoned for Bucklands Beach Primary, Bucklands Beach Intermediate and Macleans College, it is also conveniently close to cafés, coastal walkways and village amenities.\r\n\r\nWhether you're seeking a permanent family home, a luxurious coastal retreat or a premium short-stay investment, this is a rare opportunity to secure an enviable beachfront position.\r\n\r\nContact us today to arrange your private viewing.",
   "photos": [
@@ -558,20 +558,6 @@
       "estimate_mid": 1760000
     },
     {
-      "property_id": "4bb722e2-5bd2-4647-ba23-68875eaea405",
-      "address": "1A Malloy Place, Eastern Beach, Auckland",
-      "sale_price": 1078000,
-      "sale_date": "2026-04-26T00:00:00+00:00",
-      "distance_km": 0.38,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1125000,
-      "estimate_mid": 1080000
-    },
-    {
       "property_id": "7bea4988-3389-45f5-a15c-1d7e6b0e028a",
       "address": "138B Bucklands Beach Road, Bucklands Beach, Auckland",
       "sale_price": 1380000,
@@ -584,6 +570,20 @@
       "property_type": null,
       "cv": 1350000,
       "estimate_mid": 1370000
+    },
+    {
+      "property_id": "aed20491-562d-47e9-ab0c-e30486ae418a",
+      "address": "36D Eastern Beach Road, Bucklands Beach, Auckland",
+      "sale_price": 1400000,
+      "sale_date": "2026-10-20T00:00:00+00:00",
+      "distance_km": 0.41,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1525000,
+      "estimate_mid": 1400000
     },
     {
       "property_id": "4dec8fa7-b679-475b-86ba-d69f6778cede",
@@ -672,7 +672,7 @@
   ],
   "valuation": {
     "value_low": 1350000,
-    "value_mid": 1480000,
+    "value_mid": 1465000,
     "value_high": 2060000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
@@ -681,18 +681,18 @@
         "name": "Nearby sold comparables",
         "range": "$1.35M – $2.06M",
         "low": 1350000,
-        "mid": 1480000,
+        "mid": 1465000,
         "high": 2060000,
-        "updated_at": "2026-11-08T23:21:26.294724+00:00",
+        "updated_at": "2026-11-09T19:34:22.389778+00:00",
         "confidence": "low",
-        "n": 43,
+        "n": 44,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 43,
-          "n_eff": 14.73,
+          "n": 44,
+          "n_eff": 15.39,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4797,
+          "iqr_ratio": 0.4846,
           "same_suburb": 9,
           "model_version": "comp-cv-v1"
         }

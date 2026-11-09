@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-29T20:56:40.310000+00:00",
-  "days_on_market": 9,
+  "days_on_market": 10,
   "lat": -36.6356213,
   "lon": 174.7637961,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338486106.jpg",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:59:05.999978+00:00",
-  "days_since_last_change": 5.1,
+  "days_since_last_change": 5.94,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 4,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 51.5,
+  "sale_pressure": 51.7,
   "sale_pressure_label": "medium",
-  "model_low": 1695745,
-  "model_mid": 1850717,
-  "model_high": 2030748,
+  "model_low": 1692229,
+  "model_mid": 1845336,
+  "model_high": 2016890,
   "model_confidence": "high",
-  "text_signal_pct": 12.982,
-  "description_index": 0.637661,
+  "text_signal_pct": 13.3513,
+  "description_index": 0.6522,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,71 +268,52 @@
   ],
   "model": {
     "listing_id": 6204553439,
-    "low": 1695745,
-    "mid": 1850717,
-    "high": 2030748,
+    "low": 1692229,
+    "mid": 1845336,
+    "high": 2016890,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0875, 0.0928], \"rel_width\": 0.181, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0866, 0.0889], \"rel_width\": 0.1759, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6204553439,
     "word_count": 349,
     "exclamations": 3,
     "urgency": 0.1848,
-    "luxury": 0.0791,
-    "condition_renovation": 0.6125,
-    "views_waterfront": 0.3906,
-    "family_school": 0.3001,
-    "investment": 0.0968,
+    "luxury": 0.0792,
+    "condition_renovation": 0.6102,
+    "views_waterfront": 0.3868,
+    "family_school": 0.3003,
+    "investment": 0.0977,
     "risk": 0.0,
     "readability": 0.4443,
-    "description_premium_pct": 12.982,
-    "description_index": 0.637661,
+    "description_premium_pct": 13.3513,
+    "description_index": 0.6522,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 1, \"condition_renovation\": 5, \"views_waterfront\": 5, \"family_school\": 6, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-08T23:21:27.175973+00:00",
+    "updated_at": "2026-11-09T19:34:23.151760+00:00",
     "top_topics": [
       {
         "topic_id": 6,
-        "weight": 0.232283,
+        "weight": 0.234995,
         "label": "Parking, garden & section",
         "top_terms": [
+          "brick",
           "street",
           "fenced",
           "parking",
-          "brick",
-          "room",
           "fully",
           "fully fenced",
-          "double",
+          "room",
           "garden",
-          "street parking",
+          "double",
           "sunny",
+          "street parking",
           "facing"
         ]
       },
       {
-        "topic_id": 9,
-        "weight": 0.175075,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "section",
-          "dream",
-          "build",
-          "dream home",
-          "land",
-          "sections",
-          "whangaparaoa",
-          "auckland",
-          "penlink",
-          "community",
-          "building",
-          "minutes"
-        ]
-      },
-      {
         "topic_id": 10,
-        "weight": 0.173996,
+        "weight": 0.174041,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
@@ -341,23 +322,42 @@
           "elevated",
           "position",
           "rangitoto",
-          "spectacular",
           "outlook",
+          "spectacular",
           "elevated position",
           "gulf",
-          "panoramic",
-          "sweeping"
+          "hauraki gulf",
+          "hauraki"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.172222,
+        "label": "Coastal village & park proximity",
+        "top_terms": [
+          "section",
+          "dream",
+          "build",
+          "dream home",
+          "land",
+          "sections",
+          "auckland",
+          "whangaparaoa",
+          "penlink",
+          "community",
+          "building",
+          "minutes"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.135005,
+        "weight": 0.130686,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "residence",
           "pool",
-          "expansive",
           "scale",
+          "expansive",
           "waterfront",
           "substantial",
           "swimming",
@@ -365,7 +365,7 @@
           "swimming pool",
           "views",
           "spaces",
-          "architectural"
+          "held"
         ]
       }
     ]
@@ -447,7 +447,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-08T23:21:26.294724+00:00"
+    "updated_at": "2026-11-09T19:34:22.389778+00:00"
   },
   "body": "Immerse yourself in one of Manly's most sought-after coastal pockets with this substantial family home, perfectly situated on a generous 1521 square metre freehold section just steps from Little Manly Beach. Enjoy breathtaking sea views of Rangitoto and beyond, all from a private position that emphasises tranquillity and serenity.\r\n\r\nDesigned for both relaxation and entertainment, this immaculate brick and cedar home is positioned to maximise privacy, nestled beside a local reserve that offers beautiful vistas from the kitchen and living areas. You'll love the all-day sun that floods the interior, creating a warm and inviting atmosphere.\r\n\r\nRecently renovated to a high standard-complete with a new roof, this property boasts a standout feature: its expansive north and west-facing section, rich with potential. Imagine the possibilities for a private minor dwelling or enhancements that cater to your family's needs.\r\n\r\nWith a flexible split-level layout featuring 3 to 4 bedrooms, 1 to 2 lounges, 3 bathrooms, and 4 WC, this residence is the perfect haven for large families. The option of two master suites-each with an en-suite-on both the ground and upper floors allows you to tailor the space. Consider using the upper master as a welcoming guest suite or a spacious second lounge, adapting the home to your lifestyle.\r\n\r\nStep outside to discover seamless indoor/outdoor connectivity. Unwind on the covered deck, where you can watch the kids play or host vibrant summer gatherings under the sun. \r\n\r\nThe internal access double garage, complete with a workshop area and a small office, provides ample space for vehicles, hobbies, and work-from-home essentials. Location is key, and this home truly delivers! Just minutes from the lively Manly Village and Whangaparaoa Plaza, with Whangaparaoa School within easy walking distance-everything you need is right at your doorstep.\r\n\r\nFor astute buyers, registered Valuation and LIM are available, ensuring you have all the information you need to make a wise investment. Don't miss this rare opportunity to secure your spacious coastal sanctuary in an unbeatable setting-bring the entire family and make this dream home yours today!\r\n\r\nCall now for your private viewing-opportunities like this won't last long!",
   "photos": [
@@ -833,14 +833,14 @@
         "low": 1715745,
         "mid": 1845000,
         "high": 1952000,
-        "updated_at": "2026-11-08T23:21:26.294724+00:00",
+        "updated_at": "2026-11-09T19:34:22.389778+00:00",
         "confidence": "medium",
         "n": 22,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
           "n": 22,
-          "n_eff": 4.33,
+          "n_eff": 4.31,
           "radius_km": 3.0,
           "median_ratio": 1.025,
           "iqr_ratio": 0.1281,

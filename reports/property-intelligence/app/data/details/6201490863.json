@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-28T04:09:46.313000+00:00",
-  "days_on_market": 11,
+  "days_on_market": 12,
   "lat": -36.5839615,
   "lon": 174.6629028,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338096243.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 932000,
+  "comp_low": 930000,
   "comp_mid": 1070000,
   "comp_high": 1220000,
   "comp_confidence": "medium",
-  "comp_n": 46,
-  "value_low": 932000,
+  "comp_n": 45,
+  "value_low": 930000,
   "value_mid": 1070000,
   "value_high": 1220000,
   "value_source": "sold_comps_absolute",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:10:29.123678+00:00",
-  "days_since_last_change": 5.09,
+  "days_since_last_change": 5.93,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 31.8,
+  "sale_pressure": 32.0,
   "sale_pressure_label": "low",
-  "model_low": 468812,
-  "model_mid": 654256,
-  "model_high": 901333,
+  "model_low": 465823,
+  "model_mid": 656256,
+  "model_high": 901115,
   "model_confidence": "low",
-  "text_signal_pct": -26.3762,
-  "description_index": -1.599665,
+  "text_signal_pct": -26.269,
+  "description_index": -1.585962,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,90 +268,71 @@
   ],
   "model": {
     "listing_id": 6201490863,
-    "low": 468812,
-    "mid": 654256,
-    "high": 901333,
+    "low": 465823,
+    "mid": 656256,
+    "high": 901115,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3333, 0.3204], \"rel_width\": 0.6611, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3427, 0.3171], \"rel_width\": 0.6633, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6201490863,
     "word_count": 154,
     "exclamations": 3,
     "urgency": 0.0,
-    "luxury": 0.3585,
-    "condition_renovation": 0.5552,
+    "luxury": 0.3591,
+    "condition_renovation": 0.5531,
     "views_waterfront": 0.0,
-    "family_school": 0.2267,
+    "family_school": 0.2268,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.421,
-    "description_premium_pct": -26.3762,
-    "description_index": -1.599665,
+    "description_premium_pct": -26.269,
+    "description_index": -1.585962,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 2, \"views_waterfront\": 0, \"family_school\": 2, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-08T23:21:27.175973+00:00",
+    "updated_at": "2026-11-09T19:34:23.151760+00:00",
     "top_topics": [
       {
         "topic_id": 2,
-        "weight": 0.654083,
-        "label": "Brick / tile / low-maintenance units",
+        "weight": 0.65607,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "maintenance",
-          "low maintenance",
           "brand new",
           "brand",
+          "maintenance",
+          "low maintenance",
           "low",
           "new",
           "single",
           "easy care",
           "care",
           "quality",
-          "buyers",
-          "convenience"
+          "convenience",
+          "new home"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.327161,
+        "weight": 0.325111,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "quality",
-          "finishes",
           "appliances",
+          "finishes",
           "designer",
           "year",
           "luxury",
           "comfort",
-          "new",
           "designer kitchen",
-          "design",
-          "heating"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.012022,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "street",
-          "fenced",
-          "parking",
-          "brick",
-          "room",
-          "fully",
-          "fully fenced",
-          "double",
-          "garden",
-          "street parking",
-          "sunny",
-          "facing"
+          "new",
+          "heating",
+          "design"
         ]
       },
       {
         "topic_id": 10,
-        "weight": 0.006734,
+        "weight": 0.011706,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
@@ -360,12 +341,31 @@
           "elevated",
           "position",
           "rangitoto",
-          "spectacular",
           "outlook",
+          "spectacular",
           "elevated position",
           "gulf",
-          "panoramic",
-          "sweeping"
+          "hauraki gulf",
+          "hauraki"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.007113,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "brick",
+          "street",
+          "fenced",
+          "parking",
+          "fully",
+          "fully fenced",
+          "room",
+          "garden",
+          "double",
+          "sunny",
+          "street parking",
+          "facing"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-08T23:21:26.294724+00:00"
+    "updated_at": "2026-11-09T19:34:22.389778+00:00"
   },
   "body": "Not your typical new build! This beautifully designed home in Strathmill, Orewa, offers an impressive combination of high raft ceilings, skylights in both bathrooms and modern comfort. From the designer kitchen and light-filled living spaces to the convenience of central air conditioning, every detail has been thoughtfully designed for stylish, effortless living.\r\n\r\nFeatures You Will Love:\r\n\r\n•  3 bedrooms and 2 bathrooms, including a master ensuite\r\n•  Impressive high raft ceilings creating a bright, spacious feel\r\n•  Skylights in both bathrooms bringing in beautiful natural light\r\n•  Master ensuite featuring a double vanity for added comfort and convenience\r\n•  Designer kitchen with stylish finishes, quality appliances and gas cooking\r\n•  Light-filled open-plan living and dining, perfect for everyday living and entertaining\r\n•  Central air conditioning for year-round comfort\r\n•  236m² (more or less) easy-care section for low-maintenance living\r\n•  Single internal-access garage plus two off-street parking spaces\r\n•  Modern design with quality finishes throughout\r\n•  Handy to Orewa Beach, schools, shops and cafés\r\n\r\nOne Community. Multiple Homes. One Easy Tour!\r\n\r\nWhy visit one home when you can explore several?\r\n\r\nWe have a great selection of brand-new homes throughout Strathmill, offering different layouts, sizes and features to suit your lifestyle and budget.\r\n\r\nCall Brianna and Brian to book your personalised Strathmill Home Tour – compare multiple homes in one convenient visit!\r\n\r\nViewing Directions: Via Flavell Road, or GPS to 251 West Hoe Heights, Orewa. Follow  the Strathmill signs.",
   "photos": [
@@ -616,7 +616,7 @@
     }
   ],
   "valuation": {
-    "value_low": 932000,
+    "value_low": 930000,
     "value_mid": 1070000,
     "value_high": 1220000,
     "value_source": "sold_comps_absolute",
@@ -624,21 +624,21 @@
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$932K – $1.22M",
-        "low": 932000,
+        "range": "$930K – $1.22M",
+        "low": 930000,
         "mid": 1070000,
         "high": 1220000,
-        "updated_at": "2026-11-08T23:21:26.294724+00:00",
+        "updated_at": "2026-11-09T19:34:22.389778+00:00",
         "confidence": "medium",
-        "n": 46,
+        "n": 45,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 46,
-          "n_eff": 12.26,
+          "n": 45,
+          "n_eff": 12.1,
           "radius_km": 3.0,
-          "iqr_ratio": 0.2692,
-          "same_suburb": 35,
+          "iqr_ratio": 0.271,
+          "same_suburb": 34,
           "model_version": "comp-cv-v1"
         }
       }

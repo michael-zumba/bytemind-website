@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-15T22:54:36.227000+00:00",
-  "days_on_market": 23,
+  "days_on_market": 24,
   "lat": -36.5931458,
   "lon": 174.6643746,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2335507718.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1170000,
+  "comp_low": 1140000,
   "comp_mid": 1345000,
   "comp_high": 1500000,
   "comp_confidence": "medium",
-  "comp_n": 33,
-  "value_low": 1170000,
+  "comp_n": 34,
+  "value_low": 1140000,
   "value_mid": 1345000,
   "value_high": 1500000,
   "value_source": "sold_comps_absolute",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 430,
+  "view_count": 443,
   "watchers": 10,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:01:44.938696+00:00",
-  "days_since_last_change": 5.1,
+  "days_since_last_change": 5.94,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 33.8,
+  "sale_pressure": 34.0,
   "sale_pressure_label": "low",
-  "model_low": 1220710,
-  "model_mid": 1703578,
-  "model_high": 2346926,
+  "model_low": 1216019,
+  "model_mid": 1713141,
+  "model_high": 2352337,
   "model_confidence": "low",
-  "text_signal_pct": -16.9031,
-  "description_index": -0.96733,
+  "text_signal_pct": -17.747,
+  "description_index": -1.016747,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6181886288,
-    "low": 1220710,
-    "mid": 1703578,
-    "high": 2346926,
+    "low": 1216019,
+    "mid": 1713141,
+    "high": 2352337,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3333, 0.3204], \"rel_width\": 0.6611, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3427, 0.3171], \"rel_width\": 0.6633, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6181886288,
@@ -280,21 +280,21 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.3003,
-    "views_waterfront": 0.2554,
-    "family_school": 0.2453,
+    "condition_renovation": 0.2992,
+    "views_waterfront": 0.2529,
+    "family_school": 0.2454,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3234,
-    "description_premium_pct": -16.9031,
-    "description_index": -0.96733,
+    "description_premium_pct": -17.747,
+    "description_index": -1.016747,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 3, \"views_waterfront\": 4, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-08T23:21:27.175973+00:00",
+    "updated_at": "2026-11-09T19:34:23.151760+00:00",
     "top_topics": [
       {
         "topic_id": 8,
-        "weight": 0.452504,
+        "weight": 0.448401,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "bathroom",
@@ -313,45 +313,26 @@
       },
       {
         "topic_id": 4,
-        "weight": 0.24649,
+        "weight": 0.248054,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "quality",
-          "finishes",
           "appliances",
+          "finishes",
           "designer",
           "year",
           "luxury",
           "comfort",
-          "new",
           "designer kitchen",
-          "design",
-          "heating"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.129246,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "sea",
-          "sea views",
-          "views",
-          "elevated",
-          "position",
-          "rangitoto",
-          "spectacular",
-          "outlook",
-          "elevated position",
-          "gulf",
-          "panoramic",
-          "sweeping"
+          "new",
+          "heating",
+          "design"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.128184,
+        "weight": 0.132659,
         "label": "Family living & entertaining",
         "top_terms": [
           "morning",
@@ -361,11 +342,30 @@
           "life",
           "sense",
           "morning coffee",
-          "setting",
           "inviting",
+          "setting",
           "welcoming",
           "step",
           "peaceful"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.125698,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "sea views",
+          "views",
+          "elevated",
+          "position",
+          "rangitoto",
+          "outlook",
+          "spectacular",
+          "elevated position",
+          "gulf",
+          "hauraki gulf",
+          "hauraki"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-08T23:21:26.294724+00:00"
+    "updated_at": "2026-11-09T19:34:22.389778+00:00"
   },
   "body": "Set on an impressive 507sqm (approx.) freehold site with a substantial 332sqm (approx.) floor area, offering five bedrooms and 4.5 bathrooms, and backed by a 10-Year Master Build Guarantee, this brand-new residence delivers a sense of scale, openness, and everyday comfort that immediately stands out. Defined by double-height ceilings, full-height glazing, and thoughtfully zoned living spaces across both levels, the home is designed to feel expansive yet easy to live in - ideal for modern family life.\r\n\r\nThe ground floor forms the social heart of the home, with open-plan living, dining, and kitchen areas flowing naturally together. Large windows and sliding doors invite abundant natural light, with the living area enjoying pleasant sea views and extending seamlessly out to a sun-soaked deck for relaxed indoor-outdoor living. The main living space is enhanced by a stylish built-in fireplace, creating a warm and inviting atmosphere, and is fitted with a heat pump to ensure year-round comfort.\r\n\r\nThe main kitchen is sleek and functional, centred around a generous island bench that naturally brings people together, while a fully equipped second kitchen adds excellent flexibility for entertaining or larger households. A ground-floor bedroom with its own ensuite is ideal for guests or extended family, complemented by a separate guest toilet for everyday convenience.\r\n\r\nThe upper level offers additional living flexibility, with a light-filled lounge and a well-positioned study nook creating space for work, relaxation, or quiet family time. From this level, the elevated outlook allows for glimpses of the sea, adding a subtle sense of openness. The main master suite is generously proportioned and features a walk-in wardrobe, a stylish ensuite with a bathtub, and its own heat pump. A second upstairs bedroom with its own ensuite, also equipped with a heat pump, adds further flexibility, while two additional well-sized bedrooms are serviced by a modern family bathroom. This level is thoughtfully arranged to balance privacy, comfort, and everyday practicality.\r\n\r\nPractical living is further supported by a neatly positioned laundry on the ground floor, offering functional bench space, a dedicated sink, and storage to support daily routines without disrupting the main living areas. Completing the home is a double internal-access garage, ample storage throughout, and a layout that carefully balances shared living spaces with private retreats.\r\n\r\nLocated in the highly sought-after Millwater community, close to quality schools, parks, motorway links, Silverdale Shopping Centre, cafés, and Orewa Beach, this home brings together space, functionality, and lifestyle in one of the area's most desirable neighbourhoods.\r\n\r\nA home of this scale, sea outlook, and versatile design is a rare find in Millwater - contact us today to experience it firsthand at a private viewing.",
   "photos": [
@@ -621,7 +621,7 @@
     }
   ],
   "valuation": {
-    "value_low": 1170000,
+    "value_low": 1140000,
     "value_mid": 1345000,
     "value_high": 1500000,
     "value_source": "sold_comps_absolute",
@@ -629,20 +629,20 @@
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.17M – $1.50M",
-        "low": 1170000,
+        "range": "$1.14M – $1.50M",
+        "low": 1140000,
         "mid": 1345000,
         "high": 1500000,
-        "updated_at": "2026-11-08T23:21:26.294724+00:00",
+        "updated_at": "2026-11-09T19:34:22.389778+00:00",
         "confidence": "medium",
-        "n": 33,
+        "n": 34,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 33,
-          "n_eff": 12.29,
+          "n": 34,
+          "n_eff": 12.38,
           "radius_km": 3.0,
-          "iqr_ratio": 0.2454,
+          "iqr_ratio": 0.2677,
           "same_suburb": 6,
           "model_version": "comp-cv-v1"
         }

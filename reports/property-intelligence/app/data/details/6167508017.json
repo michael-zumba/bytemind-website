@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-07T00:47:15.540000+00:00",
-  "days_on_market": 32,
+  "days_on_market": 33,
   "lat": -36.8779535,
   "lon": 174.9098477,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333763101.jpg",
@@ -33,7 +33,7 @@
   "comp_mid": 1480000,
   "comp_high": 2060000,
   "comp_confidence": "low",
-  "comp_n": 43,
+  "comp_n": 44,
   "value_low": 1350000,
   "value_mid": 1480000,
   "value_high": 2060000,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:51:43.478164+00:00",
-  "days_since_last_change": 5.1,
+  "days_since_last_change": 5.95,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 35.3,
+  "sale_pressure": 35.5,
   "sale_pressure_label": "low",
-  "model_low": 1063783,
-  "model_mid": 1484576,
-  "model_high": 2045219,
+  "model_low": 1039675,
+  "model_mid": 1464706,
+  "model_high": 2011207,
   "model_confidence": "low",
-  "text_signal_pct": -1.2985,
-  "description_index": -0.068281,
+  "text_signal_pct": -1.0272,
+  "description_index": -0.053736,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -328,33 +328,52 @@
   ],
   "model": {
     "listing_id": 6167508017,
-    "low": 1063783,
-    "mid": 1484576,
-    "high": 2045219,
+    "low": 1039675,
+    "mid": 1464706,
+    "high": 2011207,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3333, 0.3204], \"rel_width\": 0.6611, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3427, 0.3171], \"rel_width\": 0.6633, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6167508017,
     "word_count": 473,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.2334,
-    "condition_renovation": 0.2711,
-    "views_waterfront": 0.0576,
-    "family_school": 0.7381,
+    "luxury": 0.2338,
+    "condition_renovation": 0.2701,
+    "views_waterfront": 0.0571,
+    "family_school": 0.7385,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3066,
-    "description_premium_pct": -1.2985,
-    "description_index": -0.068281,
+    "description_premium_pct": -1.0272,
+    "description_index": -0.053736,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 4, \"condition_renovation\": 3, \"views_waterfront\": 1, \"family_school\": 20, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-08T23:21:27.175973+00:00",
+    "updated_at": "2026-11-09T19:34:23.151760+00:00",
     "top_topics": [
       {
+        "topic_id": 2,
+        "weight": 0.271004,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand new",
+          "brand",
+          "maintenance",
+          "low maintenance",
+          "low",
+          "new",
+          "single",
+          "easy care",
+          "care",
+          "quality",
+          "convenience",
+          "new home"
+        ]
+      },
+      {
         "topic_id": 7,
-        "weight": 0.269669,
+        "weight": 0.268172,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -372,46 +391,27 @@
         ]
       },
       {
-        "topic_id": 2,
-        "weight": 0.262635,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low maintenance",
-          "brand new",
-          "brand",
-          "low",
-          "new",
-          "single",
-          "easy care",
-          "care",
-          "quality",
-          "buyers",
-          "convenience"
-        ]
-      },
-      {
         "topic_id": 4,
-        "weight": 0.170709,
+        "weight": 0.16481,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "quality",
-          "finishes",
           "appliances",
+          "finishes",
           "designer",
           "year",
           "luxury",
           "comfort",
-          "new",
           "designer kitchen",
-          "design",
-          "heating"
+          "new",
+          "heating",
+          "design"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.161487,
+        "weight": 0.158503,
         "label": "Family living & entertaining",
         "top_terms": [
           "morning",
@@ -421,8 +421,8 @@
           "life",
           "sense",
           "morning coffee",
-          "setting",
           "inviting",
+          "setting",
           "welcoming",
           "step",
           "peaceful"
@@ -474,7 +474,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-08T23:21:26.294724+00:00"
+    "updated_at": "2026-11-09T19:34:22.389778+00:00"
   },
   "body": "Set apart as a fully standalone residence, Lot 5, 198 Bucklands Beach Road offers the independence, space and privacy many buyers are searching for, combined with all the benefits of a beautifully finished brand-new home.\r\n\r\nPositioned at the rear of this boutique collection, Lot 5 has been thoughtfully designed for modern family living, with generous accommodation, well-proportioned spaces and a layout that provides plenty of room to grow. For buyers who want brand-new without feeling like they're compromising on space, privacy or functionality, this is an opportunity that deserves attention.\r\n\r\nAt the heart of the home is a beautifully appointed designer kitchen connecting seamlessly with the open-plan dining and living areas. Designed for both everyday family life and entertaining, the living spaces enjoy excellent natural light and an easy connection outdoors.\r\n\r\nGenerous bedroom accommodation provides flexibility for growing or established families, teenagers, guests or those working from home. Beautifully finished tiled bathrooms, excellent storage and internal-access garaging further enhance the practicality of a home where every detail has been considered.\r\n\r\nBeing completely standalone adds another level of appeal, providing greater separation and a genuine sense of having your own home within this exclusive collection.\r\n\r\nModern construction and low-maintenance materials mean less time spent on upkeep and more time enjoying the lifestyle that comes with living in this sought-after coastal pocket of East Auckland.\r\n\r\nBucklands Beach and Eastern Beach are both within easy reach, along with Howick Golf Club, local amenities and transport connections. Families will also appreciate being positioned within the highly regarded Macleans College school zone.\r\n\r\nWith the Titles now issued, Lot 5 is ready for its next owner to make it home.\r\n\r\nKEY FEATURES\r\n* Fully standalone brand-new residence  \r\n* Lot 5, 198 Bucklands Beach Road  \r\n* Positioned privately at the rear  \r\n* Generous family-sized accommodation  \r\n* Contemporary two-level design  \r\n* Designer kitchen with quality finishes  \r\n* Spacious open-plan living and dining  \r\n* Excellent indoor-outdoor connection  \r\n* Beautifully finished tiled bathrooms  \r\n* Flexible spaces for family, guests or working from home  \r\n* Internal-access garaging  \r\n* Excellent storage throughout  \r\n* Modern, low-maintenance construction  \r\n* Title issued  \r\n* Stamford 10-year Building Warranty  \r\n* Zoned for Macleans College  \r\n* Close to Bucklands Beach, Eastern Beach and Howick Golf Club  \r\n\r\nFIVE BRAND-NEW HOMES. FIVE OPPORTUNITIES.\r\n\r\nLot 5 forms part of a boutique collection of just five brand-new homes at 198 Bucklands Beach Road, offering a choice of three to five-bedroom configurations designed to suit different lifestyles and stages of life.\r\n\r\nWhile Lot 5 distinguishes itself as a fully standalone home, the wider collection provides an excellent range of options for families, professionals, couples and downsizers. Each residence has its own combination of accommodation, layout, outdoor living and functionality, giving buyers the opportunity to choose the home that best suits them.\r\n\r\nWhether your priority is low-maintenance living, additional bedrooms, flexibility for the future or simply securing a quality brand-new home in Bucklands Beach, there is an option here worth discovering.\r\n\r\nFIVE HOMES. DIFFERENT LAYOUTS. ONE EXCEPTIONAL LOCATION.\r\n\r\nContact Simon Davies or Renee Davies to arrange a private viewing of Lot 5 and discover the other opportunities available at 198 Bucklands Beach Road.",
   "photos": [
@@ -582,6 +582,20 @@
       "estimate_mid": 1370000
     },
     {
+      "property_id": "aed20491-562d-47e9-ab0c-e30486ae418a",
+      "address": "36D Eastern Beach Road, Bucklands Beach, Auckland",
+      "sale_price": 1400000,
+      "sale_date": "2026-10-20T00:00:00+00:00",
+      "distance_km": 0.66,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1525000,
+      "estimate_mid": 1400000
+    },
+    {
       "property_id": "c44115a0-6258-415c-81da-ca4767de0705",
       "address": "26 Ganymede Place, Half Moon Bay, Auckland",
       "sale_price": 1870000,
@@ -664,20 +678,6 @@
       "property_type": null,
       "cv": 2200000,
       "estimate_mid": 2130000
-    },
-    {
-      "property_id": "4839d005-c40f-4269-a5bc-6d1cc0e93b38",
-      "address": "69B Priestley Drive, Bucklands Beach, Auckland",
-      "sale_price": 1325000,
-      "sale_date": "2026-08-31T00:00:00+00:00",
-      "distance_km": 1.05,
-      "bedrooms": 3,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1400000,
-      "estimate_mid": 1330000
     }
   ],
   "valuation": {
@@ -693,14 +693,14 @@
         "low": 1350000,
         "mid": 1480000,
         "high": 2060000,
-        "updated_at": "2026-11-08T23:21:26.294724+00:00",
+        "updated_at": "2026-11-09T19:34:22.389778+00:00",
         "confidence": "low",
-        "n": 43,
+        "n": 44,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 43,
-          "n_eff": 16.67,
+          "n": 44,
+          "n_eff": 17.21,
           "radius_km": 3.0,
           "iqr_ratio": 0.4797,
           "same_suburb": 23,

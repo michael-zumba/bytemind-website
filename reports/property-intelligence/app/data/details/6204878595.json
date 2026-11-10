@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-30T01:35:43.217000+00:00",
-  "days_on_market": 10,
+  "days_on_market": 11,
   "lat": -36.6251345,
   "lon": 174.7235256,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338551408.jpg",
@@ -30,10 +30,10 @@
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
   "comp_low": 857353,
-  "comp_mid": 1009302,
+  "comp_mid": 1012048,
   "comp_high": 1071429,
   "comp_confidence": "medium",
-  "comp_n": 38,
+  "comp_n": 39,
   "value_low": 912717,
   "value_mid": 969282,
   "value_high": 1025847,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2583,
-  "watchers": 93,
+  "view_count": 2659,
+  "watchers": 98,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 3,
   "last_change_at": "2026-11-06T23:43:36.781687+00:00",
-  "days_since_last_change": 2.83,
+  "days_since_last_change": 3.77,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 1,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 31.7,
+  "sale_pressure": 31.8,
   "sale_pressure_label": "low",
-  "model_low": 908020,
-  "model_mid": 990174,
-  "model_high": 1082227,
+  "model_low": 914582,
+  "model_mid": 994055,
+  "model_high": 1089223,
   "model_confidence": "high",
-  "text_signal_pct": 20.8848,
-  "description_index": 0.987067,
+  "text_signal_pct": 19.7053,
+  "description_index": 0.972371,
   "events_count": 3,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6204878595,
-    "low": 908020,
-    "mid": 990174,
-    "high": 1082227,
+    "low": 914582,
+    "mid": 994055,
+    "high": 1089223,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0866, 0.0889], \"rel_width\": 0.1759, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0833, 0.0914], \"rel_width\": 0.1757, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6204878595,
@@ -281,20 +281,39 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.1428,
-    "family_school": 0.1848,
+    "views_waterfront": 0.1434,
+    "family_school": 0.1841,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.7095,
-    "description_premium_pct": 20.8848,
-    "description_index": 0.987067,
+    "description_premium_pct": 19.7053,
+    "description_index": 0.972371,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 1, \"family_school\": 2, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-09T19:34:23.151760+00:00",
+    "updated_at": "2026-11-10T18:11:01.371273+00:00",
     "top_topics": [
       {
+        "topic_id": 6,
+        "weight": 0.423865,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "fenced",
+          "street",
+          "parking",
+          "fully fenced",
+          "fully",
+          "room",
+          "brick",
+          "garden",
+          "double",
+          "street parking",
+          "sunny",
+          "plus"
+        ]
+      },
+      {
         "topic_id": 1,
-        "weight": 0.41426,
+        "weight": 0.398669,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -312,28 +331,9 @@
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.405887,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "brick",
-          "street",
-          "fenced",
-          "parking",
-          "fully",
-          "fully fenced",
-          "room",
-          "garden",
-          "double",
-          "sunny",
-          "street parking",
-          "facing"
-        ]
-      },
-      {
         "topic_id": 9,
-        "weight": 0.121551,
-        "label": "Coastal village & park proximity",
+        "weight": 0.118659,
+        "label": "New build / brand-new quality",
         "top_terms": [
           "section",
           "dream",
@@ -341,17 +341,17 @@
           "dream home",
           "land",
           "sections",
-          "auckland",
           "whangaparaoa",
+          "auckland",
           "penlink",
           "community",
-          "building",
-          "minutes"
+          "lot",
+          "building"
         ]
       },
       {
         "topic_id": 10,
-        "weight": 0.029288,
+        "weight": 0.034087,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
@@ -360,12 +360,12 @@
           "elevated",
           "position",
           "rangitoto",
+          "elevated position",
           "outlook",
           "spectacular",
-          "elevated position",
           "gulf",
-          "hauraki gulf",
-          "hauraki"
+          "panoramic",
+          "living areas"
         ]
       }
     ]
@@ -437,7 +437,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-09T19:34:22.389778+00:00"
+    "updated_at": "2026-11-10T18:11:00.657770+00:00"
   },
   "body": "Calling all renovators and those who can see potential!\r\nThe potential is here for you to put a roof over your head and do some upgrading of this three bedroom home.\r\n\r\nSet on 725sqm of Freehold land, this tired family home is crying out for a transformation.  The layout is different from the rest, but you can re-imagine it and transform it into a home to be proud of and call your own.\r\n\r\nThe flow to the north facing decks, allows for extra entertaining and relaxing space - just in time for summer.  Recreate the kitchen as it flows effortlessly to the dining and living areas. \r\n\r\nOutside, get the gardening gloves and weed eater out, and bring back the garden.\r\n\r\nGet the paint brushes out and your imagination revitalized and take this dream on.\r\nIgnore the CV.  \r\n\r\nThere is plenty here for you to do to bring this tired property back to standard.  \r\n\r\nYes, it is tired, its rough around the edges, and it certainly isn't a finished product, but if you are prepared to put in the work and can see beyond the current condition, there could be a rewarding opportunity here!\r\n\r\nBring your ideas, crunch the numbers and let your imagination run wild. This current owner wants it sold.\r\n\r\nYour next project awaits!     Download documents  https://www.harcourtsfiles.co.nz/listings/4C4L",
   "photos": [
@@ -785,18 +785,18 @@
       "estimate_mid": 1220000
     },
     {
-      "property_id": "703a8f96-90ea-4cdb-945d-171aa9bce759",
-      "address": "22 Durness Place, Red Beach, Red Beach",
-      "sale_price": 1100000,
-      "sale_date": "2026-09-03T00:00:00+00:00",
-      "distance_km": 1.99,
+      "property_id": "6daab980-885e-45a1-a44b-66001507babf",
+      "address": "108 Stanmore Bay Road, Stanmore Bay, Whangaparaoa",
+      "sale_price": 1120000,
+      "sale_date": "2026-09-02T00:00:00+00:00",
+      "distance_km": 2.16,
       "bedrooms": 4,
-      "bathrooms": 2,
+      "bathrooms": 3,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1225000,
-      "estimate_mid": 1110000
+      "cv": 1175000,
+      "estimate_mid": 1180000
     }
   ],
   "valuation": {
@@ -820,20 +820,20 @@
         "name": "Nearby sold comparables",
         "range": "$857K – $1.07M",
         "low": 857353,
-        "mid": 1009302,
+        "mid": 1012048,
         "high": 1071429,
-        "updated_at": "2026-11-09T19:34:22.389778+00:00",
+        "updated_at": "2026-11-10T18:11:00.657770+00:00",
         "confidence": "medium",
-        "n": 38,
+        "n": 39,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
-          "n": 38,
-          "n_eff": 5.91,
+          "n": 39,
+          "n_eff": 6.25,
           "radius_km": 3.0,
-          "median_ratio": 1.0093,
-          "iqr_ratio": 0.2121,
-          "same_suburb": 20,
+          "median_ratio": 1.012,
+          "iqr_ratio": 0.2115,
+          "same_suburb": 22,
           "model_version": "comp-cv-v1"
         }
       },

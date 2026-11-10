@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-03-25T13:42:21.407000+00:00",
-  "days_on_market": 229,
+  "days_on_market": 230,
   "lat": -36.6386604,
   "lon": 174.7521515,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338479270.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1164958,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
-  "comp_low": 1072340,
+  "comp_low": 1076250,
   "comp_mid": 1182990,
-  "comp_high": 1228846,
+  "comp_high": 1236111,
   "comp_confidence": "medium",
-  "comp_n": 26,
+  "comp_n": 28,
   "value_low": 1036487,
   "value_mid": 1100723,
   "value_high": 1164958,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:59:26.485752+00:00",
-  "days_since_last_change": 5.94,
+  "days_since_last_change": 6.88,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 6,
@@ -76,12 +76,12 @@
   "sale_method_stage": 3,
   "sale_pressure": 60.0,
   "sale_pressure_label": "medium",
-  "model_low": 1035562,
-  "model_mid": 1129256,
-  "model_high": 1234238,
+  "model_low": 1039473,
+  "model_mid": 1129798,
+  "model_high": 1237962,
   "model_confidence": "high",
-  "text_signal_pct": 20.9046,
-  "description_index": 0.987919,
+  "text_signal_pct": 20.1845,
+  "description_index": 0.993974,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,33 +268,33 @@
   ],
   "model": {
     "listing_id": 5851150955,
-    "low": 1035562,
-    "mid": 1129256,
-    "high": 1234238,
+    "low": 1039473,
+    "mid": 1129798,
+    "high": 1237962,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0866, 0.0889], \"rel_width\": 0.1759, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0833, 0.0914], \"rel_width\": 0.1757, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5851150955,
     "word_count": 317,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.0872,
-    "condition_renovation": 0.1344,
+    "luxury": 0.0874,
+    "condition_renovation": 0.1341,
     "views_waterfront": 1.0,
-    "family_school": 0.8264,
+    "family_school": 0.823,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.337,
-    "description_premium_pct": 20.9046,
-    "description_index": 0.987919,
+    "description_premium_pct": 20.1845,
+    "description_index": 0.993974,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 1, \"views_waterfront\": 25, \"family_school\": 15, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-09T19:34:23.151760+00:00",
+    "updated_at": "2026-11-10T18:11:01.371273+00:00",
     "top_topics": [
       {
         "topic_id": 10,
-        "weight": 0.431858,
+        "weight": 0.426031,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
@@ -303,36 +303,55 @@
           "elevated",
           "position",
           "rangitoto",
+          "elevated position",
           "outlook",
           "spectacular",
-          "elevated position",
           "gulf",
-          "hauraki gulf",
-          "hauraki"
+          "panoramic",
+          "living areas"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.21885,
+        "weight": 0.226384,
         "label": "Parking, garden & section",
         "top_terms": [
-          "brick",
-          "street",
           "fenced",
+          "street",
           "parking",
-          "fully",
           "fully fenced",
+          "fully",
           "room",
+          "brick",
           "garden",
           "double",
-          "sunny",
           "street parking",
-          "facing"
+          "sunny",
+          "plus"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.088498,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "morning",
+          "friends",
+          "relaxed",
+          "coffee",
+          "life",
+          "sense",
+          "morning coffee",
+          "setting",
+          "inviting",
+          "step",
+          "welcoming",
+          "peaceful"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.088472,
+        "weight": 0.084456,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "residence",
@@ -347,25 +366,6 @@
           "views",
           "spaces",
           "held"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.086808,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "morning",
-          "friends",
-          "relaxed",
-          "coffee",
-          "life",
-          "sense",
-          "morning coffee",
-          "inviting",
-          "setting",
-          "welcoming",
-          "step",
-          "peaceful"
         ]
       }
     ]
@@ -463,7 +463,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-09T19:34:22.389778+00:00"
+    "updated_at": "2026-11-10T18:11:00.657770+00:00"
   },
   "body": "Perched proudly on a generous 1,055sqm site and backing directly onto the Arkles Bay coastal walkway, this beautifully presented Lockwood style home delivers the ultimate in relaxed coastal living, with sweeping sea views in both directions and multiple wraparound decks to chase the sun or unwind in the sea breeze.\r\n\r\nStep inside and discover light-filled, elevated living spaces complemented by multiple family zones perfect for both everyday living and effortless entertaining. The modern, spacious kitchen forms the heart of the home, making family meals and gatherings a breeze. On this level, a large double bedroom and family bathroom showcase the timeless warmth and character of natural timber throughout.\r\n\r\nDownstairs offers two additional double bedrooms, each enjoying stunning coastal views out towards Rangitoto along with another family bathroom. This level flows seamlessly out to a private pool area, your own oasis for blissful summer afternoons, entertaining, or simply relaxing in peace.\r\n\r\nThe spacious double garage has been setup with an additional study/storage room. With its internal access and current setup providing flexibility for a workshop, home gym, while still accommodating vehicles with ease.\r\n\r\nOut back, the lush garden offers multiple pathways to the coastal walkway and beach beyond, perfect for morning strolls or evening sunset wanders, the choice is yours.\r\n\r\nOut front, you're just a short walk to Whangaparaoa Mall, local supermarkets, and handy public transport options.\r\n\r\nIf you've been searching for that perfect blend of location, lifestyle, privacy, and panoramic sea views, this coastal haven is ready to impress.\r\n\r\nArkles Bay, Whangaparaoa, Tindalls Beach, Stanmore Bay, Red Beach, Gulf Harbour, Manly, Whangaparaoa Road, Arkles Bay coastal walkway, Hibiscus Coast, Lockwood home, beach house, coastal living, sea views, ocean views, swimming pool, coastal walkway, wraparound deck, internal access garage, workshop, coastal lifestyle, beach property, Whangaparaoa College, Gulf Harbour School, Stanmore Bay School, beachside living, Lockwood beach house, elevated sea views, north facing, family home\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -667,6 +667,20 @@
       "estimate_mid": 840000
     },
     {
+      "property_id": "d3d09962-83c5-4989-8d3b-4bebc8773c04",
+      "address": "3A Rishworth Avenue, Stanmore Bay, Whangaparaoa",
+      "sale_price": 829000,
+      "sale_date": "2026-10-22T00:00:00+00:00",
+      "distance_km": 0.74,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 730000,
+      "estimate_mid": 820000
+    },
+    {
       "property_id": "9f569592-6e85-4d72-927d-1e3c8faf0f28",
       "address": "9A Rishworth Avenue, Stanmore Bay, Whangaparāoa",
       "sale_price": 830000,
@@ -805,20 +819,6 @@
       "property_type": null,
       "cv": 760000,
       "estimate_mid": 705000
-    },
-    {
-      "property_id": "6daab980-885e-45a1-a44b-66001507babf",
-      "address": "108 Stanmore Bay Road, Stanmore Bay, Whangaparaoa",
-      "sale_price": 1120000,
-      "sale_date": "2026-09-02T00:00:00+00:00",
-      "distance_km": 1.36,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1175000,
-      "estimate_mid": 1180000
     }
   ],
   "valuation": {
@@ -840,21 +840,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.07M – $1.23M",
-        "low": 1072340,
+        "range": "$1.08M – $1.24M",
+        "low": 1076250,
         "mid": 1182990,
-        "high": 1228846,
-        "updated_at": "2026-11-09T19:34:22.389778+00:00",
+        "high": 1236111,
+        "updated_at": "2026-11-10T18:11:00.657770+00:00",
         "confidence": "medium",
-        "n": 26,
+        "n": 28,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
-          "n": 26,
-          "n_eff": 4.58,
+          "n": 28,
+          "n_eff": 4.94,
           "radius_km": 3.0,
           "median_ratio": 1.0515,
-          "iqr_ratio": 0.1323,
+          "iqr_ratio": 0.1351,
           "same_suburb": 10,
           "model_version": "comp-cv-v1"
         }

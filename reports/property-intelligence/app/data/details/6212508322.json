@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-11-03T21:04:56.313000+00:00",
-  "days_on_market": 5,
+  "days_on_market": 6,
   "lat": -36.6965869,
   "lon": 174.7550897,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338059445.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1000000,
+  "comp_low": 1002000,
   "comp_mid": 1185000,
   "comp_high": 1565000,
   "comp_confidence": "low",
-  "comp_n": 61,
-  "value_low": 1000000,
+  "comp_n": 62,
+  "value_low": 1002000,
   "value_mid": 1185000,
   "value_high": 1565000,
   "value_source": "sold_comps_absolute",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 566,
-  "watchers": 17,
+  "view_count": 591,
+  "watchers": 18,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-04T20:42:41.232327+00:00",
-  "days_since_last_change": 4.95,
+  "days_since_last_change": 5.89,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 30.8,
+  "sale_pressure": 31.0,
   "sale_pressure_label": "low",
-  "model_low": 979439,
-  "model_mid": 1379845,
-  "model_high": 1894684,
+  "model_low": 996147,
+  "model_mid": 1382068,
+  "model_high": 1901289,
   "model_confidence": "low",
-  "text_signal_pct": 15.3175,
-  "description_index": 0.741696,
+  "text_signal_pct": 15.2999,
+  "description_index": 0.76966,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 6212508322,
-    "low": 979439,
-    "mid": 1379845,
-    "high": 1894684,
+    "low": 996147,
+    "mid": 1382068,
+    "high": 1901289,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3427, 0.3171], \"rel_width\": 0.6633, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3274, 0.319], \"rel_width\": 0.6549, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6212508322,
@@ -292,19 +292,19 @@
     "luxury": 0.0,
     "condition_renovation": 0.0,
     "views_waterfront": 1.0,
-    "family_school": 0.4637,
+    "family_school": 0.4618,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3424,
-    "description_premium_pct": 15.3175,
-    "description_index": 0.741696,
+    "description_premium_pct": 15.2999,
+    "description_index": 0.76966,
     "lexicon_hits_json": "{\"urgency\": 6, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 9, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-09T19:34:23.151760+00:00",
+    "updated_at": "2026-11-10T18:11:01.371273+00:00",
     "top_topics": [
       {
         "topic_id": 10,
-        "weight": 0.564411,
+        "weight": 0.55988,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
@@ -313,17 +313,17 @@
           "elevated",
           "position",
           "rangitoto",
+          "elevated position",
           "outlook",
           "spectacular",
-          "elevated position",
           "gulf",
-          "hauraki gulf",
-          "hauraki"
+          "panoramic",
+          "living areas"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.192067,
+        "weight": 0.193135,
         "label": "Family living & entertaining",
         "top_terms": [
           "morning",
@@ -333,16 +333,35 @@
           "life",
           "sense",
           "morning coffee",
-          "inviting",
           "setting",
-          "welcoming",
+          "inviting",
           "step",
+          "welcoming",
           "peaceful"
         ]
       },
       {
+        "topic_id": 8,
+        "weight": 0.070925,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "bathroom",
+          "separate",
+          "extended",
+          "walk wardrobe",
+          "wardrobe",
+          "ensuite",
+          "upstairs",
+          "extended family",
+          "guests",
+          "master",
+          "walk",
+          "floor"
+        ]
+      },
+      {
         "topic_id": 7,
-        "weight": 0.074992,
+        "weight": 0.06974,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -357,25 +376,6 @@
           "pigeon mountain",
           "mountain",
           "suburb marina"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.070154,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "bathroom",
-          "extended",
-          "separate",
-          "walk wardrobe",
-          "wardrobe",
-          "ensuite",
-          "upstairs",
-          "extended family",
-          "guests",
-          "walk",
-          "floor",
-          "master"
         ]
       }
     ]
@@ -424,7 +424,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-09T19:34:22.389778+00:00"
+    "updated_at": "2026-11-10T18:11:00.657770+00:00"
   },
   "body": "**The vendor is motivated and ready to sell - don't miss this opportunity!**\r\n\r\nPositioned in an elevated setting with lovely sea views, 12A Rewi Street, Torbay offers an appealing combination of coastal lifestyle, practical design and comfortable family living. With the vendor committed to selling, all offers are seriously considered. Make your move and present your offer!\r\n\r\nSpace, Comfort & Practical Design\r\n\r\nThoughtfully designed for modern family living, the home features two separate living areas, offering excellent flexibility for growing families, entertaining guests or simply enjoying a little extra space and privacy. The practical layout makes everyday living effortless while providing room for everyone to relax and unwind.\r\n\r\nEnjoy the privilege of living within walking distance of the beach. Start your mornings with a refreshing coastal walk, spend your weekends by the water, or simply take in the beautiful sea views from the comfort of home.\r\n\r\nProperty Highlights:\r\n\r\n- Elevated position with lovely sea views\r\n- Walking distance to the beach\r\n- Practical and functional floor plan\r\n- Two separate living areas\r\n- Ideal for families seeking space and a relaxed coastal lifestyle\r\n- Sought-after Torbay location\r\n\r\n**MOTIVATED VENDOR - MUST BE SOLD!**\r\n\r\nOpportunities like this deserve your attention. The vendor is ready to move on, and price expectations are realistic.\r\n\r\nPresent ALL offers - don't wait, as this could be your opportunity to secure a coastal home at an attractive price!\r\n\r\nCall us today to arrange your viewing.\r\n\r\nTo view property files: https://www.harcourtsfiles.co.nz/listings/51K8",
   "photos": [
@@ -631,7 +631,7 @@
     }
   ],
   "valuation": {
-    "value_low": 1000000,
+    "value_low": 1002000,
     "value_mid": 1185000,
     "value_high": 1565000,
     "value_source": "sold_comps_absolute",
@@ -640,20 +640,20 @@
       {
         "name": "Nearby sold comparables",
         "range": "$1M – $1.56M",
-        "low": 1000000,
+        "low": 1002000,
         "mid": 1185000,
         "high": 1565000,
-        "updated_at": "2026-11-09T19:34:22.389778+00:00",
+        "updated_at": "2026-11-10T18:11:00.657770+00:00",
         "confidence": "low",
-        "n": 61,
+        "n": 62,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 61,
-          "n_eff": 15.09,
+          "n": 62,
+          "n_eff": 15.29,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4768,
-          "same_suburb": 11,
+          "iqr_ratio": 0.4751,
+          "same_suburb": 12,
           "model_version": "comp-cv-v1"
         }
       }

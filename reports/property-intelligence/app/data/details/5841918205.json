@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-03-20T02:49:02.200000+00:00",
-  "days_on_market": 235,
+  "days_on_market": 236,
   "lat": -36.8965797,
   "lon": 174.8992767,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2314052933.jpg",
@@ -33,7 +33,7 @@
   "comp_mid": 1363000,
   "comp_high": 1505000,
   "comp_confidence": "medium",
-  "comp_n": 34,
+  "comp_n": 33,
   "value_low": 1293000,
   "value_mid": 1363000,
   "value_high": 1505000,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2468,
+  "view_count": 2477,
   "watchers": 12,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:33:09.899796+00:00",
-  "days_since_last_change": 6.9,
+  "days_since_last_change": 8.15,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 3,
   "sale_pressure": 60.0,
   "sale_pressure_label": "medium",
-  "model_low": 778566,
-  "model_mid": 1080194,
-  "model_high": 1486005,
+  "model_low": 659740,
+  "model_mid": 911708,
+  "model_high": 1296402,
   "model_confidence": "low",
-  "text_signal_pct": -24.257,
-  "description_index": -1.50197,
+  "text_signal_pct": -41.3621,
+  "description_index": -2.751826,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -308,90 +308,71 @@
   ],
   "model": {
     "listing_id": 5841918205,
-    "low": 778566,
-    "mid": 1080194,
-    "high": 1486005,
+    "low": 659740,
+    "mid": 911708,
+    "high": 1296402,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3274, 0.319], \"rel_width\": 0.6549, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3235, 0.352], \"rel_width\": 0.6983, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5841918205,
     "word_count": 112,
     "exclamations": 1,
-    "urgency": 0.5759,
+    "urgency": 0.5745,
     "luxury": 0.0,
     "condition_renovation": 0.0,
     "views_waterfront": 0.0,
-    "family_school": 0.3106,
-    "investment": 0.3075,
+    "family_school": 0.2971,
+    "investment": 0.2913,
     "risk": 0.0,
     "readability": 0.3641,
-    "description_premium_pct": -24.257,
-    "description_index": -1.50197,
+    "description_premium_pct": -41.3621,
+    "description_index": -2.751826,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 2, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-10T18:11:01.371273+00:00",
+    "updated_at": "2026-11-12T00:11:20.849028+00:00",
     "top_topics": [
       {
         "topic_id": 2,
-        "weight": 0.701273,
+        "weight": 0.523051,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand",
+          "brand new",
+          "new",
+          "lot",
+          "homes",
+          "standalone",
+          "new home",
+          "sqm",
+          "title",
+          "bedrooms bathrooms",
+          "floor area",
+          "ccc"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.427561,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "maintenance",
+          "convenience",
           "low maintenance",
           "low",
-          "brand new",
-          "brand",
-          "new",
-          "single",
+          "maintenance",
+          "comfort",
+          "stylish",
+          "quality",
           "easy care",
           "care",
-          "quality",
-          "new home",
-          "convenience"
-        ]
-      },
-      {
-        "topic_id": 4,
-        "weight": 0.102495,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "premium",
-          "quality",
-          "appliances",
-          "designer",
-          "finishes",
-          "year",
-          "luxury",
-          "comfort",
-          "designer kitchen",
-          "new",
-          "heating",
-          "design"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.070115,
-        "label": "School zones & catchments",
-        "top_terms": [
-          "macleans",
-          "macleans college",
-          "college",
-          "school",
-          "intermediate",
-          "suburb intermediate",
-          "primary",
-          "marina",
-          "pigeon",
-          "pigeon mountain",
-          "mountain",
-          "suburb marina"
+          "light",
+          "outdoor",
+          "light filled"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.047874,
+        "weight": 0.049388,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -400,12 +381,31 @@
           "lock leave",
           "car",
           "secure",
-          "park",
-          "balcony",
           "complex",
-          "kensington",
-          "restaurants",
-          "pool"
+          "balcony",
+          "bedroom apartment",
+          "maintenance",
+          "village",
+          "restaurants"
+        ]
+      },
+      {
+        "topic_id": 1,
+        "weight": 0.0,
+        "label": "Development & land potential",
+        "top_terms": [
+          "potential",
+          "future",
+          "land",
+          "site",
+          "development",
+          "subject",
+          "council",
+          "sqm",
+          "subject council",
+          "existing",
+          "approval",
+          "property"
         ]
       }
     ]
@@ -454,7 +454,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-10T18:11:00.657770+00:00"
+    "updated_at": "2026-11-12T00:11:20.070813+00:00"
   },
   "body": "Option 1 – Smart & Stylish\r\n• 3 Bedrooms\r\n• 2 Levels of modern living\r\n• Contemporary kitchen and open-plan living\r\n• Perfect for first home buyers, professionals, or investors \r\n\r\nOption 2 – Spacious Family Living\r\n• 4 Bedrooms\r\n• 2 Levels with internal garage\r\n• Generous open-plan living areas\r\n• Ideal for families wanting space and convenience\r\n\r\nBoth options offer sleek modern finishes, light-filled interiors, and easy-care living, giving you more time to enjoy life and less time on maintenance.\r\n\r\nLocated close to key amenities, transport routes, shopping hubs, and parks, this is a fantastic opportunity to secure a brand new home in a well-connected location.\r\n\r\nBrand new homes in this location are always in demand – don’t miss your chance.\r\n\r\nAct fast – contact us today to arrange a viewing and secure your new home before it’s gone!",
   "photos": [
@@ -498,6 +498,20 @@
       "estimate_mid": 780000
     },
     {
+      "property_id": "9f5a762c-25a5-414a-9f84-19b0e3a95135",
+      "address": "2/172 Pigeon Mountain Road, Half Moon Bay, Auckland",
+      "sale_price": 785000,
+      "sale_date": "2026-10-14T00:00:00+00:00",
+      "distance_km": 0.15,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 760000,
+      "estimate_mid": 785000
+    },
+    {
       "property_id": "98d07098-1a85-45f6-987a-a27c0e5dc6cb",
       "address": "1/23 Liam Place, Half Moon Bay, Auckland",
       "sale_price": 810000,
@@ -523,7 +537,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1600000,
-      "estimate_mid": 1350000
+      "estimate_mid": 1360000
     },
     {
       "property_id": "ddbe4eb0-0f2e-4e3b-934f-e06297a17799",
@@ -551,21 +565,21 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1350000,
-      "estimate_mid": 1310000
+      "estimate_mid": 1300000
     },
     {
-      "property_id": "f43bf080-0ddf-4c77-9d6c-0af4a02aa58c",
-      "address": "17A Lisa Rise, Half Moon Bay, Auckland",
-      "sale_price": 955000,
-      "sale_date": "2026-08-13T00:00:00+00:00",
-      "distance_km": 0.69,
-      "bedrooms": 3,
-      "bathrooms": null,
+      "property_id": "0731a145-74aa-43d5-bb4d-17478b8c19a8",
+      "address": "419A Bucklands Beach Road, Bucklands Beach, Auckland",
+      "sale_price": 995000,
+      "sale_date": "2026-09-29T00:00:00+00:00",
+      "distance_km": 0.63,
+      "bedrooms": 4,
+      "bathrooms": 2,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 950000,
-      "estimate_mid": 945000
+      "cv": 1250000,
+      "estimate_mid": 1030000
     },
     {
       "property_id": "cef10f73-924b-480b-a3ae-a1b8f1d392a6",
@@ -593,7 +607,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1825000,
-      "estimate_mid": 1390000
+      "estimate_mid": 1400000
     },
     {
       "property_id": "78cfe95b-cce0-49e2-85aa-f0a0c172ab89",
@@ -607,7 +621,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1400000,
-      "estimate_mid": 1250000
+      "estimate_mid": 1400000
     },
     {
       "property_id": "b3b43291-572f-45b4-ac12-3b2cddefd8a3",
@@ -636,20 +650,6 @@
       "property_type": null,
       "cv": 870000,
       "estimate_mid": 740000
-    },
-    {
-      "property_id": "e55ea0c5-19ab-4d89-9971-7b41e648f1e9",
-      "address": "4A Coquille Place, Half Moon Bay, Auckland",
-      "sale_price": 926000,
-      "sale_date": "2026-11-04T00:00:00+00:00",
-      "distance_km": 1.2,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 920000,
-      "estimate_mid": 920000
     }
   ],
   "valuation": {
@@ -665,17 +665,17 @@
         "low": 1293000,
         "mid": 1363000,
         "high": 1505000,
-        "updated_at": "2026-11-10T18:11:00.657770+00:00",
+        "updated_at": "2026-11-12T00:11:20.070813+00:00",
         "confidence": "medium",
-        "n": 34,
+        "n": 33,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 34,
-          "n_eff": 9.73,
+          "n": 33,
+          "n_eff": 9.33,
           "radius_km": 3.0,
           "iqr_ratio": 0.1555,
-          "same_suburb": 11,
+          "same_suburb": 10,
           "model_version": "comp-cv-v1"
         }
       }

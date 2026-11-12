@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2025-11-13T03:54:36.327000+00:00",
-  "days_on_market": 362,
+  "days_on_market": 363,
   "lat": -36.8837146,
   "lon": 174.9006704,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2263344987.jpg",
@@ -29,16 +29,16 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1430000,
-  "comp_mid": 1650000,
+  "comp_low": 1370000,
+  "comp_mid": 1550000,
   "comp_high": 1980000,
-  "comp_confidence": "medium",
-  "comp_n": 27,
-  "value_low": 1430000,
-  "value_mid": 1650000,
+  "comp_confidence": "low",
+  "comp_n": 33,
+  "value_low": 1370000,
+  "value_mid": 1550000,
   "value_high": 1980000,
   "value_source": "sold_comps_absolute",
-  "value_confidence": "medium",
+  "value_confidence": "low",
   "cv": null,
   "land_value": null,
   "improvement_value": null,
@@ -48,10 +48,10 @@
   "build_year_source": null,
   "tenure_source": "listing_text",
   "cv_ratio": null,
-  "ask_gap": 520000,
-  "ask_gap_pct": 0.3152,
-  "deal_gap": -0.3152,
-  "view_count": 5376,
+  "ask_gap": null,
+  "ask_gap_pct": null,
+  "deal_gap": null,
+  "view_count": 5387,
   "watchers": 60,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:33:46.481339+00:00",
-  "days_since_last_change": 6.9,
+  "days_since_last_change": 8.15,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 1314451,
-  "model_mid": 1823689,
-  "model_high": 2508819,
+  "model_low": 1397027,
+  "model_mid": 1930579,
+  "model_high": 2745184,
   "model_confidence": "low",
-  "text_signal_pct": -10.389,
-  "description_index": -0.593017,
+  "text_signal_pct": -9.2855,
+  "description_index": -0.502398,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -338,11 +338,11 @@
   ],
   "model": {
     "listing_id": 5625238260,
-    "low": 1314451,
-    "mid": 1823689,
-    "high": 2508819,
+    "low": 1397027,
+    "mid": 1930579,
+    "high": 2745184,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3274, 0.319], \"rel_width\": 0.6549, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3235, 0.352], \"rel_width\": 0.6983, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5625238260,
@@ -350,92 +350,92 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 1.0,
+    "condition_renovation": 0.9988,
     "views_waterfront": 0.0,
     "family_school": 1.0,
-    "investment": 0.4052,
+    "investment": 0.3838,
     "risk": 0.0,
     "readability": 0.3697,
-    "description_premium_pct": -10.389,
-    "description_index": -0.593017,
+    "description_premium_pct": -9.2855,
+    "description_index": -0.502398,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 2, \"views_waterfront\": 0, \"family_school\": 8, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-10T18:11:01.371273+00:00",
+    "updated_at": "2026-11-12T00:11:20.849028+00:00",
     "top_topics": [
       {
         "topic_id": 7,
-        "weight": 0.746269,
+        "weight": 0.629199,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
           "macleans college",
-          "college",
-          "school",
-          "intermediate",
-          "suburb intermediate",
-          "primary",
-          "marina",
           "pigeon",
           "pigeon mountain",
           "mountain",
+          "college",
+          "intermediate",
+          "suburb intermediate",
+          "marina",
+          "school",
+          "primary",
           "suburb marina"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.109657,
+        "weight": 0.146906,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
           "future",
-          "site",
-          "property",
           "land",
+          "site",
           "development",
           "subject",
           "council",
+          "sqm",
+          "subject council",
           "existing",
-          "possibilities",
-          "value",
-          "mixed"
+          "approval",
+          "property"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.122011,
+        "label": "Parking, garden & section II",
+        "top_terms": [
+          "brick",
+          "parking",
+          "fenced",
+          "fully fenced",
+          "street",
+          "street parking",
+          "fully",
+          "single",
+          "sunny",
+          "garden",
+          "single level",
+          "room"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.098103,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "fenced",
-          "street",
-          "parking",
-          "fully fenced",
-          "fully",
-          "room",
-          "brick",
-          "garden",
-          "double",
-          "street parking",
-          "sunny",
-          "plus"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.036485,
+        "weight": 0.101883,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "bathroom",
-          "separate",
-          "extended",
+          "ensuite",
           "walk wardrobe",
           "wardrobe",
-          "ensuite",
           "upstairs",
-          "extended family",
-          "guests",
           "master",
           "walk",
-          "floor"
+          "bedroom",
+          "separate",
+          "lounge",
+          "level",
+          "suite"
         ]
       }
     ]
@@ -484,7 +484,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-10T18:11:00.657770+00:00"
+    "updated_at": "2026-11-12T00:11:20.070813+00:00"
   },
   "body": "*\tFreehold 685 sqm land area (more or less) with spacious front and backyard\r\n\r\n*\tMixed housing suburban zone\r\n\r\n*\tEnjoying views over Half Moon Bay Marina.\r\n\r\n*\tSolid brick and tile, 5-bedroom, 3-bathroom, study, entertainment room, and double garage family home\r\n\r\n*\tSelf-contained, independent access two bedrooms, renovated kitchen, and a full bathroom (separate water and   electricity meters)\r\n\r\n*\tIn zone top schools: Macleans College, Bucklands Beach Intermediate, and Pigeon Mountain Primary School.\r\n\r\n*\tWithin a short walk to Schools, Marina, Cafe, restaurants, local amenities, and the ferry.\r\n\r\n\r\nContact us today and start your journey towards your dream home.",
   "photos": [
@@ -533,7 +533,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1350000,
-      "estimate_mid": 1310000
+      "estimate_mid": 1390000
     },
     {
       "property_id": "3b37365d-8c5a-48a0-b6b8-53e445e09443",
@@ -547,7 +547,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1900000,
-      "estimate_mid": 1760000
+      "estimate_mid": 1750000
     },
     {
       "property_id": "c44115a0-6258-415c-81da-ca4767de0705",
@@ -561,7 +561,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2050000,
-      "estimate_mid": 1900000
+      "estimate_mid": 1920000
     },
     {
       "property_id": "448cd0e0-7cb5-4786-9e53-642b629ed632",
@@ -575,7 +575,21 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1050000,
-      "estimate_mid": 995000
+      "estimate_mid": 980000
+    },
+    {
+      "property_id": "3eae8af4-90ae-48ac-9385-143284b7f96d",
+      "address": "3/40 Mark Edward Drive, Half Moon Bay, Auckland",
+      "sale_price": 786000,
+      "sale_date": "2026-09-22T00:00:00+00:00",
+      "distance_km": 0.38,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 940000,
+      "estimate_mid": 820000
     },
     {
       "property_id": "388d475c-87fb-4e33-bac9-3a046bc74fbd",
@@ -589,7 +603,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2480000,
-      "estimate_mid": 2040000
+      "estimate_mid": 2060000
     },
     {
       "property_id": "2bcb8694-7f01-4f15-8542-bc57d32d19dd",
@@ -603,7 +617,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1825000,
-      "estimate_mid": 1390000
+      "estimate_mid": 1400000
     },
     {
       "property_id": "e55ea0c5-19ab-4d89-9971-7b41e648f1e9",
@@ -631,7 +645,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1475000,
-      "estimate_mid": 1250000
+      "estimate_mid": 1490000
     },
     {
       "property_id": "fad4b584-e6cc-4611-a1eb-bbdc65db151f",
@@ -648,6 +662,20 @@
       "estimate_mid": 1380000
     },
     {
+      "property_id": "804dd393-120d-49ad-9e35-3de7e58b70ab",
+      "address": "69C Priestley Drive, Bucklands Beach, Auckland",
+      "sale_price": 1300000,
+      "sale_date": "2026-08-07T00:00:00+00:00",
+      "distance_km": 0.91,
+      "bedrooms": 3,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1375000,
+      "estimate_mid": 1300000
+    },
+    {
       "property_id": "4839d005-c40f-4269-a5bc-6d1cc0e93b38",
       "address": "69B Priestley Drive, Bucklands Beach, Auckland",
       "sale_price": 1325000,
@@ -660,59 +688,31 @@
       "property_type": null,
       "cv": 1400000,
       "estimate_mid": 1330000
-    },
-    {
-      "property_id": "f43bf080-0ddf-4c77-9d6c-0af4a02aa58c",
-      "address": "17A Lisa Rise, Half Moon Bay, Auckland",
-      "sale_price": 955000,
-      "sale_date": "2026-08-13T00:00:00+00:00",
-      "distance_km": 0.94,
-      "bedrooms": 3,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 950000,
-      "estimate_mid": 945000
-    },
-    {
-      "property_id": "b3b43291-572f-45b4-ac12-3b2cddefd8a3",
-      "address": "3 William Bryan Drive, Half Moon Bay, Auckland",
-      "sale_price": 1445000,
-      "sale_date": "2026-10-27T00:00:00+00:00",
-      "distance_km": 0.94,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1600000,
-      "estimate_mid": 1450000
     }
   ],
   "valuation": {
-    "value_low": 1430000,
-    "value_mid": 1650000,
+    "value_low": 1370000,
+    "value_mid": 1550000,
     "value_high": 1980000,
     "value_source": "sold_comps_absolute",
-    "value_confidence": "medium",
+    "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.43M – $1.98M",
-        "low": 1430000,
-        "mid": 1650000,
+        "range": "$1.37M – $1.98M",
+        "low": 1370000,
+        "mid": 1550000,
         "high": 1980000,
-        "updated_at": "2026-11-10T18:11:00.657770+00:00",
-        "confidence": "medium",
-        "n": 27,
+        "updated_at": "2026-11-12T00:11:20.070813+00:00",
+        "confidence": "low",
+        "n": 33,
         "basis": {
-          "confidence": "medium",
+          "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 27,
-          "n_eff": 8.65,
+          "n": 33,
+          "n_eff": 9.17,
           "radius_km": 3.0,
-          "iqr_ratio": 0.3333,
+          "iqr_ratio": 0.3935,
           "same_suburb": 5,
           "model_version": "comp-cv-v1"
         }

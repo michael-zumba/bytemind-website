@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-15T02:37:27.223000+00:00",
-  "days_on_market": 26,
+  "days_on_market": 27,
   "lat": -36.6049835,
   "lon": 174.6941903,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2335284080.jpg",
@@ -30,10 +30,10 @@
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-10-28T11:00:00+00:00",
   "comp_low": 923684,
-  "comp_mid": 941809,
-  "comp_high": 992550,
-  "comp_confidence": "high",
-  "comp_n": 55,
+  "comp_mid": 945254,
+  "comp_high": 994225,
+  "comp_confidence": "medium",
+  "comp_n": 48,
   "value_low": 956204,
   "value_mid": 1015465,
   "value_high": 1074725,
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 9,
   "last_change_at": "2026-11-10T16:55:17.348235+00:00",
-  "days_since_last_change": 0.05,
+  "days_since_last_change": 1.3,
   "price_drop_count": 0,
   "description_change_count": 2,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 54.3,
+  "sale_pressure": 54.5,
   "sale_pressure_label": "medium",
-  "model_low": 887304,
-  "model_mid": 964407,
-  "model_high": 1056736,
+  "model_low": 880258,
+  "model_mid": 954443,
+  "model_high": 1038651,
   "model_confidence": "high",
-  "text_signal_pct": -0.534,
-  "description_index": -0.028945,
+  "text_signal_pct": 6.8484,
+  "description_index": 0.341491,
   "events_count": 9,
   "last_event": "new_listing",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6180370293,
-    "low": 887304,
-    "mid": 964407,
-    "high": 1056736,
+    "low": 880258,
+    "mid": 954443,
+    "high": 1038651,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0833, 0.0914], \"rel_width\": 0.1757, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0809, 0.0845], \"rel_width\": 0.166, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6180370293,
@@ -300,92 +300,92 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.6003,
-    "views_waterfront": 0.0766,
-    "family_school": 0.4913,
+    "condition_renovation": 0.5996,
+    "views_waterfront": 0.0735,
+    "family_school": 0.47,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4372,
-    "description_premium_pct": -0.534,
-    "description_index": -0.028945,
+    "description_premium_pct": 6.8484,
+    "description_index": 0.341491,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 5, \"views_waterfront\": 1, \"family_school\": 10, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-10T18:11:01.371273+00:00",
+    "updated_at": "2026-11-12T00:11:20.849028+00:00",
     "top_topics": [
       {
+        "topic_id": 9,
+        "weight": 0.324264,
+        "label": "Parking, garden & section II",
+        "top_terms": [
+          "brick",
+          "parking",
+          "fenced",
+          "fully fenced",
+          "street",
+          "street parking",
+          "fully",
+          "single",
+          "sunny",
+          "garden",
+          "single level",
+          "room"
+        ]
+      },
+      {
         "topic_id": 1,
-        "weight": 0.2675,
+        "weight": 0.243078,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
           "future",
-          "site",
-          "property",
           "land",
+          "site",
           "development",
           "subject",
           "council",
+          "sqm",
+          "subject council",
           "existing",
-          "possibilities",
-          "value",
-          "mixed"
+          "approval",
+          "property"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.143835,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "morning",
+          "coffee",
+          "life",
+          "friends",
+          "morning coffee",
+          "relaxed",
+          "sense",
+          "step",
+          "inside",
+          "feels",
+          "room",
+          "away"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.22343,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "fenced",
-          "street",
-          "parking",
-          "fully fenced",
-          "fully",
-          "room",
-          "brick",
-          "garden",
-          "double",
-          "street parking",
-          "sunny",
-          "plus"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.178361,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "morning",
-          "friends",
-          "relaxed",
-          "coffee",
-          "life",
-          "sense",
-          "morning coffee",
-          "setting",
-          "inviting",
-          "step",
-          "welcoming",
-          "peaceful"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.132992,
+        "weight": 0.075906,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "bathroom",
-          "separate",
-          "extended",
+          "ensuite",
           "walk wardrobe",
           "wardrobe",
-          "ensuite",
           "upstairs",
-          "extended family",
-          "guests",
           "master",
           "walk",
-          "floor"
+          "bedroom",
+          "separate",
+          "lounge",
+          "level",
+          "suite"
         ]
       }
     ]
@@ -507,7 +507,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-10T18:11:00.657770+00:00"
+    "updated_at": "2026-11-12T00:11:20.070813+00:00"
   },
   "body": "Lovingly cherished by the same family for 33 years, 20 Fairway Avenue presents a special opportunity to secure a much-loved home in a sought-after Red Beach location. Set on a generous 809sqm freehold section, this immaculate 170sqm home enjoys views across Red Beach, beautifully maintained gardens and an abundance of natural light throughout. While the interiors retain the charm of their era, the home has been exceptionally well cared for, offering the perfect opportunity to move in and enjoy it as it is or gradually add your own style. With generous storage, versatile living space and a relatively flat section, this is a property with plenty to appreciate and exciting possibilities for the future.\r\n\r\nWhat's To Love:\r\n- Two bedrooms and one bathroom, with excellent storage throughout.\r\n- Large downstairs rumpus, ideal for hobbies, a second living area, a games room or working from home, with additional storage.\r\n- Single garage with internal access for secure parking and everyday convenience.\r\n- Ample storage throughout the hallway, bedrooms and rumpus to keep everyday living organised.\r\n- An abundance of natural light creates a bright and welcoming atmosphere throughout the home.\r\n- Immaculately maintained gardens, lovingly cared for over more than three decades.\r\n- 809sqm of freehold land on a generous, relatively flat section.\r\n- 170sqm of floor area, offering comfortable living with space to spread out.\r\n- Views across Red Beach from this well-positioned property.\r\n- Exceptionally tidy throughout, offering the choice to move in and enjoy the home as it stands or introduce your own updates over time.\r\n- Conveniently located close to Red Beach shops, Red Beach Primary School, Red Beach and Orewa Beach.\r\n\r\nWhether you're looking for a home to settle into, a property where you can add your own touch, or a generous section in a well-established coastal neighbourhood, 20 Fairway Avenue is well worth your attention. With its impressive floor area, versatile downstairs rumpus, excellent storage and beautifully maintained gardens, this is a home that has been cared for with genuine pride. This opportunity is now yours to make it your own and enjoy everything this special Red Beach address has to offer.",
   "photos": [
@@ -730,20 +730,6 @@
       "estimate_mid": 1140000
     },
     {
-      "property_id": "70797b04-6ca7-4b2c-8a71-a8341eb2fed0",
-      "address": "77 Red Beach Road, Red Beach, Red Beach",
-      "sale_price": 995000,
-      "sale_date": "2026-08-25T00:00:00+00:00",
-      "distance_km": 0.42,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1050000,
-      "estimate_mid": 1010000
-    },
-    {
       "property_id": "c55813cc-76ca-4ec0-b0d6-6ceff0e40b41",
       "address": "1 Weka Close, Red Beach, Red Beach",
       "sale_price": 900000,
@@ -868,6 +854,20 @@
       "property_type": null,
       "cv": 1200000,
       "estimate_mid": 1260000
+    },
+    {
+      "property_id": "54897e38-da18-4e99-8c64-831550e92194",
+      "address": "6 Awanui Road, Red Beach, Whangaparāoa",
+      "sale_price": 598000,
+      "sale_date": "2026-09-17T00:00:00+00:00",
+      "distance_km": 1.02,
+      "bedrooms": null,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 750000,
+      "estimate_mid": 665000
     }
   ],
   "valuation": {
@@ -889,21 +889,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$924K – $993K",
+        "range": "$924K – $994K",
         "low": 923684,
-        "mid": 941809,
-        "high": 992550,
-        "updated_at": "2026-11-10T18:11:00.657770+00:00",
-        "confidence": "high",
-        "n": 55,
+        "mid": 945254,
+        "high": 994225,
+        "updated_at": "2026-11-12T00:11:20.070813+00:00",
+        "confidence": "medium",
+        "n": 48,
         "basis": {
-          "confidence": "high",
+          "confidence": "medium",
           "source": "sold_comps",
-          "n": 55,
-          "n_eff": 8.77,
+          "n": 48,
+          "n_eff": 7.81,
           "radius_km": 3.0,
-          "median_ratio": 0.966,
-          "iqr_ratio": 0.0731,
+          "median_ratio": 0.9695,
+          "iqr_ratio": 0.0746,
           "same_suburb": 14,
           "model_version": "comp-cv-v1"
         }

@@ -1,345 +1,345 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T07:11:15+13:00",
-  "built_at": "2026-11-10T18:11:00+00:00",
-  "snapshot_date": "11 November 2026",
+  "generated_at": "2026-11-12T13:11:30+13:00",
+  "built_at": "2026-11-12T00:11:20+00:00",
+  "snapshot_date": "12 November 2026",
   "counts": {
-    "listings": 2217,
-    "standard": 2152,
-    "non_standard": 65,
+    "listings": 2235,
+    "standard": 2201,
+    "non_standard": 34,
     "suburbs": 30,
-    "sales": 571
+    "sales": 551
   },
   "coverage": {
-    "homes_avm": 907,
-    "homes_avm_pct": 42.1,
-    "sold_comps": 1227,
-    "active_guide": 18,
+    "homes_avm": 513,
+    "homes_avm_pct": 23.3,
+    "sold_comps": 1664,
+    "active_guide": 19,
     "hedonic_fallback": 0,
-    "with_range_pct": 100.0,
-    "comp_cv_normalised": 1,
-    "comp_absolute": 1226,
+    "with_range_pct": 99.8,
+    "comp_cv_normalised": 0,
+    "comp_absolute": 1664,
     "all_listings": {
-      "homes_avm": 932,
-      "sold_comps": 1267,
-      "active_guide": 18
+      "homes_avm": 526,
+      "sold_comps": 1684,
+      "active_guide": 19
     }
   },
   "model": {
     "version": "hedonic-avm-v1",
-    "n_train": 1023,
-    "mape_with_cv": 0.0677,
-    "median_ape_with_cv": 0.0397,
-    "mape_no_cv": 0.2211,
-    "r2": 0.9621,
+    "n_train": 637,
+    "mape_with_cv": 0.0621,
+    "median_ape_with_cv": 0.0368,
+    "mape_no_cv": 0.2311,
+    "r2": 0.966,
     "interval_level": 0.8
   },
   "market": {
-    "median_value_mid": 1255000,
-    "median_cv": 1500000,
-    "median_cv_ratio": 0.9743,
+    "median_value_mid": 1240000,
+    "median_cv": 1475000,
+    "median_cv_ratio": 0.9805,
     "median_days_on_market": 70,
-    "below_avm_count": 237,
-    "below_avm_pct": 11.0,
-    "mean_cv_ratio": 0.9791
+    "below_avm_count": 186,
+    "below_avm_pct": 8.5,
+    "mean_cv_ratio": 0.9863
   },
   "suburbs": [
     {
       "name": "Orewa",
       "slug": "orewa",
       "group": "Hibiscus Coast",
-      "listings": 352,
-      "median_value_mid": 1135000,
-      "median_cv": 1275000,
-      "median_cv_ratio": 0.98,
-      "median_days_on_market": 70,
-      "avm_pct": 32.1,
-      "trend_12w": -0.0032,
-      "mean_cv_ratio": 0.9681
+      "listings": 356,
+      "median_value_mid": 1070790,
+      "median_cv": 1225000,
+      "median_cv_ratio": 0.9861,
+      "median_days_on_market": 71,
+      "avm_pct": 12.4,
+      "trend_12w": -0.0019,
+      "mean_cv_ratio": 0.9853
     },
     {
       "name": "Gulf Harbour",
       "slug": "gulf-harbour",
       "group": "Whangaparāoa Peninsula",
-      "listings": 136,
-      "median_value_mid": 867000,
-      "median_cv": 990000,
-      "median_cv_ratio": 1.0023,
-      "median_days_on_market": 133,
-      "avm_pct": 36.0,
-      "trend_12w": 0.0111,
-      "mean_cv_ratio": 0.9934
+      "listings": 139,
+      "median_value_mid": 860000,
+      "median_cv": 1000000,
+      "median_cv_ratio": 1.004,
+      "median_days_on_market": 131,
+      "avm_pct": 36.7,
+      "trend_12w": 0.0063,
+      "mean_cv_ratio": 1.0027
     },
     {
       "name": "Takapuna",
       "slug": "takapuna",
       "group": "North Shore",
-      "listings": 132,
-      "median_value_mid": 1340000,
-      "median_cv": 1950000,
-      "median_cv_ratio": 0.9537,
-      "median_days_on_market": 90,
-      "avm_pct": 44.7,
-      "trend_12w": -0.0126,
-      "mean_cv_ratio": 0.9705
+      "listings": 133,
+      "median_value_mid": 1240000,
+      "median_cv": 1550000,
+      "median_cv_ratio": 0.9695,
+      "median_days_on_market": 85,
+      "avm_pct": 17.3,
+      "trend_12w": -0.0881,
+      "mean_cv_ratio": 0.9665
     },
     {
       "name": "Bucklands Beach",
       "slug": "bucklands-beach",
       "group": "Eastern Beaches",
-      "listings": 126,
-      "median_value_mid": 1437500,
-      "median_cv": 1750000,
-      "median_cv_ratio": 0.9348,
-      "median_days_on_market": 60,
-      "avm_pct": 42.1,
-      "trend_12w": -0.0155,
-      "mean_cv_ratio": 0.929
+      "listings": 130,
+      "median_value_mid": 1450000,
+      "median_cv": 1850000,
+      "median_cv_ratio": 0.9311,
+      "median_days_on_market": 57,
+      "avm_pct": 23.8,
+      "trend_12w": -0.0103,
+      "mean_cv_ratio": 0.9353
     },
     {
       "name": "Stanmore Bay",
       "slug": "stanmore-bay",
       "group": "Whangaparāoa Peninsula",
       "listings": 124,
-      "median_value_mid": 900000,
-      "median_cv": 940000,
-      "median_cv_ratio": 0.9889,
-      "median_days_on_market": 83,
-      "avm_pct": 36.3,
-      "trend_12w": 0.008,
-      "mean_cv_ratio": 1.005
+      "median_value_mid": 890000,
+      "median_cv": 1005000,
+      "median_cv_ratio": 0.9681,
+      "median_days_on_market": 84,
+      "avm_pct": 9.7,
+      "trend_12w": 0.0021,
+      "mean_cv_ratio": 0.9609
     },
     {
       "name": "Browns Bay",
       "slug": "browns-bay",
       "group": "North Shore",
       "listings": 123,
-      "median_value_mid": 1132000,
+      "median_value_mid": 1165367,
       "median_cv": 1150000,
-      "median_cv_ratio": 0.9681,
-      "median_days_on_market": 60,
-      "avm_pct": 37.4,
-      "trend_12w": -0.001,
-      "mean_cv_ratio": 0.9687
-    },
-    {
-      "name": "Torbay",
-      "slug": "torbay",
-      "group": "North Shore",
-      "listings": 96,
-      "median_value_mid": 1138000,
-      "median_cv": 1250000,
-      "median_cv_ratio": 0.9747,
-      "median_days_on_market": 48,
-      "avm_pct": 32.3,
-      "trend_12w": 0.0031,
-      "mean_cv_ratio": 0.9791
+      "median_cv_ratio": 0.9593,
+      "median_days_on_market": 59,
+      "avm_pct": 36.6,
+      "trend_12w": -0.0058,
+      "mean_cv_ratio": 0.9676
     },
     {
       "name": "Silverdale",
       "slug": "silverdale",
       "group": "Hibiscus Coast",
-      "listings": 91,
-      "median_value_mid": 1205000,
-      "median_cv": 1112500,
-      "median_cv_ratio": 0.9447,
-      "median_days_on_market": 172,
-      "avm_pct": 26.4,
-      "trend_12w": 0.0034,
-      "mean_cv_ratio": 0.9389
+      "listings": 100,
+      "median_value_mid": 1200000,
+      "median_cv": null,
+      "median_cv_ratio": null,
+      "median_days_on_market": 135,
+      "avm_pct": 0.0,
+      "trend_12w": null,
+      "mean_cv_ratio": null
     },
     {
-      "name": "Long Bay",
-      "slug": "long-bay",
+      "name": "Torbay",
+      "slug": "torbay",
       "group": "North Shore",
-      "listings": 85,
-      "median_value_mid": 1455000,
-      "median_cv": 1900000,
-      "median_cv_ratio": 0.9771,
-      "median_days_on_market": 67,
-      "avm_pct": 34.1,
-      "trend_12w": 0.0035,
-      "mean_cv_ratio": 0.974
+      "listings": 99,
+      "median_value_mid": 1138000,
+      "median_cv": null,
+      "median_cv_ratio": null,
+      "median_days_on_market": 49,
+      "avm_pct": 0.0,
+      "trend_12w": 0.0031,
+      "mean_cv_ratio": null
     },
     {
       "name": "Millwater",
       "slug": "millwater",
       "group": "Hibiscus Coast",
-      "listings": 85,
+      "listings": 88,
       "median_value_mid": 1345000,
-      "median_cv": 1500000,
-      "median_cv_ratio": 0.9842,
-      "median_days_on_market": 61,
-      "avm_pct": 28.2,
-      "trend_12w": 0.0034,
-      "mean_cv_ratio": 0.9311
+      "median_cv": 1775000,
+      "median_cv_ratio": 0.9865,
+      "median_days_on_market": 62,
+      "avm_pct": 9.1,
+      "trend_12w": 0.0011,
+      "mean_cv_ratio": 0.9225
+    },
+    {
+      "name": "Long Bay",
+      "slug": "long-bay",
+      "group": "North Shore",
+      "listings": 86,
+      "median_value_mid": 1445000,
+      "median_cv": 2025000,
+      "median_cv_ratio": 1.0242,
+      "median_days_on_market": 66,
+      "avm_pct": 34.9,
+      "trend_12w": 0.0139,
+      "mean_cv_ratio": 1.0007
     },
     {
       "name": "St Heliers",
       "slug": "saint-heliers",
       "group": "Eastern Bays",
-      "listings": 84,
-      "median_value_mid": 1980000,
-      "median_cv": 2275000,
-      "median_cv_ratio": 0.983,
+      "listings": 86,
+      "median_value_mid": 1900000,
+      "median_cv": null,
+      "median_cv_ratio": null,
       "median_days_on_market": 60,
-      "avm_pct": 65.5,
+      "avm_pct": 0.0,
       "trend_12w": -0.0164,
-      "mean_cv_ratio": 0.9901
+      "mean_cv_ratio": null
+    },
+    {
+      "name": "Milford",
+      "slug": "milford",
+      "group": "North Shore",
+      "listings": 76,
+      "median_value_mid": 1625000,
+      "median_cv": null,
+      "median_cv_ratio": null,
+      "median_days_on_market": 86,
+      "avm_pct": 0.0,
+      "trend_12w": -0.013,
+      "mean_cv_ratio": null
     },
     {
       "name": "Half Moon Bay",
       "slug": "half-moon-bay",
       "group": "Eastern Beaches",
       "listings": 74,
-      "median_value_mid": 1400000,
+      "median_value_mid": 1383000,
       "median_cv": 1375000,
-      "median_cv_ratio": 0.9406,
-      "median_days_on_market": 71,
-      "avm_pct": 44.6,
-      "trend_12w": -0.0113,
-      "mean_cv_ratio": 0.9229
-    },
-    {
-      "name": "Milford",
-      "slug": "milford",
-      "group": "North Shore",
-      "listings": 72,
-      "median_value_mid": 1615000,
-      "median_cv": 1950000,
-      "median_cv_ratio": 0.9911,
-      "median_days_on_market": 88,
-      "avm_pct": 31.9,
-      "trend_12w": -0.013,
-      "mean_cv_ratio": 1.0211
+      "median_cv_ratio": 0.9507,
+      "median_days_on_market": 69,
+      "avm_pct": 45.9,
+      "trend_12w": -0.0146,
+      "mean_cv_ratio": 0.9336
     },
     {
       "name": "Red Beach",
       "slug": "red-beach",
       "group": "Hibiscus Coast",
-      "listings": 60,
-      "median_value_mid": 1073218,
-      "median_cv": 1125000,
-      "median_cv_ratio": 0.9922,
+      "listings": 61,
+      "median_value_mid": 1095000,
+      "median_cv": 1050000,
+      "median_cv_ratio": 0.9973,
       "median_days_on_market": 58,
-      "avm_pct": 58.3,
+      "avm_pct": 31.1,
       "trend_12w": 0.0164,
-      "mean_cv_ratio": 0.9791
-    },
-    {
-      "name": "Mairangi Bay",
-      "slug": "mairangi-bay",
-      "group": "North Shore",
-      "listings": 58,
-      "median_value_mid": 1455000,
-      "median_cv": 1700000,
-      "median_cv_ratio": 1.0218,
-      "median_days_on_market": 52,
-      "avm_pct": 41.4,
-      "trend_12w": -0.0099,
-      "mean_cv_ratio": 1.012
+      "mean_cv_ratio": 0.9887
     },
     {
       "name": "Glendowie",
       "slug": "glendowie",
       "group": "Eastern Bays",
-      "listings": 55,
-      "median_value_mid": 1870000,
-      "median_cv": 1875000,
-      "median_cv_ratio": 0.9755,
+      "listings": 58,
+      "median_value_mid": 1832500,
+      "median_cv": 1987500,
+      "median_cv_ratio": 0.9932,
+      "median_days_on_market": 54,
+      "avm_pct": 58.6,
+      "trend_12w": -0.0078,
+      "mean_cv_ratio": 1.0057
+    },
+    {
+      "name": "Mairangi Bay",
+      "slug": "mairangi-bay",
+      "group": "North Shore",
+      "listings": 57,
+      "median_value_mid": 1475000,
+      "median_cv": 1575000,
+      "median_cv_ratio": 1.0225,
       "median_days_on_market": 56,
-      "avm_pct": 58.2,
-      "trend_12w": -0.0148,
-      "mean_cv_ratio": 0.9869
+      "avm_pct": 12.3,
+      "trend_12w": -0.0132,
+      "mean_cv_ratio": 1.009
+    },
+    {
+      "name": "Devonport",
+      "slug": "devonport",
+      "group": "North Shore",
+      "listings": 53,
+      "median_value_mid": 1823070,
+      "median_cv": 2237500,
+      "median_cv_ratio": 0.9974,
+      "median_days_on_market": 91,
+      "avm_pct": 71.7,
+      "trend_12w": -0.0104,
+      "mean_cv_ratio": 1.0323
     },
     {
       "name": "Ōrākei",
       "slug": "orakei",
       "group": "Eastern Bays",
       "listings": 53,
-      "median_value_mid": 1825000,
-      "median_cv": 2225000,
-      "median_cv_ratio": 0.9608,
-      "median_days_on_market": 138,
-      "avm_pct": 66.0,
+      "median_value_mid": 1470000,
+      "median_cv": null,
+      "median_cv_ratio": null,
+      "median_days_on_market": 139,
+      "avm_pct": 0.0,
       "trend_12w": -0.0172,
-      "mean_cv_ratio": 0.9612
+      "mean_cv_ratio": null
     },
     {
-      "name": "Devonport",
-      "slug": "devonport",
-      "group": "North Shore",
-      "listings": 49,
-      "median_value_mid": 1831832,
-      "median_cv": 2237500,
-      "median_cv_ratio": 0.9906,
-      "median_days_on_market": 92,
-      "avm_pct": 73.5,
-      "trend_12w": -0.0188,
-      "mean_cv_ratio": 1.0371
+      "name": "Mission Bay",
+      "slug": "mission-bay",
+      "group": "Eastern Bays",
+      "listings": 42,
+      "median_value_mid": 1540486,
+      "median_cv": 1675000,
+      "median_cv_ratio": 0.9598,
+      "median_days_on_market": 80,
+      "avm_pct": 76.2,
+      "trend_12w": -0.0106,
+      "mean_cv_ratio": 0.9868
     },
     {
       "name": "Rothesay Bay",
       "slug": "rothesay-bay",
       "group": "North Shore",
       "listings": 42,
-      "median_value_mid": 1350000,
+      "median_value_mid": 1365000,
       "median_cv": 1675000,
-      "median_cv_ratio": 1.0228,
-      "median_days_on_market": 48,
+      "median_cv_ratio": 1.0319,
+      "median_days_on_market": 49,
       "avm_pct": 26.2,
-      "trend_12w": -0.0018,
-      "mean_cv_ratio": 1.0215
+      "trend_12w": -0.0061,
+      "mean_cv_ratio": 1.0222
     },
     {
       "name": "Kohimarama",
       "slug": "kohimarama",
       "group": "Eastern Bays",
       "listings": 40,
-      "median_value_mid": 1817500,
-      "median_cv": 1900000,
-      "median_cv_ratio": 0.9284,
-      "median_days_on_market": 60,
-      "avm_pct": 80.0,
-      "trend_12w": -0.0158,
-      "mean_cv_ratio": 0.9536
-    },
-    {
-      "name": "Mission Bay",
-      "slug": "mission-bay",
-      "group": "Eastern Bays",
-      "listings": 40,
-      "median_value_mid": 1602500,
-      "median_cv": 1675000,
-      "median_cv_ratio": 0.9689,
-      "median_days_on_market": 86,
-      "avm_pct": 75.0,
-      "trend_12w": -0.0151,
-      "mean_cv_ratio": 0.9867
+      "median_value_mid": 1804399,
+      "median_cv": 1950000,
+      "median_cv_ratio": 0.9463,
+      "median_days_on_market": 51,
+      "avm_pct": 82.5,
+      "trend_12w": -0.0135,
+      "mean_cv_ratio": 0.9622
     },
     {
       "name": "Manly",
       "slug": "manly",
       "group": "Whangaparāoa Peninsula",
-      "listings": 38,
-      "median_value_mid": 958116,
-      "median_cv": 1037500,
-      "median_cv_ratio": 0.9936,
-      "median_days_on_market": 28,
-      "avm_pct": 57.9,
-      "trend_12w": 0.0079,
-      "mean_cv_ratio": 1.0078
+      "listings": 39,
+      "median_value_mid": 890000,
+      "median_cv": 1015000,
+      "median_cv_ratio": 0.9719,
+      "median_days_on_market": 30,
+      "avm_pct": 25.6,
+      "trend_12w": -0.0065,
+      "mean_cv_ratio": 0.9767
     },
     {
       "name": "Campbells Bay",
       "slug": "campbells-bay",
       "group": "North Shore",
-      "listings": 35,
-      "median_value_mid": 1475000,
+      "listings": 34,
+      "median_value_mid": 1495000,
       "median_cv": 2500000,
       "median_cv_ratio": 1.049,
-      "median_days_on_market": 50,
-      "avm_pct": 31.4,
+      "median_days_on_market": 51,
+      "avm_pct": 32.4,
       "trend_12w": -0.0212,
       "mean_cv_ratio": 1.06
     },
@@ -350,76 +350,76 @@
       "listings": 34,
       "median_value_mid": 1650000,
       "median_cv": 2025000,
-      "median_cv_ratio": 1.0148,
+      "median_cv_ratio": 1.0262,
       "median_days_on_market": 72,
       "avm_pct": 61.8,
-      "trend_12w": -0.0149,
-      "mean_cv_ratio": 1.0062
+      "trend_12w": -0.0066,
+      "mean_cv_ratio": 1.0256
     },
     {
       "name": "Murrays Bay",
       "slug": "murrays-bay",
       "group": "North Shore",
       "listings": 27,
-      "median_value_mid": 1450000,
-      "median_cv": 1725000,
-      "median_cv_ratio": 1.0371,
-      "median_days_on_market": 27,
-      "avm_pct": 55.6,
+      "median_value_mid": 1448000,
+      "median_cv": 1925000,
+      "median_cv_ratio": 1.0448,
+      "median_days_on_market": 28,
+      "avm_pct": 18.5,
       "trend_12w": -0.0038,
-      "mean_cv_ratio": 1.0791
+      "mean_cv_ratio": 1.0651
     },
     {
       "name": "Eastern Beach",
       "slug": "eastern-beach",
       "group": "Eastern Beaches",
       "listings": 17,
-      "median_value_mid": 1465000,
-      "median_cv": 2330000,
-      "median_cv_ratio": 0.9405,
-      "median_days_on_market": 40,
-      "avm_pct": 58.8,
-      "trend_12w": -0.0269,
-      "mean_cv_ratio": 0.9263
+      "median_value_mid": 1480000,
+      "median_cv": 2260000,
+      "median_cv_ratio": 0.9606,
+      "median_days_on_market": 41,
+      "avm_pct": 52.9,
+      "trend_12w": -0.0071,
+      "mean_cv_ratio": 0.9611
     },
     {
       "name": "Waiake",
       "slug": "waiake",
       "group": "North Shore",
-      "listings": 10,
-      "median_value_mid": 1421299,
-      "median_cv": 2137500,
-      "median_cv_ratio": 1.0212,
-      "median_days_on_market": 26,
-      "avm_pct": 60.0,
-      "trend_12w": -0.0114,
-      "mean_cv_ratio": 1.0034
-    },
-    {
-      "name": "Army Bay",
-      "slug": "army-bay",
-      "group": "Whangaparāoa Peninsula",
-      "listings": 7,
-      "median_value_mid": 900000,
-      "median_cv": 1475000,
-      "median_cv_ratio": 0.9775,
-      "median_days_on_market": 27,
-      "avm_pct": 42.9,
-      "trend_12w": 0.0071,
-      "mean_cv_ratio": 0.9798
+      "listings": 11,
+      "median_value_mid": 1185000,
+      "median_cv": null,
+      "median_cv_ratio": null,
+      "median_days_on_market": 29,
+      "avm_pct": 0.0,
+      "trend_12w": -0.0063,
+      "mean_cv_ratio": null
     },
     {
       "name": "Whangaparāoa",
       "slug": "whangaparaoa",
       "group": "Whangaparāoa Peninsula",
-      "listings": 7,
+      "listings": 11,
       "median_value_mid": 900000,
       "median_cv": null,
       "median_cv_ratio": null,
-      "median_days_on_market": 505,
+      "median_days_on_market": 138,
       "avm_pct": 0.0,
       "trend_12w": null,
       "mean_cv_ratio": null
+    },
+    {
+      "name": "Army Bay",
+      "slug": "army-bay",
+      "group": "Whangaparāoa Peninsula",
+      "listings": 8,
+      "median_value_mid": 960902,
+      "median_cv": 1250000,
+      "median_cv_ratio": 1.0098,
+      "median_days_on_market": 21,
+      "avm_pct": 62.5,
+      "trend_12w": 0.0002,
+      "mean_cv_ratio": 1.0482
     },
     {
       "name": "Big Manly",
@@ -437,122 +437,122 @@
   ],
   "top_value": [
     {
-      "id": "6101282500",
-      "address": "23 Te Arawa Street",
-      "suburb": "Ōrākei",
-      "value_low": 1429787,
-      "value_mid": 1518397,
-      "value_high": 1607006,
-      "cv_ratio": 0.9344,
-      "deal_gap": 468397,
-      "deal_gap_pct": 30.85,
-      "sale_method": "Asking price",
-      "days_on_market": 76,
-      "confidence": "high",
-      "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2325440250.jpg",
-      "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/auckland-city/orakei/listing/6101282500"
-    },
-    {
-      "id": "6177079569",
-      "address": "14 Blue Gum Avenue",
-      "suburb": "Silverdale",
-      "value_low": 786161,
-      "value_mid": 834883,
-      "value_high": 883604,
-      "cv_ratio": 0.6679,
-      "deal_gap": 239883,
-      "deal_gap_pct": 28.73,
-      "sale_method": "Asking price",
-      "days_on_market": 28,
-      "confidence": "high",
-      "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2334855443.jpg",
-      "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/rodney/silverdale/listing/6177079569"
-    },
-    {
-      "id": "5863790138",
-      "address": "99a Selwyn Avenue",
-      "suburb": "Mission Bay",
-      "value_low": 1028135,
-      "value_mid": 1091853,
-      "value_high": 1155571,
-      "cv_ratio": 0.9099,
-      "deal_gap": 291853,
-      "deal_gap_pct": 26.73,
-      "sale_method": "Asking price",
-      "days_on_market": 222,
-      "confidence": "high",
-      "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2305779741.jpg",
-      "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/auckland-city/mission-bay/listing/5863790138"
-    },
-    {
       "id": "6032734560",
       "address": "54A Comins Crescent",
       "suburb": "Mission Bay",
-      "value_low": 1272408,
-      "value_mid": 1351264,
-      "value_high": 1430121,
-      "cv_ratio": 0.9827,
-      "deal_gap": 322264,
-      "deal_gap_pct": 23.85,
+      "value_low": 1292839,
+      "value_mid": 1373708,
+      "value_high": 1454577,
+      "cv_ratio": 0.9991,
+      "deal_gap": 344708,
+      "deal_gap_pct": 25.09,
       "sale_method": "Asking price",
-      "days_on_market": 119,
+      "days_on_market": 120,
       "confidence": "high",
       "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2317642636.jpg",
       "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/auckland-city/mission-bay/listing/6032734560"
     },
     {
+      "id": "5863790138",
+      "address": "99a Selwyn Avenue",
+      "suburb": "Mission Bay",
+      "value_low": 1002779,
+      "value_mid": 1065504,
+      "value_high": 1128230,
+      "cv_ratio": 0.8879,
+      "deal_gap": 265504,
+      "deal_gap_pct": 24.92,
+      "sale_method": "Asking price",
+      "days_on_market": 223,
+      "confidence": "high",
+      "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2305779741.jpg",
+      "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/auckland-city/mission-bay/listing/5863790138"
+    },
+    {
       "id": "5626537548",
       "address": "31 Forest Glen",
       "suburb": "Orewa",
-      "value_low": 1691804,
-      "value_mid": 1796652,
-      "value_high": 1901500,
-      "cv_ratio": 0.8983,
-      "deal_gap": 396652,
-      "deal_gap_pct": 22.08,
+      "value_low": 1674290,
+      "value_mid": 1779019,
+      "value_high": 1883749,
+      "cv_ratio": 0.8895,
+      "deal_gap": 379019,
+      "deal_gap_pct": 21.3,
       "sale_method": "Asking price",
-      "days_on_market": 361,
+      "days_on_market": 362,
       "confidence": "high",
       "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2263490752.jpg",
       "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/rodney/orewa/listing/5626537548"
     },
     {
-      "id": "5752687500",
-      "address": "75 Cliff Road",
-      "suburb": "Torbay",
-      "value_low": 2247576,
-      "value_mid": 2417180,
-      "value_high": 2586784,
-      "cv_ratio": 0.9479,
-      "deal_gap": 518180,
-      "deal_gap_pct": 21.44,
+      "id": "6156425299",
+      "address": "4/30C Kempthorne Crescent",
+      "suburb": "Mission Bay",
+      "value_low": 1447722,
+      "value_mid": 1538279,
+      "value_high": 1628836,
+      "cv_ratio": 0.9767,
+      "deal_gap": 288279,
+      "deal_gap_pct": 18.74,
       "sale_method": "Asking price",
-      "days_on_market": 287,
+      "days_on_market": 42,
       "confidence": "high",
-      "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2283227626.jpg",
-      "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/north-shore-city/torbay/listing/5752687500"
+      "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2332302926.jpg",
+      "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/auckland-city/mission-bay/listing/6156425299"
+    },
+    {
+      "id": "6178206197",
+      "address": "31a Rawhitiroa Road",
+      "suburb": "Kohimarama",
+      "value_low": 2872328,
+      "value_mid": 3051996,
+      "value_high": 3231665,
+      "cv_ratio": 0.9845,
+      "deal_gap": 552996,
+      "deal_gap_pct": 18.12,
+      "sale_method": "Asking price",
+      "days_on_market": 29,
+      "confidence": "high",
+      "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2335960029.jpg",
+      "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/auckland-city/kohimarama/listing/6178206197"
+    },
+    {
+      "id": "5726343329",
+      "address": "13/245 Kepa Road",
+      "suburb": "Mission Bay",
+      "value_low": 1468480,
+      "value_mid": 1573080,
+      "value_high": 1677681,
+      "cv_ratio": 1.0665,
+      "deal_gap": 273080,
+      "deal_gap_pct": 17.36,
+      "sale_method": "Asking price",
+      "days_on_market": 303,
+      "confidence": "high",
+      "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2278853282.jpg",
+      "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/auckland-city/mission-bay/listing/5726343329"
     }
   ],
   "sale_methods": [
     {
       "method": "Price by negotiation",
-      "count": 1107,
-      "share_pct": 51.4
+      "count": 1129,
+      "share_pct": 51.3
     },
     {
       "method": "Asking price",
-      "count": 732,
-      "share_pct": 34.0
+      "count": 746,
+      "share_pct": 33.9
     },
     {
       "method": "Auction",
-      "count": 186,
-      "share_pct": 8.6
+      "count": 185,
+      "share_pct": 8.4
     },
     {
       "method": "Deadline sale",
-      "count": 114,
-      "share_pct": 5.3
+      "count": 128,
+      "share_pct": 5.8
     },
     {
       "method": "Tender",
@@ -563,18 +563,18 @@
   "coverage_by_type": [
     {
       "property_type": "House",
-      "count": 1572,
-      "avm_pct": 46.0
+      "count": 1619,
+      "avm_pct": 25.2
     },
     {
       "property_type": "Townhouse",
-      "count": 176,
-      "avm_pct": 28.4
+      "count": 177,
+      "avm_pct": 18.6
     },
     {
       "property_type": "Apartment",
-      "count": 170,
-      "avm_pct": 50.0
+      "count": 171,
+      "avm_pct": 25.7
     },
     {
       "property_type": "Section",
@@ -584,62 +584,62 @@
     {
       "property_type": "Unit",
       "count": 59,
-      "avm_pct": 72.9
+      "avm_pct": 45.8
     },
     {
       "property_type": "Dwelling",
       "count": 7,
-      "avm_pct": 71.4
+      "avm_pct": 14.3
     },
     {
       "property_type": "Bare land",
       "count": 1,
-      "avm_pct": 100.0
+      "avm_pct": 0.0
     }
   ],
   "trend": {
     "weeks": 12,
     "series": [
       {
-        "week": "2026-08-06",
-        "median_estimate": 1516629
-      },
-      {
         "week": "2026-08-20",
-        "median_estimate": 1520900
+        "median_estimate": 1558213
       },
       {
         "week": "2026-09-03",
-        "median_estimate": 1529142
+        "median_estimate": 1580690
       },
       {
         "week": "2026-09-17",
-        "median_estimate": 1511036
+        "median_estimate": 1553789
       },
       {
         "week": "2026-10-01",
-        "median_estimate": 1524551
+        "median_estimate": 1570882
       },
       {
         "week": "2026-10-15",
-        "median_estimate": 1538178
+        "median_estimate": 1573282
       },
       {
         "week": "2026-10-29",
-        "median_estimate": 1522892
+        "median_estimate": 1596878
+      },
+      {
+        "week": "2026-11-12",
+        "median_estimate": 1497029
       }
     ]
   },
   "automation": {
     "status": "running",
-    "last_run_at": "2026-11-11T03:15:05+13:00",
+    "last_run_at": "2026-11-12T03:27:34+13:00",
     "steps": 0
   },
   "research": {
     "topics": 12,
-    "fdr_significant": 1,
+    "fdr_significant": 0,
     "fdr_tests": 36,
-    "text_model_delta_pct": -6.51
+    "text_model_delta_pct": -2.81
   },
   "definitions": {
     "standard_listings": "listings that pass the standard-property classifier; non-standard types (relocatable, leasehold-only, retirement etc.) are excluded",

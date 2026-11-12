@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2023-12-22T01:32:29.817000+00:00",
-  "days_on_market": 1054,
+  "days_on_market": 1055,
   "lat": -36.5837787,
   "lon": 174.6612727,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2126416725.jpg",
@@ -30,12 +30,12 @@
   "estimate_source": null,
   "estimate_updated_at": null,
   "comp_low": 1070000,
-  "comp_mid": 1290000,
+  "comp_mid": 1285000,
   "comp_high": 1500000,
   "comp_confidence": "medium",
-  "comp_n": 29,
+  "comp_n": 24,
   "value_low": 1070000,
-  "value_mid": 1290000,
+  "value_mid": 1285000,
   "value_high": 1500000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "medium",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:10:00.804779+00:00",
-  "days_since_last_change": 6.88,
+  "days_since_last_change": 8.13,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 3,
   "sale_pressure": 60.0,
   "sale_pressure_label": "medium",
-  "model_low": 1794165,
-  "model_mid": 2489249,
-  "model_high": 3424420,
+  "model_low": 2258362,
+  "model_mid": 3120874,
+  "model_high": 4437722,
   "model_confidence": "low",
-  "text_signal_pct": 0.9427,
-  "description_index": 0.050728,
+  "text_signal_pct": 18.7744,
+  "description_index": 0.886992,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 4480519469,
-    "low": 1794165,
-    "mid": 2489249,
-    "high": 3424420,
+    "low": 2258362,
+    "mid": 3120874,
+    "high": 4437722,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3274, 0.319], \"rel_width\": 0.6549, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3235, 0.352], \"rel_width\": 0.6983, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 4480519469,
@@ -281,91 +281,91 @@
     "urgency": 0.0,
     "luxury": 1.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.1071,
-    "family_school": 0.0687,
+    "views_waterfront": 0.1029,
+    "family_school": 0.0658,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.2493,
-    "description_premium_pct": 0.9427,
-    "description_index": 0.050728,
+    "description_premium_pct": 18.7744,
+    "description_index": 0.886992,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 13, \"condition_renovation\": 0, \"views_waterfront\": 1, \"family_school\": 1, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-10T18:11:01.371273+00:00",
+    "updated_at": "2026-11-12T00:11:20.849028+00:00",
     "top_topics": [
       {
         "topic_id": 4,
-        "weight": 0.53852,
+        "weight": 0.700995,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
-          "quality",
           "appliances",
-          "designer",
-          "finishes",
-          "year",
           "luxury",
-          "comfort",
-          "designer kitchen",
-          "new",
+          "designer",
           "heating",
-          "design"
+          "year",
+          "finishes",
+          "quality",
+          "built",
+          "designer kitchen",
+          "lighting",
+          "residence"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.16106,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "fenced",
-          "street",
-          "parking",
-          "fully fenced",
-          "fully",
-          "room",
-          "brick",
-          "garden",
-          "double",
-          "street parking",
-          "sunny",
-          "plus"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.153406,
+        "weight": 0.170005,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "bathroom",
-          "separate",
-          "extended",
+          "ensuite",
           "walk wardrobe",
           "wardrobe",
-          "ensuite",
           "upstairs",
-          "extended family",
-          "guests",
           "master",
           "walk",
-          "floor"
+          "bedroom",
+          "separate",
+          "lounge",
+          "level",
+          "suite"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.070783,
+        "label": "Parking, garden & section II",
+        "top_terms": [
+          "brick",
+          "parking",
+          "fenced",
+          "fully fenced",
+          "street",
+          "street parking",
+          "fully",
+          "single",
+          "sunny",
+          "garden",
+          "single level",
+          "room"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.147014,
-        "label": "Resort amenities (pool / tennis / spa)",
+        "weight": 0.058217,
+        "label": "Sea views & coastal outlook",
         "top_terms": [
-          "residence",
-          "pool",
-          "scale",
-          "expansive",
-          "waterfront",
-          "substantial",
-          "swimming",
-          "harbour",
-          "swimming pool",
           "views",
-          "spaces",
-          "held"
+          "areas",
+          "living areas",
+          "substantial",
+          "residence",
+          "multiple",
+          "expansive",
+          "entertaining",
+          "impressive",
+          "sea",
+          "pool",
+          "flexibility"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-10T18:11:00.657770+00:00"
+    "updated_at": "2026-11-12T00:11:20.070813+00:00"
   },
   "body": "Step into an unparalleled world of elegance and comfort with this masterpiece in the heart of Ara Hills. Boasting stunning street appeal, this luxurious sunny residence is a testament to superior craftsmanship and sophisticated design with multiple living arrangements.\r\n\r\nBoasting:\r\n*\tGrand Entrance & Spacious Living\r\n*\tExpansive living area featuring exquisite barn doors that lead to an elegant and inviting lounge, perfect for both entertaining and relaxation\r\n*\tFive Spacious Bedrooms including the North facing master ensuite which is a true sanctuary with two walk-in wardrobes and a private balcony, offering a serene escape\r\n*\tOffice space / granny potential: 2-bedroom with separate entry and more . . .\r\n*\tLarge garage with storage plus separate laundry\r\n*\tIndulge in the luxury of three upmarket bathrooms with underfloor heating and LED mirrors featuring Italian tiles, ensuring a touch of European elegance plus guest toilet\r\n*\tThe heart of the home is an elegant and grand kitchen, complete with high-end Bosch appliances, including two ovens and a built-in microwave-oven\r\n*\tThe kitchen island and large walk-in pantry with an elegant scullery kitchen are perfect for the culinary enthusiast plus mobile phone charging stations\r\n*\tEvery detail, from the Villeroy & Boch tapware to the engineered hardwood flooring, speaks of refinement and quality\r\n*\tThis home is adorned with LED feature lights that enhance the ambiance from the kitchen to the bathrooms and out onto the expansive Vitex decking\r\n*\tA large double-sided fireplace, surrounded by Italian tiles, creates a warm and inviting atmosphere\r\n*\tExpansive Vitex decks, ideal for alfresco dining and entertaining with fully landscaped exquisite garden\r\n\r\nExperience the epitome of luxury living in Ara Hills. Step into a high quality home where elegance meets comfort.\r\n\r\nContact Shaun today at 021 871 252 to schedule your private viewing.",
   "photos": [
@@ -463,7 +463,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1075000,
-      "estimate_mid": 1080000
+      "estimate_mid": 1060000
     },
     {
       "property_id": "014543ac-6102-44a4-9eef-5f45026bff1c",
@@ -477,7 +477,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1900000,
-      "estimate_mid": 1850000
+      "estimate_mid": 1860000
     },
     {
       "property_id": "92baf40f-ecd7-4f65-8ca0-0c78bfbd4190",
@@ -491,7 +491,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 540000,
-      "estimate_mid": 580000
+      "estimate_mid": 605000
     },
     {
       "property_id": "d16909b0-721b-432b-9124-e57b1dd5eefb",
@@ -505,7 +505,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1225000,
-      "estimate_mid": 1060000
+      "estimate_mid": 1070000
     },
     {
       "property_id": "85161ea5-bb10-4787-975b-f5d25206149c",
@@ -519,6 +519,20 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1300000,
+      "estimate_mid": 1080000
+    },
+    {
+      "property_id": "e3cdeae3-96d2-463d-8574-293f7dabab54",
+      "address": "67 Huanui Drive, Wainui, Wainui",
+      "sale_price": 1055000,
+      "sale_date": "2026-07-27T00:00:00+00:00",
+      "distance_km": 0.55,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1175000,
       "estimate_mid": 1060000
     },
     {
@@ -533,7 +547,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1225000,
-      "estimate_mid": 995000
+      "estimate_mid": 1000000
     },
     {
       "property_id": "ba9e7a5c-37f7-40f8-824d-f9a39ae58c9d",
@@ -547,7 +561,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1225000,
-      "estimate_mid": 1080000
+      "estimate_mid": 1090000
     },
     {
       "property_id": "c23a2497-07b9-4ee9-9fcd-524769b0e31b",
@@ -575,7 +589,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1500000,
-      "estimate_mid": 2160000
+      "estimate_mid": 2270000
     },
     {
       "property_id": "1dad50db-7ac7-482f-afbc-ffc19a143bb4",
@@ -589,7 +603,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1500000,
-      "estimate_mid": 1400000
+      "estimate_mid": 1370000
     },
     {
       "property_id": "a8773dda-ab2c-4f92-bc1c-538e53babee9",
@@ -604,25 +618,11 @@
       "property_type": null,
       "cv": 1200000,
       "estimate_mid": 1220000
-    },
-    {
-      "property_id": "fcbeee90-3111-46d0-b50f-11eb5a1e9077",
-      "address": "32 Mahinga Kai Road, Orewa, Orewa",
-      "sale_price": 900000,
-      "sale_date": "2026-09-22T00:00:00+00:00",
-      "distance_km": 0.92,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 850000,
-      "estimate_mid": 880000
     }
   ],
   "valuation": {
     "value_low": 1070000,
-    "value_mid": 1290000,
+    "value_mid": 1285000,
     "value_high": 1500000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "medium",
@@ -631,19 +631,19 @@
         "name": "Nearby sold comparables",
         "range": "$1.07M – $1.50M",
         "low": 1070000,
-        "mid": 1290000,
+        "mid": 1285000,
         "high": 1500000,
-        "updated_at": "2026-11-10T18:11:00.657770+00:00",
+        "updated_at": "2026-11-12T00:11:20.070813+00:00",
         "confidence": "medium",
-        "n": 29,
+        "n": 24,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 29,
-          "n_eff": 10.19,
+          "n": 24,
+          "n_eff": 9.88,
           "radius_km": 3.0,
-          "iqr_ratio": 0.3333,
-          "same_suburb": 19,
+          "iqr_ratio": 0.3346,
+          "same_suburb": 18,
           "model_version": "comp-cv-v1"
         }
       }

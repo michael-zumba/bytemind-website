@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-02-13T00:42:43.553000+00:00",
-  "days_on_market": 270,
+  "days_on_market": 271,
   "lat": -36.6245121,
   "lon": 174.6715679,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2317575066.jpg",
@@ -29,14 +29,14 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 952000,
-  "comp_mid": 1246000,
-  "comp_high": 1430000,
+  "comp_low": 915000,
+  "comp_mid": 1140000,
+  "comp_high": 1400000,
   "comp_confidence": "low",
-  "comp_n": 33,
-  "value_low": 952000,
-  "value_mid": 1246000,
-  "value_high": 1430000,
+  "comp_n": 19,
+  "value_low": 915000,
+  "value_mid": 1140000,
+  "value_high": 1400000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1212,
+  "view_count": 1220,
   "watchers": 11,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:20:45.999248+00:00",
-  "days_since_last_change": 6.87,
+  "days_since_last_change": 8.12,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 738258,
-  "model_mid": 1024270,
-  "model_high": 1409071,
+  "model_low": 697440,
+  "model_mid": 963806,
+  "model_high": 1370483,
   "model_confidence": "low",
-  "text_signal_pct": -11.8819,
-  "description_index": -0.683842,
+  "text_signal_pct": -9.5023,
+  "description_index": -0.514734,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,71 +268,52 @@
   ],
   "model": {
     "listing_id": 5781747068,
-    "low": 738258,
-    "mid": 1024270,
-    "high": 1409071,
+    "low": 697440,
+    "mid": 963806,
+    "high": 1370483,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3274, 0.319], \"rel_width\": 0.6549, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3235, 0.352], \"rel_width\": 0.6983, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5781747068,
     "word_count": 198,
     "exclamations": 4,
     "urgency": 1.0,
-    "luxury": 0.28,
-    "condition_renovation": 0.4293,
+    "luxury": 0.2801,
+    "condition_renovation": 0.4288,
     "views_waterfront": 0.0,
-    "family_school": 0.0878,
+    "family_school": 0.084,
     "investment": 1.0,
     "risk": 0.0,
     "readability": 0.3218,
-    "description_premium_pct": -11.8819,
-    "description_index": -0.683842,
+    "description_premium_pct": -9.5023,
+    "description_index": -0.514734,
     "lexicon_hits_json": "{\"urgency\": 4, \"luxury\": 2, \"condition_renovation\": 2, \"views_waterfront\": 0, \"family_school\": 1, \"investment\": 7, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-10T18:11:01.371273+00:00",
+    "updated_at": "2026-11-12T00:11:20.849028+00:00",
     "top_topics": [
       {
-        "topic_id": 4,
-        "weight": 0.276541,
-        "label": "Luxury, architectural & prestige",
+        "topic_id": 2,
+        "weight": 0.296614,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "premium",
-          "quality",
-          "appliances",
-          "designer",
-          "finishes",
-          "year",
-          "luxury",
-          "comfort",
-          "designer kitchen",
+          "brand",
+          "brand new",
           "new",
-          "heating",
-          "design"
-        ]
-      },
-      {
-        "topic_id": 1,
-        "weight": 0.230331,
-        "label": "Development & land potential",
-        "top_terms": [
-          "potential",
-          "future",
-          "site",
-          "property",
-          "land",
-          "development",
-          "subject",
-          "council",
-          "existing",
-          "possibilities",
-          "value",
-          "mixed"
+          "lot",
+          "homes",
+          "standalone",
+          "new home",
+          "sqm",
+          "title",
+          "bedrooms bathrooms",
+          "floor area",
+          "ccc"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.210129,
+        "weight": 0.244274,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -341,31 +322,50 @@
           "lock leave",
           "car",
           "secure",
-          "park",
-          "balcony",
           "complex",
-          "kensington",
-          "restaurants",
-          "pool"
+          "balcony",
+          "bedroom apartment",
+          "maintenance",
+          "village",
+          "restaurants"
         ]
       },
       {
-        "topic_id": 2,
-        "weight": 0.172659,
-        "label": "Brick / tile / low-maintenance units",
+        "topic_id": 1,
+        "weight": 0.190516,
+        "label": "Development & land potential",
         "top_terms": [
-          "maintenance",
-          "low maintenance",
-          "low",
-          "brand new",
-          "brand",
-          "new",
-          "single",
-          "easy care",
-          "care",
+          "potential",
+          "future",
+          "land",
+          "site",
+          "development",
+          "subject",
+          "council",
+          "sqm",
+          "subject council",
+          "existing",
+          "approval",
+          "property"
+        ]
+      },
+      {
+        "topic_id": 4,
+        "weight": 0.171151,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "premium",
+          "appliances",
+          "luxury",
+          "designer",
+          "heating",
+          "year",
+          "finishes",
           "quality",
-          "new home",
-          "convenience"
+          "built",
+          "designer kitchen",
+          "lighting",
+          "residence"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-10T18:11:00.657770+00:00"
+    "updated_at": "2026-11-12T00:11:20.070813+00:00"
   },
   "body": "An outstanding opportunity for homeowners and savvy investors! With 2 of the 5 homes already sold, only 3 newly built terraced homes remain. The vendor is motivated and ready to see action!\r\n\r\nFeaturing 3 bedrooms, 2 bathrooms and a study, these modern homes combine quality finishes, low-maintenance living and excellent value in one of North Auckland’s fastest-growing locations. Enjoy pleasant outlooks from the rear of the property.\r\n\r\nQuality Features Include:\r\n• Premium Fisher & Paykel kitchen with DishDrawer™, induction cooktop and wall oven\r\n• Hansgrohe tapware and Insinkerator E56 waste disposal\r\n• Full-home HRV system for year-round comfort\r\n• Bright open-plan living, double glazing and smart storage\r\n• Allocated car park plus visitor parking\r\n• Freehold title — no body corporate or residents’ association fees\r\n• 10-year Stamford Warranty\r\n• CCC already issued\r\n\r\nINVESTORS — READY TO GO!\r\nNow tenanted, these properties offer an attractive opportunity for investors seeking rental income and potential long-term capital growth.\r\n\r\nConveniently Located Near:\r\n• Quality schools\r\n• Silverdale Centre, cafés and everyday amenities\r\n• Motorway access and Silverdale Bus Station\r\n• Auckland’s stunning northern beaches\r\n\r\nMOTIVATED VENDOR — URGENT SALE!\r\nWhether you're looking for your next home or a smart investment, don't miss your chance to secure one of these remaining properties.\r\n\r\nContact today for further information and viewing arrangements. Advance notice is required for viewings.",
   "photos": [
@@ -446,20 +446,6 @@
   "history": [],
   "comps": [
     {
-      "property_id": "1fe66e63-aa83-4e68-ac69-db277a6ea80e",
-      "address": "8 Wira Lane, SILVERDALE",
-      "sale_price": 1021000,
-      "sale_date": "2026-08-24T00:00:00+00:00",
-      "distance_km": 0.03,
-      "bedrooms": 3,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1075000,
-      "estimate_mid": 575000
-    },
-    {
       "property_id": "09932963-a688-41d4-bb8c-c2b5ba711066",
       "address": "23 Kea Road, Silverdale, Silverdale",
       "sale_price": 1200000,
@@ -485,7 +471,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1025000,
-      "estimate_mid": 920000
+      "estimate_mid": 925000
     },
     {
       "property_id": "2c1f6b60-f152-4124-aea2-2a4ed6a328d3",
@@ -502,20 +488,6 @@
       "estimate_mid": 945000
     },
     {
-      "property_id": "4d9d866d-fa8d-4689-a186-6ce634345e8b",
-      "address": "25 Vue Terrace, Silverdale, Silverdale",
-      "sale_price": 1500000,
-      "sale_date": "2026-08-28T00:00:00+00:00",
-      "distance_km": 1.4,
-      "bedrooms": 5,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1425000,
-      "estimate_mid": 1510000
-    },
-    {
       "property_id": "07418bc5-3e0d-4212-96dd-fe8cdeaa2409",
       "address": "2 Colonial Drive, Silverdale, Silverdale",
       "sale_price": 1400000,
@@ -527,21 +499,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1475000,
-      "estimate_mid": 1490000
-    },
-    {
-      "property_id": "0ba8687f-9c2e-4f91-9adf-391ab0866574",
-      "address": "1687 Dairy Flat Highway, Silverdale",
-      "sale_price": 7400000,
-      "sale_date": "2026-08-24T00:00:00+00:00",
-      "distance_km": 1.51,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 6040000,
-      "estimate_mid": 6200000
+      "estimate_mid": 1410000
     },
     {
       "property_id": "575273ae-9c5a-4a95-996d-65860f97f6bb",
@@ -558,20 +516,6 @@
       "estimate_mid": 920000
     },
     {
-      "property_id": "78025c8d-e79e-464f-8305-35af0b79daa8",
-      "address": "12 Carthey Road, Wainui, Wainui",
-      "sale_price": 1246000,
-      "sale_date": "2026-08-10T00:00:00+00:00",
-      "distance_km": 1.67,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1350000,
-      "estimate_mid": 1260000
-    },
-    {
       "property_id": "2e05866a-f5c8-4967-adfa-c7455b7b0c9e",
       "address": "66 Madison Terrace, Silverdale, Silverdale",
       "sale_price": 1427500,
@@ -583,7 +527,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1275000,
-      "estimate_mid": 1300000
+      "estimate_mid": 1420000
     },
     {
       "property_id": "adcdd589-782e-403d-bcb2-683c737a457b",
@@ -612,32 +556,88 @@
       "property_type": null,
       "cv": 1350000,
       "estimate_mid": 1260000
+    },
+    {
+      "property_id": "543a8684-a099-464b-b8ac-d244e180df95",
+      "address": "24 Tawhana Crescent, Red Beach, Red Beach",
+      "sale_price": 1110000,
+      "sale_date": "2026-09-08T00:00:00+00:00",
+      "distance_km": 2.27,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1150000,
+      "estimate_mid": 1120000
+    },
+    {
+      "property_id": "f8bf62ee-46c7-43a0-9dd2-814cdc15b380",
+      "address": "84 Symes Drive, Red Beach, Red Beach",
+      "sale_price": 952000,
+      "sale_date": "2026-09-13T00:00:00+00:00",
+      "distance_km": 2.27,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 980000,
+      "estimate_mid": 960000
+    },
+    {
+      "property_id": "9946c7e7-3506-4d62-819f-986ca56c032f",
+      "address": "6 Sapling Way, Silverdale, Silverdale",
+      "sale_price": 702500,
+      "sale_date": "2026-09-25T00:00:00+00:00",
+      "distance_km": 2.28,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 810000,
+      "estimate_mid": 710000
+    },
+    {
+      "property_id": "d528f4f7-c688-4147-af79-dd7fb20785f9",
+      "address": "172 Harris Drive, Silverdale, Silverdale",
+      "sale_price": 1580000,
+      "sale_date": "2026-09-10T00:00:00+00:00",
+      "distance_km": 2.42,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1325000,
+      "estimate_mid": 1560000
     }
   ],
   "valuation": {
-    "value_low": 952000,
-    "value_mid": 1246000,
-    "value_high": 1430000,
+    "value_low": 915000,
+    "value_mid": 1140000,
+    "value_high": 1400000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$952K – $1.43M",
-        "low": 952000,
-        "mid": 1246000,
-        "high": 1430000,
-        "updated_at": "2026-11-10T18:11:00.657770+00:00",
+        "range": "$915K – $1.40M",
+        "low": 915000,
+        "mid": 1140000,
+        "high": 1400000,
+        "updated_at": "2026-11-12T00:11:20.070813+00:00",
         "confidence": "low",
-        "n": 33,
+        "n": 19,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 33,
-          "n_eff": 6.78,
+          "n": 19,
+          "n_eff": 3.48,
           "radius_km": 3.0,
-          "iqr_ratio": 0.3836,
-          "same_suburb": 16,
+          "iqr_ratio": 0.4254,
+          "same_suburb": 0,
           "model_version": "comp-cv-v1"
         }
       }

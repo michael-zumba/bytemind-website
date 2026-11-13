@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-05-27T23:28:39.813000+00:00",
-  "days_on_market": 167,
+  "days_on_market": 168,
   "lat": -36.7408867,
   "lon": 174.754715,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2309060068.jpg",
@@ -33,7 +33,7 @@
   "comp_mid": 1506000,
   "comp_high": 1811000,
   "comp_confidence": "medium",
-  "comp_n": 79,
+  "comp_n": 84,
   "value_low": 1300000,
   "value_mid": 1506000,
   "value_high": 1811000,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2100,
+  "view_count": 2116,
   "watchers": 22,
   "is_standard": 1,
   "standard_reason": null,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 57.8,
+  "sale_pressure": 58.0,
   "sale_pressure_label": "medium",
-  "model_low": 1513227,
-  "model_mid": 2091157,
-  "model_high": 2973519,
+  "model_low": 1272986,
+  "model_mid": 1753173,
+  "model_high": 2396800,
   "model_confidence": "low",
-  "text_signal_pct": 8.4084,
-  "description_index": 0.416213,
+  "text_signal_pct": -10.4032,
+  "description_index": -0.570143,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -298,11 +298,11 @@
   ],
   "model": {
     "listing_id": 5957712027,
-    "low": 1513227,
-    "mid": 2091157,
-    "high": 2973519,
+    "low": 1272986,
+    "mid": 1753173,
+    "high": 2396800,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3235, 0.352], \"rel_width\": 0.6983, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3201, 0.3127], \"rel_width\": 0.641, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5957712027,
@@ -311,20 +311,39 @@
     "urgency": 0.0,
     "luxury": 1.0,
     "condition_renovation": 1.0,
-    "views_waterfront": 0.6674,
-    "family_school": 0.2133,
+    "views_waterfront": 0.699,
+    "family_school": 0.2242,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.1775,
-    "description_premium_pct": 8.4084,
-    "description_index": 0.416213,
+    "description_premium_pct": -10.4032,
+    "description_index": -0.570143,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 3, \"condition_renovation\": 2, \"views_waterfront\": 2, \"family_school\": 1, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-12T00:11:20.849028+00:00",
+    "updated_at": "2026-11-13T00:33:09.526193+00:00",
     "top_topics": [
       {
-        "topic_id": 3,
-        "weight": 0.440161,
+        "topic_id": 7,
+        "weight": 0.431435,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "premium",
+          "quality",
+          "designer",
+          "finishes",
+          "appliances",
+          "year",
+          "luxury",
+          "designer kitchen",
+          "comfort",
+          "new",
+          "heating",
+          "design"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.351775,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -333,69 +352,50 @@
           "lock leave",
           "car",
           "secure",
+          "park",
+          "pool",
+          "kensington",
           "complex",
           "balcony",
-          "bedroom apartment",
-          "maintenance",
-          "village",
-          "restaurants"
+          "gym"
         ]
       },
       {
-        "topic_id": 4,
-        "weight": 0.424657,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "premium",
-          "appliances",
-          "luxury",
-          "designer",
-          "heating",
-          "year",
-          "finishes",
-          "quality",
-          "built",
-          "designer kitchen",
-          "lighting",
-          "residence"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.104365,
+        "topic_id": 2,
+        "weight": 0.124037,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "convenience",
+          "maintenance",
           "low maintenance",
           "low",
-          "maintenance",
-          "comfort",
-          "stylish",
-          "quality",
+          "brand new",
+          "brand",
+          "new",
+          "single",
           "easy care",
           "care",
-          "light",
-          "outdoor",
-          "light filled"
+          "quality",
+          "new home",
+          "buyers"
         ]
       },
       {
-        "topic_id": 11,
-        "weight": 0.023316,
-        "label": "Sea views & coastal outlook",
+        "topic_id": 10,
+        "weight": 0.082726,
+        "label": "Family living & entertaining",
         "top_terms": [
-          "views",
-          "areas",
+          "extended",
+          "extended family",
+          "flexibility",
           "living areas",
-          "substantial",
-          "residence",
+          "areas",
           "multiple",
-          "expansive",
-          "entertaining",
-          "impressive",
+          "guests",
           "sea",
-          "pool",
-          "flexibility"
+          "sea views",
+          "teenagers",
+          "family living",
+          "views"
         ]
       }
     ]
@@ -436,7 +436,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-12T00:11:20.070813+00:00"
+    "updated_at": "2026-11-13T00:33:08.734488+00:00"
   },
   "body": "Sophisticated, secure and wonderfully low maintenance - just moments from Mairangi Bay beach and village.\r\n\r\n• Private Italian lift - easy access between levels\r\n\r\n• Stylish open-plan living with premium kitchen, smart-home features and elevated views\r\n\r\n• Double internal-access garage - secure, practical and convenient\r\n\r\n• Inviting outdoor entertainment areas with a generous deck and covered balcony\r\n\r\n• Plus 4 generous bedrooms, 3.5 luxury bathrooms, air-conditioning and quality European fittings throughout.\r\n\r\nLock up, leave and enjoy the best of coastal living.",
   "photos": [
@@ -478,7 +478,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1650000,
-      "estimate_mid": 2030000
+      "estimate_mid": 2050000
     },
     {
       "property_id": "35ff7b4b-6576-4c36-92e0-1eb5aef90290",
@@ -506,7 +506,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1925000,
-      "estimate_mid": 1950000
+      "estimate_mid": 1200000
     },
     {
       "property_id": "ef964e80-ee71-477c-9b26-5c33ea86a4f0",
@@ -520,7 +520,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2300000,
-      "estimate_mid": 1690000
+      "estimate_mid": 1670000
     },
     {
       "property_id": "9e68916a-bd3a-4101-b8bc-4e7aba341c28",
@@ -534,7 +534,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1600000,
-      "estimate_mid": 1780000
+      "estimate_mid": 1790000
     },
     {
       "property_id": "6d29322a-2254-42cb-9342-02ddc909739f",
@@ -576,7 +576,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1275000,
-      "estimate_mid": 1290000
+      "estimate_mid": 1110000
     },
     {
       "property_id": "9fed74c5-91eb-46d6-912e-91f4791cb03e",
@@ -604,7 +604,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1200000,
-      "estimate_mid": 1160000
+      "estimate_mid": 990000
     },
     {
       "property_id": "34f38985-8516-4d71-b7c7-493966201f81",
@@ -648,17 +648,17 @@
         "low": 1300000,
         "mid": 1506000,
         "high": 1811000,
-        "updated_at": "2026-11-12T00:11:20.070813+00:00",
+        "updated_at": "2026-11-13T00:33:08.734488+00:00",
         "confidence": "medium",
-        "n": 79,
+        "n": 84,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 79,
-          "n_eff": 25.9,
+          "n": 84,
+          "n_eff": 27.88,
           "radius_km": 3.0,
           "iqr_ratio": 0.3393,
-          "same_suburb": 25,
+          "same_suburb": 24,
           "model_version": "comp-cv-v1"
         }
       }

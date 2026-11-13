@@ -17,13 +17,13 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-11-03T03:37:52.677000+00:00",
-  "days_on_market": 8,
+  "days_on_market": 9,
   "lat": -36.7717285,
   "lon": 174.7722931,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2339464611.jpg",
   "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/north-shore-city/milford/listing/6211338210",
-  "agent_name": null,
-  "agency_name": null,
+  "agent_name": "Barfoot & Thompson Takapuna",
+  "agency_name": "Barfoot & Thompson Takapuna, (Licensed: REAA 2008)",
   "estimate_low": null,
   "estimate_mid": null,
   "estimate_high": null,
@@ -33,7 +33,7 @@
   "comp_mid": 1667500,
   "comp_high": 2041888,
   "comp_confidence": "low",
-  "comp_n": 31,
+  "comp_n": 34,
   "value_low": 1400000,
   "value_mid": 1667500,
   "value_high": 2041888,
@@ -46,16 +46,16 @@
   "build_decade": null,
   "build_year": null,
   "build_year_source": null,
-  "tenure_source": "unknown",
+  "tenure_source": "listing_text",
   "cv_ratio": null,
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": null,
-  "watchers": null,
+  "view_count": 2555,
+  "watchers": 65,
   "is_standard": 1,
   "standard_reason": null,
-  "tenure": "unknown",
+  "tenure": "freehold",
   "school_zone_count": 6,
   "school_zone_secondary_count": 3,
   "school_zone_eqi_mean": 382.8333333333333,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T15:48:10.633090+00:00",
-  "days_since_last_change": 8.35,
+  "days_since_last_change": 9.36,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 51.3,
+  "sale_pressure": 51.5,
   "sale_pressure_label": "medium",
-  "model_low": 1217502,
-  "model_mid": 1682490,
-  "model_high": 2392414,
+  "model_low": 2236100,
+  "model_mid": 3079588,
+  "model_high": 4210170,
   "model_confidence": "low",
-  "text_signal_pct": null,
-  "description_index": null,
+  "text_signal_pct": 43.6017,
+  "description_index": 1.878179,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -298,13 +298,108 @@
   ],
   "model": {
     "listing_id": 6211338210,
-    "low": 1217502,
-    "mid": 1682490,
-    "high": 2392414,
+    "low": 2236100,
+    "mid": 3079588,
+    "high": 4210170,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3235, 0.352], \"rel_width\": 0.6983, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3201, 0.3127], \"rel_width\": 0.641, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
-  "text": null,
+  "text": {
+    "listing_id": 6211338210,
+    "word_count": 156,
+    "exclamations": 1,
+    "urgency": 0.0,
+    "luxury": 0.0,
+    "condition_renovation": 0.0,
+    "views_waterfront": 0.699,
+    "family_school": 0.4485,
+    "investment": 0.0,
+    "risk": 0.0,
+    "readability": 0.5135,
+    "description_premium_pct": 43.6017,
+    "description_index": 1.878179,
+    "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 4, \"family_school\": 4, \"investment\": 0, \"risk\": 0}",
+    "model_version": "text-nmf-v1",
+    "updated_at": "2026-11-13T00:33:09.526193+00:00",
+    "top_topics": [
+      {
+        "topic_id": 4,
+        "weight": 0.521051,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "fenced",
+          "brick",
+          "fully fenced",
+          "street",
+          "fully",
+          "parking",
+          "garden",
+          "sunny",
+          "room",
+          "street parking",
+          "facing",
+          "north facing"
+        ]
+      },
+      {
+        "topic_id": 3,
+        "weight": 0.268529,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "views",
+          "residence",
+          "waterfront",
+          "expansive",
+          "scale",
+          "harbour",
+          "gulf",
+          "spectacular",
+          "hauraki",
+          "hauraki gulf",
+          "pool",
+          "position"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.104455,
+        "label": "Apartment / lock-up-and-leave",
+        "top_terms": [
+          "apartment",
+          "lock",
+          "leave",
+          "lock leave",
+          "car",
+          "secure",
+          "park",
+          "pool",
+          "kensington",
+          "complex",
+          "balcony",
+          "gym"
+        ]
+      },
+      {
+        "topic_id": 11,
+        "weight": 0.094165,
+        "label": "Family living & entertaining II",
+        "top_terms": [
+          "morning",
+          "friends",
+          "relaxed",
+          "coffee",
+          "life",
+          "sense",
+          "morning coffee",
+          "inviting",
+          "setting",
+          "peaceful",
+          "step",
+          "welcoming"
+        ]
+      }
+    ]
+  },
   "sales_history": [],
   "sale_outcome": null,
   "sale_events": [
@@ -349,17 +444,40 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-12T00:11:20.070813+00:00"
+    "updated_at": "2026-11-13T00:33:08.734488+00:00"
   },
-  "body": "",
+  "body": "Coastal retreat just a short 2 minute stroll to the waterfront.\r\n\r\nBuilt of stone and cedar the home envelops 4 spacious bedrooms and 3 bathrooms.. The generous living area is bathed in sunlight, and flows seamlessly  to an expansive, elevated north-facing deck—your private sanctuary for morning coffees, vibrant family gatherings, or evening get-togethers under the stars where you will hear the sound of the waves.\r\nSet on a freehold title of 579m2 (more or less) the private fully fenced back garden offers security, ensuring children can play safely all day long.\r\nThe three car garaging gives you the option parking 2 vehicles plus establishing a games area where you may choose to put up the Table Tennis or perhaps pool table or maybe a workshop of choice.\r\n\r\nSeaward side Milford has become one of the most highly sought after destinations where once established the prudent home owners are very reluctant to leave. \r\n\r\nDon’t miss your chance to live the dream—contact us today to arrange your private viewing!",
   "photos": [
-    "https://trademe.tmcdn.co.nz/photoserver/med/2339464611.jpg"
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464611.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464612.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464614.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464617.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464619.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464621.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464628.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464636.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464640.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464643.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464650.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464653.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464659.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464661.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464668.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464670.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464673.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464676.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464683.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464696.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464701.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464708.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464710.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2339464720.jpg"
   ],
   "agency": {
-    "name": "Agency not disclosed",
-    "phone": "",
-    "website": "#",
-    "member_nickname": null
+    "name": "Barfoot & Thompson Takapuna, (Licensed: REAA 2008)",
+    "phone": "+64-9-4895084",
+    "website": "https://www.barfoot.co.nz/944144?ref=trademe",
+    "member_nickname": "bt_takapuna"
   },
   "history": [],
   "comps": [
@@ -375,7 +493,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 660000,
-      "estimate_mid": 595000
+      "estimate_mid": 605000
     },
     {
       "property_id": "28a0d6b7-5383-4842-8b08-35964f7d7882",
@@ -431,7 +549,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2075000,
-      "estimate_mid": 2070000
+      "estimate_mid": 2080000
     },
     {
       "property_id": "194ffb63-0e32-4286-891a-173ab14bbb7b",
@@ -459,7 +577,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1000000,
-      "estimate_mid": 765000
+      "estimate_mid": 670000
     },
     {
       "property_id": "f6b2966d-3dcf-445c-9d7d-5310d21a62ad",
@@ -545,17 +663,17 @@
         "low": 1400000,
         "mid": 1667500,
         "high": 2041888,
-        "updated_at": "2026-11-12T00:11:20.070813+00:00",
+        "updated_at": "2026-11-13T00:33:08.734488+00:00",
         "confidence": "low",
-        "n": 31,
+        "n": 34,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 31,
-          "n_eff": 6.29,
+          "n": 34,
+          "n_eff": 6.81,
           "radius_km": 3.0,
           "iqr_ratio": 0.3849,
-          "same_suburb": 1,
+          "same_suburb": 5,
           "model_version": "comp-cv-v1"
         }
       }

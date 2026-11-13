@@ -16,8 +16,8 @@
   "asking_kind": "asking",
   "sale_method": "Asking price",
   "deadline_at": null,
-  "listed_at": "2026-09-11T04:35:00+00:00",
-  "days_on_market": 61,
+  "listed_at": "2026-09-11T03:35:00+00:00",
+  "days_on_market": 62,
   "lat": -36.7260819,
   "lon": 174.732666,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2328434113.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 835000,
+  "comp_low": 800000,
   "comp_mid": 1020000,
   "comp_high": 1250000,
   "comp_confidence": "low",
-  "comp_n": 60,
-  "value_low": 835000,
+  "comp_n": 62,
+  "value_low": 800000,
   "value_mid": 1020000,
   "value_high": 1250000,
   "value_source": "sold_comps_absolute",
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 60.2,
+  "sale_pressure": 60.3,
   "sale_pressure_label": "medium",
-  "model_low": 464082,
-  "model_mid": 641324,
-  "model_high": 911930,
+  "model_low": 577089,
+  "model_mid": 794774,
+  "model_high": 1086553,
   "model_confidence": "low",
-  "text_signal_pct": -18.7815,
-  "description_index": -1.072435,
+  "text_signal_pct": -11.8784,
+  "description_index": -0.656309,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -298,52 +298,90 @@
   ],
   "model": {
     "listing_id": 6159550032,
-    "low": 464082,
-    "mid": 641324,
-    "high": 911930,
+    "low": 577089,
+    "mid": 794774,
+    "high": 1086553,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3235, 0.352], \"rel_width\": 0.6983, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3201, 0.3127], \"rel_width\": 0.641, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6159550032,
     "word_count": 306,
     "exclamations": 4,
-    "urgency": 0.6309,
+    "urgency": 0.6324,
     "luxury": 0.0,
-    "condition_renovation": 0.2774,
-    "views_waterfront": 0.5104,
-    "family_school": 0.3262,
+    "condition_renovation": 0.2778,
+    "views_waterfront": 0.5345,
+    "family_school": 0.3429,
     "investment": 1.0,
     "risk": 0.0,
     "readability": 0.4235,
-    "description_premium_pct": -18.7815,
-    "description_index": -1.072435,
+    "description_premium_pct": -11.8784,
+    "description_index": -0.656309,
     "lexicon_hits_json": "{\"urgency\": 3, \"luxury\": 0, \"condition_renovation\": 2, \"views_waterfront\": 6, \"family_school\": 6, \"investment\": 10, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-12T00:11:20.849028+00:00",
+    "updated_at": "2026-11-13T00:33:09.526193+00:00",
     "top_topics": [
       {
         "topic_id": 2,
-        "weight": 0.484514,
-        "label": "New build / brand-new quality",
+        "weight": 0.278395,
+        "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "brand",
+          "maintenance",
+          "low maintenance",
+          "low",
           "brand new",
+          "brand",
           "new",
-          "lot",
-          "homes",
-          "standalone",
+          "single",
+          "easy care",
+          "care",
+          "quality",
           "new home",
-          "sqm",
-          "title",
-          "bedrooms bathrooms",
-          "floor area",
-          "ccc"
+          "buyers"
         ]
       },
       {
-        "topic_id": 3,
-        "weight": 0.201806,
+        "topic_id": 1,
+        "weight": 0.163774,
+        "label": "Development & land potential",
+        "top_terms": [
+          "potential",
+          "future",
+          "site",
+          "land",
+          "development",
+          "property",
+          "subject",
+          "council",
+          "existing",
+          "value",
+          "subject council",
+          "approval"
+        ]
+      },
+      {
+        "topic_id": 5,
+        "weight": 0.161453,
+        "label": "Westlake school zone",
+        "top_terms": [
+          "westlake",
+          "school",
+          "girls",
+          "girls high",
+          "westlake girls",
+          "high school",
+          "high",
+          "boys",
+          "westlake boys",
+          "intermediate",
+          "school suburb",
+          "shore"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.113088,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -352,50 +390,12 @@
           "lock leave",
           "car",
           "secure",
+          "park",
+          "pool",
+          "kensington",
           "complex",
           "balcony",
-          "bedroom apartment",
-          "maintenance",
-          "village",
-          "restaurants"
-        ]
-      },
-      {
-        "topic_id": 1,
-        "weight": 0.150328,
-        "label": "Development & land potential",
-        "top_terms": [
-          "potential",
-          "future",
-          "land",
-          "site",
-          "development",
-          "subject",
-          "council",
-          "sqm",
-          "subject council",
-          "existing",
-          "approval",
-          "property"
-        ]
-      },
-      {
-        "topic_id": 5,
-        "weight": 0.111172,
-        "label": "Westlake school zone",
-        "top_terms": [
-          "westlake",
-          "girls",
-          "school",
-          "girls high",
-          "high",
-          "high school",
-          "boys",
-          "westlake boys",
-          "westlake girls",
-          "intermediate",
-          "suburb intermediate",
-          "rangitoto"
+          "gym"
         ]
       }
     ]
@@ -436,7 +436,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-12T00:11:20.070813+00:00"
+    "updated_at": "2026-11-13T00:33:08.734488+00:00"
   },
   "body": "Brand New | Freehold | No Body Corporate Fees | 10-Year Halo Guarantee | Top School Zones\r\n\r\nMotivated Vendor – All Reasonable Offers Considered!\r\n\r\nLooking for a spacious, brand-new home in a prime North Shore location, with beautiful sea views and excellent investment potential?\r\n\r\nDiscover this beautifully designed two-bedroom home at 124 Arran Road, Browns Bay, offering a generous 93sqm floor area, modern comfort and an enviable coastal lifestyle.\r\n\r\nWhether you're a first-home buyer, downsizer or property investor, this home offers an exciting combination of space, location and long-term appeal.\r\n\r\nWhat Makes This Home Stand Out?\r\n\r\n• Generous 93sqm Floor Area – Spacious two-bedroom living with a practical, modern layout.\r\n• Beautiful Sea Views – Enjoy relaxing coastal outlooks from your own home.\r\n• Excellent School Zones – Including Rangitoto College, Browns Bay School and Murrays Bay Intermediate.\r\n• Dedicated Car Park – Convenient off-street parking.\r\n• Freehold Title & No Body Corporate Fees – Enjoy independent ownership without ongoing body corporate fees.\r\n• 10-Year Halo Guarantee – Added protection and peace of mind.\r\n• Brand-New & Low Maintenance – Contemporary finishes, quality appliances and easy-care living.\r\n• Prime Browns Bay Location – Close to beautiful beaches, cafés, shops and everyday amenities.\r\n\r\nAn Attractive Investment Opportunity!\r\n\r\nWith a rental appraisal of $700–$730 per week, this property offers potential annual gross rental income of approximately $36,400–$37,960.\r\n\r\nFor investors seeking a modern, low-maintenance property in a desirable North Shore location, this home is well worth considering.\r\n\r\nA Spacious Home. A Smart Investment. A Fantastic Location.\r\n\r\nOur Vendor Is Highly Motivated and Ready to Sell!\r\n\r\nAll reasonable offers will be seriously considered.\r\n\r\nDon't miss your opportunity to secure a spacious, brand-new home with sea views in this sought-after location.\r\n\r\nContact us today to arrange your private viewing!\r\n\r\nRental appraisal is indicative only and does not guarantee future rental income. Actual returns depend on the purchase price, expenses and occupancy.",
   "photos": [
@@ -611,7 +611,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2525000,
-      "estimate_mid": 2630000
+      "estimate_mid": 2640000
     },
     {
       "property_id": "332ff147-6297-467c-a58d-71558c0a7cf6",
@@ -643,7 +643,7 @@
     }
   ],
   "valuation": {
-    "value_low": 835000,
+    "value_low": 800000,
     "value_mid": 1020000,
     "value_high": 1250000,
     "value_source": "sold_comps_absolute",
@@ -651,21 +651,21 @@
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$835K – $1.25M",
-        "low": 835000,
+        "range": "$800K – $1.25M",
+        "low": 800000,
         "mid": 1020000,
         "high": 1250000,
-        "updated_at": "2026-11-12T00:11:20.070813+00:00",
+        "updated_at": "2026-11-13T00:33:08.734488+00:00",
         "confidence": "low",
-        "n": 60,
+        "n": 62,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 60,
-          "n_eff": 15.4,
+          "n": 62,
+          "n_eff": 15.8,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4069,
-          "same_suburb": 20,
+          "iqr_ratio": 0.4412,
+          "same_suburb": 17,
           "model_version": "comp-cv-v1"
         }
       }

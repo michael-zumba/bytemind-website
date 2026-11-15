@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-28T02:44:04.043000+00:00",
-  "days_on_market": 15,
+  "days_on_market": 17,
   "lat": -36.8918828,
   "lon": 174.8979729,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338069508.jpg",
@@ -30,10 +30,10 @@
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-11-11T11:00:00+00:00",
   "comp_low": 759375,
-  "comp_mid": 831600,
-  "comp_high": 906429,
+  "comp_mid": 826230,
+  "comp_high": 905870,
   "comp_confidence": "high",
-  "comp_n": 56,
+  "comp_n": 55,
   "value_low": 785182,
   "value_mid": 834296,
   "value_high": 883411,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2235,
+  "view_count": 2305,
   "watchers": 55,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 2,
   "last_change_at": "2026-11-11T19:35:53.292073+00:00",
-  "days_since_last_change": 2.07,
+  "days_since_last_change": 3.37,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 4,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 32.5,
+  "sale_pressure": 32.8,
   "sale_pressure_label": "low",
-  "model_low": 791604,
-  "model_mid": 860293,
-  "model_high": 939977,
+  "model_low": 799867,
+  "model_mid": 864919,
+  "model_high": 945943,
   "model_confidence": "medium",
-  "text_signal_pct": -0.3122,
-  "description_index": -0.016318,
+  "text_signal_pct": -0.5802,
+  "description_index": -0.03098,
   "events_count": 2,
   "last_event": "new_listing",
   "schools": [
@@ -308,11 +308,11 @@
   ],
   "model": {
     "listing_id": 6201367739,
-    "low": 791604,
-    "mid": 860293,
-    "high": 939977,
+    "low": 799867,
+    "mid": 864919,
+    "high": 945943,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0832, 0.0886], \"rel_width\": 0.1725, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0782, 0.0895], \"rel_width\": 0.1689, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6201367739,
@@ -320,66 +320,47 @@
     "exclamations": 4,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.4304,
-    "views_waterfront": 0.2073,
-    "family_school": 0.3534,
+    "condition_renovation": 0.43,
+    "views_waterfront": 0.207,
+    "family_school": 0.3537,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3746,
-    "description_premium_pct": -0.3122,
-    "description_index": -0.016318,
+    "description_premium_pct": -0.5802,
+    "description_index": -0.03098,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 4, \"views_waterfront\": 3, \"family_school\": 8, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-13T21:15:37.643617+00:00",
+    "updated_at": "2026-11-15T04:31:54.378941+00:00",
     "top_topics": [
       {
         "topic_id": 6,
-        "weight": 0.341338,
+        "weight": 0.334954,
         "label": "Family living & entertaining",
         "top_terms": [
           "morning",
           "friends",
           "relaxed",
           "coffee",
-          "life",
           "sense",
-          "morning coffee",
-          "setting",
+          "life",
           "inviting",
+          "setting",
+          "morning coffee",
+          "welcoming",
           "peaceful",
-          "step",
-          "welcoming"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.221728,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low maintenance",
-          "brand new",
-          "brand",
-          "low",
-          "new",
-          "single",
-          "easy care",
-          "care",
-          "quality",
-          "new home",
-          "buyers"
+          "step"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.194168,
+        "weight": 0.188867,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
           "macleans college",
           "college",
-          "school",
           "intermediate",
+          "school",
           "suburb intermediate",
           "primary",
           "marina",
@@ -390,8 +371,27 @@
         ]
       },
       {
+        "topic_id": 2,
+        "weight": 0.182244,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand new",
+          "brand",
+          "new",
+          "maintenance",
+          "low maintenance",
+          "low",
+          "single",
+          "easy care",
+          "new home",
+          "care",
+          "quality",
+          "convenience"
+        ]
+      },
+      {
         "topic_id": 3,
-        "weight": 0.131712,
+        "weight": 0.163866,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -399,13 +399,13 @@
           "leave",
           "lock leave",
           "car",
+          "kensington",
           "secure",
           "park",
           "balcony",
-          "pool",
+          "kensington park",
           "complex",
-          "kensington",
-          "bedroom apartment"
+          "pool"
         ]
       }
     ]
@@ -494,7 +494,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-13T21:15:36.751605+00:00"
+    "updated_at": "2026-11-15T04:31:53.508028+00:00"
   },
   "body": "With a beautiful park right on your doorstep, a sunny outlook and a wonderfully convenient location, this easy-care unit offers a fantastic opportunity for those seeking comfortable, low-maintenance living with plenty to enjoy just beyond their front door!\r\n\r\nStep inside and you'll find a light-filled, welcoming home that has been refreshed throughout, creating a tidy and comfortable space that's ready for its next owners to move in and enjoy.\r\n\r\nThe floor plan offers two bedrooms, including a generously sized master, along with a separate study providing that little bit of extra flexibility for working from home, hobbies or additional storage. The open-plan kitchen, dining and living area is practical and inviting, offering an easy space for everyday living.\r\n\r\nOne of the real highlights of this home is the beautiful park right on your doorstep!\r\nWith expansive green spaces, a fantastic children's playground and walking paths connecting through to the popular Rotary Walkway, it's like having an extension of your own backyard without any of the upkeep. Whether it's taking the kids out to play, enjoying an afternoon stroll or simply making the most of the outdoors, this is a location that makes everyday living that little bit more enjoyable.\r\n\r\nBack at home, the lovely outlook across the reserve creates a welcome sense of openness, while the afternoon sun fills the living spaces with warmth and natural light. It's a lovely combination of easy-care living and having plenty of outdoor space to enjoy just moments from your front door.\r\n\r\nPracticality hasn't been forgotten either, with an internal-access garage providing secure parking and additional convenience, while the low-maintenance nature of the property means more time to enjoy the things you love. \r\n\r\nAnd the location has even more to offer! Half Moon Bay Marina, with its waterfront eateries, amenities and ferry services, is just a short drive away, while public transport, local shopping and well-regarded school zones, Wakaaranga, Farm Cove Intermediate and Pakuranga College add to the everyday convenience of this popular neighbourhood.\r\n\r\nWhether you're stepping onto the property ladder, looking to downsize or simply wanting something that's easy to look after, this home offers a great balance of comfort, practicality and lifestyle.\r\n\r\nFreshly renovated, perfectly positioned and with the park at your doorstep, this is an opportunity you won't want to miss. Come along and see it for yourself!",
   "photos": [
@@ -723,20 +723,6 @@
       "estimate_mid": 760000
     },
     {
-      "property_id": "2bcb8694-7f01-4f15-8542-bc57d32d19dd",
-      "address": "21 Anna Watson Road, Half Moon Bay, Auckland",
-      "sale_price": 1363000,
-      "sale_date": "2026-08-14T00:00:00+00:00",
-      "distance_km": 0.33,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1825000,
-      "estimate_mid": 1400000
-    },
-    {
       "property_id": "9f5a762c-25a5-414a-9f84-19b0e3a95135",
       "address": "2/172 Pigeon Mountain Road, Half Moon Bay, Auckland",
       "sale_price": 785000,
@@ -860,7 +846,21 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1250000,
-      "estimate_mid": 1030000
+      "estimate_mid": 1190000
+    },
+    {
+      "property_id": "3eae8af4-90ae-48ac-9385-143284b7f96d",
+      "address": "3/40 Mark Edward Drive, Half Moon Bay, Auckland",
+      "sale_price": 786000,
+      "sale_date": "2026-09-22T00:00:00+00:00",
+      "distance_km": 0.92,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 940000,
+      "estimate_mid": 820000
     }
   ],
   "valuation": {
@@ -884,20 +884,20 @@
         "name": "Nearby sold comparables",
         "range": "$759K – $906K",
         "low": 759375,
-        "mid": 831600,
-        "high": 906429,
-        "updated_at": "2026-11-13T21:15:36.751605+00:00",
+        "mid": 826230,
+        "high": 905870,
+        "updated_at": "2026-11-15T04:31:53.508028+00:00",
         "confidence": "high",
-        "n": 56,
+        "n": 55,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 56,
-          "n_eff": 9.35,
+          "n": 55,
+          "n_eff": 8.85,
           "radius_km": 3.0,
-          "median_ratio": 0.924,
-          "iqr_ratio": 0.1768,
-          "same_suburb": 17,
+          "median_ratio": 0.918,
+          "iqr_ratio": 0.1773,
+          "same_suburb": 15,
           "model_version": "comp-cv-v1"
         }
       },

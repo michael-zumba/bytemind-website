@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-28T13:34:39.630000+00:00",
-  "days_on_market": 15,
+  "days_on_market": 17,
   "lat": -36.6961212,
   "lon": 174.753006,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338187655.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1040000,
+  "comp_low": 1030000,
   "comp_mid": 1185000,
   "comp_high": 1565000,
   "comp_confidence": "low",
   "comp_n": 68,
-  "value_low": 1040000,
+  "value_low": 1030000,
   "value_mid": 1185000,
   "value_high": 1565000,
   "value_source": "sold_comps_absolute",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 304,
+  "view_count": 316,
   "watchers": 15,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T15:03:05.925873+00:00",
-  "days_since_last_change": 16.26,
+  "days_since_last_change": 17.56,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 32.5,
+  "sale_pressure": 32.8,
   "sale_pressure_label": "low",
-  "model_low": 931775,
-  "model_mid": 1279689,
-  "model_high": 1763649,
+  "model_low": 892873,
+  "model_mid": 1205369,
+  "model_high": 1632505,
   "model_confidence": "low",
-  "text_signal_pct": 2.4515,
-  "description_index": 0.126379,
+  "text_signal_pct": -3.1428,
+  "description_index": -0.17,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -288,34 +288,53 @@
   ],
   "model": {
     "listing_id": 6202235118,
-    "low": 931775,
-    "mid": 1279689,
-    "high": 1763649,
+    "low": 892873,
+    "mid": 1205369,
+    "high": 1632505,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3173, 0.3208], \"rel_width\": 0.6501, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3001, 0.3033], \"rel_width\": 0.6136, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6202235118,
     "word_count": 303,
     "exclamations": 1,
     "urgency": 0.0,
-    "luxury": 0.1827,
+    "luxury": 0.1814,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.5404,
-    "family_school": 0.6334,
+    "views_waterfront": 0.5398,
+    "family_school": 0.634,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.5699,
-    "description_premium_pct": 2.4515,
-    "description_index": 0.126379,
+    "description_premium_pct": -3.1428,
+    "description_index": -0.17,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 0, \"views_waterfront\": 6, \"family_school\": 11, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-13T21:15:37.643617+00:00",
+    "updated_at": "2026-11-15T04:31:54.378941+00:00",
     "top_topics": [
       {
-        "topic_id": 8,
-        "weight": 0.164568,
+        "topic_id": 9,
+        "weight": 0.225348,
         "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "dream",
+          "section",
+          "build",
+          "views",
+          "dream home",
+          "land",
+          "sea",
+          "regional",
+          "auckland",
+          "regional park",
+          "sea views",
+          "building"
+        ]
+      },
+      {
+        "topic_id": 11,
+        "weight": 0.210857,
+        "label": "Family living & entertaining II",
         "top_terms": [
           "extended",
           "extended family",
@@ -323,69 +342,50 @@
           "living areas",
           "areas",
           "multiple",
-          "guests",
           "sea",
           "sea views",
+          "guests",
           "teenagers",
-          "family living",
-          "income"
-        ]
-      },
-      {
-        "topic_id": 9,
-        "weight": 0.161634,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "section",
-          "dream",
-          "build",
-          "dream home",
-          "land",
           "views",
-          "whangaparaoa",
-          "sections",
-          "building",
-          "sea",
-          "penlink",
-          "auckland"
-        ]
-      },
-      {
-        "topic_id": 4,
-        "weight": 0.151884,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "fenced",
-          "brick",
-          "fully fenced",
-          "street",
-          "fully",
-          "parking",
-          "garden",
-          "sunny",
-          "room",
-          "street parking",
-          "north facing",
-          "facing"
+          "family living"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.134855,
+        "weight": 0.126187,
         "label": "Family living & entertaining",
         "top_terms": [
           "morning",
           "friends",
           "relaxed",
           "coffee",
-          "life",
           "sense",
-          "morning coffee",
-          "setting",
+          "life",
           "inviting",
+          "setting",
+          "morning coffee",
+          "welcoming",
           "peaceful",
-          "step",
-          "welcoming"
+          "step"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.123725,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "fenced",
+          "fully fenced",
+          "brick",
+          "fully",
+          "street",
+          "garden",
+          "parking",
+          "sunny",
+          "room",
+          "street parking",
+          "north facing",
+          "facing"
         ]
       }
     ]
@@ -434,7 +434,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-13T21:15:36.751605+00:00"
+    "updated_at": "2026-11-15T04:31:53.508028+00:00"
   },
   "body": "Enjoy a brand-new, light and spacious family home with beautiful sea views in time for summer. Sunshine literally fills this home from first light where you can sit on your balcony to watch the sunrise beyond Coromandel Peninsula, stroll to Torbay Village for coffee, or push your kayak into the glassy water just down the road.\r\n\r\nSpanning approx. 175m² of gross building area on 188m² of freehold land, the home brings together four bedrooms, three bathrooms and a double garage in a spacious, thoughtfully designed layout.\r\nYour home enjoys sea views, from sweeping panoramas across the Hauraki Gulf to a peaceful outlook over treetops to the water.\r\n\r\nThe upstairs living area features high stud ceilings, designer skylights and oversized windows, creating a bright, spacious setting for everyday family life. A high-spec kitchen with an island bench connects with the open-plan living area, where light beach-toned flooring adds to the coastal feel. Sliding out to the sunny balcony, it’s the perfect spot for your first coffee of the day.\r\n\r\nDownstairs is all about flexibility, with generous bedrooms and bathrooms providing privacy for teenagers or visiting guests, space to work from home, and a private deck and garden to enjoy. An internal access double garage, generous off-street parking and an extra-wide driveway make coming home easy, while a 10-Year Master Build Guarantee brings lasting peace of mind.\r\n\r\nYou can literally stroll to your local shops and cafés, swim and picnic at Long Bay Regional Park, launch your boat or kayak just down the road at Waiake Beach, even learn to sail at the Torbay Sailing Club. Zoned for Torbay School, Northcross Intermediate and Long Bay College. \r\n\r\nSunshine, space and sea views so close to the sand rarely come together, and the seller has given clear instructions to sell.  Enquire now to secure your new home this summer!",
   "photos": [
@@ -567,7 +567,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1625000,
-      "estimate_mid": 1460000
+      "estimate_mid": 1560000
     },
     {
       "property_id": "b56e22f1-5ca4-41b5-aa1f-676b28894142",
@@ -595,7 +595,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1500000,
-      "estimate_mid": 1460000
+      "estimate_mid": 1520000
     },
     {
       "property_id": "a0efbcf4-dbc4-4193-b091-da0486db22bb",
@@ -623,7 +623,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 950000,
-      "estimate_mid": 805000
+      "estimate_mid": 830000
     },
     {
       "property_id": "4a5a231a-b060-43e2-88e0-c9ed3b67874c",
@@ -641,7 +641,7 @@
     }
   ],
   "valuation": {
-    "value_low": 1040000,
+    "value_low": 1030000,
     "value_mid": 1185000,
     "value_high": 1565000,
     "value_source": "sold_comps_absolute",
@@ -649,20 +649,20 @@
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.04M – $1.56M",
-        "low": 1040000,
+        "range": "$1.03M – $1.56M",
+        "low": 1030000,
         "mid": 1185000,
         "high": 1565000,
-        "updated_at": "2026-11-13T21:15:36.751605+00:00",
+        "updated_at": "2026-11-15T04:31:53.508028+00:00",
         "confidence": "low",
         "n": 68,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
           "n": 68,
-          "n_eff": 17.41,
+          "n_eff": 17.31,
           "radius_km": 3.0,
-          "iqr_ratio": 0.443,
+          "iqr_ratio": 0.4515,
           "same_suburb": 12,
           "model_version": "comp-cv-v1"
         }

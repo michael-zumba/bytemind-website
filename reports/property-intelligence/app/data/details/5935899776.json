@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-02-11T02:07:00+00:00",
-  "days_on_market": 274,
+  "days_on_market": 276,
   "lat": -36.5873923,
   "lon": 174.6945889,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2180768906.jpg",
@@ -30,12 +30,12 @@
   "estimate_source": null,
   "estimate_updated_at": null,
   "comp_low": 800000,
-  "comp_mid": 890000,
+  "comp_mid": 900000,
   "comp_high": 1055000,
   "comp_confidence": "medium",
-  "comp_n": 39,
+  "comp_n": 38,
   "value_low": 800000,
-  "value_mid": 890000,
+  "value_mid": 900000,
   "value_high": 1055000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "medium",
@@ -48,10 +48,10 @@
   "build_year_source": null,
   "tenure_source": "unknown",
   "cv_ratio": null,
-  "ask_gap": -15000,
-  "ask_gap_pct": -0.0169,
-  "deal_gap": 0.0169,
-  "view_count": 1929,
+  "ask_gap": -25000,
+  "ask_gap_pct": -0.0278,
+  "deal_gap": 0.0278,
+  "view_count": 1950,
   "watchers": 33,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:14:56.431087+00:00",
-  "days_since_last_change": 10.0,
+  "days_since_last_change": 11.3,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 617210,
-  "model_mid": 847669,
-  "model_high": 1168246,
+  "model_low": 672616,
+  "model_mid": 908024,
+  "model_high": 1229793,
   "model_confidence": "low",
-  "text_signal_pct": -1.9348,
-  "description_index": -0.101948,
+  "text_signal_pct": 0.5374,
+  "description_index": 0.02853,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 5935899776,
-    "low": 617210,
-    "mid": 847669,
-    "high": 1168246,
+    "low": 672616,
+    "mid": 908024,
+    "high": 1229793,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3173, 0.3208], \"rel_width\": 0.6501, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3001, 0.3033], \"rel_width\": 0.6136, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5935899776,
@@ -281,20 +281,20 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.9097,
-    "family_school": 0.2908,
+    "views_waterfront": 0.9086,
+    "family_school": 0.2911,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.6274,
-    "description_premium_pct": -1.9348,
-    "description_index": -0.101948,
+    "description_premium_pct": 0.5374,
+    "description_index": 0.02853,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 1, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-13T21:15:37.643617+00:00",
+    "updated_at": "2026-11-15T04:31:54.378941+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.975453,
+        "weight": 0.959554,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -302,32 +302,51 @@
           "leave",
           "lock leave",
           "car",
+          "kensington",
           "secure",
           "park",
           "balcony",
-          "pool",
+          "kensington park",
           "complex",
-          "kensington",
-          "bedroom apartment"
+          "pool"
         ]
       },
       {
         "topic_id": 10,
-        "weight": 0.024547,
-        "label": "Luxury, architectural & prestige",
+        "weight": 0.040169,
+        "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "views",
           "residence",
           "waterfront",
-          "expansive",
           "scale",
-          "gulf",
+          "expansive",
           "harbour",
-          "spectacular",
-          "hauraki",
-          "hauraki gulf",
           "pool",
-          "position"
+          "gulf",
+          "spectacular",
+          "aucklands",
+          "hauraki",
+          "hauraki gulf"
+        ]
+      },
+      {
+        "topic_id": 1,
+        "weight": 0.000276,
+        "label": "Development & land potential",
+        "top_terms": [
+          "potential",
+          "future",
+          "site",
+          "land",
+          "subject",
+          "development",
+          "property",
+          "council",
+          "existing",
+          "subject council",
+          "value",
+          "possibilities"
         ]
       },
       {
@@ -344,28 +363,9 @@
           "upstairs",
           "family bathroom",
           "floor",
-          "suite",
           "lounge",
+          "suite",
           "separate"
-        ]
-      },
-      {
-        "topic_id": 1,
-        "weight": 0.0,
-        "label": "Development & land potential",
-        "top_terms": [
-          "potential",
-          "future",
-          "site",
-          "land",
-          "development",
-          "property",
-          "subject",
-          "council",
-          "existing",
-          "value",
-          "possibilities",
-          "approval"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-13T21:15:36.751605+00:00"
+    "updated_at": "2026-11-15T04:31:53.508028+00:00"
   },
   "body": "Live in or invest in this lovely apartment with fantastic outlook and\r\nconvenience. The Nautilus is the iconic Orewa spot right in the heart of the beach village.\r\nNorth side with terrific outlook. Handy all amenities, no need to use the car!\r\n\r\n· Unfurnished\r\n· 73m2\r\n· Two Bedroom\r\n· 1 Bathroom\r\n· Level 11\r\n· Balcony, views\r\n· Full kitchen\r\n· 2 Secure Parks\r\n· Facilities Heated Pool, Hot\r\nTubs, Sauna, Gym (free use)\r\n\r\nViewings:\r\nOpen home Wednesdays and\r\nSaturdays at 11am.\r\nOther times by arrangement,\r\nplease call Eric  021702224",
   "photos": [
@@ -536,20 +536,6 @@
       "estimate_mid": 850000
     },
     {
-      "property_id": "b38efb7a-7894-4e79-ab9e-10464790fee8",
-      "address": "14/262 Centreway Road, Orewa, Orewa",
-      "sale_price": 830000,
-      "sale_date": "2026-08-26T00:00:00+00:00",
-      "distance_km": 0.87,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 810000,
-      "estimate_mid": 835000
-    },
-    {
       "property_id": "a36e0033-87f1-4284-a98d-cd282cd5ab74",
       "address": "40 Settlers Grove, Orewa, Orewa",
       "sale_price": 1500000,
@@ -618,11 +604,25 @@
       "property_type": null,
       "cv": 1030000,
       "estimate_mid": 575000
+    },
+    {
+      "property_id": "799bbb28-de51-45bb-8b2c-82555a0743a1",
+      "address": "4A Orewa Heights Crescent, Orewa, Orewa",
+      "sale_price": 550000,
+      "sale_date": "2026-09-10T00:00:00+00:00",
+      "distance_km": 1.09,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1030000,
+      "estimate_mid": 575000
     }
   ],
   "valuation": {
     "value_low": 800000,
-    "value_mid": 890000,
+    "value_mid": 900000,
     "value_high": 1055000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "medium",
@@ -631,19 +631,19 @@
         "name": "Nearby sold comparables",
         "range": "$800K – $1.05M",
         "low": 800000,
-        "mid": 890000,
+        "mid": 900000,
         "high": 1055000,
-        "updated_at": "2026-11-13T21:15:36.751605+00:00",
+        "updated_at": "2026-11-15T04:31:53.508028+00:00",
         "confidence": "medium",
-        "n": 39,
+        "n": 38,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 39,
-          "n_eff": 12.62,
+          "n": 38,
+          "n_eff": 12.06,
           "radius_km": 3.0,
-          "iqr_ratio": 0.2865,
-          "same_suburb": 28,
+          "iqr_ratio": 0.2833,
+          "same_suburb": 27,
           "model_version": "comp-cv-v1"
         }
       }

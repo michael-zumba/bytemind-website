@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-08-25T00:13:42.153000+00:00",
-  "days_on_market": 79,
+  "days_on_market": 81,
   "lat": -36.590149,
   "lon": 174.662261,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2325041882.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1055000,
+  "comp_low": 1056521,
   "comp_mid": 1220000,
   "comp_high": 1430000,
   "comp_confidence": "medium",
-  "comp_n": 56,
-  "value_low": 1055000,
+  "comp_n": 55,
+  "value_low": 1056521,
   "value_mid": 1220000,
   "value_high": 1430000,
   "value_source": "sold_comps_absolute",
@@ -51,8 +51,8 @@
   "ask_gap": -30000,
   "ask_gap_pct": -0.0246,
   "deal_gap": 0.0246,
-  "view_count": 2615,
-  "watchers": 56,
+  "view_count": 2679,
+  "watchers": 55,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -63,7 +63,7 @@
   "change_signal": "price increase",
   "change_count": 4,
   "last_change_at": "2026-11-09T16:32:03.463435+00:00",
-  "days_since_last_change": 4.2,
+  "days_since_last_change": 5.5,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 78.2,
+  "sale_pressure": 78.5,
   "sale_pressure_label": "high",
-  "model_low": 782842,
-  "model_mid": 1075146,
-  "model_high": 1481751,
+  "model_low": 798868,
+  "model_mid": 1078463,
+  "model_high": 1460628,
   "model_confidence": "low",
-  "text_signal_pct": -21.0033,
-  "description_index": -1.230231,
+  "text_signal_pct": -20.7436,
+  "description_index": -1.23766,
   "events_count": 4,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6099577687,
-    "low": 782842,
-    "mid": 1075146,
-    "high": 1481751,
+    "low": 798868,
+    "mid": 1078463,
+    "high": 1460628,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3173, 0.3208], \"rel_width\": 0.6501, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3001, 0.3033], \"rel_width\": 0.6136, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6099577687,
@@ -282,19 +282,38 @@
     "luxury": 0.0,
     "condition_renovation": 0.0,
     "views_waterfront": 0.0,
-    "family_school": 0.682,
+    "family_school": 0.6826,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3836,
-    "description_premium_pct": -21.0033,
-    "description_index": -1.230231,
+    "description_premium_pct": -20.7436,
+    "description_index": -1.23766,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 12, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-13T21:15:37.643617+00:00",
+    "updated_at": "2026-11-15T04:31:54.378941+00:00",
     "top_topics": [
       {
+        "topic_id": 11,
+        "weight": 0.306959,
+        "label": "Family living & entertaining II",
+        "top_terms": [
+          "extended",
+          "extended family",
+          "flexibility",
+          "living areas",
+          "areas",
+          "multiple",
+          "sea",
+          "sea views",
+          "guests",
+          "teenagers",
+          "views",
+          "family living"
+        ]
+      },
+      {
         "topic_id": 0,
-        "weight": 0.31153,
+        "weight": 0.29515,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -306,66 +325,47 @@
           "upstairs",
           "family bathroom",
           "floor",
-          "suite",
           "lounge",
+          "suite",
           "separate"
         ]
       },
       {
-        "topic_id": 8,
-        "weight": 0.288792,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "extended",
-          "extended family",
-          "flexibility",
-          "living areas",
-          "areas",
-          "multiple",
-          "guests",
-          "sea",
-          "sea views",
-          "teenagers",
-          "family living",
-          "income"
-        ]
-      },
-      {
         "topic_id": 2,
-        "weight": 0.204939,
-        "label": "Brick / tile / low-maintenance units",
+        "weight": 0.207023,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "maintenance",
-          "low maintenance",
           "brand new",
           "brand",
-          "low",
           "new",
+          "maintenance",
+          "low maintenance",
+          "low",
           "single",
           "easy care",
+          "new home",
           "care",
           "quality",
-          "new home",
-          "buyers"
+          "convenience"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.104686,
+        "weight": 0.115819,
         "label": "Family living & entertaining",
         "top_terms": [
           "morning",
           "friends",
           "relaxed",
           "coffee",
-          "life",
           "sense",
-          "morning coffee",
-          "setting",
+          "life",
           "inviting",
+          "setting",
+          "morning coffee",
+          "welcoming",
           "peaceful",
-          "step",
-          "welcoming"
+          "step"
         ]
       }
     ]
@@ -440,14 +440,14 @@
     "first_description_change_at": "2026-11-07T15:51:59.271330+00:00",
     "last_description_change_at": "2026-11-07T15:51:59.271330+00:00",
     "days_to_first_change": 5.81,
-    "days_since_last_change": 4.2,
+    "days_since_last_change": 5.5,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "set",
-    "updated_at": "2026-11-13T21:15:36.751605+00:00"
+    "updated_at": "2026-11-15T04:31:53.508028+00:00"
   },
   "body": "*  Approx. 204sqm floor area on a 363sqm section\r\n*  4 bedrooms, 3 bathrooms and 2 separate living areas\r\n*  Double internal-access garage\r\n*  Modern kitchen with island bench and quality Bosch appliances\r\n*  Ground-floor bedroom with semi-ensuite - ideal for guests or extended family\r\n*  Light-filled master suite featuring an ensuite with double vanity and bathtub\r\n*  Positioned beside a walkway\r\n*  Close to Orewa Beach, local shops, schools and motorway access\r\n\r\nWelcome to a home designed with modern family living in mind. Set across two well-planned levels, this brand-new residence offers an impressive sense of space, flexibility and everyday comfort.\r\n\r\nAt the heart of the ground floor, the contemporary kitchen features a striking dark colour palette, an island bench and quality Bosch appliances. The open-plan dining and living area creates a welcoming space for everyday life and entertaining, flowing naturally out to the deck and backyard for easy indoor-outdoor living.\r\n\r\nA bedroom with semi-ensuite access on this level adds valuable flexibility, making it an ideal space for guests, extended family or teenagers seeking a little more privacy. The double internal-access garage further enhances the home's practical appeal.\r\n\r\nUpstairs, a second living area provides an additional space to relax, unwind or enjoy family time. The generous master bedroom is filled with natural light and features its own well-appointed ensuite, complete with a double vanity and bathtub. Two further bedrooms and a family bathroom complete this thoughtfully designed upper level.\r\n\r\nWith four bedrooms, three bathrooms, two living areas and a generous 204sqm of living space, this is a home that gives every member of the family room to enjoy.\r\n\r\nConveniently located in Ara Hills, you're within easy reach of Orewa Beach, cafes, shops and local schools, while motorway access makes commuting simple.\r\n\r\nModern, spacious and designed for flexible family living. Contact Team Vinson & Amy on 022 571 7074 to arrange your private viewing or visit one of our upcoming open homes. Learn more at www.vinsonamyandco.nz.",
   "photos": [
@@ -496,6 +496,20 @@
       "property_type": null,
       "cv": 1225000,
       "estimate_mid": 1100000
+    },
+    {
+      "property_id": "6ae650ed-514b-47da-ae7c-866e151ac9bf",
+      "address": "90 Huanui Drive, Wainui, Wainui",
+      "sale_price": 1070000,
+      "sale_date": "2026-08-13T00:00:00+00:00",
+      "distance_km": 0.16,
+      "bedrooms": 4,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1225000,
+      "estimate_mid": 1000000
     },
     {
       "property_id": "d16909b0-721b-432b-9124-e57b1dd5eefb",
@@ -636,24 +650,10 @@
       "property_type": null,
       "cv": 1200000,
       "estimate_mid": 1220000
-    },
-    {
-      "property_id": "c029b4e4-f2ba-4adf-b2be-7a7fe7db60cc",
-      "address": "242F West Hoe Heights, Orewa, Orewa",
-      "sale_price": 1290000,
-      "sale_date": "2026-10-13T00:00:00+00:00",
-      "distance_km": 1.04,
-      "bedrooms": 5,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1500000,
-      "estimate_mid": 2270000
     }
   ],
   "valuation": {
-    "value_low": 1055000,
+    "value_low": 1056521,
     "value_mid": 1220000,
     "value_high": 1430000,
     "value_source": "sold_comps_absolute",
@@ -661,21 +661,21 @@
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.05M – $1.43M",
-        "low": 1055000,
+        "range": "$1.06M – $1.43M",
+        "low": 1056521,
         "mid": 1220000,
         "high": 1430000,
-        "updated_at": "2026-11-13T21:15:36.751605+00:00",
+        "updated_at": "2026-11-15T04:31:53.508028+00:00",
         "confidence": "medium",
-        "n": 56,
+        "n": 55,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 56,
-          "n_eff": 18.4,
+          "n": 55,
+          "n_eff": 18.15,
           "radius_km": 3.0,
-          "iqr_ratio": 0.3074,
-          "same_suburb": 35,
+          "iqr_ratio": 0.3061,
+          "same_suburb": 34,
           "model_version": "comp-cv-v1"
         }
       }

@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-01T00:55:38.990000+00:00",
-  "days_on_market": 42,
+  "days_on_market": 44,
   "lat": -36.6774819,
   "lon": 174.7394126,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2332525677.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 5415,
-  "watchers": 141,
+  "view_count": 5600,
+  "watchers": 144,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 7,
   "last_change_at": "2026-11-11T20:13:34.523493+00:00",
-  "days_since_last_change": 2.04,
+  "days_since_last_change": 3.35,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 52.0,
+  "sale_pressure": 52.3,
   "sale_pressure_label": "medium",
-  "model_low": 2389283,
-  "model_mid": 2596606,
-  "model_high": 2837113,
+  "model_low": 2402759,
+  "model_mid": 2598171,
+  "model_high": 2841564,
   "model_confidence": "high",
-  "text_signal_pct": 18.1532,
-  "description_index": 0.870432,
+  "text_signal_pct": 21.9399,
+  "description_index": 1.055994,
   "events_count": 7,
   "last_event": "cv_change",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6157851334,
-    "low": 2389283,
-    "mid": 2596606,
-    "high": 2837113,
+    "low": 2402759,
+    "mid": 2598171,
+    "high": 2841564,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0832, 0.0886], \"rel_width\": 0.1725, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0782, 0.0895], \"rel_width\": 0.1689, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6157851334,
@@ -300,49 +300,68 @@
     "exclamations": 1,
     "urgency": 0.0,
     "luxury": 1.0,
-    "condition_renovation": 0.184,
-    "views_waterfront": 0.2363,
-    "family_school": 0.2266,
+    "condition_renovation": 0.1838,
+    "views_waterfront": 0.236,
+    "family_school": 0.2268,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.1993,
-    "description_premium_pct": 18.1532,
-    "description_index": 0.870432,
+    "description_premium_pct": 21.9399,
+    "description_index": 1.055994,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 9, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 3, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-13T21:15:37.643617+00:00",
+    "updated_at": "2026-11-15T04:31:54.378941+00:00",
     "top_topics": [
       {
-        "topic_id": 11,
-        "weight": 0.58332,
-        "label": "Luxury, architectural & prestige II",
+        "topic_id": 4,
+        "weight": 0.562081,
+        "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "quality",
           "designer",
-          "finishes",
           "appliances",
+          "finishes",
           "year",
-          "luxury",
           "designer kitchen",
+          "luxury",
           "comfort",
-          "new",
           "heating",
-          "design"
+          "year round",
+          "round"
         ]
       },
       {
-        "topic_id": 4,
-        "weight": 0.186752,
+        "topic_id": 10,
+        "weight": 0.227456,
+        "label": "Resort amenities (pool / tennis / spa)",
+        "top_terms": [
+          "views",
+          "residence",
+          "waterfront",
+          "scale",
+          "expansive",
+          "harbour",
+          "pool",
+          "gulf",
+          "spectacular",
+          "aucklands",
+          "hauraki",
+          "hauraki gulf"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.176754,
         "label": "Parking, garden & section",
         "top_terms": [
           "fenced",
-          "brick",
           "fully fenced",
-          "street",
+          "brick",
           "fully",
-          "parking",
+          "street",
           "garden",
+          "parking",
           "sunny",
           "room",
           "street parking",
@@ -351,27 +370,8 @@
         ]
       },
       {
-        "topic_id": 10,
-        "weight": 0.180752,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "views",
-          "residence",
-          "waterfront",
-          "expansive",
-          "scale",
-          "gulf",
-          "harbour",
-          "spectacular",
-          "hauraki",
-          "hauraki gulf",
-          "pool",
-          "position"
-        ]
-      },
-      {
         "topic_id": 3,
-        "weight": 0.032433,
+        "weight": 0.031911,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -379,13 +379,13 @@
           "leave",
           "lock leave",
           "car",
+          "kensington",
           "secure",
           "park",
           "balcony",
-          "pool",
+          "kensington park",
           "complex",
-          "kensington",
-          "bedroom apartment"
+          "pool"
         ]
       }
     ]
@@ -493,7 +493,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-13T21:15:36.751605+00:00"
+    "updated_at": "2026-11-15T04:31:53.508028+00:00"
   },
   "body": "Welcome to a truly exceptional residence where architectural sophistication meets effortless coastal living. Inspired by the traditional Suzhou garden philosophy of \"borrowed scenery\", every space has been carefully designed to create beautiful connections between architecture, light and landscape.\r\n\r\nSet behind a fully secured perimeter, this impressive home delivers five generous bedrooms, three distinct living areas and resort-style indoor-outdoor living, offering both grand entertaining and private retreats.\r\n\r\nAt the heart of the home, Italian Arabescato Corchia marble makes a dramatic statement across the kitchen island, splashback, laundry and bathroom vanities, complemented by premium Miele appliances including an oven, steam oven and microwave.\r\n\r\nArchitectural excellence continues throughout with:\r\n- German-designed SRH elevator\r\n- 3,200mm stud height in the reception room and garage\r\n- 2,700mm high garage door, ideal for large vehicles and equipment\r\n- Metro Sun X high-performance glazing\r\n- AEONOX matt, scratch-resistant aluminium joinery\r\n- Two independent air-conditioning systems\r\n- 10-Year Master Builder Guarantee\r\n\r\nOutside, the home transforms into a private resort. A north-facing, fully concrete swimming pool with a 1.8m maximum depth and coloured LED lighting provides the perfect centrepiece for summer entertaining, while the tiled alfresco area features a dedicated BBQ and electronic louvre system for year-round enjoyment. An indoor tropical garden, custom glass garden shed and carefully considered access complete this remarkable property.\r\n\r\nArchitecturally distinctive. Luxuriously appointed. Designed for exceptional living.\r\n\r\nConjunctional offers welcomed!\r\nUse this link to view property files: https://www.harcourtsfiles.co.nz/listings/GVM2",
   "photos": [
@@ -747,7 +747,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 740000,
-      "estimate_mid": 700000
+      "estimate_mid": 715000
     },
     {
       "property_id": "a0efbcf4-dbc4-4193-b091-da0486db22bb",
@@ -775,7 +775,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 950000,
-      "estimate_mid": 805000
+      "estimate_mid": 830000
     },
     {
       "property_id": "bf2c932a-9695-4b0e-82cd-f052399f6e09",
@@ -789,7 +789,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1500000,
-      "estimate_mid": 1460000
+      "estimate_mid": 1520000
     },
     {
       "property_id": "4171dc50-cf26-4d6a-a28c-58f474785848",
@@ -803,7 +803,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1625000,
-      "estimate_mid": 1460000
+      "estimate_mid": 1560000
     },
     {
       "property_id": "6e047262-a12a-48d7-9273-300407c2fa68",
@@ -885,18 +885,18 @@
         "low": 2295918,
         "mid": 2502703,
         "high": 2610000,
-        "updated_at": "2026-11-13T21:15:36.751605+00:00",
+        "updated_at": "2026-11-15T04:31:53.508028+00:00",
         "confidence": "medium",
         "n": 41,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
           "n": 41,
-          "n_eff": 7.83,
+          "n_eff": 7.77,
           "radius_km": 3.0,
           "median_ratio": 1.0011,
           "iqr_ratio": 0.1255,
-          "same_suburb": 32,
+          "same_suburb": 31,
           "model_version": "comp-cv-v1"
         }
       },

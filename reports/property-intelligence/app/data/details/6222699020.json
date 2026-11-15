@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-12-02T23:00:00+00:00",
   "listed_at": "2026-11-10T00:07:18.730000+00:00",
-  "days_on_market": 2,
+  "days_on_market": 4,
   "lat": -36.6937383,
   "lon": 174.7491311,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2341087735.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1097,
-  "watchers": 40,
+  "view_count": 1449,
+  "watchers": 47,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "crosslease",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 3,
   "last_change_at": "2026-11-12T18:45:58.060460+00:00",
-  "days_since_last_change": 1.1,
+  "days_since_last_change": 2.41,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 0.3,
+  "sale_pressure": 0.7,
   "sale_pressure_label": "low",
-  "model_low": 995382,
-  "model_mid": 1081753,
-  "model_high": 1181949,
+  "model_low": 996952,
+  "model_mid": 1078032,
+  "model_high": 1179021,
   "model_confidence": "medium",
-  "text_signal_pct": 2.5136,
-  "description_index": 0.129541,
+  "text_signal_pct": 0.3473,
+  "description_index": 0.018458,
   "events_count": 3,
   "last_event": "new_listing",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6222699020,
-    "low": 995382,
-    "mid": 1081753,
-    "high": 1181949,
+    "low": 996952,
+    "mid": 1078032,
+    "high": 1179021,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0832, 0.0886], \"rel_width\": 0.1725, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0782, 0.0895], \"rel_width\": 0.1689, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6222699020,
@@ -300,30 +300,30 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.2273,
+    "condition_renovation": 0.227,
     "views_waterfront": 0.0,
     "family_school": 1.0,
     "investment": 0.0,
-    "risk": 0.2172,
+    "risk": 0.2272,
     "readability": 0.6246,
-    "description_premium_pct": 2.5136,
-    "description_index": 0.129541,
+    "description_premium_pct": 0.3473,
+    "description_index": 0.018458,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 2, \"views_waterfront\": 0, \"family_school\": 28, \"investment\": 0, \"risk\": 1}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-13T21:15:37.643617+00:00",
+    "updated_at": "2026-11-15T04:31:54.378941+00:00",
     "top_topics": [
       {
-        "topic_id": 4,
-        "weight": 0.546709,
+        "topic_id": 8,
+        "weight": 0.507073,
         "label": "Parking, garden & section",
         "top_terms": [
           "fenced",
-          "brick",
           "fully fenced",
-          "street",
+          "brick",
           "fully",
-          "parking",
+          "street",
           "garden",
+          "parking",
           "sunny",
           "room",
           "street parking",
@@ -332,47 +332,47 @@
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.171468,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "morning",
-          "friends",
-          "relaxed",
-          "coffee",
-          "life",
-          "sense",
-          "morning coffee",
-          "setting",
-          "inviting",
-          "peaceful",
-          "step",
-          "welcoming"
-        ]
-      },
-      {
         "topic_id": 5,
-        "weight": 0.138837,
+        "weight": 0.17564,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
           "school",
           "girls",
           "girls high",
-          "westlake girls",
-          "high school",
           "boys",
-          "high",
           "westlake boys",
+          "high",
+          "high school",
+          "westlake girls",
           "intermediate",
           "school suburb",
-          "shore"
+          "suburb school"
         ]
       },
       {
-        "topic_id": 8,
-        "weight": 0.061043,
-        "label": "Sea views & coastal outlook",
+        "topic_id": 6,
+        "weight": 0.165549,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "morning",
+          "friends",
+          "relaxed",
+          "coffee",
+          "sense",
+          "life",
+          "inviting",
+          "setting",
+          "morning coffee",
+          "welcoming",
+          "peaceful",
+          "step"
+        ]
+      },
+      {
+        "topic_id": 11,
+        "weight": 0.085504,
+        "label": "Family living & entertaining II",
         "top_terms": [
           "extended",
           "extended family",
@@ -380,12 +380,12 @@
           "living areas",
           "areas",
           "multiple",
-          "guests",
           "sea",
           "sea views",
+          "guests",
           "teenagers",
-          "family living",
-          "income"
+          "views",
+          "family living"
         ]
       }
     ]
@@ -448,7 +448,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-13T21:15:36.751605+00:00"
+    "updated_at": "2026-11-15T04:31:53.508028+00:00"
   },
   "body": "* First time on the market in 35 years\r\n* Generous family home across two levels \r\n* Two separate living areas\r\n* Brand new carpet throughout\r\n* Double internal access garage plus off-street parking \r\n* Fully fenced garden and courtyard \r\n* Short walk to Torbay Village, close to local beaches\r\n* Cross-lease title (1/2 share of 851m² more or less) \r\n* Zoned for Long Bay College, Northcross Intermediate, Long Bay School & Torbay School \r\n\r\nTo download the property documents, copy & paste this link into your browser: https://www.harcourtsfiles.co.nz/listings/41JQ \r\n\r\nFrom the street, 2/13 Watea Road gives very little away. Step inside, though, and you'll soon understand why the owners' friends call it 'The Tardis'.\r\n\r\nThe current owners built this home 35 years ago, and the time has now come for another family to make lifelong memories here. With a move north confirmed, this well-maintained four-bedroom family home is on the market for the very first time.\r\n\r\nUpstairs, the kitchen sits at the heart of the home, connecting the dining and living areas with the long deck outside. With the kitchen windows folded right back, the deck feels integrated and part of the space, making it easy to cook, serve and keep the conversation going, whether you're hosting family and friends or simply enjoying a quiet evening at home. High, pitched ceilings, exposed beams and feature windows bring in plenty of natural light and provide character that sets it apart from the usual family home.\r\n\r\nWhen the house gets busy and more space or separation is required, the downstairs takes care of that with ease. A family room that opens out to a paved courtyard gives you options depending on how you want to live, whether that's a second lounge, a teenagers' retreat, a games room or another place to entertain family and friends. With bedrooms split across both levels, there's room for older kids who want their own space and for guests staying the weekend.\r\n\r\nOutside, the fully fenced lawn, garden and courtyard give kids and pets room to play, with established trees and planting adding privacy. \r\n\r\nThe location ticks the boxes too. Torbay Village is a short walk away, with Long Bay Beach, Long Bay Regional Park and Waiake Beach all close by. Schooling is well covered, with zoning for Long Bay College, Northcross Intermediate, Long Bay School and Torbay School.\r\n\r\nThirty-five years in the making... come and see what made the owners stay. Check advertised times, or call today to arrange a private viewing.\r\n\r\nAgent conjunctionals welcome from day one.",
   "photos": [
@@ -729,7 +729,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1625000,
-      "estimate_mid": 1460000
+      "estimate_mid": 1560000
     },
     {
       "property_id": "ff1fb9dd-4bac-4d4f-8930-2c5e60810c09",
@@ -757,7 +757,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1500000,
-      "estimate_mid": 1460000
+      "estimate_mid": 1520000
     },
     {
       "property_id": "a0efbcf4-dbc4-4193-b091-da0486db22bb",
@@ -785,7 +785,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 950000,
-      "estimate_mid": 805000
+      "estimate_mid": 830000
     },
     {
       "property_id": "fc20389e-2ed3-4cd1-a6d1-e4b461730d64",
@@ -799,7 +799,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 740000,
-      "estimate_mid": 700000
+      "estimate_mid": 715000
     },
     {
       "property_id": "a9e1f7e8-3519-4fd6-88a8-287d600db59b",
@@ -839,14 +839,14 @@
         "low": 978154,
         "mid": 1040417,
         "high": 1108462,
-        "updated_at": "2026-11-13T21:15:36.751605+00:00",
+        "updated_at": "2026-11-15T04:31:53.508028+00:00",
         "confidence": "high",
         "n": 79,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 79,
-          "n_eff": 11.61,
+          "n_eff": 11.54,
           "radius_km": 3.0,
           "median_ratio": 0.9458,
           "iqr_ratio": 0.1252,

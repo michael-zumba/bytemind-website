@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-12-01T00:00:00+00:00",
   "listed_at": "2026-11-10T20:30:48.610000+00:00",
-  "days_on_market": 2,
+  "days_on_market": 3,
   "lat": -36.8927193,
   "lon": 174.9109955,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2341276321.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1301082,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-11-11T11:00:00+00:00",
-  "comp_low": 1139062,
+  "comp_low": 1144648,
   "comp_mid": 1247400,
-  "comp_high": 1358804,
+  "comp_high": 1304494,
   "comp_confidence": "high",
-  "comp_n": 47,
+  "comp_n": 46,
   "value_low": 1156412,
   "value_mid": 1228747,
   "value_high": 1301082,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-11T16:39:32.450544+00:00",
-  "days_since_last_change": 2.19,
+  "days_since_last_change": 3.49,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 0.3,
+  "sale_pressure": 0.5,
   "sale_pressure_label": "low",
-  "model_low": 1154893,
-  "model_mid": 1255105,
-  "model_high": 1371358,
+  "model_low": 1160897,
+  "model_mid": 1255311,
+  "model_high": 1372906,
   "model_confidence": "high",
-  "text_signal_pct": -2.3355,
-  "description_index": -0.123312,
+  "text_signal_pct": 0.1161,
+  "description_index": 0.006178,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -308,40 +308,40 @@
   ],
   "model": {
     "listing_id": 6224177161,
-    "low": 1154893,
-    "mid": 1255105,
-    "high": 1371358,
+    "low": 1160897,
+    "mid": 1255311,
+    "high": 1372906,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0832, 0.0886], \"rel_width\": 0.1725, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0782, 0.0895], \"rel_width\": 0.1689, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6224177161,
     "word_count": 383,
     "exclamations": 3,
     "urgency": 0.3368,
-    "luxury": 0.0722,
-    "condition_renovation": 0.111,
-    "views_waterfront": 0.285,
-    "family_school": 0.9566,
+    "luxury": 0.0717,
+    "condition_renovation": 0.1109,
+    "views_waterfront": 0.2847,
+    "family_school": 0.9576,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3597,
-    "description_premium_pct": -2.3355,
-    "description_index": -0.123312,
+    "description_premium_pct": 0.1161,
+    "description_index": 0.006178,
     "lexicon_hits_json": "{\"urgency\": 2, \"luxury\": 1, \"condition_renovation\": 1, \"views_waterfront\": 4, \"family_school\": 21, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-13T21:15:37.643617+00:00",
+    "updated_at": "2026-11-15T04:31:54.378941+00:00",
     "top_topics": [
       {
         "topic_id": 7,
-        "weight": 0.396386,
+        "weight": 0.404436,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
           "macleans college",
           "college",
-          "school",
           "intermediate",
+          "school",
           "suburb intermediate",
           "primary",
           "marina",
@@ -352,9 +352,9 @@
         ]
       },
       {
-        "topic_id": 8,
-        "weight": 0.204044,
-        "label": "Sea views & coastal outlook",
+        "topic_id": 11,
+        "weight": 0.231903,
+        "label": "Family living & entertaining II",
         "top_terms": [
           "extended",
           "extended family",
@@ -362,17 +362,17 @@
           "living areas",
           "areas",
           "multiple",
-          "guests",
           "sea",
           "sea views",
+          "guests",
           "teenagers",
-          "family living",
-          "income"
+          "views",
+          "family living"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.135425,
+        "weight": 0.132718,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -384,28 +384,28 @@
           "upstairs",
           "family bathroom",
           "floor",
-          "suite",
           "lounge",
+          "suite",
           "separate"
         ]
       },
       {
-        "topic_id": 4,
-        "weight": 0.106449,
-        "label": "Parking, garden & section",
+        "topic_id": 6,
+        "weight": 0.091571,
+        "label": "Family living & entertaining",
         "top_terms": [
-          "fenced",
-          "brick",
-          "fully fenced",
-          "street",
-          "fully",
-          "parking",
-          "garden",
-          "sunny",
-          "room",
-          "street parking",
-          "north facing",
-          "facing"
+          "morning",
+          "friends",
+          "relaxed",
+          "coffee",
+          "sense",
+          "life",
+          "inviting",
+          "setting",
+          "morning coffee",
+          "welcoming",
+          "peaceful",
+          "step"
         ]
       }
     ]
@@ -471,7 +471,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-13T21:15:36.751605+00:00"
+    "updated_at": "2026-11-15T04:31:53.508028+00:00"
   },
   "body": "Auction: 62 Highbrook Drive, East Tamaki on Tuesday 1 December 2026 at 1:00PM  (unless sold prior)\r\n\r\nTucked away in a peaceful Bucklands Beach cul-de-sac, this spacious family home occupies a generous 678m² section with beautiful Pigeon Mountain views. Upstairs offers three bedrooms, a modern open-plan kitchen, dining and living area, a bathroom, separate toilet, laundry and an expansive entertaining deck. Downstairs features a recreation room and versatile rumpus room, complemented by a standalone double garage and ample parking.\r\n\r\nGenerous space, flexible living, big land and a fantastic location within walking distance of schools and shopping centre — a rear opportunity not to be missed in Bucklands Beach!\r\n\r\nProperty Highlights\r\n• Generous 678m² Land – A spacious section with room for outdoor enjoyment and future possibilities, RC & EPA are ready.\r\n• Beautiful Pigeon Mountain Views – Enjoy an attractive elevated outlook from the living areas and deck.\r\n• 3 Bedrooms & Family Bathroom – Comfortable accommodation with a practical layout.\r\n• Stylish Modern Kitchen – Quality appliances, ample storage and a convenient breakfast bar.\r\n• Spacious Living & Dining – Light-filled, inviting spaces designed for family comfort.\r\n• Expansive Sunny Deck – An ideal setting for entertaining, BBQs and relaxing outdoors.\r\n• Versatile Downstairs Spaces – Recreation room, additional room and storage offering excellent flexibility.\r\n• Double Garage & Generous Parking – Plenty of space for vehicles and everyday convenience.\r\n• Peaceful Cul-de-Sac Setting – Privacy and tranquillity in an established family-friendly neighbourhood.\r\n\r\nThe upper level offers spacious living that flows onto a large deck with elevated outlooks. A stylish kitchen connects with the dining area and rear deck. Three bedrooms, a family bathroom, a separate toilet and a laundry complete this level.\r\n\r\nDownstairs features an additional bedroom, a recreation room and storage space, offering flexibility for extended family, teenagers or a home office. A generous garage and covered patio add further convenience.\r\n\r\nEnjoy the convenience of having local schools and shopping amenities within walking distance, with Highland Park Shopping Centre, Half Moon Bay Marina, Howick Village, parks and coastal attractions all within easy reach.\r\n\r\nIn zone for Macleans Primary School, Howick Intermediate and Pakuranga College, making this an appealing choice for families who value education and convenience.\r\n\r\nGenerous land with RC and EPA, stunning views, flexible living and a sought-after location — this home has so much to offer!\r\n\r\nDon't miss your chance to secure a spacious family home on the big land with RC and EPA in Bucklands Beach. Contact us today to arrange your viewing or visit our open homes!",
   "photos": [
@@ -711,7 +711,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1000000,
-      "estimate_mid": 960000
+      "estimate_mid": 905000
     },
     {
       "property_id": "cef10f73-924b-480b-a3ae-a1b8f1d392a6",
@@ -726,6 +726,20 @@
       "property_type": null,
       "cv": 1250000,
       "estimate_mid": 1150000
+    },
+    {
+      "property_id": "fc7b4af6-14ac-4ecb-a176-f1e383e02df8",
+      "address": "408D Bucklands Beach Road, Bucklands Beach, Auckland",
+      "sale_price": 950000,
+      "sale_date": "2026-08-02T00:00:00+00:00",
+      "distance_km": 0.43,
+      "bedrooms": 3,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1100000,
+      "estimate_mid": 950000
     },
     {
       "property_id": "196c80cd-2830-4347-8cc1-f0f68c73dcff",
@@ -753,7 +767,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1250000,
-      "estimate_mid": 1030000
+      "estimate_mid": 1190000
     },
     {
       "property_id": "e65c2cf7-9fd3-4995-9053-2877de67adf1",
@@ -784,6 +798,20 @@
       "estimate_mid": 1300000
     },
     {
+      "property_id": "9cf287b7-d67b-4823-b04c-3cbf22610e7d",
+      "address": "78 Sunderlands Road, Half Moon Bay, Auckland",
+      "sale_price": 1445000,
+      "sale_date": "2026-08-24T00:00:00+00:00",
+      "distance_km": 0.59,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 4700000,
+      "estimate_mid": 1550000
+    },
+    {
       "property_id": "4839d005-c40f-4269-a5bc-6d1cc0e93b38",
       "address": "69B Priestley Drive, Bucklands Beach, Auckland",
       "sale_price": 1325000,
@@ -810,34 +838,6 @@
       "property_type": null,
       "cv": 1375000,
       "estimate_mid": 1300000
-    },
-    {
-      "property_id": "fad4b584-e6cc-4611-a1eb-bbdc65db151f",
-      "address": "3D Jillteresa Crescent, Half Moon Bay, Auckland",
-      "sale_price": 1381000,
-      "sale_date": "2026-08-22T00:00:00+00:00",
-      "distance_km": 0.61,
-      "bedrooms": 3,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1475000,
-      "estimate_mid": 1380000
-    },
-    {
-      "property_id": "3be56937-a5e6-40a0-82ef-183b2ef87a6f",
-      "address": "3A Jillteresa Crescent, Half Moon Bay, Auckland",
-      "sale_price": 1488000,
-      "sale_date": "2026-08-28T00:00:00+00:00",
-      "distance_km": 0.62,
-      "bedrooms": 3,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1475000,
-      "estimate_mid": 1490000
     }
   ],
   "valuation": {
@@ -859,22 +859,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.14M – $1.36M",
-        "low": 1139062,
+        "range": "$1.14M – $1.30M",
+        "low": 1144648,
         "mid": 1247400,
-        "high": 1358804,
-        "updated_at": "2026-11-13T21:15:36.751605+00:00",
+        "high": 1304494,
+        "updated_at": "2026-11-15T04:31:53.508028+00:00",
         "confidence": "high",
-        "n": 47,
+        "n": 46,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 47,
-          "n_eff": 9.56,
+          "n": 46,
+          "n_eff": 9.53,
           "radius_km": 3.0,
           "median_ratio": 0.924,
-          "iqr_ratio": 0.1762,
-          "same_suburb": 20,
+          "iqr_ratio": 0.1281,
+          "same_suburb": 21,
           "model_version": "comp-cv-v1"
         }
       },

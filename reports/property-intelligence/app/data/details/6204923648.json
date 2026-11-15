@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-30T02:12:18.533000+00:00",
-  "days_on_market": 14,
+  "days_on_market": 15,
   "lat": -36.7144737,
   "lon": 174.7347107,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338561014.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 673,
+  "view_count": 679,
   "watchers": 12,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 4,
   "last_change_at": "2026-11-13T19:50:40.499046+00:00",
-  "days_since_last_change": 0.06,
+  "days_since_last_change": 1.36,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 47.3,
+  "sale_pressure": 47.5,
   "sale_pressure_label": "medium",
-  "model_low": 1004034,
-  "model_mid": 1378929,
-  "model_high": 1900420,
+  "model_low": 986392,
+  "model_mid": 1331618,
+  "model_high": 1803492,
   "model_confidence": "low",
-  "text_signal_pct": -14.7579,
-  "description_index": -0.833192,
+  "text_signal_pct": -17.1694,
+  "description_index": -1.002831,
   "events_count": 4,
   "last_event": "new_listing",
   "schools": [
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 6204923648,
-    "low": 1004034,
-    "mid": 1378929,
-    "high": 1900420,
+    "low": 986392,
+    "mid": 1331618,
+    "high": 1803492,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3173, 0.3208], \"rel_width\": 0.6501, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3001, 0.3033], \"rel_width\": 0.6136, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6204923648,
@@ -290,21 +290,21 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.2576,
-    "views_waterfront": 0.1654,
-    "family_school": 0.6344,
+    "condition_renovation": 0.2573,
+    "views_waterfront": 0.1652,
+    "family_school": 0.6351,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.6987,
-    "description_premium_pct": -14.7579,
-    "description_index": -0.833192,
+    "description_premium_pct": -17.1694,
+    "description_index": -1.002831,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 1, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-13T21:15:37.643617+00:00",
+    "updated_at": "2026-11-15T04:31:54.378941+00:00",
     "top_topics": [
       {
         "topic_id": 0,
-        "weight": 0.353817,
+        "weight": 0.347915,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -316,53 +316,34 @@
           "upstairs",
           "family bathroom",
           "floor",
-          "suite",
           "lounge",
+          "suite",
           "separate"
         ]
       },
       {
-        "topic_id": 11,
-        "weight": 0.307995,
-        "label": "Luxury, architectural & prestige II",
+        "topic_id": 4,
+        "weight": 0.24996,
+        "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
           "quality",
           "designer",
-          "finishes",
           "appliances",
+          "finishes",
           "year",
-          "luxury",
           "designer kitchen",
+          "luxury",
           "comfort",
-          "new",
           "heating",
-          "design"
+          "year round",
+          "round"
         ]
       },
       {
-        "topic_id": 4,
-        "weight": 0.109156,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "fenced",
-          "brick",
-          "fully fenced",
-          "street",
-          "fully",
-          "parking",
-          "garden",
-          "sunny",
-          "room",
-          "street parking",
-          "north facing",
-          "facing"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.101861,
-        "label": "Sea views & coastal outlook",
+        "topic_id": 11,
+        "weight": 0.148521,
+        "label": "Family living & entertaining II",
         "top_terms": [
           "extended",
           "extended family",
@@ -370,12 +351,31 @@
           "living areas",
           "areas",
           "multiple",
-          "guests",
           "sea",
           "sea views",
+          "guests",
           "teenagers",
-          "family living",
-          "income"
+          "views",
+          "family living"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.073078,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand new",
+          "brand",
+          "new",
+          "maintenance",
+          "low maintenance",
+          "low",
+          "single",
+          "easy care",
+          "new home",
+          "care",
+          "quality",
+          "convenience"
         ]
       }
     ]
@@ -445,7 +445,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-13T21:15:36.751605+00:00"
+    "updated_at": "2026-11-15T04:31:53.508028+00:00"
   },
   "body": "This is a brand-new, quality-built home, finished to a high standard and ready to move into now. Title and CCC are issued.\r\n\r\nSet over three levels, it has four bedrooms and four bathrooms, including three ensuites. There’s plenty of space for families, guests or extended family.\r\n\r\nGround floor: open-plan living, kitchen and dining with gas cooking and a stone island. Sliding doors open onto a large, private deck. There’s also a double bedroom and a bathroom/laundry on this level.\r\nUpstairs: two master suites, each with a walk-in wardrobe and ensuite, plus a separate sitting area.\r\nLower level: a private bedroom with its own ensuite, ideal for guests, a teenager or a home office.\r\nQuality finishes throughout include fully tiled bathrooms, heat pumps, double glazing and oak-toned flooring. You also get sea views and 2–3 off-street car parks.\r\n\r\nIn zone for:\r\n\r\n• Sherwood School\r\n• Northcross Intermediate\r\n• Long Bay College\r\n\r\nIt’s close to the brand-new local park, Browns Bay Village and the beach.\r\n\r\nCall us today to arrange a viewing.",
   "photos": [
@@ -661,14 +661,14 @@
         "low": 959500,
         "mid": 1132000,
         "high": 1485000,
-        "updated_at": "2026-11-13T21:15:36.751605+00:00",
+        "updated_at": "2026-11-15T04:31:53.508028+00:00",
         "confidence": "low",
         "n": 94,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
           "n": 94,
-          "n_eff": 28.4,
+          "n_eff": 28.23,
           "radius_km": 3.0,
           "iqr_ratio": 0.4642,
           "same_suburb": 28,

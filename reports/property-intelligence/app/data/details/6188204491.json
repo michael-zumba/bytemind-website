@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-20T00:36:42.213000+00:00",
-  "days_on_market": 23,
+  "days_on_market": 25,
   "lat": -36.8888984,
   "lon": 174.8971854,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2336329022.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1233,
+  "view_count": 1284,
   "watchers": 10,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": "price increase",
   "change_count": 4,
   "last_change_at": "2026-11-06T21:28:17.218070+00:00",
-  "days_since_last_change": 6.99,
+  "days_since_last_change": 8.29,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 48.8,
+  "sale_pressure": 49.2,
   "sale_pressure_label": "medium",
-  "model_low": 690047,
-  "model_mid": 947702,
-  "model_high": 1306110,
+  "model_low": 731451,
+  "model_mid": 987451,
+  "model_high": 1337364,
   "model_confidence": "low",
-  "text_signal_pct": -2.8248,
-  "description_index": -0.149522,
+  "text_signal_pct": -4.7828,
+  "description_index": -0.260913,
   "events_count": 4,
   "last_event": "new_listing",
   "schools": [
@@ -338,90 +338,71 @@
   ],
   "model": {
     "listing_id": 6188204491,
-    "low": 690047,
-    "mid": 947702,
-    "high": 1306110,
+    "low": 731451,
+    "mid": 987451,
+    "high": 1337364,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3173, 0.3208], \"rel_width\": 0.6501, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3001, 0.3033], \"rel_width\": 0.6136, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6188204491,
     "word_count": 269,
     "exclamations": 9,
     "urgency": 0.7193,
-    "luxury": 0.2057,
-    "condition_renovation": 0.158,
-    "views_waterfront": 0.1015,
+    "luxury": 0.2043,
+    "condition_renovation": 0.1578,
+    "views_waterfront": 0.1013,
     "family_school": 0.0649,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.5906,
-    "description_premium_pct": -2.8248,
-    "description_index": -0.149522,
+    "description_premium_pct": -4.7828,
+    "description_index": -0.260913,
     "lexicon_hits_json": "{\"urgency\": 3, \"luxury\": 2, \"condition_renovation\": 1, \"views_waterfront\": 1, \"family_school\": 1, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-13T21:15:37.643617+00:00",
+    "updated_at": "2026-11-15T04:31:54.378941+00:00",
     "top_topics": [
       {
         "topic_id": 2,
-        "weight": 0.226833,
-        "label": "Brick / tile / low-maintenance units",
+        "weight": 0.229749,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "maintenance",
-          "low maintenance",
           "brand new",
           "brand",
-          "low",
           "new",
+          "maintenance",
+          "low maintenance",
+          "low",
           "single",
           "easy care",
+          "new home",
           "care",
           "quality",
-          "new home",
-          "buyers"
+          "convenience"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.217047,
-        "label": "New build / brand-new quality",
+        "weight": 0.206182,
+        "label": "Sea views & coastal outlook",
         "top_terms": [
-          "section",
           "dream",
+          "section",
           "build",
+          "views",
           "dream home",
           "land",
-          "views",
-          "whangaparaoa",
-          "sections",
-          "building",
           "sea",
-          "penlink",
-          "auckland"
-        ]
-      },
-      {
-        "topic_id": 11,
-        "weight": 0.177868,
-        "label": "Luxury, architectural & prestige II",
-        "top_terms": [
-          "premium",
-          "quality",
-          "designer",
-          "finishes",
-          "appliances",
-          "year",
-          "luxury",
-          "designer kitchen",
-          "comfort",
-          "new",
-          "heating",
-          "design"
+          "regional",
+          "auckland",
+          "regional park",
+          "sea views",
+          "building"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.139799,
+        "weight": 0.165668,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -429,13 +410,32 @@
           "leave",
           "lock leave",
           "car",
+          "kensington",
           "secure",
           "park",
           "balcony",
-          "pool",
+          "kensington park",
           "complex",
-          "kensington",
-          "bedroom apartment"
+          "pool"
+        ]
+      },
+      {
+        "topic_id": 4,
+        "weight": 0.152831,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "premium",
+          "quality",
+          "designer",
+          "appliances",
+          "finishes",
+          "year",
+          "designer kitchen",
+          "luxury",
+          "comfort",
+          "heating",
+          "year round",
+          "round"
         ]
       }
     ]
@@ -510,14 +510,14 @@
     "first_description_change_at": null,
     "last_description_change_at": null,
     "days_to_first_change": 3.04,
-    "days_since_last_change": 6.99,
+    "days_since_last_change": 8.29,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "removed",
-    "updated_at": "2026-11-13T21:15:36.751605+00:00"
+    "updated_at": "2026-11-15T04:31:53.508028+00:00"
   },
   "body": "6C Jane Gifford Place, Half Moon Bay is still here as 6D is sold & 6B is under contract.... Dont miss out!!!\r\nPresent all offers!!!! come and see the standard of these new builds for yourself.\r\n\r\nThis charming new build is not like the rest it offers a perfect blend of comfort and convenience, ideal for families and downsizers as it has a LIFT!\r\nThe lift is such an added feature as it can future proof you or add re sale value in time.\r\n\r\nFeaturing three spacious bedrooms, this property provides ample space for relaxation and privacy. The master bedroom includes an ensuite bathroom, while the additional two bedrooms share a well-appointed bathroom, making morning routines a breeze with heated flooring in the bathrooms.\r\n\r\n The open-plan living area is perfect for entertaining, leading seamlessly into a modern kitchen equipped high end appliances and gas from the street so no need for bottles.\r\n\r\nEnjoy the convenience of a single garage space & built in storage, providing secure parking, The property is set on a manageable 160 sqm land area, offering a low-maintenance lifestyle without compromising on comfort.\r\n\r\nThe property offers so much storage which is such a bonus for a new build- You will want to see this for yourself!\r\n\r\nLocated in the desirable Half Moon Bay area, this home is just moments away from local amenities, parks, and stunning coastal views. \r\n\r\nThis property is available for sale by negotiation, providing you with the opportunity to make it your own. Don't miss out on this fantastic chance to secure your slice of paradise in Half Moon Bay. Contact us today for more information or to arrange a viewing.",
   "photos": [
@@ -549,20 +549,6 @@
   },
   "history": [],
   "comps": [
-    {
-      "property_id": "2bcb8694-7f01-4f15-8542-bc57d32d19dd",
-      "address": "21 Anna Watson Road, Half Moon Bay, Auckland",
-      "sale_price": 1363000,
-      "sale_date": "2026-08-14T00:00:00+00:00",
-      "distance_km": 0.09,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1825000,
-      "estimate_mid": 1400000
-    },
     {
       "property_id": "e55ea0c5-19ab-4d89-9971-7b41e648f1e9",
       "address": "4A Coquille Place, Half Moon Bay, Auckland",
@@ -634,20 +620,6 @@
       "estimate_mid": 1360000
     },
     {
-      "property_id": "448cd0e0-7cb5-4786-9e53-642b629ed632",
-      "address": "3A Ursula Place, Half Moon Bay, Auckland",
-      "sale_price": 1375000,
-      "sale_date": "2026-08-21T00:00:00+00:00",
-      "distance_km": 0.53,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1050000,
-      "estimate_mid": 980000
-    },
-    {
       "property_id": "3eae8af4-90ae-48ac-9385-143284b7f96d",
       "address": "3/40 Mark Edward Drive, Half Moon Bay, Auckland",
       "sale_price": 786000,
@@ -716,6 +688,34 @@
       "property_type": null,
       "cv": 760000,
       "estimate_mid": 780000
+    },
+    {
+      "property_id": "9f5a762c-25a5-414a-9f84-19b0e3a95135",
+      "address": "2/172 Pigeon Mountain Road, Half Moon Bay, Auckland",
+      "sale_price": 785000,
+      "sale_date": "2026-10-14T00:00:00+00:00",
+      "distance_km": 0.95,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 760000,
+      "estimate_mid": 785000
+    },
+    {
+      "property_id": "98d07098-1a85-45f6-987a-a27c0e5dc6cb",
+      "address": "1/23 Liam Place, Half Moon Bay, Auckland",
+      "sale_price": 810000,
+      "sale_date": "2026-09-04T00:00:00+00:00",
+      "distance_km": 0.98,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 770000,
+      "estimate_mid": 805000
     }
   ],
   "valuation": {
@@ -731,17 +731,17 @@
         "low": 926000,
         "mid": 1350000,
         "high": 1445000,
-        "updated_at": "2026-11-13T21:15:36.751605+00:00",
+        "updated_at": "2026-11-15T04:31:53.508028+00:00",
         "confidence": "low",
         "n": 50,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
           "n": 50,
-          "n_eff": 15.79,
+          "n_eff": 15.01,
           "radius_km": 3.0,
           "iqr_ratio": 0.3844,
-          "same_suburb": 15,
+          "same_suburb": 14,
           "model_version": "comp-cv-v1"
         }
       }

@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-11-18T23:00:00+00:00",
   "listed_at": "2026-09-29T01:09:09.907000+00:00",
-  "days_on_market": 44,
+  "days_on_market": 46,
   "lat": -36.684231,
   "lon": 174.7292258,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2332024172.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 3705,
-  "watchers": 87,
+  "view_count": 3786,
+  "watchers": 89,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 1,
   "last_change_at": "2026-11-02T14:59:38.652333+00:00",
-  "days_since_last_change": 11.26,
+  "days_since_last_change": 12.56,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 5,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 12.3,
+  "sale_pressure": 12.7,
   "sale_pressure_label": "low",
-  "model_low": 2778666,
-  "model_mid": 3019776,
-  "model_high": 3299479,
+  "model_low": 2782233,
+  "model_mid": 3008508,
+  "model_high": 3290340,
   "model_confidence": "high",
-  "text_signal_pct": 19.2216,
-  "description_index": 0.917406,
+  "text_signal_pct": 24.0422,
+  "description_index": 1.146995,
   "events_count": 1,
   "last_event": "title_change",
   "schools": [
@@ -278,34 +278,53 @@
   ],
   "model": {
     "listing_id": 6154708087,
-    "low": 2778666,
-    "mid": 3019776,
-    "high": 3299479,
+    "low": 2782233,
+    "mid": 3008508,
+    "high": 3290340,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0832, 0.0886], \"rel_width\": 0.1725, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0782, 0.0895], \"rel_width\": 0.1689, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6154708087,
     "word_count": 282,
     "exclamations": 1,
     "urgency": 0.0,
-    "luxury": 0.9813,
+    "luxury": 0.9744,
     "condition_renovation": 1.0,
     "views_waterfront": 0.0,
-    "family_school": 0.1856,
+    "family_school": 0.1858,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3235,
-    "description_premium_pct": 19.2216,
-    "description_index": 0.917406,
+    "description_premium_pct": 24.0422,
+    "description_index": 1.146995,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 10, \"condition_renovation\": 7, \"views_waterfront\": 0, \"family_school\": 3, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-13T21:15:37.643617+00:00",
+    "updated_at": "2026-11-15T04:31:54.378941+00:00",
     "top_topics": [
       {
-        "topic_id": 8,
-        "weight": 0.248275,
-        "label": "Sea views & coastal outlook",
+        "topic_id": 10,
+        "weight": 0.281234,
+        "label": "Resort amenities (pool / tennis / spa)",
+        "top_terms": [
+          "views",
+          "residence",
+          "waterfront",
+          "scale",
+          "expansive",
+          "harbour",
+          "pool",
+          "gulf",
+          "spectacular",
+          "aucklands",
+          "hauraki",
+          "hauraki gulf"
+        ]
+      },
+      {
+        "topic_id": 11,
+        "weight": 0.239006,
+        "label": "Family living & entertaining II",
         "top_terms": [
           "extended",
           "extended family",
@@ -313,64 +332,45 @@
           "living areas",
           "areas",
           "multiple",
-          "guests",
           "sea",
           "sea views",
+          "guests",
           "teenagers",
-          "family living",
-          "income"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.228684,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
           "views",
-          "residence",
-          "waterfront",
-          "expansive",
-          "scale",
-          "gulf",
-          "harbour",
-          "spectacular",
-          "hauraki",
-          "hauraki gulf",
-          "pool",
-          "position"
-        ]
-      },
-      {
-        "topic_id": 11,
-        "weight": 0.187742,
-        "label": "Luxury, architectural & prestige II",
-        "top_terms": [
-          "premium",
-          "quality",
-          "designer",
-          "finishes",
-          "appliances",
-          "year",
-          "luxury",
-          "designer kitchen",
-          "comfort",
-          "new",
-          "heating",
-          "design"
+          "family living"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.170855,
+        "weight": 0.181559,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "premium",
+          "quality",
+          "designer",
+          "appliances",
+          "finishes",
+          "year",
+          "designer kitchen",
+          "luxury",
+          "comfort",
+          "heating",
+          "year round",
+          "round"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.160362,
         "label": "Parking, garden & section",
         "top_terms": [
           "fenced",
-          "brick",
           "fully fenced",
-          "street",
+          "brick",
           "fully",
-          "parking",
+          "street",
           "garden",
+          "parking",
           "sunny",
           "room",
           "street parking",
@@ -465,7 +465,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-13T21:15:36.751605+00:00"
+    "updated_at": "2026-11-15T04:31:53.508028+00:00"
   },
   "body": "Set on an expansive 3,281sqm section, this impressive brick-and-tile, single-level residence delivers spacious family living, exceptional entertaining and resort-style indulgence. Featuring five generous bedrooms, three bathrooms, three expansive living areas and a separate home office, the home offers exceptional comfort, flexibility and effortless indoor-outdoor flow.\r\n\r\nStep outside and discover your own private resort. A heated swimming pool with insulated concealed cover provides year-round enjoyment, while the luxurious spa area creates a tranquil retreat beneath the stars. An outdoor bar, BBQ cabana and dining pavilion make entertaining effortless, whether hosting summer gatherings or relaxing with family and friends.\r\n\r\nWith parking for more than 10 vehicles, there is outstanding space for guests, cars, boats and more. A private petanque court adds another layer of leisure, while the peaceful surroundings are enhanced by native birdlife including tui, pukeko, rosellas and parakeets.\r\n\r\nSIGNATURE FEATURES\r\n* 3,281sqm private estate surrounded by nature\r\n* Elegant brick-and-tile, single-level residence\r\n* Five bedrooms | Three bathrooms | Three living areas\r\n* Separate home office\r\n* Butler's Pantry\r\n* Central heating & air conditioning throughout\r\n* Advanced DVS ventilation system\r\n* Heated swimming pool & luxurious spa area\r\n* Outdoor bar, BBQ cabana & dining pavilion\r\n* Parking for 10+ vehicles\r\n* Private petanque court\r\n* Seamless indoor-outdoor living\r\n* Approx. 5 minutes to Long Bay Beach | 10 minutes to Albany\r\n\r\nWhether relaxing beside the pool, enjoying the spa area beneath the stars or entertaining guests in style, this is a home designed for exceptional living. A rare lifestyle offering where generous proportions, resort-style amenities, natural beauty and sophisticated entertaining combine to create a truly private sanctuary.\r\n\r\nBeyond a residence. Beyond a lifestyle. This is your own private world.\r\n\r\nConjunctional offers welcomed!\r\nUse this link to view property files: https://www.harcourtsfiles.co.nz/listings/479X",
   "photos": [
@@ -733,7 +733,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 740000,
-      "estimate_mid": 700000
+      "estimate_mid": 715000
     },
     {
       "property_id": "a0efbcf4-dbc4-4193-b091-da0486db22bb",
@@ -761,7 +761,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 950000,
-      "estimate_mid": 805000
+      "estimate_mid": 830000
     },
     {
       "property_id": "bf2c932a-9695-4b0e-82cd-f052399f6e09",
@@ -775,7 +775,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1500000,
-      "estimate_mid": 1460000
+      "estimate_mid": 1520000
     },
     {
       "property_id": "18946d18-d18d-4268-a2df-b154ebe4b782",
@@ -803,7 +803,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1625000,
-      "estimate_mid": 1460000
+      "estimate_mid": 1560000
     },
     {
       "property_id": "b057960d-5092-4ed0-a57f-a211890f9383",
@@ -857,14 +857,14 @@
         "low": 2750000,
         "mid": 2998767,
         "high": 3077419,
-        "updated_at": "2026-11-13T21:15:36.751605+00:00",
+        "updated_at": "2026-11-15T04:31:53.508028+00:00",
         "confidence": "high",
         "n": 59,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 59,
-          "n_eff": 9.19,
+          "n_eff": 9.14,
           "radius_km": 3.0,
           "median_ratio": 0.9996,
           "iqr_ratio": 0.1092,

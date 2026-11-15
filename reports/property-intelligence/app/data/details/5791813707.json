@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-02-19T02:45:38.450000+00:00",
-  "days_on_market": 266,
+  "days_on_market": 268,
   "lat": -36.8499752,
   "lon": 174.8624843,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2288897187.jpg",
@@ -33,7 +33,7 @@
   "comp_mid": 1209402,
   "comp_high": 1324786,
   "comp_confidence": "high",
-  "comp_n": 87,
+  "comp_n": 85,
   "value_low": 1257528,
   "value_mid": 1336188,
   "value_high": 1414849,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 12167,
-  "watchers": 191,
+  "view_count": 12235,
+  "watchers": 192,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unit title",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 4,
   "last_change_at": "2026-11-12T23:19:20.029581+00:00",
-  "days_since_last_change": 0.91,
+  "days_since_last_change": 2.22,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 5,
@@ -76,12 +76,12 @@
   "sale_method_stage": 3,
   "sale_pressure": 60.0,
   "sale_pressure_label": "medium",
-  "model_low": 1179917,
-  "model_mid": 1282301,
-  "model_high": 1401073,
+  "model_low": 1179127,
+  "model_mid": 1275024,
+  "model_high": 1394466,
   "model_confidence": "high",
-  "text_signal_pct": -8.868,
-  "description_index": -0.484553,
+  "text_signal_pct": -9.1319,
+  "description_index": -0.5098,
   "events_count": 4,
   "last_event": "cv_change",
   "schools": [
@@ -268,33 +268,33 @@
   ],
   "model": {
     "listing_id": 5791813707,
-    "low": 1179917,
-    "mid": 1282301,
-    "high": 1401073,
+    "low": 1179127,
+    "mid": 1275024,
+    "high": 1394466,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0832, 0.0886], \"rel_width\": 0.1725, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0782, 0.0895], \"rel_width\": 0.1689, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5791813707,
     "word_count": 185,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.2992,
+    "luxury": 0.297,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.295,
+    "views_waterfront": 0.2947,
     "family_school": 1.0,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3383,
-    "description_premium_pct": -8.868,
-    "description_index": -0.484553,
+    "description_premium_pct": -9.1319,
+    "description_index": -0.5098,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 17, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-13T21:15:37.643617+00:00",
+    "updated_at": "2026-11-15T04:31:54.378941+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.250807,
+        "weight": 0.26476,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -302,56 +302,37 @@
           "leave",
           "lock leave",
           "car",
+          "kensington",
           "secure",
           "park",
           "balcony",
-          "pool",
+          "kensington park",
           "complex",
-          "kensington",
-          "bedroom apartment"
+          "pool"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.204778,
+        "weight": 0.242306,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
           "school",
           "girls",
           "girls high",
-          "westlake girls",
-          "high school",
           "boys",
-          "high",
           "westlake boys",
+          "high",
+          "high school",
+          "westlake girls",
           "intermediate",
           "school suburb",
-          "shore"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.130742,
-        "label": "School zones & catchments",
-        "top_terms": [
-          "macleans",
-          "macleans college",
-          "college",
-          "school",
-          "intermediate",
-          "suburb intermediate",
-          "primary",
-          "marina",
-          "pigeon",
-          "pigeon mountain",
-          "mountain",
-          "suburb marina"
+          "suburb school"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.124194,
+        "weight": 0.125003,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -363,9 +344,28 @@
           "upstairs",
           "family bathroom",
           "floor",
-          "suite",
           "lounge",
+          "suite",
           "separate"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.114382,
+        "label": "School zones & catchments",
+        "top_terms": [
+          "macleans",
+          "macleans college",
+          "college",
+          "intermediate",
+          "school",
+          "suburb intermediate",
+          "primary",
+          "marina",
+          "pigeon",
+          "pigeon mountain",
+          "mountain",
+          "suburb marina"
         ]
       }
     ]
@@ -476,7 +476,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-13T21:15:36.751605+00:00"
+    "updated_at": "2026-11-15T04:31:53.508028+00:00"
   },
   "body": "Perfectly positioned in one of Saint Heliers' most sought-after streets, this beautifully presented home offers effortless family living just moments from the beach and village lifestyle.\r\n\r\nFeaturing three generous double bedrooms, including a master with private ensuite, this home is thoughtfully designed for comfort and convenience. A well-appointed family bathroom plus an additional guest toilet ensure easy living for families and visitors alike.\r\n\r\nThe spacious layout is complemented by a double internal-access garage, providing secure parking and extra storage.\r\n\r\nEnjoy a short, flat stroll to Saint Heliers Beach and vibrant village cafes, restaurants and shops - leave the car at home and embrace the coastal lifestyle.\r\n\r\nZoned for excellent local schools including Churchill Park School and Glendowie College, making this an outstanding choice for families.\r\n\r\nA superb opportunity in a premium location - coastal living at its best.\r\n\r\n* Exceptional family lifestyle in a highly sought-after location\r\n* Easy, flat stroll to St Heliers Beach and vibrant village cafés, shops & restaurants\r\n* Convenient access to reliable public transport links\r\n* Solid concrete block construction on the ground floor\r\n* Zoned for Churchill Park School and Glendowie College",
   "photos": [
@@ -808,7 +808,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1975000,
-      "estimate_mid": 1890000
+      "estimate_mid": 790000
     },
     {
       "property_id": "7abfdbd4-cc77-429f-a46f-f9531a0dc7f4",
@@ -862,14 +862,14 @@
         "low": 1125000,
         "mid": 1209402,
         "high": 1324786,
-        "updated_at": "2026-11-13T21:15:36.751605+00:00",
+        "updated_at": "2026-11-15T04:31:53.508028+00:00",
         "confidence": "high",
-        "n": 87,
+        "n": 85,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 87,
-          "n_eff": 11.88,
+          "n": 85,
+          "n_eff": 11.53,
           "radius_km": 3.0,
           "median_ratio": 0.9675,
           "iqr_ratio": 0.1652,

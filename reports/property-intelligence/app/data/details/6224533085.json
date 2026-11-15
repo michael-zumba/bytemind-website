@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-12-03T00:30:00+00:00",
   "listed_at": "2026-11-11T01:48:14.763000+00:00",
-  "days_on_market": 1,
+  "days_on_market": 3,
   "lat": -36.8233867,
   "lon": 174.7938698,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2341356285.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1249,
-  "watchers": 82,
+  "view_count": 1535,
+  "watchers": 90,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-11T19:03:50.913908+00:00",
-  "days_since_last_change": 2.09,
+  "days_since_last_change": 3.39,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 0.2,
+  "sale_pressure": 0.5,
   "sale_pressure_label": "low",
-  "model_low": 887488,
-  "model_mid": 1218866,
-  "model_high": 1679824,
+  "model_low": 933453,
+  "model_mid": 1260151,
+  "model_high": 1706699,
   "model_confidence": "low",
-  "text_signal_pct": 7.451,
-  "description_index": 0.374996,
+  "text_signal_pct": 8.5805,
+  "description_index": 0.438252,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -318,11 +318,11 @@
   ],
   "model": {
     "listing_id": 6224533085,
-    "low": 887488,
-    "mid": 1218866,
-    "high": 1679824,
+    "low": 933453,
+    "mid": 1260151,
+    "high": 1706699,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3173, 0.3208], \"rel_width\": 0.6501, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3001, 0.3033], \"rel_width\": 0.6136, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6224533085,
@@ -330,49 +330,49 @@
     "exclamations": 0,
     "urgency": 0.256,
     "luxury": 0.0,
-    "condition_renovation": 0.506,
-    "views_waterfront": 0.2166,
-    "family_school": 0.1385,
+    "condition_renovation": 0.5055,
+    "views_waterfront": 0.2163,
+    "family_school": 0.1386,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4448,
-    "description_premium_pct": 7.451,
-    "description_index": 0.374996,
+    "description_premium_pct": 8.5805,
+    "description_index": 0.438252,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 3, \"views_waterfront\": 2, \"family_school\": 2, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-13T21:15:37.643617+00:00",
+    "updated_at": "2026-11-15T04:31:54.378941+00:00",
     "top_topics": [
       {
         "topic_id": 6,
-        "weight": 0.564816,
+        "weight": 0.575398,
         "label": "Family living & entertaining",
         "top_terms": [
           "morning",
           "friends",
           "relaxed",
           "coffee",
-          "life",
           "sense",
-          "morning coffee",
-          "setting",
+          "life",
           "inviting",
+          "setting",
+          "morning coffee",
+          "welcoming",
           "peaceful",
-          "step",
-          "welcoming"
+          "step"
         ]
       },
       {
-        "topic_id": 4,
-        "weight": 0.188266,
+        "topic_id": 8,
+        "weight": 0.176056,
         "label": "Parking, garden & section",
         "top_terms": [
           "fenced",
-          "brick",
           "fully fenced",
-          "street",
+          "brick",
           "fully",
-          "parking",
+          "street",
           "garden",
+          "parking",
           "sunny",
           "room",
           "street parking",
@@ -381,8 +381,27 @@
         ]
       },
       {
+        "topic_id": 11,
+        "weight": 0.066618,
+        "label": "Family living & entertaining II",
+        "top_terms": [
+          "extended",
+          "extended family",
+          "flexibility",
+          "living areas",
+          "areas",
+          "multiple",
+          "sea",
+          "sea views",
+          "guests",
+          "teenagers",
+          "views",
+          "family living"
+        ]
+      },
+      {
         "topic_id": 0,
-        "weight": 0.07578,
+        "weight": 0.065727,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -394,28 +413,9 @@
           "upstairs",
           "family bathroom",
           "floor",
-          "suite",
           "lounge",
+          "suite",
           "separate"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.061557,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "extended",
-          "extended family",
-          "flexibility",
-          "living areas",
-          "areas",
-          "multiple",
-          "guests",
-          "sea",
-          "sea views",
-          "teenagers",
-          "family living",
-          "income"
         ]
       }
     ]
@@ -464,7 +464,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-13T21:15:36.751605+00:00"
+    "updated_at": "2026-11-15T04:31:53.508028+00:00"
   },
   "body": "Blending timeless character with high stud ceilings, versatile living spaces and inviting outdoor entertaining, this charming home has plenty to offer in a sought-after Devonport location.\r\n\r\nWarm and welcoming, this character home combines comfort, charm and flexibility, with a practical layout that can easily adapt to your needs.\r\n\r\nInside, high stud ceilings enhance the sense of space and character, complemented by three well-proportioned bedrooms, a modern bathroom and the added convenience of a separate combined laundry and powder room. The sun-soaked front lounge or home office, with bifold doors opening onto the deck, offers a wonderfully flexible space, whether you're looking for a second living area, a place to work from home or extra room for family and guests. Storage is another bonus, with plenty of space for your belongings, including handy attic storage accessed via a pull-down ladder.\r\n\r\nOutside, inviting spaces at both the front and rear provide the perfect setting for entertaining friends and family, enjoying a morning coffee or simply relaxing in the sunshine.\r\n\r\nThe Devonport location adds even more appeal. With Devonport Village a short stroll away, you'll enjoy easy access to its popular cafés, restaurants, boutique shops and waterfront. Spend weekends exploring nearby beaches, enjoying coastal walks or taking advantage of the convenient ferry connection into Auckland's CBD.\r\n\r\nWith local schools, parks and recreational facilities also close by, it's easy to see why Devonport remains one of Auckland's most desirable places to call home.\r\n\r\nThe vendors have already purchased their next home and are ready for their next chapter, creating a fantastic opportunity for the next owners. Don't miss your chance to make this charming Devonport home your own. Come along to an open home and discover all it has to offer.",
   "photos": [
@@ -595,20 +595,6 @@
       "estimate_mid": 2060000
     },
     {
-      "property_id": "7db31181-7569-42ba-b355-118db8eaa989",
-      "address": "19 St Aubyn Street, Devonport, Auckland",
-      "sale_price": 2290000,
-      "sale_date": "2026-08-13T00:00:00+00:00",
-      "distance_km": 0.82,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2400000,
-      "estimate_mid": 2340000
-    },
-    {
       "property_id": "f423eafc-d727-460a-a08f-e8f266e60d3b",
       "address": "2/45 Vauxhall Road, Devonport, Auckland",
       "sale_price": 690000,
@@ -663,6 +649,20 @@
       "property_type": null,
       "cv": 1525000,
       "estimate_mid": 1400000
+    },
+    {
+      "property_id": "54253a1a-5107-42cf-9b67-0cdd3c873083",
+      "address": "3/1 Rata Road, Devonport, Auckland",
+      "sale_price": 1527500,
+      "sale_date": "2026-09-17T00:00:00+00:00",
+      "distance_km": 1.17,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1375000,
+      "estimate_mid": 1550000
     }
   ],
   "valuation": {
@@ -678,14 +678,14 @@
         "low": 1062500,
         "mid": 1400000,
         "high": 1800000,
-        "updated_at": "2026-11-13T21:15:36.751605+00:00",
+        "updated_at": "2026-11-15T04:31:53.508028+00:00",
         "confidence": "low",
         "n": 46,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
           "n": 46,
-          "n_eff": 14.99,
+          "n_eff": 14.9,
           "radius_km": 3.0,
           "iqr_ratio": 0.5268,
           "same_suburb": 33,

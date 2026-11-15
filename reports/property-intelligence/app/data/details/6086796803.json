@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-08-16T22:40:23.873000+00:00",
-  "days_on_market": 89,
+  "days_on_market": 90,
   "lat": -36.7344216,
   "lon": 174.7508127,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2330428498.jpg",
@@ -63,7 +63,7 @@
   "change_signal": "price cut",
   "change_count": 2,
   "last_change_at": "2026-11-12T18:02:13.348931+00:00",
-  "days_since_last_change": 2.44,
+  "days_since_last_change": 3.04,
   "price_drop_count": 1,
   "description_change_count": 0,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 72.8,
+  "sale_pressure": 73.0,
   "sale_pressure_label": "high",
-  "model_low": 2538691,
-  "model_mid": 2745159,
-  "model_high": 3002321,
+  "model_low": 2514840,
+  "model_mid": 2731513,
+  "model_high": 2982139,
   "model_confidence": "high",
-  "text_signal_pct": -3.8498,
-  "description_index": -0.208998,
+  "text_signal_pct": -0.456,
+  "description_index": -0.023766,
   "events_count": 2,
   "last_event": "price_change",
   "schools": [
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 6086796803,
-    "low": 2538691,
-    "mid": 2745159,
-    "high": 3002321,
+    "low": 2514840,
+    "mid": 2731513,
+    "high": 2982139,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0782, 0.0895], \"rel_width\": 0.1689, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0826, 0.0878], \"rel_width\": 0.1711, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6086796803,
@@ -290,41 +290,60 @@
     "exclamations": 2,
     "urgency": 0.2867,
     "luxury": 0.0,
-    "condition_renovation": 0.9435,
-    "views_waterfront": 0.4846,
-    "family_school": 0.4657,
-    "investment": 0.2953,
-    "risk": 0.3776,
+    "condition_renovation": 0.9444,
+    "views_waterfront": 0.4851,
+    "family_school": 0.4652,
+    "investment": 0.306,
+    "risk": 0.3609,
     "readability": 0.3428,
-    "description_premium_pct": -3.8498,
-    "description_index": -0.208998,
+    "description_premium_pct": -0.456,
+    "description_index": -0.023766,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 5, \"views_waterfront\": 4, \"family_school\": 6, \"investment\": 2, \"risk\": 1}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-15T04:31:54.378941+00:00",
+    "updated_at": "2026-11-15T18:56:45.262177+00:00",
     "top_topics": [
       {
         "topic_id": 1,
-        "weight": 0.250906,
+        "weight": 0.257442,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
           "future",
           "site",
           "land",
-          "subject",
-          "development",
           "property",
+          "development",
+          "subject",
           "council",
           "existing",
-          "subject council",
           "value",
-          "possibilities"
+          "possibilities",
+          "approval"
         ]
       },
       {
-        "topic_id": 11,
-        "weight": 0.206763,
-        "label": "Family living & entertaining II",
+        "topic_id": 4,
+        "weight": 0.193024,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "fenced",
+          "brick",
+          "fully fenced",
+          "street",
+          "fully",
+          "parking",
+          "garden",
+          "sunny",
+          "room",
+          "street parking",
+          "north facing",
+          "double"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.173376,
+        "label": "Sea views & coastal outlook",
         "top_terms": [
           "extended",
           "extended family",
@@ -332,50 +351,31 @@
           "living areas",
           "areas",
           "multiple",
+          "guests",
           "sea",
           "sea views",
-          "guests",
           "teenagers",
-          "views",
-          "family living"
+          "family living",
+          "income"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.180998,
+        "weight": 0.147733,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
           "school",
           "girls",
           "girls high",
+          "westlake girls",
+          "high school",
+          "high",
           "boys",
           "westlake boys",
-          "high",
-          "high school",
-          "westlake girls",
           "intermediate",
           "school suburb",
-          "suburb school"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.167733,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "fenced",
-          "fully fenced",
-          "brick",
-          "fully",
-          "street",
-          "garden",
-          "parking",
-          "sunny",
-          "room",
-          "street parking",
-          "north facing",
-          "facing"
+          "shore"
         ]
       }
     ]
@@ -453,14 +453,14 @@
     "first_description_change_at": null,
     "last_description_change_at": null,
     "days_to_first_change": 19.34,
-    "days_since_last_change": 3.58,
+    "days_since_last_change": 4.18,
     "avg_days_between_changes": null,
     "cumulative_change": -99000,
     "cumulative_change_pct": -0.037373,
     "largest_drop": -99000,
     "largest_drop_pct": -0.037373,
     "last_direction": "drop",
-    "updated_at": "2026-11-15T04:31:53.508028+00:00"
+    "updated_at": "2026-11-15T18:56:44.410066+00:00"
   },
   "body": "Our vendor has issued firm instructions this property is to be sold!\r\n\r\nComprising of two separate dwellings positioned on the one 777sqm (more or less) freehold title, properties offering this level of flexibility in such a tightly held coastal location are exceptionally rare. Whether you're searching for the ultimate family home, a legal home and income, or a long-term investment with future potential, this is an opportunity not to be missed.\r\n\r\nMain Dwelling\r\n- Five bedrooms, two bathrooms, three living\r\n- Double internal access garage + off-street parking\r\n- Seamless flow to outdoor entertaining decks\r\n- Elevated sea views\r\n- Perfectly enjoyable as is, with room to further add value\r\n- 1975 Block, brick and timber \r\n\r\nMinor Dwelling\r\n- Two bedrooms, one and a half bathrooms, one living\r\n- Single level living\r\n- Single internal access garage + off-street parking\r\n- Stylishly modernised kitchen\r\n- Fabulous flow to courtyard \r\n- Privately positioned to the rear of the site\r\n- 2002 Brick \r\n\r\nAdding even more appeal is the unbeatable location. Enjoy an easy access to beautiful beaches, local cafés, parks and transport, while being zoned for some of the North Shore's most desirable schools, including Rangitoto College, Murrays Bay Intermediate and Murrays Bay School. Our vendor is serious about selling, so don't delay your inspection!\r\n\r\nTo download available documents for this property please visit www.harcourtsfiles.co.nz and enter the 4 digit code 'L R J C'.\r\n\r\n*Some of the property photos have been virtually staged.",
   "photos": [
@@ -852,7 +852,7 @@
         "low": 2353000,
         "mid": 2661905,
         "high": 2915714,
-        "updated_at": "2026-11-15T04:31:53.508028+00:00",
+        "updated_at": "2026-11-15T18:56:44.410066+00:00",
         "confidence": "high",
         "n": 110,
         "basis": {

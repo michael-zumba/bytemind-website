@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-03-25T23:07:41.330000+00:00",
-  "days_on_market": 233,
+  "days_on_market": 234,
   "lat": -36.6364701,
   "lon": 174.7360442,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2296283520.jpg",
@@ -29,15 +29,15 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": null,
-  "comp_mid": null,
-  "comp_high": null,
-  "comp_confidence": null,
-  "comp_n": null,
-  "value_low": 794428,
-  "value_mid": 926121,
-  "value_high": 1333990,
-  "value_source": "active_suburb_guide",
+  "comp_low": 560000,
+  "comp_mid": 560000,
+  "comp_high": 810000,
+  "comp_confidence": "low",
+  "comp_n": 4,
+  "value_low": 560000,
+  "value_mid": 560000,
+  "value_high": 810000,
+  "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
   "land_value": null,
@@ -63,7 +63,7 @@
   "change_signal": "price cut + copy changed",
   "change_count": 3,
   "last_change_at": "2026-11-06T22:35:15.437878+00:00",
-  "days_since_last_change": 8.25,
+  "days_since_last_change": 8.85,
   "price_drop_count": 1,
   "description_change_count": 1,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 93.0,
   "sale_pressure_label": "high",
-  "model_low": 623145,
-  "model_mid": 841239,
-  "model_high": 1139341,
+  "model_low": 582601,
+  "model_mid": 795000,
+  "model_high": 1099183,
   "model_confidence": "low",
-  "text_signal_pct": -1.4917,
-  "description_index": -0.080013,
+  "text_signal_pct": -5.5469,
+  "description_index": -0.29671,
   "events_count": 3,
   "last_event": "new_listing",
   "schools": [
@@ -268,33 +268,33 @@
   ],
   "model": {
     "listing_id": 5851681875,
-    "low": 623145,
-    "mid": 841239,
-    "high": 1139341,
+    "low": 582601,
+    "mid": 795000,
+    "high": 1099183,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3001, 0.3033], \"rel_width\": 0.6136, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3108, 0.324], \"rel_width\": 0.6498, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5851681875,
     "word_count": 270,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.1018,
+    "luxury": 0.1021,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.101,
-    "family_school": 0.2587,
-    "investment": 0.3691,
+    "views_waterfront": 0.1011,
+    "family_school": 0.2584,
+    "investment": 0.3824,
     "risk": 0.0,
     "readability": 0.4632,
-    "description_premium_pct": -1.4917,
-    "description_index": -0.080013,
+    "description_premium_pct": -5.5469,
+    "description_index": -0.29671,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 0, \"views_waterfront\": 1, \"family_school\": 4, \"investment\": 3, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-15T04:31:54.378941+00:00",
+    "updated_at": "2026-11-15T18:56:45.262177+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.355481,
+        "weight": 0.313197,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -302,37 +302,37 @@
           "leave",
           "lock leave",
           "car",
-          "kensington",
           "secure",
           "park",
           "balcony",
-          "kensington park",
+          "pool",
           "complex",
-          "pool"
+          "kensington",
+          "bedroom apartment"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.183692,
-        "label": "Sea views & coastal outlook",
+        "weight": 0.268906,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "dream",
           "section",
+          "dream",
           "build",
-          "views",
           "dream home",
           "land",
+          "views",
+          "whangaparaoa",
+          "sections",
+          "building",
           "sea",
-          "regional",
-          "auckland",
-          "regional park",
-          "sea views",
-          "building"
+          "penlink",
+          "auckland"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.172881,
+        "weight": 0.167804,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -351,21 +351,21 @@
       },
       {
         "topic_id": 1,
-        "weight": 0.147707,
+        "weight": 0.130458,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
           "future",
           "site",
           "land",
-          "subject",
-          "development",
           "property",
+          "development",
+          "subject",
           "council",
           "existing",
-          "subject council",
           "value",
-          "possibilities"
+          "possibilities",
+          "approval"
         ]
       }
     ]
@@ -433,14 +433,14 @@
     "first_description_change_at": null,
     "last_description_change_at": null,
     "days_to_first_change": 3.05,
-    "days_since_last_change": 8.25,
+    "days_since_last_change": 8.85,
     "avg_days_between_changes": null,
     "cumulative_change": -15000,
     "cumulative_change_pct": -0.020548,
     "largest_drop": -15000,
     "largest_drop_pct": -0.020548,
     "last_direction": "drop",
-    "updated_at": "2026-11-15T04:31:53.508028+00:00"
+    "updated_at": "2026-11-15T18:56:44.410066+00:00"
   },
   "body": "Residential + Commercial property.  Priced at $715,000 plus GST (if any)\r\nWelcome to the ultimate apartment in the heart of Stanmore Bay.\r\nClose to amenities join this community of owner occupiers or look at the incredible investment opportunities available. \r\n\r\nDownstairs consists of a large scale industrial space with industrial height garage door that could fit your personal toys such as a boat a camper a luxury vehicle or even could house your small business. \r\n\r\nWith access to a private fenced garden bathroom and seperate office space this is an epic space to harness your business from home. \r\nWith private access and being able to be locked seperate from the upstairs apartment you could choose to have a seperate lease/rental for either section of this property. \r\n\r\nUpstairs you have a gorgeous one bedroom apartment, with an open plan kitchen dining lounge that seamlessly flows onto a spacious covered balcony. At the rear overlooking the bush and garden you'll find your bedroom with walk through wardrobe and ensuite. \r\n\r\nLocated in the sought-after coastal suburb of Stanmore Bay on the beautiful Whangaparaoa Peninsula, this property is conveniently close to amenities including the Coast Plaza, Silverdale Shopping Centre, a variety of cafes and restaurants, and some of Auckland's finest beaches. With the Penlink construction well underway, the location of this property is ideal.\r\n\r\nZoned for mixed-use business, this property has everything you need if you are wanting to start your new business, seek a smart investment, or would like to generate valuable cash flow.\r\n\r\nPreviously returned a lease of $40,000pa + GST this may just be what you are looking for.\r\n\r\nPlease contact me for further information and a private viewing Katie Buchanan 021 958 743 and Lilia Finlay 021 858293",
   "photos": [
@@ -646,12 +646,33 @@
     }
   ],
   "valuation": {
-    "value_low": 794428,
-    "value_mid": 926121,
-    "value_high": 1333990,
-    "value_source": "active_suburb_guide",
+    "value_low": 560000,
+    "value_mid": 560000,
+    "value_high": 810000,
+    "value_source": "sold_comps_absolute",
     "value_confidence": "low",
-    "sources": [],
+    "sources": [
+      {
+        "name": "Nearby sold comparables",
+        "range": "$560K – $810K",
+        "low": 560000,
+        "mid": 560000,
+        "high": 810000,
+        "updated_at": "2026-11-15T18:56:44.410066+00:00",
+        "confidence": "low",
+        "n": 4,
+        "basis": {
+          "confidence": "low",
+          "source": "sold_comps_absolute",
+          "n": 4,
+          "n_eff": 0.68,
+          "radius_km": 3.0,
+          "iqr_ratio": 0.4464,
+          "same_suburb": 1,
+          "model_version": "comp-cv-v1"
+        }
+      }
+    ],
     "methodology": "Primary range is the Homes.co.nz AVM shown on the Trade Me listing. The independent comparable model weights nearby sold prices by distance, recency and property type, and normalises by council CV. When neither is available, a calibrated hedonic fallback is used and labelled. The hedonic model is trained on listings with a Homes AVM and validated with 5-fold cross-validation; it is a fallback/cross-check, not a valuation."
   }
 }

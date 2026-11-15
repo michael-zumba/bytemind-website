@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-12-01T20:30:00+00:00",
   "listed_at": "2026-11-10T03:52:55.343000+00:00",
-  "days_on_market": 4,
+  "days_on_market": 5,
   "lat": -36.6998253,
   "lon": 174.7269135,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2341153291.jpg",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 3,
   "last_change_at": "2026-11-12T18:45:52.828514+00:00",
-  "days_since_last_change": 2.41,
+  "days_since_last_change": 3.01,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 1,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 0.7,
+  "sale_pressure": 0.8,
   "sale_pressure_label": "low",
-  "model_low": 1119738,
-  "model_mid": 1210805,
-  "model_high": 1324231,
+  "model_low": 1109591,
+  "model_mid": 1205191,
+  "model_high": 1315772,
   "model_confidence": "high",
-  "text_signal_pct": 7.9611,
-  "description_index": 0.407796,
+  "text_signal_pct": 11.0434,
+  "description_index": 0.544635,
   "events_count": 3,
   "last_event": "new_listing",
   "schools": [
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 6223042831,
-    "low": 1119738,
-    "mid": 1210805,
-    "high": 1324231,
+    "low": 1109591,
+    "mid": 1205191,
+    "high": 1315772,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0782, 0.0895], \"rel_width\": 0.1689, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0826, 0.0878], \"rel_width\": 0.1711, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6223042831,
@@ -290,59 +290,40 @@
     "exclamations": 0,
     "urgency": 0.1802,
     "luxury": 0.0,
-    "condition_renovation": 0.3558,
-    "views_waterfront": 0.3807,
-    "family_school": 0.683,
+    "condition_renovation": 0.3561,
+    "views_waterfront": 0.3811,
+    "family_school": 0.6822,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3554,
-    "description_premium_pct": 7.9611,
-    "description_index": 0.407796,
+    "description_premium_pct": 11.0434,
+    "description_index": 0.544635,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 3, \"views_waterfront\": 5, \"family_school\": 14, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-15T04:31:54.378941+00:00",
+    "updated_at": "2026-11-15T18:56:45.262177+00:00",
     "top_topics": [
       {
-        "topic_id": 8,
-        "weight": 0.44899,
+        "topic_id": 4,
+        "weight": 0.490913,
         "label": "Parking, garden & section",
         "top_terms": [
           "fenced",
-          "fully fenced",
           "brick",
-          "fully",
+          "fully fenced",
           "street",
-          "garden",
+          "fully",
           "parking",
+          "garden",
           "sunny",
           "room",
           "street parking",
           "north facing",
-          "facing"
-        ]
-      },
-      {
-        "topic_id": 9,
-        "weight": 0.139129,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "dream",
-          "section",
-          "build",
-          "views",
-          "dream home",
-          "land",
-          "sea",
-          "regional",
-          "auckland",
-          "regional park",
-          "sea views",
-          "building"
+          "double"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.128101,
+        "weight": 0.121683,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -360,22 +341,41 @@
         ]
       },
       {
-        "topic_id": 5,
-        "weight": 0.103425,
-        "label": "Westlake school zone",
+        "topic_id": 9,
+        "weight": 0.110717,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "westlake",
-          "school",
-          "girls",
-          "girls high",
-          "boys",
-          "westlake boys",
-          "high",
-          "high school",
-          "westlake girls",
-          "intermediate",
-          "school suburb",
-          "suburb school"
+          "section",
+          "dream",
+          "build",
+          "dream home",
+          "land",
+          "views",
+          "whangaparaoa",
+          "sections",
+          "building",
+          "sea",
+          "penlink",
+          "auckland"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.101617,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "views",
+          "residence",
+          "waterfront",
+          "expansive",
+          "scale",
+          "gulf",
+          "harbour",
+          "spectacular",
+          "hauraki",
+          "hauraki gulf",
+          "pool",
+          "position"
         ]
       }
     ]
@@ -447,7 +447,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-15T04:31:53.508028+00:00"
+    "updated_at": "2026-11-15T18:56:44.410066+00:00"
   },
   "body": "Auction: 8-12 The Promenade, Takapuna on Wednesday 2 December 2026 at 9:30AM  (unless sold prior)\r\n\r\nFor the first time in many years, this much-loved family home is being offered to the market, presenting a wonderful opportunity to secure a special property in a sought-after location.\r\n\r\nStep inside and look up. HIGH vaulted ceilings with exposed timber beams run through the living areas, giving the home a wonderful sense of space.\r\n\r\nAdd wide views, including sea views, and sun pouring in from three sides, and you’ll see why this family has enjoyed living here. The elevated position, the huge double garage and 547m2 section with plenty of parking options add to the appeal. \r\n\r\nThe main living level includes:\r\n• A HUGE main lounge with heat pump and doors opening onto the wraparound deck, with views out to the sea\r\n• A second living and dining area, open plan with the kitchen\r\n• A large kitchen with double wall ovens and plenty of storage\r\n• The master bedroom with en-suite, lovely and sunny, opening onto its own deck with leafy views\r\n• Two more bedrooms, one also opening onto the deck\r\n• A family bathroom with a separate bath and shower\r\n\r\nThe lower-level offers:\r\n• A fourth bedroom, ideal for a teenager, guests or a home office\r\n• An oversized double garage with workshop area and laundry\r\n• Under-deck storage\r\n \r\nOutside:\r\n• PLENTY of decking for entertaining or just relaxing in the sun\r\n• Fully fenced, safe for children and pets\r\n• A sunny lawn, low-maintenance gardens and a garden shed\r\n• Lots of off-street parking\r\n\r\nThe freshly painted living areas, plus NEW carpet, mean you can move straight in and enjoy.\r\n\r\nLocation, location:\r\n• An established neighbourhood with friendly, long-standing neighbours\r\n• Minutes to Waiake, Browns Bay and Long Bay beaches, plus Long Bay Regional Park\r\n• Shopping choices at Browns Bay, Torbay village, New World Long Bay and Westfield Albany\r\n• Close to Glamorgan School, Northcross Intermediate and Long Bay College, with Massey University’s Albany campus nearby\r\n• Handy to North Harbour Stadium, local pools, tennis, hockey and golf, and North Shore Hospital\r\n• On Bus route Bus and easy links to park and ride, the northern, southern and western motorways\r\n\r\nA special home offering space, sunshine, views and an enviable coastal lifestyle. An opportunity not to be missed.\r\nView during our open homes, or phone us to arrange a viewing.",
   "photos": [
@@ -839,7 +839,7 @@
         "low": 1071875,
         "mid": 1165111,
         "high": 1250000,
-        "updated_at": "2026-11-15T04:31:53.508028+00:00",
+        "updated_at": "2026-11-15T18:56:44.410066+00:00",
         "confidence": "high",
         "n": 90,
         "basis": {

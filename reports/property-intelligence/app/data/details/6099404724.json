@@ -16,8 +16,8 @@
   "asking_kind": null,
   "sale_method": "Price by negotiation",
   "deadline_at": null,
-  "listed_at": "2026-08-24T21:24:23.150000+00:00",
-  "days_on_market": 81,
+  "listed_at": "2026-08-24T20:24:23.150000+00:00",
+  "days_on_market": 82,
   "lat": -36.955722,
   "lon": 174.7971907,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2325185076.jpg",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:21:38.680462+00:00",
-  "days_since_last_change": 11.3,
+  "days_since_last_change": 11.9,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 43.5,
+  "sale_pressure": 43.7,
   "sale_pressure_label": "medium",
-  "model_low": 719393,
-  "model_mid": 971173,
-  "model_high": 1315318,
+  "model_low": 709675,
+  "model_mid": 968401,
+  "model_high": 1338931,
   "model_confidence": "low",
-  "text_signal_pct": -8.563,
-  "description_index": -0.476577,
+  "text_signal_pct": -7.0481,
+  "description_index": -0.380011,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -258,52 +258,71 @@
   ],
   "model": {
     "listing_id": 6099404724,
-    "low": 719393,
-    "mid": 971173,
-    "high": 1315318,
+    "low": 709675,
+    "mid": 968401,
+    "high": 1338931,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3001, 0.3033], \"rel_width\": 0.6136, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3108, 0.324], \"rel_width\": 0.6498, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6099404724,
     "word_count": 141,
     "exclamations": 2,
     "urgency": 0.4574,
-    "luxury": 0.3897,
+    "luxury": 0.391,
     "condition_renovation": 0.0,
     "views_waterfront": 0.0,
-    "family_school": 0.2477,
+    "family_school": 0.2474,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3538,
-    "description_premium_pct": -8.563,
-    "description_index": -0.476577,
+    "description_premium_pct": -7.0481,
+    "description_index": -0.380011,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 2, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 2, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-15T04:31:54.378941+00:00",
+    "updated_at": "2026-11-15T18:56:45.262177+00:00",
     "top_topics": [
       {
         "topic_id": 6,
-        "weight": 0.39099,
+        "weight": 0.391449,
         "label": "Family living & entertaining",
         "top_terms": [
           "morning",
           "friends",
           "relaxed",
           "coffee",
-          "sense",
           "life",
+          "sense",
+          "morning coffee",
           "inviting",
           "setting",
-          "morning coffee",
-          "welcoming",
           "peaceful",
-          "step"
+          "step",
+          "welcoming"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.239138,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low maintenance",
+          "brand new",
+          "brand",
+          "low",
+          "new",
+          "single",
+          "easy care",
+          "quality",
+          "care",
+          "new home",
+          "convenience"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.238534,
+        "weight": 0.19886,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -311,51 +330,32 @@
           "leave",
           "lock leave",
           "car",
-          "kensington",
           "secure",
           "park",
           "balcony",
-          "kensington park",
+          "pool",
           "complex",
-          "pool"
+          "kensington",
+          "bedroom apartment"
         ]
       },
       {
-        "topic_id": 2,
-        "weight": 0.221,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "brand new",
-          "brand",
-          "new",
-          "maintenance",
-          "low maintenance",
-          "low",
-          "single",
-          "easy care",
-          "new home",
-          "care",
-          "quality",
-          "convenience"
-        ]
-      },
-      {
-        "topic_id": 4,
-        "weight": 0.149476,
-        "label": "Luxury, architectural & prestige",
+        "topic_id": 11,
+        "weight": 0.165167,
+        "label": "Luxury, architectural & prestige II",
         "top_terms": [
           "premium",
           "quality",
           "designer",
-          "appliances",
           "finishes",
+          "appliances",
           "year",
-          "designer kitchen",
           "luxury",
+          "designer kitchen",
           "comfort",
+          "new",
           "heating",
-          "year round",
-          "round"
+          "design"
         ]
       }
     ]
@@ -404,7 +404,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-15T04:31:53.508028+00:00"
+    "updated_at": "2026-11-15T18:56:44.410066+00:00"
   },
   "body": "Don't miss your chance to secure this stunning, standalone brand-new home!\r\n\r\nSpread across three beautifully designed levels, this spacious and luxurious residence delivers modern style, comfort and functionality - perfect for families, professionals or those looking for a home with that extra touch of something special.\r\n\r\nProperty Highlights\r\n*\t4 spacious bedrooms\r\n*\t3 modern bathrooms\r\n*\tContemporary kitchen equipped with a dishwasher, oven and rangehood\r\n*\tOpen-plan living & dining\r\n*\tPrivate outdoor deck flowing seamlessly from the living area\r\n*\t2 car parks\r\n*\tDedicated laundry\r\n*\tAmple storage throughout\r\n\r\nA Lifestyle You'll Love\r\nDesigned to capture beautiful morning and afternoon sun, this home offers a warm, bright and inviting atmosphere throughout the day.\r\n\r\nAnd there's even more to enjoy right on your doorstep, with access to:\r\n*\tResidents' clubhouse\r\n*\tMultipurpose court\r\n*\tChildren's playground\r\n*\tBBQ area\r\n*\tPeaceful olive grove walkway\r\n\r\nWhether you're entertaining friends, enjoying family time or simply looking to unwind surrounded by nature, this home offers a lifestyle that's hard to beat.\r\n\r\nSecure your private viewing today and experience the space, style and lifestyle for yourself.\r\nCall now - your new home could be waiting!",
   "photos": [

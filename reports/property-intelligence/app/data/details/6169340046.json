@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-08T03:03:07.443000+00:00",
-  "days_on_market": 37,
+  "days_on_market": 38,
   "lat": -36.5764584,
   "lon": 174.683754,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333995787.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": -7929,
   "ask_gap_pct": -0.0067,
   "deal_gap": 0.0067,
-  "view_count": 1888,
+  "view_count": 1905,
   "watchers": 27,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 3,
   "last_change_at": "2026-11-11T17:02:20.534791+00:00",
-  "days_since_last_change": 3.48,
+  "days_since_last_change": 4.08,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 61.2,
+  "sale_pressure": 61.3,
   "sale_pressure_label": "medium",
-  "model_low": 1098046,
-  "model_mid": 1187349,
-  "model_high": 1298578,
+  "model_low": 1097062,
+  "model_mid": 1191582,
+  "model_high": 1300914,
   "model_confidence": "high",
-  "text_signal_pct": 0.8666,
-  "description_index": 0.045937,
+  "text_signal_pct": 1.7967,
+  "description_index": 0.092587,
   "events_count": 3,
   "last_event": "new_listing",
   "schools": [
@@ -268,33 +268,33 @@
   ],
   "model": {
     "listing_id": 6169340046,
-    "low": 1098046,
-    "mid": 1187349,
-    "high": 1298578,
+    "low": 1097062,
+    "mid": 1191582,
+    "high": 1300914,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0782, 0.0895], \"rel_width\": 0.1689, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0826, 0.0878], \"rel_width\": 0.1711, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6169340046,
     "word_count": 369,
     "exclamations": 1,
     "urgency": 0.6992,
-    "luxury": 0.0745,
-    "condition_renovation": 0.3452,
-    "views_waterfront": 0.1477,
-    "family_school": 0.3786,
+    "luxury": 0.0747,
+    "condition_renovation": 0.3455,
+    "views_waterfront": 0.1479,
+    "family_school": 0.3782,
     "investment": 0.0,
-    "risk": 0.4605,
+    "risk": 0.4401,
     "readability": 0.2464,
-    "description_premium_pct": 0.8666,
-    "description_index": 0.045937,
+    "description_premium_pct": 1.7967,
+    "description_index": 0.092587,
     "lexicon_hits_json": "{\"urgency\": 4, \"luxury\": 1, \"condition_renovation\": 3, \"views_waterfront\": 2, \"family_school\": 8, \"investment\": 0, \"risk\": 2}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-15T04:31:54.378941+00:00",
+    "updated_at": "2026-11-15T18:56:45.262177+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.830065,
+        "weight": 0.781701,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -302,19 +302,57 @@
           "leave",
           "lock leave",
           "car",
-          "kensington",
           "secure",
           "park",
           "balcony",
-          "kensington park",
+          "pool",
           "complex",
-          "pool"
+          "kensington",
+          "bedroom apartment"
         ]
       },
       {
-        "topic_id": 11,
-        "weight": 0.050078,
-        "label": "Family living & entertaining II",
+        "topic_id": 6,
+        "weight": 0.067826,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "morning",
+          "friends",
+          "relaxed",
+          "coffee",
+          "life",
+          "sense",
+          "morning coffee",
+          "inviting",
+          "setting",
+          "peaceful",
+          "step",
+          "welcoming"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.058765,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "views",
+          "residence",
+          "waterfront",
+          "expansive",
+          "scale",
+          "gulf",
+          "harbour",
+          "spectacular",
+          "hauraki",
+          "hauraki gulf",
+          "pool",
+          "position"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.048616,
+        "label": "Sea views & coastal outlook",
         "top_terms": [
           "extended",
           "extended family",
@@ -322,50 +360,12 @@
           "living areas",
           "areas",
           "multiple",
+          "guests",
           "sea",
           "sea views",
-          "guests",
           "teenagers",
-          "views",
-          "family living"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.049998,
-        "label": "Resort amenities (pool / tennis / spa)",
-        "top_terms": [
-          "views",
-          "residence",
-          "waterfront",
-          "scale",
-          "expansive",
-          "harbour",
-          "pool",
-          "gulf",
-          "spectacular",
-          "aucklands",
-          "hauraki",
-          "hauraki gulf"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.035296,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "morning",
-          "friends",
-          "relaxed",
-          "coffee",
-          "sense",
-          "life",
-          "inviting",
-          "setting",
-          "morning coffee",
-          "welcoming",
-          "peaceful",
-          "step"
+          "family living",
+          "income"
         ]
       }
     ]
@@ -445,7 +445,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-15T04:31:53.508028+00:00"
+    "updated_at": "2026-11-15T18:56:44.410066+00:00"
   },
   "body": "VIEWING BY APPOINTMENT \r\n\r\nPositioned within the highly regarded Kensington Park community within the tightly held Tui Point Complex, this beautifully presented apartment offers a rare combination of peaceful surroundings, quality construction, generous living and easy, single-level living. This property is a deceased estate and there is no back up plan, it needs to be sold!\r\n\r\nNorth-facing and opening directly onto the extensive, professionally maintained gardens, the home is perfectly positioned to enjoy plenty of natural light and a peaceful outlook. The spacious covered balcony with sliding shade louvers overlooks the manicured gardens and putting green, creating an ideal spot to enjoy your morning coffee or entertain friends and family. \r\n\r\nLocated alongside the beautiful Alice Eaves Scenic Reserve, Kensington Park offers a luxurious, safe, lock up and leave lifestyle that is hard to replicate. Residents also have access to a range of fantastic facilities, including a heated indoor swimming pool, putting green, pétanque terrain newly opened cafe, gym and sauna as well as a plethora of bush walks. Minutes away is Orewa beach and township, a thriving community just 35 minutes away from Auckland CBD.\r\n\r\nInside, the 103sqm (more or less) apartment is thoughtfully laid out with two generous bedrooms, two bathrooms, open-plan kitchen and living areas, and excellent storage. The additional 16sqm balcony extends the living space and makes the most of the peaceful surroundings.\r\n\r\nThe property also comes with quality chattels and the convenience of a secure basement car park with elevator access and storage locker, making this an excellent option for those looking for easy, low-maintenance living.\r\n\r\nWith a freehold (strata) title and affordable body corporate fees, this is an opportunity worth serious consideration - particularly with motivated vendors ready to move forward.\r\n\r\n\r\nKEY FEATURES:\r\n\r\n- Deceased estate - motivated vendors\r\n- 2 bedrooms\r\n- 2 bathrooms\r\n- 103sqm (more or less) internal floor area\r\n- 16sqm covered balcony\r\n- North-facing orientation\r\n- Ground-floor access to extensive manicured gardens\r\n- Secure basement car park and storage locker\r\n- Elevator access for easy single-level living\r\n- Heated indoor swimming pool\r\n- Gym, sauna, cafe, putting green & pétanque terrain all nearby\r\n- Adjacent to Alice Eaves Scenic Reserve\r\n- Freehold (strata) title\r\n- Highly regarded Kensington Park location\r\n\r\nPrice by Negotiation\r\nAgents: Conjunctionals welcome from all agencies.\r\n\r\nTo view property files: https://www.harcourtsfiles.co.nz/listings/1WA2\r\n\r\nContact us to book a private viewing:\r\nNathan Canton 021 088 89478 | Josh Smith 021 235 8802",
   "photos": [
@@ -837,7 +837,7 @@
         "low": 1091837,
         "mid": 1209239,
         "high": 1250000,
-        "updated_at": "2026-11-15T04:31:53.508028+00:00",
+        "updated_at": "2026-11-15T18:56:44.410066+00:00",
         "confidence": "high",
         "n": 51,
         "basis": {

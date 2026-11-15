@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-12-02T23:00:00+00:00",
   "listed_at": "2026-11-09T22:26:43.910000+00:00",
-  "days_on_market": 4,
+  "days_on_market": 5,
   "lat": -36.7115205,
   "lon": 174.7403857,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2341063225.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1767,
-  "watchers": 73,
+  "view_count": 1944,
+  "watchers": 72,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "crosslease",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-10T14:15:42.927932+00:00",
-  "days_since_last_change": 4.59,
+  "days_since_last_change": 5.2,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 9,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 0.7,
+  "sale_pressure": 0.8,
   "sale_pressure_label": "low",
-  "model_low": 923555,
-  "model_mid": 998666,
-  "model_high": 1092220,
+  "model_low": 918573,
+  "model_mid": 997715,
+  "model_high": 1089259,
   "model_confidence": "high",
-  "text_signal_pct": -2.6974,
-  "description_index": -0.145571,
+  "text_signal_pct": -2.4597,
+  "description_index": -0.129486,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6222577935,
-    "low": 923555,
-    "mid": 998666,
-    "high": 1092220,
+    "low": 918573,
+    "mid": 997715,
+    "high": 1089259,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0782, 0.0895], \"rel_width\": 0.1689, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0826, 0.0878], \"rel_width\": 0.1711, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6222577935,
@@ -300,59 +300,78 @@
     "exclamations": 1,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.2258,
-    "views_waterfront": 0.145,
-    "family_school": 0.5574,
-    "investment": 0.1767,
+    "condition_renovation": 0.2261,
+    "views_waterfront": 0.1451,
+    "family_school": 0.5568,
+    "investment": 0.1831,
     "risk": 0.0,
     "readability": 0.5333,
-    "description_premium_pct": -2.6974,
-    "description_index": -0.145571,
+    "description_premium_pct": -2.4597,
+    "description_index": -0.129486,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 1, \"family_school\": 6, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-15T04:31:54.378941+00:00",
+    "updated_at": "2026-11-15T18:56:45.262177+00:00",
     "top_topics": [
       {
-        "topic_id": 8,
-        "weight": 0.170139,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "fenced",
-          "fully fenced",
-          "brick",
-          "fully",
-          "street",
-          "garden",
-          "parking",
-          "sunny",
-          "room",
-          "street parking",
-          "north facing",
-          "facing"
-        ]
-      },
-      {
         "topic_id": 6,
-        "weight": 0.170068,
+        "weight": 0.191054,
         "label": "Family living & entertaining",
         "top_terms": [
           "morning",
           "friends",
           "relaxed",
           "coffee",
-          "sense",
           "life",
+          "sense",
+          "morning coffee",
           "inviting",
           "setting",
-          "morning coffee",
-          "welcoming",
           "peaceful",
-          "step"
+          "step",
+          "welcoming"
+        ]
+      },
+      {
+        "topic_id": 4,
+        "weight": 0.159135,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "fenced",
+          "brick",
+          "fully fenced",
+          "street",
+          "fully",
+          "parking",
+          "garden",
+          "sunny",
+          "room",
+          "street parking",
+          "north facing",
+          "double"
+        ]
+      },
+      {
+        "topic_id": 1,
+        "weight": 0.15709,
+        "label": "Development & land potential",
+        "top_terms": [
+          "potential",
+          "future",
+          "site",
+          "land",
+          "property",
+          "development",
+          "subject",
+          "council",
+          "existing",
+          "value",
+          "possibilities",
+          "approval"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.15135,
+        "weight": 0.148023,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -367,25 +386,6 @@
           "lounge",
           "suite",
           "separate"
-        ]
-      },
-      {
-        "topic_id": 1,
-        "weight": 0.148986,
-        "label": "Development & land potential",
-        "top_terms": [
-          "potential",
-          "future",
-          "site",
-          "land",
-          "subject",
-          "development",
-          "property",
-          "council",
-          "existing",
-          "subject council",
-          "value",
-          "possibilities"
         ]
       }
     ]
@@ -507,7 +507,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-15T04:31:53.508028+00:00"
+    "updated_at": "2026-11-15T18:56:44.410066+00:00"
   },
   "body": "Nestled amongst native trees and bush, this weatherboard home enjoys a private, leafy setting and offers plenty of appeal to first-home buyers, young families and investors.\r\n\r\nLocated down a shared right-of-way, the home enjoys a peaceful bush setting, with tui often heard amongst the trees. Yet, when it's time to head out, Browns Bay beach, shops and local amenities are just a short drive away.\r\n\r\nSet over two levels, the home offers a practical, easy-living layout:\r\n- Downstairs, the open-plan living and dining area flows onto a spacious deck, providing a spot to unwind, entertain or enjoy the surrounding bush outlook. A bathroom and laundry add convenience to this level, while the spacious garage with internal access is a welcome bonus.\r\n- Upstairs, three bedrooms and the family bathroom provide a separate space from the hub of everyday living.\r\n\r\nIn zone for Long Bay College and other great schools, this home offers privacy, convenience and exciting potential - come see the possibilities!\r\n\r\nNOTE: Some decor in property photos have been AI enhanced. \r\n\r\nTO VIEW THE PROPERTY DOCS, copy & paste the following link into your browser: www.harcourtsfiles.co.nz/listings/DLF1",
   "photos": [
@@ -889,7 +889,7 @@
         "low": 911462,
         "mid": 988686,
         "high": 1051452,
-        "updated_at": "2026-11-15T04:31:53.508028+00:00",
+        "updated_at": "2026-11-15T18:56:44.410066+00:00",
         "confidence": "high",
         "n": 115,
         "basis": {

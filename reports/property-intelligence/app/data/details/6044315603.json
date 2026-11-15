@@ -16,8 +16,8 @@
   "asking_kind": "asking",
   "sale_method": "Asking price",
   "deadline_at": null,
-  "listed_at": "2026-07-21T04:28:30.033000+00:00",
-  "days_on_market": 116,
+  "listed_at": "2026-07-21T03:28:30.033000+00:00",
+  "days_on_market": 117,
   "lat": -36.8572499,
   "lon": 174.8189509,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2318970244.jpg",
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 4,
   "last_change_at": "2026-11-12T22:25:58.426149+00:00",
-  "days_since_last_change": 2.25,
+  "days_since_last_change": 2.85,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 1,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 74.3,
+  "sale_pressure": 74.5,
   "sale_pressure_label": "high",
-  "model_low": 2509060,
-  "model_mid": 2713117,
-  "model_high": 2967278,
+  "model_low": 2492280,
+  "model_mid": 2707009,
+  "model_high": 2955386,
   "model_confidence": "high",
-  "text_signal_pct": 5.3162,
-  "description_index": 0.275749,
+  "text_signal_pct": 8.3262,
+  "description_index": 0.415825,
   "events_count": 4,
   "last_event": "estimate_change",
   "schools": [
@@ -288,53 +288,72 @@
   ],
   "model": {
     "listing_id": 6044315603,
-    "low": 2509060,
-    "mid": 2713117,
-    "high": 2967278,
+    "low": 2492280,
+    "mid": 2707009,
+    "high": 2955386,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0782, 0.0895], \"rel_width\": 0.1689, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0826, 0.0878], \"rel_width\": 0.1711, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6044315603,
     "word_count": 270,
     "exclamations": 1,
     "urgency": 0.0,
-    "luxury": 0.2035,
-    "condition_renovation": 0.4718,
-    "views_waterfront": 0.101,
-    "family_school": 0.3881,
+    "luxury": 0.2042,
+    "condition_renovation": 0.4722,
+    "views_waterfront": 0.1011,
+    "family_school": 0.3877,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3798,
-    "description_premium_pct": 5.3162,
-    "description_index": 0.275749,
+    "description_premium_pct": 8.3262,
+    "description_index": 0.415825,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 3, \"views_waterfront\": 1, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-15T04:31:54.378941+00:00",
+    "updated_at": "2026-11-15T18:56:45.262177+00:00",
     "top_topics": [
       {
         "topic_id": 6,
-        "weight": 0.299347,
+        "weight": 0.286804,
         "label": "Family living & entertaining",
         "top_terms": [
           "morning",
           "friends",
           "relaxed",
           "coffee",
-          "sense",
           "life",
+          "sense",
+          "morning coffee",
           "inviting",
           "setting",
-          "morning coffee",
-          "welcoming",
           "peaceful",
-          "step"
+          "step",
+          "welcoming"
         ]
       },
       {
-        "topic_id": 11,
-        "weight": 0.206828,
-        "label": "Family living & entertaining II",
+        "topic_id": 2,
+        "weight": 0.192806,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low maintenance",
+          "brand new",
+          "brand",
+          "low",
+          "new",
+          "single",
+          "easy care",
+          "quality",
+          "care",
+          "new home",
+          "convenience"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.191274,
+        "label": "Sea views & coastal outlook",
         "top_terms": [
           "extended",
           "extended family",
@@ -342,50 +361,31 @@
           "living areas",
           "areas",
           "multiple",
+          "guests",
           "sea",
           "sea views",
-          "guests",
           "teenagers",
-          "views",
-          "family living"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.191603,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "brand new",
-          "brand",
-          "new",
-          "maintenance",
-          "low maintenance",
-          "low",
-          "single",
-          "easy care",
-          "new home",
-          "care",
-          "quality",
-          "convenience"
+          "family living",
+          "income"
         ]
       },
       {
         "topic_id": 10,
-        "weight": 0.160633,
-        "label": "Resort amenities (pool / tennis / spa)",
+        "weight": 0.159402,
+        "label": "Luxury, architectural & prestige",
         "top_terms": [
           "views",
           "residence",
           "waterfront",
-          "scale",
           "expansive",
-          "harbour",
-          "pool",
+          "scale",
           "gulf",
+          "harbour",
           "spectacular",
-          "aucklands",
           "hauraki",
-          "hauraki gulf"
+          "hauraki gulf",
+          "pool",
+          "position"
         ]
       }
     ]
@@ -464,7 +464,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-15T04:31:53.508028+00:00"
+    "updated_at": "2026-11-15T18:56:44.410066+00:00"
   },
   "body": "Now, with the Asking Price adjusted to $2,595,000, the opportunity is even more compelling and the vendors are seeking action! \r\n\r\nPrivately positioned on a freehold title and set back from the road, 55 Tautari Street delivers the kind of modern family living that is increasingly difficult to find - generous, light-filled, low maintenance and exceptionally easy to enjoy.\r\n\r\nBuilt new in 2011, the home has been designed with family life firmly in mind. Four bedrooms and 3.5 bathrooms provide excellent accommodation, while the expansive open-plan kitchen, dining and living area forms the natural heart of the home. Bathed in natural light and opening effortlessly outdoors, it creates an ideal setting for everything from relaxed family time to entertaining friends.\r\n\r\nA separate second living area provides valuable flexibility as a TV room, children's retreat or home office, while outside, the swim spa pool adds another dimension to the lifestyle and is perfectly suited to summer afternoons and family fun.\r\n\r\nThe modern construction and established yet low-maintenance grounds mean there is little to do but move in and enjoy, while the home's elevated position and generous off-street parking add further practicality to an already compelling family package.\r\n\r\nFor buyers who have previously considered Tautari Street, this is a genuine reason to take another look. A quality, modern family home offering four bedrooms, 3.5 bathrooms, multiple living spaces and a swim spa pool - all on a freehold, low-maintenance site - is not an opportunity that should be overlooked.\r\n\r\nOur vendors are committed to selling. With the new price now in place, we encourage you to act.\r\n\r\nViewing by appointment.",
   "photos": [
@@ -856,7 +856,7 @@
         "low": 2180000,
         "mid": 2530357,
         "high": 2748696,
-        "updated_at": "2026-11-15T04:31:53.508028+00:00",
+        "updated_at": "2026-11-15T18:56:44.410066+00:00",
         "confidence": "high",
         "n": 65,
         "basis": {

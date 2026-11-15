@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-09-15T23:39:43.900000+00:00",
-  "days_on_market": 59,
+  "days_on_market": 60,
   "lat": -36.7266426,
   "lon": 174.735321,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2329236991.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 5605,
+  "view_count": 5647,
   "watchers": 163,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-28T14:15:27.724192+00:00",
-  "days_since_last_change": 17.59,
+  "days_since_last_change": 18.2,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 3,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 39.8,
-  "sale_pressure_label": "low",
-  "model_low": 1175229,
-  "model_mid": 1270808,
-  "model_high": 1389856,
+  "sale_pressure": 40.0,
+  "sale_pressure_label": "medium",
+  "model_low": 1174564,
+  "model_mid": 1275762,
+  "model_high": 1392817,
   "model_confidence": "medium",
-  "text_signal_pct": -11.9732,
-  "description_index": -0.678922,
+  "text_signal_pct": -12.6003,
+  "description_index": -0.700237,
   "events_count": 1,
   "last_event": "estimate_change",
   "schools": [
@@ -298,34 +298,34 @@
   ],
   "model": {
     "listing_id": 6134145555,
-    "low": 1175229,
-    "mid": 1270808,
-    "high": 1389856,
+    "low": 1174564,
+    "mid": 1275762,
+    "high": 1392817,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0782, 0.0895], \"rel_width\": 0.1689, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0826, 0.0878], \"rel_width\": 0.1711, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6134145555,
     "word_count": 206,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.1334,
-    "condition_renovation": 0.6183,
-    "views_waterfront": 0.2647,
-    "family_school": 0.5934,
-    "investment": 0.1613,
+    "luxury": 0.1338,
+    "condition_renovation": 0.6189,
+    "views_waterfront": 0.2649,
+    "family_school": 0.5928,
+    "investment": 0.1671,
     "risk": 0.0,
     "readability": 0.3984,
-    "description_premium_pct": -11.9732,
-    "description_index": -0.678922,
+    "description_premium_pct": -12.6003,
+    "description_index": -0.700237,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 3, \"views_waterfront\": 2, \"family_school\": 7, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-15T04:31:54.378941+00:00",
+    "updated_at": "2026-11-15T18:56:45.262177+00:00",
     "top_topics": [
       {
-        "topic_id": 11,
-        "weight": 0.320826,
-        "label": "Family living & entertaining II",
+        "topic_id": 8,
+        "weight": 0.307455,
+        "label": "Sea views & coastal outlook",
         "top_terms": [
           "extended",
           "extended family",
@@ -333,36 +333,55 @@
           "living areas",
           "areas",
           "multiple",
+          "guests",
           "sea",
           "sea views",
-          "guests",
           "teenagers",
-          "views",
-          "family living"
+          "family living",
+          "income"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.193981,
-        "label": "Sea views & coastal outlook",
+        "weight": 0.189865,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "dream",
           "section",
+          "dream",
           "build",
-          "views",
           "dream home",
           "land",
+          "views",
+          "whangaparaoa",
+          "sections",
+          "building",
           "sea",
-          "regional",
-          "auckland",
-          "regional park",
-          "sea views",
-          "building"
+          "penlink",
+          "auckland"
+        ]
+      },
+      {
+        "topic_id": 4,
+        "weight": 0.122566,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "fenced",
+          "brick",
+          "fully fenced",
+          "street",
+          "fully",
+          "parking",
+          "garden",
+          "sunny",
+          "room",
+          "street parking",
+          "north facing",
+          "double"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.112209,
+        "weight": 0.10746,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -377,25 +396,6 @@
           "lounge",
           "suite",
           "separate"
-        ]
-      },
-      {
-        "topic_id": 5,
-        "weight": 0.107196,
-        "label": "Westlake school zone",
-        "top_terms": [
-          "westlake",
-          "school",
-          "girls",
-          "girls high",
-          "boys",
-          "westlake boys",
-          "high",
-          "high school",
-          "westlake girls",
-          "intermediate",
-          "school suburb",
-          "suburb school"
         ]
       }
     ]
@@ -469,7 +469,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-15T04:31:53.508028+00:00"
+    "updated_at": "2026-11-15T18:56:44.410066+00:00"
   },
   "body": "In an elevated position at the end of a quiet driveway, this home offers rare privacy while still being moments from everything Browns Bay has to offer. It’s calm, it’s cosy, and it’s beautifully upgraded — a place where birdsong and garden views greet you every day.\r\n\r\nKey Features - Main Home:\r\n• Immaculate condition with extensive renovations\r\n• Three bedrooms upstairs including a master with ensuite\r\n• Warm living room with a lovely fireplace\r\n• Open-plan kitchen & dining with great flow\r\n• Study/home office for flexible living\r\n\r\nBonus Self-Contained Area with wide views\r\n\r\nClose the hallway door and you instantly create a private separate wing — perfect for extended family, teens, flatmates, or Airbnb income. This area includes:\r\n• Two bedrooms\r\n• Generous living space\r\n• Kitchenette\r\n• Indoor/outdoor flow to a compact deck\r\n\r\nOutdoor Living:\r\nThe 704m² (approx.) section is designed for low maintenance and maximum relaxation. The home enjoys extra privacy thanks to the neighbouring reserve — quiet, safe, and ideal for unwinding.\r\n\r\nLocation Highlights:\r\n• Easy access to motorway on-ramps, transport links, shops, malls, and university\r\n• Zoned for top schools including Rangitoto College\r\n• Only five minutes’ drive to the beach and Browns Bay village\r\n\r\nMotivated Vendors:\r\n• The owners have made the decision to sell. \r\n• This is your chance to secure a peaceful, versatile home in a premium location.\r\n\r\nContact us today to arrange your private viewing — opportunities like this don’t wait.",
   "photos": [
@@ -861,7 +861,7 @@
         "low": 1172271,
         "mid": 1275000,
         "high": 1402500,
-        "updated_at": "2026-11-15T04:31:53.508028+00:00",
+        "updated_at": "2026-11-15T18:56:44.410066+00:00",
         "confidence": "high",
         "n": 120,
         "basis": {

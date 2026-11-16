@@ -17,7 +17,7 @@
   "sale_method": "Deadline sale",
   "deadline_at": "2026-12-02T11:00:00+00:00",
   "listed_at": "2026-11-10T00:46:11.693000+00:00",
-  "days_on_market": 5,
+  "days_on_market": 6,
   "lat": -36.7287365,
   "lon": 174.7487678,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2341097702.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 2095399,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-11-11T11:00:00+00:00",
-  "comp_low": 1538265,
+  "comp_low": 1536098,
   "comp_mid": 1701535,
   "comp_high": 1878393,
   "comp_confidence": "high",
-  "comp_n": 123,
+  "comp_n": 122,
   "value_low": 1862406,
   "value_mid": 1978902,
   "value_high": 2095399,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2148,
-  "watchers": 127,
+  "view_count": 2536,
+  "watchers": 132,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-10T18:04:20.832612+00:00",
-  "days_since_last_change": 5.04,
+  "days_since_last_change": 6.05,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 5,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 2,
-  "sale_pressure": 20.8,
+  "sale_pressure": 21.0,
   "sale_pressure_label": "low",
-  "model_low": 1594585,
-  "model_mid": 1731971,
-  "model_high": 1890885,
+  "model_low": 1597111,
+  "model_mid": 1731681,
+  "model_high": 1893962,
   "model_confidence": "high",
-  "text_signal_pct": -0.9552,
-  "description_index": -0.049904,
+  "text_signal_pct": -0.673,
+  "description_index": -0.034989,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6222753542,
-    "low": 1594585,
-    "mid": 1731971,
-    "high": 1890885,
+    "low": 1597111,
+    "mid": 1731681,
+    "high": 1893962,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0826, 0.0878], \"rel_width\": 0.1711, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0809, 0.0896], \"rel_width\": 0.1714, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6222753542,
@@ -301,20 +301,39 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.7622,
-    "family_school": 0.9746,
+    "views_waterfront": 0.7601,
+    "family_school": 0.9703,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4287,
-    "description_premium_pct": -0.9552,
-    "description_index": -0.049904,
+    "description_premium_pct": -0.673,
+    "description_index": -0.034989,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 5, \"family_school\": 10, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-15T18:56:45.262177+00:00",
+    "updated_at": "2026-11-16T19:23:11.611264+00:00",
     "top_topics": [
       {
+        "topic_id": 11,
+        "weight": 0.462575,
+        "label": "Family living & entertaining II",
+        "top_terms": [
+          "extended",
+          "extended family",
+          "flexibility",
+          "living areas",
+          "areas",
+          "multiple",
+          "guests",
+          "sea",
+          "sea views",
+          "family living",
+          "teenagers",
+          "families"
+        ]
+      },
+      {
         "topic_id": 4,
-        "weight": 0.440562,
+        "weight": 0.41422,
         "label": "Parking, garden & section",
         "top_terms": [
           "fenced",
@@ -332,28 +351,9 @@
         ]
       },
       {
-        "topic_id": 8,
-        "weight": 0.423594,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "extended",
-          "extended family",
-          "flexibility",
-          "living areas",
-          "areas",
-          "multiple",
-          "guests",
-          "sea",
-          "sea views",
-          "teenagers",
-          "family living",
-          "income"
-        ]
-      },
-      {
         "topic_id": 10,
-        "weight": 0.057951,
-        "label": "Luxury, architectural & prestige",
+        "weight": 0.052421,
+        "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "views",
           "residence",
@@ -362,16 +362,16 @@
           "scale",
           "gulf",
           "harbour",
-          "spectacular",
           "hauraki",
+          "spectacular",
           "hauraki gulf",
-          "pool",
-          "position"
+          "position",
+          "pool"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.038967,
+        "weight": 0.038236,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -475,7 +475,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-15T18:56:44.410066+00:00"
+    "updated_at": "2026-11-16T19:23:10.732983+00:00"
   },
   "body": "From its welcoming street appeal to its sunny, elevated position, this is the kind of family home that offers so much more than first meets the eye. North-facing and wonderfully private, it combines generous living spaces, great outdoor flow and the flexibility families need at every stage.\r\n\r\nThe living areas open to a beautiful, classic Kiwi backyard, complete with glasshouse, large garden shed/workshop and plenty of room for children and pets to enjoy. Offering four bedrooms, two living areas and clever separation for extended family, teenagers or guests, there's space for everyone to spread out and make themselves at home.\r\n\r\nFull of charm and possibilities, this is a home you can move into, make your own and enjoy for years to come.\r\n\r\nWhat's on offer: \r\n\r\n* North facing, sunny & warm\r\n* Freehold site with scope to extended, renovate & make your own\r\n* Open plan living with excellent outdoor flow\r\n* A quick walk to beach, coastal walkways, cafes & shops\r\n* Established gardens including producing grapevine\r\n* Triple garaging with off-street parking\r\n* Separate Laundry\r\n* Walking distance to excellent schools including Rangitoto College\r\n\r\nA fantastic opportunity in a superb location, call now for more info. \r\n\r\nDeadline Sale: Closing Thursday 3rd December 2026 at 4pm (unless sold prior).",
   "photos": [
@@ -864,20 +864,20 @@
       {
         "name": "Nearby sold comparables",
         "range": "$1.54M – $1.88M",
-        "low": 1538265,
+        "low": 1536098,
         "mid": 1701535,
         "high": 1878393,
-        "updated_at": "2026-11-15T18:56:44.410066+00:00",
+        "updated_at": "2026-11-16T19:23:10.732983+00:00",
         "confidence": "high",
-        "n": 123,
+        "n": 122,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 123,
-          "n_eff": 18.89,
+          "n": 122,
+          "n_eff": 18.71,
           "radius_km": 3.0,
           "median_ratio": 1.0158,
-          "iqr_ratio": 0.1999,
+          "iqr_ratio": 0.2012,
           "same_suburb": 17,
           "model_version": "comp-cv-v1"
         }

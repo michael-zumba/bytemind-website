@@ -11,13 +11,13 @@
   "parking": 2,
   "land_area": 1239.0,
   "floor_area": null,
-  "price_display": "Asking price $1,059,000",
+  "price_display": "Price by negotiation",
   "asking_price": 1059000,
   "asking_kind": "asking",
-  "sale_method": "Asking price",
+  "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-14T13:33:58.537000+00:00",
-  "days_on_market": 32,
+  "days_on_market": 33,
   "lat": -36.6042748,
   "lon": 174.8065949,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2335165987.jpg",
@@ -61,9 +61,9 @@
   "school_zone_eqi_mean": 430.5,
   "school_zone_label": "In zone for 2 schools",
   "change_signal": "price increase",
-  "change_count": 7,
-  "last_change_at": "2026-11-14T17:47:59.551383+00:00",
-  "days_since_last_change": 1.05,
+  "change_count": 9,
+  "last_change_at": "2026-11-16T17:57:40.752573+00:00",
+  "days_since_last_change": 0.06,
   "price_drop_count": 0,
   "description_change_count": 3,
   "prior_sale_count": 0,
@@ -73,16 +73,16 @@
   "sale_frequency_label": "No recorded sales",
   "status": "active",
   "delisted_at": null,
-  "sale_method_stage": 5,
-  "sale_pressure": 75.3,
-  "sale_pressure_label": "high",
-  "model_low": 1007424,
-  "model_mid": 1094221,
-  "model_high": 1194620,
+  "sale_method_stage": 3,
+  "sale_pressure": 55.5,
+  "sale_pressure_label": "medium",
+  "model_low": 1017737,
+  "model_mid": 1103489,
+  "model_high": 1206901,
   "model_confidence": "high",
-  "text_signal_pct": 10.7833,
-  "description_index": 0.53244,
-  "events_count": 7,
+  "text_signal_pct": 10.2689,
+  "description_index": 0.506472,
+  "events_count": 9,
   "last_event": "new_listing",
   "schools": [
     {
@@ -258,11 +258,11 @@
   ],
   "model": {
     "listing_id": 6179582403,
-    "low": 1007424,
-    "mid": 1094221,
-    "high": 1194620,
+    "low": 1017737,
+    "mid": 1103489,
+    "high": 1206901,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0826, 0.0878], \"rel_width\": 0.1711, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0809, 0.0896], \"rel_width\": 0.1714, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6179582403,
@@ -271,21 +271,21 @@
     "urgency": 0.0,
     "luxury": 0.0931,
     "condition_renovation": 0.4307,
-    "views_waterfront": 0.8297,
-    "family_school": 0.2357,
+    "views_waterfront": 0.8274,
+    "family_school": 0.2347,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4419,
-    "description_premium_pct": 10.7833,
-    "description_index": 0.53244,
+    "description_premium_pct": 10.2689,
+    "description_index": 0.506472,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 3, \"views_waterfront\": 9, \"family_school\": 4, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-15T18:56:45.262177+00:00",
+    "updated_at": "2026-11-16T19:23:11.611264+00:00",
     "top_topics": [
       {
         "topic_id": 9,
-        "weight": 0.33104,
-        "label": "New build / brand-new quality",
+        "weight": 0.327418,
+        "label": "Sea views & coastal outlook",
         "top_terms": [
           "section",
           "dream",
@@ -303,7 +303,7 @@
       },
       {
         "topic_id": 4,
-        "weight": 0.299735,
+        "weight": 0.288909,
         "label": "Parking, garden & section",
         "top_terms": [
           "fenced",
@@ -321,8 +321,27 @@
         ]
       },
       {
+        "topic_id": 11,
+        "weight": 0.145684,
+        "label": "Family living & entertaining II",
+        "top_terms": [
+          "extended",
+          "extended family",
+          "flexibility",
+          "living areas",
+          "areas",
+          "multiple",
+          "guests",
+          "sea",
+          "sea views",
+          "family living",
+          "teenagers",
+          "families"
+        ]
+      },
+      {
         "topic_id": 1,
-        "weight": 0.137663,
+        "weight": 0.136301,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -338,31 +357,26 @@
           "possibilities",
           "approval"
         ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.124045,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "extended",
-          "extended family",
-          "flexibility",
-          "living areas",
-          "areas",
-          "multiple",
-          "guests",
-          "sea",
-          "sea views",
-          "teenagers",
-          "family living",
-          "income"
-        ]
       }
     ]
   },
   "sales_history": [],
   "sale_outcome": null,
   "sale_events": [
+    {
+      "event_type": "method_change",
+      "event_at": "2026-11-16T17:57:40.752573+00:00",
+      "old_value": "asking/asking",
+      "new_value": "negotiation/asking",
+      "detail_json": "{\"old\": [\"asking\", \"asking\"], \"new\": [\"negotiation\", \"asking\"]}"
+    },
+    {
+      "event_type": "price_display_change",
+      "event_at": "2026-11-16T17:57:40.752573+00:00",
+      "old_value": "Asking price $1,059,000",
+      "new_value": "Price by negotiation",
+      "detail_json": "{\"old_price\": 1059000, \"new_price\": 1059000}"
+    },
     {
       "event_type": "description_change",
       "event_at": "2026-11-14T17:47:59.551383+00:00",
@@ -451,14 +465,14 @@
     "first_description_change_at": "2026-11-05T18:16:07.801683+00:00",
     "last_description_change_at": "2026-11-14T17:47:59.551383+00:00",
     "days_to_first_change": 1.9,
-    "days_since_last_change": 10.03,
+    "days_since_last_change": 11.05,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "set",
-    "updated_at": "2026-11-15T18:56:44.410066+00:00"
+    "updated_at": "2026-11-16T19:23:10.732983+00:00"
   },
   "body": "- All Serious Offers Welcomed - \r\n\r\n* You are welcome to use the driveway to access the property - there is plenty of space to turn around for your convenience *\r\n\r\nHolding onto a home for 51 years is a testament to how special this property is, but my vendors have firmly decided it is time to move on. They are genuinely committed to achieving a sale and invite all buyers who are ready to act to bring their offers forward without delay.\r\n\r\nSet on a generous 1,239 m² (more or less) freehold section framed by mature native trees, this property offers an unbeatable combination of space, coastal serenity, and future value. Elevated and tranquil, the home commands stunning vistas over Shakespear Regional Park and Okoromai Bay while hosting a vibrant chorus of local birdlife.\r\n\r\nIdeal for buyers looking for an immediate coastal lifestyle with clear opportunity to renovate, re-decorate, and build equity over time.\r\n\r\nKey Features:\r\n\r\n• Spacious Living : Open-plan kitchen and family area, plus formal living/dining. Features 2-3 bedrooms and 2 bathrooms.\r\n\r\n• Versatile Rumpus & Garaging: Substantial rumpus room perfect as a home office, media room, teenager’s den or extra lounge, complemented by a double garage with internal-access.\r\n\r\n• Outdoor Decking: Wrap-around decks on three sides capturing panoramic views of the bay and parklands.\r\n\r\n• Add Value Opportunity: Solid bones and a flexible layout ready for your modern interior touches.\r\n\r\n• Lifestyle Location: Close to local beaches, Whangaparaoa Golf Course, schools, Gulf Harbour Village with shops, cafes and restaurants. Swap the motorway commute for the Gulf Harbour Ferry. You can work using the onboard wifi or relax with a wine or coffee while watching for dolphins; this is the ultimate 'work-from-home' hybrid setup.\r\n\r\nOpportunities like this don't come around often, literally once in half a century. If you are in a position to buy, contact me today to view.",
   "photos": [
@@ -850,14 +864,14 @@
         "low": 989489,
         "mid": 1062202,
         "high": 1104861,
-        "updated_at": "2026-11-15T18:56:44.410066+00:00",
+        "updated_at": "2026-11-16T19:23:10.732983+00:00",
         "confidence": "medium",
         "n": 25,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
           "n": 25,
-          "n_eff": 5.1,
+          "n_eff": 5.08,
           "radius_km": 3.0,
           "median_ratio": 0.9881,
           "iqr_ratio": 0.1086,

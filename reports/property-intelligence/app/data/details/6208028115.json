@@ -11,13 +11,13 @@
   "parking": 1,
   "land_area": null,
   "floor_area": null,
-  "price_display": "Asking price $1,248,000",
-  "asking_price": 1248000,
-  "asking_kind": "asking",
-  "sale_method": "Asking price",
+  "price_display": "Price by negotiation",
+  "asking_price": null,
+  "asking_kind": null,
+  "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-11-01T00:45:28.580000+00:00",
-  "days_on_market": 14,
+  "days_on_market": 15,
   "lat": -36.7112656,
   "lon": 174.7336121,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338940645.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 653,
+  "view_count": 679,
   "watchers": 9,
   "is_standard": 1,
   "standard_reason": null,
@@ -61,9 +61,9 @@
   "school_zone_eqi_mean": 396.0,
   "school_zone_label": "In zone for 3 schools",
   "change_signal": "price increase",
-  "change_count": 3,
-  "last_change_at": "2026-11-13T19:50:39.380001+00:00",
-  "days_since_last_change": 1.96,
+  "change_count": 5,
+  "last_change_at": "2026-11-16T18:05:38.951437+00:00",
+  "days_since_last_change": 0.05,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -73,16 +73,16 @@
   "sale_frequency_label": "No recorded sales",
   "status": "active",
   "delisted_at": null,
-  "sale_method_stage": 5,
-  "sale_pressure": 62.3,
+  "sale_method_stage": 3,
+  "sale_pressure": 52.5,
   "sale_pressure_label": "medium",
-  "model_low": 768294,
-  "model_mid": 1048391,
-  "model_high": 1449526,
+  "model_low": 842780,
+  "model_mid": 1154863,
+  "model_high": 1582597,
   "model_confidence": "low",
-  "text_signal_pct": -6.8781,
-  "description_index": -0.370508,
-  "events_count": 3,
+  "text_signal_pct": -7.5353,
+  "description_index": -0.405911,
+  "events_count": 5,
   "last_event": "new_listing",
   "schools": [
     {
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 6208028115,
-    "low": 768294,
-    "mid": 1048391,
-    "high": 1449526,
+    "low": 842780,
+    "mid": 1154863,
+    "high": 1582597,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3108, 0.324], \"rel_width\": 0.6498, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.315, 0.3151], \"rel_width\": 0.6406, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6208028115,
@@ -292,19 +292,19 @@
     "luxury": 0.0,
     "condition_renovation": 0.1628,
     "views_waterfront": 0.0,
-    "family_school": 0.401,
+    "family_school": 0.3993,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.6583,
-    "description_premium_pct": -6.8781,
-    "description_index": -0.370508,
+    "description_premium_pct": -7.5353,
+    "description_index": -0.405911,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 0, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-15T18:56:45.262177+00:00",
+    "updated_at": "2026-11-16T19:23:11.611264+00:00",
     "top_topics": [
       {
         "topic_id": 4,
-        "weight": 0.356563,
+        "weight": 0.361939,
         "label": "Parking, garden & section",
         "top_terms": [
           "fenced",
@@ -322,27 +322,8 @@
         ]
       },
       {
-        "topic_id": 11,
-        "weight": 0.31114,
-        "label": "Luxury, architectural & prestige II",
-        "top_terms": [
-          "premium",
-          "quality",
-          "designer",
-          "finishes",
-          "appliances",
-          "year",
-          "luxury",
-          "designer kitchen",
-          "comfort",
-          "new",
-          "heating",
-          "design"
-        ]
-      },
-      {
         "topic_id": 0,
-        "weight": 0.28699,
+        "weight": 0.298315,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -354,14 +335,33 @@
           "upstairs",
           "family bathroom",
           "floor",
-          "lounge",
           "suite",
-          "separate"
+          "lounge",
+          "ground"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.045307,
+        "weight": 0.296558,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "premium",
+          "quality",
+          "designer",
+          "appliances",
+          "finishes",
+          "year",
+          "luxury",
+          "designer kitchen",
+          "comfort",
+          "heating",
+          "new",
+          "design"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.043188,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -371,8 +371,8 @@
           "car",
           "secure",
           "park",
-          "balcony",
           "pool",
+          "balcony",
           "complex",
           "kensington",
           "bedroom apartment"
@@ -383,6 +383,20 @@
   "sales_history": [],
   "sale_outcome": null,
   "sale_events": [
+    {
+      "event_type": "method_change",
+      "event_at": "2026-11-16T18:05:38.951437+00:00",
+      "old_value": "asking/asking",
+      "new_value": "negotiation/",
+      "detail_json": "{\"old\": [\"asking\", \"asking\"], \"new\": [\"negotiation\", null]}"
+    },
+    {
+      "event_type": "price_change",
+      "event_at": "2026-11-16T18:05:38.951437+00:00",
+      "old_value": "1248000",
+      "new_value": "",
+      "detail_json": "{\"direction\": \"removed\", \"old_display\": \"Asking price $1,248,000\", \"new_display\": \"Price by negotiation\"}"
+    },
     {
       "event_type": "method_change",
       "event_at": "2026-11-13T19:50:39.380001+00:00",
@@ -429,28 +443,40 @@
       "change_pct": null,
       "days_since_previous": 12.23,
       "source": "event"
+    },
+    {
+      "observed_at": "2026-11-16T18:05:38.951437+00:00",
+      "price": null,
+      "price_display": "Price by negotiation",
+      "sale_method": null,
+      "event_type": "price_removed",
+      "previous_price": 1248000,
+      "change_amount": null,
+      "change_pct": null,
+      "days_since_previous": 2.93,
+      "source": "event"
     }
   ],
   "price_dynamics": {
     "listing_id": 6208028115,
     "first_price": 1248000,
     "current_price": 1248000,
-    "n_observations": 2,
-    "n_price_changes": 1,
+    "n_observations": 3,
+    "n_price_changes": 2,
     "n_description_changes": 0,
     "first_change_at": "2026-11-13T19:50:39.380001+00:00",
-    "last_change_at": "2026-11-13T19:50:39.380001+00:00",
+    "last_change_at": "2026-11-16T18:05:38.951437+00:00",
     "first_description_change_at": null,
     "last_description_change_at": null,
     "days_to_first_change": 12.23,
-    "days_since_last_change": 1.96,
-    "avg_days_between_changes": null,
+    "days_since_last_change": 0.05,
+    "avg_days_between_changes": 2.93,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
-    "last_direction": "set",
-    "updated_at": "2026-11-15T18:56:44.410066+00:00"
+    "last_direction": "removed",
+    "updated_at": "2026-11-16T19:23:10.732983+00:00"
   },
   "body": "Brand new and finished with real care, this four-bedroom home in Browns Bay suits families, downsizers who still want space, and anyone done with renovating.\r\n\r\nThe ground floor is one generous open-plan living and dining area. Wide-plank oak-look floors, a heat pump and panelled feature walls make it warm and polished. A sliding door opens to a covered deck and a private, fully fenced courtyard with lawn, stepping-stone paths and established planting. It’s an easy place for morning coffee, kids playing or the dog, and there are no weekends lost to maintenance.\r\n\r\nThe kitchen is the standout. It has crisp white cabinetry with brushed brass hardware, a brass gooseneck mixer over a matching double sink, and handmade-look glazed tiles lit by under-cabinet LED strips. Appliances include a Fisher & Paykel wall oven, a built-in microwave, a cooktop with integrated rangehood and a dishwasher. There’s plenty of storage and a dedicated fridge space. A guest WC and separate laundry complete the ground floor.\r\n\r\nUpstairs, the spacious master suite has a walk-in wardrobe and its own ensuite. The three further double bedrooms all have built-in robes. A family bathroom with a full bath and a storage cupboard serves them.\r\n\r\nThere’s a single garage with internal access and off-street parking. Security cameras and a keyless digital front door lock add peace of mind. You’re close to everything Browns Bay is known for: the beach, the village cafés and the bus connections. 10 - Year Stamford warranty.\r\n\r\nBrand new, beautifully presented and ready for you. Call today to arrange your viewing.",
   "photos": [
@@ -663,14 +689,14 @@
         "low": 948000,
         "mid": 1130000,
         "high": 1445000,
-        "updated_at": "2026-11-15T18:56:44.410066+00:00",
+        "updated_at": "2026-11-16T19:23:10.732983+00:00",
         "confidence": "low",
         "n": 96,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
           "n": 96,
-          "n_eff": 28.28,
+          "n_eff": 28.19,
           "radius_km": 3.0,
           "iqr_ratio": 0.4398,
           "same_suburb": 28,

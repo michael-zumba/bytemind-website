@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-12-08T20:30:00+00:00",
   "listed_at": "2026-11-12T13:32:14.137000+00:00",
-  "days_on_market": 3,
+  "days_on_market": 4,
   "lat": -36.60606,
   "lon": 174.6885834,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2341730441.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2018,
-  "watchers": 85,
+  "view_count": 2423,
+  "watchers": 91,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 3,
   "last_change_at": "2026-11-15T17:08:54.407543+00:00",
-  "days_since_last_change": 0.07,
+  "days_since_last_change": 1.09,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 1,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 5.5,
+  "sale_pressure": 5.7,
   "sale_pressure_label": "low",
-  "model_low": 1246870,
-  "model_mid": 1354297,
-  "model_high": 1478559,
+  "model_low": 1249946,
+  "model_mid": 1355264,
+  "model_high": 1482270,
   "model_confidence": "high",
-  "text_signal_pct": 0.4199,
-  "description_index": 0.021787,
+  "text_signal_pct": -0.0239,
+  "description_index": -0.001238,
   "events_count": 3,
   "last_event": "new_listing",
   "schools": [
@@ -268,52 +268,33 @@
   ],
   "model": {
     "listing_id": 6227298305,
-    "low": 1246870,
-    "mid": 1354297,
-    "high": 1478559,
+    "low": 1249946,
+    "mid": 1355264,
+    "high": 1482270,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0826, 0.0878], \"rel_width\": 0.1711, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0809, 0.0896], \"rel_width\": 0.1714, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6227298305,
     "word_count": 395,
     "exclamations": 1,
     "urgency": 0.0,
-    "luxury": 0.2094,
+    "luxury": 0.2093,
     "condition_renovation": 0.3228,
-    "views_waterfront": 0.2072,
-    "family_school": 0.795,
+    "views_waterfront": 0.2067,
+    "family_school": 0.7915,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3828,
-    "description_premium_pct": 0.4199,
-    "description_index": 0.021787,
+    "description_premium_pct": -0.0239,
+    "description_index": -0.001238,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 3, \"condition_renovation\": 3, \"views_waterfront\": 3, \"family_school\": 18, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-15T18:56:45.262177+00:00",
+    "updated_at": "2026-11-16T19:23:11.611264+00:00",
     "top_topics": [
       {
-        "topic_id": 0,
-        "weight": 0.227122,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "ensuite",
-          "walk",
-          "bathroom",
-          "master",
-          "upstairs",
-          "family bathroom",
-          "floor",
-          "lounge",
-          "suite",
-          "separate"
-        ]
-      },
-      {
         "topic_id": 4,
-        "weight": 0.219022,
+        "weight": 0.232898,
         "label": "Parking, garden & section",
         "top_terms": [
           "fenced",
@@ -331,27 +312,46 @@
         ]
       },
       {
-        "topic_id": 2,
-        "weight": 0.182178,
-        "label": "Brick / tile / low-maintenance units",
+        "topic_id": 0,
+        "weight": 0.226094,
+        "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
-          "maintenance",
-          "low maintenance",
+          "wardrobe",
+          "walk wardrobe",
+          "ensuite",
+          "walk",
+          "bathroom",
+          "master",
+          "upstairs",
+          "family bathroom",
+          "floor",
+          "suite",
+          "lounge",
+          "ground"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.18268,
+        "label": "New build / brand-new quality",
+        "top_terms": [
           "brand new",
           "brand",
+          "maintenance",
+          "low maintenance",
           "low",
           "new",
           "single",
           "easy care",
-          "quality",
           "care",
+          "quality",
           "new home",
-          "convenience"
+          "buyers"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.154201,
+        "weight": 0.144674,
         "label": "Family living & entertaining",
         "top_terms": [
           "morning",
@@ -360,12 +360,12 @@
           "coffee",
           "life",
           "sense",
-          "morning coffee",
           "inviting",
+          "morning coffee",
           "setting",
           "peaceful",
-          "step",
-          "welcoming"
+          "welcoming",
+          "step"
         ]
       }
     ]
@@ -437,7 +437,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-15T18:56:44.410066+00:00"
+    "updated_at": "2026-11-16T19:23:10.732983+00:00"
   },
   "body": "Auction: 8-12 The Promenade, Takapuna on Wednesday 9 December 2026 at 9:30AM  (unless sold prior)\r\n\r\nPositioned in one of Red Beach’s most sought-after pockets, 6 Ridgeview Close truly ticks every single box. Effortlessly blending low-maintenance single-level living with incredible functionality, this modern, beautifully designed family residence is built for relaxed coastal living and entertaining.\r\n\r\nStep inside to a bright, light-filled open-plan living, dining, and kitchen area designed as the central heart of the home. The modern kitchen is a chef’s dream, boasting abundant storage, sleek finishes, and quality appliances - ensuring cooking and entertaining are always a pleasure. Branching off this main hub is a second formal living room or media lounge, giving your family the luxury of separate zones to unwind, watch a movie, or enjoy some quiet time. The main living space seamlessly flows directly out onto a sun-soaked deck, where you can host guests while taking in stunning elevated views looking over toward Millwater.\r\n\r\nAccommodating the whole family with ease, the thoughtful floor plan features four generous bedrooms. The master suite serves as a peaceful private sanctuary, complete with its own walk-in wardrobe and ensuite. The remaining three bedrooms are well-proportioned and serviced by a stylish central family bathroom, perfect for children, guests, or a dedicated home office setup.\r\n\r\nPracticality is at the forefront of this home, starting with a double internal-access garage plus extra driveway parking for cars, a boat, or a trailer. Sitting on a family-friendly plot, the outdoors offer sweet garden space ideal for green thumbs to potter in, alongside safe, sunlit lawn space for children and pets to play freely.\r\n\r\nAs an added bonus, under-the-house discovery reveals a dedicated workshop space and ample sub-floor storage - ideal for hobbies, tools, water sports gear, or converting into the ultimate tinkerer's haven.\r\n\r\nLocation simply doesn't get more convenient than this. Nestled in a quiet close, you are minutes away from the vibrant hubs of Red Beach, Orewa, and Silverdale - putting local beaches, cafes, shopping centres, and recreational spots right on your doorstep. Commuting is effortless with rapid access onto the motorway northbound and southbound. Families will appreciate the exceptional educational options, with the property zoned for top local schools including Silverdale School and Orewa College.\r\n\r\nWhether you're looking for a low-maintenance upgrade, a sunny family oasis, or an easy-care lifestyle in a prime coastal location, 6 Ridgeview Close demands your immediate inspection. Contact us today to secure your viewing!",
   "photos": [
@@ -829,14 +829,14 @@
         "low": 1326316,
         "mid": 1360000,
         "high": 1445652,
-        "updated_at": "2026-11-15T18:56:44.410066+00:00",
+        "updated_at": "2026-11-16T19:23:10.732983+00:00",
         "confidence": "high",
         "n": 64,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 64,
-          "n_eff": 9.69,
+          "n_eff": 9.66,
           "radius_km": 3.0,
           "median_ratio": 0.9714,
           "iqr_ratio": 0.0877,

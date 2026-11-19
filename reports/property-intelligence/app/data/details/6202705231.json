@@ -11,13 +11,13 @@
   "parking": 2,
   "land_area": null,
   "floor_area": null,
-  "price_display": "Auction on 19 Nov, 10:00 am",
+  "price_display": "Price by negotiation",
   "asking_price": null,
   "asking_kind": null,
-  "sale_method": "Auction",
+  "sale_method": "Price by negotiation",
   "deadline_at": "2026-11-18T21:00:00+00:00",
   "listed_at": "2026-10-28T21:55:44.863000+00:00",
-  "days_on_market": 20,
+  "days_on_market": 21,
   "lat": -36.7602043,
   "lon": 174.7666779,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338255676.jpg",
@@ -60,10 +60,10 @@
   "school_zone_secondary_count": 2,
   "school_zone_eqi_mean": 387.8,
   "school_zone_label": "In zone for 5 schools",
-  "change_signal": null,
-  "change_count": 2,
-  "last_change_at": "2026-11-11T18:58:22.831648+00:00",
-  "days_since_last_change": 7.08,
+  "change_signal": "price wording changed",
+  "change_count": 4,
+  "last_change_at": "2026-11-19T18:10:14.391371+00:00",
+  "days_since_last_change": 0.1,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 1,
@@ -73,16 +73,16 @@
   "sale_frequency_label": "Longer holding period",
   "status": "active",
   "delisted_at": null,
-  "sale_method_stage": 0,
-  "sale_pressure": 3.3,
-  "sale_pressure_label": "low",
-  "model_low": 1944918,
-  "model_mid": 2113906,
-  "model_high": 2308474,
+  "sale_method_stage": 3,
+  "sale_pressure": 43.5,
+  "sale_pressure_label": "medium",
+  "model_low": 1973763,
+  "model_mid": 2143134,
+  "model_high": 2339627,
   "model_confidence": "medium",
-  "text_signal_pct": 4.8434,
-  "description_index": 0.25645,
-  "events_count": 2,
+  "text_signal_pct": 6.947,
+  "description_index": 0.328397,
+  "events_count": 4,
   "last_event": "new_listing",
   "schools": [
     {
@@ -279,7 +279,7 @@
       "id": 1524,
       "name": "TAKAPUNA NORMAL INTERMEDIATE",
       "type": "Intermediate",
-      "roll": 730,
+      "roll": 728,
       "authority": "State",
       "gender": "Co-Educational",
       "decile": null,
@@ -308,71 +308,90 @@
   ],
   "model": {
     "listing_id": 6202705231,
-    "low": 1944918,
-    "mid": 2113906,
-    "high": 2308474,
+    "low": 1973763,
+    "mid": 2143134,
+    "high": 2339627,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0833, 0.088], \"rel_width\": 0.172, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0823, 0.0877], \"rel_width\": 0.1707, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6202705231,
     "word_count": 347,
     "exclamations": 3,
     "urgency": 0.0,
-    "luxury": 0.0796,
-    "condition_renovation": 0.1224,
-    "views_waterfront": 0.4677,
-    "family_school": 0.598,
+    "luxury": 0.0801,
+    "condition_renovation": 0.1225,
+    "views_waterfront": 0.4692,
+    "family_school": 0.6008,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.5178,
-    "description_premium_pct": 4.8434,
-    "description_index": 0.25645,
+    "description_premium_pct": 6.947,
+    "description_index": 0.328397,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 1, \"views_waterfront\": 6, \"family_school\": 12, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-18T20:58:00.842503+00:00",
+    "updated_at": "2026-11-19T20:33:16.632396+00:00",
     "top_topics": [
       {
         "topic_id": 6,
-        "weight": 0.343783,
-        "label": "Family living & entertaining",
+        "weight": 0.232593,
+        "label": "Bedrooms, bathrooms & layout II",
         "top_terms": [
-          "morning",
-          "friends",
-          "relaxed",
-          "coffee",
-          "life",
-          "morning coffee",
-          "sense",
-          "inviting",
-          "setting",
-          "peaceful",
-          "welcoming",
-          "step"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.203842,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
+          "walk",
           "wardrobe",
           "walk wardrobe",
           "ensuite",
-          "walk",
-          "master",
-          "bathroom",
-          "upstairs",
-          "floor",
-          "family bathroom",
+          "double",
           "suite",
           "lounge",
-          "master suite"
+          "master",
+          "bathroom",
+          "separate",
+          "upstairs",
+          "laundry"
+        ]
+      },
+      {
+        "topic_id": 4,
+        "weight": 0.226896,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "room",
+          "morning",
+          "friends",
+          "summer",
+          "garden",
+          "life",
+          "coffee",
+          "away",
+          "day",
+          "relaxed",
+          "little",
+          "character"
+        ]
+      },
+      {
+        "topic_id": 11,
+        "weight": 0.201023,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "extended",
+          "extended family",
+          "flexibility",
+          "guests",
+          "living areas",
+          "sea",
+          "areas",
+          "sea views",
+          "multiple",
+          "teenagers",
+          "views",
+          "separate"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.184301,
+        "weight": 0.159305,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -386,26 +405,7 @@
           "westlake boys",
           "intermediate",
           "school suburb",
-          "shore"
-        ]
-      },
-      {
-        "topic_id": 11,
-        "weight": 0.164091,
-        "label": "Family living & entertaining II",
-        "top_terms": [
-          "extended",
-          "extended family",
-          "flexibility",
-          "living areas",
-          "areas",
-          "multiple",
-          "guests",
-          "sea",
-          "sea views",
-          "teenagers",
-          "family living",
-          "views"
+          "north"
         ]
       }
     ]
@@ -422,6 +422,20 @@
   ],
   "sale_outcome": null,
   "sale_events": [
+    {
+      "event_type": "method_change",
+      "event_at": "2026-11-19T18:10:14.391371+00:00",
+      "old_value": "auction/",
+      "new_value": "negotiation/",
+      "detail_json": "{\"old\": [\"auction\", null], \"new\": [\"negotiation\", null]}"
+    },
+    {
+      "event_type": "price_display_change",
+      "event_at": "2026-11-19T18:10:14.391371+00:00",
+      "old_value": "Auction on 19 Nov, 10:00 am",
+      "new_value": "Price by negotiation",
+      "detail_json": "{\"old_price\": null, \"new_price\": null}"
+    },
     {
       "event_type": "estimate_change",
       "event_at": "2026-11-11T18:58:22.831648+00:00",
@@ -470,7 +484,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-18T20:57:59.890639+00:00"
+    "updated_at": "2026-11-19T20:33:15.708510+00:00"
   },
   "body": "Auction: 8-12 The Promenade, Takapuna on Thursday 19 November 2026 at 10:00AM  (unless sold prior)\r\n\r\nImagine waking to the gentle sound of the waves, grabbing your towel and strolling just moments from your door to Castor Bay Beach. Enjoy a refreshing morning swim before work, an evening walk along the sand, or simply the pleasure of living with the beach as your backyard. This is more than a home – it’s a lifestyle you’ll love every day!\r\n\r\nPrivately positioned with direct access to the pathway leading to Castor Bay Beach, this impressive multi-level home offers generous living spaces, stunning sea views and room for the whole family.\r\n\r\nOn the entry level, a spacious lounge opens onto a sunny courtyard, with a private gate providing access to the beach pathway. A master bedroom with a modern ensuite completes this level, making it ideal for guests, extended family or those seeking extra privacy.\r\n\r\nUpstairs, the heart of the home brings together the kitchen, dining and family living areas, complemented by a separate lounge. French doors open onto a generous deck, creating the perfect setting for entertaining friends, relaxed family gatherings or simply soaking up the spectacular sea views. Two double bedrooms and a family bathroom complete this level.\r\n\r\nAnd there’s more! The top floor is a private retreat of its own, featuring a second master bedroom, a spacious walk-in wardrobe and a full modern bathroom. Step outside onto your own private deck and unwind while enjoying elevated sea views across to iconic Rangitoto Island – the perfect spot for your morning coffee or a peaceful end to the day.\r\n\r\nWith a double internal-access garage, low-maintenance gardens and no lawns to mow, you can spend less time on upkeep and more time enjoying everything this enviable beachside location has to offer.\r\n\r\nWhether it’s morning swims, barefoot walks on the sand, entertaining on the deck or simply embracing the relaxed rhythm of coastal living, this is a home designed to make every day feel like a holiday.\r\n\r\nIn Zone for Westlake Boys’ and Girls’ High Schools.\r\n\r\nVacant and ready for you to move in, opportunities this close to Castor Bay Beach are rarely found.\r\n\r\nCall us today to arrange your viewing and make this exceptional beachside lifestyle yours!",
   "photos": [
@@ -685,6 +699,20 @@
       "estimate_mid": 1680000
     },
     {
+      "property_id": "28a0d6b7-5383-4842-8b08-35964f7d7882",
+      "address": "3A Holiday Road, Milford, Auckland",
+      "sale_price": 11000000,
+      "sale_date": "2026-09-03T00:00:00+00:00",
+      "distance_km": 0.95,
+      "bedrooms": 5,
+      "bathrooms": 4,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 8250000,
+      "estimate_mid": 8820000
+    },
+    {
       "property_id": "78cf715c-ccb3-4518-8d63-956364bddbf1",
       "address": "19 Aberdeen Road, Castor Bay, Auckland",
       "sale_price": 1830000,
@@ -710,7 +738,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1750000,
-      "estimate_mid": 1840000
+      "estimate_mid": 1820000
     },
     {
       "property_id": "7fbe1592-dfaf-4871-95b3-d67ff46ec402",
@@ -823,20 +851,6 @@
       "property_type": null,
       "cv": 1000000,
       "estimate_mid": 670000
-    },
-    {
-      "property_id": "89578e8d-448f-48ec-b90c-88a82237c646",
-      "address": "1/16D Dallinghoe Crescent, Milford, Auckland",
-      "sale_price": 600000,
-      "sale_date": "2026-09-07T00:00:00+00:00",
-      "distance_km": 1.6,
-      "bedrooms": 2,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 920000,
-      "estimate_mid": 655000
     }
   ],
   "valuation": {
@@ -862,14 +876,14 @@
         "low": 1782000,
         "mid": 1991250,
         "high": 2123119,
-        "updated_at": "2026-11-18T20:57:59.890639+00:00",
+        "updated_at": "2026-11-19T20:33:15.708510+00:00",
         "confidence": "high",
         "n": 71,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 71,
-          "n_eff": 9.07,
+          "n_eff": 9.04,
           "radius_km": 3.0,
           "median_ratio": 0.9833,
           "iqr_ratio": 0.1713,

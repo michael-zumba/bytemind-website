@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:51:28.650594+00:00",
-  "days_since_last_change": 15.0,
+  "days_since_last_change": 15.99,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 3,
   "sale_pressure": 35.7,
   "sale_pressure_label": "low",
-  "model_low": 1249250,
-  "model_mid": 1719809,
-  "model_high": 2392300,
+  "model_low": 1125382,
+  "model_mid": 1529618,
+  "model_high": 2053321,
   "model_confidence": "low",
-  "text_signal_pct": -7.9451,
-  "description_index": -0.448862,
+  "text_signal_pct": -18.0022,
+  "description_index": -0.970463,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -299,7 +299,7 @@
       "id": 57,
       "name": "TAMAKI COLLEGE",
       "type": "Secondary (Year 9-13)",
-      "roll": 699,
+      "roll": 697,
       "authority": "State",
       "gender": "Co-Educational",
       "decile": null,
@@ -318,11 +318,11 @@
   ],
   "model": {
     "listing_id": 6180086040,
-    "low": 1249250,
-    "mid": 1719809,
-    "high": 2392300,
+    "low": 1125382,
+    "mid": 1529618,
+    "high": 2053321,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3197, 0.33], \"rel_width\": 0.6646, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3069, 0.2944], \"rel_width\": 0.6066, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6180086040,
@@ -330,28 +330,47 @@
     "exclamations": 1,
     "urgency": 0.0,
     "luxury": 1.0,
-    "condition_renovation": 0.5702,
+    "condition_renovation": 0.5705,
     "views_waterfront": 0.0,
-    "family_school": 0.6964,
+    "family_school": 0.6996,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3592,
-    "description_premium_pct": -7.9451,
-    "description_index": -0.448862,
+    "description_premium_pct": -18.0022,
+    "description_index": -0.970463,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 7, \"condition_renovation\": 2, \"views_waterfront\": 0, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-18T20:58:00.842503+00:00",
+    "updated_at": "2026-11-19T20:33:16.632396+00:00",
     "top_topics": [
       {
+        "topic_id": 2,
+        "weight": 0.464513,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "new",
+          "brand",
+          "brand new",
+          "quality",
+          "finishes",
+          "premium",
+          "appliances",
+          "homes",
+          "year",
+          "designer",
+          "maintenance",
+          "design"
+        ]
+      },
+      {
         "topic_id": 7,
-        "weight": 0.411777,
+        "weight": 0.39809,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
           "macleans college",
           "college",
-          "school",
           "intermediate",
+          "school",
           "suburb intermediate",
           "primary",
           "marina",
@@ -362,60 +381,41 @@
         ]
       },
       {
-        "topic_id": 3,
-        "weight": 0.338397,
-        "label": "Luxury, architectural & prestige",
+        "topic_id": 6,
+        "weight": 0.114186,
+        "label": "Bedrooms, bathrooms & layout II",
         "top_terms": [
-          "premium",
-          "quality",
-          "designer",
-          "finishes",
-          "appliances",
-          "year",
-          "luxury",
-          "designer kitchen",
-          "comfort",
-          "new",
-          "heating",
-          "design"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.227727,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low maintenance",
-          "low",
-          "brand new",
-          "brand",
-          "new",
-          "single",
-          "easy care",
-          "care",
-          "quality",
-          "new home",
-          "convenience"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.018491,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
+          "walk",
           "wardrobe",
           "walk wardrobe",
           "ensuite",
-          "walk",
-          "master",
-          "bathroom",
-          "upstairs",
-          "floor",
-          "family bathroom",
+          "double",
           "suite",
           "lounge",
-          "master suite"
+          "master",
+          "bathroom",
+          "separate",
+          "upstairs",
+          "laundry"
+        ]
+      },
+      {
+        "topic_id": 3,
+        "weight": 0.016881,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "residence",
+          "views",
+          "expansive",
+          "scale",
+          "waterfront",
+          "gulf",
+          "harbour",
+          "architectural",
+          "spectacular",
+          "luxury",
+          "setting",
+          "hauraki"
         ]
       }
     ]
@@ -464,7 +464,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-18T20:57:59.890639+00:00"
+    "updated_at": "2026-11-19T20:33:15.708510+00:00"
   },
   "body": "Brand New | Standalone | Freehold | 4 Bedrooms | Single Garage\r\n\r\nExperience contemporary architectural design, premium finishes and effortless low-maintenance living in this stunning brand-new home.\r\n\r\nOffering 149m² of thoughtfully designed floor area on a 187m² freehold section, this beautiful residence perfectly balances luxury, comfort and practicality.\r\n\r\n Features You'll Love\r\n\r\n• 4 spacious bedrooms and 2 stylish bathrooms, including master ensuite, plus separate WC.\r\n• Designer kitchen with striking 60mm engineered stone benchtops and elegant full-height cabinetry.\r\n• Premium Spanish tiles to ceiling height in both bathrooms and WC/laundry.\r\n• 2.7m-high ceilings enhancing the spacious open-plan living area.\r\n• Outdoor entertaining deck – Perfect for relaxing and hosting friends.\r\n• 10-Year Master Build Guarantee for peace of mind.\r\n\r\nSituated in sought-after Bucklands Beach, close to beautiful beaches, Half Moon Bay Marina, Howick Village and local amenities.\r\n\r\nSchool zones listed for the original address include Macleans Primary, Bucklands Beach Intermediate, Howick Intermediate and Pakuranga College.\r\n\r\nBeautifully designed. Quality finished. Built to love.\r\n\r\nContact us today to arrange a viewing!",
   "photos": [
@@ -675,14 +675,14 @@
         "low": 964000,
         "mid": 1380000,
         "high": 1650000,
-        "updated_at": "2026-11-18T20:57:59.890639+00:00",
+        "updated_at": "2026-11-19T20:33:15.708510+00:00",
         "confidence": "low",
         "n": 46,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
           "n": 46,
-          "n_eff": 18.05,
+          "n_eff": 17.99,
           "radius_km": 3.0,
           "iqr_ratio": 0.4971,
           "same_suburb": 27,

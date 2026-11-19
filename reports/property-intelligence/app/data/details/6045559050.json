@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-07-21T22:13:53.880000+00:00",
-  "days_on_market": 119,
+  "days_on_market": 120,
   "lat": -36.7910829,
   "lon": 174.7554323,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2326981614.jpg",
@@ -31,12 +31,12 @@
   "estimate_updated_at": null,
   "comp_low": 1240000,
   "comp_mid": 1400000,
-  "comp_high": 1850000,
+  "comp_high": 1760000,
   "comp_confidence": "low",
-  "comp_n": 31,
+  "comp_n": 30,
   "value_low": 1240000,
   "value_mid": 1400000,
-  "value_high": 1850000,
+  "value_high": 1760000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 3335,
+  "view_count": 3347,
   "watchers": 48,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 1,
   "last_change_at": "2026-11-08T22:55:07.000157+00:00",
-  "days_since_last_change": 9.92,
+  "days_since_last_change": 10.9,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 54.8,
+  "sale_pressure": 55.0,
   "sale_pressure_label": "medium",
-  "model_low": 1509060,
-  "model_mid": 2077483,
-  "model_high": 2889832,
+  "model_low": 1343525,
+  "model_mid": 1826118,
+  "model_high": 2451335,
   "model_confidence": "low",
-  "text_signal_pct": -19.9641,
-  "description_index": -1.207453,
+  "text_signal_pct": -31.2885,
+  "description_index": -1.834818,
   "events_count": 1,
   "last_event": "description_change",
   "schools": [
@@ -99,7 +99,7 @@
       "id": 1524,
       "name": "TAKAPUNA NORMAL INTERMEDIATE",
       "type": "Intermediate",
-      "roll": 730,
+      "roll": 728,
       "authority": "State",
       "gender": "Co-Educational",
       "decile": null,
@@ -288,33 +288,52 @@
   ],
   "model": {
     "listing_id": 6045559050,
-    "low": 1509060,
-    "mid": 2077483,
-    "high": 2889832,
+    "low": 1343525,
+    "mid": 1826118,
+    "high": 2451335,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3197, 0.33], \"rel_width\": 0.6646, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3069, 0.2944], \"rel_width\": 0.6066, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6045559050,
     "word_count": 247,
     "exclamations": 2,
     "urgency": 0.0,
-    "luxury": 0.671,
-    "condition_renovation": 0.344,
+    "luxury": 0.6748,
+    "condition_renovation": 0.3441,
     "views_waterfront": 0.0,
-    "family_school": 0.6301,
+    "family_school": 0.633,
     "investment": 0.1397,
     "risk": 0.0,
     "readability": 0.2726,
-    "description_premium_pct": -19.9641,
-    "description_index": -1.207453,
+    "description_premium_pct": -31.2885,
+    "description_index": -1.834818,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 6, \"condition_renovation\": 2, \"views_waterfront\": 0, \"family_school\": 9, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-18T20:58:00.842503+00:00",
+    "updated_at": "2026-11-19T20:33:16.632396+00:00",
     "top_topics": [
       {
+        "topic_id": 2,
+        "weight": 0.425034,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "new",
+          "brand",
+          "brand new",
+          "quality",
+          "finishes",
+          "premium",
+          "appliances",
+          "homes",
+          "year",
+          "designer",
+          "maintenance",
+          "design"
+        ]
+      },
+      {
         "topic_id": 5,
-        "weight": 0.380895,
+        "weight": 0.359223,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -328,64 +347,45 @@
           "westlake boys",
           "intermediate",
           "school suburb",
-          "shore"
-        ]
-      },
-      {
-        "topic_id": 3,
-        "weight": 0.33124,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "premium",
-          "quality",
-          "designer",
-          "finishes",
-          "appliances",
-          "year",
-          "luxury",
-          "designer kitchen",
-          "comfort",
-          "new",
-          "heating",
-          "design"
+          "north"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.156074,
-        "label": "Family living & entertaining II",
+        "weight": 0.177671,
+        "label": "Sea views & coastal outlook",
         "top_terms": [
           "extended",
           "extended family",
           "flexibility",
-          "living areas",
-          "areas",
-          "multiple",
           "guests",
+          "living areas",
           "sea",
+          "areas",
           "sea views",
+          "multiple",
           "teenagers",
-          "family living",
-          "views"
+          "views",
+          "separate"
         ]
       },
       {
-        "topic_id": 2,
-        "weight": 0.103195,
+        "topic_id": 9,
+        "weight": 0.031584,
         "label": "Brick / tile / low-maintenance units",
         "top_terms": [
           "maintenance",
-          "low maintenance",
           "low",
-          "brand new",
-          "brand",
-          "new",
-          "single",
+          "low maintenance",
           "easy care",
           "care",
-          "quality",
-          "new home",
-          "convenience"
+          "property",
+          "buyers",
+          "single",
+          "investors",
+          "brick",
+          "home buyers",
+          "single level"
         ]
       }
     ]
@@ -434,7 +434,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-18T20:57:59.890639+00:00"
+    "updated_at": "2026-11-19T20:33:15.708510+00:00"
   },
   "body": "Price Reduced! Urgent Sale!\r\n\r\nBe among the first to secure one of these exceptional new homes. Perfectly positioned in one of Takapuna's most desirable streets, this brand-new freehold residence offers the ideal balance of contemporary luxury, family functionality and unbeatable convenience.\r\n\r\nDesigned with modern lifestyles in mind, the home features approximately 186sqm of thoughtfully planned living space across three levels. From the designer kitchen with premium Miele appliances to the light-filled open-plan living areas and beautifully appointed bathrooms, every detail has been carefully considered to deliver comfort, style and quality. Whether you're entertaining, working from home or accommodating extended family, this versatile layout adapts effortlessly to your needs.\r\n\r\nProperty Highlights\r\n\r\n* Freehold title with no body corporate fees\r\n* 4 spacious bedrooms, 3 bathrooms and 2 generous living areas\r\n* Flexible ground-floor layout ideal for guests, extended family or working from home\r\n* Designer kitchen with premium Miele appliances\r\n* Internal-access garage plus low-maintenance outdoor living\r\n* Double glazing, two heat pumps and a 10-Year Master Build Guarantee\r\n\r\nEnjoy everything Takapuna has to offer just moments from your doorstep. Stroll to Takapuna Beach, Shore City Shopping Centre, vibrant cafés and restaurants, with Smales Farm, motorway access and public transport all within easy reach. Families will also appreciate being zoned for Takapuna Primary, Takapuna Normal Intermediate, Takapuna Grammar, and Westlake Boys' & Girls' High Schools, making this an outstanding lifestyle and investment opportunity.\r\n\r\nBrand-new homes in this location are always in demand. Contact Team Hattie today to arrange your private viewing and secure your place in one of Takapuna's most sought-after neighbourhoods.\r\n\r\nTo view or download property files please go to:\r\nhttps://www.harcourtsfiles.co.nz/listings/VUU1",
   "photos": [
@@ -510,6 +510,20 @@
       "property_type": null,
       "cv": 1300000,
       "estimate_mid": 1250000
+    },
+    {
+      "property_id": "933f221b-86ce-4a9d-bc45-0ceeb71a61d4",
+      "address": "B 209/130 Anzac Street, Takapuna, Auckland",
+      "sale_price": 711000,
+      "sale_date": "2026-08-13T00:00:00+00:00",
+      "distance_km": 0.7,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 830000,
+      "estimate_mid": 725000
     },
     {
       "property_id": "15967473-77d5-4c1e-98d7-51d1ca1b5b60",
@@ -607,7 +621,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1900000,
-      "estimate_mid": 1880000
+      "estimate_mid": 1950000
     },
     {
       "property_id": "132b8fe7-a550-44f4-8bf3-1176e9c1b026",
@@ -622,46 +636,32 @@
       "property_type": null,
       "cv": 1150000,
       "estimate_mid": 1090000
-    },
-    {
-      "property_id": "f6b2966d-3dcf-445c-9d7d-5310d21a62ad",
-      "address": "2/70 Nile Road, Milford, Auckland",
-      "sale_price": 750000,
-      "sale_date": "2026-08-31T00:00:00+00:00",
-      "distance_km": 1.7,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 750000,
-      "estimate_mid": 810000
     }
   ],
   "valuation": {
     "value_low": 1240000,
     "value_mid": 1400000,
-    "value_high": 1850000,
+    "value_high": 1760000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.24M – $1.85M",
+        "range": "$1.24M – $1.76M",
         "low": 1240000,
         "mid": 1400000,
-        "high": 1850000,
-        "updated_at": "2026-11-18T20:57:59.890639+00:00",
+        "high": 1760000,
+        "updated_at": "2026-11-19T20:33:15.708510+00:00",
         "confidence": "low",
-        "n": 31,
+        "n": 30,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 31,
-          "n_eff": 6.48,
+          "n": 30,
+          "n_eff": 6.23,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4357,
-          "same_suburb": 21,
+          "iqr_ratio": 0.3714,
+          "same_suburb": 20,
           "model_version": "comp-cv-v1"
         }
       }

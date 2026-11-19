@@ -17,7 +17,7 @@
   "sale_method": "Deadline sale",
   "deadline_at": "2026-12-09T11:00:00+00:00",
   "listed_at": "2026-02-10T01:17:09.293000+00:00",
-  "days_on_market": 281,
+  "days_on_market": 282,
   "lat": -36.761858,
   "lon": 174.7631429,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2287198851.jpg",
@@ -63,7 +63,7 @@
   "change_signal": "price increase",
   "change_count": 9,
   "last_change_at": "2026-11-16T18:39:16.290951+00:00",
-  "days_since_last_change": 2.1,
+  "days_since_last_change": 3.08,
   "price_drop_count": 0,
   "description_change_count": 5,
   "prior_sale_count": 7,
@@ -76,12 +76,12 @@
   "sale_method_stage": 2,
   "sale_pressure": 70.0,
   "sale_pressure_label": "high",
-  "model_low": 3723270,
-  "model_mid": 4046773,
-  "model_high": 4419247,
+  "model_low": 3771295,
+  "model_mid": 4094913,
+  "model_high": 4470355,
   "model_confidence": "high",
-  "text_signal_pct": 20.5523,
-  "description_index": 1.013448,
+  "text_signal_pct": 25.8446,
+  "description_index": 1.123993,
   "events_count": 9,
   "last_event": "estimate_change",
   "schools": [
@@ -269,7 +269,7 @@
       "id": 1524,
       "name": "TAKAPUNA NORMAL INTERMEDIATE",
       "type": "Intermediate",
-      "roll": 730,
+      "roll": 728,
       "authority": "State",
       "gender": "Co-Educational",
       "decile": null,
@@ -308,33 +308,52 @@
   ],
   "model": {
     "listing_id": 5776638620,
-    "low": 3723270,
-    "mid": 4046773,
-    "high": 4419247,
+    "low": 3771295,
+    "mid": 4094913,
+    "high": 4470355,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0833, 0.088], \"rel_width\": 0.172, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0823, 0.0877], \"rel_width\": 0.1707, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5776638620,
     "word_count": 370,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.8212,
-    "condition_renovation": 0.3445,
-    "views_waterfront": 0.3655,
-    "family_school": 0.7011,
+    "luxury": 0.8259,
+    "condition_renovation": 0.3446,
+    "views_waterfront": 0.3667,
+    "family_school": 0.7043,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.067,
-    "description_premium_pct": 20.5523,
-    "description_index": 1.013448,
+    "description_premium_pct": 25.8446,
+    "description_index": 1.123993,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 11, \"condition_renovation\": 3, \"views_waterfront\": 5, \"family_school\": 15, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-18T20:58:00.842503+00:00",
+    "updated_at": "2026-11-19T20:33:16.632396+00:00",
     "top_topics": [
       {
+        "topic_id": 3,
+        "weight": 0.335112,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "residence",
+          "views",
+          "expansive",
+          "scale",
+          "waterfront",
+          "gulf",
+          "harbour",
+          "architectural",
+          "spectacular",
+          "luxury",
+          "setting",
+          "hauraki"
+        ]
+      },
+      {
         "topic_id": 5,
-        "weight": 0.30464,
+        "weight": 0.315072,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -348,64 +367,45 @@
           "westlake boys",
           "intermediate",
           "school suburb",
-          "shore"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.279611,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "views",
-          "residence",
-          "waterfront",
-          "expansive",
-          "scale",
-          "gulf",
-          "harbour",
-          "hauraki",
-          "spectacular",
-          "hauraki gulf",
-          "pool",
-          "position"
+          "north"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.155023,
-        "label": "Family living & entertaining II",
+        "weight": 0.146402,
+        "label": "Sea views & coastal outlook",
         "top_terms": [
           "extended",
           "extended family",
           "flexibility",
-          "living areas",
-          "areas",
-          "multiple",
           "guests",
+          "living areas",
           "sea",
+          "areas",
           "sea views",
+          "multiple",
           "teenagers",
-          "family living",
-          "views"
+          "views",
+          "separate"
         ]
       },
       {
-        "topic_id": 0,
-        "weight": 0.115866,
-        "label": "Bedrooms, bathrooms & layout",
+        "topic_id": 6,
+        "weight": 0.13904,
+        "label": "Bedrooms, bathrooms & layout II",
         "top_terms": [
+          "walk",
           "wardrobe",
           "walk wardrobe",
           "ensuite",
-          "walk",
-          "master",
-          "bathroom",
-          "upstairs",
-          "floor",
-          "family bathroom",
+          "double",
           "suite",
           "lounge",
-          "master suite"
+          "master",
+          "bathroom",
+          "separate",
+          "upstairs",
+          "laundry"
         ]
       }
     ]
@@ -572,14 +572,14 @@
     "first_description_change_at": "2026-11-11T18:54:55.841554+00:00",
     "last_description_change_at": "2026-11-16T18:39:16.290951+00:00",
     "days_to_first_change": 20.49,
-    "days_since_last_change": 6.11,
+    "days_since_last_change": 7.09,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "removed",
-    "updated_at": "2026-11-18T20:57:59.890639+00:00"
+    "updated_at": "2026-11-19T20:33:15.708510+00:00"
   },
   "body": "Stunningly Renovated | Spectacular Views | Exceptional Family Living\r\n\r\nBeautifully renovated to an exceptional standard, this impressive multi-level residence is ready for you to move in and enjoy.\r\n\r\nCommanding panoramic views across the Hauraki Gulf, Auckland's city skyline, and the Waitakere Ranges, this expansive home combines scale, versatility, and breathtaking scenery to create an outstanding lifestyle opportunity.\r\n\r\nFeaturing six spacious bedrooms and four beautifully appointed bathrooms, the home offers remarkable flexibility for large families, multi-generational living, guest accommodation, or working from home. High-end finishes, generous proportions, and light-filled interiors are complemented by seamless indoor-outdoor flow and all-day sunshine.\r\n\r\nEntry Level\r\n\r\nPerfect for extended family, guests, or independent living, the ground floor includes:\r\n\r\n* Two generous bedrooms, each with its own ensuite\r\n * A comfortable lounge/living area\r\n * A large double garage with adjoining workshop space\r\n\r\nMain Living Level\r\n\r\nThe heart of the home unfolds on the middle floor, offering exceptional spaces for both everyday living and entertaining:\r\n\r\n* Separate kitchen and dining area\r\n * Spacious formal lounge and dining room with gas fireplace and balcony\r\n * Three additional bedrooms\r\n * A well-appointed family bathroom\r\n\r\nA central living zone creates a welcoming hub for family gatherings and effortless entertaining.\r\n\r\nExceptional Outdoor Living\r\n\r\nDesigned for year-round enjoyment, the outdoor entertaining areas are truly outstanding. Multiple sun-soaked seating spaces surround the swimming pool, creating the perfect setting for summer barbecues, family celebrations, or simply relaxing in complete privacy.\r\n\r\nThe desirable northerly aspect ensures abundant natural light and all-day sun, enhancing the home's resort-style atmosphere.\r\n\r\nLuxurious Master Retreat\r\n\r\nOccupying the entire top floor, the private master suite is a sanctuary of comfort and style, featuring:\r\n\r\n* A generous walk-in wardrobe\r\n * Luxurious ensuite bathroom\r\n * Stunning 270-degree panoramic views that transform everyday living into something truly extraordinary\r\n\r\nLocation & School Zones\r\n\r\nIdeally positioned just moments from Milford Village, Milford Beach, and Castor Bay Beach, with both beaches within easy walking distance, this sought-after location offers convenience and lifestyle in equal measure.\r\n\r\nZoned for highly regarded schools including:\r\n\r\n* Westlake Girls High School\r\n * Westlake Boys High School\r\n * Murrays Bay Intermediate\r\n * Campbells Bay School\r\n\r\nA rare opportunity to secure a beautifully renovated home of significant scale in one of the North Shore's most desirable coastal locations.\r\n\r\nSet Sale Date: Closing 3rd December 2026 at 4pm (unless sold prior).",
   "photos": [
@@ -818,7 +818,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1750000,
-      "estimate_mid": 1840000
+      "estimate_mid": 1820000
     },
     {
       "property_id": "28a0d6b7-5383-4842-8b08-35964f7d7882",
@@ -970,14 +970,14 @@
         "low": 3526538,
         "mid": 3908750,
         "high": 4167603,
-        "updated_at": "2026-11-18T20:57:59.890639+00:00",
+        "updated_at": "2026-11-19T20:33:15.708510+00:00",
         "confidence": "high",
         "n": 72,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 72,
-          "n_eff": 9.83,
+          "n_eff": 9.8,
           "radius_km": 3.0,
           "median_ratio": 0.9833,
           "iqr_ratio": 0.164,

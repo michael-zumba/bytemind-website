@@ -31,12 +31,12 @@
   "estimate_updated_at": null,
   "comp_low": 1240000,
   "comp_mid": 1506000,
-  "comp_high": 2000000,
+  "comp_high": 1850000,
   "comp_confidence": "low",
-  "comp_n": 31,
+  "comp_n": 30,
   "value_low": 1240000,
   "value_mid": 1506000,
-  "value_high": 2000000,
+  "value_high": 1850000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 2,
   "last_change_at": "2026-11-02T16:29:35.484231+00:00",
-  "days_since_last_change": 16.19,
+  "days_since_last_change": 17.17,
   "price_drop_count": 0,
   "description_change_count": 2,
   "prior_sale_count": 0,
@@ -76,11 +76,11 @@
   "sale_method_stage": 5,
   "sale_pressure": 71.3,
   "sale_pressure_label": "high",
-  "model_low": 3571956,
-  "model_mid": 4917418,
-  "model_high": 6840256,
+  "model_low": 3863544,
+  "model_mid": 5251325,
+  "model_high": 7049248,
   "model_confidence": "low",
-  "text_signal_pct": 73.8983,
+  "text_signal_pct": 84.6987,
   "description_index": 3.0,
   "events_count": 2,
   "last_event": "description_change",
@@ -99,7 +99,7 @@
       "id": 1524,
       "name": "TAKAPUNA NORMAL INTERMEDIATE",
       "type": "Intermediate",
-      "roll": 730,
+      "roll": 728,
       "authority": "State",
       "gender": "Co-Educational",
       "decile": null,
@@ -278,104 +278,104 @@
   ],
   "model": {
     "listing_id": 6126633073,
-    "low": 3571956,
-    "mid": 4917418,
-    "high": 6840256,
+    "low": 3863544,
+    "mid": 5251325,
+    "high": 7049248,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3197, 0.33], \"rel_width\": 0.6646, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3069, 0.2944], \"rel_width\": 0.6066, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6126633073,
     "word_count": 402,
     "exclamations": 0,
-    "urgency": 0.1608,
-    "luxury": 0.6184,
+    "urgency": 0.1623,
+    "luxury": 0.622,
     "condition_renovation": 0.0,
     "views_waterfront": 1.0,
-    "family_school": 0.086,
+    "family_school": 0.0864,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.2107,
-    "description_premium_pct": 73.8983,
+    "description_premium_pct": 84.6987,
     "description_index": 3.0,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 9, \"condition_renovation\": 0, \"views_waterfront\": 25, \"family_school\": 2, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-18T20:58:00.842503+00:00",
+    "updated_at": "2026-11-19T20:33:16.632396+00:00",
     "top_topics": [
       {
-        "topic_id": 10,
-        "weight": 0.775785,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "views",
-          "residence",
-          "waterfront",
-          "expansive",
-          "scale",
-          "gulf",
-          "harbour",
-          "hauraki",
-          "spectacular",
-          "hauraki gulf",
-          "pool",
-          "position"
-        ]
-      },
-      {
-        "topic_id": 11,
-        "weight": 0.058653,
-        "label": "Family living & entertaining II",
-        "top_terms": [
-          "extended",
-          "extended family",
-          "flexibility",
-          "living areas",
-          "areas",
-          "multiple",
-          "guests",
-          "sea",
-          "sea views",
-          "teenagers",
-          "family living",
-          "views"
-        ]
-      },
-      {
         "topic_id": 3,
-        "weight": 0.056115,
+        "weight": 0.785587,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
-          "premium",
-          "quality",
-          "designer",
-          "finishes",
-          "appliances",
-          "year",
+          "residence",
+          "views",
+          "expansive",
+          "scale",
+          "waterfront",
+          "gulf",
+          "harbour",
+          "architectural",
+          "spectacular",
           "luxury",
-          "designer kitchen",
-          "comfort",
-          "new",
-          "heating",
-          "design"
+          "setting",
+          "hauraki"
         ]
       },
       {
         "topic_id": 8,
-        "weight": 0.051677,
+        "weight": 0.105219,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
+          "pool",
+          "car",
           "lock",
+          "kensington",
           "leave",
           "lock leave",
-          "car",
-          "secure",
-          "park",
+          "gym",
           "balcony",
-          "complex",
-          "pool",
-          "kensington",
-          "bedroom apartment"
+          "park",
+          "kensington park",
+          "secure"
+        ]
+      },
+      {
+        "topic_id": 11,
+        "weight": 0.047239,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "extended",
+          "extended family",
+          "flexibility",
+          "guests",
+          "living areas",
+          "sea",
+          "areas",
+          "sea views",
+          "multiple",
+          "teenagers",
+          "views",
+          "separate"
+        ]
+      },
+      {
+        "topic_id": 5,
+        "weight": 0.047149,
+        "label": "Westlake school zone",
+        "top_terms": [
+          "westlake",
+          "girls",
+          "school",
+          "girls high",
+          "westlake girls",
+          "high school",
+          "boys",
+          "high",
+          "westlake boys",
+          "intermediate",
+          "school suburb",
+          "north"
         ]
       }
     ]
@@ -431,7 +431,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-18T20:57:59.890639+00:00"
+    "updated_at": "2026-11-19T20:33:15.708510+00:00"
   },
   "body": "North-Facing | Lake, Rangitoto,  Harbour & Skyline Views | Dual Kitchens | Garaging for Up to 9 Vehicles\r\n\r\nOccupying an entire floor with a prized north-facing aspect, this landmark penthouse ranks among Auckland’s most exclusive apartment residences. With a motivated vendor committed to a sale, it presents a compelling opportunity to secure an exceptional home in prestigious Takapuna.\r\n\r\nOffering beautifully appointed living, complemented by expansive outdoor terraces, it enjoys an outlook rarely found in a single home. Sweeping views extend across Lake Pupuke, the sparkling Hauraki Gulf, Rangitoto Island and the Auckland city skyline, with the Sky Tower standing proudly above the city lights. From the first light over the gulf to the changing colours of sunset and Auckland's illuminated skyline after dark, the outlook is constantly evolving.\r\n\r\nIt is exceptionally rare to find a penthouse that captures uninterrupted views of Lake Pupuke, the Hauraki Gulf, Rangitoto Island and the Auckland city skyline, all from one remarkable residence.\r\n\r\nFull-height glazing floods the interiors with natural light, while expansive open-plan living and dining areas flow seamlessly onto generous terraces, creating an effortless connection between indoor and outdoor living. Whether entertaining guests or enjoying a quiet evening at home, the ever-changing panorama provides a spectacular backdrop.\r\n\r\nDesigned with both elegance and practicality in mind, the residence features a beautifully appointed designer kitchen, complemented by a fully equipped secondary kitchen. This highly sought-after dual-kitchen layout offers the perfect balance between refined entertaining and everyday family living, making the home equally suited to intimate dinners or large-scale celebrations.\r\n\r\nFour generous bedrooms, including a luxurious master suite, are complemented by multiple living areas that provide flexibility for families, guests or working from home. Every space has been thoughtfully designed to maximise comfort, privacy and the remarkable outlook.\r\n\r\nPrivate lift access, extensive storage and secure garaging for up to nine vehicles complete the residence. Garaging of this scale is exceptionally rare in apartment living and further distinguishes this full-floor penthouse from virtually anything else available in Auckland.\r\n\r\nCombining a coveted north-facing position, panoramic lake, harbour and city views, generous proportions, the versatility of a dual-kitchen layout and exceptional garaging, this is a residence of genuine rarity.\r\n\r\nHeld by only a select few, residences of this calibre seldom become available. The opportunity to secure a full-floor penthouse with this calibre of views, scale, functionality and secure garaging is exceptionally rare.\r\n\r\nContact Alison Parker or Nico Zhang at New Zealand Sotheby's International Realty for more information and viewing arrangements.",
   "photos": [
@@ -574,20 +574,6 @@
       "estimate_mid": 1090000
     },
     {
-      "property_id": "d4f16c21-7408-40f9-9df0-bab8c928284d",
-      "address": "7 Ewen Street, Hauraki, Auckland",
-      "sale_price": 2812000,
-      "sale_date": "2026-10-13T00:00:00+00:00",
-      "distance_km": 1.36,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 3000000,
-      "estimate_mid": 2910000
-    },
-    {
       "property_id": "c565dfcd-cccb-43de-8799-f39d3064641f",
       "address": "2/13 Napoleon Avenue, Milford, Auckland",
       "sale_price": 623000,
@@ -613,7 +599,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 660000,
-      "estimate_mid": 605000
+      "estimate_mid": 595000
     },
     {
       "property_id": "355c07ad-8f29-4ab3-bf11-eabc5bd845ba",
@@ -628,32 +614,46 @@
       "property_type": null,
       "cv": 780000,
       "estimate_mid": 780000
+    },
+    {
+      "property_id": "37b2f294-53fa-45d0-ba7c-5bffc869ad98",
+      "address": "1/2 Hauraki Road, Hauraki, Auckland",
+      "sale_price": 2500000,
+      "sale_date": "2026-08-24T00:00:00+00:00",
+      "distance_km": 1.52,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1975000,
+      "estimate_mid": 2330000
     }
   ],
   "valuation": {
     "value_low": 1240000,
     "value_mid": 1506000,
-    "value_high": 2000000,
+    "value_high": 1850000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.24M – $2M",
+        "range": "$1.24M – $1.85M",
         "low": 1240000,
         "mid": 1506000,
-        "high": 2000000,
-        "updated_at": "2026-11-18T20:57:59.890639+00:00",
+        "high": 1850000,
+        "updated_at": "2026-11-19T20:33:15.708510+00:00",
         "confidence": "low",
-        "n": 31,
+        "n": 30,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 31,
-          "n_eff": 9.22,
+          "n": 30,
+          "n_eff": 8.8,
           "radius_km": 3.0,
-          "iqr_ratio": 0.5046,
-          "same_suburb": 21,
+          "iqr_ratio": 0.405,
+          "same_suburb": 20,
           "model_version": "comp-cv-v1"
         }
       }

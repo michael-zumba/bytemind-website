@@ -29,11 +29,11 @@
   "estimate_high": 916429,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-11-11T11:00:00+00:00",
-  "comp_low": 832381,
+  "comp_low": 792952,
   "comp_mid": 928558,
   "comp_high": 982727,
   "comp_confidence": "medium",
-  "comp_n": 45,
+  "comp_n": 46,
   "value_low": 814529,
   "value_mid": 865479,
   "value_high": 916429,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 7,
   "last_change_at": "2026-11-18T17:25:41.756763+00:00",
-  "days_since_last_change": 0.15,
+  "days_since_last_change": 1.13,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 3,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 66.3,
   "sale_pressure_label": "high",
-  "model_low": 841583,
-  "model_mid": 914706,
-  "model_high": 998897,
+  "model_low": 840772,
+  "model_mid": 912919,
+  "model_high": 996620,
   "model_confidence": "high",
-  "text_signal_pct": 6.3776,
-  "description_index": 0.335214,
+  "text_signal_pct": 1.0535,
+  "description_index": 0.05124,
   "events_count": 7,
   "last_event": "new_listing",
   "schools": [
@@ -268,52 +268,71 @@
   ],
   "model": {
     "listing_id": 6079082557,
-    "low": 841583,
-    "mid": 914706,
-    "high": 998897,
+    "low": 840772,
+    "mid": 912919,
+    "high": 996620,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0833, 0.088], \"rel_width\": 0.172, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0823, 0.0877], \"rel_width\": 0.1707, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6079082557,
     "word_count": 288,
     "exclamations": 3,
     "urgency": 0.0,
-    "luxury": 0.0959,
-    "condition_renovation": 0.59,
-    "views_waterfront": 0.1878,
-    "family_school": 0.3603,
+    "luxury": 0.0965,
+    "condition_renovation": 0.5903,
+    "views_waterfront": 0.1885,
+    "family_school": 0.3619,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.5686,
-    "description_premium_pct": 6.3776,
-    "description_index": 0.335214,
+    "description_premium_pct": 1.0535,
+    "description_index": 0.05124,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 4, \"views_waterfront\": 2, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-18T20:58:00.842503+00:00",
+    "updated_at": "2026-11-19T20:33:16.632396+00:00",
     "top_topics": [
       {
-        "topic_id": 9,
-        "weight": 0.512087,
-        "label": "Parking, garden & section II",
+        "topic_id": 4,
+        "weight": 0.332431,
+        "label": "Family living & entertaining",
         "top_terms": [
-          "fenced",
-          "fully fenced",
-          "street",
-          "fully",
-          "parking",
-          "brick",
-          "garden",
-          "sunny",
           "room",
-          "street parking",
-          "north facing",
-          "facing"
+          "morning",
+          "friends",
+          "summer",
+          "garden",
+          "life",
+          "coffee",
+          "away",
+          "day",
+          "relaxed",
+          "little",
+          "character"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.232682,
+        "label": "Bedrooms, bathrooms & layout II",
+        "top_terms": [
+          "walk",
+          "wardrobe",
+          "walk wardrobe",
+          "ensuite",
+          "double",
+          "suite",
+          "lounge",
+          "master",
+          "bathroom",
+          "separate",
+          "upstairs",
+          "laundry"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.122627,
+        "weight": 0.127598,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -327,45 +346,26 @@
           "westlake boys",
           "intermediate",
           "school suburb",
-          "shore"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.07845,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "ensuite",
-          "walk",
-          "master",
-          "bathroom",
-          "upstairs",
-          "floor",
-          "family bathroom",
-          "suite",
-          "lounge",
-          "master suite"
+          "north"
         ]
       },
       {
         "topic_id": 11,
-        "weight": 0.077921,
-        "label": "Family living & entertaining II",
+        "weight": 0.107166,
+        "label": "Sea views & coastal outlook",
         "top_terms": [
           "extended",
           "extended family",
           "flexibility",
-          "living areas",
-          "areas",
-          "multiple",
           "guests",
+          "living areas",
           "sea",
+          "areas",
           "sea views",
+          "multiple",
           "teenagers",
-          "family living",
-          "views"
+          "views",
+          "separate"
         ]
       }
     ]
@@ -481,7 +481,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-18T20:57:59.890639+00:00"
+    "updated_at": "2026-11-19T20:33:15.708510+00:00"
   },
   "body": "This immaculate 3-bedroom, 2-bathroom home blends character, space, and low-maintenance living and ticks all the boxes! Its sun-drenched, north-facing position offers year-round warmth, bright, light aspect, and fabulous entertaining through the summer months, all in an elevated, private, sought-after location.\r\n\r\nThe spacious main living area and two generous bedrooms, along with a main full bathroom, sit conveniently on one level. Here, the seamless flow between the kitchen, dining, and separate lounge effortlessly opens up to large private decks-perfect for hosting friends or unwinding after a long day. Picture yourself soaking under the stars in your very own spa pool, creating memories that warm the heart.\r\n \r\nVenture downstairs to find a versatile space that adapts to your lifestyle- whether that be the extra-large 3rd bedroom/rumpus area or currently used to run a business out of, all complemented by a full laundry, WC, and shower. You can adapt as your family's needs change!\r\n\r\nThe landscaped grounds, flat lawn for the kids to play, and extra-large shed for tools and toys ensure the whole family is catered for. With abundant parking options, including a covered carport with a 15 Amp socket for EV charging and off-street parking for cars, a camper, or even a boat, your practical needs are met with ease.\r\n\r\nSet back from the road on a quiet street, this home is centrally located within walking distance to Stanmore Bay Primary School and near Stanmore Bay Beach, the Leisure Centre, and Stanmore Bay Primary. Commuting is a breeze with easy access to bus routes and main roads to the North Shore and City.\r\n\r\nThis is a property that needs to be inspected to appreciate what's on offer! Call today",
   "photos": [
@@ -710,6 +710,20 @@
       "estimate_mid": 960000
     },
     {
+      "property_id": "b411b18a-d595-47a5-b315-be1a4033fc45",
+      "address": "18 Glenelg Road, Red Beach, Whangaparāoa",
+      "sale_price": 815000,
+      "sale_date": "2026-10-01T00:00:00+00:00",
+      "distance_km": 1.31,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1225000,
+      "estimate_mid": 1170000
+    },
+    {
       "property_id": "c83d84ba-aaa1-498a-9a43-7b5ca21efd33",
       "address": "33 Durness Place, Red Beach, Red Beach",
       "sale_price": 1230000,
@@ -834,20 +848,6 @@
       "property_type": null,
       "cv": 580000,
       "estimate_mid": 570000
-    },
-    {
-      "property_id": "6daab980-885e-45a1-a44b-66001507babf",
-      "address": "108 Stanmore Bay Road, Stanmore Bay, Whangaparaoa",
-      "sale_price": 1120000,
-      "sale_date": "2026-09-02T00:00:00+00:00",
-      "distance_km": 2.48,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1175000,
-      "estimate_mid": 1130000
     }
   ],
   "valuation": {
@@ -869,21 +869,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$832K – $983K",
-        "low": 832381,
+        "range": "$793K – $983K",
+        "low": 792952,
         "mid": 928558,
         "high": 982727,
-        "updated_at": "2026-11-18T20:57:59.890639+00:00",
+        "updated_at": "2026-11-19T20:33:15.708510+00:00",
         "confidence": "medium",
-        "n": 45,
+        "n": 46,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
-          "n": 45,
-          "n_eff": 6.06,
+          "n": 46,
+          "n_eff": 6.22,
           "radius_km": 3.0,
           "median_ratio": 1.0093,
-          "iqr_ratio": 0.1619,
+          "iqr_ratio": 0.2044,
           "same_suburb": 24,
           "model_version": "comp-cv-v1"
         }

@@ -5,7 +5,7 @@
   "suburb": "Takapuna",
   "suburb_slug": "takapuna",
   "suburb_group": "North Shore",
-  "property_type": "House",
+  "property_type": "Apartment",
   "bedrooms": 1,
   "bathrooms": 1,
   "parking": 1,
@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-02-02T20:59:38.100000+00:00",
-  "days_on_market": 288,
+  "days_on_market": 289,
   "lat": -36.7907587,
   "lon": 174.7710812,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2285244808.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": -245000,
   "ask_gap_pct": -0.2988,
   "deal_gap": 0.2988,
-  "view_count": 6416,
-  "watchers": 107,
+  "view_count": 6482,
+  "watchers": 106,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 859762,
-  "model_mid": 1183612,
-  "model_high": 1646434,
+  "model_low": 945365,
+  "model_mid": 1284940,
+  "model_high": 1724871,
   "model_confidence": "low",
-  "text_signal_pct": -1.9775,
-  "description_index": -0.108297,
+  "text_signal_pct": -0.6143,
+  "description_index": -0.030131,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -99,7 +99,7 @@
       "id": 1524,
       "name": "TAKAPUNA NORMAL INTERMEDIATE",
       "type": "Intermediate",
-      "roll": 730,
+      "roll": 728,
       "authority": "State",
       "gender": "Co-Educational",
       "decile": null,
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 5764543405,
-    "low": 859762,
-    "mid": 1183612,
-    "high": 1646434,
+    "low": 945365,
+    "mid": 1284940,
+    "high": 1724871,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3197, 0.33], \"rel_width\": 0.6646, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3069, 0.2944], \"rel_width\": 0.6066, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5764543405,
@@ -290,59 +290,78 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.2723,
-    "views_waterfront": 0.3468,
-    "family_school": 0.1109,
+    "condition_renovation": 0.2724,
+    "views_waterfront": 0.3479,
+    "family_school": 0.1114,
     "investment": 0.8846,
     "risk": 0.0,
     "readability": 0.4499,
-    "description_premium_pct": -1.9775,
-    "description_index": -0.108297,
+    "description_premium_pct": -0.6143,
+    "description_index": -0.030131,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 1, \"investment\": 4, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-18T20:58:00.842503+00:00",
+    "updated_at": "2026-11-19T20:33:16.632396+00:00",
     "top_topics": [
       {
         "topic_id": 8,
-        "weight": 0.603298,
+        "weight": 0.543716,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
+          "pool",
+          "car",
           "lock",
+          "kensington",
           "leave",
           "lock leave",
-          "car",
-          "secure",
-          "park",
+          "gym",
           "balcony",
-          "complex",
-          "pool",
-          "kensington",
-          "bedroom apartment"
+          "park",
+          "kensington park",
+          "secure"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.199808,
+        "weight": 0.175934,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
           "future",
           "site",
-          "property",
           "land",
           "development",
           "subject",
+          "property",
           "council",
           "existing",
           "value",
-          "possibilities",
-          "subject council"
+          "mixed",
+          "housing"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.130213,
+        "label": "Brick / tile / low-maintenance units",
+        "top_terms": [
+          "maintenance",
+          "low",
+          "low maintenance",
+          "easy care",
+          "care",
+          "property",
+          "buyers",
+          "single",
+          "investors",
+          "brick",
+          "home buyers",
+          "single level"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.087993,
+        "weight": 0.092896,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -356,26 +375,7 @@
           "westlake boys",
           "intermediate",
           "school suburb",
-          "shore"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.063733,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "views",
-          "residence",
-          "waterfront",
-          "expansive",
-          "scale",
-          "gulf",
-          "harbour",
-          "hauraki",
-          "spectacular",
-          "hauraki gulf",
-          "pool",
-          "position"
+          "north"
         ]
       }
     ]
@@ -416,7 +416,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-18T20:57:59.890639+00:00"
+    "updated_at": "2026-11-19T20:33:15.708510+00:00"
   },
   "body": "Positioned high on the 10th floor with a north facing aspect, this spacious one bedroom apartment enjoys sweeping views, excellent natural light and a private balcony creating an unbeatable coastal lifestyle.\r\n\r\nThe layout is generous and well proportioned, offering comfortable living with clear scope to modernise and add value.\r\nLeave the car at home in the secure carpark as you step outside into the heart of Takapuna. Less than 200m from shops and public transport and just minutes away from the popular Takapuna beach.\r\nAlthough not managed by the hotel, enjoy full use of all the amenities such as a swimming pool, spa, gym and tennis court. \r\n\r\nCurrently tenanted until October, the apartment provides immediate rental income and peace of mind for investors, with future flexibility for owner-occupiers. An ideal lock-and-leave or investment opportunity in one of the North Shore's most desirable seaside suburbs.\r\n\r\nPlease note the photos provided are before the tenancy. \r\nViewing by appointment",
   "photos": [
@@ -513,20 +513,6 @@
       "estimate_mid": 1090000
     },
     {
-      "property_id": "d4f16c21-7408-40f9-9df0-bab8c928284d",
-      "address": "7 Ewen Street, Hauraki, Auckland",
-      "sale_price": 2812000,
-      "sale_date": "2026-10-13T00:00:00+00:00",
-      "distance_km": 0.82,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 3000000,
-      "estimate_mid": 2910000
-    },
-    {
       "property_id": "15967473-77d5-4c1e-98d7-51d1ca1b5b60",
       "address": "3/19 Lake Pupuke Drive, Takapuna, Auckland",
       "sale_price": 975000,
@@ -583,6 +569,20 @@
       "estimate_mid": 2330000
     },
     {
+      "property_id": "daa08feb-4d35-49fa-aba6-031cf93e6d2a",
+      "address": "2/17 Dominion Street, Takapuna, Auckland",
+      "sale_price": 720000,
+      "sale_date": "2026-08-17T00:00:00+00:00",
+      "distance_km": 1.06,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 750000,
+      "estimate_mid": 720000
+    },
+    {
       "property_id": "bc09b16b-4062-49fc-8e94-c2eb8acc9563",
       "address": "2/34 Lake View Road, Takapuna, Auckland",
       "sale_price": 1506000,
@@ -624,14 +624,14 @@
         "low": 711000,
         "mid": 820000,
         "high": 980000,
-        "updated_at": "2026-11-18T20:57:59.890639+00:00",
+        "updated_at": "2026-11-19T20:33:15.708510+00:00",
         "confidence": "medium",
         "n": 27,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
           "n": 27,
-          "n_eff": 9.21,
+          "n_eff": 9.18,
           "radius_km": 3.0,
           "iqr_ratio": 0.328,
           "same_suburb": 15,

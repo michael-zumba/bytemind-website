@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-07T03:37:00+00:00",
-  "days_on_market": 42,
+  "days_on_market": 44,
   "lat": -36.6195717,
   "lon": 174.6642304,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333810423.jpg",
@@ -33,7 +33,7 @@
   "comp_mid": 1345000,
   "comp_high": 1500000,
   "comp_confidence": "medium",
-  "comp_n": 34,
+  "comp_n": 33,
   "value_low": 1200000,
   "value_mid": 1345000,
   "value_high": 1500000,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 407,
+  "view_count": 429,
   "watchers": 5,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:18:59.078988+00:00",
-  "days_since_last_change": 15.97,
+  "days_since_last_change": 17.11,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 37.0,
+  "sale_pressure": 37.3,
   "sale_pressure_label": "low",
-  "model_low": 725227,
-  "model_mid": 985728,
-  "model_high": 1323217,
+  "model_low": 697160,
+  "model_mid": 956852,
+  "model_high": 1304664,
   "model_confidence": "low",
-  "text_signal_pct": -27.5322,
-  "description_index": -1.574564,
+  "text_signal_pct": -28.6935,
+  "description_index": -1.882204,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,95 +268,57 @@
   ],
   "model": {
     "listing_id": 6181833787,
-    "low": 725227,
-    "mid": 985728,
-    "high": 1323217,
+    "low": 697160,
+    "mid": 956852,
+    "high": 1304664,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3069, 0.2944], \"rel_width\": 0.6066, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3166, 0.3101], \"rel_width\": 0.6349, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6181833787,
     "word_count": 144,
     "exclamations": 1,
-    "urgency": 0.4531,
+    "urgency": 0.4479,
     "luxury": 0.0,
     "condition_renovation": 0.0,
     "views_waterfront": 0.0,
-    "family_school": 0.3619,
-    "investment": 0.4792,
+    "family_school": 0.363,
+    "investment": 0.486,
     "risk": 0.0,
     "readability": 0.2796,
-    "description_premium_pct": -27.5322,
-    "description_index": -1.574564,
+    "description_premium_pct": -28.6935,
+    "description_index": -1.882204,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 3, \"investment\": 2, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-19T20:33:16.632396+00:00",
+    "updated_at": "2026-11-21T00:03:09.776665+00:00",
     "top_topics": [
       {
-        "topic_id": 0,
-        "weight": 0.280786,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "comfort",
-          "living area",
-          "dining living",
-          "convenience",
-          "master",
-          "plan kitchen",
-          "kitchen dining",
-          "practical",
-          "light",
-          "motorway",
-          "ensuite",
-          "master bedroom"
-        ]
-      },
-      {
-        "topic_id": 9,
-        "weight": 0.212972,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low",
-          "low maintenance",
-          "easy care",
-          "care",
-          "property",
-          "buyers",
-          "single",
-          "investors",
-          "brick",
-          "home buyers",
-          "single level"
-        ]
-      },
-      {
         "topic_id": 2,
-        "weight": 0.196002,
+        "weight": 0.640254,
         "label": "New build / brand-new quality",
         "top_terms": [
-          "new",
-          "brand",
           "brand new",
-          "quality",
-          "finishes",
-          "premium",
-          "appliances",
-          "homes",
-          "year",
-          "designer",
+          "brand",
           "maintenance",
-          "design"
+          "low maintenance",
+          "low",
+          "new",
+          "single",
+          "easy care",
+          "care",
+          "quality",
+          "new home",
+          "convenience"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.152541,
+        "weight": 0.144472,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
-          "girls",
           "school",
+          "girls",
           "girls high",
           "westlake girls",
           "high school",
@@ -365,7 +327,45 @@
           "westlake boys",
           "intermediate",
           "school suburb",
-          "north"
+          "shore"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.069743,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "extended",
+          "extended family",
+          "flexibility",
+          "living areas",
+          "areas",
+          "guests",
+          "multiple",
+          "sea",
+          "teenagers",
+          "sea views",
+          "family living",
+          "income"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.06603,
+        "label": "School zones & catchments",
+        "top_terms": [
+          "macleans",
+          "macleans college",
+          "college",
+          "intermediate",
+          "school",
+          "suburb intermediate",
+          "primary",
+          "marina",
+          "pigeon",
+          "pigeon mountain",
+          "suburb marina",
+          "mountain"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-19T20:33:15.708510+00:00"
+    "updated_at": "2026-11-21T00:03:08.825906+00:00"
   },
   "body": "Discover modern, comfortable living in this brand-new home, ideally positioned in the heart of Silverdale.\r\n\r\nDesigned with space and practicality in mind, this home offers 5 bedrooms, 3 bathrooms and a single garage, making it an excellent choice for families, first-home buyers or investors.\r\n\r\nKey Features:\r\n\r\n• Brand-new home\r\n• 5 spacious bedrooms\r\n• 2 master bedrooms, both offering excellent privacy\r\n• 3 bathrooms\r\n• Single internal-access garage\r\n• Modern kitchen with walk-in pantry\r\n• Open-plan kitchen, dining and living area\r\n• Low-maintenance section\r\n• Excellent indoor-outdoor flow\r\n• Convenient Silverdale Location\r\n\r\nEnjoy easy access to everything Silverdale has to offer, including Silverdale Shopping Centre, local cafes and restaurants, schools, parks and recreational facilities. With excellent motorway connections, commuting to Auckland’s North Shore and beyond is convenient and straightforward.\r\n\r\nWhether you’re looking for a modern family home, a smart investment or an affordable brand-new property, this is an opportunity not to be missed.\r\n\r\nCome and see what this home has to offer!",
   "photos": [
@@ -456,20 +456,6 @@
       "property_type": null,
       "cv": 1125000,
       "estimate_mid": 945000
-    },
-    {
-      "property_id": "4d9d866d-fa8d-4689-a186-6ce634345e8b",
-      "address": "25 Vue Terrace, Silverdale, Silverdale",
-      "sale_price": 1500000,
-      "sale_date": "2026-08-28T00:00:00+00:00",
-      "distance_km": 0.89,
-      "bedrooms": 5,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1425000,
-      "estimate_mid": 1510000
     },
     {
       "property_id": "49050c53-6885-4c57-91c0-57ee91368d31",
@@ -610,6 +596,20 @@
       "property_type": null,
       "cv": 1250000,
       "estimate_mid": 1300000
+    },
+    {
+      "property_id": "d528f4f7-c688-4147-af79-dd7fb20785f9",
+      "address": "172 Harris Drive, Silverdale, Silverdale",
+      "sale_price": 1580000,
+      "sale_date": "2026-09-10T00:00:00+00:00",
+      "distance_km": 1.84,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1325000,
+      "estimate_mid": 1560000
     }
   ],
   "valuation": {
@@ -625,14 +625,14 @@
         "low": 1200000,
         "mid": 1345000,
         "high": 1500000,
-        "updated_at": "2026-11-19T20:33:15.708510+00:00",
+        "updated_at": "2026-11-21T00:03:08.825906+00:00",
         "confidence": "medium",
-        "n": 34,
+        "n": 33,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 34,
-          "n_eff": 8.19,
+          "n": 33,
+          "n_eff": 8.05,
           "radius_km": 3.0,
           "iqr_ratio": 0.223,
           "same_suburb": 14,

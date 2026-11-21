@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-06T22:41:55.667000+00:00",
-  "days_on_market": 42,
+  "days_on_market": 44,
   "lat": -36.860655,
   "lon": 174.9028421,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333730401.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 520,
+  "view_count": 531,
   "watchers": 12,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:51:48.632464+00:00",
-  "days_since_last_change": 15.99,
+  "days_since_last_change": 17.13,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 37.0,
+  "sale_pressure": 37.3,
   "sale_pressure_label": "low",
-  "model_low": 965715,
-  "model_mid": 1312599,
-  "model_high": 1762000,
+  "model_low": 984349,
+  "model_mid": 1351019,
+  "model_high": 1842111,
   "model_confidence": "low",
-  "text_signal_pct": -21.5414,
-  "description_index": -1.186195,
+  "text_signal_pct": -15.077,
+  "description_index": -0.909569,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6167370402,
-    "low": 965715,
-    "mid": 1312599,
-    "high": 1762000,
+    "low": 984349,
+    "mid": 1351019,
+    "high": 1842111,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3069, 0.2944], \"rel_width\": 0.6066, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3166, 0.3101], \"rel_width\": 0.6349, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6167370402,
@@ -300,59 +300,78 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0901,
-    "condition_renovation": 0.4133,
-    "views_waterfront": 0.1319,
-    "family_school": 0.5068,
-    "investment": 0.0559,
+    "condition_renovation": 0.4128,
+    "views_waterfront": 0.1312,
+    "family_school": 0.5084,
+    "investment": 0.0567,
     "risk": 0.0,
     "readability": 0.2451,
-    "description_premium_pct": -21.5414,
-    "description_index": -1.186195,
+    "description_premium_pct": -15.077,
+    "description_index": -0.909569,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 6, \"views_waterfront\": 3, \"family_school\": 18, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-19T20:33:16.632396+00:00",
+    "updated_at": "2026-11-21T00:03:09.776665+00:00",
     "top_topics": [
       {
-        "topic_id": 2,
-        "weight": 0.418927,
-        "label": "New build / brand-new quality",
+        "topic_id": 3,
+        "weight": 0.259162,
+        "label": "Luxury, architectural & prestige",
         "top_terms": [
-          "new",
-          "brand",
-          "brand new",
+          "premium",
           "quality",
           "finishes",
-          "premium",
-          "appliances",
-          "homes",
-          "year",
           "designer",
-          "maintenance",
+          "appliances",
+          "year",
+          "luxury",
+          "designer kitchen",
+          "comfort",
+          "new",
+          "heating",
           "design"
         ]
       },
       {
-        "topic_id": 11,
-        "weight": 0.230032,
+        "topic_id": 2,
+        "weight": 0.248359,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand new",
+          "brand",
+          "maintenance",
+          "low maintenance",
+          "low",
+          "new",
+          "single",
+          "easy care",
+          "care",
+          "quality",
+          "new home",
+          "convenience"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.201731,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "extended",
           "extended family",
           "flexibility",
-          "guests",
           "living areas",
-          "sea",
           "areas",
-          "sea views",
+          "guests",
           "multiple",
+          "sea",
           "teenagers",
-          "views",
-          "separate"
+          "sea views",
+          "family living",
+          "income"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.13533,
+        "weight": 0.157114,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -365,27 +384,8 @@
           "marina",
           "pigeon",
           "pigeon mountain",
-          "mountain",
-          "suburb marina"
-        ]
-      },
-      {
-        "topic_id": 9,
-        "weight": 0.105503,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "maintenance",
-          "low",
-          "low maintenance",
-          "easy care",
-          "care",
-          "property",
-          "buyers",
-          "single",
-          "investors",
-          "brick",
-          "home buyers",
-          "single level"
+          "suburb marina",
+          "mountain"
         ]
       }
     ]
@@ -434,7 +434,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-19T20:33:15.708510+00:00"
+    "updated_at": "2026-11-21T00:03:08.825906+00:00"
   },
   "body": "There's something special about moving into a home where everything is brand new - and at 2 Camwell Close, you have the opportunity to choose from a boutique collection of just four beautifully finished residences in the heart of Bucklands Beach. Designed with modern lifestyles in mind, these homes combine contemporary architecture, generous proportions and quality finishes with flexible layouts that cater to families, professionals and downsizers alike.\r\n\r\nEach residence has its own personality, with a selection of layouts offering excellent separation between living and accommodation, beautifully appointed kitchens, multiple bathrooms and inviting outdoor spaces. Whether you need room for a growing family, a private space for teenagers or guests, the ability to work comfortably from home, or simply want a stylish low-maintenance property you can lock up and leave, there is an option here to suit.\r\n\r\nAt the heart of each home is a spacious open-plan living environment designed to bring people together. Contemporary kitchens with quality Fisher & Paykel appliances provide a natural centrepiece, while excellent indoor-outdoor flow creates spaces equally suited to relaxed family evenings or entertaining friends.\r\n\r\nFor buyers thinking further ahead, Homes 1 and 4 include their own internal lifts, adding another level of convenience and making them particularly appealing for downsizers, multi-generational households or those wanting a home that can adapt with them over time.\r\n\r\nAnd then there's the coastal lifestyle. Bucklands Beach is within easy walking distance, with Howick Golf Club nearby and the wider Half Moon Bay and eastern beaches lifestyle within easy reach. The homes are also positioned within the highly regarded Macleans College school zone, adding further appeal for families.\r\n\r\nKEY FEATURES\r\n* Boutique collection of just four brand-new homes\r\n* Contemporary architectural design\r\n* A choice of versatile layouts to suit different lifestyles\r\n* Homes 1 & 4 feature internal lifts\r\n* Quality kitchens with Fisher & Paykel appliances\r\n* Generous open-plan living and dining\r\n* Excellent indoor-outdoor connection\r\n* Beautifully finished tiled bathrooms\r\n* Flexible bedroom options for family, guests or working from home\r\n* Internal-access garaging\r\n* Central air conditioning\r\n* Low-maintenance modern construction\r\n* Selected homes enjoying sea views\r\n* Stamford 10-Year Building Warranty\r\n* Walking distance to Bucklands Beach and Howick Golf Club\r\n* Zoned for Macleans College\r\n* An excellent choice for families, professionals and downsizers\r\n\r\nWHICH HOME IS YOURS?\r\nWhile all four homes share the same commitment to quality, each offers its own layout, character and advantages. Explore the collection and find the one that fits the way you want to live.\r\n\r\nHOME 1 - ELEVATED EVERYDAY LIVING\r\nA standout option within the development, Home 1 combines contemporary design with the added convenience of its own internal lift. An excellent choice for downsizers, families or buyers thinking ahead, offering effortless movement between levels without compromising on style or space.\r\n\r\nHOME 2 - MODERN, EASY & BEAUTIFULLY FINISHED\r\nDesigned for buyers who want the simplicity of brand-new living, Home 2 delivers a smart balance of accommodation, open-plan entertaining and low-maintenance outdoor space. Simply move in, unpack and enjoy everything a newly completed home has to offer.\r\n\r\nHOME 3 - A SMART FAMILY ALL-ROUNDER\r\nA beautifully considered home offering the space and flexibility needed for everyday family life. Generous living, quality finishes and excellent separation create an easy environment for relaxing, entertaining and spending time together.\r\n\r\nHOME 4 - PREMIUM CONVENIENCE & FLEXIBILITY\r\nWith the added advantage of its own internal lift, Home 4 provides an appealing combination of style, practicality and future-proofed living. Ideal for downsizers, multi-generational households or anyone wanting the convenience of easy access between levels.\r\n\r\nFOUR BRAND-NEW HOMES. FOUR DIFFERENT OPPORTUNITIES.\r\nWhether your priority is an internal lift, family space, low-maintenance living or simply the opportunity to be the very first owner, there's a home here ready to match your next chapter.\r\n\r\nContact Simon Davies or Renee Davies today for further information or to arrange your private viewing.",
   "photos": [
@@ -647,17 +647,17 @@
         "low": 1400000,
         "mid": 1700000,
         "high": 2300000,
-        "updated_at": "2026-11-19T20:33:15.708510+00:00",
+        "updated_at": "2026-11-21T00:03:08.825906+00:00",
         "confidence": "low",
         "n": 45,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
           "n": 45,
-          "n_eff": 12.37,
+          "n_eff": 12.27,
           "radius_km": 3.0,
           "iqr_ratio": 0.5294,
-          "same_suburb": 16,
+          "same_suburb": 15,
           "model_version": "comp-cv-v1"
         }
       }

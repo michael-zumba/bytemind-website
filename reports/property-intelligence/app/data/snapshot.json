@@ -1,60 +1,60 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-20T09:33:32+13:00",
-  "built_at": "2026-11-19T20:33:15+00:00",
-  "snapshot_date": "20 November 2026",
+  "generated_at": "2026-11-21T13:03:25+13:00",
+  "built_at": "2026-11-21T00:03:08+00:00",
+  "snapshot_date": "21 November 2026",
   "counts": {
-    "listings": 2261,
-    "standard": 2198,
+    "listings": 2251,
+    "standard": 2188,
     "non_standard": 63,
     "suburbs": 30,
-    "sales": 660
+    "sales": 667
   },
   "coverage": {
-    "homes_avm": 944,
-    "homes_avm_pct": 42.9,
-    "sold_comps": 1240,
-    "active_guide": 14,
+    "homes_avm": 940,
+    "homes_avm_pct": 43.0,
+    "sold_comps": 1233,
+    "active_guide": 15,
     "hedonic_fallback": 0,
     "with_range_pct": 100.0,
     "comp_cv_normalised": 0,
-    "comp_absolute": 1240,
+    "comp_absolute": 1233,
     "all_listings": {
-      "homes_avm": 969,
-      "sold_comps": 1277,
-      "active_guide": 15
+      "homes_avm": 965,
+      "sold_comps": 1270,
+      "active_guide": 16
     }
   },
   "model": {
     "version": "hedonic-avm-v1",
-    "n_train": 1136,
-    "mape_with_cv": 0.0641,
-    "median_ape_with_cv": 0.0384,
-    "mape_no_cv": 0.2093,
-    "r2": 0.966,
+    "n_train": 1142,
+    "mape_with_cv": 0.0635,
+    "median_ape_with_cv": 0.0369,
+    "mape_no_cv": 0.2117,
+    "r2": 0.9664,
     "interval_level": 0.8
   },
   "market": {
-    "median_value_mid": 1256892,
+    "median_value_mid": 1255000,
     "median_cv": 1475000,
-    "median_cv_ratio": 0.9787,
-    "median_days_on_market": 70,
-    "below_avm_count": 267,
-    "below_avm_pct": 12.1,
-    "mean_cv_ratio": 0.9866
+    "median_cv_ratio": 0.9789,
+    "median_days_on_market": 71,
+    "below_avm_count": 272,
+    "below_avm_pct": 12.4,
+    "mean_cv_ratio": 0.9871
   },
   "suburbs": [
     {
       "name": "Orewa",
       "slug": "orewa",
       "group": "Hibiscus Coast",
-      "listings": 359,
-      "median_value_mid": 1080388,
+      "listings": 360,
+      "median_value_mid": 1098264,
       "median_cv": 1275000,
-      "median_cv_ratio": 0.9782,
-      "median_days_on_market": 77,
-      "avm_pct": 33.1,
-      "trend_12w": -0.0019,
+      "median_cv_ratio": 0.9773,
+      "median_days_on_market": 79,
+      "avm_pct": 33.6,
+      "trend_12w": 0.0044,
       "mean_cv_ratio": 0.9763
     },
     {
@@ -65,9 +65,9 @@
       "median_value_mid": 866326,
       "median_cv": 1000000,
       "median_cv_ratio": 1.0022,
-      "median_days_on_market": 136,
+      "median_days_on_market": 138,
       "avm_pct": 37.9,
-      "trend_12w": 0.0063,
+      "trend_12w": 0.0052,
       "mean_cv_ratio": 0.9952
     },
     {
@@ -78,10 +78,23 @@
       "median_value_mid": 1350000,
       "median_cv": 2025000,
       "median_cv_ratio": 0.9617,
-      "median_days_on_market": 90,
+      "median_days_on_market": 91,
       "avm_pct": 44.1,
-      "trend_12w": -0.0881,
+      "trend_12w": 0.0081,
       "mean_cv_ratio": 0.9757
+    },
+    {
+      "name": "Bucklands Beach",
+      "slug": "bucklands-beach",
+      "group": "Eastern Beaches",
+      "listings": 127,
+      "median_value_mid": 1445000,
+      "median_cv": 1675000,
+      "median_cv_ratio": 0.9337,
+      "median_days_on_market": 66,
+      "avm_pct": 43.3,
+      "trend_12w": 0.0063,
+      "mean_cv_ratio": 0.9356
     },
     {
       "name": "Stanmore Bay",
@@ -90,24 +103,11 @@
       "listings": 127,
       "median_value_mid": 890000,
       "median_cv": 940000,
-      "median_cv_ratio": 0.9846,
-      "median_days_on_market": 82,
-      "avm_pct": 39.4,
-      "trend_12w": 0.0021,
+      "median_cv_ratio": 0.9838,
+      "median_days_on_market": 84,
+      "avm_pct": 40.2,
+      "trend_12w": -0.0003,
       "mean_cv_ratio": 0.9994
-    },
-    {
-      "name": "Bucklands Beach",
-      "slug": "bucklands-beach",
-      "group": "Eastern Beaches",
-      "listings": 126,
-      "median_value_mid": 1405668,
-      "median_cv": 1712500,
-      "median_cv_ratio": 0.9374,
-      "median_days_on_market": 64,
-      "avm_pct": 42.9,
-      "trend_12w": -0.0103,
-      "mean_cv_ratio": 0.9356
     },
     {
       "name": "Browns Bay",
@@ -115,142 +115,142 @@
       "group": "North Shore",
       "listings": 121,
       "median_value_mid": 1138000,
-      "median_cv": 1150000,
-      "median_cv_ratio": 0.9649,
-      "median_days_on_market": 64,
-      "avm_pct": 35.5,
-      "trend_12w": -0.0058,
-      "mean_cv_ratio": 0.9751
+      "median_cv": 1175000,
+      "median_cv_ratio": 0.968,
+      "median_days_on_market": 65,
+      "avm_pct": 34.7,
+      "trend_12w": -0.0007,
+      "mean_cv_ratio": 0.9778
     },
     {
       "name": "Torbay",
       "slug": "torbay",
       "group": "North Shore",
-      "listings": 103,
+      "listings": 105,
       "median_value_mid": 1150000,
       "median_cv": 1175000,
       "median_cv_ratio": 0.9676,
-      "median_days_on_market": 50,
-      "avm_pct": 35.9,
-      "trend_12w": -0.006,
+      "median_days_on_market": 45,
+      "avm_pct": 35.2,
+      "trend_12w": -0.0041,
       "mean_cv_ratio": 0.9747
     },
     {
       "name": "Half Moon Bay",
       "slug": "half-moon-bay",
       "group": "Eastern Beaches",
-      "listings": 89,
+      "listings": 90,
       "median_value_mid": 1350000,
       "median_cv": 1400000,
       "median_cv_ratio": 0.9479,
-      "median_days_on_market": 49,
-      "avm_pct": 41.6,
-      "trend_12w": -0.0146,
-      "mean_cv_ratio": 0.9354
-    },
-    {
-      "name": "St Heliers",
-      "slug": "saint-heliers",
-      "group": "Eastern Bays",
-      "listings": 85,
-      "median_value_mid": 1950000,
-      "median_cv": 2437500,
-      "median_cv_ratio": 0.9894,
-      "median_days_on_market": 63,
-      "avm_pct": 68.2,
+      "median_days_on_market": 48,
+      "avm_pct": 41.1,
       "trend_12w": -0.0063,
-      "mean_cv_ratio": 1.0021
+      "mean_cv_ratio": 0.9354
     },
     {
       "name": "Long Bay",
       "slug": "long-bay",
       "group": "North Shore",
-      "listings": 84,
-      "median_value_mid": 1510000,
-      "median_cv": 1900000,
-      "median_cv_ratio": 1.0244,
-      "median_days_on_market": 76,
-      "avm_pct": 32.1,
-      "trend_12w": 0.0139,
-      "mean_cv_ratio": 1.0156
+      "listings": 83,
+      "median_value_mid": 1455000,
+      "median_cv": 2025000,
+      "median_cv_ratio": 1.0253,
+      "median_days_on_market": 77,
+      "avm_pct": 31.3,
+      "trend_12w": 0.024,
+      "mean_cv_ratio": 1.02
+    },
+    {
+      "name": "St Heliers",
+      "slug": "saint-heliers",
+      "group": "Eastern Bays",
+      "listings": 83,
+      "median_value_mid": 1950000,
+      "median_cv": 2275000,
+      "median_cv_ratio": 0.9904,
+      "median_days_on_market": 65,
+      "avm_pct": 68.7,
+      "trend_12w": 0.001,
+      "mean_cv_ratio": 1.0028
     },
     {
       "name": "Millwater",
       "slug": "millwater",
       "group": "Hibiscus Coast",
-      "listings": 84,
+      "listings": 82,
       "median_value_mid": 1345000,
       "median_cv": 1450000,
-      "median_cv_ratio": 0.9839,
-      "median_days_on_market": 69,
-      "avm_pct": 27.4,
-      "trend_12w": -0.14,
-      "mean_cv_ratio": 0.9383
+      "median_cv_ratio": 0.9834,
+      "median_days_on_market": 71,
+      "avm_pct": 26.8,
+      "trend_12w": -0.1354,
+      "mean_cv_ratio": 0.9335
     },
     {
       "name": "Silverdale",
       "slug": "silverdale",
       "group": "Hibiscus Coast",
-      "listings": 82,
+      "listings": 81,
       "median_value_mid": 1245000,
       "median_cv": 1187500,
       "median_cv_ratio": 0.9505,
-      "median_days_on_market": 171,
-      "avm_pct": 29.3,
-      "trend_12w": 0.0011,
+      "median_days_on_market": 164,
+      "avm_pct": 29.6,
+      "trend_12w": 0.0065,
       "mean_cv_ratio": 0.9459
     },
     {
       "name": "Milford",
       "slug": "milford",
       "group": "North Shore",
-      "listings": 70,
+      "listings": 67,
       "median_value_mid": 1550000,
-      "median_cv": 1925000,
-      "median_cv_ratio": 1.0022,
+      "median_cv": 1950000,
+      "median_cv_ratio": 1.0099,
       "median_days_on_market": 92,
       "avm_pct": 34.3,
-      "trend_12w": -0.0089,
-      "mean_cv_ratio": 1.0253
+      "trend_12w": 0.0071,
+      "mean_cv_ratio": 1.0296
     },
     {
       "name": "Mairangi Bay",
       "slug": "mairangi-bay",
       "group": "North Shore",
-      "listings": 65,
-      "median_value_mid": 1495000,
-      "median_cv": 1700000,
-      "median_cv_ratio": 1.0228,
-      "median_days_on_market": 55,
-      "avm_pct": 33.8,
-      "trend_12w": -0.0132,
-      "mean_cv_ratio": 1.0111
+      "listings": 64,
+      "median_value_mid": 1496500,
+      "median_cv": 1725000,
+      "median_cv_ratio": 1.023,
+      "median_days_on_market": 54,
+      "avm_pct": 32.8,
+      "trend_12w": -0.001,
+      "mean_cv_ratio": 1.014
     },
     {
       "name": "Red Beach",
       "slug": "red-beach",
       "group": "Hibiscus Coast",
-      "listings": 65,
-      "median_value_mid": 1129000,
+      "listings": 63,
+      "median_value_mid": 1110000,
       "median_cv": 1237500,
       "median_cv_ratio": 0.984,
-      "median_days_on_market": 55,
-      "avm_pct": 61.5,
-      "trend_12w": 0.0073,
-      "mean_cv_ratio": 0.9731
+      "median_days_on_market": 57,
+      "avm_pct": 60.3,
+      "trend_12w": 0.0027,
+      "mean_cv_ratio": 0.9723
     },
     {
       "name": "Devonport",
       "slug": "devonport",
       "group": "North Shore",
-      "listings": 55,
-      "median_value_mid": 1823070,
-      "median_cv": 2175000,
-      "median_cv_ratio": 0.9935,
+      "listings": 57,
+      "median_value_mid": 1825966,
+      "median_cv": 2275000,
+      "median_cv_ratio": 0.9953,
       "median_days_on_market": 57,
-      "avm_pct": 74.5,
-      "trend_12w": -0.0104,
-      "mean_cv_ratio": 1.027
+      "avm_pct": 75.4,
+      "trend_12w": 0.0107,
+      "mean_cv_ratio": 1.0288
     },
     {
       "name": "Ōrākei",
@@ -260,9 +260,9 @@
       "median_value_mid": 1691417,
       "median_cv": 2375000,
       "median_cv_ratio": 0.9776,
-      "median_days_on_market": 146,
+      "median_days_on_market": 148,
       "avm_pct": 64.2,
-      "trend_12w": -0.0059,
+      "trend_12w": 0.0069,
       "mean_cv_ratio": 0.9727
     },
     {
@@ -270,39 +270,26 @@
       "slug": "glendowie",
       "group": "Eastern Bays",
       "listings": 51,
-      "median_value_mid": 1832500,
+      "median_value_mid": 1834409,
       "median_cv": 2000000,
       "median_cv_ratio": 0.9951,
-      "median_days_on_market": 61,
+      "median_days_on_market": 63,
       "avm_pct": 56.9,
-      "trend_12w": -0.0078,
+      "trend_12w": -0.0106,
       "mean_cv_ratio": 1.0076
     },
     {
       "name": "Mission Bay",
       "slug": "mission-bay",
       "group": "Eastern Bays",
-      "listings": 42,
-      "median_value_mid": 1587500,
+      "listings": 41,
+      "median_value_mid": 1595000,
       "median_cv": 1650000,
       "median_cv_ratio": 0.9522,
-      "median_days_on_market": 76,
-      "avm_pct": 78.6,
-      "trend_12w": -0.0106,
+      "median_days_on_market": 72,
+      "avm_pct": 80.5,
+      "trend_12w": -0.0038,
       "mean_cv_ratio": 0.9858
-    },
-    {
-      "name": "Manly",
-      "slug": "manly",
-      "group": "Whangaparāoa Peninsula",
-      "listings": 40,
-      "median_value_mid": 970922,
-      "median_cv": 1050000,
-      "median_cv_ratio": 0.9824,
-      "median_days_on_market": 28,
-      "avm_pct": 62.5,
-      "trend_12w": -0.0065,
-      "mean_cv_ratio": 0.9965
     },
     {
       "name": "Rothesay Bay",
@@ -312,49 +299,62 @@
       "median_value_mid": 1385000,
       "median_cv": 2250000,
       "median_cv_ratio": 1.0319,
-      "median_days_on_market": 43,
+      "median_days_on_market": 44,
       "avm_pct": 22.5,
-      "trend_12w": -0.0061,
+      "trend_12w": 0.0026,
       "mean_cv_ratio": 1.0238
     },
     {
       "name": "Kohimarama",
       "slug": "kohimarama",
       "group": "Eastern Bays",
-      "listings": 38,
-      "median_value_mid": 1814834,
-      "median_cv": 1950000,
-      "median_cv_ratio": 0.9463,
-      "median_days_on_market": 50,
-      "avm_pct": 81.6,
-      "trend_12w": -0.0135,
-      "mean_cv_ratio": 0.9624
+      "listings": 39,
+      "median_value_mid": 1804668,
+      "median_cv": 1912500,
+      "median_cv_ratio": 0.9494,
+      "median_days_on_market": 45,
+      "avm_pct": 82.1,
+      "trend_12w": -0.006,
+      "mean_cv_ratio": 0.9634
     },
     {
-      "name": "Castor Bay",
-      "slug": "castor-bay",
-      "group": "North Shore",
-      "listings": 35,
-      "median_value_mid": 1665000,
-      "median_cv": 2112500,
-      "median_cv_ratio": 1.0481,
-      "median_days_on_market": 71,
-      "avm_pct": 62.9,
-      "trend_12w": -0.0066,
-      "mean_cv_ratio": 1.0564
+      "name": "Manly",
+      "slug": "manly",
+      "group": "Whangaparāoa Peninsula",
+      "listings": 39,
+      "median_value_mid": 963807,
+      "median_cv": 1087500,
+      "median_cv_ratio": 0.9825,
+      "median_days_on_market": 29,
+      "avm_pct": 61.5,
+      "trend_12w": -0.006,
+      "mean_cv_ratio": 0.9983
     },
     {
       "name": "Campbells Bay",
       "slug": "campbells-bay",
       "group": "North Shore",
-      "listings": 34,
+      "listings": 33,
       "median_value_mid": 1495000,
-      "median_cv": 2400000,
-      "median_cv_ratio": 1.0383,
-      "median_days_on_market": 58,
-      "avm_pct": 32.4,
-      "trend_12w": -0.0074,
-      "mean_cv_ratio": 1.0634
+      "median_cv": 2450000,
+      "median_cv_ratio": 1.0429,
+      "median_days_on_market": 60,
+      "avm_pct": 30.3,
+      "trend_12w": 0.0103,
+      "mean_cv_ratio": 1.0698
+    },
+    {
+      "name": "Castor Bay",
+      "slug": "castor-bay",
+      "group": "North Shore",
+      "listings": 33,
+      "median_value_mid": 1670620,
+      "median_cv": 2200000,
+      "median_cv_ratio": 1.0581,
+      "median_days_on_market": 77,
+      "avm_pct": 63.6,
+      "trend_12w": 0.0018,
+      "mean_cv_ratio": 1.0619
     },
     {
       "name": "Murrays Bay",
@@ -364,22 +364,22 @@
       "median_value_mid": 1495000,
       "median_cv": 1837500,
       "median_cv_ratio": 1.0407,
-      "median_days_on_market": 29,
+      "median_days_on_market": 30,
       "avm_pct": 59.3,
-      "trend_12w": -0.0069,
+      "trend_12w": 0.0021,
       "mean_cv_ratio": 1.092
     },
     {
       "name": "Eastern Beach",
       "slug": "eastern-beach",
       "group": "Eastern Beaches",
-      "listings": 18,
-      "median_value_mid": 1447500,
+      "listings": 17,
+      "median_value_mid": 1465000,
       "median_cv": 1830000,
       "median_cv_ratio": 0.966,
-      "median_days_on_market": 43,
-      "avm_pct": 44.4,
-      "trend_12w": -0.0071,
+      "median_days_on_market": 46,
+      "avm_pct": 47.1,
+      "trend_12w": 0.0007,
       "mean_cv_ratio": 0.9612
     },
     {
@@ -390,7 +390,7 @@
       "median_value_mid": 1307141,
       "median_cv": 2100000,
       "median_cv_ratio": 0.9969,
-      "median_days_on_market": 34,
+      "median_days_on_market": 35,
       "avm_pct": 61.5,
       "trend_12w": -0.0148,
       "mean_cv_ratio": 1.0011
@@ -403,9 +403,9 @@
       "median_value_mid": 1021805,
       "median_cv": 1175000,
       "median_cv_ratio": 0.9968,
-      "median_days_on_market": 21,
+      "median_days_on_market": 23,
       "avm_pct": 66.7,
-      "trend_12w": 0.0002,
+      "trend_12w": -0.0036,
       "mean_cv_ratio": 1.0371
     },
     {
@@ -416,7 +416,7 @@
       "median_value_mid": 900000,
       "median_cv": null,
       "median_cv_ratio": null,
-      "median_days_on_market": 513,
+      "median_days_on_market": 515,
       "avm_pct": 0.0,
       "trend_12w": null,
       "mean_cv_ratio": null
@@ -447,7 +447,7 @@
       "deal_gap": 467744,
       "deal_gap_pct": 30.82,
       "sale_method": "Asking price",
-      "days_on_market": 84,
+      "days_on_market": 86,
       "confidence": "high",
       "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2325440250.jpg",
       "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/auckland-city/orakei/listing/6101282500"
@@ -463,7 +463,7 @@
       "deal_gap": 682357,
       "deal_gap_pct": 29.91,
       "sale_method": "Asking price",
-      "days_on_market": 0,
+      "days_on_market": 1,
       "confidence": "high",
       "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2342953865.jpg",
       "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/auckland-city/saint-heliers/listing/6237603464"
@@ -479,7 +479,7 @@
       "deal_gap": 241321,
       "deal_gap_pct": 28.86,
       "sale_method": "Asking price",
-      "days_on_market": 36,
+      "days_on_market": 38,
       "confidence": "high",
       "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2334855443.jpg",
       "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/rodney/silverdale/listing/6177079569"
@@ -495,7 +495,7 @@
       "deal_gap": 378708,
       "deal_gap_pct": 27.57,
       "sale_method": "Asking price",
-      "days_on_market": 127,
+      "days_on_market": 129,
       "confidence": "high",
       "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2317642636.jpg",
       "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/auckland-city/mission-bay/listing/6032734560"
@@ -511,7 +511,7 @@
       "deal_gap": 265504,
       "deal_gap_pct": 24.92,
       "sale_method": "Asking price",
-      "days_on_market": 230,
+      "days_on_market": 232,
       "confidence": "high",
       "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2305779741.jpg",
       "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/auckland-city/mission-bay/listing/5863790138"
@@ -527,7 +527,7 @@
       "deal_gap": 360014,
       "deal_gap_pct": 23.11,
       "sale_method": "Asking price",
-      "days_on_market": 104,
+      "days_on_market": 106,
       "confidence": "high",
       "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2321769941.jpg",
       "url": "https://www.trademe.co.nz/a/property/residential/sale/auckland/manukau-city/bucklands-beach/listing/6069633148"
@@ -536,45 +536,45 @@
   "sale_methods": [
     {
       "method": "Price by negotiation",
-      "count": 1122,
-      "share_pct": 51.0
+      "count": 1128,
+      "share_pct": 51.6
     },
     {
       "method": "Asking price",
-      "count": 748,
-      "share_pct": 34.0
+      "count": 755,
+      "share_pct": 34.5
     },
     {
       "method": "Auction",
-      "count": 187,
-      "share_pct": 8.5
+      "count": 175,
+      "share_pct": 8.0
     },
     {
       "method": "Deadline sale",
-      "count": 129,
-      "share_pct": 5.9
+      "count": 119,
+      "share_pct": 5.4
     },
     {
       "method": "Tender",
-      "count": 12,
+      "count": 11,
       "share_pct": 0.5
     }
   ],
   "coverage_by_type": [
     {
       "property_type": "House",
-      "count": 1609,
+      "count": 1599,
       "avm_pct": 47.3
     },
     {
       "property_type": "Townhouse",
-      "count": 182,
-      "avm_pct": 28.6
+      "count": 184,
+      "avm_pct": 28.3
     },
     {
       "property_type": "Apartment",
-      "count": 178,
-      "avm_pct": 50.0
+      "count": 176,
+      "avm_pct": 50.6
     },
     {
       "property_type": "Section",
@@ -602,27 +602,27 @@
     "series": [
       {
         "week": "2026-08-20",
-        "median_estimate": 1520900
+        "median_estimate": 1496791
       },
       {
         "week": "2026-09-03",
-        "median_estimate": 1529142
+        "median_estimate": 1482583
       },
       {
         "week": "2026-09-17",
-        "median_estimate": 1511036
+        "median_estimate": 1479705
       },
       {
         "week": "2026-10-01",
-        "median_estimate": 1524551
+        "median_estimate": 1485076
       },
       {
         "week": "2026-10-15",
-        "median_estimate": 1538178
+        "median_estimate": 1508631
       },
       {
         "week": "2026-10-29",
-        "median_estimate": 1522892
+        "median_estimate": 1484065
       },
       {
         "week": "2026-11-12",
@@ -632,14 +632,14 @@
   },
   "automation": {
     "status": "running",
-    "last_run_at": "2026-11-20T03:20:23+13:00",
+    "last_run_at": "2026-11-21T03:26:34+13:00",
     "steps": 0
   },
   "research": {
     "topics": 12,
-    "fdr_significant": 0,
+    "fdr_significant": 2,
     "fdr_tests": 36,
-    "text_model_delta_pct": -5.85
+    "text_model_delta_pct": -5.7
   },
   "definitions": {
     "standard_listings": "listings that pass the standard-property classifier; non-standard types (relocatable, leasehold-only, retirement etc.) are excluded",

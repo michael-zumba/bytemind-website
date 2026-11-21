@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-12-02T23:00:00+00:00",
   "listed_at": "2026-11-09T19:58:50.053000+00:00",
-  "days_on_market": 10,
+  "days_on_market": 11,
   "lat": -36.7168179,
   "lon": 174.7320056,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2341032480.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2110,
-  "watchers": 78,
+  "view_count": 2167,
+  "watchers": 79,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -61,11 +61,11 @@
   "school_zone_eqi_mean": 396.0,
   "school_zone_label": "In zone for 3 schools",
   "change_signal": "copy changed",
-  "change_count": 3,
-  "last_change_at": "2026-11-20T14:27:57.961595+00:00",
-  "days_since_last_change": 0.4,
+  "change_count": 4,
+  "last_change_at": "2026-11-21T14:20:52.860978+00:00",
+  "days_since_last_change": 0.15,
   "price_drop_count": 0,
-  "description_change_count": 2,
+  "description_change_count": 3,
   "prior_sale_count": 1,
   "ownership_years_mean": null,
   "last_sale_date": "2003-05-22T00:00:00Z",
@@ -74,15 +74,15 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 11.7,
+  "sale_pressure": 16.8,
   "sale_pressure_label": "low",
-  "model_low": 1574185,
-  "model_mid": 1713643,
-  "model_high": 1869398,
+  "model_low": 1574823,
+  "model_mid": 1707437,
+  "model_high": 1866138,
   "model_confidence": "high",
-  "text_signal_pct": 1.1309,
-  "description_index": 0.062589,
-  "events_count": 3,
+  "text_signal_pct": -8.9914,
+  "description_index": -0.509729,
+  "events_count": 4,
   "last_event": "new_listing",
   "schools": [
     {
@@ -278,33 +278,33 @@
   ],
   "model": {
     "listing_id": 6222450957,
-    "low": 1574185,
-    "mid": 1713643,
-    "high": 1869398,
+    "low": 1574823,
+    "mid": 1707437,
+    "high": 1866138,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0849, 0.087], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0809, 0.0889], \"rel_width\": 0.1706, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6222450957,
-    "word_count": 229,
+    "word_count": 289,
     "exclamations": 2,
-    "urgency": 0.2817,
+    "urgency": 0.2281,
     "luxury": 0.0,
-    "condition_renovation": 0.0,
-    "views_waterfront": 0.0,
-    "family_school": 0.6088,
+    "condition_renovation": 0.1471,
+    "views_waterfront": 0.1864,
+    "family_school": 0.6032,
     "investment": 0.0,
     "risk": 0.0,
-    "readability": 0.6425,
-    "description_premium_pct": 1.1309,
-    "description_index": 0.062589,
-    "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 8, \"investment\": 0, \"risk\": 0}",
+    "readability": 0.5914,
+    "description_premium_pct": -8.9914,
+    "description_index": -0.509729,
+    "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 10, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-21T00:03:09.776665+00:00",
+    "updated_at": "2026-11-21T18:00:45.302678+00:00",
     "top_topics": [
       {
         "topic_id": 9,
-        "weight": 0.53309,
+        "weight": 0.403129,
         "label": "Parking, garden & section",
         "top_terms": [
           "fenced",
@@ -314,16 +314,35 @@
           "fully",
           "brick",
           "garden",
-          "street parking",
           "sunny",
+          "street parking",
           "room",
           "double",
           "north facing"
         ]
       },
       {
+        "topic_id": 8,
+        "weight": 0.339938,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "extended",
+          "extended family",
+          "flexibility",
+          "living areas",
+          "areas",
+          "guests",
+          "multiple",
+          "teenagers",
+          "sea",
+          "sea views",
+          "family living",
+          "income"
+        ]
+      },
+      {
         "topic_id": 1,
-        "weight": 0.163205,
+        "weight": 0.087336,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -341,27 +360,8 @@
         ]
       },
       {
-        "topic_id": 10,
-        "weight": 0.108075,
-        "label": "Parking, garden & section II",
-        "top_terms": [
-          "section",
-          "dream",
-          "build",
-          "dream home",
-          "land",
-          "views",
-          "whangaparaoa",
-          "sections",
-          "sea",
-          "building",
-          "penlink",
-          "auckland"
-        ]
-      },
-      {
         "topic_id": 7,
-        "weight": 0.096925,
+        "weight": 0.058049,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -373,8 +373,8 @@
           "primary",
           "marina",
           "pigeon",
-          "pigeon mountain",
           "suburb marina",
+          "pigeon mountain",
           "mountain"
         ]
       }
@@ -392,6 +392,13 @@
   ],
   "sale_outcome": null,
   "sale_events": [
+    {
+      "event_type": "description_change",
+      "event_at": "2026-11-21T14:20:52.860978+00:00",
+      "old_value": "11c98a852ef5268d",
+      "new_value": "59b57cd63483937e",
+      "detail_json": "{\"old_chars\": 1407, \"new_chars\": 1791}"
+    },
     {
       "event_type": "title_change",
       "event_at": "2026-11-20T14:27:57.961595+00:00",
@@ -434,11 +441,11 @@
     "current_price": null,
     "n_observations": 1,
     "n_price_changes": 0,
-    "n_description_changes": 1,
+    "n_description_changes": 2,
     "first_change_at": null,
     "last_change_at": null,
     "first_description_change_at": "2026-11-20T14:27:57.961595+00:00",
-    "last_description_change_at": "2026-11-20T14:27:57.961595+00:00",
+    "last_description_change_at": "2026-11-21T14:20:52.860978+00:00",
     "days_to_first_change": null,
     "days_since_last_change": null,
     "avg_days_between_changes": null,
@@ -447,9 +454,9 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-21T00:03:08.825906+00:00"
+    "updated_at": "2026-11-21T18:00:44.366861+00:00"
   },
-  "body": "Think you can’t afford this? Think again. You may be pleasantly surprised. Retirement dictates sale after more than 23 years of ownership.  Their instruction to sell is crystal clear! No ifs, no buts. This must be sold.\r\n\r\nThe first owners had this lovely concrete block home built for their family in which they lived for over 2 decades and the current owners being only the second owners also had over 2 decades of beautiful memories with 3 generations in this home. The birds have now flown the nest and our owners are selling to move on to their retirement closer to their grandkids. \r\n\r\nOften sought, seldom found. This spacious family home is set on a large freehold site of approx. 698sqm in a well sought after location of Browns Bay, offering versatility to accommodate everyone in the family.\r\n\r\nConveniently located close to the beach, shops, cafes, restaurants, transport, and excellent schools. Sherwood Primary and Northcross Intermediate are all within easy access from the walkway at the end of the cul-de-sac.\r\n\r\nOur owners are ready to move on to their retirement, and they are offering you a chance to create your beautiful memories in this well-loved family home. Could this be your home for the next 20 plus years? Be quick or you will miss out on this brilliant opportunity!\r\n\r\nPlease download property information from the following link https://www.harcourtsfiles.co.nz/listings/CZNL",
+  "body": "Think you can’t afford this? Think again. You may be pleasantly surprised. Retirement dictates sale after more than 23 years of ownership. Their instruction to sell is crystal clear! No ifs, no buts. This must be sold.\r\n\r\nThe first owners had this lovely concrete block home built for their family in which they lived for over 2 decades and the current owners being only the second owners also had over 2 decades of beautiful memories with 3 generations in this home. The birds have now flown the nest and our owners are selling to move on to their retirement closer to their grandkids. \r\n\r\nOften sought, seldom found. This spacious family home is set on a large freehold site of approx. 698sqm in a well sought after location of Browns Bay, offering versatility to accommodate everyone in the family. The top level provides 4 generous sized bedrooms with 2 living areas, spacious modern kitchen and elevated outlook. Master bedroom comes with its own ensuite. The spacious rumpus downstairs has been partitioned to create an extra room. The bathroom, study and separate access offers flexibility to cater for extended family, visitors, teenagers retreat or an option to work from home.\r\n\r\nConveniently located close to the beach, shops, cafes, restaurants, transport, and excellent schools. Sherwood Primary and Northcross Intermediate are all within easy access from the walkway at the end of the cul-de-sac.\r\n\r\nOur owners are ready to move on to their retirement, and they are offering you a chance to create your beautiful memories in this well-loved family home. Could this be your home for the next 20 plus years? Be quick or you will miss out on this brilliant opportunity!\r\n\r\nPlease download property information from the following link https://www.harcourtsfiles.co.nz/listings/CZNL",
   "photos": [
     "https://trademe.tmcdn.co.nz/photoserver/tq/2341032480.jpg",
     "https://trademe.tmcdn.co.nz/photoserver/tq/2341032496.jpg",
@@ -839,7 +846,7 @@
         "low": 1476845,
         "mid": 1658537,
         "high": 1769030,
-        "updated_at": "2026-11-21T00:03:08.825906+00:00",
+        "updated_at": "2026-11-21T18:00:44.366861+00:00",
         "confidence": "high",
         "n": 118,
         "basis": {

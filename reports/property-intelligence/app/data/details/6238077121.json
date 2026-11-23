@@ -17,7 +17,7 @@
   "sale_method": "Deadline sale",
   "deadline_at": "2026-11-30T11:00:00+00:00",
   "listed_at": "2026-11-19T04:01:30.127000+00:00",
-  "days_on_market": 2,
+  "days_on_market": 3,
   "lat": -36.6092723,
   "lon": 174.6902193,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2343034931.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 410,
-  "watchers": 18,
+  "view_count": 1327,
+  "watchers": 40,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-19T19:56:58.658581+00:00",
-  "days_since_last_change": 1.92,
+  "days_since_last_change": 3.37,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 2,
-  "sale_pressure": 20.3,
+  "sale_pressure": 20.5,
   "sale_pressure_label": "low",
-  "model_low": 866063,
-  "model_mid": 938993,
-  "model_high": 1026269,
+  "model_low": 861857,
+  "model_mid": 937131,
+  "model_high": 1022125,
   "model_confidence": "high",
-  "text_signal_pct": -7.6055,
-  "description_index": -0.427963,
+  "text_signal_pct": -8.9152,
+  "description_index": -0.517112,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6238077121,
-    "low": 866063,
-    "mid": 938993,
-    "high": 1026269,
+    "low": 861857,
+    "mid": 937131,
+    "high": 1022125,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0809, 0.0889], \"rel_width\": 0.1706, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0837, 0.0868], \"rel_width\": 0.171, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6238077121,
@@ -280,21 +280,40 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.4271,
+    "condition_renovation": 0.4276,
     "views_waterfront": 0.0,
-    "family_school": 0.7885,
+    "family_school": 0.7868,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4903,
-    "description_premium_pct": -7.6055,
-    "description_index": -0.427963,
+    "description_premium_pct": -8.9152,
+    "description_index": -0.517112,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 2, \"views_waterfront\": 0, \"family_school\": 9, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-21T18:00:45.302678+00:00",
+    "updated_at": "2026-11-23T04:49:02.034801+00:00",
     "top_topics": [
       {
+        "topic_id": 9,
+        "weight": 0.319997,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "fenced",
+          "street",
+          "fully fenced",
+          "parking",
+          "fully",
+          "brick",
+          "garden",
+          "street parking",
+          "room",
+          "double",
+          "sunny",
+          "north facing"
+        ]
+      },
+      {
         "topic_id": 3,
-        "weight": 0.313199,
+        "weight": 0.312797,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
@@ -306,33 +325,14 @@
           "luxury",
           "designer kitchen",
           "comfort",
-          "heating",
           "new",
-          "design"
-        ]
-      },
-      {
-        "topic_id": 9,
-        "weight": 0.312702,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "fenced",
-          "street",
-          "fully fenced",
-          "parking",
-          "fully",
-          "brick",
-          "garden",
-          "sunny",
-          "street parking",
-          "room",
-          "double",
-          "north facing"
+          "design",
+          "heating"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.144026,
+        "weight": 0.140486,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -340,19 +340,19 @@
           "ensuite",
           "walk",
           "master",
-          "upstairs",
           "bathroom",
-          "floor",
+          "upstairs",
           "family bathroom",
           "suite",
+          "floor",
           "lounge",
-          "separate"
+          "deck"
         ]
       },
       {
         "topic_id": 10,
-        "weight": 0.093243,
-        "label": "Parking, garden & section II",
+        "weight": 0.087344,
+        "label": "New build / brand-new quality",
         "top_terms": [
           "section",
           "dream",
@@ -362,10 +362,10 @@
           "views",
           "whangaparaoa",
           "sections",
-          "sea",
           "building",
+          "sea",
           "penlink",
-          "auckland"
+          "site"
         ]
       }
     ]
@@ -431,7 +431,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-21T18:00:44.366861+00:00"
+    "updated_at": "2026-11-23T04:49:00.926771+00:00"
   },
   "body": "Modern comfort. Easy-care living. More time for you.\r\n\r\nJust two years old, this Fletcher-built home pairs contemporary style with everyday practicality, with a master build guarantee adding confidence to your next move.\r\n\r\nGenerous 2.7m ceilings, natural light and beautifully finished interiors give everyday living a little extra lift. Relaxed evenings, friends around the table and weekends exploring the coast, this is a home that leaves more room for the things you enjoy. Our vendors have purchased elsewhere and this modern, stress free home is ready for its next chapter.\r\n\r\nDEADLINE: Closing 4pm, Tuesday 1st December 2026 (unless sold prior)\r\n\r\nFEATURES YOU'LL LOVE:\r\n* Two years old, built by Fletchers\r\n* Balance of 10 year Master Build Guarantee remaining\r\n* Three bedrooms, master with ensuite and walk-in wardrobe\r\n* Two bathrooms plus a guest powder room\r\n* Impressive 2.7m stud height\r\n* Light-filled open-plan living and dining\r\n* Contemporary kitchen with quality finishes\r\n* Ducted heating and cooling\r\n* Double glazing and heat pump\r\n* Separate laundry\r\n* Internal-access garage\r\n* Fully fenced backyard for the kids and pets\r\n\r\nEnjoy the Red Beach lifestyle, with local shops and everyday essentials close by, plus Silverdale Shopping Centre and Orewa's cafés and coastline a short drive away. Zoned for Red Beach School and Whangaparaoa College, with Stella Maris Primary and Kingsway School nearby.\r\n\r\nWelcome home.\r\n\r\n*Some images have been virtually staged for marketing purposes only.",
   "photos": [
@@ -820,14 +820,14 @@
         "low": 936444,
         "mid": 962752,
         "high": 1034213,
-        "updated_at": "2026-11-21T18:00:44.366861+00:00",
+        "updated_at": "2026-11-23T04:49:00.926771+00:00",
         "confidence": "high",
         "n": 66,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 66,
-          "n_eff": 10.81,
+          "n_eff": 10.75,
           "radius_km": 3.0,
           "median_ratio": 0.9824,
           "iqr_ratio": 0.1016,

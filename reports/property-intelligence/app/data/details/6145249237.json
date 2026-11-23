@@ -16,8 +16,8 @@
   "asking_kind": null,
   "sale_method": "Price by negotiation",
   "deadline_at": null,
-  "listed_at": "2026-09-23T01:04:24.447000+00:00",
-  "days_on_market": 59,
+  "listed_at": "2026-09-23T00:04:24.447000+00:00",
+  "days_on_market": 60,
   "lat": -36.815412,
   "lon": 174.7323956,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2330715734.jpg",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:19:14.934081+00:00",
-  "days_since_last_change": 17.86,
+  "days_since_last_change": 19.31,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 39.8,
-  "sale_pressure_label": "low",
-  "model_low": 776922,
-  "model_mid": 1067713,
-  "model_high": 1448143,
+  "sale_pressure": 40.0,
+  "sale_pressure_label": "medium",
+  "model_low": 761568,
+  "model_mid": 1060907,
+  "model_high": 1449308,
   "model_confidence": "low",
-  "text_signal_pct": -22.9585,
-  "description_index": -1.41112,
+  "text_signal_pct": -23.5079,
+  "description_index": -1.484024,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -298,71 +298,52 @@
   ],
   "model": {
     "listing_id": 6145249237,
-    "low": 776922,
-    "mid": 1067713,
-    "high": 1448143,
+    "low": 761568,
+    "mid": 1060907,
+    "high": 1449308,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3179, 0.3048], \"rel_width\": 0.6287, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3315, 0.312], \"rel_width\": 0.6483, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6145249237,
     "word_count": 220,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.1263,
-    "condition_renovation": 0.9659,
+    "luxury": 0.1261,
+    "condition_renovation": 0.9669,
     "views_waterfront": 0.0,
-    "family_school": 0.7132,
-    "investment": 0.1595,
+    "family_school": 0.7117,
+    "investment": 0.1618,
     "risk": 0.0,
     "readability": 0.2892,
-    "description_premium_pct": -22.9585,
-    "description_index": -1.41112,
+    "description_premium_pct": -23.5079,
+    "description_index": -1.484024,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 5, \"views_waterfront\": 0, \"family_school\": 9, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-21T18:00:45.302678+00:00",
+    "updated_at": "2026-11-23T04:49:02.034801+00:00",
     "top_topics": [
       {
         "topic_id": 2,
-        "weight": 0.279134,
-        "label": "New build / brand-new quality",
+        "weight": 0.270225,
+        "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "brand new",
-          "brand",
           "maintenance",
           "low maintenance",
+          "brand new",
+          "brand",
           "low",
           "new",
           "single",
           "easy care",
-          "quality",
           "care",
+          "quality",
           "new home",
           "convenience"
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.221913,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "ensuite",
-          "walk",
-          "master",
-          "upstairs",
-          "bathroom",
-          "floor",
-          "family bathroom",
-          "suite",
-          "lounge",
-          "separate"
-        ]
-      },
-      {
         "topic_id": 3,
-        "weight": 0.219763,
+        "weight": 0.222968,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
@@ -374,28 +355,47 @@
           "luxury",
           "designer kitchen",
           "comfort",
-          "heating",
           "new",
-          "design"
+          "design",
+          "heating"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.21882,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "wardrobe",
+          "walk wardrobe",
+          "ensuite",
+          "walk",
+          "master",
+          "bathroom",
+          "upstairs",
+          "family bathroom",
+          "suite",
+          "floor",
+          "lounge",
+          "deck"
         ]
       },
       {
         "topic_id": 8,
-        "weight": 0.192792,
+        "weight": 0.197411,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "extended",
           "extended family",
           "flexibility",
           "living areas",
-          "areas",
           "guests",
+          "areas",
           "multiple",
-          "teenagers",
           "sea",
           "sea views",
           "family living",
-          "income"
+          "teenagers",
+          "separate"
         ]
       }
     ]
@@ -444,7 +444,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-21T18:00:44.366861+00:00"
+    "updated_at": "2026-11-23T04:49:00.926771+00:00"
   },
   "body": "Enjoy the benefits of a brand-new home in one of the Silverdale's most convenient and fast-growing locations.\r\n\r\nLocated within Wira Lane, Silverdale, this well-appointed brick and weatherboard home has been designed with modern family living in mind, offering practical layouts, generous proportions and quality finishes throughout.\r\n\r\nKey features include:\r\n• Four spacious bedrooms, including a bedroom and bathroom on the lower level — ideal for guests, extended family, teenagers or those working from home.\r\n• A generous master bedroom complete with walk-in wardrobe and private ensuite.\r\n• Separate second living or media room, providing valuable extra space for entertaining, relaxing or family time.\r\n• Contemporary kitchen fitted with premium appliances and quality cabinetry and finishes.\r\n• Double-glazed windows, air conditioning, underfloor heating, digital entry and modern LED lighting.\r\n• Internal-access garage complemented by excellent additional off-street parking.\r\n• Zoned for Dairy Flat School and Orewa College.\r\n\r\nThe location places you within easy reach of Silverdale’s shopping and dining precincts, motorway access, local schools, parks and the beaches of the Hibiscus Coast.\r\n\r\nWith more space and versatility than many typical new-build homes, this property offers a practical option for families wanting comfort, flexibility and low-maintenance modern living.\r\n\r\nA selection of homes is currently available throughout the development, offering a range of layouts, positions and price points to suit different requirements.\r\n\r\nCome along to the open home, or get in touch to arrange a private viewing.",
   "photos": [

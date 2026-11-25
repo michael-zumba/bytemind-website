@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-29T05:57:33.060000+00:00",
-  "days_on_market": 24,
+  "days_on_market": 25,
   "lat": -36.7343087,
   "lon": 174.7425782,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338305253.jpg",
@@ -30,13 +30,13 @@
   "estimate_source": null,
   "estimate_updated_at": null,
   "comp_low": 1200000,
-  "comp_mid": 1460000,
-  "comp_high": 1785000,
+  "comp_mid": 1450000,
+  "comp_high": 1800000,
   "comp_confidence": "low",
-  "comp_n": 101,
+  "comp_n": 104,
   "value_low": 1200000,
-  "value_mid": 1460000,
-  "value_high": 1785000,
+  "value_mid": 1450000,
+  "value_high": 1800000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": null,
-  "watchers": null,
+  "view_count": 1484,
+  "watchers": 26,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-10-29T19:02:29.372874+00:00",
-  "days_since_last_change": 24.41,
+  "days_since_last_change": 26.35,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 34.0,
+  "sale_pressure": 34.2,
   "sale_pressure_label": "low",
-  "model_low": 1051778,
-  "model_mid": 1465186,
-  "model_high": 2001594,
+  "model_low": 977654,
+  "model_mid": 1345010,
+  "model_high": 1819527,
   "model_confidence": "low",
-  "text_signal_pct": null,
-  "description_index": null,
+  "text_signal_pct": -12.2244,
+  "description_index": -0.714621,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -288,13 +288,108 @@
   ],
   "model": {
     "listing_id": 6203385900,
-    "low": 1051778,
-    "mid": 1465186,
-    "high": 2001594,
+    "low": 977654,
+    "mid": 1345010,
+    "high": 1819527,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3315, 0.312], \"rel_width\": 0.6483, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.319, 0.3022], \"rel_width\": 0.6259, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
-  "text": null,
+  "text": {
+    "listing_id": 6203385900,
+    "word_count": 210,
+    "exclamations": 0,
+    "urgency": 0.0,
+    "luxury": 0.0,
+    "condition_renovation": 0.0,
+    "views_waterfront": 0.5129,
+    "family_school": 0.9979,
+    "investment": 0.0,
+    "risk": 0.0,
+    "readability": 0.3646,
+    "description_premium_pct": -12.2244,
+    "description_index": -0.714621,
+    "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 4, \"family_school\": 12, \"investment\": 0, \"risk\": 0}",
+    "model_version": "text-nmf-v1",
+    "updated_at": "2026-11-25T03:31:41.123225+00:00",
+    "top_topics": [
+      {
+        "topic_id": 7,
+        "weight": 0.310337,
+        "label": "School zones & catchments",
+        "top_terms": [
+          "macleans",
+          "macleans college",
+          "college",
+          "intermediate",
+          "school",
+          "suburb intermediate",
+          "primary",
+          "marina",
+          "pigeon",
+          "pigeon mountain",
+          "suburb marina",
+          "mountain"
+        ]
+      },
+      {
+        "topic_id": 5,
+        "weight": 0.28149,
+        "label": "Westlake school zone",
+        "top_terms": [
+          "westlake",
+          "school",
+          "girls",
+          "girls high",
+          "westlake girls",
+          "high school",
+          "boys",
+          "high",
+          "westlake boys",
+          "intermediate",
+          "school suburb",
+          "shore"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.218437,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "extended",
+          "extended family",
+          "flexibility",
+          "living areas",
+          "areas",
+          "guests",
+          "multiple",
+          "sea",
+          "sea views",
+          "family living",
+          "teenagers",
+          "views"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.122419,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "morning",
+          "friends",
+          "relaxed",
+          "coffee",
+          "life",
+          "morning coffee",
+          "sense",
+          "inviting",
+          "setting",
+          "welcoming",
+          "peaceful",
+          "step"
+        ]
+      }
+    ]
+  },
   "sales_history": [],
   "sale_outcome": null,
   "sale_events": [
@@ -339,17 +434,26 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-23T04:49:00.926771+00:00"
+    "updated_at": "2026-11-25T03:31:40.113672+00:00"
   },
-  "body": "",
+  "body": "Enjoy the space, privacy and flexibility of a standalone four-bedroom home in sought-after Murrays Bay, with sea views to complete the picture.\r\n\r\nDesigned for comfortable everyday living, the open-plan kitchen and living area creates a welcoming hub for cooking, dining and spending time together. Four bedrooms provide flexibility for families, guests, working from home or changing household needs.\r\n\r\nWith 2.5 bathrooms, busy mornings are easier to manage, while the double garage provides secure, covered parking and additional storage convenience.\r\n\r\nA standout location for families, the property is within walking distance of Murrays Bay Primary School, Murrays Bay Intermediate School and the highly sought-after Rangitoto College.\r\n\r\nEnjoy the balance of shared living spaces and private retreats, with the convenience of well-regarded local schools and a coastal North Shore setting.\r\n\r\nProperty highlights:\r\n\r\n- Standalone four-bedroom home\r\n\r\n- Sea views\r\n\r\n- Open-plan kitchen and living area\r\n\r\n- 2.5 bathrooms\r\n\r\n- Double garage\r\n\r\n- Walking distance to Murrays Bay Primary School\r\n\r\n- Walking distance to Murrays Bay Intermediate School\r\n\r\n- Walking distance to highly sought-after Rangitoto College\r\n\r\n- Flexible spaces for family living, guests or working from home\r\n\r\n- Sought-after Murrays Bay location on Auckland’s North Shore\r\n\r\nYour next home could be here.\r\n\r\nContact Li on 0210404028 for further property information and available viewing times. Enquire today to arrange a viewing and discover the lifestyle 65B Sunrise Avenue has to offer.\r\n\r\nThe images are provided as a guide only and may not accurately represent the property's current condition or features.",
   "photos": [
-    "https://trademe.tmcdn.co.nz/photoserver/med/2338305253.jpg"
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2338305253.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2338305248.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2338305252.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2338305254.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2338305236.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2338305249.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2338305242.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2338305244.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2338305246.jpg",
+    "https://trademe.tmcdn.co.nz/photoserver/tq/2338385958.jpg"
   ],
   "agency": {
     "name": "Agency not disclosed",
     "phone": "",
     "website": "#",
-    "member_nickname": null
+    "member_nickname": "cml8"
   },
   "history": [],
   "comps": [
@@ -466,6 +570,20 @@
       "estimate_mid": 1110000
     },
     {
+      "property_id": "13f58024-442b-43b1-ade7-2da4fe0b587b",
+      "address": "469 Beach Road, Murrays Bay, Auckland",
+      "sale_price": 1450000,
+      "sale_date": "2026-09-17T00:00:00+00:00",
+      "distance_km": 0.71,
+      "bedrooms": 3,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1575000,
+      "estimate_mid": 1600000
+    },
+    {
       "property_id": "6aedb95b-f838-41fc-9401-aabd5dead3e7",
       "address": "1A Lyons Avenue, Murrays Bay, Auckland",
       "sale_price": 2100000,
@@ -506,46 +624,32 @@
       "property_type": null,
       "cv": 1525000,
       "estimate_mid": 1280000
-    },
-    {
-      "property_id": "6d29322a-2254-42cb-9342-02ddc909739f",
-      "address": "1B Brighton Terrace, Mairangi Bay, Auckland",
-      "sale_price": 1325000,
-      "sale_date": "2026-09-10T00:00:00+00:00",
-      "distance_km": 0.94,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1525000,
-      "estimate_mid": 1480000
     }
   ],
   "valuation": {
     "value_low": 1200000,
-    "value_mid": 1460000,
-    "value_high": 1785000,
+    "value_mid": 1450000,
+    "value_high": 1800000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.20M – $1.78M",
+        "range": "$1.20M – $1.80M",
         "low": 1200000,
-        "mid": 1460000,
-        "high": 1785000,
-        "updated_at": "2026-11-23T04:49:00.926771+00:00",
+        "mid": 1450000,
+        "high": 1800000,
+        "updated_at": "2026-11-25T03:31:40.113672+00:00",
         "confidence": "low",
-        "n": 101,
+        "n": 104,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 101,
-          "n_eff": 27.76,
+          "n": 104,
+          "n_eff": 29.15,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4007,
-          "same_suburb": 12,
+          "iqr_ratio": 0.4138,
+          "same_suburb": 15,
           "model_version": "comp-cv-v1"
         }
       }

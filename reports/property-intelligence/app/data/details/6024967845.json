@@ -11,13 +11,13 @@
   "parking": 4,
   "land_area": 503.0,
   "floor_area": 266.0,
-  "price_display": "Price by negotiation",
-  "asking_price": null,
-  "asking_kind": null,
-  "sale_method": "Price by negotiation",
+  "price_display": "Asking price $1,649,000",
+  "asking_price": 1649000,
+  "asking_kind": "asking",
+  "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-07-08T23:10:55.683000+00:00",
-  "days_on_market": 136,
+  "days_on_market": 140,
   "lat": -36.5924076,
   "lon": 174.6680508,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2319244299.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1290000,
+  "comp_low": 1249000,
   "comp_mid": 1500000,
   "comp_high": 1810000,
   "comp_confidence": "low",
-  "comp_n": 14,
-  "value_low": 1290000,
+  "comp_n": 17,
+  "value_low": 1249000,
   "value_mid": 1500000,
   "value_high": 1810000,
   "value_source": "sold_comps_absolute",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 3262,
-  "watchers": 44,
+  "view_count": 3351,
+  "watchers": 45,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -60,10 +60,10 @@
   "school_zone_secondary_count": 1,
   "school_zone_eqi_mean": 411.0,
   "school_zone_label": "In zone for 2 schools",
-  "change_signal": null,
-  "change_count": 1,
-  "last_change_at": "2026-11-03T21:00:36.536180+00:00",
-  "days_since_last_change": 21.27,
+  "change_signal": "price increase",
+  "change_count": 3,
+  "last_change_at": "2026-11-25T23:29:06.780043+00:00",
+  "days_since_last_change": 0.13,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -73,16 +73,16 @@
   "sale_frequency_label": "No recorded sales",
   "status": "active",
   "delisted_at": null,
-  "sale_method_stage": 3,
-  "sale_pressure": 52.7,
-  "sale_pressure_label": "medium",
-  "model_low": 1167466,
-  "model_mid": 1606145,
-  "model_high": 2172790,
+  "sale_method_stage": 5,
+  "sale_pressure": 83.3,
+  "sale_pressure_label": "high",
+  "model_low": 1094048,
+  "model_mid": 1490255,
+  "model_high": 2011043,
   "model_confidence": "low",
-  "text_signal_pct": -14.5301,
-  "description_index": -0.860514,
-  "events_count": 1,
+  "text_signal_pct": -14.8067,
+  "description_index": -0.888156,
+  "events_count": 3,
   "last_event": "new_listing",
   "schools": [
     {
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6024967845,
-    "low": 1167466,
-    "mid": 1606145,
-    "high": 2172790,
+    "low": 1094048,
+    "mid": 1490255,
+    "high": 2011043,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.319, 0.3022], \"rel_width\": 0.6259, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3091, 0.2997], \"rel_width\": 0.6153, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6024967845,
@@ -281,20 +281,20 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.3452,
-    "family_school": 0.5597,
+    "views_waterfront": 0.3454,
+    "family_school": 0.5604,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.5644,
-    "description_premium_pct": -14.5301,
-    "description_index": -0.860514,
+    "description_premium_pct": -14.8067,
+    "description_index": -0.888156,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 5, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-25T03:31:41.123225+00:00",
+    "updated_at": "2026-11-26T02:31:47.923445+00:00",
     "top_topics": [
       {
         "topic_id": 6,
-        "weight": 0.590844,
+        "weight": 0.585333,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
@@ -304,16 +304,16 @@
           "master",
           "upstairs",
           "bathroom",
-          "floor",
-          "family bathroom",
           "suite",
+          "family bathroom",
+          "floor",
           "lounge",
-          "ground"
+          "master suite"
         ]
       },
       {
         "topic_id": 8,
-        "weight": 0.205359,
+        "weight": 0.206749,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "extended",
@@ -327,12 +327,12 @@
           "sea views",
           "family living",
           "teenagers",
-          "views"
+          "separate"
         ]
       },
       {
         "topic_id": 10,
-        "weight": 0.137598,
+        "weight": 0.138853,
         "label": "Parking, garden & section II",
         "top_terms": [
           "section",
@@ -341,17 +341,17 @@
           "dream home",
           "views",
           "land",
-          "sea",
           "whangaparaoa",
+          "sea",
           "sections",
-          "sea views",
           "building",
+          "sea views",
           "penlink"
         ]
       },
       {
         "topic_id": 2,
-        "weight": 0.049863,
+        "weight": 0.054901,
         "label": "New build / brand-new quality",
         "top_terms": [
           "brand new",
@@ -362,8 +362,8 @@
           "new",
           "single",
           "easy care",
-          "care",
           "quality",
+          "care",
           "new home",
           "convenience"
         ]
@@ -373,6 +373,20 @@
   "sales_history": [],
   "sale_outcome": null,
   "sale_events": [
+    {
+      "event_type": "method_change",
+      "event_at": "2026-11-25T23:29:06.780043+00:00",
+      "old_value": "negotiation/",
+      "new_value": "asking/asking",
+      "detail_json": "{\"old\": [\"negotiation\", null], \"new\": [\"asking\", \"asking\"]}"
+    },
+    {
+      "event_type": "price_change",
+      "event_at": "2026-11-25T23:29:06.780043+00:00",
+      "old_value": "",
+      "new_value": "1649000",
+      "detail_json": "{\"direction\": \"set\", \"old_display\": \"Price by negotiation\", \"new_display\": \"Asking price $1,649,000\"}"
+    },
     {
       "event_type": "new_listing",
       "event_at": "2026-11-03T21:00:36.536180+00:00",
@@ -393,28 +407,40 @@
       "change_pct": null,
       "days_since_previous": null,
       "source": "snapshot"
+    },
+    {
+      "observed_at": "2026-11-25T23:29:06.780043+00:00",
+      "price": 1649000,
+      "price_display": "Asking price $1,649,000",
+      "sale_method": null,
+      "event_type": "price_set",
+      "previous_price": null,
+      "change_amount": null,
+      "change_pct": null,
+      "days_since_previous": 22.1,
+      "source": "event"
     }
   ],
   "price_dynamics": {
     "listing_id": 6024967845,
-    "first_price": null,
-    "current_price": null,
-    "n_observations": 1,
-    "n_price_changes": 0,
+    "first_price": 1649000,
+    "current_price": 1649000,
+    "n_observations": 2,
+    "n_price_changes": 1,
     "n_description_changes": 0,
-    "first_change_at": null,
-    "last_change_at": null,
+    "first_change_at": "2026-11-25T23:29:06.780043+00:00",
+    "last_change_at": "2026-11-25T23:29:06.780043+00:00",
     "first_description_change_at": null,
     "last_description_change_at": null,
-    "days_to_first_change": null,
-    "days_since_last_change": null,
+    "days_to_first_change": 22.1,
+    "days_since_last_change": 0.13,
     "avg_days_between_changes": null,
-    "cumulative_change": null,
-    "cumulative_change_pct": null,
+    "cumulative_change": 0,
+    "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
-    "last_direction": null,
-    "updated_at": "2026-11-25T03:31:40.113672+00:00"
+    "last_direction": "set",
+    "updated_at": "2026-11-26T02:31:46.739573+00:00"
   },
   "body": "If you have been looking for space without losing your privacy, this modern home is a must-see. Sitting on an elevated 503sqm section, the property backs straight onto a native bush area.\r\n\r\n• Light-filled open-plan kitchen, dining and living area with seamless indoor-outdoor flow.\r\n\r\n• Contemporary kitchen featuring a generous island bench, walk-in pantry, and ample storage.\r\n\r\n• Elevated outdoor setting with Kwila deck and peaceful native reserve views.\r\n\r\n• Ground floor includes two bedrooms, a full bathroom, and a separate living room, ideal for extended family, guests, teenagers, or work-from-home, with excellent granny potential.\r\n\r\n• Upstairs features a private master with ensuite, walk-in wardrobe, and bush views, plus three additional bedrooms, a family bathroom, and a study nook.\r\n\r\nThe location gives you the very best of local living. You are just a quick drive away from the Silverdale shopping center, local cafés, top schools, the motorway on-ramp, and the beach.\r\n\r\nCall us today for a private viewing.\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -463,7 +489,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1650000,
-      "estimate_mid": 1460000
+      "estimate_mid": 1410000
     },
     {
       "property_id": "5344e329-ab05-4756-83d7-f147153b1381",
@@ -477,21 +503,21 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1775000,
-      "estimate_mid": 1830000
+      "estimate_mid": 1800000
     },
     {
-      "property_id": "1dad50db-7ac7-482f-afbc-ffc19a143bb4",
-      "address": "136 Godfrey Drive, Orewa, Orewa",
-      "sale_price": 1345000,
-      "sale_date": "2026-09-01T00:00:00+00:00",
-      "distance_km": 0.3,
-      "bedrooms": 5,
-      "bathrooms": 3,
+      "property_id": "1ee0c98e-e3b1-47dc-854a-c665dd2156ea",
+      "address": "62 Skulander Crescent, Orewa, Orewa",
+      "sale_price": 968300,
+      "sale_date": "2026-10-17T00:00:00+00:00",
+      "distance_km": 0.38,
+      "bedrooms": null,
+      "bathrooms": null,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1500000,
-      "estimate_mid": 1370000
+      "cv": 620000,
+      "estimate_mid": 790000
     },
     {
       "property_id": "b176ec89-e0b9-46a3-83b2-3da46097d3d0",
@@ -505,35 +531,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 620000,
-      "estimate_mid": 595000
-    },
-    {
-      "property_id": "a8472899-f01c-4bbb-9153-2e2c8a26b630",
-      "address": "355 Millwater Parkway, Silverdale, Silverdale",
-      "sale_price": 1500000,
-      "sale_date": "2026-09-02T00:00:00+00:00",
-      "distance_km": 0.65,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1400000,
-      "estimate_mid": 1520000
-    },
-    {
-      "property_id": "d16909b0-721b-432b-9124-e57b1dd5eefb",
-      "address": "98 Huanui Drive, Wainui, Wainui",
-      "sale_price": 1070000,
-      "sale_date": "2026-09-05T00:00:00+00:00",
-      "distance_km": 0.67,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1225000,
-      "estimate_mid": 1070000
+      "estimate_mid": 475000
     },
     {
       "property_id": "e2f1ae1b-7c13-45d9-8e02-27994e6ece41",
@@ -562,6 +560,20 @@
       "property_type": null,
       "cv": 920000,
       "estimate_mid": 925000
+    },
+    {
+      "property_id": "2fc6ec6a-2988-45ec-bf91-de8ef43e4b59",
+      "address": "24 Moores Road, Silverdale, Silverdale",
+      "sale_price": 910000,
+      "sale_date": "2026-09-28T00:00:00+00:00",
+      "distance_km": 0.76,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 880000,
+      "estimate_mid": 890000
     },
     {
       "property_id": "3e63b32d-97a3-4f33-b8bd-07d9e331b804",
@@ -618,10 +630,24 @@
       "property_type": null,
       "cv": 1200000,
       "estimate_mid": 1220000
+    },
+    {
+      "property_id": "ff731d1c-aa55-430b-94df-4718f088738d",
+      "address": "23 Mahinga Kai Road, Orewa, Orewa",
+      "sale_price": 900000,
+      "sale_date": "2026-09-28T00:00:00+00:00",
+      "distance_km": 1.03,
+      "bedrooms": 2,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 830000,
+      "estimate_mid": 900000
     }
   ],
   "valuation": {
-    "value_low": 1290000,
+    "value_low": 1249000,
     "value_mid": 1500000,
     "value_high": 1810000,
     "value_source": "sold_comps_absolute",
@@ -629,21 +655,21 @@
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.29M – $1.81M",
-        "low": 1290000,
+        "range": "$1.25M – $1.81M",
+        "low": 1249000,
         "mid": 1500000,
         "high": 1810000,
-        "updated_at": "2026-11-25T03:31:40.113672+00:00",
+        "updated_at": "2026-11-26T02:31:46.739573+00:00",
         "confidence": "low",
-        "n": 14,
+        "n": 17,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 14,
-          "n_eff": 5.84,
+          "n": 17,
+          "n_eff": 6.97,
           "radius_km": 3.0,
-          "iqr_ratio": 0.3467,
-          "same_suburb": 2,
+          "iqr_ratio": 0.374,
+          "same_suburb": 3,
           "model_version": "comp-cv-v1"
         }
       }

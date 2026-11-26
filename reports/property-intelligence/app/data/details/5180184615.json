@@ -11,13 +11,13 @@
   "parking": 1,
   "land_area": null,
   "floor_area": 65.0,
-  "price_display": "Price by negotiation",
-  "asking_price": null,
-  "asking_kind": null,
-  "sale_method": "Price by negotiation",
+  "price_display": "Asking price $549,000",
+  "asking_price": 549000,
+  "asking_kind": "asking",
+  "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2025-02-19T21:45:32.763000+00:00",
-  "days_on_market": 640,
+  "days_on_market": 644,
   "lat": -36.6369343,
   "lon": 174.7453425,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2306999279.jpg",
@@ -29,15 +29,15 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": null,
-  "comp_mid": null,
-  "comp_high": null,
-  "comp_confidence": null,
-  "comp_n": null,
-  "value_low": 788158,
-  "value_mid": 931134,
-  "value_high": 1188213,
-  "value_source": "active_suburb_guide",
+  "comp_low": 560000,
+  "comp_mid": 786000,
+  "comp_high": 855000,
+  "comp_confidence": "low",
+  "comp_n": 6,
+  "value_low": 560000,
+  "value_mid": 786000,
+  "value_high": 855000,
+  "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
   "land_value": null,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 7239,
-  "watchers": 77,
+  "view_count": 7299,
+  "watchers": 79,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -60,10 +60,10 @@
   "school_zone_secondary_count": 1,
   "school_zone_eqi_mean": 432.0,
   "school_zone_label": "In zone for 2 schools",
-  "change_signal": null,
-  "change_count": 1,
-  "last_change_at": "2026-11-03T21:23:41.511090+00:00",
-  "days_since_last_change": 21.26,
+  "change_signal": "price increase",
+  "change_count": 3,
+  "last_change_at": "2026-11-26T02:16:43.427839+00:00",
+  "days_since_last_change": 0.01,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -73,16 +73,16 @@
   "sale_frequency_label": "No recorded sales",
   "status": "active",
   "delisted_at": null,
-  "sale_method_stage": 3,
-  "sale_pressure": 60.0,
-  "sale_pressure_label": "medium",
-  "model_low": 533883,
-  "model_mid": 734491,
-  "model_high": 993618,
+  "sale_method_stage": 5,
+  "sale_pressure": 90.0,
+  "sale_pressure_label": "high",
+  "model_low": 494809,
+  "model_mid": 674004,
+  "model_high": 909542,
   "model_confidence": "low",
-  "text_signal_pct": -8.3825,
-  "description_index": -0.479831,
-  "events_count": 1,
+  "text_signal_pct": -8.5717,
+  "description_index": -0.496683,
+  "events_count": 3,
   "last_event": "new_listing",
   "schools": [
     {
@@ -268,33 +268,33 @@
   ],
   "model": {
     "listing_id": 5180184615,
-    "low": 533883,
-    "mid": 734491,
-    "high": 993618,
+    "low": 494809,
+    "mid": 674004,
+    "high": 909542,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.319, 0.3022], \"rel_width\": 0.6259, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3091, 0.2997], \"rel_width\": 0.6153, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5180184615,
     "word_count": 175,
     "exclamations": 3,
     "urgency": 0.0,
-    "luxury": 0.1593,
+    "luxury": 0.1592,
     "condition_renovation": 0.0,
     "views_waterfront": 0.0,
-    "family_school": 0.1996,
-    "investment": 0.2064,
+    "family_school": 0.1998,
+    "investment": 0.2067,
     "risk": 0.0,
     "readability": 0.4449,
-    "description_premium_pct": -8.3825,
-    "description_index": -0.479831,
+    "description_premium_pct": -8.5717,
+    "description_index": -0.496683,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 2, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-25T03:31:41.123225+00:00",
+    "updated_at": "2026-11-26T02:31:47.923445+00:00",
     "top_topics": [
       {
         "topic_id": 4,
-        "weight": 0.410867,
+        "weight": 0.413922,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -313,7 +313,7 @@
       },
       {
         "topic_id": 2,
-        "weight": 0.161764,
+        "weight": 0.160062,
         "label": "New build / brand-new quality",
         "top_terms": [
           "brand new",
@@ -324,15 +324,15 @@
           "new",
           "single",
           "easy care",
-          "care",
           "quality",
+          "care",
           "new home",
           "convenience"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.133546,
+        "weight": 0.135674,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -343,29 +343,29 @@
           "suburb intermediate",
           "primary",
           "marina",
+          "suburb marina",
           "pigeon",
           "pigeon mountain",
-          "suburb marina",
           "mountain"
         ]
       },
       {
-        "topic_id": 9,
-        "weight": 0.095003,
-        "label": "Parking, garden & section",
+        "topic_id": 3,
+        "weight": 0.092274,
+        "label": "Luxury, architectural & prestige",
         "top_terms": [
-          "fenced",
-          "street",
-          "parking",
-          "fully fenced",
-          "fully",
-          "brick",
-          "garden",
-          "street parking",
-          "room",
-          "sunny",
-          "double",
-          "north facing"
+          "premium",
+          "quality",
+          "designer",
+          "finishes",
+          "appliances",
+          "year",
+          "luxury",
+          "designer kitchen",
+          "comfort",
+          "heating",
+          "new",
+          "design"
         ]
       }
     ]
@@ -373,6 +373,20 @@
   "sales_history": [],
   "sale_outcome": null,
   "sale_events": [
+    {
+      "event_type": "method_change",
+      "event_at": "2026-11-26T02:16:43.427839+00:00",
+      "old_value": "negotiation/",
+      "new_value": "asking/asking",
+      "detail_json": "{\"old\": [\"negotiation\", null], \"new\": [\"asking\", \"asking\"]}"
+    },
+    {
+      "event_type": "price_change",
+      "event_at": "2026-11-26T02:16:43.427839+00:00",
+      "old_value": "",
+      "new_value": "549000",
+      "detail_json": "{\"direction\": \"set\", \"old_display\": \"Price by negotiation\", \"new_display\": \"Asking price $549,000\"}"
+    },
     {
       "event_type": "new_listing",
       "event_at": "2026-11-03T21:23:41.511090+00:00",
@@ -393,28 +407,40 @@
       "change_pct": null,
       "days_since_previous": null,
       "source": "snapshot"
+    },
+    {
+      "observed_at": "2026-11-26T02:16:43.427839+00:00",
+      "price": 549000,
+      "price_display": "Asking price $549,000",
+      "sale_method": null,
+      "event_type": "price_set",
+      "previous_price": null,
+      "change_amount": null,
+      "change_pct": null,
+      "days_since_previous": 22.2,
+      "source": "event"
     }
   ],
   "price_dynamics": {
     "listing_id": 5180184615,
-    "first_price": null,
-    "current_price": null,
-    "n_observations": 1,
-    "n_price_changes": 0,
+    "first_price": 549000,
+    "current_price": 549000,
+    "n_observations": 2,
+    "n_price_changes": 1,
     "n_description_changes": 0,
-    "first_change_at": null,
-    "last_change_at": null,
+    "first_change_at": "2026-11-26T02:16:43.427839+00:00",
+    "last_change_at": "2026-11-26T02:16:43.427839+00:00",
     "first_description_change_at": null,
     "last_description_change_at": null,
-    "days_to_first_change": null,
-    "days_since_last_change": null,
+    "days_to_first_change": 22.2,
+    "days_since_last_change": 0.01,
     "avg_days_between_changes": null,
-    "cumulative_change": null,
-    "cumulative_change_pct": null,
+    "cumulative_change": 0,
+    "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
-    "last_direction": null,
-    "updated_at": "2026-11-25T03:31:40.113672+00:00"
+    "last_direction": "set",
+    "updated_at": "2026-11-26T02:31:46.739573+00:00"
   },
   "body": "Last one selling below market value - be quick!  \r\n\r\nDiscover the perfect blend of comfort and functionality in this near-new modern 1-bedroom apartment (65m² more or less) with a generous study that easily accommodates a double bed. Ideal for investors, small families, retirees, or roommates, this space offers a cosy yet versatile living arrangement. \r\n\r\n* $13,000 worth of chattels and extra value included:  Fridge, Dishwasher, washer/dryer, central ventilation system, security alarm, block-out blinds, block-out curtain and a Clearguard security screen\r\n* Separate laundry\r\n* Double glazing \r\n* Ventilation system\r\n* Lock-up and leave convenience\r\n* Halo Builders guarantee\r\n\r\nDo you have a busy lifestyle, are you seeking a relaxed living environment without the hassle of maintenance, then this is for you! \r\n\r\nPrime location with easy walking distance to services, amenities, schools, and public transport. And only a short drive to variety of stunning beaches, parks, and reserves. \r\nFive sold - only one left. Get in before it's gone. \r\n\r\nIt's vacant with immediate possession available PLUS all the furniture is for sale (brand new, used for staging) - just move in and enjoy!",
   "photos": [
@@ -452,7 +478,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 760000,
-      "estimate_mid": 800000
+      "estimate_mid": 805000
     },
     {
       "property_id": "9f569592-6e85-4d72-927d-1e3c8faf0f28",
@@ -522,21 +548,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 850000,
-      "estimate_mid": 900000
-    },
-    {
-      "property_id": "388005bb-e063-42f0-8f62-ba17f911b502",
-      "address": "24C Homestead Road, Manly, Whangaparaoa",
-      "sale_price": 890000,
-      "sale_date": "2026-08-21T00:00:00+00:00",
-      "distance_km": 0.55,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 810000,
-      "estimate_mid": 845000
+      "estimate_mid": 925000
     },
     {
       "property_id": "40c70c2a-322a-4cfb-97bb-3e7010f2c61f",
@@ -550,7 +562,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1300000,
-      "estimate_mid": 1470000
+      "estimate_mid": 1450000
     },
     {
       "property_id": "35e62fc8-e91b-4e38-9303-e21e2d2199da",
@@ -564,7 +576,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 580000,
-      "estimate_mid": 570000
+      "estimate_mid": 540000
     },
     {
       "property_id": "6daab980-885e-45a1-a44b-66001507babf",
@@ -578,7 +590,21 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1175000,
-      "estimate_mid": 1130000
+      "estimate_mid": 1140000
+    },
+    {
+      "property_id": "e0a11635-50e5-41e5-85bd-c5e73afad2fb",
+      "address": "121 Stanmore Bay Road, Stanmore Bay, Whangaparaoa",
+      "sale_price": 786000,
+      "sale_date": "2026-10-04T00:00:00+00:00",
+      "distance_km": 1.19,
+      "bedrooms": 2,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 850000,
+      "estimate_mid": 905000
     },
     {
       "property_id": "1483b8b8-b48b-4ea4-adda-0f94c28ab207",
@@ -595,27 +621,48 @@
       "estimate_mid": 1260000
     },
     {
-      "property_id": "3ebbe140-1710-4fb0-8ce0-4bf9f42deac6",
-      "address": "8 Brixton Road, Manly, Whangaparaoa",
-      "sale_price": 1300599,
-      "sale_date": "2026-09-15T00:00:00+00:00",
-      "distance_km": 1.5,
-      "bedrooms": 4,
+      "property_id": "804eae8c-fe2f-4bfb-a92e-bd6ae3c94a90",
+      "address": "20 Rawhiti Road, Manly, Whangaparaoa",
+      "sale_price": 955000,
+      "sale_date": "2026-10-29T00:00:00+00:00",
+      "distance_km": 1.32,
+      "bedrooms": 3,
       "bathrooms": 2,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1175000,
-      "estimate_mid": 1310000
+      "cv": 900000,
+      "estimate_mid": 935000
     }
   ],
   "valuation": {
-    "value_low": 788158,
-    "value_mid": 931134,
-    "value_high": 1188213,
-    "value_source": "active_suburb_guide",
+    "value_low": 560000,
+    "value_mid": 786000,
+    "value_high": 855000,
+    "value_source": "sold_comps_absolute",
     "value_confidence": "low",
-    "sources": [],
+    "sources": [
+      {
+        "name": "Nearby sold comparables",
+        "range": "$560K – $855K",
+        "low": 560000,
+        "mid": 786000,
+        "high": 855000,
+        "updated_at": "2026-11-26T02:31:46.739573+00:00",
+        "confidence": "low",
+        "n": 6,
+        "basis": {
+          "confidence": "low",
+          "source": "sold_comps_absolute",
+          "n": 6,
+          "n_eff": 1.46,
+          "radius_km": 3.0,
+          "iqr_ratio": 0.3753,
+          "same_suburb": 2,
+          "model_version": "comp-cv-v1"
+        }
+      }
+    ],
     "methodology": "Primary range is the Homes.co.nz AVM shown on the Trade Me listing. The independent comparable model weights nearby sold prices by distance, recency and property type, and normalises by council CV. When neither is available, a calibrated hedonic fallback is used and labelled. The hedonic model is trained on listings with a Homes AVM and validated with 5-fold cross-validation; it is a fallback/cross-check, not a valuation."
   }
 }

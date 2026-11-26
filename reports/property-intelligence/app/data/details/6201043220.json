@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2025-09-03T22:05:00+00:00",
-  "days_on_market": 444,
+  "days_on_market": 448,
   "lat": -36.5751742,
   "lon": 174.6887347,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333690564.jpg",
@@ -29,16 +29,16 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 795000,
-  "comp_mid": 858000,
+  "comp_low": 800000,
+  "comp_mid": 890000,
   "comp_high": 940000,
-  "comp_confidence": "low",
-  "comp_n": 15,
-  "value_low": 795000,
-  "value_mid": 858000,
+  "comp_confidence": "medium",
+  "comp_n": 19,
+  "value_low": 800000,
+  "value_mid": 890000,
   "value_high": 940000,
   "value_source": "sold_comps_absolute",
-  "value_confidence": "low",
+  "value_confidence": "medium",
   "cv": null,
   "land_value": null,
   "improvement_value": null,
@@ -48,11 +48,11 @@
   "build_year_source": null,
   "tenure_source": "unknown",
   "cv_ratio": null,
-  "ask_gap": null,
-  "ask_gap_pct": null,
-  "deal_gap": null,
-  "view_count": 276,
-  "watchers": 3,
+  "ask_gap": -191000,
+  "ask_gap_pct": -0.2146,
+  "deal_gap": 0.2146,
+  "view_count": 316,
+  "watchers": 4,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:15:10.573934+00:00",
-  "days_since_last_change": 21.26,
+  "days_since_last_change": 22.22,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 4,
   "sale_pressure": 70.0,
   "sale_pressure_label": "high",
-  "model_low": 807976,
-  "model_mid": 1111575,
-  "model_high": 1503736,
+  "model_low": 808128,
+  "model_mid": 1100791,
+  "model_high": 1485475,
   "model_confidence": "low",
-  "text_signal_pct": 4.5792,
-  "description_index": 0.2454,
+  "text_signal_pct": 4.4609,
+  "description_index": 0.241886,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,33 +268,33 @@
   ],
   "model": {
     "listing_id": 6201043220,
-    "low": 807976,
-    "mid": 1111575,
-    "high": 1503736,
+    "low": 808128,
+    "mid": 1100791,
+    "high": 1485475,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.319, 0.3022], \"rel_width\": 0.6259, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3091, 0.2997], \"rel_width\": 0.6153, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6201043220,
     "word_count": 275,
     "exclamations": 1,
     "urgency": 0.0,
-    "luxury": 0.4054,
-    "condition_renovation": 0.4636,
-    "views_waterfront": 0.1958,
-    "family_school": 0.254,
+    "luxury": 0.4052,
+    "condition_renovation": 0.4669,
+    "views_waterfront": 0.1959,
+    "family_school": 0.2543,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4419,
-    "description_premium_pct": 4.5792,
-    "description_index": 0.2454,
+    "description_premium_pct": 4.4609,
+    "description_index": 0.241886,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 4, \"condition_renovation\": 3, \"views_waterfront\": 2, \"family_school\": 4, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-25T03:31:41.123225+00:00",
+    "updated_at": "2026-11-26T02:31:47.923445+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.384704,
+        "weight": 0.39857,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
@@ -306,14 +306,14 @@
           "luxury",
           "designer kitchen",
           "comfort",
-          "new",
           "heating",
+          "new",
           "design"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.322045,
+        "weight": 0.316785,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -331,8 +331,27 @@
         ]
       },
       {
+        "topic_id": 9,
+        "weight": 0.09904,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "fenced",
+          "street",
+          "parking",
+          "fully fenced",
+          "fully",
+          "brick",
+          "garden",
+          "street parking",
+          "room",
+          "sunny",
+          "north facing",
+          "facing"
+        ]
+      },
+      {
         "topic_id": 11,
-        "weight": 0.104993,
+        "weight": 0.097053,
         "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "views",
@@ -347,25 +366,6 @@
           "hauraki",
           "hauraki gulf",
           "substantial"
-        ]
-      },
-      {
-        "topic_id": 9,
-        "weight": 0.099806,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "fenced",
-          "street",
-          "parking",
-          "fully fenced",
-          "fully",
-          "brick",
-          "garden",
-          "street parking",
-          "room",
-          "sunny",
-          "double",
-          "north facing"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-25T03:31:40.113672+00:00"
+    "updated_at": "2026-11-26T02:31:46.739573+00:00"
   },
   "body": "Affordable Luxury Apartments by the Beach - Your New Home or Holiday Home \r\n\r\nNestled between pristine Orewa Beach and 16 hectares of protected native bush, Orewa Sands delivers the epitome of living for 55 years plus.\r\n\r\nDesirable coastal living that feels like home - the architecturally designed apartments are perfectly positioned to take in the coastal, forest and urban views. \r\n\r\nOrewa Sands hosts an exclusive collection of amenities, cultivating an enriched resort-style living experience. The private path and secure gate offers direct access to the beach - just a 3-minute stroll from your doorstep.\r\n\r\nFour different One-Bedroom floor plans to choose from, ranging from 61m2 to 71m2.\r\n\r\nDesigner Kitchen\r\nCook and entertain in style with engineered stone benchtops, marble tile splash backs, and timber flooring. Fully equipped with quality appliances including an oven, hob, dishwasher, and rangehood. Fridge space includes water access if required.\r\n\r\nElegant Bathroom\r\nFeaturing a large walk-in shower, floor-to-ceiling marble wall tiles, and underfloor heating. Includes a vanity with storage drawers, mirrored wall cabinet, electric instant hot water, and safety rails for added comfort.\r\n\r\nComfortable Bedroom\r\nWell-appointed with a built-in wardrobe (sliding doors), TV point, and convenient power outlets on both sides of the bed.\r\n\r\nLaundry Area\r\nIncludes a washer/dryer combo, laundry sink, and additional storage in selected layouts.\r\n\r\nModern Comfort\r\nEnjoy year-round comfort with floor-to-ceiling double-glazed windows and a heat pump for efficient heating and cooling.\r\n\r\nSecure Parking\r\nEach apartment comes with use of a complimentary basement car park.\r\n\r\nResort-Style Amenities\r\n-Heated swimming pool\r\n-On-site café\r\n-Multiple lounges & dining areas\r\n-Activities & games room\r\n-Fully equipped gym\r\n-Cinema \r\n-Workshop\r\n-Bowling green\r\n-Expansive outdoor deck with BBQ\r\n-Art & craft studio coming soon!\r\n\r\nOrewa Sands Website: https://www.orewasands.co.nz/ \r\n\r\nContact Sylvie to arrange a viewing time:\r\nsales@orewasands.co.nz\r\n021 529 000\r\n\r\nOPEN DAYS \r\nWednesday 4th November 2026 10am to 2pm\r\nWednesday 11th November 2026 10am to 2pm\r\nSaturday 14th November 2026 10am to 2pm",
   "photos": [
@@ -452,18 +452,18 @@
   "history": [],
   "comps": [
     {
-      "property_id": "15590492-8b5d-4d4f-9e8a-15018107f469",
-      "address": "1/36 Elizabeth Street, Orewa, Orewa",
-      "sale_price": 795000,
-      "sale_date": "2026-08-31T00:00:00+00:00",
-      "distance_km": 0.35,
-      "bedrooms": 2,
-      "bathrooms": 1,
+      "property_id": "a1b47843-75a2-408e-be05-7eaecab9406b",
+      "address": "320/25 Annalise Place, Orewa, Orewa",
+      "sale_price": 1249000,
+      "sale_date": "2026-10-12T00:00:00+00:00",
+      "distance_km": 0.03,
+      "bedrooms": null,
+      "bathrooms": null,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 800000,
-      "estimate_mid": 800000
+      "cv": 1250000,
+      "estimate_mid": 1170000
     },
     {
       "property_id": "bcaa0316-2459-4512-b662-815d2050faab",
@@ -491,7 +491,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1800000,
-      "estimate_mid": 1910000
+      "estimate_mid": 1610000
     },
     {
       "property_id": "c972ca56-9e63-44bb-aab7-11b3e1257777",
@@ -505,7 +505,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 720000,
-      "estimate_mid": 700000
+      "estimate_mid": 705000
     },
     {
       "property_id": "ff1b8c3e-6007-4f20-8016-2ebd16ee392d",
@@ -534,6 +534,20 @@
       "property_type": null,
       "cv": 820000,
       "estimate_mid": 850000
+    },
+    {
+      "property_id": "9a3348a6-b3c7-4c4b-b7ee-f87b1f734a19",
+      "address": "2/434 Hibiscus Coast Highway, Orewa, Orewa",
+      "sale_price": 855000,
+      "sale_date": "2026-11-07T00:00:00+00:00",
+      "distance_km": 0.62,
+      "bedrooms": 2,
+      "bathrooms": 1,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 820000,
+      "estimate_mid": 855000
     },
     {
       "property_id": "02119225-1757-4fae-a40b-1e73258fad6a",
@@ -578,18 +592,18 @@
       "estimate_mid": 695000
     },
     {
-      "property_id": "ef254676-48c2-437c-9b4f-3c3a380a5e05",
-      "address": "1 Ringi Lane, Orewa, Orewa",
-      "sale_price": 1135000,
-      "sale_date": "2026-08-31T00:00:00+00:00",
-      "distance_km": 1.29,
-      "bedrooms": 4,
-      "bathrooms": 2,
+      "property_id": "206ef56f-cf7c-4d27-9a24-d8e98261fcb5",
+      "address": "2/82 Florence Avenue, Orewa, Orewa",
+      "sale_price": 930000,
+      "sale_date": "2026-10-05T00:00:00+00:00",
+      "distance_km": 1.26,
+      "bedrooms": 2,
+      "bathrooms": 1,
       "land_area": null,
       "floor_area": null,
       "property_type": null,
-      "cv": 1150000,
-      "estimate_mid": 1140000
+      "cv": 840000,
+      "estimate_mid": 820000
     },
     {
       "property_id": "836415fe-52ff-441a-b1bd-38697554220d",
@@ -604,46 +618,32 @@
       "property_type": null,
       "cv": 940000,
       "estimate_mid": 905000
-    },
-    {
-      "property_id": "48c7ed8f-94b9-4987-9ee4-4537a00fb6ef",
-      "address": "9 Dan Tori Place, Orewa, Orewa",
-      "sale_price": 1055000,
-      "sale_date": "2026-09-19T00:00:00+00:00",
-      "distance_km": 1.41,
-      "bedrooms": 3,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1125000,
-      "estimate_mid": 1070000
     }
   ],
   "valuation": {
-    "value_low": 795000,
-    "value_mid": 858000,
+    "value_low": 800000,
+    "value_mid": 890000,
     "value_high": 940000,
     "value_source": "sold_comps_absolute",
-    "value_confidence": "low",
+    "value_confidence": "medium",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$795K – $940K",
-        "low": 795000,
-        "mid": 858000,
+        "range": "$800K – $940K",
+        "low": 800000,
+        "mid": 890000,
         "high": 940000,
-        "updated_at": "2026-11-25T03:31:40.113672+00:00",
-        "confidence": "low",
-        "n": 15,
+        "updated_at": "2026-11-26T02:31:46.739573+00:00",
+        "confidence": "medium",
+        "n": 19,
         "basis": {
-          "confidence": "low",
+          "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 15,
-          "n_eff": 7.19,
+          "n": 19,
+          "n_eff": 9.4,
           "radius_km": 3.0,
-          "iqr_ratio": 0.169,
-          "same_suburb": 14,
+          "iqr_ratio": 0.1573,
+          "same_suburb": 18,
           "model_version": "comp-cv-v1"
         }
       }

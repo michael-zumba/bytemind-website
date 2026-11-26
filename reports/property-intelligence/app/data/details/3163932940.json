@@ -16,8 +16,8 @@
   "asking_kind": "asking",
   "sale_method": "Asking price",
   "deadline_at": null,
-  "listed_at": "2021-07-04T08:19:48.743000+00:00",
-  "days_on_market": 1969,
+  "listed_at": "2021-07-04T07:19:48.743000+00:00",
+  "days_on_market": 1970,
   "lat": -36.6210393,
   "lon": 174.8001303,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/1568747521.jpg",
@@ -32,13 +32,13 @@
   "comp_low": 799000,
   "comp_mid": 900000,
   "comp_high": 1030000,
-  "comp_confidence": "low",
-  "comp_n": 20,
+  "comp_confidence": "medium",
+  "comp_n": 27,
   "value_low": 799000,
   "value_mid": 900000,
   "value_high": 1030000,
   "value_source": "sold_comps_absolute",
-  "value_confidence": "low",
+  "value_confidence": "medium",
   "cv": null,
   "land_value": null,
   "improvement_value": null,
@@ -48,9 +48,9 @@
   "build_year_source": null,
   "tenure_source": "listing_text",
   "cv_ratio": null,
-  "ask_gap": null,
-  "ask_gap_pct": null,
-  "deal_gap": null,
+  "ask_gap": 620000,
+  "ask_gap_pct": 0.6889,
+  "deal_gap": -0.6889,
   "view_count": 6273,
   "watchers": 11,
   "is_standard": 1,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:58:13.308589+00:00",
-  "days_since_last_change": 21.27,
+  "days_since_last_change": 22.23,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 1359255,
-  "model_mid": 1869999,
-  "model_high": 2529731,
+  "model_low": 1404131,
+  "model_mid": 1912635,
+  "model_high": 2581028,
   "model_confidence": "low",
-  "text_signal_pct": -14.5893,
-  "description_index": -0.864311,
+  "text_signal_pct": -13.2221,
+  "description_index": -0.786013,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,33 +268,33 @@
   ],
   "model": {
     "listing_id": 3163932940,
-    "low": 1359255,
-    "mid": 1869999,
-    "high": 2529731,
+    "low": 1404131,
+    "mid": 1912635,
+    "high": 2581028,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.319, 0.3022], \"rel_width\": 0.6259, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3091, 0.2997], \"rel_width\": 0.6153, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 3163932940,
     "word_count": 95,
     "exclamations": 1,
     "urgency": 0.0,
-    "luxury": 0.2934,
+    "luxury": 0.2933,
     "condition_renovation": 0.0,
     "views_waterfront": 0.0,
     "family_school": 0.0,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3045,
-    "description_premium_pct": -14.5893,
-    "description_index": -0.864311,
+    "description_premium_pct": -13.2221,
+    "description_index": -0.786013,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 0, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-25T03:31:41.123225+00:00",
+    "updated_at": "2026-11-26T02:31:47.923445+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.591407,
+        "weight": 0.599178,
         "label": "Luxury, architectural & prestige",
         "top_terms": [
           "premium",
@@ -306,33 +306,14 @@
           "luxury",
           "designer kitchen",
           "comfort",
-          "new",
           "heating",
+          "new",
           "design"
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.150629,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "ensuite",
-          "walk",
-          "master",
-          "upstairs",
-          "bathroom",
-          "floor",
-          "family bathroom",
-          "suite",
-          "lounge",
-          "ground"
-        ]
-      },
-      {
         "topic_id": 9,
-        "weight": 0.140787,
+        "weight": 0.142036,
         "label": "Parking, garden & section",
         "top_terms": [
           "fenced",
@@ -345,27 +326,46 @@
           "street parking",
           "room",
           "sunny",
-          "double",
-          "north facing"
+          "north facing",
+          "facing"
         ]
       },
       {
-        "topic_id": 1,
-        "weight": 0.05877,
-        "label": "Development & land potential",
+        "topic_id": 6,
+        "weight": 0.140774,
+        "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
-          "potential",
-          "future",
-          "site",
-          "property",
+          "wardrobe",
+          "walk wardrobe",
+          "ensuite",
+          "walk",
+          "master",
+          "upstairs",
+          "bathroom",
+          "suite",
+          "family bathroom",
+          "floor",
+          "lounge",
+          "master suite"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.060701,
+        "label": "Parking, garden & section II",
+        "top_terms": [
+          "section",
+          "dream",
+          "build",
+          "dream home",
+          "views",
           "land",
-          "subject",
-          "development",
-          "existing",
-          "council",
-          "value",
-          "possibilities",
-          "subject council"
+          "whangaparaoa",
+          "sea",
+          "sections",
+          "building",
+          "sea views",
+          "penlink"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-25T03:31:40.113672+00:00"
+    "updated_at": "2026-11-26T02:31:46.739573+00:00"
   },
   "body": "Excellent Value 4 Bedrooms in Freehold section\r\nHouse Specification \r\nGuarantee:10 Years Master Builder Guarantee \r\nGaraga Door: Sectional Door With Auto Closer & 2 x Remotes \r\nInsulation: R2.2 to External Walls, R3.2 to Ceiling \r\nPainting: Dulux Paint System \r\nKitchen: Designer Kitchen Granite Benchtop, Stainless Bouble Bowl \r\nAppliances: Bosch Hob Dishwasher \r\nBathrooms Heated Towel Rails, Wall mirrors, 3 in 1 Fan / Light / Heat \r\nAir con 1 Air conditioner in living area \r\nFloor Coverings Residential heavy duty Carpet \r\nLaminate timber Flooring \r\nWardrobe Systems in all Bedroom Wardrobes \r\nConcreted driveway Section top soiled and seeded \r\n\r\nExpress Your Interest!\r\n\r\nPLEASE NOTE: All Pictures shown are for illustration purpose only, Specified floor and land area sizes have been obtained from sources such as Vendor, RP NZ, Auckland Council (LIM) or Title documents. They have not been measured by the Salesperson or GARY QI Realty Limited. We recommend you seek your own independent legal advice if these sizes are material to your purchasing decision.",
   "photos": [
@@ -439,6 +439,20 @@
   },
   "history": [],
   "comps": [
+    {
+      "property_id": "17214014-0c73-479c-8c31-ce58ff8a60d1",
+      "address": "7 Whakairo Crescent, Gulf Harbour, Whangaparāoa",
+      "sale_price": 930000,
+      "sale_date": "2026-09-27T00:00:00+00:00",
+      "distance_km": 0.14,
+      "bedrooms": 3,
+      "bathrooms": null,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 930000,
+      "estimate_mid": 910000
+    },
     {
       "property_id": "b0f2a0b8-f362-4400-891c-ec133f4d65dc",
       "address": "19 Barcliff Terrace, Gulf Harbour, Whangaparaoa",
@@ -493,7 +507,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 900000,
-      "estimate_mid": 905000
+      "estimate_mid": 910000
     },
     {
       "property_id": "448f33f9-7672-4aa8-ae1d-ad1ae066f070",
@@ -507,7 +521,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 570000,
-      "estimate_mid": 560000
+      "estimate_mid": 565000
     },
     {
       "property_id": "3ebc7f85-014d-4ea9-b8cc-0ae61b1aa84b",
@@ -521,7 +535,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 770000,
-      "estimate_mid": 765000
+      "estimate_mid": 770000
     },
     {
       "property_id": "188652b0-2ff7-469d-9a98-6edb8ec78bd2",
@@ -563,7 +577,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 920000,
-      "estimate_mid": 875000
+      "estimate_mid": 880000
     },
     {
       "property_id": "f9e960c3-a7c4-4e66-8c40-8c3bb935daf8",
@@ -577,7 +591,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 630000,
-      "estimate_mid": 575000
+      "estimate_mid": 580000
     },
     {
       "property_id": "671be73f-d256-424a-91dc-69da029a62be",
@@ -592,20 +606,6 @@
       "property_type": null,
       "cv": 610000,
       "estimate_mid": 580000
-    },
-    {
-      "property_id": "cc6a5ba6-4d18-44b9-8bc7-aa15949817f7",
-      "address": "4 Midshipman Court, Gulf Harbour, Whangaparaoa",
-      "sale_price": 866000,
-      "sale_date": "2026-09-29T00:00:00+00:00",
-      "distance_km": 1.25,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 810000,
-      "estimate_mid": 870000
     }
   ],
   "valuation": {
@@ -613,7 +613,7 @@
     "value_mid": 900000,
     "value_high": 1030000,
     "value_source": "sold_comps_absolute",
-    "value_confidence": "low",
+    "value_confidence": "medium",
     "sources": [
       {
         "name": "Nearby sold comparables",
@@ -621,17 +621,17 @@
         "low": 799000,
         "mid": 900000,
         "high": 1030000,
-        "updated_at": "2026-11-25T03:31:40.113672+00:00",
-        "confidence": "low",
-        "n": 20,
+        "updated_at": "2026-11-26T02:31:46.739573+00:00",
+        "confidence": "medium",
+        "n": 27,
         "basis": {
-          "confidence": "low",
+          "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 20,
-          "n_eff": 7.03,
+          "n": 27,
+          "n_eff": 8.35,
           "radius_km": 3.0,
           "iqr_ratio": 0.2567,
-          "same_suburb": 13,
+          "same_suburb": 14,
           "model_version": "comp-cv-v1"
         }
       }

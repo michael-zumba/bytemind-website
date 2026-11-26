@@ -29,14 +29,14 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 1255000,
-  "comp_mid": 1470000,
-  "comp_high": 2000000,
+  "comp_low": 1275000,
+  "comp_mid": 1525000,
+  "comp_high": 2050000,
   "comp_confidence": "low",
-  "comp_n": 54,
-  "value_low": 1255000,
-  "value_mid": 1470000,
-  "value_high": 2000000,
+  "comp_n": 55,
+  "value_low": 1275000,
+  "value_mid": 1525000,
+  "value_high": 2050000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1155,
-  "watchers": 22,
+  "view_count": 1174,
+  "watchers": 23,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 3,
   "last_change_at": "2026-11-17T16:04:51.686569+00:00",
-  "days_since_last_change": 8.44,
+  "days_since_last_change": 9.27,
   "price_drop_count": 0,
   "description_change_count": 3,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 3,
   "sale_pressure": 51.3,
   "sale_pressure_label": "medium",
-  "model_low": 2369921,
-  "model_mid": 3228183,
-  "model_high": 4356311,
+  "model_low": 2045461,
+  "model_mid": 2770301,
+  "model_high": 3743065,
   "model_confidence": "low",
-  "text_signal_pct": 44.4964,
-  "description_index": 2.040075,
+  "text_signal_pct": 28.1526,
+  "description_index": 1.325775,
   "events_count": 3,
   "last_event": "description_change",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6186371342,
-    "low": 2369921,
-    "mid": 3228183,
-    "high": 4356311,
+    "low": 2045461,
+    "mid": 2770301,
+    "high": 3743065,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3091, 0.2997], \"rel_width\": 0.6153, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3033, 0.3009], \"rel_width\": 0.6128, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6186371342,
@@ -301,39 +301,20 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.7449,
+    "views_waterfront": 0.7453,
     "family_school": 0.0806,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4334,
-    "description_premium_pct": 44.4964,
-    "description_index": 2.040075,
+    "description_premium_pct": 28.1526,
+    "description_index": 1.325775,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 6, \"family_school\": 1, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T02:31:47.923445+00:00",
+    "updated_at": "2026-11-26T22:35:57.281104+00:00",
     "top_topics": [
       {
-        "topic_id": 11,
-        "weight": 0.42917,
-        "label": "Resort amenities (pool / tennis / spa)",
-        "top_terms": [
-          "views",
-          "residence",
-          "expansive",
-          "waterfront",
-          "scale",
-          "gulf",
-          "harbour",
-          "pool",
-          "spectacular",
-          "hauraki",
-          "hauraki gulf",
-          "substantial"
-        ]
-      },
-      {
         "topic_id": 4,
-        "weight": 0.392079,
+        "weight": 0.404103,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -344,48 +325,67 @@
           "secure",
           "park",
           "kensington",
-          "balcony",
           "complex",
+          "balcony",
           "pool",
-          "kensington park"
+          "restaurants"
+        ]
+      },
+      {
+        "topic_id": 11,
+        "weight": 0.296169,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "residence",
+          "expansive",
+          "scale",
+          "waterfront",
+          "pool",
+          "setting",
+          "harbour",
+          "privacy",
+          "architectural",
+          "spaces",
+          "substantial",
+          "aucklands"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.124794,
-        "label": "Luxury, architectural & prestige",
+        "weight": 0.128671,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "premium",
-          "quality",
-          "designer",
-          "finishes",
-          "appliances",
-          "year",
-          "luxury",
-          "designer kitchen",
-          "comfort",
-          "heating",
           "new",
-          "design"
+          "quality",
+          "premium",
+          "brand",
+          "brand new",
+          "finishes",
+          "year",
+          "appliances",
+          "designer",
+          "comfort",
+          "designer kitchen",
+          "homes"
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.047346,
-        "label": "Bedrooms, bathrooms & layout",
+        "topic_id": 10,
+        "weight": 0.101122,
+        "label": "Sea views & coastal outlook",
         "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "ensuite",
-          "walk",
-          "master",
-          "upstairs",
-          "bathroom",
-          "suite",
-          "family bathroom",
-          "floor",
-          "lounge",
-          "master suite"
+          "sea",
+          "views",
+          "sea views",
+          "elevated",
+          "rangitoto",
+          "position",
+          "outlook",
+          "gulf",
+          "spectacular",
+          "elevated position",
+          "hauraki gulf",
+          "hauraki"
         ]
       }
     ]
@@ -448,7 +448,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T02:31:46.739573+00:00"
+    "updated_at": "2026-11-26T22:35:55.987184+00:00"
   },
   "body": "Penthouse Apartment (18) THIS IS YOUR LUCKY DAY\r\n\r\nCommanding the top floor, this modern penthouse enjoys expansive views across the Orakei Basin to the city skyline, and over the Hauraki Gulf to Rangitoto Island.\r\n\r\nFrom the changing harbour activity to spectacular sunsets, there is always something to catch your eye.\r\n\r\nSpanning an impressive 200 square metres, the apartment offers substantial space for living and entertaining. The main living area, kitchen and master bedroom all open directly onto the terrace.\r\n\r\nThe attention to detail is evident throughout, from the quality cabinetry and European kitchen appliances to the fully tiled bathrooms, ECC lighting with a central control panel, and silk wallpaper feature walls.\r\n\r\nDucted heating and cooling provide year-round comfort. Provision for pets under the body corporate rules adds further appeal for animal lovers.\r\n\r\nThree secure internal car parks and a large plumbed storage locker complete the package. Guest parking is conveniently positioned in front of the complex, with regular bus services to the city and beyond.\r\n\r\nFor those seeking a lock-up-and-leave home, this is a well-connected Orakei address with easy access to the waterfront bays, central city and downtown ferry terminal.\r\n\r\nAt a glance:\r\nThree bedrooms and three bathrooms\r\nExpansive city and harbour views\r\n47-square-metre terrace\r\nThree secure internal car parks\r\nLarge plumbed storage locker",
   "photos": [
@@ -511,7 +511,21 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2575000,
-      "estimate_mid": 2550000
+      "estimate_mid": 2510000
+    },
+    {
+      "property_id": "13cb01ae-45c0-4487-b929-24c81dd2d215",
+      "address": "135 Paritai Drive, Orakei, Auckland",
+      "sale_price": 3700000,
+      "sale_date": "2026-11-18T00:00:00+00:00",
+      "distance_km": 0.4,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 3025000,
+      "estimate_mid": 3620000
     },
     {
       "property_id": "f697c5f4-57c5-428d-b73e-af8a9b080934",
@@ -525,7 +539,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2175000,
-      "estimate_mid": 2150000
+      "estimate_mid": 2140000
     },
     {
       "property_id": "66cbe43a-99f1-406f-946c-9498a45d4e31",
@@ -567,7 +581,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2125000,
-      "estimate_mid": 1880000
+      "estimate_mid": 1830000
     },
     {
       "property_id": "342452bd-d87f-49d4-88bc-bb30a3f3cc9a",
@@ -595,7 +609,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2300000,
-      "estimate_mid": 2010000
+      "estimate_mid": 1940000
     },
     {
       "property_id": "cdd5b133-5884-4914-bb29-cca34744b331",
@@ -609,7 +623,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 2400000,
-      "estimate_mid": 2080000
+      "estimate_mid": 2020000
     },
     {
       "property_id": "430df567-dece-42cb-af00-0c85d3290600",
@@ -624,20 +638,6 @@
       "property_type": null,
       "cv": 1250000,
       "estimate_mid": 1280000
-    },
-    {
-      "property_id": "3a05a62c-ee59-403a-b3ff-c63e449b4884",
-      "address": "10 Palmer Crescent, Mission Bay, Auckland",
-      "sale_price": 4431000,
-      "sale_date": "2026-08-23T00:00:00+00:00",
-      "distance_km": 1.58,
-      "bedrooms": 4,
-      "bathrooms": 4,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 3850000,
-      "estimate_mid": 4430000
     },
     {
       "property_id": "fbeeff1d-4a2a-439c-9ab9-261c070b4de0",
@@ -655,29 +655,29 @@
     }
   ],
   "valuation": {
-    "value_low": 1255000,
-    "value_mid": 1470000,
-    "value_high": 2000000,
+    "value_low": 1275000,
+    "value_mid": 1525000,
+    "value_high": 2050000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$1.25M – $2M",
-        "low": 1255000,
-        "mid": 1470000,
-        "high": 2000000,
-        "updated_at": "2026-11-26T02:31:46.739573+00:00",
+        "range": "$1.27M – $2.05M",
+        "low": 1275000,
+        "mid": 1525000,
+        "high": 2050000,
+        "updated_at": "2026-11-26T22:35:55.987184+00:00",
         "confidence": "low",
-        "n": 54,
+        "n": 55,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 54,
-          "n_eff": 15.7,
+          "n": 55,
+          "n_eff": 16.55,
           "radius_km": 3.0,
-          "iqr_ratio": 0.5068,
-          "same_suburb": 18,
+          "iqr_ratio": 0.5082,
+          "same_suburb": 19,
           "model_version": "comp-cv-v1"
         }
       }

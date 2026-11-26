@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-28T05:20:53.977000+00:00",
-  "days_on_market": 28,
+  "days_on_market": 29,
   "lat": -36.6004881,
   "lon": 174.6737634,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338110668.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1494677,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-11-25T11:00:00+00:00",
-  "comp_low": 1328814,
-  "comp_mid": 1378039,
+  "comp_low": 1326316,
+  "comp_mid": 1376667,
   "comp_high": 1459756,
   "comp_confidence": "high",
-  "comp_n": 99,
+  "comp_n": 103,
   "value_low": 1323276,
   "value_mid": 1408976,
   "value_high": 1494677,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 3,
   "last_change_at": "2026-11-18T18:48:08.951872+00:00",
-  "days_since_last_change": 7.32,
+  "days_since_last_change": 8.16,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 1,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 54.7,
+  "sale_pressure": 54.8,
   "sale_pressure_label": "medium",
-  "model_low": 1193753,
-  "model_mid": 1300466,
-  "model_high": 1414270,
+  "model_low": 1195981,
+  "model_mid": 1299071,
+  "model_high": 1419766,
   "model_confidence": "high",
-  "text_signal_pct": -0.6603,
-  "description_index": -0.036719,
+  "text_signal_pct": -2.5397,
+  "description_index": -0.137492,
   "events_count": 3,
   "last_event": "new_listing",
   "schools": [
@@ -109,7 +109,7 @@
       "id": 481,
       "name": "CITY IMPACT CHURCH SCHOOL",
       "type": "Composite (Year 1-13)",
-      "roll": 367,
+      "roll": 363,
       "authority": "Private : Fully Registered",
       "gender": "Co-Educational",
       "decile": null,
@@ -149,7 +149,7 @@
       "id": 27,
       "name": "LONG BAY COLLEGE",
       "type": "Secondary (Year 9-13)",
-      "roll": 1983,
+      "roll": 1960,
       "authority": "State",
       "gender": "Co-Educational",
       "decile": null,
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6201586169,
-    "low": 1193753,
-    "mid": 1300466,
-    "high": 1414270,
+    "low": 1195981,
+    "mid": 1299071,
+    "high": 1419766,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0856, 0.0839], \"rel_width\": 0.1696, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6201586169,
@@ -286,53 +286,72 @@
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.6457,
-    "description_premium_pct": -0.6603,
-    "description_index": -0.036719,
+    "description_premium_pct": -2.5397,
+    "description_index": -0.137492,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 0, \"family_school\": 1, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T02:31:47.923445+00:00",
+    "updated_at": "2026-11-26T22:35:57.281104+00:00",
     "top_topics": [
       {
-        "topic_id": 9,
-        "weight": 0.485865,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "fenced",
-          "street",
-          "parking",
-          "fully fenced",
-          "fully",
-          "brick",
-          "garden",
-          "street parking",
-          "room",
-          "sunny",
-          "north facing",
-          "facing"
-        ]
-      },
-      {
         "topic_id": 6,
-        "weight": 0.149241,
+        "weight": 0.254199,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
           "walk wardrobe",
-          "ensuite",
           "walk",
+          "ensuite",
           "master",
-          "upstairs",
           "bathroom",
+          "upstairs",
           "suite",
-          "family bathroom",
-          "floor",
           "lounge",
-          "master suite"
+          "double",
+          "family bathroom",
+          "separate"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.231609,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "room",
+          "garden",
+          "morning",
+          "street",
+          "fenced",
+          "away",
+          "ready",
+          "summer",
+          "brick",
+          "fully fenced",
+          "parking",
+          "deck"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.214568,
+        "label": "Coastal village & park proximity",
+        "top_terms": [
+          "section",
+          "dream",
+          "build",
+          "dream home",
+          "land",
+          "whangaparaoa",
+          "sections",
+          "auckland",
+          "penlink",
+          "community",
+          "minutes",
+          "drive"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.130864,
+        "weight": 0.171245,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -343,29 +362,10 @@
           "secure",
           "park",
           "kensington",
-          "balcony",
           "complex",
+          "balcony",
           "pool",
-          "kensington park"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.124396,
-        "label": "Parking, garden & section II",
-        "top_terms": [
-          "section",
-          "dream",
-          "build",
-          "dream home",
-          "views",
-          "land",
-          "whangaparaoa",
-          "sea",
-          "sections",
-          "building",
-          "sea views",
-          "penlink"
+          "restaurants"
         ]
       }
     ]
@@ -437,7 +437,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T02:31:46.739573+00:00"
+    "updated_at": "2026-11-26T22:35:55.987184+00:00"
   },
   "body": "Selling/listed on behalf of owners.\r\n\r\nThis wonderful Sensation built home, was constructed by us in 2013.\r\nLocated in one of the earliest and most desirable parts of 'Seaview Stage 4', Millwater.\r\nLocated just a stones throw from the parkway, central parkspace and estuary.\r\n\r\n4 double bedrooms - 208sqm floor area\r\n2 car garaging - heaps of room out the front of section if you want extra parking for more cars/boat etc.\r\nCompletely flat & private section with no banks or properties overlooking - 541sqm\r\nRoom for a pool\r\nCentrally located, with easy walk to shops, schools, parks, the estuary and reserves.\r\n\r\nVacant possession - home is staged.\r\n\r\nPlease phone to view, or call in at open home times.\r\nFeel free to ask any questions.",
   "photos": [
@@ -658,6 +658,20 @@
       "estimate_mid": 1440000
     },
     {
+      "property_id": "fe7ba80b-5271-4c97-abed-a51992b55ccc",
+      "address": "9 Portland Park Road, Silverdale, Silverdale",
+      "sale_price": 1580000,
+      "sale_date": "2026-10-23T00:00:00+00:00",
+      "distance_km": 0.26,
+      "bedrooms": 5,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1750000,
+      "estimate_mid": 1610000
+    },
+    {
       "property_id": "2fc6ec6a-2988-45ec-bf91-de8ef43e4b59",
       "address": "24 Moores Road, Silverdale, Silverdale",
       "sale_price": 910000,
@@ -739,21 +753,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1250000,
-      "estimate_mid": 1300000
-    },
-    {
-      "property_id": "d528f4f7-c688-4147-af79-dd7fb20785f9",
-      "address": "172 Harris Drive, Silverdale, Silverdale",
-      "sale_price": 1580000,
-      "sale_date": "2026-09-10T00:00:00+00:00",
-      "distance_km": 0.7,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1325000,
-      "estimate_mid": 1560000
+      "estimate_mid": 1290000
     },
     {
       "property_id": "cb931463-a93a-4af2-b02b-fe74c8e5a0ee",
@@ -767,7 +767,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1925000,
-      "estimate_mid": 1870000
+      "estimate_mid": 1880000
     },
     {
       "property_id": "18e0d68e-dbdb-40ce-bb13-f9f700616829",
@@ -781,7 +781,7 @@
       "floor_area": null,
       "property_type": null,
       "cv": 1350000,
-      "estimate_mid": 1260000
+      "estimate_mid": 1270000
     },
     {
       "property_id": "2e05866a-f5c8-4967-adfa-c7455b7b0c9e",
@@ -832,20 +832,20 @@
       {
         "name": "Nearby sold comparables",
         "range": "$1.33M – $1.46M",
-        "low": 1328814,
-        "mid": 1378039,
+        "low": 1326316,
+        "mid": 1376667,
         "high": 1459756,
-        "updated_at": "2026-11-26T02:31:46.739573+00:00",
+        "updated_at": "2026-11-26T22:35:55.987184+00:00",
         "confidence": "high",
-        "n": 99,
+        "n": 103,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 99,
-          "n_eff": 14.7,
+          "n": 103,
+          "n_eff": 15.58,
           "radius_km": 3.0,
-          "median_ratio": 0.9843,
-          "iqr_ratio": 0.095,
+          "median_ratio": 0.9833,
+          "iqr_ratio": 0.0969,
           "same_suburb": 11,
           "model_version": "comp-cv-v1"
         }

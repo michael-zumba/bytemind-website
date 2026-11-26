@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-08-17T02:49:09.873000+00:00",
-  "days_on_market": 100,
+  "days_on_market": 101,
   "lat": -36.8862973,
   "lon": 174.9147552,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2323915815.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1604355,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-11-11T11:00:00+00:00",
-  "comp_low": 1295000,
+  "comp_low": 1316968,
   "comp_mid": 1436707,
-  "comp_high": 1521910,
+  "comp_high": 1546364,
   "comp_confidence": "high",
-  "comp_n": 56,
+  "comp_n": 57,
   "value_low": 1386966,
   "value_mid": 1495661,
   "value_high": 1604355,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 3,
   "last_change_at": "2026-11-14T18:06:15.599115+00:00",
-  "days_since_last_change": 11.35,
+  "days_since_last_change": 12.19,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,65 +74,84 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 46.7,
+  "sale_pressure": 46.8,
   "sale_pressure_label": "medium",
-  "model_low": 1363677,
-  "model_mid": 1485580,
-  "model_high": 1615584,
+  "model_low": 1364122,
+  "model_mid": 1481705,
+  "model_high": 1619368,
   "model_confidence": "high",
-  "text_signal_pct": -8.5961,
-  "description_index": -0.498163,
+  "text_signal_pct": -13.3973,
+  "description_index": -0.768787,
   "events_count": 3,
   "last_event": "new_listing",
   "schools": [],
   "model": {
     "listing_id": 6087075165,
-    "low": 1363677,
-    "mid": 1485580,
-    "high": 1615584,
+    "low": 1364122,
+    "mid": 1481705,
+    "high": 1619368,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0856, 0.0839], \"rel_width\": 0.1696, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6087075165,
     "word_count": 224,
     "exclamations": 1,
     "urgency": 0.0,
-    "luxury": 0.3731,
+    "luxury": 0.375,
     "condition_renovation": 0.1911,
     "views_waterfront": 0.0,
-    "family_school": 0.3903,
+    "family_school": 0.3902,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.1988,
-    "description_premium_pct": -8.5961,
-    "description_index": -0.498163,
+    "description_premium_pct": -13.3973,
+    "description_index": -0.768787,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 3, \"condition_renovation\": 1, \"views_waterfront\": 0, \"family_school\": 5, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T02:31:47.923445+00:00",
+    "updated_at": "2026-11-26T22:35:57.281104+00:00",
     "top_topics": [
       {
         "topic_id": 6,
-        "weight": 0.400128,
+        "weight": 0.407772,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
           "wardrobe",
           "walk wardrobe",
-          "ensuite",
           "walk",
+          "ensuite",
           "master",
-          "upstairs",
           "bathroom",
+          "upstairs",
           "suite",
-          "family bathroom",
-          "floor",
           "lounge",
-          "master suite"
+          "double",
+          "family bathroom",
+          "separate"
+        ]
+      },
+      {
+        "topic_id": 3,
+        "weight": 0.282584,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "new",
+          "quality",
+          "premium",
+          "brand",
+          "brand new",
+          "finishes",
+          "year",
+          "appliances",
+          "designer",
+          "comfort",
+          "designer kitchen",
+          "homes"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.264999,
+        "weight": 0.248998,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -150,41 +169,22 @@
         ]
       },
       {
-        "topic_id": 3,
-        "weight": 0.245039,
-        "label": "Luxury, architectural & prestige",
-        "top_terms": [
-          "premium",
-          "quality",
-          "designer",
-          "finishes",
-          "appliances",
-          "year",
-          "luxury",
-          "designer kitchen",
-          "comfort",
-          "heating",
-          "new",
-          "design"
-        ]
-      },
-      {
         "topic_id": 2,
-        "weight": 0.075003,
-        "label": "New build / brand-new quality",
+        "weight": 0.042394,
+        "label": "Brick / tile / low-maintenance units",
         "top_terms": [
-          "brand new",
-          "brand",
           "low maintenance",
           "maintenance",
           "low",
-          "new",
-          "single",
           "easy care",
-          "quality",
           "care",
-          "new home",
-          "convenience"
+          "single",
+          "convenience",
+          "stylish",
+          "comfort",
+          "practical",
+          "light",
+          "brand new"
         ]
       }
     ]
@@ -247,7 +247,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T02:31:46.739573+00:00"
+    "updated_at": "2026-11-26T22:35:55.987184+00:00"
   },
   "body": "Perfectly situated in one of the most sought-after neighbourhoods, this sophisticated brand-new standalone home offers effortless, timeless, and high-quality family living.\r\nThe ground floor is designed for everyday comfort and connection - featuring a sleek, contemporary open-plan kitchen with premium appliances, and a spacious dining and living area that seamlessly flows onto a sunny deck - the perfect setting for both relaxation and entertaining. A double bedroom with ensuite and a separate guest toilet adds extra convenience and flexibility for family or visitors.\r\nUpstairs, discover four beautifully appointed bedrooms, including a spacious master suite with walk-in wardrobe and ensuite. A full family bathroom serves the remaining three bedrooms, each complete with built-in double wardrobes.\r\nKey Features:\r\n•Standalone home with freehold title\r\n•Five generous bedrooms and three and a half bathrooms, including two ensuites\r\n•Internal-access garage with dedicated laundry and storage space\r\n• Equipped with three air conditioning units for year-round comfort\r\n•Prime education zone - only a 5-minute walk to Macleans Primary, BBI, and Macleans College\r\n•Minutes from Half Moon Bay ferry terminal - easy commute to Auckland City\r\n•Close to reserves, beaches, local shops, bakery, and eateries\r\n•Comes with a standard 10-year builder warranty and 1-year free maintenance period\r\nThis stunning, highly functional home combines modern comfort with unbeatable convenience, offering your family the lifestyle you've been dreaming of.\r\nDon't miss out - call now to arrange your private viewing!",
   "photos": [
@@ -446,20 +446,6 @@
       "estimate_mid": 1380000
     },
     {
-      "property_id": "9cf287b7-d67b-4823-b04c-3cbf22610e7d",
-      "address": "78 Sunderlands Road, Half Moon Bay, Auckland",
-      "sale_price": 1445000,
-      "sale_date": "2026-08-24T00:00:00+00:00",
-      "distance_km": 0.55,
-      "bedrooms": 4,
-      "bathrooms": 3,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 4700000,
-      "estimate_mid": 1550000
-    },
-    {
       "property_id": "e65c2cf7-9fd3-4995-9053-2877de67adf1",
       "address": "1/132 Hutchinsons Road, Bucklands Beach, Auckland",
       "sale_price": 805000,
@@ -502,6 +488,20 @@
       "estimate_mid": 1490000
     },
     {
+      "property_id": "9cf287b7-d67b-4823-b04c-3cbf22610e7d",
+      "address": "78 Sunderlands Road, Half Moon Bay, Auckland",
+      "sale_price": 1445000,
+      "sale_date": "2026-08-24T00:00:00+00:00",
+      "distance_km": 0.57,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 4700000,
+      "estimate_mid": 1590000
+    },
+    {
       "property_id": "4241a3c0-4a86-490f-b80c-64c40e0eeeea",
       "address": "2/327 Bucklands Beach Road, Bucklands Beach, Auckland",
       "sale_price": 900000,
@@ -516,6 +516,20 @@
       "estimate_mid": 1570000
     },
     {
+      "property_id": "d6c9f243-44c1-455a-b976-5939514ecc6a",
+      "address": "15 Loloma Drive, Half Moon Bay, Auckland",
+      "sale_price": 2380000,
+      "sale_date": "2026-10-23T00:00:00+00:00",
+      "distance_km": 0.61,
+      "bedrooms": 4,
+      "bathrooms": 3,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 2300000,
+      "estimate_mid": 2250000
+    },
+    {
       "property_id": "50c7407f-34f6-419f-89e0-92615417de61",
       "address": "121B Gills Road, Bucklands Beach, Auckland",
       "sale_price": 740000,
@@ -528,20 +542,6 @@
       "property_type": null,
       "cv": 870000,
       "estimate_mid": 740000
-    },
-    {
-      "property_id": "1f34d94c-da76-47ee-b6d1-fe4d0a67662a",
-      "address": "33 Jillteresa Crescent, Half Moon Bay, Auckland",
-      "sale_price": 1251888,
-      "sale_date": "2026-10-17T00:00:00+00:00",
-      "distance_km": 0.63,
-      "bedrooms": 4,
-      "bathrooms": 2,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1600000,
-      "estimate_mid": 1280000
     }
   ],
   "valuation": {
@@ -563,22 +563,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.29M – $1.52M",
-        "low": 1295000,
+        "range": "$1.32M – $1.55M",
+        "low": 1316968,
         "mid": 1436707,
-        "high": 1521910,
-        "updated_at": "2026-11-26T02:31:46.739573+00:00",
+        "high": 1546364,
+        "updated_at": "2026-11-26T22:35:55.987184+00:00",
         "confidence": "high",
-        "n": 56,
+        "n": 57,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 56,
-          "n_eff": 11.33,
+          "n": 57,
+          "n_eff": 11.64,
           "radius_km": 3.0,
           "median_ratio": 0.9122,
-          "iqr_ratio": 0.1579,
-          "same_suburb": 29,
+          "iqr_ratio": 0.1597,
+          "same_suburb": 28,
           "model_version": "comp-cv-v1"
         }
       },

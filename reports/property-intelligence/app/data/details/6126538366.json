@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-09-10T23:14:49.527000+00:00",
-  "days_on_market": 75,
+  "days_on_market": 76,
   "lat": -36.7963676,
   "lon": 174.7688237,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2328372865.jpg",
@@ -29,14 +29,14 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 925000,
+  "comp_low": 975000,
   "comp_mid": 1240000,
-  "comp_high": 1615000,
+  "comp_high": 1630000,
   "comp_confidence": "low",
-  "comp_n": 50,
-  "value_low": 925000,
+  "comp_n": 59,
+  "value_low": 975000,
   "value_mid": 1240000,
-  "value_high": 1615000,
+  "value_high": 1630000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 42.5,
+  "sale_pressure": 42.7,
   "sale_pressure_label": "medium",
-  "model_low": 1094579,
-  "model_mid": 1490979,
-  "model_high": 2012020,
+  "model_low": 1126652,
+  "model_mid": 1525898,
+  "model_high": 2061702,
   "model_confidence": "low",
-  "text_signal_pct": -11.5399,
-  "description_index": -0.679601,
+  "text_signal_pct": -11.4236,
+  "description_index": -0.648343,
   "events_count": 0,
   "last_event": null,
   "schools": [
@@ -288,33 +288,52 @@
   ],
   "model": {
     "listing_id": 6126538366,
-    "low": 1094579,
-    "mid": 1490979,
-    "high": 2012020,
+    "low": 1126652,
+    "mid": 1525898,
+    "high": 2061702,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3091, 0.2997], \"rel_width\": 0.6153, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3033, 0.3009], \"rel_width\": 0.6128, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6126538366,
     "word_count": 200,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.4179,
+    "luxury": 0.42,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.2694,
+    "views_waterfront": 0.2695,
     "family_school": 0.1748,
-    "investment": 0.3617,
+    "investment": 0.3627,
     "risk": 0.0,
     "readability": 0.2199,
-    "description_premium_pct": -11.5399,
-    "description_index": -0.679601,
+    "description_premium_pct": -11.4236,
+    "description_index": -0.648343,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 3, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 2, \"investment\": 2, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T02:31:47.923445+00:00",
+    "updated_at": "2026-11-26T22:35:57.281104+00:00",
     "top_topics": [
       {
+        "topic_id": 8,
+        "weight": 0.372276,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "extended",
+          "flexibility",
+          "extended family",
+          "guests",
+          "living areas",
+          "areas",
+          "family living",
+          "separate",
+          "multiple",
+          "families",
+          "teenagers",
+          "room"
+        ]
+      },
+      {
         "topic_id": 4,
-        "weight": 0.379218,
+        "weight": 0.355771,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -325,67 +344,48 @@
           "secure",
           "park",
           "kensington",
-          "balcony",
           "complex",
+          "balcony",
           "pool",
-          "kensington park"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.361444,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "extended",
-          "extended family",
-          "flexibility",
-          "living areas",
-          "areas",
-          "guests",
-          "multiple",
-          "sea",
-          "sea views",
-          "family living",
-          "teenagers",
-          "separate"
-        ]
-      },
-      {
-        "topic_id": 1,
-        "weight": 0.101982,
-        "label": "Development & land potential",
-        "top_terms": [
-          "potential",
-          "future",
-          "site",
-          "property",
-          "subject",
-          "land",
-          "development",
-          "existing",
-          "council",
-          "value",
-          "possibilities",
-          "subject council"
+          "restaurants"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.081273,
+        "weight": 0.097429,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
-          "school",
           "girls",
+          "school",
           "girls high",
-          "westlake girls",
           "high school",
+          "westlake girls",
           "boys",
           "high",
           "westlake boys",
           "intermediate",
           "school suburb",
           "shore"
+        ]
+      },
+      {
+        "topic_id": 1,
+        "weight": 0.089364,
+        "label": "Development & land potential",
+        "top_terms": [
+          "potential",
+          "future",
+          "site",
+          "property",
+          "land",
+          "development",
+          "subject",
+          "existing",
+          "council",
+          "value",
+          "possibilities",
+          "housing"
         ]
       }
     ]
@@ -426,7 +426,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T02:31:46.739573+00:00"
+    "updated_at": "2026-11-26T22:35:55.987184+00:00"
   },
   "body": "Rarely does an apartment offer this level of flexibility. This spacious 107sqm dual-key residence combines a sophisticated two-bedroom apartment with a completely separate, self-contained studio — giving you two distinct living spaces within one property.\r\n\r\nThe main two-bedroom apartment offers a higher-end living environment with a quality kitchen and bathroom, generous living spaces and a private outdoor deck. Complementing it is a separate studio apartment with its own kitchen and bathroom, providing genuine independence and exceptional versatility.\r\n\r\nWhether you choose to live in the main residence while generating additional income from the studio, accommodate family or guests, or utilise both spaces as an investment, the possibilities are significant. An allocated carpark adds further practicality.\r\n\r\nSet within Amaia Takapuna, you're perfectly positioned to enjoy one of Auckland's most desirable coastal locations. Takapuna Beach, cafés, restaurants, shopping and coastal walkways are all just moments away, while easy motorway and public transport access puts Auckland CBD and the wider North Shore within easy reach.\r\n\r\nThis is far more than a conventional apartment. It is the flexibility of two independent living spaces, combined into one exceptional property.\r\n\r\nOpportunities offering this combination of space, flexibility and location are exceptionally rare.\r\n\r\nContact us today to arrange your private viewing.",
   "photos": [
@@ -490,6 +490,20 @@
       "property_type": null,
       "cv": 1150000,
       "estimate_mid": 1090000
+    },
+    {
+      "property_id": "9c06f711-bd5f-4077-a623-273c418c72e3",
+      "address": "3 Spencer Terrace, Hauraki, Auckland",
+      "sale_price": 1630000,
+      "sale_date": "2026-09-17T00:00:00+00:00",
+      "distance_km": 0.39,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1450000,
+      "estimate_mid": 1660000
     },
     {
       "property_id": "933f221b-86ce-4a9d-bc45-0ceeb71a61d4",
@@ -616,46 +630,32 @@
       "property_type": null,
       "cv": 1150000,
       "estimate_mid": 1160000
-    },
-    {
-      "property_id": "9ef549fa-4c42-4b89-b280-0b716faa6fed",
-      "address": "1/3 Dominion Street, Takapuna, Auckland",
-      "sale_price": 1240000,
-      "sale_date": "2026-08-20T00:00:00+00:00",
-      "distance_km": 1.06,
-      "bedrooms": 3,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1300000,
-      "estimate_mid": 1250000
     }
   ],
   "valuation": {
-    "value_low": 925000,
+    "value_low": 975000,
     "value_mid": 1240000,
-    "value_high": 1615000,
+    "value_high": 1630000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$925K – $1.61M",
-        "low": 925000,
+        "range": "$975K – $1.63M",
+        "low": 975000,
         "mid": 1240000,
-        "high": 1615000,
-        "updated_at": "2026-11-26T02:31:46.739573+00:00",
+        "high": 1630000,
+        "updated_at": "2026-11-26T22:35:55.987184+00:00",
         "confidence": "low",
-        "n": 50,
+        "n": 59,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 50,
-          "n_eff": 16.12,
+          "n": 59,
+          "n_eff": 18.64,
           "radius_km": 3.0,
-          "iqr_ratio": 0.5565,
-          "same_suburb": 34,
+          "iqr_ratio": 0.5282,
+          "same_suburb": 43,
           "model_version": "comp-cv-v1"
         }
       }

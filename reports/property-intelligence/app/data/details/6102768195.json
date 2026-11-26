@@ -16,7 +16,7 @@
   "asking_kind": "asking",
   "sale_method": "Asking price",
   "deadline_at": null,
-  "listed_at": "2026-08-26T23:21:40.170000+00:00",
+  "listed_at": "2026-08-26T22:21:40.170000+00:00",
   "days_on_market": 91,
   "lat": -36.6330543,
   "lon": 174.762134,
@@ -63,7 +63,7 @@
   "change_signal": "price increase",
   "change_count": 6,
   "last_change_at": "2026-11-25T23:50:23.099534+00:00",
-  "days_since_last_change": 0.11,
+  "days_since_last_change": 0.95,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 3,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 75.2,
   "sale_pressure_label": "high",
-  "model_low": 797581,
-  "model_mid": 868879,
-  "model_high": 944915,
+  "model_low": 802828,
+  "model_mid": 872029,
+  "model_high": 953048,
   "model_confidence": "high",
-  "text_signal_pct": 3.3937,
-  "description_index": 0.18497,
+  "text_signal_pct": 6.7847,
+  "description_index": 0.350855,
   "events_count": 6,
   "last_event": "new_listing",
   "schools": [
@@ -119,7 +119,7 @@
       "id": 481,
       "name": "CITY IMPACT CHURCH SCHOOL",
       "type": "Composite (Year 1-13)",
-      "roll": 367,
+      "roll": 363,
       "authority": "Private : Fully Registered",
       "gender": "Co-Educational",
       "decile": null,
@@ -159,7 +159,7 @@
       "id": 27,
       "name": "LONG BAY COLLEGE",
       "type": "Secondary (Year 9-13)",
-      "roll": 1983,
+      "roll": 1960,
       "authority": "State",
       "gender": "Co-Educational",
       "decile": null,
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6102768195,
-    "low": 797581,
-    "mid": 868879,
-    "high": 944915,
+    "low": 802828,
+    "mid": 872029,
+    "high": 953048,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0856, 0.0839], \"rel_width\": 0.1696, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6102768195,
@@ -282,76 +282,38 @@
     "luxury": 0.0,
     "condition_renovation": 0.4569,
     "views_waterfront": 0.0959,
-    "family_school": 0.4356,
+    "family_school": 0.4354,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4584,
-    "description_premium_pct": 3.3937,
-    "description_index": 0.18497,
+    "description_premium_pct": 6.7847,
+    "description_index": 0.350855,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 3, \"views_waterfront\": 1, \"family_school\": 7, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T02:31:47.923445+00:00",
+    "updated_at": "2026-11-26T22:35:57.281104+00:00",
     "top_topics": [
       {
-        "topic_id": 9,
-        "weight": 0.609344,
+        "topic_id": 0,
+        "weight": 0.625595,
         "label": "Parking, garden & section",
         "top_terms": [
-          "fenced",
-          "street",
-          "parking",
-          "fully fenced",
-          "fully",
-          "brick",
-          "garden",
-          "street parking",
           "room",
-          "sunny",
-          "north facing",
-          "facing"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.170011,
-        "label": "Family living & entertaining",
-        "top_terms": [
+          "garden",
           "morning",
-          "friends",
-          "relaxed",
-          "coffee",
-          "life",
-          "morning coffee",
-          "sense",
-          "setting",
-          "inviting",
-          "welcoming",
-          "peaceful",
-          "day"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.111889,
-        "label": "Parking, garden & section II",
-        "top_terms": [
-          "section",
-          "dream",
-          "build",
-          "dream home",
-          "views",
-          "land",
-          "whangaparaoa",
-          "sea",
-          "sections",
-          "building",
-          "sea views",
-          "penlink"
+          "street",
+          "fenced",
+          "away",
+          "ready",
+          "summer",
+          "brick",
+          "fully fenced",
+          "parking",
+          "deck"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.108756,
+        "weight": 0.153967,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -362,10 +324,48 @@
           "secure",
           "park",
           "kensington",
-          "balcony",
           "complex",
+          "balcony",
           "pool",
-          "kensington park"
+          "restaurants"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.125131,
+        "label": "Coastal village & park proximity",
+        "top_terms": [
+          "section",
+          "dream",
+          "build",
+          "dream home",
+          "land",
+          "whangaparaoa",
+          "sections",
+          "auckland",
+          "penlink",
+          "community",
+          "minutes",
+          "drive"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.085641,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "wardrobe",
+          "walk wardrobe",
+          "walk",
+          "ensuite",
+          "master",
+          "bathroom",
+          "upstairs",
+          "suite",
+          "lounge",
+          "double",
+          "family bathroom",
+          "separate"
         ]
       }
     ]
@@ -479,14 +479,14 @@
     "first_description_change_at": null,
     "last_description_change_at": null,
     "days_to_first_change": 5.86,
-    "days_since_last_change": 16.37,
+    "days_since_last_change": 17.21,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "set",
-    "updated_at": "2026-11-26T02:31:46.739573+00:00"
+    "updated_at": "2026-11-26T22:35:55.987184+00:00"
   },
   "body": "Beach at the end of the street, Manly Village around the corner, and a beautifully renovated home where all the hard work has already been done. Whether you're a first home buyer wanting to get into the Manly market or simply craving an easy, breezy beachside lifestyle, 21 Brixton Road could be just what you've been waiting for. With Little Manly Beach only 350 metres away, imagine starting your day with a morning swim, strolling home, rinsing off in the handy downstairs bathroom, then wandering up the road for a coffee at Hello Manly Cafe. Now that sounds like a pretty great way to start the day!\r\n\r\nFeatures you'll love:\r\n* Fully renovated and immaculately presented\r\n* Freehold 424sqm fully fenced section\r\n* Open-plan living and dining extends to sunny conservatory\r\n* Electric fireplace provides warmth and ambiance\r\n* Main bathroom with walk-in tiled shower\r\n* Second bathroom and laundry downstairs, ideal for cleaning up after sandy beach days\r\n* Off street parking plus space for bikes, boards and weekend gear\r\n* Recessed lighting, soft carpet and quality contemporary finishes\r\n\r\nAnd then there's the location. Walk to Manly Beach for a morning swim, wander around the corner for coffee, and enjoy the village, local shops, schools, parks and coastal walking tracks all close by. This is everyday living with a holiday feeling - where beach days, village strolls and relaxed afternoons at home can become part of your normal routine.\r\n\r\nIf you've been waiting for a home where the renovations are done, the lifestyle is sorted and all you need to do is move in, 21 Brixton Road deserves to be on your list. Come and see it for yourself.\r\n\r\nTo download the property documents please visit: https://www.harcourtsfiles.co.nz/listings/LHY3\r\n\r\n- Flexible settlement terms available\r\n- Other agents bring your buyers, conjunctionals welcome\r\n- Building report available",
   "photos": [
@@ -879,7 +879,7 @@
         "low": 838809,
         "mid": 926316,
         "high": 966914,
-        "updated_at": "2026-11-26T02:31:46.739573+00:00",
+        "updated_at": "2026-11-26T22:35:55.987184+00:00",
         "confidence": "high",
         "n": 42,
         "basis": {

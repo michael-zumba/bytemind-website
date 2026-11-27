@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-13T14:15:37.700000+00:00",
-  "days_on_market": 44,
+  "days_on_market": 45,
   "lat": -36.7372627,
   "lon": 174.747345,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2334960095.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1496263,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-11-25T11:00:00+00:00",
-  "comp_low": 1129508,
+  "comp_low": 1137500,
   "comp_mid": 1305652,
-  "comp_high": 1439630,
+  "comp_high": 1430000,
   "comp_confidence": "high",
-  "comp_n": 113,
+  "comp_n": 114,
   "value_low": 1324681,
   "value_mid": 1410472,
   "value_high": 1496263,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 3,
   "last_change_at": "2026-11-25T20:12:15.813445+00:00",
-  "days_since_last_change": 1.1,
+  "days_since_last_change": 1.91,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 5,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 37.3,
+  "sale_pressure": 37.5,
   "sale_pressure_label": "low",
-  "model_low": 1248425,
-  "model_mid": 1356035,
-  "model_high": 1482022,
+  "model_low": 1244376,
+  "model_mid": 1353232,
+  "model_high": 1479810,
   "model_confidence": "high",
-  "text_signal_pct": -12.1545,
-  "description_index": -0.692629,
+  "text_signal_pct": -5.3962,
+  "description_index": -0.31028,
   "events_count": 3,
   "last_event": "cv_change",
   "schools": [
@@ -269,7 +269,7 @@
       "id": 37,
       "name": "WESTLAKE BOYS HIGH SCHOOL",
       "type": "Secondary (Year 9-13)",
-      "roll": 2778,
+      "roll": 2756,
       "authority": "State",
       "gender": null,
       "decile": null,
@@ -278,11 +278,11 @@
   ],
   "model": {
     "listing_id": 6177920089,
-    "low": 1248425,
-    "mid": 1356035,
-    "high": 1482022,
+    "low": 1244376,
+    "mid": 1353232,
+    "high": 1479810,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6177920089,
@@ -290,40 +290,21 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.3754,
-    "views_waterfront": 0.1182,
-    "family_school": 0.92,
+    "condition_renovation": 0.3741,
+    "views_waterfront": 0.1181,
+    "family_school": 0.9211,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4121,
-    "description_premium_pct": -12.1545,
-    "description_index": -0.692629,
+    "description_premium_pct": -5.3962,
+    "description_index": -0.31028,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 2, \"views_waterfront\": 1, \"family_school\": 12, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
-        "topic_id": 8,
-        "weight": 0.243266,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "extended",
-          "flexibility",
-          "extended family",
-          "guests",
-          "living areas",
-          "areas",
-          "family living",
-          "separate",
-          "multiple",
-          "families",
-          "teenagers",
-          "room"
-        ]
-      },
-      {
         "topic_id": 7,
-        "weight": 0.237344,
+        "weight": 0.235567,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -334,34 +315,53 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
+          "suburb marina",
           "mountain"
         ]
       },
       {
-        "topic_id": 0,
-        "weight": 0.121891,
+        "topic_id": 6,
+        "weight": 0.138584,
         "label": "Parking, garden & section",
         "top_terms": [
-          "room",
-          "garden",
-          "morning",
           "street",
           "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
           "parking",
-          "deck"
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.124511,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "separate",
+          "bathroom",
+          "ensuite",
+          "walk wardrobe",
+          "wardrobe",
+          "extended",
+          "upstairs",
+          "extended family",
+          "guests",
+          "master",
+          "walk",
+          "floor"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.119052,
+        "weight": 0.106347,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -371,11 +371,11 @@
           "car",
           "secure",
           "park",
-          "kensington",
           "complex",
           "balcony",
-          "pool",
-          "restaurants"
+          "kensington",
+          "restaurants",
+          "bedroom apartment"
         ]
       }
     ]
@@ -479,7 +479,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Perfectly located in the heart of Mairangi Bay, this delightful weatherboard dwelling presents purchasers with an opportunity to secure a home in this vibrant and popular seaside community. Occupying its own 812m² freehold site in a family-friendly cul-de-sac, you are within walking distance of gorgeous beaches, village shops, and some of the best schools in Auckland.\r\n\r\nFull of character, this beautifully presented property delivers on spaces both inside and out, catering perfectly to families at all ages and stages. Four bedrooms, three bathrooms, and multiple living areas are arranged over two levels. The independent ground floor features a bedroom, bathroom, and living area—ideal for extended family, teens, or overnight guests. The main floor boasts a bright and spacious living room with a kitchen, offering a seamless connection to the private, sun-drenched deck and garden, giving you every reason to relax, enjoy the outdoors, and host BBQs with friends and family.\r\n\r\nSet in the ultimate location in Auckland's most sought-after suburb, it's only a short stroll to beautiful beaches and all the wonderful amenities of Mairangi Bay Village, including vibrant cafes, restaurants, wine bars, supermarkets, and an abundance of sports clubs. Rangitoto College, Murrays Bay Intermediate, and Murrays Bay School are all within walking distance, with a local kindergarten situated at the end of the street. What more could your family need?\r\n\r\nProperties in this suburb rarely stay on the market for long, so call me today for more information or welcome to our open homes.",
   "photos": [
@@ -519,12 +519,6 @@
       "estimate_low": 1296022,
       "estimate_mid": 1377163,
       "estimate_high": 1458304
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 1341705,
-      "estimate_mid": 1423994,
-      "estimate_high": 1506283
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -727,6 +721,20 @@
       "estimate_mid": 1460000
     },
     {
+      "property_id": "77529e50-4b3d-4015-b0af-d7728aa4c95d",
+      "address": "67A Sunrise Avenue, Murrays Bay, Auckland",
+      "sale_price": 1410000,
+      "sale_date": "2026-11-26T00:00:00+00:00",
+      "distance_km": 0.55,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1350000,
+      "estimate_mid": 1400000
+    },
+    {
       "property_id": "9e68916a-bd3a-4101-b8bc-4e7aba341c28",
       "address": "5 Matipo Road, Mairangi Bay, Auckland",
       "sale_price": 1800000,
@@ -837,20 +845,6 @@
       "property_type": null,
       "cv": 1500000,
       "estimate_mid": 1750000
-    },
-    {
-      "property_id": "3c40cd36-c2b7-45fd-afeb-793cb640438f",
-      "address": "35D Matipo Road, Mairangi Bay, Auckland",
-      "sale_price": 990000,
-      "sale_date": "2026-09-28T00:00:00+00:00",
-      "distance_km": 0.74,
-      "bedrooms": 3,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1200000,
-      "estimate_mid": 990000
     }
   ],
   "valuation": {
@@ -872,21 +866,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.13M – $1.44M",
-        "low": 1129508,
+        "range": "$1.14M – $1.43M",
+        "low": 1137500,
         "mid": 1305652,
-        "high": 1439630,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "high": 1430000,
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "high",
-        "n": 113,
+        "n": 114,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 113,
-          "n_eff": 20.38,
+          "n": 114,
+          "n_eff": 20.53,
           "radius_km": 3.0,
           "median_ratio": 1.0043,
-          "iqr_ratio": 0.2375,
+          "iqr_ratio": 0.224,
           "same_suburb": 31,
           "model_version": "comp-cv-v1"
         }

@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-02-13T00:43:03.290000+00:00",
-  "days_on_market": 286,
+  "days_on_market": 287,
   "lat": -36.6240644,
   "lon": 174.6705949,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2317574943.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": -415000,
   "ask_gap_pct": -0.3444,
   "deal_gap": 0.3444,
-  "view_count": 1572,
+  "view_count": 1576,
   "watchers": 11,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:20:49.698728+00:00",
-  "days_since_last_change": 23.05,
+  "days_since_last_change": 23.86,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 788194,
-  "model_mid": 1067503,
-  "model_high": 1442346,
+  "model_low": 778310,
+  "model_mid": 1054821,
+  "model_high": 1429265,
   "model_confidence": "low",
-  "text_signal_pct": -14.7795,
-  "description_index": -0.854778,
+  "text_signal_pct": -9.9006,
+  "description_index": -0.58314,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,52 +268,52 @@
   ],
   "model": {
     "listing_id": 5781747634,
-    "low": 788194,
-    "mid": 1067503,
-    "high": 1442346,
+    "low": 778310,
+    "mid": 1054821,
+    "high": 1429265,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3033, 0.3009], \"rel_width\": 0.6128, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.304, 0.3038], \"rel_width\": 0.6171, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5781747634,
     "word_count": 198,
     "exclamations": 4,
     "urgency": 1.0,
-    "luxury": 0.2828,
-    "condition_renovation": 0.4323,
+    "luxury": 0.2825,
+    "condition_renovation": 0.4308,
     "views_waterfront": 0.0,
-    "family_school": 0.0883,
+    "family_school": 0.0884,
     "investment": 1.0,
     "risk": 0.0,
     "readability": 0.3218,
-    "description_premium_pct": -14.7795,
-    "description_index": -0.854778,
+    "description_premium_pct": -9.9006,
+    "description_index": -0.58314,
     "lexicon_hits_json": "{\"urgency\": 4, \"luxury\": 2, \"condition_renovation\": 2, \"views_waterfront\": 0, \"family_school\": 1, \"investment\": 7, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.414679,
-        "label": "New build / brand-new quality",
+        "weight": 0.263918,
+        "label": "Luxury, architectural & prestige",
         "top_terms": [
-          "new",
-          "quality",
           "premium",
-          "brand",
-          "brand new",
-          "finishes",
-          "year",
+          "quality",
           "appliances",
           "designer",
-          "comfort",
+          "year",
+          "finishes",
+          "luxury",
+          "heating",
           "designer kitchen",
-          "homes"
+          "comfort",
+          "built",
+          "round"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.230014,
+        "weight": 0.231178,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -321,8 +321,8 @@
           "site",
           "property",
           "land",
-          "development",
           "subject",
+          "development",
           "existing",
           "council",
           "value",
@@ -331,8 +331,27 @@
         ]
       },
       {
+        "topic_id": 2,
+        "weight": 0.205341,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand new",
+          "brand",
+          "maintenance",
+          "low maintenance",
+          "low",
+          "new",
+          "single",
+          "quality",
+          "easy care",
+          "care",
+          "new home",
+          "stylish"
+        ]
+      },
+      {
         "topic_id": 4,
-        "weight": 0.221732,
+        "weight": 0.195186,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -342,30 +361,11 @@
           "car",
           "secure",
           "park",
-          "kensington",
           "complex",
           "balcony",
-          "pool",
-          "restaurants"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.065427,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "low maintenance",
-          "maintenance",
-          "low",
-          "easy care",
-          "care",
-          "single",
-          "convenience",
-          "stylish",
-          "comfort",
-          "practical",
-          "light",
-          "brand new"
+          "kensington",
+          "restaurants",
+          "bedroom apartment"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "An outstanding opportunity for homeowners and savvy investors! With 2 of the 5 homes already sold, only 3 newly built terraced homes remain. The vendor is motivated and ready to see action!\r\n\r\nFeaturing 3 bedrooms, 2 bathrooms and a study, these modern homes combine quality finishes, low-maintenance living and excellent value in one of North Auckland’s fastest-growing locations. Enjoy pleasant outlooks from the rear of the property.\r\n\r\nQuality Features Include:\r\n• Premium Fisher & Paykel kitchen with DishDrawer™, induction cooktop and wall oven\r\n• Hansgrohe tapware and Insinkerator E56 waste disposal\r\n• Full-home HRV system for year-round comfort\r\n• Bright open-plan living, double glazing and smart storage\r\n• Allocated car park plus visitor parking\r\n• Freehold title — no body corporate or residents’ association fees\r\n• 10-year Stamford Warranty\r\n• CCC already issued\r\n\r\nINVESTORS — READY TO GO!\r\nNow tenanted, these properties offer an attractive opportunity for investors seeking rental income and potential long-term capital growth.\r\n\r\nConveniently Located Near:\r\n• Quality schools\r\n• Silverdale Centre, cafés and everyday amenities\r\n• Motorway access and Silverdale Bus Station\r\n• Auckland’s stunning northern beaches\r\n\r\nMOTIVATED VENDOR — URGENT SALE!\r\nWhether you're looking for your next home or a smart investment, don't miss your chance to secure one of these remaining properties.\r\n\r\nContact today for further information and viewing arrangements. Advance notice is required for viewings.",
   "photos": [
@@ -627,17 +627,17 @@
         "low": 985000,
         "mid": 1205000,
         "high": 1400000,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "medium",
         "n": 49,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
           "n": 49,
-          "n_eff": 9.18,
+          "n_eff": 9.13,
           "radius_km": 3.0,
           "iqr_ratio": 0.3444,
-          "same_suburb": 20,
+          "same_suburb": 19,
           "model_version": "comp-cv-v1"
         }
       }

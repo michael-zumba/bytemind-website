@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-15T02:07:00.607000+00:00",
-  "days_on_market": 42,
+  "days_on_market": 43,
   "lat": -36.7425905,
   "lon": 174.7418573,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338082107.jpg",
@@ -33,7 +33,7 @@
   "comp_mid": 1874130,
   "comp_high": 2035000,
   "comp_confidence": "high",
-  "comp_n": 106,
+  "comp_n": 107,
   "value_low": 1766948,
   "value_mid": 1881382,
   "value_high": 1995816,
@@ -63,7 +63,7 @@
   "change_signal": "price increase",
   "change_count": 12,
   "last_change_at": "2026-11-12T18:02:24.030035+00:00",
-  "days_since_last_change": 14.19,
+  "days_since_last_change": 15.0,
   "price_drop_count": 0,
   "description_change_count": 5,
   "prior_sale_count": 3,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 77.0,
+  "sale_pressure": 77.2,
   "sale_pressure_label": "high",
-  "model_low": 1771014,
-  "model_mid": 1923671,
-  "model_high": 2102396,
+  "model_low": 1769197,
+  "model_mid": 1923964,
+  "model_high": 2103927,
   "model_confidence": "high",
-  "text_signal_pct": -8.5711,
-  "description_index": -0.478935,
+  "text_signal_pct": -12.6424,
+  "description_index": -0.755993,
   "events_count": 12,
   "last_event": "estimate_change",
   "schools": [
@@ -119,7 +119,7 @@
       "id": 38,
       "name": "WESTLAKE GIRLS' HIGH SCHOOL",
       "type": "Secondary (Year 9-13)",
-      "roll": 2297,
+      "roll": 2288,
       "authority": "State",
       "gender": null,
       "decile": null,
@@ -269,7 +269,7 @@
       "id": 37,
       "name": "WESTLAKE BOYS HIGH SCHOOL",
       "type": "Secondary (Year 9-13)",
-      "roll": 2778,
+      "roll": 2756,
       "authority": "State",
       "gender": null,
       "decile": null,
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6180325415,
-    "low": 1771014,
-    "mid": 1923671,
-    "high": 2102396,
+    "low": 1769197,
+    "mid": 1923964,
+    "high": 2103927,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6180325415,
@@ -301,20 +301,39 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.3818,
+    "views_waterfront": 0.3815,
     "family_school": 1.0,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3241,
-    "description_premium_pct": -8.5711,
-    "description_index": -0.478935,
+    "description_premium_pct": -12.6424,
+    "description_index": -0.755993,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 5, \"family_school\": 24, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
+        "topic_id": 8,
+        "weight": 0.243718,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "separate",
+          "bathroom",
+          "ensuite",
+          "walk wardrobe",
+          "wardrobe",
+          "extended",
+          "upstairs",
+          "extended family",
+          "guests",
+          "master",
+          "walk",
+          "floor"
+        ]
+      },
+      {
         "topic_id": 5,
-        "weight": 0.233441,
+        "weight": 0.232325,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -332,60 +351,41 @@
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.210641,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "walk",
-          "ensuite",
-          "master",
-          "bathroom",
-          "upstairs",
-          "suite",
-          "lounge",
-          "double",
-          "family bathroom",
-          "separate"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.190032,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "extended",
-          "flexibility",
-          "extended family",
-          "guests",
-          "living areas",
-          "areas",
-          "family living",
-          "separate",
-          "multiple",
-          "families",
-          "teenagers",
-          "room"
-        ]
-      },
-      {
         "topic_id": 10,
-        "weight": 0.170122,
+        "weight": 0.197058,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
-          "views",
           "sea views",
+          "views",
           "elevated",
           "rangitoto",
           "position",
           "outlook",
-          "gulf",
-          "spectacular",
           "elevated position",
-          "hauraki gulf",
-          "hauraki"
+          "spectacular",
+          "gulf",
+          "sweeping",
+          "rangitoto college"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.175829,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "fenced",
+          "parking",
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
         ]
       }
     ]
@@ -541,14 +541,14 @@
     "first_description_change_at": "2026-11-02T16:19:01.707462+00:00",
     "last_description_change_at": "2026-11-06T18:46:27.089534+00:00",
     "days_to_first_change": 18.33,
-    "days_since_last_change": 16.34,
+    "days_since_last_change": 17.15,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "set",
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Set on a quiet cul-de-sac, this recently refreshed home is made for the way families actually live. Large windows fill the living spaces with natural light, while beautiful sea views from the kitchen, living room and three bedrooms bring something special to everyday living.\r\n\r\nUpstairs, two spacious living areas complement a modern kitchen and dining area, with seamless flow to the sunny front and rear decks. The primary bedroom features an ensuite and walk-in wardrobe, alongside an additional bedroom and family bathroom. Downstairs offers the perfect setup for extended family, guests or teenagers, with a separate living area, three double bedrooms, bathroom, separate laundry and internal-access garaging.\r\n\r\nOutside, the covered barbecue and entertaining area becomes the centre of summer weekends, sheltered enough for long lunches and relaxed evenings whatever the forecast brings. The backyard is private and easy to maintain, so your free time goes into enjoying it rather than looking after it.\r\n\r\nThen there's the setting. Zoned for Mairangi Bay School, Murrays Bay Intermediate, Westlake Girls and Rangitoto College, the school years are covered from start to finish. Mairangi Bay Beach is just moments away, while Windsor Park, Westfield Albany and AUT Millennium offer plenty of options for recreation, shopping and sport. With Constellation bus station and motorway access close by, getting around Auckland is simple.\r\n\r\nProperty Features:\r\n\r\n* Recently refreshed family home in a quiet cul-de-sac\r\n* Beautiful sea views from the kitchen, living room and three bedrooms\r\n* Flexible downstairs living, ideal for extended families, guests or teenagers\r\n* Moments from Mairangi Bay Beach, local cafes and amenities\r\n* Convenient access to Constellation bus station and motorway connections\r\n* Zoned for Mairangi Bay School, Murrays Bay Intermediate, Westlake Girls and Rangitoto College\r\n* Peaceful, family-friendly neighbourhood\r\n* 5 bedrooms and 2 living areas across two levels\r\n* Generous, light-filled living spaces\r\n* Primary bedroom with ensuite and walk-in wardrobe\r\n* Dedicated study or work-from-home space\r\n* Multiple bathrooms for busy family living\r\n* Covered barbecue and outdoor entertaining area\r\n* Private, easy-care backyard\r\n* Internal-access double garage plus generous off-street parking\r\n\r\nSea views, space for everyone and a location your family will love.\r\n\r\nContact David Millington or Hannah Petherbridge today for more information or to arrange a viewing.\r\n\r\nAgent conjunctionals welcome!",
   "photos": [
@@ -588,12 +588,6 @@
       "estimate_low": 1741795,
       "estimate_mid": 1850845,
       "estimate_high": 1959895
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 1770463,
-      "estimate_mid": 1879048,
-      "estimate_high": 1987633
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -824,6 +818,20 @@
       "estimate_mid": 1790000
     },
     {
+      "property_id": "77529e50-4b3d-4015-b0af-d7728aa4c95d",
+      "address": "67A Sunrise Avenue, Murrays Bay, Auckland",
+      "sale_price": 1410000,
+      "sale_date": "2026-11-26T00:00:00+00:00",
+      "distance_km": 0.92,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1350000,
+      "estimate_mid": 1400000
+    },
+    {
       "property_id": "34f38985-8516-4d71-b7c7-493966201f81",
       "address": "1/7 Jutland Street, Mairangi Bay, Auckland",
       "sale_price": 1385000,
@@ -906,20 +914,6 @@
       "property_type": null,
       "cv": 1650000,
       "estimate_mid": 2030000
-    },
-    {
-      "property_id": "dee00419-6b2e-4e74-bd30-6c5e4624b412",
-      "address": "8/423 Beach Road, Mairangi Bay, Auckland",
-      "sale_price": 1200000,
-      "sale_date": "2026-09-18T00:00:00+00:00",
-      "distance_km": 1.15,
-      "bedrooms": 3,
-      "bathrooms": null,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1925000,
-      "estimate_mid": 1200000
     }
   ],
   "valuation": {
@@ -945,14 +939,14 @@
         "low": 1618771,
         "mid": 1874130,
         "high": 2035000,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "high",
-        "n": 106,
+        "n": 107,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 106,
-          "n_eff": 17.35,
+          "n": 107,
+          "n_eff": 17.51,
           "radius_km": 3.0,
           "median_ratio": 1.013,
           "iqr_ratio": 0.2221,

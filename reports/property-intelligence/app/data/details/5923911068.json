@@ -16,8 +16,8 @@
   "asking_kind": "asking",
   "sale_method": "Asking price",
   "deadline_at": null,
-  "listed_at": "2026-05-07T22:42:25.983000+00:00",
-  "days_on_market": 202,
+  "listed_at": "2026-05-07T21:42:25.983000+00:00",
+  "days_on_market": 203,
   "lat": -36.6161241,
   "lon": 174.7153637,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2306988829.jpg",
@@ -33,7 +33,7 @@
   "comp_mid": 900000,
   "comp_high": 1135000,
   "comp_confidence": "low",
-  "comp_n": 45,
+  "comp_n": 44,
   "value_low": 815000,
   "value_mid": 900000,
   "value_high": 1135000,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:22:21.614158+00:00",
-  "days_since_last_change": 23.05,
+  "days_since_last_change": 23.86,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 496034,
-  "model_mid": 671812,
-  "model_high": 907712,
+  "model_low": 532194,
+  "model_mid": 721267,
+  "model_high": 977305,
   "model_confidence": "low",
-  "text_signal_pct": -11.3226,
-  "description_index": -0.642257,
+  "text_signal_pct": -8.2911,
+  "description_index": -0.484109,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -278,33 +278,52 @@
   ],
   "model": {
     "listing_id": 5923911068,
-    "low": 496034,
-    "mid": 671812,
-    "high": 907712,
+    "low": 532194,
+    "mid": 721267,
+    "high": 977305,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3033, 0.3009], \"rel_width\": 0.6128, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.304, 0.3038], \"rel_width\": 0.6171, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5923911068,
     "word_count": 272,
     "exclamations": 1,
     "urgency": 0.0,
-    "luxury": 0.2059,
-    "condition_renovation": 0.1574,
-    "views_waterfront": 0.1982,
-    "family_school": 0.4499,
-    "investment": 0.1333,
+    "luxury": 0.2057,
+    "condition_renovation": 0.1568,
+    "views_waterfront": 0.1981,
+    "family_school": 0.4504,
+    "investment": 0.1332,
     "risk": 0.0,
     "readability": 0.3751,
-    "description_premium_pct": -11.3226,
-    "description_index": -0.642257,
+    "description_premium_pct": -8.2911,
+    "description_index": -0.484109,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 7, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
+        "topic_id": 2,
+        "weight": 0.340136,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand new",
+          "brand",
+          "maintenance",
+          "low maintenance",
+          "low",
+          "new",
+          "single",
+          "quality",
+          "easy care",
+          "care",
+          "new home",
+          "stylish"
+        ]
+      },
+      {
         "topic_id": 9,
-        "weight": 0.328038,
+        "weight": 0.332699,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "section",
@@ -318,50 +337,12 @@
           "penlink",
           "community",
           "minutes",
-          "drive"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.240842,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "low maintenance",
-          "maintenance",
-          "low",
-          "easy care",
-          "care",
-          "single",
-          "convenience",
-          "stylish",
-          "comfort",
-          "practical",
-          "light",
-          "brand new"
-        ]
-      },
-      {
-        "topic_id": 3,
-        "weight": 0.197548,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "new",
-          "quality",
-          "premium",
-          "brand",
-          "brand new",
-          "finishes",
-          "year",
-          "appliances",
-          "designer",
-          "comfort",
-          "designer kitchen",
-          "homes"
+          "building"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.102142,
+        "weight": 0.089276,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -372,10 +353,29 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
+          "suburb marina",
           "mountain"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.085049,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "morning",
+          "friends",
+          "relaxed",
+          "coffee",
+          "life",
+          "morning coffee",
+          "setting",
+          "inviting",
+          "sense",
+          "welcoming",
+          "step",
+          "summer"
         ]
       }
     ]
@@ -424,7 +424,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Lot 55 / 20 Melia Place, Stanmore Bay - Price Slashed - Vendor Says Sell! New Standalone Home - Stanmore Bay\r\n\r\nDiscover Precise on Melia - a boutique coastal community in the heart of Stanmore Bay. Presents a brand-new standalone freehold home designed for modern living. With 3 bedrooms + 2.5 bathrooms, and a peaceful setting beside a natural walking track, this home offers the perfect balance of comfort, convenience, and relaxed coastal lifestyle.\r\n\r\nLocated within the sought-after Precise on Melia development, residents enjoy exclusive community amenities including a Party House, children's playground, multi-purpose sports court, and BBQ area. Scenic walkways and nearby beaches create a lifestyle where everyday living feels like a holiday.\r\n\r\nProperty Features:\r\n* Brand new standalone freehold house - no shared walls\r\n* 3 bedrooms (including 1 master suite) + 2.5 bathrooms \r\n* Open-plan kitchen with quality appliances and practical flow\r\n* Low-maintenance garden and private deck\r\n* The backyard backs directly onto a walkway, with no rear neighbours, offering excellent privacy.\r\n* Comes with 2 dedicated parking spaces for your exclusive use.\r\n* Backs onto a peaceful bush walking track\r\n\r\nLocation Highlights:\r\n* Approx. 7 minutes to Silverdale Mall \r\n* Around 10 minutes to motorway access for an easy commute\r\n* Multiple beautiful beaches within 10 minutes' drive \r\n* Approx. 10 minutes to the upcoming Penlink, providing faster access to Albany and Auckland CBD.\r\n\r\nEducation options nearby include:\r\n* Red Beach School\r\n* Stanmore Bay School\r\n* Wentworth College\r\n* Wentworth Primary School\r\n\r\nHere, the ideal lifestyle is simple: live where every day feels like a getaway. Precise on Melia also offers other options to suit different needs, including stylish 2-3 bedroom townhouses and spacious 4-bedroom family homes.\r\n\r\nContact Vicky today to find the home that fits your lifestyle.",
   "photos": [
@@ -643,17 +643,17 @@
         "low": 815000,
         "mid": 900000,
         "high": 1135000,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "low",
-        "n": 45,
+        "n": 44,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 45,
-          "n_eff": 10.85,
+          "n": 44,
+          "n_eff": 10.7,
           "radius_km": 3.0,
           "iqr_ratio": 0.3556,
-          "same_suburb": 16,
+          "same_suburb": 15,
           "model_version": "comp-cv-v1"
         }
       }

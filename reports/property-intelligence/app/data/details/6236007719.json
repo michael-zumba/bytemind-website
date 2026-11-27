@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-12-09T21:00:00+00:00",
   "listed_at": "2026-11-18T00:24:29.533000+00:00",
-  "days_on_market": 8,
+  "days_on_market": 9,
   "lat": -36.5882492,
   "lon": 174.6776214,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2342772030.jpg",
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 4,
   "last_change_at": "2026-11-26T00:33:01.690704+00:00",
-  "days_since_last_change": 0.92,
+  "days_since_last_change": 1.73,
   "price_drop_count": 0,
   "description_change_count": 2,
   "prior_sale_count": 1,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 11.3,
+  "sale_pressure": 11.5,
   "sale_pressure_label": "low",
-  "model_low": 1019323,
-  "model_mid": 1107185,
-  "model_high": 1210052,
+  "model_low": 1017692,
+  "model_mid": 1106718,
+  "model_high": 1210238,
   "model_confidence": "high",
-  "text_signal_pct": -17.7441,
-  "description_index": -1.044019,
+  "text_signal_pct": 17.7945,
+  "description_index": 0.916027,
   "events_count": 4,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6236007719,
-    "low": 1019323,
-    "mid": 1107185,
-    "high": 1210052,
+    "low": 1017692,
+    "mid": 1106718,
+    "high": 1210238,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6236007719,
@@ -280,40 +280,59 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.5707,
+    "condition_renovation": 0.5687,
     "views_waterfront": 0.0,
-    "family_school": 0.2331,
+    "family_school": 0.2333,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3933,
-    "description_premium_pct": -17.7441,
-    "description_index": -1.044019,
+    "description_premium_pct": 17.7945,
+    "description_index": 0.916027,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 0, \"family_school\": 1, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
-        "topic_id": 8,
-        "weight": 0.482653,
-        "label": "Family living & entertaining",
+        "topic_id": 11,
+        "weight": 0.470155,
+        "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
-          "extended",
-          "flexibility",
-          "extended family",
-          "guests",
-          "living areas",
-          "areas",
-          "family living",
-          "separate",
-          "multiple",
-          "families",
-          "teenagers",
-          "room"
+          "residence",
+          "pool",
+          "expansive",
+          "scale",
+          "substantial",
+          "waterfront",
+          "swimming",
+          "swimming pool",
+          "harbour",
+          "views",
+          "spaces",
+          "setting"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.198012,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "fenced",
+          "parking",
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.257473,
+        "weight": 0.140096,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -323,49 +342,30 @@
           "car",
           "secure",
           "park",
-          "kensington",
           "complex",
           "balcony",
-          "pool",
-          "restaurants"
+          "kensington",
+          "restaurants",
+          "bedroom apartment"
         ]
       },
       {
-        "topic_id": 11,
-        "weight": 0.148455,
-        "label": "Luxury, architectural & prestige",
+        "topic_id": 8,
+        "weight": 0.102428,
+        "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
-          "residence",
-          "expansive",
-          "scale",
-          "waterfront",
-          "pool",
-          "setting",
-          "harbour",
-          "privacy",
-          "architectural",
-          "spaces",
-          "substantial",
-          "aucklands"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.070337,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "room",
-          "garden",
-          "morning",
-          "street",
-          "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
-          "parking",
-          "deck"
+          "separate",
+          "bathroom",
+          "ensuite",
+          "walk wardrobe",
+          "wardrobe",
+          "extended",
+          "upstairs",
+          "extended family",
+          "guests",
+          "master",
+          "walk",
+          "floor"
         ]
       }
     ]
@@ -444,7 +444,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "This home has been designed to make family life easier, with flexible living spaces, excellent parking and lifestyle amenities - a combination that's not easy to find.\r\n\r\nKey features:\r\n• Four bedrooms and two bathrooms\r\n• Two separate living areas\r\n• Double internal access garage\r\n• Generous off-street parking\r\n• Shared pool, spa and tennis court\r\n• Solid brick construction\r\n• No body corporate\r\n\r\nFor some, it'll be the multiple living spaces; for others, it'll be the parking, the pool or the tennis court. The only way to know if it's the right fit for your family is to come and take a look for yourself at one of our open homes or contact me for a private viewing.",
   "photos": [
@@ -479,12 +479,6 @@
       "estimate_low": 1104490,
       "estimate_mid": 1173640,
       "estimate_high": 1242789
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 1094063,
-      "estimate_mid": 1161164,
-      "estimate_high": 1228264
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -836,14 +830,14 @@
         "low": 1069767,
         "mid": 1131961,
         "high": 1199085,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "high",
         "n": 98,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 98,
-          "n_eff": 15.85,
+          "n_eff": 15.8,
           "radius_km": 3.0,
           "median_ratio": 0.9843,
           "iqr_ratio": 0.1142,

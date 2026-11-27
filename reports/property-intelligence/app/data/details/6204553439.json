@@ -33,7 +33,7 @@
   "comp_mid": 1896000,
   "comp_high": 1984390,
   "comp_confidence": "medium",
-  "comp_n": 41,
+  "comp_n": 40,
   "value_low": 1634708,
   "value_mid": 1740577,
   "value_high": 1846447,
@@ -51,8 +51,8 @@
   "ask_gap": 8423,
   "ask_gap_pct": 0.0048,
   "deal_gap": -0.0048,
-  "view_count": 2890,
-  "watchers": 76,
+  "view_count": 2933,
+  "watchers": 77,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 3,
   "last_change_at": "2026-11-25T23:50:15.256184+00:00",
-  "days_since_last_change": 0.95,
+  "days_since_last_change": 1.76,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 4,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 54.7,
   "sale_pressure_label": "medium",
-  "model_low": 1680631,
-  "model_mid": 1825497,
-  "model_high": 1995101,
+  "model_low": 1678590,
+  "model_mid": 1825430,
+  "model_high": 1996176,
   "model_confidence": "high",
-  "text_signal_pct": 16.2416,
-  "description_index": 0.804391,
+  "text_signal_pct": 12.3639,
+  "description_index": 0.652029,
   "events_count": 3,
   "last_event": "new_listing",
   "schools": [
@@ -268,33 +268,52 @@
   ],
   "model": {
     "listing_id": 6204553439,
-    "low": 1680631,
-    "mid": 1825497,
-    "high": 1995101,
+    "low": 1678590,
+    "mid": 1825430,
+    "high": 1996176,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6204553439,
     "word_count": 349,
     "exclamations": 3,
-    "urgency": 0.185,
-    "luxury": 0.0802,
-    "condition_renovation": 0.6132,
-    "views_waterfront": 0.3862,
-    "family_school": 0.3005,
-    "investment": 0.1039,
+    "urgency": 0.187,
+    "luxury": 0.0801,
+    "condition_renovation": 0.611,
+    "views_waterfront": 0.3859,
+    "family_school": 0.3009,
+    "investment": 0.1038,
     "risk": 0.0,
     "readability": 0.4443,
-    "description_premium_pct": 16.2416,
-    "description_index": 0.804391,
+    "description_premium_pct": 12.3639,
+    "description_index": 0.652029,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 1, \"condition_renovation\": 5, \"views_waterfront\": 5, \"family_school\": 6, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
+        "topic_id": 6,
+        "weight": 0.23662,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "fenced",
+          "parking",
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
+        ]
+      },
+      {
         "topic_id": 9,
-        "weight": 0.194516,
+        "weight": 0.182995,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "section",
@@ -308,64 +327,45 @@
           "penlink",
           "community",
           "minutes",
-          "drive"
+          "building"
         ]
       },
       {
         "topic_id": 10,
-        "weight": 0.170143,
+        "weight": 0.165947,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
-          "views",
           "sea views",
+          "views",
           "elevated",
           "rangitoto",
           "position",
           "outlook",
-          "gulf",
-          "spectacular",
           "elevated position",
-          "hauraki gulf",
-          "hauraki"
+          "spectacular",
+          "gulf",
+          "sweeping",
+          "rangitoto college"
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.156325,
-        "label": "Bedrooms, bathrooms & layout",
+        "topic_id": 11,
+        "weight": 0.124354,
+        "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "walk",
-          "ensuite",
-          "master",
-          "bathroom",
-          "upstairs",
-          "suite",
-          "lounge",
-          "double",
-          "family bathroom",
-          "separate"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.153753,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "room",
-          "garden",
-          "morning",
-          "street",
-          "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
-          "parking",
-          "deck"
+          "residence",
+          "pool",
+          "expansive",
+          "scale",
+          "substantial",
+          "waterfront",
+          "swimming",
+          "swimming pool",
+          "harbour",
+          "views",
+          "spaces",
+          "setting"
         ]
       }
     ]
@@ -461,7 +461,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Immerse yourself in one of Manly's most sought-after coastal pockets with this substantial family home, perfectly situated on a generous 1521 square metre freehold section just steps from Little Manly Beach. Enjoy breathtaking sea views of Rangitoto and beyond, all from a private position that emphasises tranquillity and serenity.\r\n\r\nDesigned for both relaxation and entertainment, this immaculate brick and cedar home is positioned to maximise privacy, nestled beside a local reserve that offers beautiful vistas from the kitchen and living areas. You'll love the all-day sun that floods the interior, creating a warm and inviting atmosphere.\r\n\r\nRecently renovated to a high standard-complete with a new roof, this property boasts a standout feature: its expansive north and west-facing section, rich with potential. Imagine the possibilities for a private minor dwelling or enhancements that cater to your family's needs.\r\n\r\nWith a flexible split-level layout featuring 3 to 4 bedrooms, 1 to 2 lounges, 3 bathrooms, and 4 WC, this residence is the perfect haven for large families. The option of two master suites-each with an en-suite-on both the ground and upper floors allows you to tailor the space. Consider using the upper master as a welcoming guest suite or a spacious second lounge, adapting the home to your lifestyle.\r\n\r\nStep outside to discover seamless indoor/outdoor connectivity. Unwind on the covered deck, where you can watch the kids play or host vibrant summer gatherings under the sun. \r\n\r\nThe internal access double garage, complete with a workshop area and a small office, provides ample space for vehicles, hobbies, and work-from-home essentials. Location is key, and this home truly delivers! Just minutes from the lively Manly Village and Whangaparaoa Plaza, with Whangaparaoa School within easy walking distance-everything you need is right at your doorstep.\r\n\r\nFor astute buyers, registered Valuation and LIM are available, ensuring you have all the information you need to make a wise investment. Don't miss this rare opportunity to secure your spacious coastal sanctuary in an unbeatable setting-bring the entire family and make this dream home yours today!\r\n\r\nCall now for your private viewing-opportunities like this won't last long!",
   "photos": [
@@ -502,12 +502,6 @@
       "estimate_low": 1599379,
       "estimate_mid": 1699513,
       "estimate_high": 1799646
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 1621134,
-      "estimate_mid": 1720561,
-      "estimate_high": 1819988
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -859,14 +853,14 @@
         "low": 1715745,
         "mid": 1896000,
         "high": 1984390,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "medium",
-        "n": 41,
+        "n": 40,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
-          "n": 41,
-          "n_eff": 7.55,
+          "n": 40,
+          "n_eff": 7.43,
           "radius_km": 3.0,
           "median_ratio": 1.0533,
           "iqr_ratio": 0.1417,

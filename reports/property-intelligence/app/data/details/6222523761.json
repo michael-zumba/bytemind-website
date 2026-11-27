@@ -30,13 +30,13 @@
   "estimate_source": null,
   "estimate_updated_at": null,
   "comp_low": 829000,
-  "comp_mid": 900000,
-  "comp_high": 1150000,
+  "comp_mid": 905000,
+  "comp_high": 1185000,
   "comp_confidence": "low",
-  "comp_n": 35,
+  "comp_n": 34,
   "value_low": 829000,
-  "value_mid": 900000,
-  "value_high": 1150000,
+  "value_mid": 905000,
+  "value_high": 1185000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 312,
-  "watchers": 9,
+  "view_count": 337,
+  "watchers": 10,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-10T18:10:17.873473+00:00",
-  "days_since_last_change": 16.18,
+  "days_since_last_change": 16.99,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 3,
   "sale_pressure": 32.8,
   "sale_pressure_label": "low",
-  "model_low": 742227,
-  "model_mid": 1005246,
-  "model_high": 1358228,
+  "model_low": 777966,
+  "model_mid": 1054355,
+  "model_high": 1428633,
   "model_confidence": "low",
-  "text_signal_pct": -4.7178,
-  "description_index": -0.258299,
+  "text_signal_pct": -1.3436,
+  "description_index": -0.075659,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6222523761,
-    "low": 742227,
-    "mid": 1005246,
-    "high": 1358228,
+    "low": 777966,
+    "mid": 1054355,
+    "high": 1428633,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3033, 0.3009], \"rel_width\": 0.6128, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.304, 0.3038], \"rel_width\": 0.6171, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6222523761,
@@ -280,21 +280,21 @@
     "exclamations": 1,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.154,
-    "views_waterfront": 0.3878,
-    "family_school": 0.4401,
-    "investment": 0.1305,
+    "condition_renovation": 0.1534,
+    "views_waterfront": 0.3876,
+    "family_school": 0.4406,
+    "investment": 0.1303,
     "risk": 0.0,
     "readability": 0.4621,
-    "description_premium_pct": -4.7178,
-    "description_index": -0.258299,
+    "description_premium_pct": -1.3436,
+    "description_index": -0.075659,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 1, \"views_waterfront\": 4, \"family_school\": 7, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
         "topic_id": 9,
-        "weight": 0.648135,
+        "weight": 0.682599,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "section",
@@ -308,31 +308,12 @@
           "penlink",
           "community",
           "minutes",
-          "drive"
-        ]
-      },
-      {
-        "topic_id": 3,
-        "weight": 0.137354,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "new",
-          "quality",
-          "premium",
-          "brand",
-          "brand new",
-          "finishes",
-          "year",
-          "appliances",
-          "designer",
-          "comfort",
-          "designer kitchen",
-          "homes"
+          "building"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.09046,
+        "weight": 0.095822,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -350,22 +331,41 @@
         ]
       },
       {
-        "topic_id": 10,
-        "weight": 0.053947,
-        "label": "Sea views & coastal outlook",
+        "topic_id": 2,
+        "weight": 0.070952,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "sea",
-          "views",
-          "sea views",
-          "elevated",
-          "rangitoto",
-          "position",
-          "outlook",
-          "gulf",
-          "spectacular",
-          "elevated position",
-          "hauraki gulf",
-          "hauraki"
+          "brand new",
+          "brand",
+          "maintenance",
+          "low maintenance",
+          "low",
+          "new",
+          "single",
+          "quality",
+          "easy care",
+          "care",
+          "new home",
+          "stylish"
+        ]
+      },
+      {
+        "topic_id": 3,
+        "weight": 0.055011,
+        "label": "Luxury, architectural & prestige",
+        "top_terms": [
+          "premium",
+          "quality",
+          "appliances",
+          "designer",
+          "year",
+          "finishes",
+          "luxury",
+          "heating",
+          "designer kitchen",
+          "comfort",
+          "built",
+          "round"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Looking for your ideal family home in Whangaparaoa? This Home & Land Package offers the opportunity to enjoy convenient, spacious, and modern coastal living at an attractive price.\r\n\r\nLocated in the heart of Stanmore Bay and right beside the future Penlink access and transport hub, offering direct SH1 connectivity to the North Shore and CBD. Bypass Silverdale, cut your commute, and enjoy game-changing connectivity.\r\n\r\nHome & Package Highlights:.\r\n\r\n• Tucked away in a quiet, peaceful residential setting, giving you coastal tranquillity without compromising on central connectivity.\r\n• Pristine, master-planned enclave with elevated positions and wide-open views. Fully serviced, titled sections with completed vehicle crossing ready for development.\r\n• 7 Hau Tapu Loop  (lot 42), a well-proportioned section in the heart of the community, 449sqm (more or less), with an open outlook to surrounding greenery\r\n• RC and design in place, offering a spacious family home with a well-thought-out layout: 4 bedrooms, 3.5 bathrooms, including 2 ensuites, open-plan dining and kitchen, two living spaces, and double garage\r\n• Quality builder with a 10-year Master Builder Warranty on request\r\n\r\nLocation & Convenience\r\n• Walking distance to New World, local shops, secure effortless, convenient living.\r\n• Next to Penlink access, the peninsula’s future transport hub, including the NX2 extension, for effortless connectivity.\r\n• Moments from Stanmore Bay Beach and Park, embracing coastal lifestyle.\r\n• Easy reach of well-regarded schools, including Stanmore Bay School and Whangaparaoa College.\r\n\r\nOther Sections For Sale:\r\n• 9 Whenuateitei Crescent (Lot 12): 451sqm more or less\r\n• 35 Whenuateitei Crescent (Lot 25): 479 sqm more or less\r\n• 4 Pamu Wera Drive (Lot 45): 535 sqm more or less\r\n• 14 Pamu Wera Drive  (Lot 37): 445 sqm more or less (Section or Home & Land Package)\r\n• 2  Hau Tapu Loop (Lot 47): 550 sqm more or less\r\n• 3  Hau Tapu Loop (Lot 40): 443 sqm more or less\r\n• 5  Hau Tapu Loop (Lot 41): 450 sqm more or less\r\n• 7  Hau Tapu Loop (Lot 42): 449 sqm more or less (Section or Home & Land Package)\r\n• 11  Hau Tapu Loop (Lot 44): 451 sqm more or less\r\n• 10  Hau Tapu Loop (Lot 51): 600 sqm more or less\r\n• 18  Hau Tapu Loop (Lot 55): 629 sqm more or less\r\n\r\nTime to act fast. Secure your place in one of the peninsula’s most exciting new communities, with quality homes already taking shape. Call now!",
   "photos": [
@@ -622,28 +622,28 @@
   ],
   "valuation": {
     "value_low": 829000,
-    "value_mid": 900000,
-    "value_high": 1150000,
+    "value_mid": 905000,
+    "value_high": 1185000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$829K – $1.15M",
+        "range": "$829K – $1.19M",
         "low": 829000,
-        "mid": 900000,
-        "high": 1150000,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "mid": 905000,
+        "high": 1185000,
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "low",
-        "n": 35,
+        "n": 34,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 35,
-          "n_eff": 11.12,
+          "n": 34,
+          "n_eff": 10.62,
           "radius_km": 3.0,
-          "iqr_ratio": 0.3567,
-          "same_suburb": 22,
+          "iqr_ratio": 0.3934,
+          "same_suburb": 21,
           "model_version": "comp-cv-v1"
         }
       }

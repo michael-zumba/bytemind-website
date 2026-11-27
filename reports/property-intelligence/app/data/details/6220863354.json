@@ -29,11 +29,11 @@
   "estimate_high": 1258236,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-11-25T11:00:00+00:00",
-  "comp_low": 1167660,
-  "comp_mid": 1255625,
+  "comp_low": 1182759,
+  "comp_mid": 1282647,
   "comp_high": 1345988,
   "comp_confidence": "medium",
-  "comp_n": 48,
+  "comp_n": 47,
   "value_low": 1113950,
   "value_mid": 1186093,
   "value_high": 1258236,
@@ -51,7 +51,7 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 2070,
+  "view_count": 2098,
   "watchers": 59,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 6,
   "last_change_at": "2026-11-26T02:06:15.083132+00:00",
-  "days_since_last_change": 0.85,
+  "days_since_last_change": 1.66,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 5,
@@ -76,12 +76,12 @@
   "sale_method_stage": 0,
   "sale_pressure": 3.0,
   "sale_pressure_label": "low",
-  "model_low": 1114561,
-  "model_mid": 1210633,
-  "model_high": 1323111,
+  "model_low": 1111831,
+  "model_mid": 1209092,
+  "model_high": 1322187,
   "model_confidence": "high",
-  "text_signal_pct": -14.4552,
-  "description_index": -0.834477,
+  "text_signal_pct": -13.496,
+  "description_index": -0.81092,
   "events_count": 6,
   "last_event": "new_listing",
   "schools": [
@@ -268,52 +268,71 @@
   ],
   "model": {
     "listing_id": 6220863354,
-    "low": 1114561,
-    "mid": 1210633,
-    "high": 1323111,
+    "low": 1111831,
+    "mid": 1209092,
+    "high": 1322187,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6220863354,
     "word_count": 303,
     "exclamations": 3,
     "urgency": 0.0,
-    "luxury": 0.1848,
-    "condition_renovation": 0.8475,
+    "luxury": 0.1846,
+    "condition_renovation": 0.8445,
     "views_waterfront": 0.0,
-    "family_school": 0.4038,
+    "family_school": 0.4043,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3017,
-    "description_premium_pct": -14.4552,
-    "description_index": -0.834477,
+    "description_premium_pct": -13.496,
+    "description_index": -0.81092,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 2, \"condition_renovation\": 6, \"views_waterfront\": 0, \"family_school\": 7, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
-        "topic_id": 2,
-        "weight": 0.282621,
-        "label": "Brick / tile / low-maintenance units",
+        "topic_id": 6,
+        "weight": 0.344585,
+        "label": "Parking, garden & section",
         "top_terms": [
-          "low maintenance",
+          "street",
+          "fenced",
+          "parking",
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.266822,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand new",
+          "brand",
           "maintenance",
+          "low maintenance",
           "low",
+          "new",
+          "single",
+          "quality",
           "easy care",
           "care",
-          "single",
-          "convenience",
-          "stylish",
-          "comfort",
-          "practical",
-          "light",
-          "brand new"
+          "new home",
+          "stylish"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.197209,
+        "weight": 0.175171,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "section",
@@ -327,45 +346,26 @@
           "penlink",
           "community",
           "minutes",
-          "drive"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.174764,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "room",
-          "garden",
-          "morning",
-          "street",
-          "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
-          "parking",
-          "deck"
+          "building"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.154766,
-        "label": "New build / brand-new quality",
+        "weight": 0.103503,
+        "label": "Luxury, architectural & prestige",
         "top_terms": [
-          "new",
-          "quality",
           "premium",
-          "brand",
-          "brand new",
-          "finishes",
-          "year",
+          "quality",
           "appliances",
           "designer",
-          "comfort",
+          "year",
+          "finishes",
+          "luxury",
+          "heating",
           "designer kitchen",
-          "homes"
+          "comfort",
+          "built",
+          "round"
         ]
       }
     ]
@@ -490,7 +490,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Quality brick and tile living, fantastic all-season entertaining and a location that ticks all the boxes!\r\nTucked away in a peaceful cul-de-sac with Barwick Reserve directly opposite, 24 Barwick Place offers space, privacy and convenience. Built in 2013, this quality brick and tile home boasts a generous 203sqm floor area on a 634sqm freehold section, perfect for families, downsizers or those seeking low-maintenance living.\r\n\r\nDesigned for comfort and practicality, the home offers easy living across one main level, with a separate formal lounge and spacious open-plan kitchen, dining and living area. The designer kitchen features composite stone benchtops, creating a welcoming space for everyday living and entertaining.\r\nStep outside to the fantastic undercover outdoor entertaining area, ideal for year-round BBQs, family gatherings or simply relaxing. \r\n\r\nFeatures you'll love:\r\n*\t634sqm freehold section and 203sqm home\r\n*\tFour spacious bedrooms and two bathrooms\r\n*\tExtra-large master bedroom with ensuite\r\n*\tSeparate lounge plus open-plan family living\r\n*\tDesigner kitchen with stone benchtops\r\n*\tFantastic undercover entertaining for all seasons\r\n*\tFully fenced, private and easy-care grounds\r\n*\tDouble internal-access garage\r\n*\tHRV system and quality finishes\r\n*\tDurable, low-maintenance brick and tile construction\r\n*\tBarwick Reserve directly opposite\r\n*\t\r\nLocation, lifestyle and convenience!\r\nEnjoy being close to Whangaparaoa Plaza, schools, supermarkets, cafés, medical facilities and everyday amenities. Stanmore Bay Leisure Centre and a variety of beautiful Hibiscus Coast beaches are just minutes away.\r\nWith O Mahurangi - Penlink well underway, future commuting to the North Shore and Auckland City is set to become even more convenient.\r\n\r\nWhether you're a family wanting room to grow or looking to downsize without compromising on space, 24 Barwick Place offers the perfect balance of comfort, quality and easy living.\r\n\r\nLow-maintenance living, generous space and year-round entertaining - this home ticks the boxes!\r\nDownload documents here: https://www.harcourtsfiles.co.nz/listings/9I24",
   "photos": [
@@ -531,12 +531,6 @@
       "estimate_low": 1149468,
       "estimate_mid": 1221433,
       "estimate_high": 1293399
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 1151253,
-      "estimate_mid": 1221861,
-      "estimate_high": 1292469
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -884,22 +878,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.17M – $1.35M",
-        "low": 1167660,
-        "mid": 1255625,
+        "range": "$1.18M – $1.35M",
+        "low": 1182759,
+        "mid": 1282647,
         "high": 1345988,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "medium",
-        "n": 48,
+        "n": 47,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
-          "n": 48,
-          "n_eff": 7.37,
+          "n": 47,
+          "n_eff": 7.06,
           "radius_km": 3.0,
-          "median_ratio": 1.025,
-          "iqr_ratio": 0.142,
-          "same_suburb": 25,
+          "median_ratio": 1.0471,
+          "iqr_ratio": 0.1273,
+          "same_suburb": 24,
           "model_version": "comp-cv-v1"
         }
       },

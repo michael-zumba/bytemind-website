@@ -15,7 +15,7 @@
   "asking_price": null,
   "asking_kind": null,
   "sale_method": "Price by negotiation",
-  "deadline_at": "2026-11-24T11:00:00+00:00",
+  "deadline_at": null,
   "listed_at": "2026-10-28T20:04:22.750000+00:00",
   "days_on_market": 29,
   "lat": -36.63039,
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 829000,
+  "comp_low": 830000,
   "comp_mid": 955000,
   "comp_high": 1300599,
   "comp_confidence": "low",
-  "comp_n": 44,
-  "value_low": 829000,
+  "comp_n": 43,
+  "value_low": 830000,
   "value_mid": 955000,
   "value_high": 1300599,
   "value_source": "sold_comps_absolute",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1435,
-  "watchers": 77,
+  "view_count": 1504,
+  "watchers": 78,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 5,
   "last_change_at": "2026-11-26T22:00:27.087839+00:00",
-  "days_since_last_change": 0.02,
+  "days_since_last_change": 0.83,
   "price_drop_count": 0,
   "description_change_count": 2,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 3,
   "sale_pressure": 54.8,
   "sale_pressure_label": "medium",
-  "model_low": 886954,
-  "model_mid": 1201259,
-  "model_high": 1623070,
+  "model_low": 902206,
+  "model_mid": 1222732,
+  "model_high": 1656783,
   "model_confidence": "low",
-  "text_signal_pct": 6.4672,
-  "description_index": 0.334938,
+  "text_signal_pct": 6.4525,
+  "description_index": 0.349744,
   "events_count": 5,
   "last_event": "new_listing",
   "schools": [
@@ -258,33 +258,33 @@
   ],
   "model": {
     "listing_id": 6202587319,
-    "low": 886954,
-    "mid": 1201259,
-    "high": 1623070,
+    "low": 902206,
+    "mid": 1222732,
+    "high": 1656783,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3033, 0.3009], \"rel_width\": 0.6128, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.304, 0.3038], \"rel_width\": 0.6171, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6202587319,
     "word_count": 220,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.1273,
-    "condition_renovation": 0.1945,
-    "views_waterfront": 0.245,
-    "family_school": 0.1589,
-    "investment": 0.1649,
+    "luxury": 0.1271,
+    "condition_renovation": 0.1939,
+    "views_waterfront": 0.2449,
+    "family_school": 0.1591,
+    "investment": 0.1646,
     "risk": 0.0,
     "readability": 0.3364,
-    "description_premium_pct": 6.4672,
-    "description_index": 0.334938,
+    "description_premium_pct": 6.4525,
+    "description_index": 0.349744,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 1, \"views_waterfront\": 2, \"family_school\": 2, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
         "topic_id": 9,
-        "weight": 0.563558,
+        "weight": 0.508252,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "section",
@@ -298,12 +298,31 @@
           "penlink",
           "community",
           "minutes",
-          "drive"
+          "building"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.286529,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "morning",
+          "friends",
+          "relaxed",
+          "coffee",
+          "life",
+          "morning coffee",
+          "setting",
+          "inviting",
+          "sense",
+          "welcoming",
+          "step",
+          "summer"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.183223,
+        "weight": 0.198832,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -311,8 +330,8 @@
           "site",
           "property",
           "land",
-          "development",
           "subject",
+          "development",
           "existing",
           "council",
           "value",
@@ -321,41 +340,22 @@
         ]
       },
       {
-        "topic_id": 0,
-        "weight": 0.181716,
-        "label": "Parking, garden & section",
+        "topic_id": 4,
+        "weight": 0.006387,
+        "label": "Apartment / lock-up-and-leave",
         "top_terms": [
-          "room",
-          "garden",
-          "morning",
-          "street",
-          "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
-          "parking",
-          "deck"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.033566,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "extended",
-          "flexibility",
-          "extended family",
-          "guests",
-          "living areas",
-          "areas",
-          "family living",
-          "separate",
-          "multiple",
-          "families",
-          "teenagers",
-          "room"
+          "apartment",
+          "lock",
+          "leave",
+          "lock leave",
+          "car",
+          "secure",
+          "park",
+          "complex",
+          "balcony",
+          "kensington",
+          "restaurants",
+          "bedroom apartment"
         ]
       }
     ]
@@ -432,7 +432,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Here’s an exceptional opportunity to secure an 809sqm, flat, north-facing site in Manly’s sought-after “Golden Triangle”. With the original home already removed, this is your chance to create something truly special — whether it’s your dream home, a relaxing beach house or the perfect retirement retreat.\r\n\r\nJust a leisurely stroll to Manly’s beautiful beach via private pedestrian access, this peaceful setting offers the best of coastal living. Enjoy morning walks along the sand, coffee at one of the vibrant Manly Village cafés, or dinner at the local restaurants. With excellent local amenities, parks, shops and recreational opportunities close at hand, everything you need for a relaxed lifestyle is within easy reach.\r\n\r\nThe existing garage and little sleep-out add real flexibility, potentially providing temporary accommodation and valuable storage while your vision takes shape. Moreover, with an existing wastewater connection, current wastewater limitations to development on the Hibiscus Coast won’t stand in the way of the realisation of your dream. The property also has the additional benefit of an existing bore. \r\n\r\nWith the completion of Penlink set to bring greater convenience and accessibility to the Hibiscus Coast, Manly’s appeal is poised to benefit from improved regional connectivity.\r\n\r\nThe opportunity is yours to imagine. The setting is already here. Secure your slice of Manly and start planning the next chapter.",
   "photos": [
@@ -623,7 +623,7 @@
     }
   ],
   "valuation": {
-    "value_low": 829000,
+    "value_low": 830000,
     "value_mid": 955000,
     "value_high": 1300599,
     "value_source": "sold_comps_absolute",
@@ -631,20 +631,20 @@
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$829K – $1.30M",
-        "low": 829000,
+        "range": "$830K – $1.30M",
+        "low": 830000,
         "mid": 955000,
         "high": 1300599,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "low",
-        "n": 44,
+        "n": 43,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 44,
-          "n_eff": 14.94,
+          "n": 43,
+          "n_eff": 14.58,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4938,
+          "iqr_ratio": 0.4928,
           "same_suburb": 24,
           "model_version": "comp-cv-v1"
         }

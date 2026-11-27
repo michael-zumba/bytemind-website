@@ -16,8 +16,8 @@
   "asking_kind": "asking",
   "sale_method": "Asking price",
   "deadline_at": null,
-  "listed_at": "2026-08-06T03:21:37.873000+00:00",
-  "days_on_market": 112,
+  "listed_at": "2026-08-06T02:21:37.873000+00:00",
+  "days_on_market": 113,
   "lat": -36.6943741,
   "lon": 174.7552643,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2321781620.jpg",
@@ -33,7 +33,7 @@
   "comp_mid": 1185000,
   "comp_high": 1455000,
   "comp_confidence": "medium",
-  "comp_n": 74,
+  "comp_n": 75,
   "value_low": 1060000,
   "value_mid": 1185000,
   "value_high": 1455000,
@@ -63,7 +63,7 @@
   "change_signal": "price increase",
   "change_count": 3,
   "last_change_at": "2026-10-28T15:03:30.086581+00:00",
-  "days_since_last_change": 29.31,
+  "days_since_last_change": 30.12,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 83.7,
+  "sale_pressure": 83.8,
   "sale_pressure_label": "high",
-  "model_low": 909653,
-  "model_mid": 1232003,
-  "model_high": 1664608,
+  "model_low": 972208,
+  "model_mid": 1317604,
+  "model_high": 1785333,
   "model_confidence": "low",
-  "text_signal_pct": -10.0707,
-  "description_index": -0.567327,
+  "text_signal_pct": -3.5731,
+  "description_index": -0.203512,
   "events_count": 3,
   "last_event": "price_change",
   "schools": [
@@ -288,52 +288,71 @@
   ],
   "model": {
     "listing_id": 6069695033,
-    "low": 909653,
-    "mid": 1232003,
-    "high": 1664608,
+    "low": 972208,
+    "mid": 1317604,
+    "high": 1785333,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3033, 0.3009], \"rel_width\": 0.6128, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.304, 0.3038], \"rel_width\": 0.6171, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6069695033,
     "word_count": 191,
     "exclamations": 1,
-    "urgency": 0.3381,
-    "luxury": 0.2932,
+    "urgency": 0.3416,
+    "luxury": 0.2929,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.2822,
-    "family_school": 0.4576,
-    "investment": 0.3798,
+    "views_waterfront": 0.2821,
+    "family_school": 0.4581,
+    "investment": 0.3793,
     "risk": 0.0,
     "readability": 0.4843,
-    "description_premium_pct": -10.0707,
-    "description_index": -0.567327,
+    "description_premium_pct": -3.5731,
+    "description_index": -0.203512,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 2, \"condition_renovation\": 0, \"views_waterfront\": 2, \"family_school\": 5, \"investment\": 2, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.329382,
-        "label": "New build / brand-new quality",
+        "weight": 0.222632,
+        "label": "Luxury, architectural & prestige",
         "top_terms": [
-          "new",
-          "quality",
           "premium",
-          "brand",
-          "brand new",
-          "finishes",
-          "year",
+          "quality",
           "appliances",
           "designer",
-          "comfort",
+          "year",
+          "finishes",
+          "luxury",
+          "heating",
           "designer kitchen",
-          "homes"
+          "comfort",
+          "built",
+          "round"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.152993,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand new",
+          "brand",
+          "maintenance",
+          "low maintenance",
+          "low",
+          "new",
+          "single",
+          "quality",
+          "easy care",
+          "care",
+          "new home",
+          "stylish"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.152652,
+        "weight": 0.145555,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -344,15 +363,15 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
+          "suburb marina",
           "mountain"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.120364,
+        "weight": 0.134142,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "section",
@@ -366,26 +385,7 @@
           "penlink",
           "community",
           "minutes",
-          "drive"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.098306,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "room",
-          "garden",
-          "morning",
-          "street",
-          "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
-          "parking",
-          "deck"
+          "building"
         ]
       }
     ]
@@ -453,14 +453,14 @@
     "first_description_change_at": "2026-10-28T15:03:30.086581+00:00",
     "last_description_change_at": "2026-10-28T15:03:30.086581+00:00",
     "days_to_first_change": 5.34,
-    "days_since_last_change": 29.31,
+    "days_since_last_change": 30.12,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "set",
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Welcome to 35C Toroa Street Torbay. Step into a new era of refined seaside living at the heart of Old Torbay, where contemporary meets the vibrant rhythm of the coast.\r\n\r\nImmerse Yourself in Light, Modern, and Space:\r\n\r\n•  Brand New & Stand-alone\r\n•  Freehold Title, no Body Corp\r\n•  Four bedrooms designed for comfort and tranquility\r\n•  3.5 bathrooms, including not one, but two opulent master ensuites upstairs\r\n•  A sun-drenched open-plan living, dining, and designer kitchen – crafted for both effortless entertaining and everyday relaxation\r\n•  Seamless flow to your own private outdoor oasis – perfect for alfresco evenings and morning coffees\r\n\r\nThis home is more than just a place to live - it is a statement in style, space, and seaside charm. Whether you’re seeking more room to grow, moving closer to renowned schools, or securing a blue-chip coastal investment, this is your moment.\r\n\r\nPrime Location. Unmatched Convenience.\r\n•  Zoned for top schools: Long Bay College, Northcross Intermediate, and Torbay Primary\r\n•  Cafés, shops, supermarkets, parks, and sparkling beaches – all within minutes of your door\r\n\r\nContact us for further details or to arrange your viewing. Act now to secure your slice of Torbay’s coastal future.\r\n\r\nPlease always seek legal and technical advice before entering into any real estate transaction!",
   "photos": [
@@ -677,17 +677,17 @@
         "low": 1060000,
         "mid": 1185000,
         "high": 1455000,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "medium",
-        "n": 74,
+        "n": 75,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 74,
-          "n_eff": 19.36,
+          "n": 75,
+          "n_eff": 19.55,
           "radius_km": 3.0,
           "iqr_ratio": 0.3333,
-          "same_suburb": 28,
+          "same_suburb": 29,
           "model_version": "comp-cv-v1"
         }
       }

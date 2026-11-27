@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-05-28T02:51:23.080000+00:00",
-  "days_on_market": 182,
+  "days_on_market": 183,
   "lat": -36.6316223,
   "lon": 174.7568665,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2309123132.jpg",
@@ -29,12 +29,12 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 800000,
+  "comp_low": 820000,
   "comp_mid": 850000,
   "comp_high": 955000,
   "comp_confidence": "medium",
-  "comp_n": 31,
-  "value_low": 800000,
+  "comp_n": 30,
+  "value_low": 820000,
   "value_mid": 850000,
   "value_high": 955000,
   "value_source": "sold_comps_absolute",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:59:59.537944+00:00",
-  "days_since_last_change": 23.07,
+  "days_since_last_change": 23.88,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 520246,
-  "model_mid": 704603,
-  "model_high": 952017,
+  "model_low": 470733,
+  "model_mid": 637971,
+  "model_high": 864440,
   "model_confidence": "low",
-  "text_signal_pct": -3.4576,
-  "description_index": -0.188072,
+  "text_signal_pct": -7.3293,
+  "description_index": -0.425755,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 5958080139,
-    "low": 520246,
-    "mid": 704603,
-    "high": 952017,
+    "low": 470733,
+    "mid": 637971,
+    "high": 864440,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3033, 0.3009], \"rel_width\": 0.6128, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.304, 0.3038], \"rel_width\": 0.6171, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5958080139,
@@ -280,59 +280,40 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.4196,
+    "condition_renovation": 0.4181,
     "views_waterfront": 0.0,
-    "family_school": 0.4284,
-    "investment": 0.5334,
+    "family_school": 0.4289,
+    "investment": 0.5327,
     "risk": 0.0,
     "readability": 0.3995,
-    "description_premium_pct": -3.4576,
-    "description_index": -0.188072,
+    "description_premium_pct": -7.3293,
+    "description_index": -0.425755,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 2, \"views_waterfront\": 0, \"family_school\": 5, \"investment\": 3, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
-        "topic_id": 0,
-        "weight": 0.245992,
+        "topic_id": 6,
+        "weight": 0.430961,
         "label": "Parking, garden & section",
         "top_terms": [
-          "room",
-          "garden",
-          "morning",
           "street",
           "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
           "parking",
-          "deck"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.243528,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "walk",
-          "ensuite",
-          "master",
-          "bathroom",
-          "upstairs",
-          "suite",
-          "lounge",
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
           "double",
-          "family bathroom",
-          "separate"
+          "sunny",
+          "plus"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.223154,
+        "weight": 0.212656,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -342,16 +323,16 @@
           "car",
           "secure",
           "park",
-          "kensington",
           "complex",
           "balcony",
-          "pool",
-          "restaurants"
+          "kensington",
+          "restaurants",
+          "bedroom apartment"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.147494,
+        "weight": 0.111242,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -359,13 +340,32 @@
           "site",
           "property",
           "land",
-          "development",
           "subject",
+          "development",
           "existing",
           "council",
           "value",
           "possibilities",
           "housing"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.100832,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "separate",
+          "bathroom",
+          "ensuite",
+          "walk wardrobe",
+          "wardrobe",
+          "extended",
+          "upstairs",
+          "extended family",
+          "guests",
+          "master",
+          "walk",
+          "floor"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Manly on the flat, a highly sought after beachside suburb, where beautiful parklands, level surrounds and Manly Beach create a summer holiday atmosphere and lifestyle all year round. \r\nThis gorgeous unit is in the heart of it all, within an easy few minutes stroll of the park, local dairy, and beach. \r\n\r\nThis property offers an entry level opportunity to secure this neat as a pin, two bedroom unit, enjoying its own road frontage position, fully fenced and easy to maintain. The completely renovated interior is a delight, where the open-plan kitchen and living area flows easily into a private courtyard garden at the front, while the kitchen (which includes a separate butler style bench with sink) opens to the rear. A single garage with internal entry has been converted into a light-filled separate living space with a laundry area, creating a lovely sense of space and flexibility.\r\nThere are two bedrooms and a beautifully renovated bathroom. \r\n\r\nThis little property holds a far reaching appeal, ideal for young and old, a good solid rental investment also it would make a beautiful airbnb. Location is everything and with an affordable price tag, this property offers an opportunity for someone to secure a great investment.",
   "photos": [
@@ -616,7 +616,7 @@
     }
   ],
   "valuation": {
-    "value_low": 800000,
+    "value_low": 820000,
     "value_mid": 850000,
     "value_high": 955000,
     "value_source": "sold_comps_absolute",
@@ -624,20 +624,20 @@
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$800K – $955K",
-        "low": 800000,
+        "range": "$820K – $955K",
+        "low": 820000,
         "mid": 850000,
         "high": 955000,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "medium",
-        "n": 31,
+        "n": 30,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 31,
-          "n_eff": 10.16,
+          "n": 30,
+          "n_eff": 9.87,
           "radius_km": 3.0,
-          "iqr_ratio": 0.1824,
+          "iqr_ratio": 0.1588,
           "same_suburb": 16,
           "model_version": "comp-cv-v1"
         }

@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2025-10-14T00:51:04.377000+00:00",
-  "days_on_market": 408,
+  "days_on_market": 409,
   "lat": -36.6015129,
   "lon": 174.6873366,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2255928355.jpg",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 5,
   "last_change_at": "2026-11-18T19:54:12.663292+00:00",
-  "days_since_last_change": 8.11,
+  "days_since_last_change": 8.92,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 5,
@@ -76,12 +76,12 @@
   "sale_method_stage": 3,
   "sale_pressure": 60.0,
   "sale_pressure_label": "medium",
-  "model_low": 3346217,
-  "model_mid": 3634652,
-  "model_high": 3972341,
+  "model_low": 3330190,
+  "model_mid": 3621509,
+  "model_high": 3960257,
   "model_confidence": "high",
-  "text_signal_pct": 43.7849,
-  "description_index": 1.940939,
+  "text_signal_pct": 35.7052,
+  "description_index": 1.707727,
   "events_count": 5,
   "last_event": "new_listing",
   "schools": [
@@ -278,71 +278,90 @@
   ],
   "model": {
     "listing_id": 5573759296,
-    "low": 3346217,
-    "mid": 3634652,
-    "high": 3972341,
+    "low": 3330190,
+    "mid": 3621509,
+    "high": 3960257,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5573759296,
     "word_count": 341,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.3284,
+    "luxury": 0.3281,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.3162,
-    "family_school": 0.205,
+    "views_waterfront": 0.316,
+    "family_school": 0.2053,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4354,
-    "description_premium_pct": 43.7849,
-    "description_index": 1.940939,
+    "description_premium_pct": 35.7052,
+    "description_index": 1.707727,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 4, \"condition_renovation\": 0, \"views_waterfront\": 4, \"family_school\": 4, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
         "topic_id": 11,
-        "weight": 0.413078,
-        "label": "Luxury, architectural & prestige",
+        "weight": 0.436087,
+        "label": "Resort amenities (pool / tennis / spa)",
         "top_terms": [
           "residence",
+          "pool",
           "expansive",
           "scale",
-          "waterfront",
-          "pool",
-          "setting",
-          "harbour",
-          "privacy",
-          "architectural",
-          "spaces",
           "substantial",
-          "aucklands"
+          "waterfront",
+          "swimming",
+          "swimming pool",
+          "harbour",
+          "views",
+          "spaces",
+          "setting"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.215834,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "separate",
+          "bathroom",
+          "ensuite",
+          "walk wardrobe",
+          "wardrobe",
+          "extended",
+          "upstairs",
+          "extended family",
+          "guests",
+          "master",
+          "walk",
+          "floor"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.354678,
-        "label": "Bedrooms, bathrooms & layout",
+        "weight": 0.151628,
+        "label": "Parking, garden & section",
         "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "walk",
-          "ensuite",
-          "master",
-          "bathroom",
-          "upstairs",
-          "suite",
-          "lounge",
+          "street",
+          "fenced",
+          "parking",
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
           "double",
-          "family bathroom",
-          "separate"
+          "sunny",
+          "plus"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.083013,
+        "weight": 0.094298,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -352,30 +371,11 @@
           "car",
           "secure",
           "park",
-          "kensington",
           "complex",
           "balcony",
-          "pool",
-          "restaurants"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.068527,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "extended",
-          "flexibility",
-          "extended family",
-          "guests",
-          "living areas",
-          "areas",
-          "family living",
-          "separate",
-          "multiple",
-          "families",
-          "teenagers",
-          "room"
+          "kensington",
+          "restaurants",
+          "bedroom apartment"
         ]
       }
     ]
@@ -493,7 +493,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "This waterfront property has it all – a north facing freehold 900sqm (more or less) waterfront estate with direct access to the Orewa Estuary and a 407sqm (approximately) modern residence designed for space, style and family living. With cinematic views, seamless indoor-outdoor flow and resort-style features - from a chef’s kitchen to tropical gardens and a spa, every day feels like a holiday here.\r\n\r\nThe home faces out towards the water and maximises every facet of the cinematic and ever-changing spectacle. There’s no need for a bach when living here, simply walk your paddleboard or kayak out the gate and be on the water in minutes. The Te Ara Tahuna/Orewa Estuary Path and Cycleway is also right out front for cruising into Orewa for coffee, cocktails or a swim at the beach. \r\n\r\nGenerous proportions and a well-considered floorplan ensure space for the whole family to relax and reset - whether together or independently. Excellent storage solutions are thoughtfully integrated throughout, ensuing both practicality and comfort. Stylish interiors showcase a relaxed coastal elegance where no expense has been spared in creating a high-quality living environment. \r\n\r\nViews dazzle upstairs in the voluminous kitchen, living and dining space, which hosts a crowd with ease, and glass stackers open out to the large deck. Family and guests can gather around the large waterfall island in the chef’s kitchen, which also has a scullery.  \r\n\r\nThe master retreat features a huge walk-in robe, luxury ensuite and custom skylight with retractable screen to enjoy the stars from bed. Two more bedrooms in the separate accommodation wing share a bathroom and each enjoy a walk-in robe.  \r\n\r\nThe ground floor incorporates a media room/lounge, large office and gym/games room, as well as a bedroom and bathroom – ideal for teens and guests. A spacious covered deck with outdoor fire and private spa pool area are enveloped with stunning tropical gardens. \r\n\r\nTriple garaging is carpeted and boasts a handy mezzanine storage space. An additional entrance provides level parking suitable for campervans or boats.",
   "photos": [
@@ -534,12 +534,6 @@
       "estimate_low": 3845935,
       "estimate_mid": 4086721,
       "estimate_high": 4327506
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 4003881,
-      "estimate_mid": 4249445,
-      "estimate_high": 4495009
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -891,14 +885,14 @@
         "low": 3606780,
         "mid": 3730609,
         "high": 3996552,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "high",
         "n": 91,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 91,
-          "n_eff": 14.0,
+          "n_eff": 13.96,
           "radius_km": 3.0,
           "median_ratio": 0.9817,
           "iqr_ratio": 0.1045,

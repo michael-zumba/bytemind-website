@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-08-11T00:34:09.377000+00:00",
-  "days_on_market": 107,
+  "days_on_market": 108,
   "lat": -36.5846599,
   "lon": 174.6625472,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2322606736.jpg",
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 5,
   "last_change_at": "2026-11-25T22:45:47.055642+00:00",
-  "days_since_last_change": 0.99,
+  "days_since_last_change": 1.8,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 1,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 52.8,
+  "sale_pressure": 53.0,
   "sale_pressure_label": "medium",
-  "model_low": 963769,
-  "model_mid": 1046843,
-  "model_high": 1144103,
+  "model_low": 962742,
+  "model_mid": 1046962,
+  "model_high": 1144892,
   "model_confidence": "high",
-  "text_signal_pct": -11.0458,
-  "description_index": -0.625594,
+  "text_signal_pct": -22.4035,
+  "description_index": -1.418738,
   "events_count": 5,
   "last_event": "new_listing",
   "schools": [
@@ -268,71 +268,90 @@
   ],
   "model": {
     "listing_id": 6077483200,
-    "low": 963769,
-    "mid": 1046843,
-    "high": 1144103,
+    "low": 962742,
+    "mid": 1046962,
+    "high": 1144892,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6077483200,
     "word_count": 263,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.1065,
-    "condition_renovation": 0.3255,
+    "luxury": 0.1063,
+    "condition_renovation": 0.3243,
     "views_waterfront": 0.0,
-    "family_school": 0.6646,
+    "family_school": 0.6654,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3006,
-    "description_premium_pct": -11.0458,
-    "description_index": -0.625594,
+    "description_premium_pct": -22.4035,
+    "description_index": -1.418738,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 2, \"views_waterfront\": 0, \"family_school\": 10, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
-        "topic_id": 6,
-        "weight": 0.437874,
-        "label": "Bedrooms, bathrooms & layout",
+        "topic_id": 2,
+        "weight": 0.315747,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "walk",
-          "ensuite",
-          "master",
-          "bathroom",
-          "upstairs",
-          "suite",
-          "lounge",
-          "double",
-          "family bathroom",
-          "separate"
+          "brand new",
+          "brand",
+          "maintenance",
+          "low maintenance",
+          "low",
+          "new",
+          "single",
+          "quality",
+          "easy care",
+          "care",
+          "new home",
+          "stylish"
         ]
       },
       {
-        "topic_id": 2,
-        "weight": 0.25284,
-        "label": "Brick / tile / low-maintenance units",
+        "topic_id": 8,
+        "weight": 0.237811,
+        "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
-          "low maintenance",
-          "maintenance",
-          "low",
-          "easy care",
-          "care",
-          "single",
-          "convenience",
-          "stylish",
-          "comfort",
-          "practical",
-          "light",
-          "brand new"
+          "separate",
+          "bathroom",
+          "ensuite",
+          "walk wardrobe",
+          "wardrobe",
+          "extended",
+          "upstairs",
+          "extended family",
+          "guests",
+          "master",
+          "walk",
+          "floor"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.176669,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "fenced",
+          "parking",
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.12363,
+        "weight": 0.122359,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "section",
@@ -346,26 +365,7 @@
           "penlink",
           "community",
           "minutes",
-          "drive"
-        ]
-      },
-      {
-        "topic_id": 4,
-        "weight": 0.072735,
-        "label": "Apartment / lock-up-and-leave",
-        "top_terms": [
-          "apartment",
-          "lock",
-          "leave",
-          "lock leave",
-          "car",
-          "secure",
-          "park",
-          "kensington",
-          "complex",
-          "balcony",
-          "pool",
-          "restaurants"
+          "building"
         ]
       }
     ]
@@ -451,7 +451,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "What makes 20 Paparahi Place different to all other homes on the market? Simple:\r\n\r\n* * Reserve-front lifestyle + near-new home + family-friendly Ara Hills location + Affordable Price\r\n\r\nWake up to uninterrupted reserve views, walk straight through the gate to the park with the kids, and enjoy a near-new home where all the hard work has already been done. Positioned in one of Ara Hills' most desirable pockets, this home offers the rare combination of low-maintenance living and open green space at your back door.\r\n\r\nNear-new living without the wait, landscaping costs or building uncertainty - ready to be yours.\r\nThis home offers four spacious bedrooms and 2.5 upmarket bathrooms across a well-designed 174sqm (approx.) floor plan, it delivers a relaxed lifestyle on a low maintenance 225sqm (approx.) section, with a luxury feel throughout the home.\r\n\r\nFeatures at a Glance:\r\n*  Open-plan kitchen, dining, and living with generous natural light\r\n*  Modern kitchen with engineered benchtops, quality appliances, and great storage\r\n*  Ranch Slider opens to a sunny deck and fully fenced garden overlooking Redwood Park & Reserve\r\n*  Separate laundry nook in the internal-access garage\r\n*  plus a convenient guest toilet\r\n*  Three upstairs bedrooms and a stylish family bathroom\r\n*  Master suite with walk-in wardrobe, ensuite, and private balcony\r\n*  Plenty of storage throughout, from under the staircase, the passageway upstairs & downstairs and the extra cupboards in the garage\r\n*  Park access with BBQ area just steps away\r\n\r\nPerfectly positioned close to schools, Orewa Beach, cafes, shops, and motorway links, this home offers comfort, convenience, and a lifestyle that's easy to enjoy. For viewing details, contact Shaun Burnett on 021 871 252",
   "photos": [
@@ -492,12 +492,6 @@
       "estimate_low": 1001540,
       "estimate_mid": 1064244,
       "estimate_high": 1126949
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 999411,
-      "estimate_mid": 1060707,
-      "estimate_high": 1122002
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -849,14 +843,14 @@
         "low": 963917,
         "mid": 1048125,
         "high": 1111648,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "high",
         "n": 77,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 77,
-          "n_eff": 12.05,
+          "n_eff": 12.02,
           "radius_km": 3.0,
           "median_ratio": 0.975,
           "iqr_ratio": 0.1409,

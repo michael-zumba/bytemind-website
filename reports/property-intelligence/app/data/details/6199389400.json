@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-26T21:31:10.490000+00:00",
-  "days_on_market": 30,
+  "days_on_market": 31,
   "lat": -36.7285805,
   "lon": 174.7470703,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2337735291.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 1242117,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-11-25T11:00:00+00:00",
-  "comp_low": 1147959,
-  "comp_mid": 1256579,
-  "comp_high": 1401515,
+  "comp_low": 1142241,
+  "comp_mid": 1255435,
+  "comp_high": 1377551,
   "comp_confidence": "high",
-  "comp_n": 134,
+  "comp_n": 135,
   "value_low": 1099678,
   "value_mid": 1170898,
   "value_high": 1242117,
@@ -51,7 +51,7 @@
   "ask_gap": -191898,
   "ask_gap_pct": -0.1639,
   "deal_gap": 0.1639,
-  "view_count": 5202,
+  "view_count": 5262,
   "watchers": 220,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 7,
   "last_change_at": "2026-11-26T00:19:07.850356+00:00",
-  "days_since_last_change": 0.93,
+  "days_since_last_change": 1.74,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 7,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 55.0,
+  "sale_pressure": 55.2,
   "sale_pressure_label": "medium",
-  "model_low": 1177441,
-  "model_mid": 1278933,
-  "model_high": 1397756,
+  "model_low": 1175342,
+  "model_mid": 1278159,
+  "model_high": 1397715,
   "model_confidence": "medium",
-  "text_signal_pct": 0.5001,
-  "description_index": 0.02666,
+  "text_signal_pct": 0.1044,
+  "description_index": 0.005835,
   "events_count": 7,
   "last_event": "new_listing",
   "schools": [
@@ -288,33 +288,52 @@
   ],
   "model": {
     "listing_id": 6199389400,
-    "low": 1177441,
-    "mid": 1278933,
-    "high": 1397756,
+    "low": 1175342,
+    "mid": 1278159,
+    "high": 1397715,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6199389400,
     "word_count": 320,
     "exclamations": 0,
-    "urgency": 0.4036,
+    "urgency": 0.4078,
     "luxury": 0.0,
-    "condition_renovation": 0.2675,
-    "views_waterfront": 0.1685,
-    "family_school": 0.7101,
-    "investment": 0.4534,
+    "condition_renovation": 0.2666,
+    "views_waterfront": 0.1684,
+    "family_school": 0.7109,
+    "investment": 0.4528,
     "risk": 0.2397,
     "readability": 0.2693,
-    "description_premium_pct": 0.5001,
-    "description_index": 0.02666,
+    "description_premium_pct": 0.1044,
+    "description_index": 0.005835,
     "lexicon_hits_json": "{\"urgency\": 2, \"luxury\": 0, \"condition_renovation\": 2, \"views_waterfront\": 2, \"family_school\": 13, \"investment\": 4, \"risk\": 1}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
+        "topic_id": 6,
+        "weight": 0.24105,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "fenced",
+          "parking",
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
+        ]
+      },
+      {
         "topic_id": 1,
-        "weight": 0.247241,
+        "weight": 0.223901,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -322,8 +341,8 @@
           "site",
           "property",
           "land",
-          "development",
           "subject",
+          "development",
           "existing",
           "council",
           "value",
@@ -333,7 +352,7 @@
       },
       {
         "topic_id": 7,
-        "weight": 0.230394,
+        "weight": 0.205177,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -344,48 +363,29 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
+          "suburb marina",
           "mountain"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.209155,
-        "label": "Parking, garden & section",
+        "weight": 0.11392,
+        "label": "Family living & entertaining",
         "top_terms": [
-          "room",
-          "garden",
           "morning",
-          "street",
-          "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
-          "parking",
-          "deck"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.1028,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "low maintenance",
-          "maintenance",
-          "low",
-          "easy care",
-          "care",
-          "single",
-          "convenience",
-          "stylish",
-          "comfort",
-          "practical",
-          "light",
-          "brand new"
+          "friends",
+          "relaxed",
+          "coffee",
+          "life",
+          "morning coffee",
+          "setting",
+          "inviting",
+          "sense",
+          "welcoming",
+          "step",
+          "summer"
         ]
       }
     ]
@@ -533,7 +533,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Do-Up and Live In or Invest\r\n\r\nOutstanding opportunity in the prized Rangitoto College zone — this solid three-bedroom home offers incredible value, perfectly suited for first-home buyers, growing families, or astute investors.\r\n\r\nSun-drenched and peacefully positioned, the home presents a comfortable, practical layout: three good-sized bedrooms, one bathroom, and a welcoming living area — ready for light renovations to make it uniquely yours. Add your personal touch and create a wonderful family haven, or secure a high-demand asset in one of Auckland’s most sought-after suburbs.\r\n\r\nStep out to an enormous backyard — the ultimate space for family gatherings, summer BBQs, and plenty of room for children and pets to play freely. Enjoy the very best of Murrays Bay living: the beach is close by, and a great selection of shops, cafés and restaurants are within easy walking distance, making everyday life effortless and\r\nenjoyable.\r\n\r\nOur vendors are genuinely upsizing their home and are highly motivated to sell — this is a sincere, realistic sale, presenting a rare chance to enter this prime location at an accessible price.\r\n\r\nProperty Features;\r\n\r\n• School Zoning: Rangitoto College, Murrays Bay Primary & Murrays Bay Intermediate — proven capital growth & strong rental demand\r\n• Layout: 3 bedrooms, 1 bathroom, open living area — solid foundations, ready for light updates\r\n• Sun & Quiet: All-day sunshine, peaceful residential setting\r\n• Massive Backyard: Ideal for entertaining, BBQs, kids and pets — abundant space to grow\r\n• Lifestyle Location: Close to the beach; shops, cafés & restaurants within walking distance\r\n• Parking: 2–3 cars in front of house+ many off street parking\r\n• Convenience: Minutes to Albany Westfield, supermarkets, motorway links & parks\r\n• Dual Appeal: Perfect for owner-occupiers or investors — live in it, refresh it, or hold it\r\n• Motivated Vendors: Genuine upsize move — priced for quick action\r\n\r\nAffordable entry into the Rangi zone does not come along often. This is your chance to secure a property with endless potential in a location everyone desires. Contact us for more information or viewing.",
   "photos": [
@@ -572,12 +572,6 @@
       "estimate_low": 1100795,
       "estimate_mid": 1169713,
       "estimate_high": 1238631
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 1117015,
-      "estimate_mid": 1185523,
-      "estimate_high": 1254032
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -738,20 +732,6 @@
   ],
   "comps": [
     {
-      "property_id": "b025e94d-314e-4ff2-a1fe-ecdd2592e7a5",
-      "address": "5 MacNay Way, Murrays Bay, Auckland",
-      "sale_price": 1940000,
-      "sale_date": "2026-09-14T00:00:00+00:00",
-      "distance_km": 0.32,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 1500000,
-      "estimate_mid": 1910000
-    },
-    {
       "property_id": "64f36996-b395-455a-963b-eb39285cc097",
       "address": "68A Saddleback Rise, Murrays Bay, Auckland",
       "sale_price": 1680000,
@@ -792,20 +772,6 @@
       "property_type": null,
       "cv": 1125000,
       "estimate_mid": 1300000
-    },
-    {
-      "property_id": "7d7321c3-1850-4c9c-805e-8d02d86e43bf",
-      "address": "3A Westbourne Road, Murrays Bay, Auckland",
-      "sale_price": 2500000,
-      "sale_date": "2026-09-14T00:00:00+00:00",
-      "distance_km": 0.51,
-      "bedrooms": 4,
-      "bathrooms": 4,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 2025000,
-      "estimate_mid": 2260000
     },
     {
       "property_id": "30111eb1-3cf7-45b4-be2e-a787c897bcc7",
@@ -892,6 +858,20 @@
       "estimate_mid": 1500000
     },
     {
+      "property_id": "77529e50-4b3d-4015-b0af-d7728aa4c95d",
+      "address": "67A Sunrise Avenue, Murrays Bay, Auckland",
+      "sale_price": 1410000,
+      "sale_date": "2026-11-26T00:00:00+00:00",
+      "distance_km": 0.76,
+      "bedrooms": 3,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1350000,
+      "estimate_mid": 1400000
+    },
+    {
       "property_id": "13f58024-442b-43b1-ade7-2da4fe0b587b",
       "address": "469 Beach Road, Murrays Bay, Auckland",
       "sale_price": 1450000,
@@ -904,6 +884,20 @@
       "property_type": null,
       "cv": 1575000,
       "estimate_mid": 1460000
+    },
+    {
+      "property_id": "34f38985-8516-4d71-b7c7-493966201f81",
+      "address": "1/7 Jutland Street, Mairangi Bay, Auckland",
+      "sale_price": 1385000,
+      "sale_date": "2026-09-17T00:00:00+00:00",
+      "distance_km": 0.95,
+      "bedrooms": 4,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1500000,
+      "estimate_mid": 1480000
     }
   ],
   "valuation": {
@@ -925,21 +919,21 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$1.15M – $1.40M",
-        "low": 1147959,
-        "mid": 1256579,
-        "high": 1401515,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "range": "$1.14M – $1.38M",
+        "low": 1142241,
+        "mid": 1255435,
+        "high": 1377551,
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "high",
-        "n": 134,
+        "n": 135,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
-          "n": 134,
-          "n_eff": 20.18,
+          "n": 135,
+          "n_eff": 20.26,
           "radius_km": 3.0,
-          "median_ratio": 1.0053,
-          "iqr_ratio": 0.2018,
+          "median_ratio": 1.0043,
+          "iqr_ratio": 0.1874,
           "same_suburb": 18,
           "model_version": "comp-cv-v1"
         }

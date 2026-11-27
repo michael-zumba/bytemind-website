@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-10-11T22:24:40.530000+00:00",
-  "days_on_market": 45,
+  "days_on_market": 46,
   "lat": -36.5784836,
   "lon": 174.6907654,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2334601918.jpg",
@@ -63,7 +63,7 @@
   "change_signal": "price increase",
   "change_count": 11,
   "last_change_at": "2026-11-26T00:34:21.722041+00:00",
-  "days_since_last_change": 0.92,
+  "days_since_last_change": 1.73,
   "price_drop_count": 0,
   "description_change_count": 3,
   "prior_sale_count": 3,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 77.5,
+  "sale_pressure": 77.7,
   "sale_pressure_label": "high",
-  "model_low": 1000410,
-  "model_mid": 1086643,
-  "model_high": 1187601,
+  "model_low": 998972,
+  "model_mid": 1086360,
+  "model_high": 1187976,
   "model_confidence": "high",
-  "text_signal_pct": -6.1561,
-  "description_index": -0.33959,
+  "text_signal_pct": -2.3558,
+  "description_index": -0.133342,
   "events_count": 11,
   "last_event": "new_listing",
   "schools": [
@@ -268,33 +268,52 @@
   ],
   "model": {
     "listing_id": 6175159780,
-    "low": 1000410,
-    "mid": 1086643,
-    "high": 1187601,
+    "low": 998972,
+    "mid": 1086360,
+    "high": 1187976,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6175159780,
     "word_count": 205,
     "exclamations": 1,
-    "urgency": 0.315,
+    "urgency": 0.3183,
     "luxury": 0.0,
-    "condition_renovation": 0.8351,
-    "views_waterfront": 0.1315,
-    "family_school": 0.2558,
+    "condition_renovation": 0.8322,
+    "views_waterfront": 0.1314,
+    "family_school": 0.2561,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.5545,
-    "description_premium_pct": -6.1561,
-    "description_index": -0.33959,
+    "description_premium_pct": -2.3558,
+    "description_index": -0.133342,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 4, \"views_waterfront\": 1, \"family_school\": 3, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
+        "topic_id": 6,
+        "weight": 0.414739,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "fenced",
+          "parking",
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
+        ]
+      },
+      {
         "topic_id": 4,
-        "weight": 0.410501,
+        "weight": 0.361685,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -304,68 +323,49 @@
           "car",
           "secure",
           "park",
-          "kensington",
           "complex",
           "balcony",
-          "pool",
-          "restaurants"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.31049,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "room",
-          "garden",
-          "morning",
-          "street",
-          "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
-          "parking",
-          "deck"
-        ]
-      },
-      {
-        "topic_id": 3,
-        "weight": 0.174581,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "new",
-          "quality",
-          "premium",
-          "brand",
-          "brand new",
-          "finishes",
-          "year",
-          "appliances",
-          "designer",
-          "comfort",
-          "designer kitchen",
-          "homes"
+          "kensington",
+          "restaurants",
+          "bedroom apartment"
         ]
       },
       {
         "topic_id": 2,
-        "weight": 0.05956,
-        "label": "Brick / tile / low-maintenance units",
+        "weight": 0.113261,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "low maintenance",
+          "brand new",
+          "brand",
           "maintenance",
+          "low maintenance",
           "low",
+          "new",
+          "single",
+          "quality",
           "easy care",
           "care",
-          "single",
-          "convenience",
-          "stylish",
-          "comfort",
-          "practical",
-          "light",
-          "brand new"
+          "new home",
+          "stylish"
+        ]
+      },
+      {
+        "topic_id": 9,
+        "weight": 0.047271,
+        "label": "Coastal village & park proximity",
+        "top_terms": [
+          "section",
+          "dream",
+          "build",
+          "dream home",
+          "land",
+          "whangaparaoa",
+          "sections",
+          "auckland",
+          "penlink",
+          "community",
+          "minutes",
+          "building"
         ]
       }
     ]
@@ -514,14 +514,14 @@
     "first_description_change_at": "2026-11-10T16:11:58.327725+00:00",
     "last_description_change_at": "2026-11-20T21:46:01.799380+00:00",
     "days_to_first_change": 7.83,
-    "days_since_last_change": 15.23,
+    "days_since_last_change": 16.04,
     "avg_days_between_changes": null,
     "cumulative_change": 0,
     "cumulative_change_pct": 0.0,
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": "set",
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "If you’ve been searching for an effortless home where location takes center stage, this freehold unit on the flat in Orewa is an absolute winner.\r\n\r\nDesigned for low-stress, high-enjoyment living, this tidy home is ideal for a single professional, active couple, or anyone looking to scale back spatial clutter without compromising on lifestyle. Built in trusted brick and tile, it offers robust peace of mind and minimal ongoing maintenance—giving you back your weekends to enjoy everything Orewa has to offer.\r\n\r\nStep inside to a neat, bright, and comfortable layout that is ready to move straight into. Everything you need is right here, without the endless maintenance list of a larger property. Clean it in minutes, lock up with ease, and wander down the street to the beach.\r\n\r\nHighlights at a Glance:\r\n\r\n• Unbeatable Flat Location: Just a casual 4-minute walk to Orewa Beach\r\n• Solid & Secure: Trusted brick & tile construction.\r\n• Move-In Ready: Just move your furniture in and start relaxing.\r\n• Lock & Leave Freedom: Low-upkeep gardens and footprint mean complete peace of mind when away.\r\n\r\nLocation is non-negotiable, and this close to the beach on the flat, opportunity is knocking. Come see how simple coastal living can be!",
   "photos": [
@@ -562,12 +562,6 @@
       "estimate_low": 1048256,
       "estimate_mid": 1113885,
       "estimate_high": 1179514
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 1056471,
-      "estimate_mid": 1121266,
-      "estimate_high": 1186061
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -919,14 +913,14 @@
         "low": 1054634,
         "mid": 1127451,
         "high": 1190588,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "high",
         "n": 69,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 69,
-          "n_eff": 11.82,
+          "n_eff": 11.78,
           "radius_km": 3.0,
           "median_ratio": 0.9804,
           "iqr_ratio": 0.1206,

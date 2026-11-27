@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-02-17T13:33:14.080000+00:00",
-  "days_on_market": 282,
+  "days_on_market": 283,
   "lat": -36.6156845,
   "lon": 174.6839905,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2288623667.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": -755,
   "ask_gap_pct": -0.0005,
   "deal_gap": 0.0005,
-  "view_count": 10408,
+  "view_count": 10425,
   "watchers": 270,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 6,
   "last_change_at": "2026-11-26T21:27:22.715971+00:00",
-  "days_since_last_change": 0.05,
+  "days_since_last_change": 0.86,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 1,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 1302257,
-  "model_mid": 1414508,
-  "model_high": 1545928,
+  "model_low": 1300763,
+  "model_mid": 1414552,
+  "model_high": 1546865,
   "model_confidence": "high",
-  "text_signal_pct": -8.9179,
-  "description_index": -0.49925,
+  "text_signal_pct": -5.3824,
+  "description_index": -0.309461,
   "events_count": 6,
   "last_event": "new_listing",
   "schools": [
@@ -268,33 +268,52 @@
   ],
   "model": {
     "listing_id": 5789316389,
-    "low": 1302257,
-    "mid": 1414508,
-    "high": 1545928,
+    "low": 1300763,
+    "mid": 1414552,
+    "high": 1546865,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 5789316389,
     "word_count": 254,
     "exclamations": 2,
-    "urgency": 0.2542,
+    "urgency": 0.2569,
     "luxury": 0.0,
-    "condition_renovation": 0.5055,
+    "condition_renovation": 0.5037,
     "views_waterfront": 0.0,
-    "family_school": 0.5506,
-    "investment": 0.1428,
+    "family_school": 0.5512,
+    "investment": 0.1426,
     "risk": 0.604,
     "readability": 0.378,
-    "description_premium_pct": -8.9179,
-    "description_index": -0.49925,
+    "description_premium_pct": -5.3824,
+    "description_index": -0.309461,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 3, \"views_waterfront\": 0, \"family_school\": 8, \"investment\": 1, \"risk\": 2}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
+        "topic_id": 8,
+        "weight": 0.27657,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "separate",
+          "bathroom",
+          "ensuite",
+          "walk wardrobe",
+          "wardrobe",
+          "extended",
+          "upstairs",
+          "extended family",
+          "guests",
+          "master",
+          "walk",
+          "floor"
+        ]
+      },
+      {
         "topic_id": 9,
-        "weight": 0.241345,
+        "weight": 0.237371,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "section",
@@ -308,50 +327,12 @@
           "penlink",
           "community",
           "minutes",
-          "drive"
-        ]
-      },
-      {
-        "topic_id": 8,
-        "weight": 0.240148,
-        "label": "Family living & entertaining",
-        "top_terms": [
-          "extended",
-          "flexibility",
-          "extended family",
-          "guests",
-          "living areas",
-          "areas",
-          "family living",
-          "separate",
-          "multiple",
-          "families",
-          "teenagers",
-          "room"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.23751,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "walk",
-          "ensuite",
-          "master",
-          "bathroom",
-          "upstairs",
-          "suite",
-          "lounge",
-          "double",
-          "family bathroom",
-          "separate"
+          "building"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.216008,
+        "weight": 0.215437,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -359,13 +340,32 @@
           "site",
           "property",
           "land",
-          "development",
           "subject",
+          "development",
           "existing",
           "council",
           "value",
           "possibilities",
           "housing"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.150437,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "fenced",
+          "parking",
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
         ]
       }
     ]
@@ -458,7 +458,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Tucked at the end of a long private driveway, well away from the hustle and bustle, lies an opportunity for a slice of rural paradise in the heart of Silverdale.\r\n\r\nWhether you're a family seeking space, a land banker looking to the future, or a developer with a vision, 51 Hibiscus Coast Highway is the ultimate find.\r\n\r\nThe home is designed for family living, split across two levels, offering flexibility for multiple uses.\r\nUpstairs features a central kitchen, a generous living and dining area with ranch sliders leading to a large deck overlooking the gorgeous foliage of the treetops. There is also a master bedroom and family bathroom with a separate WC for added ease.\r\n\r\nDownstairs you'll find the spacious open plan laundry area with a good-sized bathroom, 2 bedrooms and a large family/rumpus room leading out onto an expansive entertaining space with access to the spa and pool. It's the perfect setup for teenagers, guests, extended family, working from home, and epic summer BBQs!\r\n\r\nThere is also a double garage, ample parking, and a location that balances country serenity with urban convenience, this is a 'best of both worlds' scenario. The south-easterly sloping section offers views, privacy, and endless possibilities.\r\n\r\nDon’t let this landholding slip away - secure your future today!\r\n\r\nStillwater, Silverdale, Millwater, Orewa, Red Beach, Whangaparaoa, Dairy Flat, Albany, Silverdale, Snowplanet, Stillwater, KingsWay School, Dairy Flat, Lifestyle, Rural retreat, Development, Landholding, Developer, Future build, Renovate, Reno, Sub-divide, Landbank, Estate Sale, Swimming Pool, Grazing, Bush, Do up, Add value\r\n\r\nSee interactive features for this property on barfoot.co.nz. Click the \"View office website\" link at the bottom of this page.",
   "photos": [
@@ -497,12 +497,6 @@
       "estimate_low": 1352809,
       "estimate_mid": 1437506,
       "estimate_high": 1522202
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 1386973,
-      "estimate_mid": 1472039,
-      "estimate_high": 1557104
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -854,18 +848,18 @@
         "low": 1400000,
         "mid": 1448065,
         "high": 1552632,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "high",
         "n": 68,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 68,
-          "n_eff": 9.19,
+          "n_eff": 9.15,
           "radius_km": 3.0,
           "median_ratio": 0.9817,
           "iqr_ratio": 0.1054,
-          "same_suburb": 28,
+          "same_suburb": 27,
           "model_version": "comp-cv-v1"
         }
       },

@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-12-01T00:30:00+00:00",
   "listed_at": "2026-11-12T01:59:29.457000+00:00",
-  "days_on_market": 14,
+  "days_on_market": 15,
   "lat": -36.5832181,
   "lon": 174.6912694,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2341615891.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 6138,
-  "watchers": 102,
+  "view_count": 6207,
+  "watchers": 100,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 3,
   "last_change_at": "2026-11-18T19:25:54.845683+00:00",
-  "days_since_last_change": 8.13,
+  "days_since_last_change": 8.94,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 5,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 2.3,
+  "sale_pressure": 2.5,
   "sale_pressure_label": "low",
-  "model_low": 1247942,
-  "model_mid": 1355511,
-  "model_high": 1481449,
+  "model_low": 1246731,
+  "model_mid": 1355793,
+  "model_high": 1482611,
   "model_confidence": "high",
-  "text_signal_pct": -3.7642,
-  "description_index": -0.205071,
+  "text_signal_pct": 0.7394,
+  "description_index": 0.041202,
   "events_count": 3,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6226242537,
-    "low": 1247942,
-    "mid": 1355511,
-    "high": 1481449,
+    "low": 1246731,
+    "mid": 1355793,
+    "high": 1482611,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6226242537,
@@ -280,40 +280,59 @@
     "exclamations": 1,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.469,
+    "condition_renovation": 0.4674,
     "views_waterfront": 0.0738,
-    "family_school": 0.1916,
+    "family_school": 0.1918,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.555,
-    "description_premium_pct": -3.7642,
-    "description_index": -0.205071,
+    "description_premium_pct": 0.7394,
+    "description_index": 0.041202,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 4, \"views_waterfront\": 1, \"family_school\": 4, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
-        "topic_id": 0,
-        "weight": 0.383664,
+        "topic_id": 6,
+        "weight": 0.284223,
         "label": "Parking, garden & section",
         "top_terms": [
-          "room",
-          "garden",
-          "morning",
           "street",
           "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
           "parking",
-          "deck"
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
+        ]
+      },
+      {
+        "topic_id": 0,
+        "weight": 0.271154,
+        "label": "Family living & entertaining",
+        "top_terms": [
+          "morning",
+          "friends",
+          "relaxed",
+          "coffee",
+          "life",
+          "morning coffee",
+          "setting",
+          "inviting",
+          "sense",
+          "welcoming",
+          "step",
+          "summer"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.303828,
+        "weight": 0.263368,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -323,49 +342,30 @@
           "car",
           "secure",
           "park",
-          "kensington",
           "complex",
           "balcony",
-          "pool",
-          "restaurants"
+          "kensington",
+          "restaurants",
+          "bedroom apartment"
         ]
       },
       {
         "topic_id": 2,
-        "weight": 0.243232,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "low maintenance",
-          "maintenance",
-          "low",
-          "easy care",
-          "care",
-          "single",
-          "convenience",
-          "stylish",
-          "comfort",
-          "practical",
-          "light",
-          "brand new"
-        ]
-      },
-      {
-        "topic_id": 3,
-        "weight": 0.063818,
+        "weight": 0.126336,
         "label": "New build / brand-new quality",
         "top_terms": [
-          "new",
-          "quality",
-          "premium",
-          "brand",
           "brand new",
-          "finishes",
-          "year",
-          "appliances",
-          "designer",
-          "comfort",
-          "designer kitchen",
-          "homes"
+          "brand",
+          "maintenance",
+          "low maintenance",
+          "low",
+          "new",
+          "single",
+          "quality",
+          "easy care",
+          "care",
+          "new home",
+          "stylish"
         ]
       }
     ]
@@ -469,7 +469,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Some locations are simply a cut above the rest, and Edward Avenue is certainly one of them. Positioned in one of Orewa's most desirable established streets, just a four-minute stroll to Orewa Beach via two handy walkways, this is coastal living at its best.\r\n\r\nIf ever there was an example of house-proud owners, this is it. Every detail has been considered, right down to the immaculate gardens. Even neighbours have commented on the care and hard work that has gone into keeping this property a step above the rest. Beautifully presented and thoughtfully maintained, it's a home where the little extras really do make a difference.\r\n\r\nBuilt by GJ Gardner, this freestanding brick-and-tile home sits on its own freehold section, a sought-after combination in central Orewa. Single-level living, a flat easy-care setting and a home you can move straight into with nothing to do make life wonderfully simple.\r\n\r\nInside, light-filled open-plan living connects three bedrooms and two bathrooms with relaxed everyday living. Tasteful neutral tones create a timeless feel, while excellent indoor-outdoor flow makes entertaining a breeze.\r\n\r\nAnd speaking of outdoors, you're spoilt for choice! With decks front and rear, covered pergolas and a sheltered side patio, there's always somewhere for a morning coffee, afternoon wine or relaxed barbecue. The fully enclosed, beautifully kept gardens mean more time enjoying life and less time working in them.\r\n\r\nThe extras are impressive too. Gas central heating, heat pumps, ceiling fans, DVS ventilation, keyless entry and security features all add to the comfort and convenience. A double internal-access garage completes the picture.\r\n\r\nBut let's come back to that location, because this is where the real magic happens. Leave the car at home, head through the walkways to the beach, or stroll to Orewa's cafés, restaurants, shops and everyday amenities at the end of your road. Everything is right on your doorstep.\r\n\r\n30A Edward Avenue offers comfort, low-maintenance living and that rare opportunity to move in with nothing to do.\r\n\r\nConjunctional sales are warmly welcomed, however no commission will be payable to agents. This sale is all about goodwill, supporting a local family and knowing that 100% of the commission is being donated to this very special cause.\r\nIf Melinke's story has touched you, please consider supporting her family. Every bit counts.\r\n\r\n[https://givealittle.co.nz/cause/help-us-fight-for-melinke-give-her-another-chance](https://givealittle.co.nz/cause/help-us-fight-for-melinke-give-her-another-chance)\r\n\r\nTo view the property documents copy this link into your browser : https://www.harcourtsfiles.co.nz/listings/D824",
   "photos": [
@@ -510,12 +510,6 @@
       "estimate_low": 1308817,
       "estimate_mid": 1390759,
       "estimate_high": 1472701
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 1313465,
-      "estimate_mid": 1394022,
-      "estimate_high": 1474579
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -867,14 +861,14 @@
         "low": 1286102,
         "mid": 1376667,
         "high": 1459756,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "high",
         "n": 82,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 82,
-          "n_eff": 12.83,
+          "n_eff": 12.79,
           "radius_km": 3.0,
           "median_ratio": 0.9833,
           "iqr_ratio": 0.1261,

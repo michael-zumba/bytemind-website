@@ -17,7 +17,7 @@
   "sale_method": "Deadline sale",
   "deadline_at": "2026-12-02T11:00:00+00:00",
   "listed_at": "2026-11-10T22:05:31.513000+00:00",
-  "days_on_market": 15,
+  "days_on_market": 16,
   "lat": -36.7213211,
   "lon": 174.7323914,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2341293966.jpg",
@@ -31,12 +31,12 @@
   "estimate_updated_at": null,
   "comp_low": 930000,
   "comp_mid": 1100000,
-  "comp_high": 1421000,
+  "comp_high": 1410000,
   "comp_confidence": "low",
-  "comp_n": 113,
+  "comp_n": 115,
   "value_low": 930000,
   "value_mid": 1100000,
-  "value_high": 1421000,
+  "value_high": 1410000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "low",
   "cv": null,
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1850,
-  "watchers": 38,
+  "view_count": 1872,
+  "watchers": 39,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-11T18:36:38.346602+00:00",
-  "days_since_last_change": 15.17,
+  "days_since_last_change": 15.98,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 2,
-  "sale_pressure": 22.5,
+  "sale_pressure": 22.7,
   "sale_pressure_label": "low",
-  "model_low": 1122530,
-  "model_mid": 1520315,
-  "model_high": 2054158,
+  "model_low": 1057771,
+  "model_mid": 1433566,
+  "model_high": 1942458,
   "model_confidence": "low",
-  "text_signal_pct": 19.0365,
-  "description_index": 0.93138,
+  "text_signal_pct": 7.7421,
+  "description_index": 0.417096,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -288,11 +288,11 @@
   ],
   "model": {
     "listing_id": 6224276809,
-    "low": 1122530,
-    "mid": 1520315,
-    "high": 2054158,
+    "low": 1057771,
+    "mid": 1433566,
+    "high": 1942458,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3033, 0.3009], \"rel_width\": 0.6128, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.304, 0.3038], \"rel_width\": 0.6171, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6224276809,
@@ -301,20 +301,20 @@
     "urgency": 0.0,
     "luxury": 0.0,
     "condition_renovation": 1.0,
-    "views_waterfront": 0.2567,
-    "family_school": 0.6659,
+    "views_waterfront": 0.2565,
+    "family_school": 0.6667,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.501,
-    "description_premium_pct": 19.0365,
-    "description_index": 0.93138,
+    "description_premium_pct": 7.7421,
+    "description_index": 0.417096,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 3, \"views_waterfront\": 1, \"family_school\": 4, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
         "topic_id": 1,
-        "weight": 0.758563,
+        "weight": 0.685379,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -322,8 +322,8 @@
           "site",
           "property",
           "land",
-          "development",
           "subject",
+          "development",
           "existing",
           "council",
           "value",
@@ -332,27 +332,46 @@
         ]
       },
       {
-        "topic_id": 0,
-        "weight": 0.123937,
+        "topic_id": 6,
+        "weight": 0.242229,
         "label": "Parking, garden & section",
         "top_terms": [
-          "room",
-          "garden",
-          "morning",
           "street",
           "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
           "parking",
-          "deck"
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
+        ]
+      },
+      {
+        "topic_id": 10,
+        "weight": 0.041075,
+        "label": "Sea views & coastal outlook",
+        "top_terms": [
+          "sea",
+          "sea views",
+          "views",
+          "elevated",
+          "rangitoto",
+          "position",
+          "outlook",
+          "elevated position",
+          "spectacular",
+          "gulf",
+          "sweeping",
+          "rangitoto college"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.045182,
+        "weight": 0.031316,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -363,29 +382,10 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
+          "suburb marina",
           "mountain"
-        ]
-      },
-      {
-        "topic_id": 10,
-        "weight": 0.038071,
-        "label": "Sea views & coastal outlook",
-        "top_terms": [
-          "sea",
-          "views",
-          "sea views",
-          "elevated",
-          "rangitoto",
-          "position",
-          "outlook",
-          "gulf",
-          "spectacular",
-          "elevated position",
-          "hauraki gulf",
-          "hauraki"
         ]
       }
     ]
@@ -434,7 +434,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Deadline sale: Closes on Thursday 3 December 2026 at 3:00PM  (unless sold prior)\r\n\r\nOpportunity knocks!  Large 668m² (approx) corner site in Rangitoto College zone. Offering space, privacy and exciting scope to add value, the existing home features three bedrooms, two living areas, two bathrooms and double garaging.\r\n\r\nRenovate and modernise, explore extending the existing home or investigate the potential to add a minor dwelling (subject to council requirements). The options are here to maximise the property’s potential and make the most of this sought-after location.\r\n\r\nEnjoy excellent flow to a sheltered private deck and fully fenced garden, with Browns Bay Beach and village shops within easy walking distance.\r\n\r\nThe location is here. The potential is yours to unlock.",
   "photos": [
@@ -471,6 +471,20 @@
   },
   "history": [],
   "comps": [
+    {
+      "property_id": "977001ae-0dd8-4852-9e09-0630dd4ee63a",
+      "address": "81 Oaktree Avenue, Browns Bay, Auckland",
+      "sale_price": 1050000,
+      "sale_date": "2026-09-17T00:00:00+00:00",
+      "distance_km": 0.19,
+      "bedrooms": 5,
+      "bathrooms": 2,
+      "land_area": null,
+      "floor_area": null,
+      "property_type": null,
+      "cv": 1200000,
+      "estimate_mid": 1080000
+    },
     {
       "property_id": "aa6f7120-1beb-4825-8fa6-6410e6f30bf3",
       "address": "2/27 John Downs Drive, Browns Bay, Auckland",
@@ -624,45 +638,31 @@
       "property_type": null,
       "cv": 1200000,
       "estimate_mid": 1200000
-    },
-    {
-      "property_id": "5a1c72d7-202c-4cec-a15c-6a1501c4c498",
-      "address": "4/26 Inverness Road, Browns Bay, Auckland",
-      "sale_price": 950000,
-      "sale_date": "2026-11-05T00:00:00+00:00",
-      "distance_km": 1.25,
-      "bedrooms": 2,
-      "bathrooms": 1,
-      "land_area": null,
-      "floor_area": null,
-      "property_type": null,
-      "cv": 990000,
-      "estimate_mid": 950000
     }
   ],
   "valuation": {
     "value_low": 930000,
     "value_mid": 1100000,
-    "value_high": 1421000,
+    "value_high": 1410000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "low",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$930K – $1.42M",
+        "range": "$930K – $1.41M",
         "low": 930000,
         "mid": 1100000,
-        "high": 1421000,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "high": 1410000,
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "low",
-        "n": 113,
+        "n": 115,
         "basis": {
           "confidence": "low",
           "source": "sold_comps_absolute",
-          "n": 113,
-          "n_eff": 29.99,
+          "n": 115,
+          "n_eff": 30.32,
           "radius_km": 3.0,
-          "iqr_ratio": 0.4464,
+          "iqr_ratio": 0.4364,
           "same_suburb": 33,
           "model_version": "comp-cv-v1"
         }

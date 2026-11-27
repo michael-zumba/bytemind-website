@@ -29,14 +29,14 @@
   "estimate_high": null,
   "estimate_source": null,
   "estimate_updated_at": null,
-  "comp_low": 829000,
+  "comp_low": 830000,
   "comp_mid": 900000,
-  "comp_high": 1120000,
+  "comp_high": 1130000,
   "comp_confidence": "medium",
-  "comp_n": 38,
-  "value_low": 829000,
+  "comp_n": 37,
+  "value_low": 830000,
   "value_mid": 900000,
-  "value_high": 1120000,
+  "value_high": 1130000,
   "value_source": "sold_comps_absolute",
   "value_confidence": "medium",
   "cv": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:24:55.358247+00:00",
-  "days_since_last_change": 23.05,
+  "days_since_last_change": 23.86,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 777100,
-  "model_mid": 1052476,
-  "model_high": 1422043,
+  "model_low": 756690,
+  "model_mid": 1025520,
+  "model_high": 1389563,
   "model_confidence": "low",
-  "text_signal_pct": -2.699,
-  "description_index": -0.146236,
+  "text_signal_pct": -1.419,
+  "description_index": -0.079937,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,33 +268,33 @@
   ],
   "model": {
     "listing_id": 5839613709,
-    "low": 777100,
-    "mid": 1052476,
-    "high": 1422043,
+    "low": 756690,
+    "mid": 1025520,
+    "high": 1389563,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3033, 0.3009], \"rel_width\": 0.6128, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.304, 0.3038], \"rel_width\": 0.6171, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5839613709,
     "word_count": 136,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.2059,
-    "condition_renovation": 0.3147,
-    "views_waterfront": 0.1982,
-    "family_school": 0.2571,
+    "luxury": 0.2057,
+    "condition_renovation": 0.3136,
+    "views_waterfront": 0.1981,
+    "family_school": 0.2574,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.6894,
-    "description_premium_pct": -2.699,
-    "description_index": -0.146236,
+    "description_premium_pct": -1.419,
+    "description_index": -0.079937,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 1, \"views_waterfront\": 1, \"family_school\": 2, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
         "topic_id": 9,
-        "weight": 0.418884,
+        "weight": 0.430585,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "section",
@@ -308,31 +308,50 @@
           "penlink",
           "community",
           "minutes",
-          "drive"
+          "building"
         ]
       },
       {
         "topic_id": 6,
-        "weight": 0.14026,
-        "label": "Bedrooms, bathrooms & layout",
+        "weight": 0.209746,
+        "label": "Parking, garden & section",
         "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "walk",
-          "ensuite",
-          "master",
-          "bathroom",
-          "upstairs",
-          "suite",
-          "lounge",
+          "street",
+          "fenced",
+          "parking",
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
           "double",
-          "family bathroom",
-          "separate"
+          "sunny",
+          "plus"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.147831,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand new",
+          "brand",
+          "maintenance",
+          "low maintenance",
+          "low",
+          "new",
+          "single",
+          "quality",
+          "easy care",
+          "care",
+          "new home",
+          "stylish"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.139975,
+        "weight": 0.130636,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -342,30 +361,11 @@
           "car",
           "secure",
           "park",
-          "kensington",
           "complex",
           "balcony",
-          "pool",
-          "restaurants"
-        ]
-      },
-      {
-        "topic_id": 3,
-        "weight": 0.089179,
-        "label": "New build / brand-new quality",
-        "top_terms": [
-          "new",
-          "quality",
-          "premium",
-          "brand",
-          "brand new",
-          "finishes",
-          "year",
-          "appliances",
-          "designer",
-          "comfort",
-          "designer kitchen",
-          "homes"
+          "kensington",
+          "restaurants",
+          "bedroom apartment"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "G.J. Gardner Homes House and Land Package featuring the Blake design.\r\n\r\nA 4 bedroom, designer home with everything you need.  Settle into a home with open plan living that spills out onto a large north facing deck. A lounge for the children, plenty of storage, large pantry and double garage.  \r\nAnehana Heights is a sought after location, close to amenities and Stanmore Bay beach.\r\nSecure your modern, low maintenance home now.\r\n\r\nYour plan, our plans, or we can design from scratch. For more information visit our website http://www.gjgardner.co.nz\r\nMORE NEW ZEALANDERS TRUST G.J. GARDNER TO BUILD THEIR HOMES THAN ANY OTHER BUILDER.\r\n\r\nIf you’re thinking about building, make Home Prep the first step in your journey. It’s our essential step-by-step guide to the building process. Full of independent advice and handy information to help you have a great building experience. Get your free copy from gjgardner.co.nz today.\r\n\r\n*Price is an indication only and includes land. Some conditions may apply. Image is artist’s impression only.\r\n\r\nCopyright G.J. Gardner Homes",
   "photos": [
@@ -608,29 +608,29 @@
     }
   ],
   "valuation": {
-    "value_low": 829000,
+    "value_low": 830000,
     "value_mid": 900000,
-    "value_high": 1120000,
+    "value_high": 1130000,
     "value_source": "sold_comps_absolute",
     "value_confidence": "medium",
     "sources": [
       {
         "name": "Nearby sold comparables",
-        "range": "$829K – $1.12M",
-        "low": 829000,
+        "range": "$830K – $1.13M",
+        "low": 830000,
         "mid": 900000,
-        "high": 1120000,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "high": 1130000,
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "medium",
-        "n": 38,
+        "n": 37,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
-          "n": 38,
-          "n_eff": 9.99,
+          "n": 37,
+          "n_eff": 9.75,
           "radius_km": 3.0,
-          "iqr_ratio": 0.3233,
-          "same_suburb": 22,
+          "iqr_ratio": 0.3333,
+          "same_suburb": 21,
           "model_version": "comp-cv-v1"
         }
       }

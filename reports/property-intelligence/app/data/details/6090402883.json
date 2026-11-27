@@ -16,8 +16,8 @@
   "asking_kind": "asking",
   "sale_method": "Asking price",
   "deadline_at": null,
-  "listed_at": "2026-08-19T04:02:09.133000+00:00",
-  "days_on_market": 99,
+  "listed_at": "2026-08-19T03:02:09.133000+00:00",
+  "days_on_market": 100,
   "lat": -36.6266082,
   "lon": 174.7348898,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2324286261.jpg",
@@ -29,11 +29,11 @@
   "estimate_high": 781876,
   "estimate_source": "homes_avm",
   "estimate_updated_at": "2026-11-25T11:00:00+00:00",
-  "comp_low": 684282,
+  "comp_low": 705362,
   "comp_mid": 756444,
   "comp_high": 808308,
   "comp_confidence": "medium",
-  "comp_n": 45,
+  "comp_n": 44,
   "value_low": 692215,
   "value_mid": 737045,
   "value_high": 781876,
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 9,
   "last_change_at": "2026-11-25T23:30:50.933751+00:00",
-  "days_since_last_change": 0.96,
+  "days_since_last_change": 1.77,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 71.5,
+  "sale_pressure": 71.7,
   "sale_pressure_label": "high",
-  "model_low": 652368,
-  "model_mid": 708601,
-  "model_high": 774435,
+  "model_low": 650843,
+  "model_mid": 707778,
+  "model_high": 773982,
   "model_confidence": "high",
-  "text_signal_pct": 5.0701,
-  "description_index": 0.26434,
+  "text_signal_pct": 1.369,
+  "description_index": 0.076055,
   "events_count": 9,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6090402883,
-    "low": 652368,
-    "mid": 708601,
-    "high": 774435,
+    "low": 650843,
+    "mid": 707778,
+    "high": 773982,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6090402883,
@@ -280,40 +280,40 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.6767,
+    "condition_renovation": 0.6743,
     "views_waterfront": 0.1065,
-    "family_school": 0.4145,
+    "family_school": 0.415,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.5199,
-    "description_premium_pct": 5.0701,
-    "description_index": 0.26434,
+    "description_premium_pct": 1.369,
+    "description_index": 0.076055,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 4, \"views_waterfront\": 1, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
-        "topic_id": 0,
-        "weight": 0.272627,
+        "topic_id": 6,
+        "weight": 0.358011,
         "label": "Parking, garden & section",
         "top_terms": [
-          "room",
-          "garden",
-          "morning",
           "street",
           "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
           "parking",
-          "deck"
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
         ]
       },
       {
         "topic_id": 1,
-        "weight": 0.22232,
+        "weight": 0.194955,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -321,8 +321,8 @@
           "site",
           "property",
           "land",
-          "development",
           "subject",
+          "development",
           "existing",
           "council",
           "value",
@@ -331,8 +331,27 @@
         ]
       },
       {
+        "topic_id": 4,
+        "weight": 0.127275,
+        "label": "Apartment / lock-up-and-leave",
+        "top_terms": [
+          "apartment",
+          "lock",
+          "leave",
+          "lock leave",
+          "car",
+          "secure",
+          "park",
+          "complex",
+          "balcony",
+          "kensington",
+          "restaurants",
+          "bedroom apartment"
+        ]
+      },
+      {
         "topic_id": 9,
-        "weight": 0.142899,
+        "weight": 0.122366,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "section",
@@ -346,26 +365,7 @@
           "penlink",
           "community",
           "minutes",
-          "drive"
-        ]
-      },
-      {
-        "topic_id": 4,
-        "weight": 0.126949,
-        "label": "Apartment / lock-up-and-leave",
-        "top_terms": [
-          "apartment",
-          "lock",
-          "leave",
-          "lock leave",
-          "car",
-          "secure",
-          "park",
-          "kensington",
-          "complex",
-          "balcony",
-          "pool",
-          "restaurants"
+          "building"
         ]
       }
     ]
@@ -470,7 +470,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "To view the property documents, copy this link into your browser: \r\nhttps://www.harcourtsfiles.co.nz/listings/HGIX\r\n\r\nIf you've been waiting for the right opportunity to secure a place to call home, this could be the moment you've been waiting for.\r\nPrivately tucked down a right-of-way, this well-positioned weatherboard home combines sun, privacy, location and potential. It's comfortably liveable now, with plenty of scope to add your own style and value over time.\r\nThe surprisingly spacious open-plan living area flows to a practical kitchen and out through a ranch slider to a sunny north-facing deck and safe, secure back lawn. There's plenty of room for the kids, the dog or simply enjoying your morning coffee.\r\nThe home offers three bedrooms, two doubles and a single, plus a family bathroom, separate toilet, separate laundry and good storage. Recessed wardrobes, quality carpets and a tidy interior mean you can move in without taking on a major project.\r\nFor those wanting to add value, there's obvious potential to modernise with paint, updated kitchen and bathroom finishes, and your own personal touches. Move in, enjoy it, then improve it as your circumstances allow.\r\nWhen location matters, it's hard to look past this one. Close to Stanmore Bay Beach, the Leisure Centre, schools and Stanmore Bay Shopping Centre, you'll have everything you need close at hand, including New World, cafés, restaurants and a great range of local retailers. With Penlink set to terminate opposite the shopping centre, connectivity to the North Shore will become even easier, adding further appeal and long-term potential to this well-positioned property. \r\nThis is a genuine first-home opportunity in one of the Coast's most convenient locations.",
   "photos": [
@@ -505,12 +505,6 @@
       "estimate_low": 699594,
       "estimate_mid": 743394,
       "estimate_high": 787194
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 694459,
-      "estimate_mid": 737052,
-      "estimate_high": 779644
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -858,22 +852,22 @@
       },
       {
         "name": "Nearby sold comparables",
-        "range": "$684K – $808K",
-        "low": 684282,
+        "range": "$705K – $808K",
+        "low": 705362,
         "mid": 756444,
         "high": 808308,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "medium",
-        "n": 45,
+        "n": 44,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
-          "n": 45,
-          "n_eff": 7.09,
+          "n": 44,
+          "n_eff": 6.8,
           "radius_km": 3.0,
           "median_ratio": 1.0222,
-          "iqr_ratio": 0.164,
-          "same_suburb": 25,
+          "iqr_ratio": 0.1361,
+          "same_suburb": 24,
           "model_version": "comp-cv-v1"
         }
       },

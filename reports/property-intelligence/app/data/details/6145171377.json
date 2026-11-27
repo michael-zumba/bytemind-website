@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-09-22T23:56:29.553000+00:00",
-  "days_on_market": 64,
+  "days_on_market": 65,
   "lat": -36.8664517,
   "lon": 174.85545,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2330698910.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": -226914,
   "ask_gap_pct": -0.1778,
   "deal_gap": 0.1778,
-  "view_count": 13724,
-  "watchers": 521,
+  "view_count": 13774,
+  "watchers": 522,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "crosslease",
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 7,
   "last_change_at": "2026-11-12T19:29:12.585058+00:00",
-  "days_since_last_change": 14.13,
+  "days_since_last_change": 14.94,
   "price_drop_count": 0,
   "description_change_count": 2,
   "prior_sale_count": 5,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 70.7,
+  "sale_pressure": 70.8,
   "sale_pressure_label": "high",
-  "model_low": 1215645,
-  "model_mid": 1320430,
-  "model_high": 1443109,
+  "model_low": 1214735,
+  "model_mid": 1320998,
+  "model_high": 1444561,
   "model_confidence": "medium",
-  "text_signal_pct": 1.8832,
-  "description_index": 0.099716,
+  "text_signal_pct": -13.4688,
+  "description_index": -0.809159,
   "events_count": 7,
   "last_event": "cv_change",
   "schools": [
@@ -268,90 +268,52 @@
   ],
   "model": {
     "listing_id": 6145171377,
-    "low": 1215645,
-    "mid": 1320430,
-    "high": 1443109,
+    "low": 1214735,
+    "mid": 1320998,
+    "high": 1444561,
     "confidence": "medium",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6145171377,
     "word_count": 174,
     "exclamations": 0,
-    "urgency": 0.3711,
+    "urgency": 0.375,
     "luxury": 0.0,
     "condition_renovation": 0.0,
-    "views_waterfront": 0.1549,
+    "views_waterfront": 0.1548,
     "family_school": 0.0,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4376,
-    "description_premium_pct": 1.8832,
-    "description_index": 0.099716,
+    "description_premium_pct": -13.4688,
+    "description_index": -0.809159,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 0, \"condition_renovation\": 0, \"views_waterfront\": 1, \"family_school\": 0, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
-        "topic_id": 6,
-        "weight": 0.572591,
+        "topic_id": 8,
+        "weight": 0.45302,
         "label": "Bedrooms, bathrooms & layout",
         "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "walk",
-          "ensuite",
-          "master",
+          "separate",
           "bathroom",
+          "ensuite",
+          "walk wardrobe",
+          "wardrobe",
+          "extended",
           "upstairs",
-          "suite",
-          "lounge",
-          "double",
-          "family bathroom",
-          "separate"
-        ]
-      },
-      {
-        "topic_id": 1,
-        "weight": 0.113789,
-        "label": "Development & land potential",
-        "top_terms": [
-          "potential",
-          "future",
-          "site",
-          "property",
-          "land",
-          "development",
-          "subject",
-          "existing",
-          "council",
-          "value",
-          "possibilities",
-          "housing"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.109334,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "low maintenance",
-          "maintenance",
-          "low",
-          "easy care",
-          "care",
-          "single",
-          "convenience",
-          "stylish",
-          "comfort",
-          "practical",
-          "light",
-          "brand new"
+          "extended family",
+          "guests",
+          "master",
+          "walk",
+          "floor"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.09142,
+        "weight": 0.162521,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -361,11 +323,49 @@
           "car",
           "secure",
           "park",
-          "kensington",
           "complex",
           "balcony",
-          "pool",
-          "restaurants"
+          "kensington",
+          "restaurants",
+          "bedroom apartment"
+        ]
+      },
+      {
+        "topic_id": 1,
+        "weight": 0.095847,
+        "label": "Development & land potential",
+        "top_terms": [
+          "potential",
+          "future",
+          "site",
+          "property",
+          "land",
+          "subject",
+          "development",
+          "existing",
+          "council",
+          "value",
+          "possibilities",
+          "housing"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.088796,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand new",
+          "brand",
+          "maintenance",
+          "low maintenance",
+          "low",
+          "new",
+          "single",
+          "quality",
+          "easy care",
+          "care",
+          "new home",
+          "stylish"
         ]
       }
     ]
@@ -497,7 +497,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Our client has relocated and immediate possession is now available, creating a hot opportunity to secure outstanding value.\r\n\r\nSet well back from the road, this four-bedroom townhouse offers a practical layout designed for easy living. Upstairs you'll find a master suite with a walk-in wardrobe, ensuite and private balcony, along with a second bedroom set across a mezzanine landing.\r\n\r\nDownstairs, the sunny open-plan kitchen, dining and living area is the heart of the home, flowing straight out to a private entertainer's deck, a great spot to relax or host away from view. Two further bedrooms, a guest bathroom and internal-access garaging complete the ground floor. \r\n\r\nOffering the best of both worlds, you'll enjoy easy access to St Heliers Village, beaches, waterfront walkways and the transport links of Glen Innes, making everyday living and commuting exceptionally easy. \r\n\r\nConstructed in 1988, this well-established home offers generous proportions seldom found in many newer townhouses. With the vendor's relocation plans firmly in place and the deadline approaching, buyers are encouraged to act quickly.",
   "photos": [
@@ -528,12 +528,6 @@
       "estimate_low": 1242320,
       "estimate_mid": 1320099,
       "estimate_high": 1397877
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 1240340,
-      "estimate_mid": 1316412,
-      "estimate_high": 1392484
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -885,14 +879,14 @@
         "low": 1156827,
         "mid": 1267031,
         "high": 1374074,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "high",
         "n": 112,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 112,
-          "n_eff": 17.23,
+          "n_eff": 17.17,
           "radius_km": 3.0,
           "median_ratio": 0.9563,
           "iqr_ratio": 0.1715,

@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2026-09-29T03:28:39.523000+00:00",
-  "days_on_market": 58,
+  "days_on_market": 59,
   "lat": -36.8548807,
   "lon": 174.8354509,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2332063912.jpg",
@@ -63,7 +63,7 @@
   "change_signal": "price cut + copy changed",
   "change_count": 10,
   "last_change_at": "2026-11-25T21:58:44.756254+00:00",
-  "days_since_last_change": 1.03,
+  "days_since_last_change": 1.84,
   "price_drop_count": 1,
   "description_change_count": 2,
   "prior_sale_count": 1,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 5,
-  "sale_pressure": 77.7,
+  "sale_pressure": 77.8,
   "sale_pressure_label": "high",
-  "model_low": 2180153,
-  "model_mid": 2368076,
-  "model_high": 2588090,
+  "model_low": 2178361,
+  "model_mid": 2368921,
+  "model_high": 2590504,
   "model_confidence": "high",
-  "text_signal_pct": 5.5761,
-  "description_index": 0.290018,
+  "text_signal_pct": 2.1147,
+  "description_index": 0.117052,
   "events_count": 10,
   "last_event": "estimate_change",
   "schools": [
@@ -278,33 +278,52 @@
   ],
   "model": {
     "listing_id": 6154883779,
-    "low": 2180153,
-    "mid": 2368076,
-    "high": 2588090,
+    "low": 2178361,
+    "mid": 2368921,
+    "high": 2590504,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6154883779,
     "word_count": 301,
     "exclamations": 1,
-    "urgency": 0.2145,
-    "luxury": 0.093,
-    "condition_renovation": 0.711,
+    "urgency": 0.2168,
+    "luxury": 0.0929,
+    "condition_renovation": 0.7085,
     "views_waterfront": 0.0895,
-    "family_school": 0.6388,
+    "family_school": 0.6395,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3464,
-    "description_premium_pct": 5.5761,
-    "description_index": 0.290018,
+    "description_premium_pct": 2.1147,
+    "description_index": 0.117052,
     "lexicon_hits_json": "{\"urgency\": 1, \"luxury\": 1, \"condition_renovation\": 5, \"views_waterfront\": 1, \"family_school\": 11, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
+        "topic_id": 6,
+        "weight": 0.33792,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "fenced",
+          "parking",
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
+        ]
+      },
+      {
         "topic_id": 1,
-        "weight": 0.233334,
+        "weight": 0.204266,
         "label": "Development & land potential",
         "top_terms": [
           "potential",
@@ -312,8 +331,8 @@
           "site",
           "property",
           "land",
-          "development",
           "subject",
+          "development",
           "existing",
           "council",
           "value",
@@ -322,46 +341,8 @@
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.173916,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "walk",
-          "ensuite",
-          "master",
-          "bathroom",
-          "upstairs",
-          "suite",
-          "lounge",
-          "double",
-          "family bathroom",
-          "separate"
-        ]
-      },
-      {
-        "topic_id": 0,
-        "weight": 0.153645,
-        "label": "Parking, garden & section",
-        "top_terms": [
-          "room",
-          "garden",
-          "morning",
-          "street",
-          "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
-          "parking",
-          "deck"
-        ]
-      },
-      {
         "topic_id": 7,
-        "weight": 0.137709,
+        "weight": 0.110752,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -372,10 +353,29 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
+          "suburb marina",
           "mountain"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.095645,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "separate",
+          "bathroom",
+          "ensuite",
+          "walk wardrobe",
+          "wardrobe",
+          "extended",
+          "upstairs",
+          "extended family",
+          "guests",
+          "master",
+          "walk",
+          "floor"
         ]
       }
     ]
@@ -501,14 +501,14 @@
     "first_description_change_at": "2026-11-14T15:34:44.757320+00:00",
     "last_description_change_at": "2026-11-14T15:34:44.757320+00:00",
     "days_to_first_change": 22.36,
-    "days_since_last_change": 12.29,
+    "days_since_last_change": 13.1,
     "avg_days_between_changes": null,
     "cumulative_change": -100000,
     "cumulative_change_pct": -0.044444,
     "largest_drop": -100000,
     "largest_drop_pct": -0.044444,
     "last_direction": "drop",
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Now asking $2,150,000 - a substantial $275,000 below CV! Our vendors are committed to selling, presenting an exciting opportunity to secure a solid, well-positioned Mission Bay home in a highly sought-after location, just moments from Kohimarama School.\r\n\r\nBuilt in the 1960s with tried-and-true brick, concrete block and board and batten construction, this generous 3 bed, 2 bath home offers the reassurance of solid building materials, the comfort of double glazing and plenty of scope to add value over time. Well maintained and entirely liveable as it stands, it's an appealing proposition for families looking to establish themselves in the Eastern Bays, or buyers wanting to modernise and make a home their own.\r\n\r\nThe practical layout offers generous living spaces, with an open-plan kitchen and family area connecting to the dining room and spacious separate lounge. Sliding doors open to a large deck and fully fenced backyard, providing excellent indoor-outdoor flow and space for children and pets to enjoy.\r\n\r\nAccommodation comprises three bedrooms, including a master with ensuite, complemented by a family bathroom. A double internal-access garage provides excellent storage and workshop space, while additional off-street parking adds further convenience.\r\n\r\nThe location is a genuine highlight. Just a short walk from highly regarded Kohimarama School and zoned for Selwyn College, this is an exceptional position for families prioritising education and lifestyle. The beautiful beaches and waterfront promenades of Mission Bay and Kohimarama are within walking distance, along with popular cafés, restaurants, local shops and parks. Convenient access to main arterial routes also makes commuting to the CBD and wider Auckland straightforward.\r\n\r\nSolid construction, generous proportions, excellent schooling and genuine potential to add value - all at an asking price significantly below CV. Our vendors are motivated and encourage all interested buyers to inspect.",
   "photos": [
@@ -549,12 +549,6 @@
       "estimate_low": 2136929,
       "estimate_mid": 2270717,
       "estimate_high": 2404505
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 2219141,
-      "estimate_mid": 2355244,
-      "estimate_high": 2491347
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -906,14 +900,14 @@
         "low": 2006897,
         "mid": 2236389,
         "high": 2473500,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "high",
         "n": 97,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 97,
-          "n_eff": 18.27,
+          "n_eff": 18.21,
           "radius_km": 3.0,
           "median_ratio": 0.9222,
           "iqr_ratio": 0.2086,

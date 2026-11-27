@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-20T23:29:33.157000+00:00",
-  "days_on_market": 36,
+  "days_on_market": 37,
   "lat": -36.6257866,
   "lon": 174.6707922,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2336509059.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 1090,
-  "watchers": 19,
+  "view_count": 1102,
+  "watchers": 20,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "unknown",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T21:18:42.293937+00:00",
-  "days_since_last_change": 23.05,
+  "days_since_last_change": 23.86,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 36.0,
+  "sale_pressure": 36.2,
   "sale_pressure_label": "low",
-  "model_low": 740332,
-  "model_mid": 1002680,
-  "model_high": 1354760,
+  "model_low": 774071,
+  "model_mid": 1049075,
+  "model_high": 1421480,
   "model_confidence": "low",
-  "text_signal_pct": -19.2238,
-  "description_index": -1.141039,
+  "text_signal_pct": -11.6201,
+  "description_index": -0.690917,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,71 +268,52 @@
   ],
   "model": {
     "listing_id": 6189750763,
-    "low": 740332,
-    "mid": 1002680,
-    "high": 1354760,
+    "low": 774071,
+    "mid": 1049075,
+    "high": 1421480,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3033, 0.3009], \"rel_width\": 0.6128, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.304, 0.3038], \"rel_width\": 0.6171, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 6189750763,
     "word_count": 293,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.6689,
-    "condition_renovation": 0.2922,
+    "luxury": 0.6682,
+    "condition_renovation": 0.2911,
     "views_waterfront": 0.0,
-    "family_school": 0.5369,
+    "family_school": 0.5375,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.2301,
-    "description_premium_pct": -19.2238,
-    "description_index": -1.141039,
+    "description_premium_pct": -11.6201,
+    "description_index": -0.690917,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 7, \"condition_renovation\": 2, \"views_waterfront\": 0, \"family_school\": 9, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
         "topic_id": 3,
-        "weight": 0.434039,
-        "label": "New build / brand-new quality",
+        "weight": 0.407651,
+        "label": "Luxury, architectural & prestige",
         "top_terms": [
-          "new",
-          "quality",
           "premium",
-          "brand",
-          "brand new",
-          "finishes",
-          "year",
+          "quality",
           "appliances",
           "designer",
-          "comfort",
+          "year",
+          "finishes",
+          "luxury",
+          "heating",
           "designer kitchen",
-          "homes"
-        ]
-      },
-      {
-        "topic_id": 6,
-        "weight": 0.138374,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "walk",
-          "ensuite",
-          "master",
-          "bathroom",
-          "upstairs",
-          "suite",
-          "lounge",
-          "double",
-          "family bathroom",
-          "separate"
+          "comfort",
+          "built",
+          "round"
         ]
       },
       {
         "topic_id": 5,
-        "weight": 0.114152,
+        "weight": 0.108806,
         "label": "Westlake school zone",
         "top_terms": [
           "westlake",
@@ -351,7 +332,7 @@
       },
       {
         "topic_id": 7,
-        "weight": 0.091267,
+        "weight": 0.105166,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -362,10 +343,29 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
+          "suburb marina",
           "mountain"
+        ]
+      },
+      {
+        "topic_id": 2,
+        "weight": 0.1039,
+        "label": "New build / brand-new quality",
+        "top_terms": [
+          "brand new",
+          "brand",
+          "maintenance",
+          "low maintenance",
+          "low",
+          "new",
+          "single",
+          "quality",
+          "easy care",
+          "care",
+          "new home",
+          "stylish"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Welcome to 21 Pohewa Road, a beautifully designed, sun-drenched, two-level standalone residence in the vibrant heart of Silverdale.\r\n\r\nLocated in one of Auckland's fastest-growing and most desirable neighborhoods, this home balances luxury comfort with effortless daily convenience. The location is truly exceptional, leave the car at home and walk to the Silverdale transit hub and local shops. You're also just minutes from Silverdale Village, Silverdale Mall and the golden sands of Orewa Beach.\r\n\r\nDesigned for families and modern lifestyles, it features two distinct living areas for easy entertaining and relaxation. At its heart is a massive open-plan kitchen and dining space with premium fixtures, top-tier appliances and bespoke detailing. The home is bathed in natural light, while a state-of-the-art central heating system ensures year-round comfort.\r\n\r\nUpstairs offers four generously sized bedrooms, including a peaceful master suite with its own beautifully appointed ensuite. With 2.5 bathrooms in total and a secure single garage, every practical family need is met.\r\n\r\nProperty Highlights:\r\n*\tDesign: Sun-drenched, two-level standalone home with premium comfort\r\n*\tLayout: 4 generous bedrooms | 2.5 bathrooms (including master ensuite)\r\n*\tLiving: 2 separate living areas, including a massive open-plan kitchen and dining space\r\n*\tQuality: High-spec finishes, modern fixtures and elegant detailing throughout\r\n*\tComfort: Fully integrated central heating for year-round climate control\r\n*\tParking: Secure internal-access single garage\r\n*\tLocation: Walking distance to Silverdale transit hub and local shops\r\n*\tLifestyle: Minutes from Silverdale Village, Silverdale Mall and Orewa Beach\r\n*\tEducation: Zoned for Dairy Flat School, Northcross Intermediate and Orewa College; close to Kingsway School\r\n*\tPeace of mind: remaining period of Masterbuild guarantee transferable to new owner \r\n\r\nThis is a rare opportunity to secure a high-quality standalone home in an unmatched, highly connected location. Properties of this calibre don't last long, contact us today to arrange a private viewing or join us at our next open home.",
   "photos": [
@@ -633,17 +633,17 @@
         "low": 1021000,
         "mid": 1250000,
         "high": 1430000,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "medium",
         "n": 42,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
           "n": 42,
-          "n_eff": 8.7,
+          "n_eff": 8.65,
           "radius_km": 3.0,
           "iqr_ratio": 0.3272,
-          "same_suburb": 21,
+          "same_suburb": 20,
           "model_version": "comp-cv-v1"
         }
       }

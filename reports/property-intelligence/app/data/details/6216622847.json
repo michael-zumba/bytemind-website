@@ -17,7 +17,7 @@
   "sale_method": "Deadline sale",
   "deadline_at": "2026-12-08T11:00:00+00:00",
   "listed_at": "2026-11-06T03:18:40.017000+00:00",
-  "days_on_market": 20,
+  "days_on_market": 21,
   "lat": -36.5833052,
   "lon": 174.6900897,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2340143443.jpg",
@@ -51,8 +51,8 @@
   "ask_gap": null,
   "ask_gap_pct": null,
   "deal_gap": null,
-  "view_count": 3087,
-  "watchers": 107,
+  "view_count": 3175,
+  "watchers": 109,
   "is_standard": 1,
   "standard_reason": null,
   "tenure": "freehold",
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 5,
   "last_change_at": "2026-11-18T16:21:10.290081+00:00",
-  "days_since_last_change": 8.26,
+  "days_since_last_change": 9.07,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 4,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 2,
-  "sale_pressure": 23.3,
+  "sale_pressure": 23.5,
   "sale_pressure_label": "low",
-  "model_low": 1177158,
-  "model_mid": 1278626,
-  "model_high": 1397421,
+  "model_low": 1177231,
+  "model_mid": 1280213,
+  "model_high": 1399961,
   "model_confidence": "high",
-  "text_signal_pct": -5.6065,
-  "description_index": -0.308384,
+  "text_signal_pct": -3.1276,
+  "description_index": -0.177729,
   "events_count": 5,
   "last_event": "new_listing",
   "schools": [
@@ -268,11 +268,11 @@
   ],
   "model": {
     "listing_id": 6216622847,
-    "low": 1177158,
-    "mid": 1278626,
-    "high": 1397421,
+    "low": 1177231,
+    "mid": 1280213,
+    "high": 1399961,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6216622847,
@@ -280,78 +280,59 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.3856,
+    "condition_renovation": 0.3842,
     "views_waterfront": 0.0809,
-    "family_school": 0.315,
+    "family_school": 0.3153,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.3664,
-    "description_premium_pct": -5.6065,
-    "description_index": -0.308384,
+    "description_premium_pct": -3.1276,
+    "description_index": -0.177729,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 3, \"views_waterfront\": 1, \"family_school\": 6, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
         "topic_id": 0,
-        "weight": 0.283612,
-        "label": "Parking, garden & section",
+        "weight": 0.486466,
+        "label": "Family living & entertaining",
         "top_terms": [
-          "room",
-          "garden",
           "morning",
-          "street",
-          "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
-          "parking",
-          "deck"
-        ]
-      },
-      {
-        "topic_id": 2,
-        "weight": 0.228127,
-        "label": "Brick / tile / low-maintenance units",
-        "top_terms": [
-          "low maintenance",
-          "maintenance",
-          "low",
-          "easy care",
-          "care",
-          "single",
-          "convenience",
-          "stylish",
-          "comfort",
-          "practical",
-          "light",
-          "brand new"
+          "friends",
+          "relaxed",
+          "coffee",
+          "life",
+          "morning coffee",
+          "setting",
+          "inviting",
+          "sense",
+          "welcoming",
+          "step",
+          "summer"
         ]
       },
       {
         "topic_id": 3,
-        "weight": 0.185201,
-        "label": "New build / brand-new quality",
+        "weight": 0.226974,
+        "label": "Luxury, architectural & prestige",
         "top_terms": [
-          "new",
-          "quality",
           "premium",
-          "brand",
-          "brand new",
-          "finishes",
-          "year",
+          "quality",
           "appliances",
           "designer",
-          "comfort",
+          "year",
+          "finishes",
+          "luxury",
+          "heating",
           "designer kitchen",
-          "homes"
+          "comfort",
+          "built",
+          "round"
         ]
       },
       {
         "topic_id": 4,
-        "weight": 0.172796,
+        "weight": 0.160546,
         "label": "Apartment / lock-up-and-leave",
         "top_terms": [
           "apartment",
@@ -361,11 +342,30 @@
           "car",
           "secure",
           "park",
-          "kensington",
           "complex",
           "balcony",
-          "pool",
-          "restaurants"
+          "kensington",
+          "restaurants",
+          "bedroom apartment"
+        ]
+      },
+      {
+        "topic_id": 7,
+        "weight": 0.039543,
+        "label": "School zones & catchments",
+        "top_terms": [
+          "macleans",
+          "macleans college",
+          "college",
+          "intermediate",
+          "school",
+          "suburb intermediate",
+          "primary",
+          "marina",
+          "pigeon",
+          "pigeon mountain",
+          "suburb marina",
+          "mountain"
         ]
       }
     ]
@@ -475,7 +475,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "A relaxed seaside lifestyle, with everything Orewa has to offer just moments from your door.\r\n\r\nSome homes simply make everyday living feel that little bit more special. Welcome to 232 Centreway Road, where the ease of coastal living meets the comfort of a beautifully presented, modern home.\r\n\r\nPositioned on a 418sqm freehold site, with a generous 167sqm floor area, this immaculate brick and tile residence enjoys an enviable location with Orewa Beach and Victor Eaves Park practically on your doorstep. Imagine morning beach walks, spontaneous swims, leisurely coffee dates and evenings spent enjoying the best of this vibrant seaside community.\r\n\r\nStep inside and discover a light-filled, spacious interior designed for effortless everyday living. The open-plan layout brings the living, dining and kitchen spaces together beautifully, creating an inviting heart to the home. The contemporary kitchen is both stylish and practical, with generous cabinetry, a peninsula island and adjoining pantry providing everything you need for relaxed family living and entertaining.\r\n\r\nThree well-proportioned bedrooms and two bathrooms provide comfortable accommodation, while thoughtful additions including an air conditioning system and underfloor heating enhance year-round comfort.\r\n\r\nBut perhaps one of the home's most appealing features is its private backyard retreat. Here, a custom-built outdoor dining area, complete with patio blinds, creates a wonderful all-season entertaining space. Whether hosting summer lunches with friends, enjoying a quiet evening outdoors or simply making the most of the sunshine, this is an extension of the home you will love spending time in.\r\n\r\nAnd then there is the location. Leave the car at home and enjoy the convenience of being within walking distance of Orewa's cafés, restaurants, boutique shopping and everyday amenities. With the beach, park and motorway access all close at hand, the lifestyle here is as practical as it is appealing.\r\n\r\nBeautifully maintained, superbly positioned and ready to enjoy, 232 Centreway Road is an opportunity to secure your own slice of Orewa. Come and experience it for yourself.\r\n\r\nDEADLINE SALE | Closes Wednesday 9 December at 4pm (Unless Sold Prior)\r\nOPEN FOR INSPECTION | As Scheduled or By Appointment\r\nPROPERTY DOCUMENT S AVAILABLE | https://www.harcourtsfiles.co.nz/listings/87A4",
   "photos": [
@@ -516,12 +516,6 @@
       "estimate_low": 1225517,
       "estimate_mid": 1302243,
       "estimate_high": 1378970
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 1223137,
-      "estimate_mid": 1298154,
-      "estimate_high": 1373171
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -873,14 +867,14 @@
         "low": 1194237,
         "mid": 1278333,
         "high": 1355488,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "high",
         "n": 82,
         "basis": {
           "confidence": "high",
           "source": "sold_comps",
           "n": 82,
-          "n_eff": 13.15,
+          "n_eff": 13.11,
           "radius_km": 3.0,
           "median_ratio": 0.9833,
           "iqr_ratio": 0.1261,

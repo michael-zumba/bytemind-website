@@ -17,7 +17,7 @@
   "sale_method": "Price by negotiation",
   "deadline_at": null,
   "listed_at": "2026-10-05T22:44:05.650000+00:00",
-  "days_on_market": 51,
+  "days_on_market": 52,
   "lat": -36.6160368,
   "lon": 174.7874617,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2333521492.jpg",
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 7,
   "last_change_at": "2026-11-26T22:11:15.900605+00:00",
-  "days_since_last_change": 0.02,
+  "days_since_last_change": 0.83,
   "price_drop_count": 0,
   "description_change_count": 1,
   "prior_sale_count": 2,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 3,
-  "sale_pressure": 53.5,
+  "sale_pressure": 53.7,
   "sale_pressure_label": "medium",
-  "model_low": 1695079,
-  "model_mid": 1841190,
-  "model_high": 2012252,
+  "model_low": 1692578,
+  "model_mid": 1840642,
+  "model_high": 2012812,
   "model_confidence": "high",
-  "text_signal_pct": 5.8983,
-  "description_index": 0.306305,
+  "text_signal_pct": 14.5809,
+  "description_index": 0.761312,
   "events_count": 7,
   "last_event": "new_listing",
   "schools": [
@@ -258,33 +258,33 @@
   ],
   "model": {
     "listing_id": 6165721102,
-    "low": 1695079,
-    "mid": 1841190,
-    "high": 2012252,
+    "low": 1692578,
+    "mid": 1840642,
+    "high": 2012812,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6165721102,
     "word_count": 388,
     "exclamations": 0,
     "urgency": 0.0,
-    "luxury": 0.0722,
-    "condition_renovation": 0.1103,
-    "views_waterfront": 0.2084,
-    "family_school": 0.1352,
+    "luxury": 0.0721,
+    "condition_renovation": 0.1099,
+    "views_waterfront": 0.2083,
+    "family_school": 0.1353,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.4482,
-    "description_premium_pct": 5.8983,
-    "description_index": 0.306305,
+    "description_premium_pct": 14.5809,
+    "description_index": 0.761312,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 1, \"views_waterfront\": 3, \"family_school\": 3, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
         "topic_id": 9,
-        "weight": 0.173814,
+        "weight": 0.192664,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "section",
@@ -298,31 +298,12 @@
           "penlink",
           "community",
           "minutes",
-          "drive"
-        ]
-      },
-      {
-        "topic_id": 4,
-        "weight": 0.144103,
-        "label": "Apartment / lock-up-and-leave",
-        "top_terms": [
-          "apartment",
-          "lock",
-          "leave",
-          "lock leave",
-          "car",
-          "secure",
-          "park",
-          "kensington",
-          "complex",
-          "balcony",
-          "pool",
-          "restaurants"
+          "building"
         ]
       },
       {
         "topic_id": 7,
-        "weight": 0.134954,
+        "weight": 0.145154,
         "label": "School zones & catchments",
         "top_terms": [
           "macleans",
@@ -333,29 +314,48 @@
           "suburb intermediate",
           "primary",
           "marina",
-          "suburb marina",
           "pigeon",
           "pigeon mountain",
+          "suburb marina",
           "mountain"
         ]
       },
       {
-        "topic_id": 6,
-        "weight": 0.121227,
-        "label": "Bedrooms, bathrooms & layout",
+        "topic_id": 4,
+        "weight": 0.142486,
+        "label": "Apartment / lock-up-and-leave",
         "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "walk",
-          "ensuite",
-          "master",
-          "bathroom",
-          "upstairs",
-          "suite",
-          "lounge",
-          "double",
-          "family bathroom",
-          "separate"
+          "apartment",
+          "lock",
+          "leave",
+          "lock leave",
+          "car",
+          "secure",
+          "park",
+          "complex",
+          "balcony",
+          "kensington",
+          "restaurants",
+          "bedroom apartment"
+        ]
+      },
+      {
+        "topic_id": 11,
+        "weight": 0.122617,
+        "label": "Resort amenities (pool / tennis / spa)",
+        "top_terms": [
+          "residence",
+          "pool",
+          "expansive",
+          "scale",
+          "substantial",
+          "waterfront",
+          "swimming",
+          "swimming pool",
+          "harbour",
+          "views",
+          "spaces",
+          "setting"
         ]
       }
     ]
@@ -463,7 +463,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "Fishing after work. Spontaneous trips to explore the nearby islands. Diving on a Sunday morning. Just imagine how often you'd use your boat if it was parked, ready to go, right outside your front door. Then come home to approximately 280sqm of beautiful waterfront living, where clean modern lines, generous spaces, quality finishes and effortless indoor-outdoor flow create a home designed for entertaining, relaxing and making the most of every day. With the marina front and centre, 577 Laurie Southwick Parade is the kind of home and lifestyle keen boaties dream about.\r\n\r\nOur sellers provide a glowing review of the lifestyle here: From being out on the water within 10 minutes when it's a perfect day for fishing, to enjoying the peace and quiet of village life and the very best of friendly neighbours. They love starting the day with a stroll along the marina boardwalk for a morning coffee, soaking up the early sun. As avid mountain bikers, they also particularly love their daily rides out to Shakespear Regional Park - another reason this location makes it so easy to embrace an active, outdoor lifestyle. At home, the multiple living areas provide plenty of space to relax and unwind, while the abundance of nearby shops and marina services makes everyday living incredibly convenient.\r\n\r\nFeatures you'll love:\r\n* Approx. 280sqm of substantial waterfront living\r\n* 12m marina berth with floating dock available by negotiation\r\n* End-unit position, giving you a private walkway between your garage and marina\r\n* Designer kitchen with quality appliances and butler's pantry\r\n* Spacious open-plan living and dining overlooking the marina\r\n* Multiple balconies and outdoor entertaining zones\r\n* Generous primary suite with walk in wardrobe, ensuite and balcony\r\n* Three of the four bedrooms have ensuite bathrooms\r\n* Fourth guest toilet conveniently located downstairs\r\n* Three heat pumps plus underfloor heating\r\n* Low-maintenance lock-up-and-leave style living\r\n* Nearby ferry connection across to Auckland CBD\r\n* Excellent schools including Wentworth Primary & College\r\n\r\nThis isn't simply a home beside the marina. The marina is part of the way you live. If your idea of the good life involves a boat at the door, and the freedom to head out into the Hauraki Gulf whenever the weather tempts you, 577 Laurie Southwick Parade deserves to be on your must-see list.\r\n\r\nCome and experience it for yourself. Contact us today to arrange your private viewing.\r\n\r\nTo download the property documents visit: https://www.harcourtsfiles.co.nz/listings/EV7Q\r\n\r\nFlexible settlement terms available.\r\nOther agents - bring your buyers. Conjunctionals welcome.",
   "photos": [
@@ -504,12 +504,6 @@
       "estimate_low": 1683888,
       "estimate_mid": 1789313,
       "estimate_high": 1894737
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 1672589,
-      "estimate_mid": 1775171,
-      "estimate_high": 1877753
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -861,14 +855,14 @@
         "low": 1660595,
         "mid": 1810215,
         "high": 1905500,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "medium",
         "n": 45,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
           "n": 45,
-          "n_eff": 7.18,
+          "n_eff": 7.16,
           "radius_km": 3.0,
           "median_ratio": 0.9785,
           "iqr_ratio": 0.1353,

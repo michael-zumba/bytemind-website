@@ -17,7 +17,7 @@
   "sale_method": "Auction",
   "deadline_at": "2026-12-09T23:00:00+00:00",
   "listed_at": "2026-11-09T23:17:42.487000+00:00",
-  "days_on_market": 16,
+  "days_on_market": 17,
   "lat": -36.6106988,
   "lon": 174.7981359,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2342753352.jpg",
@@ -63,7 +63,7 @@
   "change_signal": "copy changed",
   "change_count": 5,
   "last_change_at": "2026-11-25T23:51:01.351269+00:00",
-  "days_since_last_change": 0.95,
+  "days_since_last_change": 1.76,
   "price_drop_count": 0,
   "description_change_count": 2,
   "prior_sale_count": 4,
@@ -74,14 +74,14 @@
   "status": "active",
   "delisted_at": null,
   "sale_method_stage": 0,
-  "sale_pressure": 12.7,
+  "sale_pressure": 12.8,
   "sale_pressure_label": "low",
-  "model_low": 878785,
-  "model_mid": 954534,
-  "model_high": 1043218,
+  "model_low": 877329,
+  "model_mid": 954076,
+  "model_high": 1043318,
   "model_confidence": "high",
-  "text_signal_pct": -6.3987,
-  "description_index": -0.353427,
+  "text_signal_pct": -5.4197,
+  "description_index": -0.311667,
   "events_count": 5,
   "last_event": "new_listing",
   "schools": [
@@ -258,11 +258,11 @@
   ],
   "model": {
     "listing_id": 6222641574,
-    "low": 878785,
-    "mid": 954534,
-    "high": 1043218,
+    "low": 877329,
+    "mid": 954076,
+    "high": 1043318,
     "confidence": "high",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0827, 0.0888], \"rel_width\": 0.1723, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.0839, 0.0894], \"rel_width\": 0.174, \"selected\": \"structural\", \"variant\": \"with_cv\"}"
   },
   "text": {
     "listing_id": 6222641574,
@@ -270,59 +270,78 @@
     "exclamations": 0,
     "urgency": 0.0,
     "luxury": 0.0,
-    "condition_renovation": 0.7295,
-    "views_waterfront": 0.7657,
-    "family_school": 0.8939,
-    "investment": 0.2061,
+    "condition_renovation": 0.727,
+    "views_waterfront": 0.7652,
+    "family_school": 0.8949,
+    "investment": 0.2058,
     "risk": 0.0,
     "readability": 0.3165,
-    "description_premium_pct": -6.3987,
-    "description_index": -0.353427,
+    "description_premium_pct": -5.4197,
+    "description_index": -0.311667,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 0, \"condition_renovation\": 3, \"views_waterfront\": 5, \"family_school\": 9, \"investment\": 1, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
         "topic_id": 2,
-        "weight": 0.38453,
-        "label": "Brick / tile / low-maintenance units",
+        "weight": 0.293186,
+        "label": "New build / brand-new quality",
         "top_terms": [
-          "low maintenance",
+          "brand new",
+          "brand",
           "maintenance",
+          "low maintenance",
           "low",
+          "new",
+          "single",
+          "quality",
           "easy care",
           "care",
-          "single",
-          "convenience",
-          "stylish",
-          "comfort",
-          "practical",
-          "light",
-          "brand new"
+          "new home",
+          "stylish"
+        ]
+      },
+      {
+        "topic_id": 6,
+        "weight": 0.253883,
+        "label": "Parking, garden & section",
+        "top_terms": [
+          "street",
+          "fenced",
+          "parking",
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
         ]
       },
       {
         "topic_id": 0,
-        "weight": 0.240304,
-        "label": "Parking, garden & section",
+        "weight": 0.20913,
+        "label": "Family living & entertaining",
         "top_terms": [
-          "room",
-          "garden",
           "morning",
-          "street",
-          "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
-          "parking",
-          "deck"
+          "friends",
+          "relaxed",
+          "coffee",
+          "life",
+          "morning coffee",
+          "setting",
+          "inviting",
+          "sense",
+          "welcoming",
+          "step",
+          "summer"
         ]
       },
       {
         "topic_id": 9,
-        "weight": 0.16327,
+        "weight": 0.130723,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "section",
@@ -336,26 +355,7 @@
           "penlink",
           "community",
           "minutes",
-          "drive"
-        ]
-      },
-      {
-        "topic_id": 7,
-        "weight": 0.098769,
-        "label": "School zones & catchments",
-        "top_terms": [
-          "macleans",
-          "macleans college",
-          "college",
-          "intermediate",
-          "school",
-          "suburb intermediate",
-          "primary",
-          "marina",
-          "suburb marina",
-          "pigeon",
-          "pigeon mountain",
-          "mountain"
+          "building"
         ]
       }
     ]
@@ -465,7 +465,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "This appealing single level brick and tile low maintenance home offers  privacy, comfort, and a relaxed coastal lifestyle, set on an easy care 485m² freehold section.\r\n\r\nWith approximately 153sqm of floor area, the home offers practical and comfortable family living, offering four bedrooms and two bathrooms (including ensuite), open plan living, double internal access garaging. Complemented by seamless indoor-outdoor flow to a manicured patio and garden, the perfect spot to enjoy your morning coffee, relax in the sunshine or entertain family and friends. \r\n\r\nWell fenced, and plenty of lawn for children and pets, but not so much that Saturday fishing and Sunday golf, go on hold. \r\n\r\nThe location is another highlight. Gulf Harbour is well known for its beautiful coastal environment, marina lifestyle and golf facilities. Enjoy convenient access to local shops, cafes, restaurants, schools and recreational facilities, with the ferry service providing a connection to Auckland CBD.\r\n\r\nWhether you're a growing family, a professional couple or an investor looking for a property in a popular coastal community, this home deserves your attention.",
   "photos": [
@@ -506,12 +506,6 @@
       "estimate_low": 910140,
       "estimate_mid": 967121,
       "estimate_high": 1024103
-    },
-    {
-      "date": "2025-11-27T00:00:00+00:00",
-      "estimate_low": 919408,
-      "estimate_mid": 975797,
-      "estimate_high": 1032186
     },
     {
       "date": "2025-12-11T00:00:00+00:00",
@@ -863,14 +857,14 @@
         "low": 897049,
         "mid": 947532,
         "high": 986667,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "medium",
         "n": 33,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps",
           "n": 33,
-          "n_eff": 6.91,
+          "n_eff": 6.89,
           "radius_km": 3.0,
           "median_ratio": 0.987,
           "iqr_ratio": 0.0946,

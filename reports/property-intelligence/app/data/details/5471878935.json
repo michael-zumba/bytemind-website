@@ -17,7 +17,7 @@
   "sale_method": "Asking price",
   "deadline_at": null,
   "listed_at": "2025-04-06T23:04:00+00:00",
-  "days_on_market": 598,
+  "days_on_market": 599,
   "lat": -36.6245221,
   "lon": 174.7940497,
   "photo_url": "https://trademe.tmcdn.co.nz/photoserver/med/2338573471.jpg",
@@ -51,7 +51,7 @@
   "ask_gap": 1360000,
   "ask_gap_pct": 1.5111,
   "deal_gap": -1.5111,
-  "view_count": 1826,
+  "view_count": 1828,
   "watchers": 10,
   "is_standard": 1,
   "standard_reason": null,
@@ -63,7 +63,7 @@
   "change_signal": null,
   "change_count": 1,
   "last_change_at": "2026-11-03T20:57:06.027595+00:00",
-  "days_since_last_change": 23.07,
+  "days_since_last_change": 23.88,
   "price_drop_count": 0,
   "description_change_count": 0,
   "prior_sale_count": 0,
@@ -76,12 +76,12 @@
   "sale_method_stage": 5,
   "sale_pressure": 80.0,
   "sale_pressure_label": "high",
-  "model_low": 991461,
-  "model_mid": 1342800,
-  "model_high": 1814310,
+  "model_low": 871404,
+  "model_mid": 1180988,
+  "model_high": 1600219,
   "model_confidence": "low",
-  "text_signal_pct": 7.4941,
-  "description_index": 0.386244,
+  "text_signal_pct": -2.1528,
+  "description_index": -0.121726,
   "events_count": 1,
   "last_event": "new_listing",
   "schools": [
@@ -268,52 +268,33 @@
   ],
   "model": {
     "listing_id": 5471878935,
-    "low": 991461,
-    "mid": 1342800,
-    "high": 1814310,
+    "low": 871404,
+    "mid": 1180988,
+    "high": 1600219,
     "confidence": "low",
-    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.3033, 0.3009], \"rel_width\": 0.6128, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
+    "basis_json": "{\"model_version\": \"hedonic-avm-v1\", \"interval\": [-0.304, 0.3038], \"rel_width\": 0.6171, \"selected\": \"structural\", \"variant\": \"no_cv\"}"
   },
   "text": {
     "listing_id": 5471878935,
     "word_count": 159,
     "exclamations": 1,
     "urgency": 0.0,
-    "luxury": 0.1761,
-    "condition_renovation": 0.2692,
-    "views_waterfront": 0.1695,
-    "family_school": 0.1099,
+    "luxury": 0.1759,
+    "condition_renovation": 0.2682,
+    "views_waterfront": 0.1694,
+    "family_school": 0.1101,
     "investment": 0.0,
     "risk": 0.0,
     "readability": 0.6639,
-    "description_premium_pct": 7.4941,
-    "description_index": 0.386244,
+    "description_premium_pct": -2.1528,
+    "description_index": -0.121726,
     "lexicon_hits_json": "{\"urgency\": 0, \"luxury\": 1, \"condition_renovation\": 1, \"views_waterfront\": 1, \"family_school\": 1, \"investment\": 0, \"risk\": 0}",
     "model_version": "text-nmf-v1",
-    "updated_at": "2026-11-26T22:35:57.281104+00:00",
+    "updated_at": "2026-11-27T18:02:23.807401+00:00",
     "top_topics": [
       {
-        "topic_id": 6,
-        "weight": 0.359416,
-        "label": "Bedrooms, bathrooms & layout",
-        "top_terms": [
-          "wardrobe",
-          "walk wardrobe",
-          "walk",
-          "ensuite",
-          "master",
-          "bathroom",
-          "upstairs",
-          "suite",
-          "lounge",
-          "double",
-          "family bathroom",
-          "separate"
-        ]
-      },
-      {
         "topic_id": 9,
-        "weight": 0.211812,
+        "weight": 0.241663,
         "label": "Coastal village & park proximity",
         "top_terms": [
           "section",
@@ -327,45 +308,64 @@
           "penlink",
           "community",
           "minutes",
-          "drive"
+          "building"
+        ]
+      },
+      {
+        "topic_id": 8,
+        "weight": 0.205636,
+        "label": "Bedrooms, bathrooms & layout",
+        "top_terms": [
+          "separate",
+          "bathroom",
+          "ensuite",
+          "walk wardrobe",
+          "wardrobe",
+          "extended",
+          "upstairs",
+          "extended family",
+          "guests",
+          "master",
+          "walk",
+          "floor"
         ]
       },
       {
         "topic_id": 10,
-        "weight": 0.155161,
+        "weight": 0.178089,
         "label": "Sea views & coastal outlook",
         "top_terms": [
           "sea",
-          "views",
           "sea views",
+          "views",
           "elevated",
           "rangitoto",
           "position",
           "outlook",
-          "gulf",
-          "spectacular",
           "elevated position",
-          "hauraki gulf",
-          "hauraki"
+          "spectacular",
+          "gulf",
+          "sweeping",
+          "rangitoto college"
         ]
       },
       {
-        "topic_id": 0,
-        "weight": 0.099234,
+        "topic_id": 6,
+        "weight": 0.121292,
         "label": "Parking, garden & section",
         "top_terms": [
-          "room",
-          "garden",
-          "morning",
           "street",
           "fenced",
-          "away",
-          "ready",
-          "summer",
-          "brick",
-          "fully fenced",
           "parking",
-          "deck"
+          "fully fenced",
+          "garden",
+          "fully",
+          "room",
+          "street parking",
+          "brick",
+          "double",
+          "sunny",
+          "plus"
         ]
       }
     ]
@@ -414,7 +414,7 @@
     "largest_drop": null,
     "largest_drop_pct": null,
     "last_direction": null,
-    "updated_at": "2026-11-26T22:35:55.987184+00:00"
+    "updated_at": "2026-11-27T18:02:22.721976+00:00"
   },
   "body": "G.J. Gardner Homes Ready Living featuring a custom design.\r\n\r\nUnder construction, move-in ready late 2026! Stunning design, with sea and city light views. The spacious kitchen and scullery flow into a generous dining room or outdoors to a covered area for easy entertaining with friends and family. Relax in your primary suite with a generous walk-in robe and ensuite, or retreat to one of your two living/lounge areas. Offering three additional bedrooms, full bathroom, powder room, separate laundry and activity room, this plan has all the comforts you desire.\r\n\r\nYour plan, our plans, or we can design from scratch. For more information visit our website http://www.gjgardner.co.nz MORE NEW ZEALANDERS TRUST G.J. GARDNER TO BUILD THEIR HOMES THAN ANY OTHER BUILDER.\r\n\r\nIf you’re thinking about building, make Home Prep the first step in your journey. It’s our essential step-by-step guide to the building process. Full of independent advice and handy information to help you have a great building experience. Get your free copy from gjgardner.co.nz today.\r\n\r\nCopyright G.J. Gardner Homes",
   "photos": [
@@ -618,14 +618,14 @@
         "low": 799000,
         "mid": 900000,
         "high": 1030000,
-        "updated_at": "2026-11-26T22:35:55.987184+00:00",
+        "updated_at": "2026-11-27T18:02:22.721976+00:00",
         "confidence": "medium",
         "n": 33,
         "basis": {
           "confidence": "medium",
           "source": "sold_comps_absolute",
           "n": 33,
-          "n_eff": 8.27,
+          "n_eff": 8.24,
           "radius_km": 3.0,
           "iqr_ratio": 0.2567,
           "same_suburb": 14,
